@@ -16,10 +16,46 @@
         "Uma linha levemente inclinada não é necessariamente curva."
       ],
       [
+        "angular",
+        "Com quinas e encontros de linhas bem definidos.",
+        "A fachada angular alterna planos que se encontram em quinas marcadas.",
+        "Não associe automaticamente linhas angulares a um estilo histórico."
+      ],
+      [
+        "arredondado",
+        "Com bordas ou volumes de curvatura suave.",
+        "Os bancos arredondados interrompem a sequência de linhas retas.",
+        "Arredondado não é necessariamente circular em toda sua extensão."
+      ],
+      [
         "simétrico",
         "Com partes correspondentes em torno de um eixo.",
         "As duas janelas criam uma composição quase simétrica em torno da porta.",
         "Observe diferenças antes de afirmar simetria perfeita."
+      ],
+      [
+        "assimétrico",
+        "Sem correspondência de forma ou posição em ambos os lados de um eixo.",
+        "A posição assimétrica das janelas destaca a porta lateral.",
+        "Assimetria visual não demonstra erro ou falta de planejamento."
+      ],
+      [
+        "verticalizado",
+        "Com predominância da altura e de eixos verticais.",
+        "Os painéis verticalizados acentuam a percepção de altura.",
+        "Não deduza o número de andares pela orientação da fachada."
+      ],
+      [
+        "horizontal",
+        "Com direção predominante de lado a lado.",
+        "Uma marquise horizontal acompanha as vitrines do térreo.",
+        "Horizontal não implica ausência de pequenas inclinações."
+      ],
+      [
+        "modular",
+        "Organizado por unidades repetidas ou combináveis.",
+        "Os painéis modulares repetem o mesmo desenho na parede.",
+        "Repetição visual não prova que os componentes sejam intercambiáveis."
       ],
       [
         "orgânico",
@@ -58,6 +94,42 @@
         "Evite usar amplo quando só o enquadramento da lente aumenta a sensação de espaço."
       ],
       [
+        "estreito",
+        "De largura pequena em relação à profundidade ou ao entorno.",
+        "O corredor estreito desemboca num salão mais amplo.",
+        "Use uma referência antes de afirmar que a largura é reduzida."
+      ],
+      [
+        "alongado",
+        "Com comprimento relativamente grande diante da largura.",
+        "O balcão alongado conduz o olhar até a cozinha.",
+        "A lente pode acentuar proporções; observe por outro ângulo."
+      ],
+      [
+        "baixo",
+        "De altura reduzida quando comparado a uma referência.",
+        "O muro baixo permite ver o jardim do outro lado.",
+        "Não invente metragem ou avaliação de segurança."
+      ],
+      [
+        "esguio",
+        "De formato alto e relativamente estreito.",
+        "O poste esguio cria um eixo vertical ao lado do edifício.",
+        "A aparência esguia não comprova fragilidade estrutural."
+      ],
+      [
+        "imponente",
+        "Que causa forte impressão visual pela escala ou composição.",
+        "As portas altas tornam a entrada visualmente imponente.",
+        "É percepção: mostre quais elementos justificam o adjetivo."
+      ],
+      [
+        "discreto",
+        "Que se destaca pouco perante os demais elementos visuais.",
+        "O letreiro discreto quase se mistura à cor da parede.",
+        "Não presuma que a marca pretendia ocultá-lo."
+      ],
+      [
         "proporcional",
         "Com relação equilibrada de dimensões entre as partes, segundo critério explicado.",
         "A marquise parece proporcional à largura da entrada.",
@@ -82,6 +154,12 @@
         "Luz fraca e luz difusa não são sinônimos."
       ],
       [
+        "direcional",
+        "Luz com direção de incidência predominante perceptível.",
+        "A iluminação direcional projeta sombras para a direita.",
+        "As sombras não identificam, por si, a fonte luminosa."
+      ],
+      [
         "rasante",
         "Luz que incide em ângulo baixo sobre uma superfície.",
         "A luz rasante destaca as irregularidades do revestimento.",
@@ -94,10 +172,40 @@
         "Não confunda contraste de iluminação com contraste de cores."
       ],
       [
+        "suave",
+        "Luz com transição pouco abrupta entre claridade e sombra.",
+        "A luz suave preserva detalhes no rosto e na parede.",
+        "Suavidade não significa necessariamente pouca intensidade."
+      ],
+      [
+        "dourada",
+        "Luz de aparência amarela ou âmbar.",
+        "A luz dourada colore os contornos dos prédios.",
+        "Não confirme horário ou temperatura de cor só pela aparência."
+      ],
+      [
+        "indireta",
+        "Luz que chega após reflexão ou distribuição por outra superfície.",
+        "A luz indireta ilumina a mesa sem ofuscar o rosto.",
+        "Uma fonte fora do quadro não comprova iluminação indireta."
+      ],
+      [
+        "irregular",
+        "Com distribuição desigual da iluminação na cena.",
+        "A luz irregular desenha manchas entre os galhos.",
+        "Não confunda diferença de iluminação com defeito da câmera."
+      ],
+      [
         "refletida",
         "Luz que atinge uma superfície depois de rebater em outra.",
         "Uma faixa de luz refletida aparece sobre o vidro da vitrine.",
         "Não é possível concluir a fonte exata de um reflexo sem observação."
+      ],
+      [
+        "natural",
+        "Proveniente de fontes luminosas naturais, como o sol.",
+        "A luz natural alcança as mesas perto da janela.",
+        "Aparência natural não prova ausência de luz artificial."
       ]
     ],
     "model": [
@@ -118,6 +226,18 @@
         "Uma única cor não impede variação de luz e saturação."
       ],
       [
+        "complementar",
+        "Relação entre cores opostas em determinado círculo cromático.",
+        "O vermelho do cartaz contrasta com detalhes verdes.",
+        "Considere o modelo cromático antes de classificar as cores."
+      ],
+      [
+        "neutro",
+        "Tom pouco marcado cromaticamente, como cinza ou bege.",
+        "O fundo neutro evidencia as peças mais coloridas.",
+        "Cor neutra ainda produz efeito visual e simbólico."
+      ],
+      [
         "saturado",
         "De cor intensa, com pouca aproximação ao cinza.",
         "O letreiro vermelho saturado se destaca contra a parede clara.",
@@ -130,10 +250,34 @@
         "Não chame toda cor pastel de dessaturada sem considerar matiz e luminosidade."
       ],
       [
+        "quente",
+        "Tonalidade percebida como próxima do vermelho, laranja ou amarelo.",
+        "Os tons quentes aproximam visualmente os móveis de madeira.",
+        "Temperatura visual não é temperatura física."
+      ],
+      [
+        "frio",
+        "Tonalidade percebida como próxima do azul ou de certos verdes.",
+        "O azul frio do letreiro contrasta com a parede bege.",
+        "Não atribua uma sensação idêntica a todas as pessoas."
+      ],
+      [
         "terroso",
         "De tonalidade associada visualmente a argila, areia, ferrugem ou terra.",
         "Os tons terrosos da coleção aproximam visualmente casacos e acessórios.",
         "Terroso nomeia a aparência, não a composição do corante."
+      ],
+      [
+        "vibrante",
+        "Com presença visual intensa, frequentemente por saturação ou contraste.",
+        "Uma faixa vibrante de amarelo destaca a entrada.",
+        "Explique se o impacto vem de saturação, contraste ou área ocupada."
+      ],
+      [
+        "gradual",
+        "Com transição progressiva de tom, cor ou intensidade.",
+        "O mural passa gradualmente de azul a cinza.",
+        "Blocos de cor separados não representam necessariamente gradiente."
       ]
     ],
     "model": [
@@ -160,16 +304,52 @@
         "A aparência brilhante, isoladamente, não confirma o processo de fabricação."
       ],
       [
+        "áspero",
+        "Que apresenta irregularidades ou atrito perceptíveis.",
+        "A pedra parece áspera pelas saliências reveladas pela luz.",
+        "Sem tocar, apresente aspereza como impressão visual."
+      ],
+      [
+        "liso",
+        "Com superfície relativamente regular e sem saliências notáveis.",
+        "A mesa lisa reflete uma faixa de iluminação.",
+        "O enquadramento pode esconder irregularidades pequenas."
+      ],
+      [
+        "granulado",
+        "Com grãos ou pontos pequenos visíveis na superfície.",
+        "O vaso tem uma textura granulada em close-up.",
+        "Grãos na imagem podem resultar do ruído da câmera."
+      ],
+      [
         "poroso",
         "Com pequenos espaços ou aberturas na estrutura aparente.",
         "A superfície porosa da peça deixa pequenas cavidades à vista.",
         "Não afirme absorção de água sem teste ou especificação."
       ],
       [
+        "acetinado",
+        "Com brilho moderado e difuso, entre fosco e brilhante.",
+        "O tecido acetinado recebe uma faixa discreta de luz.",
+        "O brilho não comprova composição de cetim ou seda."
+      ],
+      [
         "translúcido",
         "Que permite passar luz sem formar imagem totalmente nítida.",
         "O painel translúcido suaviza a visão do espaço interno.",
         "Translúcido é diferente de transparente."
+      ],
+      [
+        "metálico",
+        "Com aparência, brilho ou tonalidade associados a metal.",
+        "O acabamento metálico reflete a vitrine vizinha.",
+        "Aparência metálica não comprova o material da peça."
+      ],
+      [
+        "aveludado",
+        "De aspecto visual macio, semelhante à superfície de veludo.",
+        "O revestimento aveludado espalha a luz sem reflexos fortes.",
+        "A aparência não comprova composição nem toque real."
       ]
     ],
     "model": [
@@ -190,6 +370,18 @@
         "Acolhedor é percepção; cite os elementos que a motivam."
       ],
       [
+        "movimentado",
+        "Com múltiplas atividades ou deslocamentos observáveis.",
+        "O corredor parece movimentado durante a gravação da manhã.",
+        "Não represente um instante como padrão de todo o dia."
+      ],
+      [
+        "contemplativo",
+        "Que favorece observação prolongada ou reflexão pessoal.",
+        "A vista do jardim me convida a um momento contemplativo.",
+        "A sensação é pessoal; não a atribua a todos os visitantes."
+      ],
+      [
         "intimista",
         "Que favorece proximidade, recolhimento ou escala reduzida.",
         "As mesas pequenas e a música baixa criam uma atmosfera intimista.",
@@ -200,6 +392,30 @@
         "De caráter formal ou cerimonioso.",
         "O silêncio e o alinhamento dos assentos conferem solenidade à apresentação.",
         "Silêncio sozinho não prova cerimônia."
+      ],
+      [
+        "silencioso",
+        "Com poucos sons perceptíveis diante da referência utilizada.",
+        "O pátio está silencioso quando comparado à avenida.",
+        "Silencioso não é ausência absoluta de som."
+      ],
+      [
+        "agitado",
+        "Com atividade intensa ou mudanças rápidas no ambiente.",
+        "O cruzamento parece agitado com ônibus e bicicletas passando.",
+        "Identifique quais ações sustentam essa impressão."
+      ],
+      [
+        "arejado",
+        "Que transmite sensação de espaço aberto ou ventilado.",
+        "O salão parece arejado, com janelas abertas e teto alto.",
+        "Aparência não equivale à medição de ventilação ou qualidade do ar."
+      ],
+      [
+        "concentrado",
+        "Reunido em uma área delimitada do espaço observado.",
+        "O movimento está concentrado nas bancas próximas à entrada.",
+        "A concentração visual não revela o público total."
       ],
       [
         "descontraído",
@@ -220,10 +436,28 @@
     "focus": "Identifique padrão, trajetória e velocidade percebida sem transformar um instante em estatística.",
     "terms": [
       [
+        "gradual",
+        "Que se altera pouco a pouco num intervalo de tempo.",
+        "A sombra se desloca gradualmente sobre a calçada.",
+        "Um corte de edição não prova mudança contínua."
+      ],
+      [
         "fluido",
         "Que ocorre sem interrupções ou mudanças bruscas evidentes.",
         "O fluxo de ciclistas permanece fluido durante a tomada.",
         "Uma cena breve não revela o padrão de todo o dia."
+      ],
+      [
+        "brusco",
+        "Que se modifica rapidamente, com transição pouco perceptível.",
+        "Uma parada brusca interrompe o percurso da bicicleta.",
+        "Não deduza a causa da parada sem evidência."
+      ],
+      [
+        "contínuo",
+        "Que segue sem interrupção visível durante o registro.",
+        "O movimento contínuo da esteira domina esta tomada.",
+        "Delimite o período observado, sem generalizar todo o funcionamento."
       ],
       [
         "intermitente",
@@ -232,10 +466,28 @@
         "Intermitente não significa necessariamente irregular."
       ],
       [
+        "ritmado",
+        "Organizado em repetições com padrão de tempo identificável.",
+        "Os passos ritmados se alternam com o som das rodas.",
+        "O ritmo ouvido não informa velocidade exata."
+      ],
+      [
         "circular",
         "Que descreve uma trajetória aproximadamente redonda.",
         "Uma criança percorre um trajeto circular ao redor do canteiro.",
         "Distinga trajetória observada de intenção do movimento."
+      ],
+      [
+        "oscilante",
+        "Que alterna posição ou direção num movimento de vaivém.",
+        "Uma placa oscilante balança suavemente com o vento.",
+        "Oscilação não é a mesma coisa que rotação completa."
+      ],
+      [
+        "acelerado",
+        "Que ganha velocidade ao longo de um intervalo observado.",
+        "O carrinho parece acelerar ao sair do corredor estreito.",
+        "Movimento rápido isolado não comprova aceleração."
       ],
       [
         "cadenciado",
@@ -262,16 +514,52 @@
         "O aspecto externo não comprova a idade do edifício."
       ],
       [
+        "pórtico",
+        "Entrada ou passagem marcada por arcos, pilares ou moldura arquitetônica.",
+        "O pórtico da entrada separa o passeio do pátio interno.",
+        "Nem toda moldura de porta constitui um pórtico."
+      ],
+      [
         "marquise",
         "Cobertura projetada sobre uma entrada ou trecho externo.",
         "A marquise protege a faixa de acesso imediato ao prédio.",
         "Não confunda marquise com qualquer sacada."
       ],
       [
+        "cornija",
+        "Elemento saliente de arremate, geralmente horizontal, de fachada.",
+        "Uma cornija cria uma faixa de sombra abaixo da cobertura.",
+        "Não confunda cornija com marquise ou calha."
+      ],
+      [
+        "vão",
+        "Abertura ou espaço livre entre partes de uma construção.",
+        "O vão da entrada enquadra uma pequena praça ao fundo.",
+        "O tamanho aparente não informa capacidade estrutural."
+      ],
+      [
+        "platibanda",
+        "Mureta de fachada que se eleva acima do plano da cobertura.",
+        "A platibanda oculta o telhado visto da rua.",
+        "Não a identifique sem observar a extremidade superior da construção."
+      ],
+      [
         "pilotis",
         "Pilares que sustentam a edificação, liberando parte do térreo.",
         "O pavimento parece elevado por uma sequência de pilotis visíveis.",
         "Verifique se são pilares estruturais antes de classificar."
+      ],
+      [
+        "recuo",
+        "Afastamento em relação a um alinhamento de referência.",
+        "O recuo da porta cria um espaço protegido antes da entrada.",
+        "Recuo visível não prova conformidade com regras urbanísticas."
+      ],
+      [
+        "arcada",
+        "Sequência de arcos arquitetônicos repetidos.",
+        "A arcada forma uma sucessão de sombras ao longo do corredor.",
+        "Um arco isolado não caracteriza necessariamente uma arcada."
       ],
       [
         "volumetria",
@@ -304,10 +592,46 @@
         "Não presuma segurança apenas porque há pintura no piso."
       ],
       [
+        "esquina",
+        "Local em que duas ruas ou frentes de um quarteirão se encontram.",
+        "Na esquina, uma cafeteria ocupa a frente voltada às duas vias.",
+        "Esquina não indica automaticamente o sentido do tráfego."
+      ],
+      [
+        "quarteirão",
+        "Trecho urbano delimitado por ruas ou limites de circulação.",
+        "Neste quarteirão, as lojas se concentram no térreo.",
+        "Evite representar todo um bairro por um único quarteirão."
+      ],
+      [
+        "praça",
+        "Espaço aberto de uso coletivo, com funções de circulação ou permanência.",
+        "A praça reúne bancos, canteiros e caminhos de pedestres.",
+        "Um pátio de aparência pública pode ter acesso privado."
+      ],
+      [
         "arborização",
         "Conjunto de árvores presente ou implantado em um espaço.",
         "A arborização acompanha quase todo o trecho enquadrado.",
         "Não infira espécie, idade ou manejo sem fonte."
+      ],
+      [
+        "fluxo",
+        "Movimento de pessoas ou veículos ao longo de um percurso.",
+        "O fluxo de pedestres aumenta junto à saída do metrô.",
+        "Sem contagem, descreva qualitativamente e delimite o período."
+      ],
+      [
+        "mobiliário urbano",
+        "Conjunto de bancos, lixeiras, suportes e outros objetos do espaço público.",
+        "Os bancos compõem o mobiliário urbano junto ao canteiro.",
+        "Um objeto temporário não é necessariamente parte de mobiliário oficial."
+      ],
+      [
+        "permeabilidade",
+        "Facilidade ou possibilidade de atravessar ou acessar um espaço.",
+        "As entradas em lados distintos aumentam a permeabilidade da galeria.",
+        "A permeabilidade visual não confirma acesso permitido."
       ],
       [
         "fachada ativa",
@@ -340,16 +664,52 @@
         "Uma foto estática não revela todo o comportamento em movimento."
       ],
       [
+        "recorte",
+        "Linha ou peça resultante de cortes no desenvolvimento de roupa.",
+        "O recorte diagonal divide visualmente a frente do casaco.",
+        "Uma estampa pode simular recorte; verifique se há costura."
+      ],
+      [
         "pesponto",
         "Costura visível realizada próxima a uma borda, emenda ou detalhe.",
         "O pesponto aparente acompanha o contorno do bolso.",
         "Não atribua função estrutural sem conhecer a construção."
       ],
       [
+        "pregas",
+        "Dobras formadas no tecido para criar efeito ou volume.",
+        "As pregas abaixo do cós acrescentam volume à calça.",
+        "Dobras ocasionais não constituem necessariamente pregas de construção."
+      ],
+      [
+        "aviamentos",
+        "Componentes complementares, como botões, zíperes e ilhoses.",
+        "Os aviamentos metálicos aparecem sobre a jaqueta escura.",
+        "Não confunda aviamentos com a fibra principal da peça."
+      ],
+      [
+        "volume",
+        "Espaço visual ocupado pelo formato tridimensional da roupa.",
+        "O volume das mangas contrasta com a cintura ajustada.",
+        "A aparência não permite avaliar conforto ou estrutura interna."
+      ],
+      [
         "modelagem",
         "Desenho técnico e geometria das partes que constituem a roupa.",
         "A modelagem parece ampliar o volume nas mangas.",
         "A aparência externa não confirma o molde interno."
+      ],
+      [
+        "arremate",
+        "Finalização de costura, borda ou acabamento de um componente.",
+        "O arremate junto à abertura lateral é visualmente discreto.",
+        "Uma imagem não avalia resistência nem durabilidade de uma costura."
+      ],
+      [
+        "acabamento",
+        "Tratamento final dado a superfícies, bordas e costuras.",
+        "O acabamento da gola parece regular no close-up.",
+        "A avaliação completa requer inspeção de avesso e construção."
       ]
     ],
     "model": [
@@ -370,6 +730,18 @@
         "Fotografia isolada não comprova crocância."
       ],
       [
+        "cremoso",
+        "De consistência macia e coesa, fácil de espalhar.",
+        "O molho cremoso envolve a massa e não escorre rapidamente.",
+        "Textura não prova a presença de creme de leite."
+      ],
+      [
+        "fibroso",
+        "Com estruturas alongadas que se percebem ao cortar ou mastigar.",
+        "A fruta aberta revela uma polpa fibrosa.",
+        "Fibroso não equivale a medida nutricional de fibras."
+      ],
+      [
         "untuoso",
         "De textura gordurosa e deslizante percebida ao paladar.",
         "O molho tem sensação untuosa e recobre a colher.",
@@ -382,10 +754,34 @@
         "Acidez percebida não mede o pH."
       ],
       [
+        "adocicado",
+        "Com presença suave ou secundária de sabor doce.",
+        "O molho tem um fundo adocicado depois da acidez.",
+        "Não atribua açúcar adicionado sem confirmar os ingredientes."
+      ],
+      [
         "defumado",
         "Com aroma ou sabor associado à fumaça.",
         "Percebi notas defumadas no aroma do prato.",
         "Notas defumadas não comprovam que houve defumação real."
+      ],
+      [
+        "aromático",
+        "Com cheiro perceptível e característico.",
+        "O chá aromático perfuma o espaço antes da degustação.",
+        "Aroma não confirma todos os ingredientes do preparo."
+      ],
+      [
+        "aveludado",
+        "De textura lisa e macia percebida na boca.",
+        "A sopa apresenta textura aveludada e uniforme.",
+        "Não deduza ingredientes gordurosos apenas pela sensação."
+      ],
+      [
+        "persistente",
+        "De sabor ou aroma que permanece após a degustação.",
+        "O toque cítrico continua persistente após o último gole.",
+        "A persistência é percepção individual, não uma medição universal."
       ]
     ],
     "model": [
@@ -400,6 +796,12 @@
     "focus": "Descrever som exige distinguir fonte, ritmo e fenômenos acústicos sem inventar medidas.",
     "terms": [
       [
+        "ressonância",
+        "Reforço de vibrações sonoras em determinadas frequências ou materiais.",
+        "Uma ressonância grave acompanha o ruído no corredor subterrâneo.",
+        "Não confunda ressonância com repetição audível típica de eco."
+      ],
+      [
         "reverberação",
         "Persistência breve de sons refletidos por várias superfícies.",
         "A voz do aviso permanece audível por instantes na forma de reverberação.",
@@ -412,16 +814,46 @@
         "Não chame todo som prolongado de eco."
       ],
       [
+        "sussurro",
+        "Fala muito baixa, com emissão de ar predominante.",
+        "Um sussurro se destaca durante a pausa da música.",
+        "Evite captar ou publicar conversas privadas sem permissão."
+      ],
+      [
+        "estalo",
+        "Som breve e seco provocado por contato ou ruptura.",
+        "Um estalo acompanha o fechamento da caixa de madeira.",
+        "O som sozinho não confirma o material que o produziu."
+      ],
+      [
         "zumbido",
         "Som contínuo, geralmente grave ou vibratório.",
         "Um zumbido discreto acompanha o funcionamento do equipamento.",
         "Evite inferir qual máquina o produziu se não a identificou."
       ],
       [
+        "ruído",
+        "Som secundário ou indesejado em relação ao sinal principal.",
+        "O ruído do sistema de ventilação cobre parte da entrevista.",
+        "Ruído também pode transmitir contexto e não ser falha técnica."
+      ],
+      [
         "cadência",
         "Organização rítmica de uma sequência sonora.",
         "A cadência dos avisos alterna fala e pequenos intervalos.",
         "Cadência não é sinônimo de volume."
+      ],
+      [
+        "intensidade",
+        "Grau de força do som ou de sua percepção auditiva.",
+        "A intensidade percebida do tráfego cresce perto da avenida.",
+        "Não informe decibéis sem medição instrumental."
+      ],
+      [
+        "silêncio",
+        "Ausência ou redução significativa de som num contexto.",
+        "Após o aviso, alguns segundos de silêncio ocupam a gravação.",
+        "Silêncio na edição pode resultar de corte e não do ambiente."
       ]
     ],
     "model": [
@@ -442,6 +874,12 @@
         "Contraluz não implica obrigatoriamente silhueta."
       ],
       [
+        "primeiro plano",
+        "Parte da cena situada visualmente mais perto da câmera.",
+        "A bicicleta em primeiro plano ajuda a dar escala ao edifício.",
+        "Um objeto em primeiro plano não precisa estar em foco."
+      ],
+      [
         "profundidade de campo",
         "Extensão da cena que parece aceitavelmente nítida.",
         "A profundidade de campo reduzida destaca o rosto contra o fundo desfocado.",
@@ -458,6 +896,36 @@
         "Seleção dos elementos incluídos e excluídos dos limites da imagem.",
         "O enquadramento inclui a bicicleta à esquerda como referência de escala.",
         "Não atribua intenção do fotógrafo sem entrevistá-lo."
+      ],
+      [
+        "reflexo",
+        "Imagem ou luz devolvida por uma superfície refletora.",
+        "O reflexo das luzes surge sobre o piso molhado.",
+        "Não identifique a fonte se ela estiver fora do enquadramento."
+      ],
+      [
+        "desfoque",
+        "Ausência ou redução de nitidez em parte da imagem.",
+        "O desfoque do fundo destaca a expressão do entrevistado.",
+        "Pode resultar de foco, movimento ou edição: não presuma a causa."
+      ],
+      [
+        "silhueta",
+        "Contorno de figura percebido pelo contraste com o fundo.",
+        "A silhueta do pedestre se destaca contra a vitrine iluminada.",
+        "Silhueta não implica perda definitiva dos detalhes originais."
+      ],
+      [
+        "panorâmica",
+        "Visão ampla ou movimento de câmera que percorre a cena.",
+        "Uma panorâmica lenta apresenta o entorno da praça.",
+        "Diferencie foto panorâmica de movimento de câmera."
+      ],
+      [
+        "exposição",
+        "Quantidade de luz registrada numa captura fotográfica.",
+        "A exposição preserva detalhes nas vitrines mais claras.",
+        "Sem metadados, não invente ajustes de ISO, abertura e obturador."
       ]
     ],
     "model": [
@@ -471,6 +939,24 @@
     "scene": "Uma chegada a um bairro desconhecido",
     "focus": "Aprenda a nomear o que sentiu sem projetar emoções sobre moradores e outras pessoas.",
     "terms": [
+      [
+        "surpresa",
+        "Reação ao encontro de algo não previsto.",
+        "Fiquei surpreso ao encontrar uma galeria dentro da estação.",
+        "Descreva sua surpresa, não a de todos os visitantes."
+      ],
+      [
+        "curiosidade",
+        "Interesse em investigar algo ainda não compreendido.",
+        "A fachada despertou minha curiosidade sobre a história do lugar.",
+        "Curiosidade formula perguntas, não comprova respostas."
+      ],
+      [
+        "encantamento",
+        "Admiração afetiva intensa diante de uma experiência.",
+        "Senti encantamento ao ver a luz atravessando as árvores.",
+        "Trata-se de reação pessoal e não de qualidade universal."
+      ],
       [
         "estranhamento",
         "Sensação de distância ou surpresa diante do que não é familiar.",
@@ -488,6 +974,24 @@
         "Emoção de lembrança afetiva do passado.",
         "A música despertou nostalgia de encontros de família.",
         "Nostalgia depende de memória pessoal; não é característica objetiva da música."
+      ],
+      [
+        "calma",
+        "Estado de tranquilidade vivenciado numa situação.",
+        "Senti calma durante a caminhada pelo jardim.",
+        "Pouco movimento não prova que outras pessoas sintam o mesmo."
+      ],
+      [
+        "expectativa",
+        "Antecipação mental sobre algo que ainda vai acontecer.",
+        "Cheguei ao mercado com expectativa de descobrir novos sabores.",
+        "Distinga o que esperava encontrar do que realmente encontrou."
+      ],
+      [
+        "admiração",
+        "Apreço ou respeito diante de algo considerado notável.",
+        "Senti admiração pelo cuidado visível nos detalhes da peça.",
+        "O sentimento não confirma autoria ou qualidade técnica."
       ],
       [
         "ambivalência",
@@ -520,16 +1024,52 @@
         "A profundidade na imagem depende da perspectiva mostrada."
       ],
       [
+        "na diagonal",
+        "Em orientação oblíqua aos eixos de referência da composição.",
+        "Um caminho corta a praça na diagonal, da esquerda para a direita.",
+        "Indique qual enquadramento está sendo usado como referência."
+      ],
+      [
+        "em primeiro plano",
+        "Em posição próxima ao observador na composição visual.",
+        "Em primeiro plano, uma flor introduz a paisagem do jardim.",
+        "Proximidade não significa necessariamente protagonismo narrativo."
+      ],
+      [
+        "paralelo",
+        "Em direção semelhante sem encontro no espaço descrito.",
+        "Duas fileiras paralelas de árvores acompanham a avenida.",
+        "A perspectiva fotográfica pode fazer linhas paralelas convergirem."
+      ],
+      [
         "sobreposto",
         "Que aparece ou se posiciona parcialmente sobre outro elemento.",
         "A silhueta da árvore fica sobreposta à fachada na imagem.",
         "Sobreposição visual não implica contato físico."
       ],
       [
+        "alinhado",
+        "Disposto segundo uma linha ou eixo visual.",
+        "Os postes aparecem alinhados na borda da calçada.",
+        "Alinhamento aparente não atesta precisão geométrica."
+      ],
+      [
         "intercalado",
         "Distribuído em alternância entre outros elementos.",
         "Os bancos aparecem intercalados com pequenos canteiros.",
         "Confirme se existe de fato uma sequência alternada."
+      ],
+      [
+        "centralizado",
+        "Situado próximo ao centro do referencial escolhido.",
+        "O relógio centralizado organiza a composição da parede.",
+        "Centro fotográfico pode ser diferente do centro físico do objeto."
+      ],
+      [
+        "nas extremidades",
+        "Localizado nas partes mais afastadas de um objeto ou quadro.",
+        "Duas luminárias nas extremidades deixam o centro livre.",
+        "Especifique se fala das extremidades do objeto ou da imagem."
       ]
     ],
     "model": [
@@ -556,16 +1096,52 @@
         "Não use repentinamente para o que já foi apresentado como previsível."
       ],
       [
+        "ao amanhecer",
+        "No período inicial de claridade do dia.",
+        "Ao amanhecer, a luz revela gradualmente os letreiros da rua.",
+        "Confirme o período com informação confiável do registro."
+      ],
+      [
+        "no intervalo",
+        "Durante uma pausa entre dois acontecimentos.",
+        "No intervalo entre anúncios, o corredor parece mais silencioso.",
+        "Não monte cenas separadas como se fossem simultâneas."
+      ],
+      [
         "enquanto isso",
         "Conector que marca simultaneidade de ações.",
         "O funcionário organiza as caixas; enquanto isso, clientes chegam.",
         "Não afirme simultaneidade se as cenas foram gravadas em momentos diferentes."
       ],
       [
+        "mais adiante",
+        "Em ponto posterior do trajeto ou do discurso.",
+        "Mais adiante, a calçada se estreita perto da banca.",
+        "Explique se a referência é espacial ou temporal."
+      ],
+      [
+        "posteriormente",
+        "Em momento que ocorre depois do fato mencionado.",
+        "Posteriormente, o vendedor explicou a origem do objeto.",
+        "Uma sequência de edição pode não refletir a ordem real."
+      ],
+      [
+        "anteriormente",
+        "Em momento que ocorreu antes da referência atual.",
+        "Anteriormente, tínhamos observado a mesma solução em outra loja.",
+        "Indique o registro anterior quando isso afetar a compreensão."
+      ],
+      [
         "na sequência",
         "Expressão que introduz o acontecimento posterior.",
         "Na sequência, a porta foi aberta e as primeiras pessoas entraram.",
         "A ordem da edição não garante a ordem dos acontecimentos."
+      ],
+      [
+        "ao final",
+        "No encerramento de uma sequência definida.",
+        "Ao final da caminhada, retornamos ao ponto de partida.",
+        "Não generalize a conclusão para além da sequência observada."
       ]
     ],
     "model": [

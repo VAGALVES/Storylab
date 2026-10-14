@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 1.2 — Atlas Descritivo Vivo
+## Journalism Academy · Versão 1.3 — Atlas Completo e Estúdio de Voz
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -17,10 +17,18 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Frases-base em português | 552 | Editáveis em conteúdo-fonte, pesquisáveis no app |
 | Equivalentes em inglês | 36 | Seleção inicial, explicitamente incompleta |
 | Equivalentes em mandarim | 12 | Seleção inicial com pinyin |
-| Atlas de vocabulário | 16 campos; 160 termos; 64 verbetes comentados | Publicado |
+| Atlas de vocabulário | 16 campos; 160 termos; 160 verbetes comentados | Publicado |
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v1.3
+
+- Os 160 termos do Atlas possuem verbetes completos: definição, exemplo de narração e alerta editorial, com 96 novos verbetes.
+- Gravador de áudio vinculado a cada um dos 64 exercícios do Atlas: permissão de microfone, cronômetro, reprodução e download por arquivo.
+- Autorrubrica oral de dicção, fluidez, pausas e expressividade (notas de 1–5), registrada junto ao texto, sem avaliação automática.
+- Áudio fica somente na memória da aba até download explícito; o backup inclui notas e metadados, nunca os bytes da gravação.
+- Testes de integração verificam o fluxo do gravador, a associação do take à prática e o descarte ao trocar de exercício.
 
 ### Novidades da v1.2
 
@@ -126,3 +134,7 @@ Para alterar disciplinas, aulas, frases, traduções e missões, edite `generate
 ### Conteúdo do Atlas v1.2
 
 Edite `content/atlas_guides.json` e execute `python generate_atlas.py` para gerar `atlas-data.js`; valide com `python generate_atlas.py --check`. A interface reside em `atlas-engine.js` e compartilha com o aplicativo a mesma chave de armazenamento local. O backup inclui rascunhos e avaliações.
+
+### Privacidade das gravações
+
+A gravação ocorre com a API `MediaRecorder` exclusivamente no navegador, conforme permissão e compatibilidade. Os bytes permanecem num `Blob` temporário. Clique em **Baixar áudio** antes de mudar de exercício ou fechar a aba. Não existe upload, sincronização ou arquivamento automático dos áudios. Apenas os metadados (duração e indicação de take, se houver) e suas autoavaliações entram no backup JSON. A gravação normalmente exige HTTPS e permissão do microfone. Formatos disponíveis dependem do navegador.

@@ -39,3 +39,17 @@
 .atlas12-history p{margin:7px 0;white-space:normal;word-break:break-word}.atlas12-history .btn{margin-left:7px}
 @media(max-width:850px){.atlas12-toolbar,.atlas12-columns{grid-template-columns:1fr}}
 @media(max-width:500px){.atlas12-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas12-detail h2,.atlas12-work h2{font-size:25px}.atlas12-term{padding:9px 11px}}
+
+/* v1.3 — gravação vinculada ao Atlas */
+.atlas13-audio{margin:24px 0 4px;padding:22px;background:var(--wash);border:1px solid var(--line);border-radius:14px}
+.atlas13-audio h3{font-family:Georgia,serif;font-size:22px;line-height:1.3;margin:8px 0 10px}
+.atlas13-rec-controls{align-items:center;gap:12px;margin:18px 0}
+.atlas13-player{display:block;width:100%;margin:16px 0}
+.atlas13-rubric{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:15px}
+.atlas13-metric{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px}
+.atlas13-metric label{display:block;font-weight:650;margin-bottom:7px}
+.atlas13-metric select{width:100%;max-width:100%;min-width:0}
+.atlas13-metric p{margin:8px 0 0;line-height:1.5}
+.atlas13-error{color:#aa4535;font-weight:600;margin-top:11px}
+[data-theme="dark"] .atlas13-error{color:#ffb4a4}
+@media(max-width:540px){.atlas13-audio{padding:16px}.atlas13-rubric{grid-template-columns:1fr}}

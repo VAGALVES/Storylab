@@ -1,4 +1,4 @@
-/* StoryLab Shanghai · Atlas Descritivo 1.2
+/* StoryLab Shanghai · Atlas Descritivo 1.3
    Módulo independente para aprendizado lexical e prática autoral.
    Não envia rascunhos para servidores. */
 window.StoryLabAtlas=(()=>{
@@ -46,7 +46,7 @@ function termButtons(){
  return '<div class="atlas12-list"><div class="eyebrow">REPERTÓRIO DO CAMPO</div><div class="atlas12-tags">'+terms.map(term=>{
   const rich=g().terms.some(t=>t[0]===term);
   return button('word',esc(term)+(rich?' <span aria-label="Verbete aprofundado">●</span>':''),'atlas12-term '+(selected===term?'active':''),'data-topic="'+view.topic+'" data-word="'+esc(term)+'"');
- }).join('')+'</div><p class="muted small" style="margin:12px 0 0">● Verbete comentado. Os 160 termos originais continuam disponíveis; 64 têm explicação, exemplo e alerta editorial.</p></div>';
+ }).join('')+'</div><p class="muted small" style="margin:12px 0 0">● Verbete comentado. Os 160 termos originais continuam disponíveis; 160 têm explicação, exemplo e alerta editorial.</p></div>';
 }
 function dictionary(){
  const {esc,ico}=api,{term,card}=currentCard(),area=api.D.atlas[view.topic];
@@ -60,7 +60,7 @@ function history(){
  const {esc}=api,st=api.getStore(),h=st.atlasHistory||[];
  return '<div class="panel panel-pad"><div class="eyebrow">CADERNO DE PRÁTICA</div><h3 style="margin:10px 0">'+h.length+' registro(s)</h3>'+(h.length?h.slice(-5).reverse().map(x=>{
   const idx=h.indexOf(x);
-  return '<div class="atlas12-history"><strong>'+esc(api.D.atlas[x.topic]?.title||'Campo')+' · Nível '+(x.level+1)+'</strong><p class="muted small">'+esc(x.text.slice(0,105))+'</p><span class="muted small">Autoavaliação: '+x.score+'/5</span> '+button('restore','Reabrir','btn secondary sm','data-index="'+idx+'"')+'</div>';
+  return '<div class="atlas12-history"><strong>'+esc(api.D.atlas[x.topic]?.title||'Campo')+' · Nível '+(x.level+1)+'</strong><p class="muted small">'+esc(x.text.slice(0,105))+'</p><span class="muted small">Autoavaliação: '+x.score+'/5'+(Array.isArray(x.rubric)?' · Voz '+x.rubric.join('/'):'')+(x.recorded?' · Take '+(x.takeSeconds||0)+'s (arquivo não armazenado)':'')+'</span> '+button('restore','Reabrir','btn secondary sm','data-index="'+idx+'"')+'</div>';
  }).join(''):'<p class="muted small">Sua primeira descrição registrada aparecerá aqui.</p>')+'</div>';
 }
 function exercise(){
@@ -119,5 +119,5 @@ function init(context){
   if(t.matches('[data-atlas-rating]'))view.score=Number(t.value);
  });
 }
-return {init,render};
+return {init,render,context:()=>({topic:view.topic,level:view.level})};
 })();

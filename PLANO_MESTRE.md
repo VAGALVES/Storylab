@@ -491,3 +491,12 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - Quatro níveis por área: 20, 40, 60 e 90 segundos (duração sugerida, não cronômetro integrado).
 - Busca, síntese de voz para exemplos, rascunhos automáticos, indicadores determinísticos sem avaliação por IA, autoavaliação, histórico e teleprompter.
 - Expansão seguinte: detalhar os 96 termos restantes e integrar gravação vinculada ao próprio exercício.
+
+
+## Evolução v1.3 — Atlas Completo e Prática Oral Gravada
+
+- Os 160 termos do Atlas foram detalhados; 96 verbetes novos apresentam definição, exemplo de uso e alerta de precisão.
+- Os 64 exercícios progressivos existentes receberam estúdio de gravação com microfone, tempo, reprodução e download manual.
+- Avaliação oral em quatro dimensões: dicção, fluidez, pausas e expressividade, registradas somente pelo estudante.
+- Metadados de gravação e autoavaliação são incluídos no backup, mas o áudio permanece exclusivamente na memória do navegador até download e não é armazenado na nuvem ou em localStorage.
+- Próximo passo: conectar os exercícios às estruturas da Fraseoteca, com filtros semânticos e prática de entrevista.
