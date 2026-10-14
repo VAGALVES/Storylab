@@ -227,7 +227,12 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&ui.menu){ui.menu=fa
 window.addEventListener('online',()=>{let el=document.getElementById('offline-state');if(el)el.style.display='none'});
 window.addEventListener('offline',()=>{let el=document.getElementById('offline-state');if(el)el.style.display='inline-flex'});
 window.addEventListener('pagehide',()=>{if(recorder&&recorder.state!=='inactive')recorder.stop();stream?.getTracks().forEach(t=>t.stop());stopTele()});
-if('serviceWorker'in navigator&&location.protocol==='https:'||('serviceWorker'in navigator&&location.hostname==='localhost'))navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
+// Atualização do PWA: o service worker entrega os arquivos do cache primeiro, então uma versão
+// publicada só apareceria na visita seguinte. Quando a versão nova assume o controle desta aba,
+// avisamos o estudante e ele recarrega com um toque (o progresso já está salvo no localStorage).
+function registerWorker(){const sw=navigator.serviceWorker;let controlled=!!sw.controller,shown=false;sw.register('./service-worker.js').then(reg=>{document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')reg.update().catch(()=>{})})}).catch(()=>{});sw.addEventListener('controllerchange',()=>{const wasControlled=controlled;controlled=true;if(!wasControlled||shown)return;shown=true;showUpdateBanner()})}
+function showUpdateBanner(){const el=document.createElement('div');el.className='update-banner';el.id='update-banner';el.setAttribute('role','status');el.innerHTML='<span>Nova versão do StoryLab disponível.</span><button type="button" class="btn accent sm">Atualizar</button>';el.querySelector('button').addEventListener('click',()=>location.reload());document.body.appendChild(el)}
+if('serviceWorker'in navigator&&location.protocol==='https:'||('serviceWorker'in navigator&&location.hostname==='localhost'))registerWorker();
 if(window.StoryLabAtlas)window.StoryLabAtlas.init({D,getStore:()=>store,save,render,navigate,header,stat,esc,norm,ico,say,copy,toast,toTele:(text)=>{ui.teleText=text;ui.studioTab='tele';navigate('studio')}});
 render();
 })();

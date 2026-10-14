@@ -79,3 +79,7 @@
 .atlas14-explain{margin:18px 0;padding:16px;border-radius:12px;border:1px solid var(--line);background:var(--wash)}.atlas14-explain p{margin:8px 0;line-height:1.65}
 .atlas14-explain.ok{border-color:var(--ok)}.atlas14-explain.no{border-color:var(--no)}.atlas14-explain.ok>strong{color:var(--ok)}.atlas14-explain.no>strong{color:var(--no)}
 @media(max-width:500px){.atlas14-options{grid-template-columns:1fr}}
+/* Aviso de nova versão do PWA */
+.update-banner{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:101;display:flex;align-items:center;gap:14px;max-width:calc(100% - 32px);padding:12px 12px 12px 18px;background:var(--ink);color:var(--paper);border-radius:14px;box-shadow:0 12px 35px #15232840;font-size:14px;font-weight:600}
+.update-banner .btn{flex-shrink:0}
+@media(max-width:600px){.update-banner{left:16px;right:16px;transform:none;justify-content:space-between}}
