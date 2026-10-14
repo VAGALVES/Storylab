@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 1.7 — Atlas com 415 termos e encadeamento de ideias
+## Journalism Academy · Versão 1.8 — Interatividade: busca universal, cartões, jogos e meta diária
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -21,6 +21,16 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v1.8 — Interatividade
+
+- **Busca universal** (lupa, `Ctrl K` ou `/`): procura ao mesmo tempo em aulas, disciplinas, termos do Atlas, frases (inclusive nas notas de uso) e missões; ↑ ↓ e Enter para abrir.
+- **Cartões de estudo** na Fraseoteca: o cartão mostra a intenção, você formula a frase e vira (toque ou Espaço). “Lembrei” (`2`) e “De novo” (`1`) — ou arrastar o cartão no celular — alimentam a revisão espaçada já existente.
+- **Monte a frase**: as palavras de uma estrutura jornalística chegam embaralhadas; toque para montar na ordem e veja a nota de uso ao final.
+- **Atlas com escrita assistida**: termos do campo são inseridos no texto com um toque, na posição do cursor; a contagem de termos usados e de palavras genéricas atualiza enquanto você digita.
+- **Meta diária e sequência de estudo**: aulas concluídas, frases e cartões estudados, “Monte a frase”, treino e prática do Atlas, missões e práticas de voz contam para a meta (5, 10 ou 20 por dia). O 🔥 no topo mostra os dias seguidos; o Painel traz anel de progresso e os últimos 7 dias.
+- **Atalhos**: `?` mostra todos; `Esc` fecha janelas.
+- Novo módulo `interact.js`, com testes em `test_interact.mjs`; progresso diário salvo localmente, incluído no backup e validado na importação.
 
 ### Novidades da v1.7 — Atlas mais denso e encadeamento de ideias
 
@@ -152,6 +162,7 @@ Storylab/
 ├── atlas-engine.js            # Exploração lexical e prática guiada
 ├── atlas-recorder.js          # Gravação de voz local
 ├── atlas-audio-ui.js          # UI de gravação e autorrubrica
+├── interact.js                # Busca universal, cartões, jogos, meta diária e atalhos
 ├── content/
 │   ├── storylab_data.json     # Fonte das disciplinas e frases
 │   └── atlas_guides.json      # Fonte dos verbetes do Atlas
@@ -165,6 +176,7 @@ Storylab/
 ├── test_quality.py            # Integridade SVG, SW e documentação
 ├── test_atlas.mjs             # Interações do Atlas (Node.js)
 ├── test_recorder.mjs          # Fluxo de gravação simulado (Node.js)
+├── test_interact.mjs          # Busca, revisão, sequência e Monte a frase (Node.js)
 ├── netlify.toml               # Publicação raiz e headers de atualização
 ├── manifest.webmanifest
 ├── assets/
@@ -188,6 +200,7 @@ node --check atlas-recorder.js
 node --check atlas-audio-ui.js
 node test_atlas.mjs
 node test_recorder.mjs
+node test_interact.mjs
 ```
 
 Na CI, o build offline é regenerado e comparado ao arquivo versionado. Isso impede publicar um HTML único desatualizado.

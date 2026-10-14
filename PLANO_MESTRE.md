@@ -546,3 +546,11 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - **Encadeamento:** dois campos dedicados a conectores e a verbos de incidência e repercussão (incidir, repercutir, reverberar, desdobrar-se…), palavras cuja imagem física — onde algo bate e o que reflete — liga causa e efeito, complementando a família “Encadeamento lógico” da Fraseoteca — o Atlas treina o sentido de cada palavra; a Fraseoteca, o uso na frase.
 - **Método:** nos campos de conectores, o treino usa só perguntas de definição, porque lacunas isoladas admitiriam mais de uma resposta.
 - **Próximos passos:** curadoria das 552 frases originais e notas de uso para as famílias antigas; frases de lacuna exclusivas do treino para os demais campos.
+
+
+## Evolução v1.8 — Interatividade
+
+- **Princípio:** cada interação deve treinar uma competência — recuperar uma formulação (cartões), reconstruir a ordem lógica de uma frase (Monte a frase), encontrar repertório no momento da escrita (busca e inserção de termos) e manter a constância (meta e sequência).
+- **Arquitetura:** módulo próprio (`interact.js`) que recebe uma API explícita do app e desenha suas janelas numa camada separada; funções de lógica puras e testadas em Node.
+- **Privacidade:** toda atividade fica no aparelho; nada é enviado a servidores.
+- **Próximos passos:** cartões também para os termos do Atlas, modo cronometrado de fala com contagem regressiva, revisão do dia unificada (frases + termos) e conquistas por marcos de estudo.
