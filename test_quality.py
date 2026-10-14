@@ -9,6 +9,8 @@ index = (root / 'index.html').read_text(encoding='utf-8')
 assert 'atlas-recorder.js' in index and 'atlas-audio-ui.js' in index
 assert '<html lang="pt-BR">' in index
 assert 'service-worker.js' in (root / 'app.js').read_text(encoding='utf-8')
+app_js = (root / 'app.js').read_text(encoding='utf-8')
+assert 'controllerchange' in app_js and 'update-banner' in app_js, 'Aviso de nova versão do PWA ausente'
 
 for path in sorted((root / 'assets').glob('*.svg')):
     raw = path.read_text(encoding='utf-8')
