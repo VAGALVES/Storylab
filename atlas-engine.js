@@ -218,12 +218,12 @@ function feedbackBox(feedback){
 }
 function exercise(){
  const {esc,ico}=api,text=draft(),feedback=view.feedback,level=LEVELS[view.level];
- let html='<div class="panel panel-pad atlas12-work"><div class="eyebrow">EXERCÍCIO GUIADO · CENA HIPOTÉTICA</div><h2>'+esc(g().scene)+'</h2><div class="atlas12-steps" role="group" aria-label="Etapas progressivas">'+LEVELS.map((l,i)=>button('level','0'+(i+1)+' · '+esc(l[0]),'atlas12-step '+(view.level===i?'active':''),'data-level="'+i+'"')).join('')+'</div><p class="muted"><strong>'+esc(level[1])+' sugeridos.</strong> '+esc(level[2])+'</p><div class="notice info">'+esc(g().focus)+'</div><label class="field-label" for="atlas12-writing" style="margin-top:22px">Sua narração</label><textarea id="atlas12-writing" class="field atlas12-writing" data-atlas-writing="1" rows="8" maxlength="3000" placeholder="Descreva somente o que de fato observou...">'+esc(text)+'</textarea><div class="row"><span class="small muted">Rascunho salvo automaticamente</span><span id="atlas12-count" class="small muted">'+sayWords(text)+' palavras</span></div><div class="form-row" style="margin-top:16px">'+button('review',ico('target',14)+' Analisar texto','btn accent')+button('model',ico('book',14)+(view.show?' Ocultar':' Ver')+' exemplo','btn secondary')+'</div>';
+ let html='<div class="panel panel-pad atlas12-work"><div class="eyebrow">EXERCÍCIO GUIADO · CENA HIPOTÉTICA</div><h2>'+esc(g().scene)+'</h2><div class="atlas12-steps" role="group" aria-label="Etapas progressivas">'+LEVELS.map((l,i)=>button('level','0'+(i+1)+' · '+esc(l[0]),'atlas12-step '+(view.level===i?'active':''),'data-level="'+i+'"')).join('')+'</div><p class="muted"><strong>'+esc(level[1])+' sugeridos.</strong> '+esc(level[2])+'</p><div class="notice info">'+esc(g().focus)+'</div><label class="field-label" for="atlas12-writing" style="margin-top:22px">Sua narração</label><textarea id="atlas12-writing" class="field atlas12-writing" data-atlas-writing="1" rows="8" maxlength="3000" placeholder="Descreva somente o que de fato observou...">'+esc(text)+'</textarea><div class="row"><span class="small muted">Rascunho salvo automaticamente</span><span id="atlas12-count" class="small muted">'+sayWords(text)+' palavras</span></div><div id="atlas14-live" class="atlas14-live" aria-live="polite">'+liveHtml(text)+'</div><div class="form-row" style="margin-top:16px">'+button('review',ico('target',14)+' Analisar texto','btn accent')+button('model',ico('book',14)+(view.show?' Ocultar':' Ver')+' exemplo','btn secondary')+'</div>';
  if(feedback)html+=feedbackBox(feedback);
  if(view.show)html+='<div class="atlas12-example"><div class="eyebrow">EXEMPLO AUTORAL · SITUAÇÃO FICTÍCIA</div><p>'+esc(model())+'</p><div class="form-row">'+button('listen',ico('volume',14)+' Ouvir','btn secondary sm')+button('copy-model',ico('copy',14)+' Copiar modelo','btn secondary sm')+'</div></div>';
  html+='<div class="divider"></div><div class="form-row" style="align-items:end"><div><label class="field-label" for="atlas12-rating">Sua autoavaliação</label><select id="atlas12-rating" data-atlas-rating="1">'+[1,2,3,4,5].map(n=>'<option value="'+n+'" '+(view.score===n?'selected':'')+'>'+n+' / 5</option>').join('')+'</select></div>'+button('save',ico('check',14)+' Registrar prática','btn accent')+button('tele',ico('film',14)+' Teleprompter','btn secondary')+'</div><p class="muted small">Nenhum resultado é tratado como prova de habilidade ou verificação factual automática.</p></div>';
  // Vocabulário do campo à mão durante a escrita, com o estado de domínio
- const vocab='<div class="panel panel-pad"><div class="eyebrow">VOCABULÁRIO DO CAMPO</div><div class="atlas12-tags">'+api.D.atlas[view.topic].terms.map(t=>'<span class="atlas14-pill">'+esc(t)+MARK[status(view.topic,t)]+'</span>').join('')+'</div><p class="muted small" style="margin:12px 0 0">Use apenas os termos que correspondem à cena.</p></div>';
+ const vocab='<div class="panel panel-pad"><div class="eyebrow">VOCABULÁRIO DO CAMPO</div><div class="atlas12-tags">'+api.D.atlas[view.topic].terms.map(t=>button('insert',esc(t)+MARK[status(view.topic,t)],'atlas14-chip','data-word="'+esc(t)+'" title="Inserir no texto"')).join('')+'</div><p class="muted small" style="margin:12px 0 0">Toque num termo para inseri-lo onde está o cursor. Use apenas os que correspondem à cena.</p></div>';
  return '<div class="atlas12-columns"><div class="stack">'+html+'</div><aside class="stack"><div class="panel panel-pad"><div class="eyebrow">ESCADA NARRATIVA</div><p class="muted">01 Observar → 02 Detalhar → 03 Comparar → 04 Interpretar. Em cada nível, o exemplo incorpora os anteriores.</p><p class="muted">Pratique primeiro sem olhar o modelo. Grave sua voz no Estúdio da Voz quando quiser.</p>'+button('voice',ico('mic',14)+' Ir ao Estúdio da Voz','btn secondary sm')+'</div>'+vocab+history()+'</aside></div>';
 }
 function training(){
@@ -251,6 +251,31 @@ function training(){
    '<div class="form-row">'+button('quiz-next',(q.i<q.items.length-1?'Próxima pergunta':'Ver resultado')+' '+ico('arrow',14),'btn accent')+'</div>';
  }
  return html+'</div>';
+}
+/* ── Escrita assistida ─────────────────────────────────────────────
+   Análise ao vivo enquanto o estudante digita (com atraso curto para não
+   pesar) e inserção de termos do campo na posição do cursor. */
+let liveTimer=null;
+function liveHtml(t){
+ const {esc}=api;
+ if(!t.trim())return '<span class="muted small">Conforme você escreve, aparecem aqui os termos do campo usados e as palavras genéricas.</span>';
+ const a=analyze(t);
+ return '<span class="atlas14-live-item'+(a.terms.length?' ok':'')+'">'+a.terms.length+' termo(s) do campo'+(a.terms.length?': '+a.terms.map(esc).join(', '):'')+'</span>'+
+  '<span class="atlas14-live-item'+(a.vague?' warn':'')+'">'+a.vague+' palavra(s) genérica(s)'+(a.swaps.length?': '+a.swaps.map(x=>esc(x.word)).join(', '):'')+'</span>';
+}
+function scheduleLive(text){
+ clearTimeout(liveTimer);
+ liveTimer=setTimeout(()=>{const el=document.getElementById('atlas14-live');if(el)el.innerHTML=liveHtml(text)},300);
+}
+function insertTerm(word){
+ const ta=document.getElementById('atlas12-writing');
+ if(!ta||!api.D.atlas[view.topic].terms.includes(word))return;
+ const start=ta.selectionStart??ta.value.length,end=ta.selectionEnd??start,before=ta.value.slice(0,start),after=ta.value.slice(end);
+ const pre=before&&!/\s$/.test(before)?' ':'',post=after&&!/^[\s.,;:!?]/.test(after)?' ':'';
+ ta.value=(before+pre+word+post+after).slice(0,3000);
+ const caret=Math.min(ta.value.length,(before+pre+word).length);
+ ta.focus();ta.setSelectionRange(caret,caret);
+ ta.dispatchEvent(new Event('input',{bubbles:true}));
 }
 function render(){
  if(!api)return '';
@@ -287,6 +312,7 @@ function init(context){
   else if(action==='tele'){const text=draft().trim();if(text.length<20){api.toast('Escreva uma narração antes de abrir o teleprompter.');return}api.toTele(text);return}
   else if(action==='voice'){api.navigate('voice');return}
   else if(action==='restore'){const item=st.atlasHistory[Number(b.dataset.index)];if(!item||!api.D.atlas[item.topic])return;view.topic=item.topic;view.level=item.level;view.tab='practice';view.score=item.score;view.show=false;view.feedback=null;st.atlasDrafts[key()]=item.text;api.save()}
+  else if(action==='insert'){insertTerm(b.dataset.word);return}
   else if(action==='train-field'){view.tab='train';startQuiz('field')}
   else if(action==='quiz-start'){view.tab='train';startQuiz(b.dataset.scope==='all'?'all':'field')}
   else if(action==='quiz-answer'){answer(b.dataset.option)}
@@ -298,7 +324,7 @@ function init(context){
   const t=e.target;
   // Os resultados da busca vivem na aba de vocabulário: digitar em outra aba leva até eles
   if(t.matches('[data-atlas-query]')){view.query=t.value;if(t.value.trim())view.tab='explore';refreshQuery(t)}
-  if(t.matches('[data-atlas-writing]')){const st=api.getStore();st.atlasDrafts[key()]=t.value.slice(0,3000);view.feedback=null;api.save();const n=document.getElementById('atlas12-count');if(n)n.textContent=sayWords(t.value)+' palavras'}
+  if(t.matches('[data-atlas-writing]')){const st=api.getStore();st.atlasDrafts[key()]=t.value.slice(0,3000);view.feedback=null;api.save();const n=document.getElementById('atlas12-count');if(n)n.textContent=sayWords(t.value)+' palavras';scheduleLive(t.value)}
  });
  document.addEventListener('change',e=>{
   const t=e.target;
@@ -306,6 +332,8 @@ function init(context){
   if(t.matches('[data-atlas-rating]'))view.score=Number(t.value);
  });
 }
+// Abre um verbete a partir de outro módulo (ex.: busca universal)
+function openTerm(topic,word){if(!api.D.atlas[topic]?.terms.includes(word))return;view.topic=topic;view.word=word;view.tab='explore';view.query='';view.feedback=null;view.quiz=null;api.navigate('atlas')}
 // quiz() e analyze() expõem estado somente para leitura em testes automatizados
-return {init,render,context:()=>({topic:view.topic,level:view.level}),quiz:()=>view.quiz,analyze:t=>analyze(t)};
+return {init,render,open:openTerm,context:()=>({topic:view.topic,level:view.level}),quiz:()=>view.quiz,analyze:t=>analyze(t)};
 })();

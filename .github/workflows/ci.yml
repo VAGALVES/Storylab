@@ -24,8 +24,11 @@ jobs:
           node --check atlas-engine.js
           node --check atlas-recorder.js
           node --check atlas-audio-ui.js
+          node --check interact.js
       - name: Testar navegação e conteúdo do Atlas
         run: node test_atlas.mjs
+      - name: Testar busca, cartões, sequência e Monte a frase
+        run: node test_interact.mjs
       - name: Verificar permissões e captura de áudio
         run: STORYLAB_STAGE=media node test_recorder.mjs
       - name: Verificar montagem do painel de voz
@@ -43,5 +46,5 @@ jobs:
       - name: Montar versão offline
         run: |
           python build_standalone.py
-          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 6; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h"
+          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 7; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h"
           git diff --exit-code -- storylab-shanghai-offline.html
