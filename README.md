@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 1.6 — Fraseoteca com a linguagem real do jornalismo
+## Journalism Academy · Versão 1.7 — Atlas com 415 termos e encadeamento de ideias
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -17,10 +17,19 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Frases-base em português | 657 | 105 com nota de uso específica; pesquisáveis no app |
 | Equivalentes em inglês | 36 | Seleção inicial, explicitamente incompleta |
 | Equivalentes em mandarim | 12 | Seleção inicial com pinyin |
-| Atlas de vocabulário | 26 campos; 260 termos; 260 verbetes comentados; 78 trocas de precisão | Publicado, com treino e revisão espaçada |
+| Atlas de vocabulário | 28 campos; 415 termos; 415 verbetes comentados; 84 trocas de precisão | Publicado, com treino e revisão espaçada |
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v1.7 — Atlas mais denso e encadeamento de ideias
+
+- **+5 termos em cada um dos 26 campos** (130 novos), com vocabulário atual e técnico: *penumbra*, *zenital*, *estourada* (luz); *empena*, *beiral*, *brise* (arquitetura); *adensamento*, *uso misto*, *caminhabilidade*, *gentrificação* (cidade); *umami*, *adstringente*, *tostado* (gastronomia); *timbre*, *estridente*, *paisagem sonora* (som); *regra dos terços*, *linhas de condução* (fotografia).
+- **2 campos novos para o encadeamento de ideias:**
+  - *Conectores e encadeamento* — contudo, portanto, embora, ainda assim, por sua vez, em contrapartida, ou seja, à medida que, na medida em que.
+  - *Verbos de incidência e repercussão* — incidir, recair, repercutir, reverberar, ecoar, refletir, irradiar, propagar-se, desdobrar-se, permear, atravessar, decorrer de, acarretar, suscitar, convergir. Verbos com imagem física de ação e efeito (onde algo bate e o que reflete), usados para encadear causa e consequência; cada verbete traz o sentido físico, a extensão figurada e a regência.
+- No Treino de precisão, os dois campos de conectores usam só perguntas de definição: numa frase com lacuna, mais de um conector poderia caber.
+- Termos novos entram ao final de cada campo e os campos novos ao final da lista: domínio e rascunhos salvos continuam válidos.
 
 ### Novidades da v1.6 — Fraseoteca jornalística
 
@@ -100,7 +109,7 @@ O Atlas passa a cobrir o ciclo completo de aprendizagem lexical: **entender → 
 - Estúdio da Voz: desafio aleatório, gravação com `MediaRecorder` se o navegador permitir, reprodução, arquivo para salvar manualmente e autorrubrica 1–5.
 - Construtor de narração usando apenas observações inseridas pelo estudante, estilos documental, espontâneo, contemplativo e didático.
 - Nove camadas de comunicação e teleprompter com rolagem e retirada progressiva do texto.
-- Atlas de 260 termos em 26 campos para descrição mais precisa, com treino de precisão, domínio por termo, revisão espaçada e trocas de palavras genéricas.
+- Atlas de 415 termos em 28 campos para descrição mais precisa, com treino de precisão, domínio por termo, revisão espaçada e trocas de palavras genéricas.
 - 30 missões com plano de imagem, estruturas de fala, cautela e notas pessoais.
 - Trilha de 12 semanas e acompanhamento de aulas, prática e missões.
 - Tema claro/escuro, navegação móvel, dados em `localStorage`, backup JSON, importação e reinício.

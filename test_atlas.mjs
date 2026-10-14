@@ -35,9 +35,9 @@ function click(action, extra = {}) {
   handlers.click({ preventDefault() {}, target: { closest() { return {dataset:{atlasAction:action,...extra}} } } });
 }
 const initial = atlas.render();
-assert.match(initial, /260/);
-assert.match(initial, /Verbetes aprofundados: 260/);
-assert.match(initial, /Termos dominados: 0 \/ 260/);
+assert.match(initial, /415/);
+assert.match(initial, /Verbetes aprofundados: 415/);
+assert.match(initial, /Termos dominados: 0 \/ 415/);
 assert.match(initial, /Troque a palavra genérica|TROQUE A PALAVRA GENÉRICA/);
 assert.match(initial, /retilíneo/);
 click('word', {topic:'9', word:'caimento'});
@@ -137,3 +137,11 @@ assert.equal(store.atlasMastery['2:' + second].level, 3);
 click('explore');
 assert.match(atlas.render(), /Termos dominados: [1-9]/);
 console.log('Atlas 1.4: trocas de precisão, detector de vagas, treino, domínio e revisão espaçada OK');
+// Campos de conectores: só perguntas de definição (lacunas seriam ambíguas)
+for (const topic of ['26', '27']) {
+  click('word', {topic, word: D.atlas[Number(topic)].terms[0]});
+  click('train-field');
+  assert.ok(atlas.quiz().items.every(i => i.type === 'def' && i.topic === Number(topic)));
+  click('quiz-exit');
+}
+console.log('Atlas 1.7: campos de conectores com perguntas de definição OK');

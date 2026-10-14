@@ -136,7 +136,8 @@ function buildQuestion(topic,term,pos){
  const c=card(topic,term);
  const others=shuffle(api.D.atlas[topic].terms.filter(t=>t!==term)).slice(0,3);
  const gap=gapSentence(term,c[2]);
- const type=gap&&pos%2===0?'gap':'def';
+ // Campos de conectores usam só definição: numa lacuna isolada, vários conectores caberiam
+ const type=gap&&pos%2===0&&guides()[topic]?.quiz!=='definition'?'gap':'def';
  return {topic,term,type,prompt:type==='gap'?gap:c[1],options:shuffle([term,...others]),picked:null};
 }
 function startQuiz(scope){

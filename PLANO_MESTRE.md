@@ -537,4 +537,12 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - **6 famílias novas (105 estruturas):** encadeamento lógico, atribuição, leads e títulos, telejornalismo, precisão e cautela, estilo e clareza.
 - **Princípio:** cada estrutura vem com nota de uso — sentido, nuance e armadilha —, porque a mesma palavra pode mudar de função conforme o modo verbal ou a posição na frase.
 - **Registro:** português culto e contemporâneo; formas formais demais para a fala são sinalizadas na nota.
-- **Próximos passos:** curadoria das frases antigas (quase duplicatas e fórmulas genéricas), notas de uso para as famílias originais e um campo do Atlas dedicado a palavras de sentido múltiplo.
+- **Próximos passos:** curadoria das frases antigas (quase duplicatas e fórmulas genéricas), notas de uso para as famílias originais e campos do Atlas dedicados a conectores e a verbos de incidência e repercussão (feito na v1.7).
+
+
+## Evolução v1.7 — Atlas mais denso e encadeamento de ideias
+
+- **Densidade:** cada um dos 26 campos ganhou 5 termos (130 no total), escolhidos pelo uso real em reportagem, fotografia, urbanismo, gastronomia e som — com alertas sobre termos técnicos (explicar ao público leigo) e termos carregados (como *gentrificação*, que exige dados).
+- **Encadeamento:** dois campos dedicados a conectores e a verbos de incidência e repercussão (incidir, repercutir, reverberar, desdobrar-se…), palavras cuja imagem física — onde algo bate e o que reflete — liga causa e efeito, complementando a família “Encadeamento lógico” da Fraseoteca — o Atlas treina o sentido de cada palavra; a Fraseoteca, o uso na frase.
+- **Método:** nos campos de conectores, o treino usa só perguntas de definição, porque lacunas isoladas admitiriam mais de uma resposta.
+- **Próximos passos:** curadoria das 552 frases originais e notas de uso para as famílias antigas; frases de lacuna exclusivas do treino para os demais campos.
