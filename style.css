@@ -78,6 +78,7 @@
 .atlas14-option.correct::after{content:" ✓"}.atlas14-option.wrong::after{content:" ✕"}
 .atlas14-explain{margin:18px 0;padding:16px;border-radius:12px;border:1px solid var(--line);background:var(--wash)}.atlas14-explain p{margin:8px 0;line-height:1.65}
 .atlas14-explain.ok{border-color:var(--ok)}.atlas14-explain.no{border-color:var(--no)}.atlas14-explain.ok>strong{color:var(--ok)}.atlas14-explain.no>strong{color:var(--no)}
+.atlas14-filled{font-family:Georgia,serif;font-size:17px;line-height:1.6}.atlas14-filled mark{background:transparent;color:inherit;font-weight:700;border-bottom:2px solid var(--ok);padding:0 2px}
 @media(max-width:500px){.atlas14-options{grid-template-columns:1fr}}
 /* Aviso de nova versão do PWA */
 .update-banner{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:101;display:flex;align-items:center;gap:14px;max-width:calc(100% - 32px);padding:12px 12px 12px 18px;background:var(--ink);color:var(--paper);border-radius:14px;box-shadow:0 12px 35px #15232840;font-size:14px;font-weight:600}
@@ -107,6 +108,7 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 .ix-intent{font-family:Georgia,serif;font-size:26px;line-height:1.25;margin:6px 0}
 .ix-phrase{font-family:Georgia,serif;font-size:21px;line-height:1.45;margin:4px 0}
 .ix-note{font-size:14px;line-height:1.6;color:var(--ink2);margin:0}
+.ix-scene{font-family:Georgia,serif;font-style:italic;margin:4px 0 2px}
 .ix-tap{margin-top:auto;font-size:12px;color:var(--muted)}
 .ix-card:focus-visible .ix-face{outline:2px solid var(--focus)}
 .ix-grade .btn{min-width:130px}

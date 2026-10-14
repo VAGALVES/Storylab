@@ -556,6 +556,13 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - **Próximos passos:** cartões também para os termos do Atlas, modo cronometrado de fala com contagem regressiva, revisão do dia unificada (frases + termos) e conquistas por marcos de estudo.
 
 
+## Evolução v2.0 — Curadoria e precisão
+
+- **Nota de uso em 100% da Fraseoteca:** a frase-modelo só ensina quando vem com o critério de uso. Agora as 657 frases dizem onde entram na matéria, como completá-las com dado verificável e qual vício evitar (clichê, opinião sem base, redundância com a imagem).
+- **Frase de cena como unidade de treino:** a lacuna automática, tirada do exemplo, podia aceitar mais de um termo. A frase escrita para o treino é desenhada para ter uma única resposta dentro do campo, o que torna o acerto uma prova de compreensão, não de sorte.
+- **Controle de quase-sinônimos:** onde a fronteira semântica é tênue, o sistema não pede a distinção na múltipla escolha. A diferença fica nos verbetes e nas definições.
+- **Atlas com 31 campos:** interiores, multidões e sons da natureza completam o repertório de cena. Nos dois últimos há regras editoriais explícitas: atribuir estimativas de público e não narrar som que o microfone não captou.
+
 ## Evolução v1.9 — Revisão e hábito
 
 - **Revisão unificada:** frases e termos vencidos num só baralho, intercalados, para que a revisão diária leve poucos minutos e cubra os dois repertórios.

@@ -132,13 +132,19 @@ function gapSentence(term,example){
  parts[hit]='_____'+trail;
  return parts.join('');
 }
+// Frase de cena escrita para o treino (5º item do verbete): o contexto isola o termo entre todos os do campo
+function sceneSentence(c){return typeof c[4]==='string'&&c[4].split('_____').length===2?c[4]:null}
 function buildQuestion(topic,term,pos){
  const c=card(topic,term);
- const others=shuffle(api.D.atlas[topic].terms.filter(t=>t!==term)).slice(0,3);
- const gap=gapSentence(term,c[2]);
- // Campos de conectores usam só definição: numa lacuna isolada, vários conectores caberiam
- const type=gap&&pos%2===0&&guides()[topic]?.quiz!=='definition'?'gap':'def';
- return {topic,term,type,prompt:type==='gap'?gap:c[1],options:shuffle([term,...others]),picked:null};
+ // Quase-sinônimos do mesmo grupo (campo "near") nunca disputam a mesma pergunta
+ const near=new Set((guides()[topic]?.near||[]).filter(g=>g.includes(term)).flat());
+ const others=shuffle(api.D.atlas[topic].terms.filter(t=>t!==term&&!near.has(t))).slice(0,3);
+ const scene=sceneSentence(c);
+ // Sem frase de cena, a lacuna automática vem do exemplo — exceto nos campos de conectores,
+ // em que vários termos caberiam numa lacuna isolada
+ const gap=!scene&&guides()[topic]?.quiz!=='definition'?gapSentence(term,c[2]):null;
+ const type=pos%2!==0?'def':scene?'scene':gap?'gap':'def';
+ return {topic,term,type,prompt:type==='scene'?scene:type==='gap'?gap:c[1],options:shuffle([term,...others]),picked:null};
 }
 function startQuiz(scope){
  const t=now(),topics=scope==='all'?api.D.atlas.map((_,i)=>i):[view.topic],pool=[];
@@ -237,7 +243,7 @@ function training(){
  }
  const item=q.items[q.i],answered=item.picked!==null,c=card(item.topic,item.term);
  let html='<div class="panel panel-pad atlas14-train"><div class="row"><div class="eyebrow">PERGUNTA '+(q.i+1)+' DE '+q.items.length+' · '+esc(api.D.atlas[item.topic].title.toUpperCase())+'</div>'+button('quiz-exit','Sair','btn secondary sm')+'</div>'+bar(q.i+(answered?1:0),q.items.length,'Progresso da rodada')+
-  '<p class="muted small" style="margin-top:16px">'+(item.type==='gap'?'Qual termo o verbete usa para completar esta frase?':'Qual termo corresponde a esta definição?')+'</p>'+
+  '<p class="muted small" style="margin-top:16px">'+({scene:'Qual termo completa a cena com precisão?',gap:'Qual termo o verbete usa para completar esta frase?'}[item.type]||'Qual termo corresponde a esta definição?')+'</p>'+
   '<p class="atlas14-prompt">'+esc(item.prompt)+'</p><div class="atlas14-options" role="group" aria-label="Alternativas">'+
   item.options.map(o=>{
    let cls='atlas14-option';
@@ -246,8 +252,8 @@ function training(){
   }).join('')+'</div>';
  if(answered){
   const ok=item.picked===item.term,other=card(item.topic,item.picked);
-  html+='<div class="atlas14-explain '+(ok?'ok':'no')+'" role="status"><strong>'+(ok?'Correto.':'Não é “'+esc(item.picked)+'”. A resposta é “'+esc(item.term)+'”.')+'</strong><p>'+esc(c[1])+'</p><p class="small"><strong>Cuidado:</strong> '+esc(c[3])+'</p>'+
-   (ok||!other?'':(item.type==='gap'?'<p class="small muted">Em uma frase isolada, mais de um termo pode soar plausível. Compare as definições para perceber o que cada um afirma:</p>':'')+'<p class="small muted"><strong>'+esc(item.picked)+':</strong> '+esc(other[1])+'</p>')+'</div>'+
+  html+='<div class="atlas14-explain '+(ok?'ok':'no')+'" role="status"><strong>'+(ok?'Correto.':'Não é “'+esc(item.picked)+'”. A resposta é “'+esc(item.term)+'”.')+'</strong>'+(item.type!=='def'?'<p class="atlas14-filled">'+esc(item.prompt).replace('_____','<mark>'+esc(item.term)+'</mark>')+'</p>':'')+'<p>'+esc(c[1])+'</p><p class="small"><strong>Cuidado:</strong> '+esc(c[3])+'</p>'+
+   (ok||!other?'':(item.type!=='def'?'<p class="small muted">Em uma frase isolada, mais de um termo pode soar plausível. Compare as definições para perceber o que cada um afirma:</p>':'')+'<p class="small muted"><strong>'+esc(item.picked)+':</strong> '+esc(other[1])+'</p>')+'</div>'+
    '<div class="form-row">'+button('quiz-next',(q.i<q.items.length-1?'Próxima pergunta':'Ver resultado')+' '+ico('arrow',14),'btn accent')+'</div>';
  }
  return html+'</div>';
@@ -336,7 +342,7 @@ function init(context){
 // Integração com cartões e revisão do dia (interact.js): termos vencidos, novos e nota
 function termDeck(topic,limit=12){
  const t=now(),topics=topic===null||topic===undefined?api.D.atlas.map((_,i)=>i):[topic],due=[],fresh=[];
- topics.forEach(i=>api.D.atlas[i].terms.forEach(term=>{const c=card(i,term);if(!c)return;const s=status(i,term),item={topic:i,term,field:api.D.atlas[i].title,definition:c[1],example:c[2],caution:c[3]};if(s==='due')due.push([Number(record(i,term).next)||t,item]);else if(s==='new')fresh.push(item)}));
+ topics.forEach(i=>api.D.atlas[i].terms.forEach(term=>{const c=card(i,term);if(!c)return;const s=status(i,term),item={topic:i,term,field:api.D.atlas[i].title,definition:c[1],example:c[2],caution:c[3],scene:sceneSentence(c)};if(s==='due')due.push([Number(record(i,term).next)||t,item]);else if(s==='new')fresh.push(item)}));
  due.sort((a,b)=>a[0]-b[0]);
  return {due:due.map(x=>x[1]).slice(0,limit),fresh:shuffle(fresh).slice(0,limit)};
 }

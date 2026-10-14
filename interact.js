@@ -293,7 +293,7 @@ function cardFrame(c,front,back){
 // Cartão de termo: recordação livre — a definição na frente, o termo no verso
 function termCardHtml(t,c){
  const {esc}=api;
- const front='<div class="ix-face ix-front"><span class="chip">Atlas · '+esc(t.field)+'</span><p class="ix-definition">'+esc(t.definition)+'</p><p class="muted">Qual é o termo? Diga em voz alta antes de virar.</p><span class="ix-tap">Toque ou pressione Espaço para virar</span></div>';
+ const front='<div class="ix-face ix-front"><span class="chip">Atlas · '+esc(t.field)+'</span><p class="ix-definition">'+esc(t.definition)+'</p>'+(t.scene?'<p class="ix-note ix-scene">'+esc(t.scene)+'</p>':'')+'<p class="muted">Qual é o termo? Diga em voz alta antes de virar.</p><span class="ix-tap">Toque ou pressione Espaço para virar</span></div>';
  const back='<div class="ix-face ix-back"><span class="chip">Atlas · '+esc(t.field)+'</span><p class="ix-intent">'+esc(t.term)+'</p><p class="ix-note"><strong>Diga assim:</strong> '+esc(t.example)+'</p><p class="ix-note"><strong>Cuidado:</strong> '+esc(t.caution)+'</p></div>';
  return cardFrame(c,front,back);
 }
