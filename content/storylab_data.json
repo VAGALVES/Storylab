@@ -1,5 +1,5 @@
 {
-  "version": "1.3.2",
+  "version": "1.5.0",
   "schools": [
     {
       "id": "fundamentos",
@@ -10815,6 +10815,166 @@
         "ao final"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de mudança temporal e sem recorrer a adjetivos genéricos."
+    },
+    {
+      "title": "Pessoas: aparência",
+      "terms": [
+        "estatura",
+        "compleição",
+        "grisalho",
+        "cacheado",
+        "rabo de cavalo",
+        "barbado",
+        "rugas de expressão",
+        "tatuagem",
+        "uniformizado",
+        "acessório"
+      ],
+      "prompt": "Descreva uma pessoa que você observou usando três elementos de aparência, sem deduzir idade, origem, profissão ou saúde."
+    },
+    {
+      "title": "Pessoas: expressão e gestos",
+      "terms": [
+        "semblante",
+        "cenho franzido",
+        "sorriso contido",
+        "olhar fixo",
+        "gesticulação",
+        "aceno",
+        "dar de ombros",
+        "braços cruzados",
+        "sobrancelhas arqueadas",
+        "expressivo"
+      ],
+      "prompt": "Descreva uma conversa observada usando expressões e gestos, sem afirmar o que as pessoas sentiam."
+    },
+    {
+      "title": "Pessoas: postura e movimento",
+      "terms": [
+        "ereto",
+        "curvado",
+        "apoiado",
+        "agachado",
+        "inclinado",
+        "passo apressado",
+        "passo arrastado",
+        "imóvel",
+        "desenvolto",
+        "hesitante"
+      ],
+      "prompt": "Descreva como uma pessoa ocupa e atravessa um espaço usando postura e ritmo de movimento."
+    },
+    {
+      "title": "Objetos: estado e uso",
+      "terms": [
+        "desgastado",
+        "intacto",
+        "lascado",
+        "enferrujado",
+        "remendado",
+        "artesanal",
+        "industrializado",
+        "utilitário",
+        "ornamental",
+        "portátil"
+      ],
+      "prompt": "Descreva um objeto pelo estado de conservação e pelo uso que ele sugere, separando o que vê do que supõe."
+    },
+    {
+      "title": "Objetos: forma e partes",
+      "terms": [
+        "alça",
+        "cabo",
+        "tampa",
+        "base",
+        "haste",
+        "bojo",
+        "encaixe",
+        "dobradiça",
+        "empilhável",
+        "cilíndrico"
+      ],
+      "prompt": "Descreva um objeto nomeando suas partes e a relação entre elas, como se o público não pudesse vê-lo."
+    },
+    {
+      "title": "Animais: aparência",
+      "terms": [
+        "pelagem",
+        "plumagem",
+        "malhado",
+        "rajado",
+        "focinho",
+        "cauda",
+        "porte",
+        "bico",
+        "patas",
+        "escamoso"
+      ],
+      "prompt": "Descreva um animal observado pela cobertura do corpo, pelas cores e pelas partes visíveis."
+    },
+    {
+      "title": "Animais: comportamento",
+      "terms": [
+        "ciscar",
+        "empoleirado",
+        "à espreita",
+        "arisco",
+        "dócil",
+        "enrodilhado",
+        "saltitante",
+        "em bando",
+        "farejar",
+        "alerta"
+      ],
+      "prompt": "Descreva o que um animal faz durante um intervalo de tempo, sem atribuir a ele intenções humanas."
+    },
+    {
+      "title": "Vista e panorama",
+      "terms": [
+        "horizonte",
+        "skyline",
+        "mirante",
+        "panorama",
+        "vista aérea",
+        "ponto de fuga",
+        "à distância",
+        "emoldurado",
+        "desobstruído",
+        "recortado"
+      ],
+      "prompt": "Descreva uma vista ampla organizando planos, distâncias e o que fica no horizonte."
+    },
+    {
+      "title": "Paisagem natural",
+      "terms": [
+        "relevo",
+        "colina",
+        "planície",
+        "margem",
+        "vegetação rasteira",
+        "copa",
+        "bosque",
+        "espelho d'água",
+        "curso d'água",
+        "ribeirinho"
+      ],
+      "prompt": "Descreva uma paisagem com água, vegetação e relevo, indicando onde cada elemento está."
+    },
+    {
+      "title": "Céu e clima",
+      "terms": [
+        "encoberto",
+        "límpido",
+        "neblina",
+        "garoa",
+        "aguaceiro",
+        "mormaço",
+        "abafado",
+        "crepúsculo",
+        "rajada",
+        "orvalho"
+      ],
+      "prompt": "Descreva o céu e o tempo de um momento específico, com hora e efeitos sobre a cena."
     }
   ],
   "missions": [

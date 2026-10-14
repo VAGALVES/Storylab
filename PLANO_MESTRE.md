@@ -520,3 +520,12 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - **Ponte com o vocabulário cotidiano:** 48 trocas de precisão e detector de palavras genéricas com sugestões do Atlas — sempre com a ressalva de usar o termo só se ele corresponder à observação.
 - Nenhuma avaliação por IA: perguntas, notas e sugestões são determinísticas e explicáveis.
 - Próximos passos: frases de lacuna escritas especificamente para o treino (hoje reaproveitam os exemplos dos verbetes, em que mais de um termo pode soar plausível), pares de contraste explícitos por termo e vínculo entre termos dominados e os exercícios orais da Fraseoteca.
+
+
+## Evolução v1.5 — Atlas ampliado para pessoas, objetos, animais e paisagens
+
+- Dez campos novos (100 termos), escolhidos pelo que mais aparece em narração de rua: Pessoas — aparência, expressão e gestos, postura e movimento; Objetos — estado e uso, forma e partes; Animais — aparência e comportamento; Vista e panorama; Paisagem natural; Céu e clima.
+- Princípio editorial dos campos sobre pessoas: descrever o observável sem deduzir idade, origem, profissão, renda ou saúde; tratar consentimento como parte da descrição.
+- Princípio editorial dos campos sobre animais: ações observáveis antes de intenções; antropomorfismo assumido como impressão, nunca como informação.
+- Campos acrescentados ao final para preservar índices e progresso salvo.
+- Próximos passos: campos de interiores (casa, loja, transporte), multidões e eventos, e sons da natureza; frases de lacuna exclusivas para o treino.

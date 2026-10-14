@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 1.4 — Currículo integral e Atlas com treino de precisão
+## Journalism Academy · Versão 1.5 — Atlas ampliado: pessoas, objetos, animais, vistas e paisagens
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -17,10 +17,19 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Frases-base em português | 552 | Editáveis em conteúdo-fonte, pesquisáveis no app |
 | Equivalentes em inglês | 36 | Seleção inicial, explicitamente incompleta |
 | Equivalentes em mandarim | 12 | Seleção inicial com pinyin |
-| Atlas de vocabulário | 16 campos; 160 termos; 160 verbetes comentados; 48 trocas de precisão | Publicado, com treino e revisão espaçada |
+| Atlas de vocabulário | 26 campos; 260 termos; 260 verbetes comentados; 78 trocas de precisão | Publicado, com treino e revisão espaçada |
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v1.5 — Atlas ampliado
+
+- **10 campos novos e 100 termos** (de 160 para 260), voltados ao que mais aparece em vlogs e crônicas de rua: Pessoas (aparência; expressão e gestos; postura e movimento), Objetos (estado e uso; forma e partes), Animais (aparência; comportamento), Vista e panorama, Paisagem natural e Céu e clima.
+- Cada campo tem cena hipotética, 10 verbetes com definição, exemplo e alerta editorial, 4 modelos progressivos e 3 trocas de precisão — e entra automaticamente no Treino de precisão e na revisão espaçada.
+- Nos campos sobre pessoas, os alertas reforçam a ética de descrição: o observável, sem deduzir idade, origem, profissão, renda ou saúde, e com consentimento para quem aparece em destaque. Nos de animais, os alertas tratam do antropomorfismo.
+- O detector de palavras genéricas passa a reconhecer 47 palavras (38 com troca específica no Atlas), como “fofo”, “pintado”, “vista linda” e “chuvinha”. Palavras de emoção (“feliz”, “cansado”) aparecem como trocas didáticas, mas não geram alerta, pois são legítimas na interpretação pessoal.
+- Os novos campos foram acrescentados ao final da lista: o progresso já salvo (domínio, rascunhos) continua associado aos campos corretos.
+- Importação de backup: o limite de rascunhos do Atlas passa a acompanhar o número de campos (antes, fixo em 64, descartaria rascunhos dos campos novos).
 
 ### Novidades da v1.4 — Atlas Descritivo
 
@@ -82,7 +91,7 @@ O Atlas passa a cobrir o ciclo completo de aprendizagem lexical: **entender → 
 - Estúdio da Voz: desafio aleatório, gravação com `MediaRecorder` se o navegador permitir, reprodução, arquivo para salvar manualmente e autorrubrica 1–5.
 - Construtor de narração usando apenas observações inseridas pelo estudante, estilos documental, espontâneo, contemplativo e didático.
 - Nove camadas de comunicação e teleprompter com rolagem e retirada progressiva do texto.
-- Atlas de 160 termos para descrição mais precisa, com treino de precisão, domínio por termo, revisão espaçada e trocas de palavras genéricas.
+- Atlas de 260 termos em 26 campos para descrição mais precisa, com treino de precisão, domínio por termo, revisão espaçada e trocas de palavras genéricas.
 - 30 missões com plano de imagem, estruturas de fala, cautela e notas pessoais.
 - Trilha de 12 semanas e acompanhamento de aulas, prática e missões.
 - Tema claro/escuro, navegação móvel, dados em `localStorage`, backup JSON, importação e reinício.
