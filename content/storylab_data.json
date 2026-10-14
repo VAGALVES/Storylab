@@ -1,5 +1,5 @@
 {
-  "version": "1.6.0",
+  "version": "1.7.0",
   "schools": [
     {
       "id": "fundamentos",
@@ -11448,7 +11448,12 @@
         "verticalizado",
         "horizontal",
         "modular",
-        "orgânico"
+        "orgânico",
+        "facetado",
+        "escalonado",
+        "radial",
+        "sinuoso",
+        "vazado"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de formas e geometria e sem recorrer a adjetivos genéricos."
     },
@@ -11464,7 +11469,12 @@
         "esguio",
         "imponente",
         "discreto",
-        "proporcional"
+        "proporcional",
+        "escala humana",
+        "desproporcional",
+        "diminuto",
+        "robusto",
+        "maciço"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de escala e proporção e sem recorrer a adjetivos genéricos."
     },
@@ -11480,7 +11490,12 @@
         "indireta",
         "irregular",
         "refletida",
-        "natural"
+        "natural",
+        "penumbra",
+        "zenital",
+        "filtrada",
+        "chapada",
+        "estourada"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de luz e sombra e sem recorrer a adjetivos genéricos."
     },
@@ -11496,7 +11511,12 @@
         "frio",
         "terroso",
         "vibrante",
-        "gradual"
+        "gradual",
+        "tom sobre tom",
+        "pastel",
+        "desbotado",
+        "análogo",
+        "acento de cor"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de cores e contraste e sem recorrer a adjetivos genéricos."
     },
@@ -11512,7 +11532,12 @@
         "acetinado",
         "translúcido",
         "metálico",
-        "aveludado"
+        "aveludado",
+        "rugoso",
+        "envernizado",
+        "trincado",
+        "escovado",
+        "oxidado"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de textura e acabamento e sem recorrer a adjetivos genéricos."
     },
@@ -11528,7 +11553,12 @@
         "agitado",
         "arejado",
         "concentrado",
-        "descontraído"
+        "descontraído",
+        "austero",
+        "efervescente",
+        "sóbrio",
+        "sereno",
+        "impessoal"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de ambiente e atmosfera e sem recorrer a adjetivos genéricos."
     },
@@ -11544,7 +11574,12 @@
         "circular",
         "oscilante",
         "acelerado",
-        "cadenciado"
+        "cadenciado",
+        "sincronizado",
+        "pendular",
+        "errático",
+        "convergente",
+        "disperso"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de movimentos e sem recorrer a adjetivos genéricos."
     },
@@ -11560,7 +11595,12 @@
         "pilotis",
         "recuo",
         "arcada",
-        "volumetria"
+        "volumetria",
+        "empena",
+        "beiral",
+        "balaustrada",
+        "átrio",
+        "brise"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de arquitetura e sem recorrer a adjetivos genéricos."
     },
@@ -11576,7 +11616,12 @@
         "fluxo",
         "mobiliário urbano",
         "permeabilidade",
-        "fachada ativa"
+        "fachada ativa",
+        "adensamento",
+        "uso misto",
+        "caminhabilidade",
+        "gentrificação",
+        "espaço residual"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de cidade e sem recorrer a adjetivos genéricos."
     },
@@ -11592,7 +11637,12 @@
         "volume",
         "modelagem",
         "arremate",
-        "acabamento"
+        "acabamento",
+        "alfaiataria",
+        "sobreposição",
+        "drapeado",
+        "oversized",
+        "atemporal"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de moda e sem recorrer a adjetivos genéricos."
     },
@@ -11608,7 +11658,12 @@
         "defumado",
         "aromático",
         "aveludado",
-        "persistente"
+        "persistente",
+        "umami",
+        "picante",
+        "adstringente",
+        "caramelizado",
+        "tostado"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de gastronomia e sem recorrer a adjetivos genéricos."
     },
@@ -11624,7 +11679,12 @@
         "ruído",
         "cadência",
         "intensidade",
-        "silêncio"
+        "silêncio",
+        "timbre",
+        "grave",
+        "agudo",
+        "estridente",
+        "paisagem sonora"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de som e sem recorrer a adjetivos genéricos."
     },
@@ -11640,7 +11700,12 @@
         "desfoque",
         "silhueta",
         "panorâmica",
-        "exposição"
+        "exposição",
+        "regra dos terços",
+        "linhas de condução",
+        "plano detalhe",
+        "granulação",
+        "composição"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de fotografia e sem recorrer a adjetivos genéricos."
     },
@@ -11656,7 +11721,12 @@
         "calma",
         "expectativa",
         "admiração",
-        "ambivalência"
+        "ambivalência",
+        "desconforto",
+        "empatia",
+        "inquietação",
+        "deslumbramento",
+        "alívio"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de emoções e impressões e sem recorrer a adjetivos genéricos."
     },
@@ -11672,7 +11742,12 @@
         "alinhado",
         "intercalado",
         "centralizado",
-        "nas extremidades"
+        "nas extremidades",
+        "contíguo",
+        "defronte",
+        "perpendicular",
+        "recuado",
+        "à margem"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de relações espaciais e sem recorrer a adjetivos genéricos."
     },
@@ -11688,7 +11763,12 @@
         "posteriormente",
         "anteriormente",
         "na sequência",
-        "ao final"
+        "ao final",
+        "simultaneamente",
+        "paulatinamente",
+        "de imediato",
+        "em seguida",
+        "ao longo do dia"
       ],
       "prompt": "Descreva uma cena de Xangai usando três elementos de mudança temporal e sem recorrer a adjetivos genéricos."
     },
@@ -11704,7 +11784,12 @@
         "rugas de expressão",
         "tatuagem",
         "uniformizado",
-        "acessório"
+        "acessório",
+        "cabelo raspado",
+        "franja",
+        "óculos de grau",
+        "maquiagem",
+        "crachá"
       ],
       "prompt": "Descreva uma pessoa que você observou usando três elementos de aparência, sem deduzir idade, origem, profissão ou saúde."
     },
@@ -11720,7 +11805,12 @@
         "dar de ombros",
         "braços cruzados",
         "sobrancelhas arqueadas",
-        "expressivo"
+        "expressivo",
+        "olhar de soslaio",
+        "mão no queixo",
+        "gargalhada",
+        "boquiaberto",
+        "apontar"
       ],
       "prompt": "Descreva uma conversa observada usando expressões e gestos, sem afirmar o que as pessoas sentiam."
     },
@@ -11736,7 +11826,12 @@
         "passo arrastado",
         "imóvel",
         "desenvolto",
-        "hesitante"
+        "hesitante",
+        "encostado",
+        "de pernas cruzadas",
+        "em fila",
+        "debruçado",
+        "em marcha"
       ],
       "prompt": "Descreva como uma pessoa ocupa e atravessa um espaço usando postura e ritmo de movimento."
     },
@@ -11752,7 +11847,12 @@
         "industrializado",
         "utilitário",
         "ornamental",
-        "portátil"
+        "portátil",
+        "novo em folha",
+        "reaproveitado",
+        "descartável",
+        "quebradiço",
+        "conservado"
       ],
       "prompt": "Descreva um objeto pelo estado de conservação e pelo uso que ele sugere, separando o que vê do que supõe."
     },
@@ -11768,7 +11868,12 @@
         "encaixe",
         "dobradiça",
         "empilhável",
-        "cilíndrico"
+        "cilíndrico",
+        "gargalo",
+        "aro",
+        "rosca",
+        "borda",
+        "pegador"
       ],
       "prompt": "Descreva um objeto nomeando suas partes e a relação entre elas, como se o público não pudesse vê-lo."
     },
@@ -11784,7 +11889,12 @@
         "porte",
         "bico",
         "patas",
-        "escamoso"
+        "escamoso",
+        "bigodes",
+        "orelhas eretas",
+        "crista",
+        "garras",
+        "pelo eriçado"
       ],
       "prompt": "Descreva um animal observado pela cobertura do corpo, pelas cores e pelas partes visíveis."
     },
@@ -11800,7 +11910,12 @@
         "saltitante",
         "em bando",
         "farejar",
-        "alerta"
+        "alerta",
+        "bicar",
+        "rosnar",
+        "ronronar",
+        "espreguiçar-se",
+        "territorial"
       ],
       "prompt": "Descreva o que um animal faz durante um intervalo de tempo, sem atribuir a ele intenções humanas."
     },
@@ -11816,7 +11931,12 @@
         "à distância",
         "emoldurado",
         "desobstruído",
-        "recortado"
+        "recortado",
+        "plano geral",
+        "vista em mergulho",
+        "camadas de profundidade",
+        "linha d'água",
+        "contorno"
       ],
       "prompt": "Descreva uma vista ampla organizando planos, distâncias e o que fica no horizonte."
     },
@@ -11832,7 +11952,12 @@
         "bosque",
         "espelho d'água",
         "curso d'água",
-        "ribeirinho"
+        "ribeirinho",
+        "encosta",
+        "vale",
+        "orla",
+        "arbusto",
+        "estuário"
       ],
       "prompt": "Descreva uma paisagem com água, vegetação e relevo, indicando onde cada elemento está."
     },
@@ -11848,9 +11973,46 @@
         "abafado",
         "crepúsculo",
         "rajada",
-        "orvalho"
+        "orvalho",
+        "nublado",
+        "chuvisco",
+        "trovoada",
+        "úmido",
+        "ventania"
       ],
       "prompt": "Descreva o céu e o tempo de um momento específico, com hora e efeitos sobre a cena."
+    },
+    {
+      "title": "Conectores e encadeamento",
+      "terms": [
+        "contudo",
+        "portanto",
+        "embora",
+        "ainda assim",
+        "além disso",
+        "por sua vez",
+        "em contrapartida",
+        "ou seja",
+        "à medida que",
+        "na medida em que"
+      ],
+      "prompt": "Narre uma mudança observada encadeando causa, contraste e conclusão com conectores precisos."
+    },
+    {
+      "title": "Palavras de sentido múltiplo",
+      "terms": [
+        "enquanto",
+        "já",
+        "logo",
+        "assim",
+        "como",
+        "desde que",
+        "uma vez que",
+        "mesmo",
+        "ora",
+        "sobretudo"
+      ],
+      "prompt": "Use três palavras de sentido múltiplo numa narração e verifique se cada uma expressa a relação que você pretende."
     }
   ],
   "missions": [

@@ -62,6 +62,36 @@
         "De formas irregulares ou fluidas inspiradas em padrões naturais.",
         "As linhas orgânicas do canteiro suavizam a geometria da calçada.",
         "Orgânico descreve a forma; não prova que o material seja natural."
+      ],
+      [
+        "facetado",
+        "Com várias faces planas que se encontram em ângulos, como um cristal lapidado.",
+        "O pavilhão facetado reflete a luz de forma diferente em cada plano de vidro.",
+        "Facetado descreve planos angulosos; não use para superfícies curvas ou lisas."
+      ],
+      [
+        "escalonado",
+        "Organizado em degraus ou níveis sucessivos.",
+        "O edifício escalonado recua a cada andar, formando terraços.",
+        "Escalonado é a forma em degraus; não pressupõe que haja terraços acessíveis."
+      ],
+      [
+        "radial",
+        "Disposto a partir de um centro, como raios de uma roda.",
+        "Os caminhos radiais do parque convergem para a fonte central.",
+        "Confirme se há de fato um centro comum antes de chamar o desenho de radial."
+      ],
+      [
+        "sinuoso",
+        "Com curvas sucessivas e alternadas, como uma serpente.",
+        "Um caminho sinuoso de pedra atravessa o jardim até o pavilhão.",
+        "Sinuoso pede curvas alternadas; uma única curva é apenas curva."
+      ],
+      [
+        "vazado",
+        "Com aberturas que deixam passar luz, ar ou visão através do material.",
+        "O muro vazado de tijolos deixa ver o pátio por trás.",
+        "Vazado descreve a forma; diga se as aberturas formam um padrão regular."
       ]
     ],
     "model": [
@@ -169,6 +199,36 @@
         "Com relação equilibrada de dimensões entre as partes, segundo critério explicado.",
         "A marquise parece proporcional à largura da entrada.",
         "Equilíbrio visual é avaliação; explique o critério."
+      ],
+      [
+        "escala humana",
+        "Dimensão compatível com o corpo e a percepção de quem caminha.",
+        "As lojas térreas e os toldos baixos mantêm a rua em escala humana.",
+        "É um conceito de urbanismo; explique em que a escala favorece o pedestre."
+      ],
+      [
+        "desproporcional",
+        "Com partes de tamanhos que não guardam relação equilibrada entre si.",
+        "O letreiro parece desproporcional à fachada estreita da loja.",
+        "Diga em relação a quê; desproporção é sempre comparativa."
+      ],
+      [
+        "diminuto",
+        "Muito pequeno, de dimensões reduzidas.",
+        "Um altar diminuto ocupa um nicho na parede da banca.",
+        "Prefira diminuto a “pequenininho” no texto; na fala, “bem pequeno” é mais natural."
+      ],
+      [
+        "robusto",
+        "De estrutura sólida e aparência resistente.",
+        "Pilares robustos sustentam a passarela sobre a avenida.",
+        "Robusto descreve a aparência; resistência real exige informação técnica."
+      ],
+      [
+        "maciço",
+        "Compacto e pesado na aparência, com pouca ou nenhuma abertura.",
+        "O bloco maciço de concreto contrasta com as fachadas de vidro ao redor.",
+        "Prefira “maciço” a “massivo”, anglicismo comum que soa impreciso."
       ]
     ],
     "model": [
@@ -276,6 +336,36 @@
         "Proveniente de fontes luminosas naturais, como o sol.",
         "A luz natural alcança as mesas perto da janela.",
         "Aparência natural não prova ausência de luz artificial."
+      ],
+      [
+        "penumbra",
+        "Zona de luz fraca, entre a claridade e a sombra total.",
+        "Na penumbra do salão, só as mesas próximas à janela são bem visíveis.",
+        "Penumbra não é escuridão completa; descreva o que ainda se enxerga."
+      ],
+      [
+        "zenital",
+        "Luz que vem de cima, do alto do céu ou de uma abertura no teto.",
+        "Uma claraboia deixa entrar luz zenital sobre o pátio interno.",
+        "Ao meio-dia, a luz natural é zenital e cria sombras curtas e duras."
+      ],
+      [
+        "filtrada",
+        "Luz que atravessa algo — folhas, cortinas, tecido — antes de chegar à cena.",
+        "A luz filtrada pelos plátanos desenha manchas sobre a calçada.",
+        "Diga o que filtra a luz; isso explica a textura das manchas."
+      ],
+      [
+        "chapada",
+        "Luz uniforme e frontal que elimina sombras e achata volumes.",
+        "Sob luz chapada, a fachada perde relevo e parece plana.",
+        "Termo de fotografia; na conversa comum, prefira “luz uniforme, sem sombras”."
+      ],
+      [
+        "estourada",
+        "Área tão clara na imagem que perde detalhes e vira branco.",
+        "O céu ficou estourado na foto, sem nenhuma nuvem visível.",
+        "Jargão de fotografia e vídeo; explique o termo se o público for leigo."
       ]
     ],
     "model": [
@@ -383,6 +473,36 @@
         "Com transição progressiva de tom, cor ou intensidade.",
         "O mural passa gradualmente de azul a cinza.",
         "Blocos de cor separados não representam necessariamente gradiente."
+      ],
+      [
+        "tom sobre tom",
+        "Combinação de variações de uma mesma cor, mais claras e mais escuras.",
+        "A vitrine é montada em tom sobre tom, do bege ao marrom.",
+        "Diferencie de monocromático: tom sobre tom pressupõe variações perceptíveis."
+      ],
+      [
+        "pastel",
+        "Cor clara e suave, com muito branco na mistura.",
+        "As fachadas em tons pastel suavizam o contraste com o céu cinza.",
+        "Pastel é luminosidade e suavidade, não uma cor específica."
+      ],
+      [
+        "desbotado",
+        "Que perdeu intensidade de cor com o tempo, o sol ou as lavagens.",
+        "O toldo vermelho está desbotado nas partes mais expostas ao sol.",
+        "Desbotado indica perda de cor; não confirma idade nem descuido."
+      ],
+      [
+        "análogo",
+        "Cores vizinhas no círculo cromático, como amarelo, laranja e vermelho.",
+        "O cartaz usa cores análogas, do amarelo ao vermelho, sem contraste forte.",
+        "Análogo é o oposto de complementar; use quando a harmonia vem da vizinhança."
+      ],
+      [
+        "acento de cor",
+        "Pequeno ponto de cor que se destaca num conjunto neutro.",
+        "Um guarda-chuva amarelo é o único acento de cor na rua cinzenta.",
+        "Use quando o elemento colorido for pequeno em relação à cena."
       ]
     ],
     "model": [
@@ -490,6 +610,36 @@
         "De aspecto visual macio, semelhante à superfície de veludo.",
         "O revestimento aveludado espalha a luz sem reflexos fortes.",
         "A aparência não comprova composição nem toque real."
+      ],
+      [
+        "rugoso",
+        "Com saliências e reentrâncias irregulares na superfície.",
+        "O tronco rugoso do plátano contrasta com o banco de metal liso.",
+        "Rugoso é mais irregular que áspero; observe se há relevo visível."
+      ],
+      [
+        "envernizado",
+        "Coberto por camada de verniz, com brilho e proteção.",
+        "O balcão envernizado reflete as luminárias do teto.",
+        "Brilho não comprova verniz; pode ser polimento ou outro acabamento."
+      ],
+      [
+        "trincado",
+        "Com pequenas rachaduras, sem se separar em partes.",
+        "O piso trincado da entrada revela o desgaste dos anos de passagem.",
+        "Trinca é rachadura fina; não confunda com lasca, que perde material."
+      ],
+      [
+        "escovado",
+        "Metal com acabamento de riscos finos e paralelos, sem brilho espelhado.",
+        "O elevador tem portas de aço escovado.",
+        "Escovado tem textura linear; polido é espelhado."
+      ],
+      [
+        "oxidado",
+        "Com camada de óxido formada na superfície do metal, como a pátina esverdeada do cobre.",
+        "O sino de bronze oxidado ganhou tons esverdeados.",
+        "Oxidação nem sempre é dano: em bronze e cobre pode ser intencional."
       ]
     ],
     "model": [
@@ -597,6 +747,36 @@
         "De clima percebido como informal e pouco rígido.",
         "As conversas espontâneas contribuem para um ambiente descontraído.",
         "Evite atribuir estados emocionais a pessoas desconhecidas."
+      ],
+      [
+        "austero",
+        "Sóbrio ao extremo, sem ornamentos nem concessões ao conforto.",
+        "A sala de espera é austera: bancos de madeira e paredes nuas.",
+        "Austero descreve o espaço; não atribua rigidez às pessoas que estão nele."
+      ],
+      [
+        "efervescente",
+        "Com grande movimento, energia e atividade simultânea.",
+        "À noite, a rua dos bares fica efervescente.",
+        "Use para descrever atividade observável, não como elogio genérico."
+      ],
+      [
+        "sóbrio",
+        "Contido, sem excessos visuais ou sonoros.",
+        "O restaurante tem decoração sóbria, em madeira e linho cru.",
+        "Sóbrio é contenção, não ausência de estilo."
+      ],
+      [
+        "sereno",
+        "Calmo e sem agitação perceptível.",
+        "Às seis da manhã, o parque está sereno; só se ouvem pássaros.",
+        "Descreva o que torna o ambiente sereno; a sensação é sua."
+      ],
+      [
+        "impessoal",
+        "Sem marcas de identidade, personalidade ou história local.",
+        "O saguão do hotel é impessoal: poderia estar em qualquer cidade.",
+        "É uma avaliação; sustente com elementos observáveis."
       ]
     ],
     "model": [
@@ -704,6 +884,36 @@
         "Que segue um ritmo identificável, marcado por repetições.",
         "Os passos cadenciados se misturam ao ruído das rodas.",
         "Cadenciado não exige velocidade constante."
+      ],
+      [
+        "sincronizado",
+        "Que acontece ao mesmo tempo e no mesmo ritmo que outro movimento.",
+        "Os praticantes de dança na praça se movem de forma sincronizada.",
+        "Sincronia exata é rara; “quase sincronizado” costuma ser mais honesto."
+      ],
+      [
+        "pendular",
+        "Que vai e volta de um ponto a outro, como um pêndulo.",
+        "O movimento pendular dos trabalhadores enche os trens às 8h e às 18h.",
+        "Em urbanismo, “movimento pendular” é o deslocamento diário casa–trabalho."
+      ],
+      [
+        "errático",
+        "Sem direção ou padrão previsível.",
+        "Um drone de brinquedo faz um voo errático sobre a fonte.",
+        "Errático descreve a trajetória; não pressupõe defeito ou intenção."
+      ],
+      [
+        "convergente",
+        "Que se dirige para um mesmo ponto.",
+        "Fluxos convergentes de pedestres se encontram na saída do metrô.",
+        "Diga para onde o movimento converge."
+      ],
+      [
+        "disperso",
+        "Espalhado, sem concentração num ponto.",
+        "Depois do show, o público sai disperso pelas ruas vizinhas.",
+        "Disperso é distribuição no espaço, não desorganização."
       ]
     ],
     "model": [
@@ -811,6 +1021,36 @@
         "Organização dos volumes e massas construídas.",
         "A volumetria alterna um bloco alto com um corpo lateral mais baixo.",
         "Não substitua descrição de volumes por rótulos de estilo sem evidência."
+      ],
+      [
+        "empena",
+        "Parede lateral de um edifício, geralmente sem janelas.",
+        "A empena cega do prédio recebeu um mural de dez andares.",
+        "Empena cega é a sem aberturas; confirme antes de usar o termo."
+      ],
+      [
+        "beiral",
+        "Prolongamento do telhado além da parede, que protege da chuva.",
+        "Sob o beiral largo, os vendedores se abrigam da garoa.",
+        "Não confunda beiral (parte do telhado) com marquise (estrutura independente)."
+      ],
+      [
+        "balaustrada",
+        "Guarda-corpo formado por pequenas colunas (balaústres) e um corrimão.",
+        "Uma balaustrada de pedra contorna a varanda do primeiro andar.",
+        "Guarda-corpos de vidro ou grade não são balaustradas."
+      ],
+      [
+        "átrio",
+        "Espaço interno amplo, geralmente com pé-direito alto e iluminação natural.",
+        "O átrio do shopping sobe seis andares até a cobertura de vidro.",
+        "Use para espaços internos de circulação; pátio é aberto ao céu."
+      ],
+      [
+        "brise",
+        "Elemento de fachada que controla a entrada de sol, como lâminas ou aletas.",
+        "Brises verticais de alumínio sombreiam as janelas voltadas para oeste.",
+        "Do francês “brise-soleil”; diga se as lâminas são fixas ou móveis."
       ]
     ],
     "model": [
@@ -918,6 +1158,36 @@
         "Frente edificada com usos e aberturas que geram relação direta com a rua.",
         "As vitrines e portas abertas criam uma fachada ativa voltada à calçada.",
         "Um estabelecimento aberto no instante não prova vitalidade permanente."
+      ],
+      [
+        "adensamento",
+        "Aumento do número de pessoas, moradias ou construções numa área.",
+        "O adensamento do bairro trouxe torres onde antes havia casas.",
+        "É um processo; afirme-o com dados ou fontes, não só pela paisagem."
+      ],
+      [
+        "uso misto",
+        "Combinação de moradia, comércio e serviços no mesmo edifício ou quarteirão.",
+        "O prédio de uso misto tem lojas no térreo e apartamentos acima.",
+        "Confirme os usos reais; nem toda loja térrea indica moradia acima."
+      ],
+      [
+        "caminhabilidade",
+        "Qualidade de um lugar para ser percorrido a pé com conforto e segurança.",
+        "Calçadas largas e sombra aumentam a caminhabilidade da rua.",
+        "Termo técnico de urbanismo; explique os critérios que você observou."
+      ],
+      [
+        "gentrificação",
+        "Transformação de um bairro com valorização imobiliária e substituição de moradores por grupos de maior renda.",
+        "Moradores antigos associam a gentrificação ao aumento dos aluguéis.",
+        "Termo carregado e debatido; sustente com dados de renda e moradia, não só com cafés novos."
+      ],
+      [
+        "espaço residual",
+        "Área urbana que sobra entre construções ou vias, sem função definida.",
+        "Sob o viaduto, um espaço residual virou estacionamento improvisado.",
+        "Residual não significa inútil; observe como as pessoas o ocupam."
       ]
     ],
     "model": [
@@ -1025,6 +1295,36 @@
         "Tratamento final dado a superfícies, bordas e costuras.",
         "O acabamento da gola parece regular no close-up.",
         "A avaliação completa requer inspeção de avesso e construção."
+      ],
+      [
+        "alfaiataria",
+        "Técnica de confecção sob medida, com cortes estruturados e acabamento preciso.",
+        "A loja expõe peças de alfaiataria com lapelas marcadas.",
+        "Alfaiataria é técnica; peças industriais de estilo alfaiataria não são feitas sob medida."
+      ],
+      [
+        "sobreposição",
+        "Uso de peças em camadas, umas sobre as outras.",
+        "A sobreposição de camisa, colete e casaco cria volume no tronco.",
+        "Descreva a ordem das camadas para o público visualizar."
+      ],
+      [
+        "drapeado",
+        "Tecido disposto em dobras soltas e fluidas.",
+        "Um vestido de seda drapeado na lateral ocupa o centro da vitrine.",
+        "Drapeado é dobra fluida; pregas são dobras marcadas e regulares."
+      ],
+      [
+        "oversized",
+        "Peça intencionalmente maior que o tamanho do corpo.",
+        "O casaco oversized cai abaixo dos ombros.",
+        "Anglicismo consolidado na moda; em português, “amplo” ou “folgado” também servem."
+      ],
+      [
+        "atemporal",
+        "Que não segue tendências de uma época e tende a não sair de moda.",
+        "A marca aposta em peças atemporais, de cores neutras.",
+        "É um argumento de marketing; atribua-o à marca se a ideia for dela."
       ]
     ],
     "model": [
@@ -1132,6 +1432,36 @@
         "De sabor ou aroma que permanece após a degustação.",
         "O toque cítrico continua persistente após o último gole.",
         "A persistência é percepção individual, não uma medição universal."
+      ],
+      [
+        "umami",
+        "Gosto básico associado a caldos, carnes, cogumelos e molhos fermentados; sabor de profundidade.",
+        "O caldo tem umami intenso, vindo do molho de soja e dos cogumelos.",
+        "Umami é gosto básico, não tempero; diga de onde ele vem no prato."
+      ],
+      [
+        "picante",
+        "Que provoca sensação de ardor, como a da pimenta.",
+        "O macarrão é picante, com óleo de pimenta e pimenta de Sichuan.",
+        "A pimenta de Sichuan dá dormência (“ma”), diferente do ardor (“la”)."
+      ],
+      [
+        "adstringente",
+        "Que deixa sensação de secura e aspereza na boca, como chá forte ou caqui verde.",
+        "O chá verde concentrado é levemente adstringente.",
+        "Adstringência é sensação de textura, não amargor."
+      ],
+      [
+        "caramelizado",
+        "Com açúcar dourado pelo calor, que ganha cor e sabor tostado.",
+        "A carne de porco caramelizada brilha sob o molho escuro.",
+        "Diga se o caramelo vem do açúcar adicionado ou dos próprios ingredientes."
+      ],
+      [
+        "tostado",
+        "Dourado pelo calor seco, com sabor levemente queimado.",
+        "As sementes de gergelim tostadas perfumam o prato.",
+        "Tostado é dourado; queimado já indica excesso."
       ]
     ],
     "model": [
@@ -1239,6 +1569,36 @@
         "Ausência ou redução significativa de som num contexto.",
         "Após o aviso, alguns segundos de silêncio ocupam a gravação.",
         "Silêncio na edição pode resultar de corte e não do ambiente."
+      ],
+      [
+        "timbre",
+        "Qualidade que diferencia sons de mesma altura e intensidade, como a voz de cada pessoa.",
+        "O timbre grave do vendedor se destaca entre os anúncios da rua.",
+        "Timbre não é volume nem altura; é a “cor” do som."
+      ],
+      [
+        "grave",
+        "Som de frequência baixa, como o de um tambor ou de um motor de ônibus.",
+        "O ruído grave dos ônibus faz vibrar o vidro do café.",
+        "Grave é altura do som, não volume: um som grave pode ser baixo."
+      ],
+      [
+        "agudo",
+        "Som de frequência alta, como um apito ou o freio de uma bicicleta.",
+        "O apito agudo do guarda corta o barulho da avenida.",
+        "Agudo não significa alto; descreva também a intensidade."
+      ],
+      [
+        "estridente",
+        "Som agudo, intenso e incômodo.",
+        "O alarme estridente dispara toda vez que a porta abre.",
+        "É uma avaliação; descreva o som antes de qualificá-lo."
+      ],
+      [
+        "paisagem sonora",
+        "Conjunto dos sons que caracterizam um lugar.",
+        "A paisagem sonora do mercado mistura pregões, rádio e água corrente.",
+        "Conceito útil para vídeo: grave o ambiente sem narração para registrá-lo."
       ]
     ],
     "model": [
@@ -1346,6 +1706,36 @@
         "Quantidade de luz registrada numa captura fotográfica.",
         "A exposição preserva detalhes nas vitrines mais claras.",
         "Sem metadados, não invente ajustes de ISO, abertura e obturador."
+      ],
+      [
+        "regra dos terços",
+        "Divisão do quadro em nove partes iguais para posicionar elementos nas linhas ou intersecções.",
+        "Pela regra dos terços, o horizonte ficou na linha inferior do quadro.",
+        "É um recurso de composição, não uma obrigação; centralizar também pode funcionar."
+      ],
+      [
+        "linhas de condução",
+        "Linhas da cena que conduzem o olhar até o ponto de interesse.",
+        "Os trilhos funcionam como linhas de condução até o bonde ao fundo.",
+        "Diga para onde as linhas levam o olhar."
+      ],
+      [
+        "plano detalhe",
+        "Enquadramento muito fechado que mostra apenas uma parte pequena de algo.",
+        "Um plano detalhe mostra as mãos da artesã dobrando o papel.",
+        "Combine com planos abertos para não perder o contexto."
+      ],
+      [
+        "granulação",
+        "Textura de pontos visível na imagem, comum em pouca luz ou filme.",
+        "A foto noturna tem granulação forte nas áreas escuras.",
+        "Granulação pode ser defeito ou escolha estética; diga qual é o caso."
+      ],
+      [
+        "composição",
+        "Organização dos elementos dentro do quadro.",
+        "A composição coloca o vendedor à esquerda e a fila à direita, em diagonal.",
+        "Descreva a composição pelo que ela faz o público ver primeiro."
       ]
     ],
     "model": [
@@ -1453,6 +1843,36 @@
         "Presença simultânea de sentimentos ou avaliações diferentes.",
         "Senti ambivalência entre entusiasmo pela novidade e cautela diante do desconhecido.",
         "Evite usar ambivalência como mero sinônimo de dúvida factual."
+      ],
+      [
+        "desconforto",
+        "Sensação de incômodo físico ou emocional diante de uma situação.",
+        "Senti desconforto ao filmar perto das pessoas que esperavam atendimento.",
+        "Atribua o desconforto a você; não o projete em quem aparece na cena."
+      ],
+      [
+        "empatia",
+        "Capacidade de se colocar no lugar do outro e compreender sua experiência.",
+        "A conversa com a vendedora despertou empatia pela rotina dela.",
+        "Empatia não autoriza falar pela pessoa; deixe que ela conte a própria experiência."
+      ],
+      [
+        "inquietação",
+        "Estado de agitação interior, de dúvida ou de preocupação.",
+        "A demolição das casas antigas me deixou uma inquietação sobre quem morava ali.",
+        "Transforme a inquietação em pergunta de apuração, não em conclusão."
+      ],
+      [
+        "deslumbramento",
+        "Admiração intensa, que pode ofuscar o olhar crítico.",
+        "O deslumbramento com as luzes do rio não pode apagar o resto da cidade.",
+        "Reconheça o deslumbramento para não deixá-lo guiar a reportagem."
+      ],
+      [
+        "alívio",
+        "Sensação de tranquilidade depois de uma tensão ou preocupação.",
+        "Senti alívio quando o metrô voltou a funcionar depois da chuva.",
+        "Diga o que causou a tensão; alívio sem contexto não informa."
       ]
     ],
     "model": [
@@ -1560,6 +1980,36 @@
         "Localizado nas partes mais afastadas de um objeto ou quadro.",
         "Duas luminárias nas extremidades deixam o centro livre.",
         "Especifique se fala das extremidades do objeto ou da imagem."
+      ],
+      [
+        "contíguo",
+        "Imediatamente ao lado, encostado, sem espaço entre os dois.",
+        "A loja de chá é contígua à entrada do templo.",
+        "Contíguo exige contato; “próximo” não basta."
+      ],
+      [
+        "defronte",
+        "Em frente, do lado oposto.",
+        "Defronte ao mercado, há uma praça com bancos de pedra.",
+        "“Defronte a” e “defronte de” são corretos; na fala, “em frente a” é mais natural."
+      ],
+      [
+        "perpendicular",
+        "Que forma ângulo reto com outra linha ou direção.",
+        "A rua dos cafés é perpendicular à avenida principal.",
+        "Use quando o ângulo for de fato próximo de 90 graus."
+      ],
+      [
+        "recuado",
+        "Afastado para trás em relação ao alinhamento dos demais.",
+        "O templo fica recuado, atrás de um pátio, longe da calçada.",
+        "Diga em relação a quê o elemento está recuado."
+      ],
+      [
+        "à margem",
+        "Na borda, na lateral de algo; também, em sentido figurado, excluído.",
+        "As bancas ficam à margem da avenida, junto ao canal.",
+        "Cuidado com o duplo sentido: “à margem da sociedade” é julgamento forte."
       ]
     ],
     "model": [
@@ -1667,6 +2117,36 @@
         "No encerramento de uma sequência definida.",
         "Ao final da caminhada, retornamos ao ponto de partida.",
         "Não generalize a conclusão para além da sequência observada."
+      ],
+      [
+        "simultaneamente",
+        "Ao mesmo tempo.",
+        "Simultaneamente, as luzes da rua e os letreiros se acendem às 18h.",
+        "Use quando os eventos coincidem de fato, não apenas em sequência rápida."
+      ],
+      [
+        "paulatinamente",
+        "Pouco a pouco, de forma lenta e contínua.",
+        "Paulatinamente, as bancas foram substituídas por lojas de grife.",
+        "Formal e preciso; na fala, “aos poucos” é mais natural."
+      ],
+      [
+        "de imediato",
+        "Sem intervalo; logo em seguida.",
+        "Quando a chuva começou, os vendedores cobriram as mercadorias de imediato.",
+        "“De imediato” e “imediatamente” são equivalentes; evite “de imediato” repetido."
+      ],
+      [
+        "em seguida",
+        "Logo depois, na sequência imediata.",
+        "O trem para; em seguida, as portas se abrem dos dois lados.",
+        "Marca ordem, não intervalo exato; diga o tempo se ele importar."
+      ],
+      [
+        "ao longo do dia",
+        "Durante todo o período do dia, de forma contínua ou repetida.",
+        "Ao longo do dia, a sombra do prédio atravessa toda a praça.",
+        "Diga o que muda ao longo do dia e em que horários você observou."
       ]
     ],
     "model": [
@@ -1774,6 +2254,36 @@
         "Objeto usado junto ao corpo ou à roupa, como óculos, relógio, colar ou boné.",
         "O único acessório visível é um relógio de pulseira de couro gasta.",
         "Acessórios não comprovam renda ou estilo de vida; descreva-os sem inferir status social."
+      ],
+      [
+        "cabelo raspado",
+        "Cabelo cortado muito rente à cabeça.",
+        "O jovem de cabelo raspado ajusta os fones antes de atravessar.",
+        "Corte de cabelo é escolha momentânea; não deduza estilo de vida ou religião."
+      ],
+      [
+        "franja",
+        "Mecha de cabelo cortada que cai sobre a testa.",
+        "Uma franja reta cobre as sobrancelhas da estudante.",
+        "Descreva sem julgar a aparência."
+      ],
+      [
+        "óculos de grau",
+        "Óculos com lentes corretivas, usados para enxergar.",
+        "De óculos de grau, ela aproxima o celular do rosto para ler o mapa.",
+        "Óculos não indicam idade nem intelectualidade; evite estereótipos."
+      ],
+      [
+        "maquiagem",
+        "Produtos aplicados ao rosto para destacar, corrigir ou colorir traços.",
+        "Com maquiagem leve, a apresentadora revisa o texto antes de gravar.",
+        "Comente maquiagem só quando for relevante para a história."
+      ],
+      [
+        "crachá",
+        "Cartão de identificação usado no peito ou no pescoço.",
+        "Um crachá azul pendurado no pescoço identifica os funcionários da feira.",
+        "O crachá indica vínculo com o evento; confirme a função antes de afirmá-la."
       ]
     ],
     "model": [
@@ -1881,6 +2391,36 @@
         "Que demonstra muito movimento no rosto e no corpo ao se comunicar.",
         "O rosto expressivo do senhor acompanha cada parte da história que conta.",
         "Ser expressivo é estilo de comunicação, não sinal de exagero ou falta de seriedade."
+      ],
+      [
+        "olhar de soslaio",
+        "Olhar de lado, sem virar a cabeça.",
+        "O vendedor observa de soslaio a câmera enquanto atende.",
+        "Pode indicar curiosidade, desconfiança ou timidez; não afirme qual."
+      ],
+      [
+        "mão no queixo",
+        "Gesto de apoiar o queixo na mão, comum em momentos de reflexão.",
+        "Com a mão no queixo, ele analisa o tabuleiro de xadrez chinês.",
+        "Associar o gesto a reflexão é convenção; trate como impressão."
+      ],
+      [
+        "gargalhada",
+        "Riso alto e prolongado.",
+        "Uma gargalhada interrompe a conversa na mesa ao lado.",
+        "Descreva o que provocou o riso, se souber."
+      ],
+      [
+        "boquiaberto",
+        "Com a boca aberta, como em surpresa ou espanto.",
+        "Boquiaberto, o menino observa o dragão de papel na procissão.",
+        "A expressão sugere surpresa, mas pode ser só atenção."
+      ],
+      [
+        "apontar",
+        "Indicar algo com o dedo ou com a mão estendida.",
+        "A turista aponta para o mapa e depois para a rua à esquerda.",
+        "Em algumas culturas, apontar com o dedo para pessoas é considerado rude."
       ]
     ],
     "model": [
@@ -1988,6 +2528,36 @@
         "Que interrompe ou retoma o movimento, como quem decide o caminho.",
         "Hesitante, o turista dá dois passos, para e consulta o mapa outra vez.",
         "Hesitação aparente pode ser cautela ou atenção ao trânsito; trate como hipótese."
+      ],
+      [
+        "encostado",
+        "Com o corpo apoiado lateralmente ou de costas em algo.",
+        "Encostado no muro, o segurança observa a entrada.",
+        "Encostar é postura momentânea; não indica descaso."
+      ],
+      [
+        "de pernas cruzadas",
+        "Sentado com uma perna sobre a outra.",
+        "De pernas cruzadas no banco, ela lê um livro de bolso.",
+        "Descreva como parte da cena, sem interpretar personalidade."
+      ],
+      [
+        "em fila",
+        "Disposto em sequência, um atrás do outro.",
+        "Os passageiros aguardam em fila nas marcações do piso da plataforma.",
+        "Diga quantas pessoas, se souber, e por que a fila existe."
+      ],
+      [
+        "debruçado",
+        "Inclinado para a frente, com o tronco apoiado sobre algo.",
+        "Debruçado no balcão, o cliente escolhe os bolinhos pela vitrine.",
+        "Diferencie de curvado: debruçado tem apoio."
+      ],
+      [
+        "em marcha",
+        "Caminhando de forma ritmada e organizada, como em desfile.",
+        "Um grupo de estudantes passa em marcha, de uniforme, rumo à escola.",
+        "Use para movimentos coordenados; caminhada comum não é marcha."
       ]
     ],
     "model": [
@@ -2095,6 +2665,36 @@
         "Leve e pequeno o bastante para ser carregado com facilidade.",
         "Um rádio portátil toca baixo ao lado do caixa.",
         "Portátil descreve o tamanho e o peso, não a tecnologia do objeto."
+      ],
+      [
+        "novo em folha",
+        "Completamente novo, sem sinais de uso.",
+        "A bicicleta nova em folha ainda tem o plástico no selim.",
+        "Concorda em gênero e número (“bicicleta nova em folha”). Expressão informal; no texto, “sem uso” é mais neutro."
+      ],
+      [
+        "reaproveitado",
+        "Usado de novo, muitas vezes com outra função.",
+        "Latas de biscoito reaproveitadas servem de vaso para as plantas.",
+        "Diga qual era a função original e qual é a atual."
+      ],
+      [
+        "descartável",
+        "Feito para ser usado uma vez e jogado fora.",
+        "Copos descartáveis se acumulam na lixeira ao lado da banca de chá.",
+        "Não transforme a descrição em julgamento ambiental sem contexto."
+      ],
+      [
+        "quebradiço",
+        "Que se quebra com facilidade.",
+        "O papel quebradiço do mapa antigo exige cuidado ao desdobrar.",
+        "Quebradiço descreve fragilidade; não confirme idade do objeto."
+      ],
+      [
+        "conservado",
+        "Mantido em bom estado apesar do tempo de uso.",
+        "O rádio antigo está conservado e ainda funciona, segundo o dono.",
+        "Bom estado pode ser restauração; pergunte antes de afirmar que é original."
       ]
     ],
     "model": [
@@ -2202,6 +2802,36 @@
         "Com forma de cilindro: corpo reto e seção circular.",
         "A lanterna cilíndrica de papel vermelho tem franjas douradas na base.",
         "Cilíndrico exige lados paralelos; formas que se estreitam são cônicas."
+      ],
+      [
+        "gargalo",
+        "Parte estreita e alongada perto da abertura de uma garrafa.",
+        "O gargalo fino da garrafa de molho dificulta a limpeza.",
+        "Em sentido figurado, gargalo é ponto de estrangulamento; o contexto decide."
+      ],
+      [
+        "aro",
+        "Peça circular que contorna ou reforça algo.",
+        "O aro de metal mantém a forma do cesto de bambu.",
+        "Aro é o contorno; não confunda com a peça inteira."
+      ],
+      [
+        "rosca",
+        "Saliência em espiral que permite atarraxar uma peça na outra.",
+        "A tampa de rosca do pote de chá fecha sem deixar entrar umidade.",
+        "Diferencie tampa de rosca de tampa de pressão ou de encaixe."
+      ],
+      [
+        "borda",
+        "Contorno ou extremidade de um objeto.",
+        "A borda dourada do prato está gasta em um dos lados.",
+        "Borda é a extremidade; o bojo é a parte abaulada."
+      ],
+      [
+        "pegador",
+        "Parte ou utensílio feito para segurar ou pinçar algo.",
+        "Com um pegador de bambu, a vendedora tira os bolinhos do vapor.",
+        "Diga se o pegador é peça do objeto ou utensílio separado."
       ]
     ],
     "model": [
@@ -2309,6 +2939,36 @@
         "Coberto por escamas, placas pequenas e sobrepostas.",
         "O peixe escamoso reflete a luz no balde de água do mercado.",
         "Escamas indicam grupo de animal, não frescor ou qualidade do alimento."
+      ],
+      [
+        "bigodes",
+        "Pelos longos e rígidos no focinho, que ajudam alguns animais a perceber o ambiente.",
+        "Os bigodes do gato se movem quando ele fareja o ar.",
+        "Em gatos, bigodes são órgãos sensoriais, não enfeite."
+      ],
+      [
+        "orelhas eretas",
+        "Orelhas em pé, voltadas para cima.",
+        "O cachorro de orelhas eretas vira a cabeça na direção do apito.",
+        "Orelhas eretas podem ser traço da raça ou sinal de atenção; diferencie."
+      ],
+      [
+        "crista",
+        "Saliência de carne ou penas no alto da cabeça de algumas aves.",
+        "O galo de crista vermelha anda entre as gaiolas do mercado.",
+        "Nem toda ave tem crista; confira antes de usar."
+      ],
+      [
+        "garras",
+        "Unhas curvas e afiadas de aves e outros animais.",
+        "As garras do pombo agarram firme o fio elétrico.",
+        "Descreva sem dramatizar; garras são parte comum da anatomia."
+      ],
+      [
+        "pelo eriçado",
+        "Pelos levantados, afastados do corpo.",
+        "Com o pelo eriçado, o gato encara o cachorro do outro lado da grade.",
+        "Pelo eriçado pode indicar medo, frio ou alerta; não afirme qual."
       ]
     ],
     "model": [
@@ -2416,6 +3076,36 @@
         "Com a cabeça erguida e atenção voltada para um estímulo.",
         "Com as orelhas erguidas, o cão fica alerta ao som da bicicleta.",
         "Diga o estímulo que provocou a reação, se ele for visível ou audível."
+      ],
+      [
+        "bicar",
+        "Tocar ou pegar algo com o bico.",
+        "Os pardais bicam as migalhas de pão deixadas no banco.",
+        "Ação de aves; para outros animais use verbos próprios."
+      ],
+      [
+        "rosnar",
+        "Emitir som grave e contínuo mostrando os dentes, como fazem os cães.",
+        "O cachorro rosna baixo quando o ciclista se aproxima.",
+        "Rosnar é sinal de alerta; registre sem dramatizar e sem incentivar aproximação."
+      ],
+      [
+        "ronronar",
+        "Emitir som contínuo e vibrante, típico dos gatos.",
+        "Enrodilhado no colo da dona, o gato ronrona.",
+        "Ronronar costuma indicar conforto, mas nem sempre; trate como hipótese."
+      ],
+      [
+        "espreguiçar-se",
+        "Esticar o corpo e os membros, geralmente ao acordar.",
+        "O gato se espreguiça no parapeito antes de pular para a calçada.",
+        "Use a forma pronominal: “o gato se espreguiça”."
+      ],
+      [
+        "territorial",
+        "Que defende um espaço contra outros animais.",
+        "O cão parece territorial: late para quem chega perto do portão.",
+        "Comportamento observado num momento; não generalize para a raça."
       ]
     ],
     "model": [
@@ -2523,6 +3213,36 @@
         "Com contorno nítido destacado contra um fundo.",
         "As antenas das torres aparecem recortadas contra o céu laranja.",
         "O efeito depende da luz; à noite ou com névoa, o contorno muda."
+      ],
+      [
+        "plano geral",
+        "Enquadramento aberto que mostra o ambiente inteiro e situa o público.",
+        "Um plano geral do rio abre o vídeo antes de mostrar os personagens.",
+        "Use no início de sequências para orientar o público no espaço."
+      ],
+      [
+        "vista em mergulho",
+        "Vista de cima para baixo, a partir de um ponto elevado.",
+        "Do 40º andar, a vista em mergulho mostra os telhados dos lilongs.",
+        "Diga de onde a vista foi feita e se o acesso é público."
+      ],
+      [
+        "camadas de profundidade",
+        "Planos sucessivos que dão sensação de distância numa vista.",
+        "Pontes, barcos e torres formam camadas de profundidade sobre o rio.",
+        "Nomeie cada camada, do primeiro plano ao fundo."
+      ],
+      [
+        "linha d'água",
+        "Linha em que a água encontra a margem, um casco ou uma construção.",
+        "A linha d'água marca o limite entre o rio e a escadaria de pedra.",
+        "Em barcos, é a linha até onde o casco fica submerso."
+      ],
+      [
+        "contorno",
+        "Linha que delimita a forma de algo contra o fundo.",
+        "O contorno das montanhas aparece nítido depois da chuva.",
+        "Diga contra o que o contorno se destaca: céu, água ou névoa."
       ]
     ],
     "model": [
@@ -2630,6 +3350,36 @@
         "Situado à beira de um rio ou que vive junto a ele.",
         "Casas ribeirinhas de dois andares acompanham a curva do canal.",
         "Ao falar de comunidades ribeirinhas, evite romantizar ou generalizar modos de vida."
+      ],
+      [
+        "encosta",
+        "Terreno inclinado na lateral de um morro ou colina.",
+        "Plantações de chá cobrem a encosta em degraus.",
+        "Diferencie encosta (inclinação) de topo e de vale."
+      ],
+      [
+        "vale",
+        "Terreno mais baixo entre elevações, muitas vezes atravessado por um rio.",
+        "O vilarejo ocupa o fundo do vale, junto ao rio.",
+        "Vale pressupõe elevações dos dois lados."
+      ],
+      [
+        "orla",
+        "Faixa de terra junto ao mar, rio ou lago, em geral urbanizada.",
+        "A orla do rio virou calçadão com ciclovia.",
+        "Orla costuma indicar área urbanizada; margem é termo mais geral."
+      ],
+      [
+        "arbusto",
+        "Planta lenhosa de pequeno porte, com galhos desde a base.",
+        "Arbustos podados formam uma cerca verde ao redor do lago.",
+        "Arbusto não é árvore jovem; observe se há tronco único."
+      ],
+      [
+        "estuário",
+        "Trecho final de um rio que se abre para o mar, onde água doce e salgada se misturam.",
+        "Xangai cresceu junto ao estuário do rio Yangtzé.",
+        "Termo geográfico; confirme em fonte antes de chamar um trecho de estuário."
       ]
     ],
     "model": [
@@ -2737,6 +3487,36 @@
         "Gotículas de água que se formam em superfícies frias durante a noite.",
         "O orvalho ainda cobre os bancos do parque às seis da manhã.",
         "Orvalho não é sinal de chuva noturna; observe se o chão está seco."
+      ],
+      [
+        "nublado",
+        "Com nuvens que cobrem parte ou todo o céu.",
+        "O céu está nublado, mas o sol aparece entre as nuvens à tarde.",
+        "Diferencie nublado (com aberturas) de encoberto (totalmente coberto)."
+      ],
+      [
+        "chuvisco",
+        "Chuva fraca, em gotas pequenas, geralmente intermitente.",
+        "Um chuvisco começa e para várias vezes durante a manhã.",
+        "Chuvisco é intermitente; garoa tende a ser contínua."
+      ],
+      [
+        "trovoada",
+        "Tempestade com trovões e relâmpagos.",
+        "A trovoada da tarde esvazia a praça em minutos.",
+        "Ouvir trovões não basta para falar em tempestade; descreva o que viu."
+      ],
+      [
+        "úmido",
+        "Com muita umidade no ar, o que aumenta a sensação de calor ou de frio.",
+        "O ar úmido deixa as roupas pesadas e embaça as lentes da câmera.",
+        "Umidade relativa é dado medido; sem fonte, fale da sensação."
+      ],
+      [
+        "ventania",
+        "Vento forte e contínuo.",
+        "A ventania dobra as árvores da avenida e derruba placas.",
+        "Diferencie ventania (contínua) de rajada (momentânea)."
       ]
     ],
     "model": [
@@ -2778,6 +3558,222 @@
         "weak": "Caiu uma chuvinha.",
         "strong": "Caiu uma garoa fina por meia hora, sem formar poças.",
         "flag": true
+      }
+    ]
+  },
+  {
+    "scene": "Uma rua comercial antes e depois de uma reforma",
+    "focus": "Conectores mostram a relação lógica entre as ideias. Escolha o conector pela relação que você quer expressar — e só use a conclusão se as premissas estiverem ditas.",
+    "quiz": "definition",
+    "terms": [
+      [
+        "contudo",
+        "Conector adversativo: introduz uma oposição ao que foi dito, com registro mais formal que “mas”.",
+        "A rua ficou mais bonita; contudo, os moradores antigos dizem que perderam os vizinhos.",
+        "Pode abrir a frase ou vir entre vírgulas. Na fala, “mas” costuma soar mais natural."
+      ],
+      [
+        "portanto",
+        "Conector conclusivo: apresenta a consequência lógica do que foi dito antes.",
+        "O aluguel dobrou e as vendas caíram; portanto, três lojas fecharam.",
+        "Só use depois de apresentar as premissas. Não confunda com “porém”, que é adversativo."
+      ],
+      [
+        "embora",
+        "Conector concessivo: admite um fato que não impede o outro; pede subjuntivo.",
+        "Embora a obra tenha terminado, a calçada continua interditada.",
+        "Exige subjuntivo (“tenha terminado”). Não use “embora” com indicativo."
+      ],
+      [
+        "ainda assim",
+        "Locução concessiva: reconhece o que foi dito e afirma o contrário com ênfase.",
+        "O preço subiu; ainda assim, a fila continua dobrando a esquina.",
+        "Mais enfático que “mas”; funciona bem depois de pausa na fala."
+      ],
+      [
+        "além disso",
+        "Conector aditivo: acrescenta um argumento ou informação de mesmo peso.",
+        "A calçada foi alargada; além disso, a rua ganhou árvores.",
+        "Para acréscimos simples, “também” basta. “Ademais” é formal demais para a fala."
+      ],
+      [
+        "por sua vez",
+        "Locução que introduz o segundo elemento de uma comparação ou sequência, com seu papel próprio.",
+        "Os comerciantes aprovaram a reforma; os moradores, por sua vez, criticam o barulho.",
+        "Exige que o primeiro elemento tenha sido apresentado antes."
+      ],
+      [
+        "em contrapartida",
+        "Locução que apresenta uma compensação ou um contraponto ao que foi dito.",
+        "A rua perdeu vagas de estacionamento; em contrapartida, ganhou uma ciclovia.",
+        "Contrapartida é compensação; para simples oposição, prefira “por outro lado”."
+      ],
+      [
+        "ou seja",
+        "Conector explicativo: reformula ou esclarece o que acabou de ser dito.",
+        "A reforma durou dois anos, ou seja, mais que o dobro do previsto.",
+        "O que vem depois deve esclarecer; se apenas repete, corte."
+      ],
+      [
+        "à medida que",
+        "Locução proporcional: indica progressão simultânea entre dois fatos.",
+        "À medida que as lojas novas abriam, as bancas antigas desapareciam.",
+        "Não confunda com “na medida em que” (causa). “À medida em que” é forma não padrão."
+      ],
+      [
+        "na medida em que",
+        "Locução causal: equivale a “porque”, “visto que” ou “no grau em que”.",
+        "A reforma importa na medida em que muda a rotina de quem mora ali.",
+        "Trocá-la por “à medida que” muda o raciocínio de causa para proporção."
+      ]
+    ],
+    "model": [
+      "Antes da reforma, a rua tinha bancas na calçada; hoje, tem lojas de vidro e uma ciclovia.",
+      "A calçada foi alargada; além disso, a rua ganhou árvores e bancos novos.",
+      "Os comerciantes aprovaram a mudança; os moradores, por sua vez, dizem que a rua ficou mais cara. Embora mais bonita, ela perdeu as bancas.",
+      "Minha impressão, portanto, é que a reforma melhorou a rua para quem passa — e a encareceu para quem fica, o que ainda precisa de dados para ser confirmado."
+    ],
+    "swaps": [
+      {
+        "vague": "e aí",
+        "options": [
+          "além disso",
+          "portanto",
+          "por sua vez"
+        ],
+        "weak": "O preço subiu e aí as pessoas pararam de comprar.",
+        "strong": "O preço subiu; portanto, parte dos clientes deixou de comprar, segundo os vendedores.",
+        "flag": true
+      },
+      {
+        "vague": "mas aí",
+        "options": [
+          "contudo",
+          "ainda assim",
+          "em contrapartida"
+        ],
+        "weak": "O lugar é caro, mas aí tem a vista.",
+        "strong": "O lugar é caro; em contrapartida, oferece a vista mais ampla do rio.",
+        "flag": true
+      },
+      {
+        "vague": "tipo",
+        "options": [
+          "ou seja",
+          "portanto",
+          "além disso"
+        ],
+        "weak": "A reforma demorou tipo o dobro.",
+        "strong": "A reforma durou dois anos, ou seja, o dobro do previsto.",
+        "flag": false
+      }
+    ]
+  },
+  {
+    "scene": "Uma estação de metrô na hora do rush",
+    "focus": "Algumas palavras mudam de função conforme o modo verbal, a posição na frase ou o contexto. Antes de usar, pergunte: aqui ela indica tempo, causa, contraste ou condição?",
+    "quiz": "definition",
+    "terms": [
+      [
+        "enquanto",
+        "Pode indicar tempo simultâneo (“enquanto chovia”) ou contraste (= ao passo que).",
+        "Enquanto a plataforma norte lota, a sul permanece quase vazia.",
+        "Evite “enquanto” no sentido de “na condição de” (“enquanto repórter”); prefira “como”."
+      ],
+      [
+        "já",
+        "Pode indicar tempo (“já fechou”) ou, no início da frase, introduzir o segundo termo de um contraste.",
+        "O primeiro trem chega lotado. Já o segundo vem com assentos livres.",
+        "O “já” contrastivo só funciona depois de apresentado o primeiro termo."
+      ],
+      [
+        "logo",
+        "Pode indicar tempo (= em seguida) ou conclusão (= portanto).",
+        "O sinal toca e, logo depois, as portas se fecham.",
+        "Em “penso, logo existo”, é conclusão. Leia a frase inteira para saber qual sentido está em jogo."
+      ],
+      [
+        "assim",
+        "Pode indicar modo (= desta maneira) ou conclusão (= portanto).",
+        "Os passageiros formam filas nas marcações; assim, o embarque fica mais rápido.",
+        "Se puder trocar por “desse modo”, é modo; por “portanto”, é conclusão."
+      ],
+      [
+        "como",
+        "Pode indicar causa (no início da frase), comparação, modo ou função (“como repórter”).",
+        "Como o trem atrasou, a plataforma encheu em poucos minutos.",
+        "No início da frase, costuma ser causal; no meio, comparação. A posição decide."
+      ],
+      [
+        "desde que",
+        "Com indicativo, marca o início de um período; com subjuntivo, indica condição.",
+        "Desde que a nova linha abriu, a estação recebe o dobro de passageiros.",
+        "Compare: “desde que a linha abriu” (tempo) × “desde que haja vaga” (condição)."
+      ],
+      [
+        "uma vez que",
+        "Com indicativo, indica causa (= já que); com particípio, tempo ou condição.",
+        "Uma vez que o horário mudou, a comparação com o ano passado perde força.",
+        "“Uma vez concluída a obra” é tempo; “uma vez que concluiu” é causa."
+      ],
+      [
+        "mesmo",
+        "Pode reforçar (“ele mesmo”), indicar concessão (“mesmo cansado”), igualdade (“o mesmo trem”) ou inclusão (= até).",
+        "Mesmo cheia, a estação funciona sem empurra-empurra.",
+        "“Mesmo” como pronome substituto (“o mesmo foi visto”) é criticado por manuais; prefira “ele”."
+      ],
+      [
+        "ora",
+        "Pode indicar alternância (“ora… ora”) ou introduzir uma argumentação (= pois bem).",
+        "Os anúncios ora são em mandarim, ora em inglês.",
+        "Não confunda com “hora” (tempo). O “ora” argumentativo é formal na fala."
+      ],
+      [
+        "sobretudo",
+        "Advérbio (= principalmente) ou substantivo (casaco longo).",
+        "A estação lota sobretudo entre 8h e 9h.",
+        "O contexto resolve: “sobretudo de lã” é casaco; “sobretudo às 8h” é destaque."
+      ]
+    ],
+    "model": [
+      "Na estação, os trens chegam a cada dois minutos e as plataformas enchem rapidamente.",
+      "Enquanto a plataforma norte lota, a sul permanece quase vazia; logo depois, o fluxo se inverte.",
+      "Como o trem anterior atrasou, este chega lotado. Já o seguinte vem com assentos livres, sobretudo nos últimos vagões.",
+      "Minha impressão é que a estação funciona como um relógio — mesmo cheia, quase não há empurra-empurra, ao menos nos dias em que observei."
+    ],
+    "swaps": [
+      {
+        "vague": "aí",
+        "options": [
+          "logo",
+          "assim",
+          "já"
+        ],
+        "weak": "Aí o trem chegou e aí todo mundo entrou.",
+        "strong": "Logo depois, o trem chegou; assim que as portas abriram, os passageiros embarcaram.",
+        "flag": false
+      },
+      {
+        "vague": "então",
+        "options": [
+          "assim",
+          "logo",
+          "já"
+        ],
+        "weak": "Então a estação lotou.",
+        "strong": "Assim, em poucos minutos, a estação lotou.",
+        "flag": false
+      },
+      {
+        "vague": "igual",
+        "options": [
+          "como",
+          "mesmo",
+          "assim"
+        ],
+        "weak": "Ele explica igual um guia.",
+        "strong": "Ele explica como um guia: aponta, contextualiza e espera as perguntas.",
+        "flag": false
       }
     ]
   }
