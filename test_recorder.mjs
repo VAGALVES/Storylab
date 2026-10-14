@@ -38,6 +38,7 @@ rec.close();
 assert.equal(rec.state().url,null);
 assert.deepEqual(released,['blob:test-1']);
 assert.ok(captures===1&&stopped>=1);
+if(process.env.STORYLAB_STAGE==='media') { console.log('Passed stage: media'); process.exit(0) }
 vm.runInContext(read('./atlas-engine.js'),env);
 vm.runInContext(read('./atlas-audio-ui.js'),env);
 const atlas=w.StoryLabAtlas;
@@ -68,17 +69,20 @@ async function click(which,value={},name='atlasAction'){
 await click('practice');
 assert.match(atlas.render(),/ESTÚDIO DE VOZ/);
 assert.match(atlas.render(),/Dicção/);
+if(process.env.STORYLAB_STAGE==='interface') { console.log('Passed stage: interface'); process.exit(0) }
 await click('start',{},'atlasAudio');
 assert.equal(rec.state().kind,'recording');
 await click('stop',{},'atlasAudio');
 assert.equal(rec.state().kind,'ready');
 assert.match(atlas.render(),/Baixar áudio/);
+if(process.env.STORYLAB_STAGE==='playback') { console.log('Passed stage: playback'); process.exit(0) }
 store.atlasDrafts['0:0']='A fachada apresenta linhas retilíneas e um pórtico. Vejo duas árvores próximas à entrada e comparo as formas de cada estrutura.';
 await click('save');
 assert.equal(store.atlasHistory.length,1);
 assert.equal(store.atlasHistory[0].recorded,true);
 assert.equal(store.atlasHistory[0].rubric.length,4);
 assert.ok(saveCount>=1);
+if(process.env.STORYLAB_STAGE==='save') { console.log('Passed stage: save'); process.exit(0) }
 await click('level',{level:'1'});
 assert.equal(rec.state().kind,'idle');
 assert.equal(atlas.context().level,1);

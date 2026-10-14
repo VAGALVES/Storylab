@@ -26,7 +26,15 @@ jobs:
           node --check atlas-audio-ui.js
       - name: Testar navegação e conteúdo do Atlas
         run: node test_atlas.mjs
-      - name: Testar gravador local
+      - name: Verificar permissões e captura de áudio
+        run: STORYLAB_STAGE=media node test_recorder.mjs
+      - name: Verificar montagem do painel de voz
+        run: STORYLAB_STAGE=interface node test_recorder.mjs
+      - name: Verificar reprodução e descarte
+        run: STORYLAB_STAGE=playback node test_recorder.mjs
+      - name: Verificar registro de sessão oral
+        run: STORYLAB_STAGE=save node test_recorder.mjs
+      - name: Testar gravador local completo
         run: node test_recorder.mjs
       - name: Montar versão offline
         run: |
