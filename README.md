@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 1.8 — Interatividade: busca universal, cartões, jogos e meta diária
+## Journalism Academy · Versão 1.9 — Revisão do dia, cartões do Atlas, cronômetro e conquistas
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -21,6 +21,14 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v1.9 — Revisão e hábito
+
+- **Revisão do dia** (botão no Painel ou tecla `R`): reúne num só baralho tudo o que venceu hoje — frases da Fraseoteca e termos do Atlas, intercalados. Quando nada venceu, sugere conteúdo novo.
+- **Cartões do Atlas**: recordação livre — a definição na frente, o termo, o exemplo e o alerta no verso. A avaliação alimenta o mesmo domínio por termo do Treino de precisão. Disponível no Painel e na aba de treino de cada campo.
+- **Cronômetro de fala** na prática do Atlas, com o tempo sugerido de cada nível (20, 40, 60 ou 90 s): anel de progresso, pausa, reinício e sinal sonoro discreto ao fim.
+- **12 conquistas** em Minha Evolução (sequências de 3, 7 e 30 dias; 10, 50 e 150 termos dominados; aulas, escola completa, frases e missões), com aviso ao desbloquear e data de obtenção salva no backup.
+- Correção: as janelas passam a usar classes com prefixo próprio — o cronômetro herdava `position: relative` do conteúdo e acompanhava a rolagem da página.
 
 ### Novidades da v1.8 — Interatividade
 

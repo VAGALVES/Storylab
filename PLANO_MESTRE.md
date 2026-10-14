@@ -554,3 +554,11 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - **Arquitetura:** módulo próprio (`interact.js`) que recebe uma API explícita do app e desenha suas janelas numa camada separada; funções de lógica puras e testadas em Node.
 - **Privacidade:** toda atividade fica no aparelho; nada é enviado a servidores.
 - **Próximos passos:** cartões também para os termos do Atlas, modo cronometrado de fala com contagem regressiva, revisão do dia unificada (frases + termos) e conquistas por marcos de estudo.
+
+
+## Evolução v1.9 — Revisão e hábito
+
+- **Revisão unificada:** frases e termos vencidos num só baralho, intercalados, para que a revisão diária leve poucos minutos e cubra os dois repertórios.
+- **Recordação livre no Atlas:** os cartões complementam o treino de múltipla escolha — reconhecer (escolher entre opções) e recordar (lembrar sem pistas) são competências diferentes.
+- **Fala com tempo:** o cronômetro torna concreta a duração sugerida de cada nível da escada narrativa, sem impor corte: o tempo é referência, não limite.
+- **Conquistas:** marcos de constância e domínio, calculados a partir do progresso real; nenhum dado sai do aparelho.
