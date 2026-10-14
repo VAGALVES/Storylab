@@ -529,3 +529,12 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - Princípio editorial dos campos sobre animais: ações observáveis antes de intenções; antropomorfismo assumido como impressão, nunca como informação.
 - Campos acrescentados ao final para preservar índices e progresso salvo.
 - Próximos passos: campos de interiores (casa, loja, transporte), multidões e eventos, e sons da natureza; frases de lacuna exclusivas para o treino.
+
+
+## Evolução v1.6 — Fraseoteca com a linguagem real do jornalismo
+
+- **Diagnóstico:** as 552 frases eram corretas e éticas, mas soavam como roteiro genérico de vlog; faltavam as ferramentas que redações usam todos os dias e, sobretudo, o encadeamento lógico entre ideias.
+- **6 famílias novas (105 estruturas):** encadeamento lógico, atribuição, leads e títulos, telejornalismo, precisão e cautela, estilo e clareza.
+- **Princípio:** cada estrutura vem com nota de uso — sentido, nuance e armadilha —, porque a mesma palavra pode mudar de função conforme o modo verbal ou a posição na frase.
+- **Registro:** português culto e contemporâneo; formas formais demais para a fala são sinalizadas na nota.
+- **Próximos passos:** curadoria das frases antigas (quase duplicatas e fórmulas genéricas), notas de uso para as famílias originais e um campo do Atlas dedicado a palavras de sentido múltiplo.

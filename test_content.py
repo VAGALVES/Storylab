@@ -5,7 +5,14 @@ r=Path(__file__).resolve().parent
 d=json.loads((r/'content/storylab_data.json').read_text(encoding='utf8'))
 assert len(d['schools'])==6
 assert len(d['courses'])==43
-assert len(d['phrases'])==552
+assert len(d['phrases'])==657
+assert len(d['families'])==30
+# Famílias da linguagem jornalística: toda estrutura traz nota de uso específica
+JOURNALISM={'encadeamento','atribuicao','leads','telejornalismo','precisao','estilo'}
+assert {f['id'] for f in d['families']}>=JOURNALISM
+assert all(len(p.get('note',''))>=60 for p in d['phrases'] if p['family'] in JOURNALISM)
+assert all(p['family'] in {f['id'] for f in d['families']} for p in d['phrases'])
+assert len({p['pt'].strip() for p in d['phrases']})==len(d['phrases']),'Frases duplicadas'
 assert len(d['deepLessons'])==172
 assert len(d['speechDrills'])==24
 assert len(d['missions'])==30
@@ -25,7 +32,7 @@ assert all(set(('weak','strong','why','challenge')).issubset(v) for v in d['spee
 for name in ('index.html','style.css','app.js','data.js','service-worker.js','manifest.webmanifest'):
  assert (r/name).is_file(),name
 subprocess.run([sys.executable,str(r/'generate_data.py'),'--check'],check=True)
-print('Conteúdo: 43 disciplinas, 172 aulas, 552 frases, 24 transformações — OK')
+print('Conteúdo: 43 disciplinas, 172 aulas, 657 frases em 30 famílias, 24 transformações — OK')
 
 atlas=json.loads((r/'content/atlas_guides.json').read_text(encoding='utf8'))
 assert len(atlas)==len(d['atlas'])==26
