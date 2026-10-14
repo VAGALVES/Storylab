@@ -35,9 +35,9 @@ function click(action, extra = {}) {
   handlers.click({ preventDefault() {}, target: { closest() { return {dataset:{atlasAction:action,...extra}} } } });
 }
 const initial = atlas.render();
-assert.match(initial, /415/);
-assert.match(initial, /Verbetes aprofundados: 415/);
-assert.match(initial, /Termos dominados: 0 \/ 415/);
+assert.match(initial, /460/);
+assert.match(initial, /Verbetes aprofundados: 460/);
+assert.match(initial, /Termos dominados: 0 \/ 460/);
 assert.match(initial, /Troque a palavra genérica|TROQUE A PALAVRA GENÉRICA/);
 assert.match(initial, /retilíneo/);
 click('word', {topic:'9', word:'caimento'});
@@ -89,12 +89,12 @@ for (const item of q.items) {
   assert.equal(new Set(item.options).size, 4);
   assert.ok(item.options.includes(item.term));
   assert.ok(item.options.every(o => D.atlas[2].terms.includes(o)), 'distratores do mesmo campo');
-  if (item.type === 'gap') {
+  if (item.type === 'gap' || item.type === 'scene') {
     assert.match(item.prompt, /_____/);
     assert.ok(!norm(item.prompt).includes(norm(item.term)), 'lacuna não pode entregar a resposta');
   }
 }
-assert.ok(q.items.some(i => i.type === 'gap') && q.items.some(i => i.type === 'def'));
+assert.ok(q.items.some(i => i.type === 'scene') && q.items.some(i => i.type === 'def'));
 assert.match(atlas.render(), /PERGUNTA 1 DE 8/);
 click('quiz-next');
 assert.equal(atlas.quiz().i, 0, 'não avança sem responder');
@@ -137,11 +137,41 @@ assert.equal(store.atlasMastery['2:' + second].level, 3);
 click('explore');
 assert.match(atlas.render(), /Termos dominados: [1-9]/);
 console.log('Atlas 1.4: trocas de precisão, detector de vagas, treino, domínio e revisão espaçada OK');
-// Campos de conectores: só perguntas de definição (lacunas seriam ambíguas)
+// Campos de conectores: só frases de cena escritas à mão (nunca lacuna automática) e definições
 for (const topic of ['26', '27']) {
   click('word', {topic, word: D.atlas[Number(topic)].terms[0]});
   click('train-field');
-  assert.ok(atlas.quiz().items.every(i => i.type === 'def' && i.topic === Number(topic)));
+  const items = atlas.quiz().items;
+  assert.ok(items.every(i => (i.type === 'def' || i.type === 'scene') && i.topic === Number(topic)));
+  for (const i of items.filter(i => i.type === 'scene')) assert.equal(i.prompt, G[i.topic].terms.find(t => t[0] === i.term)[4]);
   click('quiz-exit');
 }
-console.log('Atlas 1.7: campos de conectores com perguntas de definição OK');
+console.log('Atlas 1.7: campos de conectores com frases de cena e definições OK');
+
+// ── Atlas 2.0: frases de cena, quase-sinônimos e novos campos ──
+assert.equal(D.atlas.length, 31);
+assert.deepEqual([...D.atlas.slice(28).map(f => f.title)], ['Interiores', 'Multidões e público', 'Sons da natureza']);
+for (let n = 0; n < 40; n++) {
+  click('quiz-start', {scope: 'all'});
+  for (const item of atlas.quiz().items) {
+    const near = (G[item.topic].near || []).filter(g => g.includes(item.term)).flat();
+    assert.ok(item.options.filter(o => o !== item.term).every(o => !near.includes(o)), 'quase-sinônimos não disputam a mesma pergunta');
+    if (item.type === 'scene') assert.ok(!norm(item.prompt).includes(norm(item.term)));
+  }
+  click('quiz-exit');
+}
+// Frase de cena completada aparece no retorno da resposta
+click('word', {topic: '29', word: 'tumulto'});
+click('train-field');
+const sceneItem = atlas.quiz().items.find(i => i.type === 'scene');
+while (atlas.quiz().items[atlas.quiz().i] !== sceneItem) { const cur = atlas.quiz().items[atlas.quiz().i]; click('quiz-answer', {option: cur.term}); click('quiz-next'); }
+assert.match(atlas.render(), /Qual termo completa a cena com precisão/);
+click('quiz-answer', {option: sceneItem.term});
+assert.match(atlas.render(), new RegExp('<mark>' + sceneItem.term + '</mark>'));
+click('quiz-exit');
+// Detector: palavras vagas dos novos campos, sem alarme para “a gente”
+assert.ok(atlas.analyze('O vagão estava lotado e havia muito barulho.').swaps.length === 2);
+assert.equal(atlas.analyze('A gente chegou cedo à praça.').vague, 0);
+// Baralho de cartões leva a frase de cena
+assert.ok(atlas.termDeck(29, 50).fresh.every(t => t.scene && t.scene.includes('_____')));
+console.log('Atlas 2.0: 460 frases de cena, quase-sinônimos, 3 novos campos e detector OK');

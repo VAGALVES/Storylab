@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 1.9 — Revisão do dia, cartões do Atlas, cronômetro e conquistas
+## Journalism Academy · Versão 2.0 — Fraseoteca curada, frases de cena e três novos campos do Atlas
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -14,13 +14,21 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Unidades curriculares | 172 | Todas com aula integral |
 | Aulas integrais | 172 | Texto, 3 conceitos, exemplos, atividade e rubrica |
 | Famílias de linguagem | 30 | Com definição de intenção |
-| Frases-base em português | 657 | 105 com nota de uso específica; pesquisáveis no app |
+| Frases-base em português | 657 | Todas com nota de uso específica; pesquisáveis no app |
 | Equivalentes em inglês | 36 | Seleção inicial, explicitamente incompleta |
 | Equivalentes em mandarim | 12 | Seleção inicial com pinyin |
-| Atlas de vocabulário | 28 campos; 415 termos; 415 verbetes comentados; 84 trocas de precisão | Publicado, com treino e revisão espaçada |
+| Atlas de vocabulário | 31 campos; 460 termos; 460 verbetes comentados, cada um com frase de cena para o treino; 93 trocas de precisão | Publicado, com treino e revisão espaçada |
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v2.0 — Curadoria e precisão
+
+- **Fraseoteca curada por inteiro:** as 552 frases originais ganharam nota de uso específica, no padrão das famílias jornalísticas. Cada nota diz quando usar a estrutura (passagem, off, stand-up, lead), como completar as reticências com dado concreto e qual armadilha evitar. Seis frases receberam correção de norma ou de termo técnico (“deste ambiente”, “ângulo mais baixo”, “contraplano”, “Do que mais gostei”, “avaliado em relação ao custo”, “Olhe”).
+- **Frases de cena no treino:** os 460 verbetes do Atlas têm agora uma frase-lacuna escrita para o treino, com pistas de contexto, regência, gênero e contraste que isolam o termo entre os do próprio campo. Elas substituem as lacunas automáticas e chegam também aos campos de conectores e de verbos de incidência, que antes só tinham perguntas de definição. Depois da resposta, a frase aparece completada, com o termo destacado.
+- **Quase-sinônimos não disputam a mesma pergunta:** pares como garoa/chuvisco, adjacente/contíguo e gradualmente/paulatinamente são agrupados por campo e nunca aparecem como alternativas um do outro.
+- **Três novos campos (45 termos):** *Interiores* (pé-direito, mezanino, claraboia, planta livre…), *Multidões e público* (afluência, contingente, estimativa de público, cordão de isolamento…, com cuidados de atribuição de números e contra rótulos que criminalizam) e *Sons da natureza* (farfalhar, marulho, crepitar, cricrilar…, distinguindo o som gravado do apenas ouvido). Cada um tem cena, foco, 15 verbetes, escada de 4 modelos e 3 trocas de precisão (“lotado”, “barulho”, “passarinho”, “teto alto”…).
+- **Cartões do Atlas** mostram a frase de cena na frente, como pista de contexto.
 
 ### Novidades da v1.9 — Revisão e hábito
 

@@ -1,6 +1,7 @@
 """Testes editoriais determinísticos e segurança de IDs estáveis."""
 from pathlib import Path
-import json,subprocess,sys
+import json,subprocess,sys,unicodedata
+fold=lambda x:''.join(c for c in unicodedata.normalize('NFD',x) if unicodedata.category(c)!='Mn').lower()
 r=Path(__file__).resolve().parent
 d=json.loads((r/'content/storylab_data.json').read_text(encoding='utf8'))
 assert len(d['schools'])==6
@@ -11,6 +12,9 @@ assert len(d['families'])==30
 JOURNALISM={'encadeamento','atribuicao','leads','telejornalismo','precisao','estilo'}
 assert {f['id'] for f in d['families']}>=JOURNALISM
 assert all(len(p.get('note',''))>=60 for p in d['phrases'] if p['family'] in JOURNALISM)
+# Curadoria integral: toda frase da Fraseoteca traz nota de uso, sem notas repetidas
+assert all(len(p.get('note',''))>=60 for p in d['phrases'])
+assert len({p['note'] for p in d['phrases']})==len(d['phrases']),'Notas de uso repetidas'
 assert all(p['family'] in {f['id'] for f in d['families']} for p in d['phrases'])
 assert len({p['pt'].strip() for p in d['phrases']})==len(d['phrases']),'Frases duplicadas'
 assert len(d['deepLessons'])==172
@@ -32,25 +36,34 @@ assert all(set(('weak','strong','why','challenge')).issubset(v) for v in d['spee
 for name in ('index.html','style.css','app.js','data.js','service-worker.js','manifest.webmanifest'):
  assert (r/name).is_file(),name
 subprocess.run([sys.executable,str(r/'generate_data.py'),'--check'],check=True)
-print('Conteúdo: 43 disciplinas, 172 aulas, 657 frases em 30 famílias, 24 transformações — OK')
+print('Conteúdo: 43 disciplinas, 172 aulas, 657 frases com nota de uso em 30 famílias, 24 transformações — OK')
 
 atlas=json.loads((r/'content/atlas_guides.json').read_text(encoding='utf8'))
-assert len(atlas)==len(d['atlas'])==28
-assert sum(len(group['terms']) for group in atlas)==415
-assert sum(len(group['model']) for group in atlas)==112
+assert len(atlas)==len(d['atlas'])==31
+assert sum(len(group['terms']) for group in atlas)==460
+assert sum(len(group['model']) for group in atlas)==124
 for i,group in enumerate(atlas):
     assert len(group['terms'])>=10 and len(group['model'])==4
     assert len({t[0] for t in group['terms']})==len(group['terms']),'Termo repetido no campo'
     assert all(len(s)>=60 for s in group['model'])
-    for term,definition,example,caution in group['terms']:
+    for term,definition,example,caution,scene in group['terms']:
         assert term in d['atlas'][i]['terms']
         assert all(len(v)>=15 for v in (definition,example,caution))
+        # Frase de cena do treino: uma lacuna, sem entregar a resposta
+        assert scene.count('_____')==1 and '______' not in scene,(i,term)
+        assert 60<=len(scene)<=220,(i,term)
+        assert fold(term) not in fold(scene.replace('_____',' ')),(i,term)
+        assert '"' not in scene,(i,term)
+    # Grupos de quase-sinônimos: só termos do campo, e sobram distratores suficientes
+    for g in group.get('near',[]):
+        assert len(g)>=2 and all(t in d['atlas'][i]['terms'] for t in g),(i,g)
+        assert len(d['atlas'][i]['terms'])-len(g)>=3
 assert all([entry[0] for entry in group['terms']]==d['atlas'][i]['terms'] for i,group in enumerate(atlas))
 assert (r/'atlas-engine.js').is_file()
 assert (r/'atlas-recorder.js').is_file() and (r/'atlas-audio-ui.js').is_file()
 # Trocas de precisão: palavra genérica → termos do próprio campo
 all_terms={t for topic in d['atlas'] for t in topic['terms']}
-assert sum(len(group['swaps']) for group in atlas)==84
+assert sum(len(group['swaps']) for group in atlas)==93
 for i,group in enumerate(atlas):
     assert len(group['swaps'])==3
     for s in group['swaps']:
@@ -61,4 +74,4 @@ for i,group in enumerate(atlas):
         assert len(s['weak'])>=10 and len(s['strong'])>len(s['weak'])
         assert any(o.lower()[:5] in s['strong'].lower() for o in s['options']),'Frase forte deve usar uma das opções: '+s['strong']
 subprocess.run([sys.executable,str(r/'generate_atlas.py'),'--check'],check=True)
-print('Atlas: 28 campos, 415 verbetes, 112 modelos progressivos e 84 trocas de precisão — OK')
+print('Atlas: 31 campos, 460 verbetes com frase de cena, 124 modelos progressivos e 93 trocas de precisão — OK')

@@ -136,7 +136,9 @@ function gapSentence(term,example){
 function sceneSentence(c){return typeof c[4]==='string'&&c[4].split('_____').length===2?c[4]:null}
 function buildQuestion(topic,term,pos){
  const c=card(topic,term);
- const others=shuffle(api.D.atlas[topic].terms.filter(t=>t!==term)).slice(0,3);
+ // Quase-sinônimos do mesmo grupo (campo "near") nunca disputam a mesma pergunta
+ const near=new Set((guides()[topic]?.near||[]).filter(g=>g.includes(term)).flat());
+ const others=shuffle(api.D.atlas[topic].terms.filter(t=>t!==term&&!near.has(t))).slice(0,3);
  const scene=sceneSentence(c);
  // Sem frase de cena, a lacuna automática vem do exemplo — exceto nos campos de conectores,
  // em que vários termos caberiam numa lacuna isolada
