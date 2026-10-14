@@ -35,9 +35,9 @@ function click(action, extra = {}) {
   handlers.click({ preventDefault() {}, target: { closest() { return {dataset:{atlasAction:action,...extra}} } } });
 }
 const initial = atlas.render();
-assert.match(initial, /410/);
-assert.match(initial, /Verbetes aprofundados: 410/);
-assert.match(initial, /Termos dominados: 0 \/ 410/);
+assert.match(initial, /415/);
+assert.match(initial, /Verbetes aprofundados: 415/);
+assert.match(initial, /Termos dominados: 0 \/ 415/);
 assert.match(initial, /Troque a palavra genérica|TROQUE A PALAVRA GENÉRICA/);
 assert.match(initial, /retilíneo/);
 click('word', {topic:'9', word:'caimento'});

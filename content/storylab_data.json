@@ -11999,20 +11999,25 @@
       "prompt": "Narre uma mudança observada encadeando causa, contraste e conclusão com conectores precisos."
     },
     {
-      "title": "Palavras de sentido múltiplo",
+      "title": "Verbos de incidência e repercussão",
       "terms": [
-        "enquanto",
-        "já",
-        "logo",
-        "assim",
-        "como",
-        "desde que",
-        "uma vez que",
-        "mesmo",
-        "ora",
-        "sobretudo"
+        "incidir",
+        "recair",
+        "repercutir",
+        "reverberar",
+        "ecoar",
+        "refletir",
+        "irradiar",
+        "propagar-se",
+        "desdobrar-se",
+        "permear",
+        "atravessar",
+        "decorrer de",
+        "acarretar",
+        "suscitar",
+        "convergir"
       ],
-      "prompt": "Use três palavras de sentido múltiplo numa narração e verifique se cada uma expressa a relação que você pretende."
+      "prompt": "Explique uma mudança observada mostrando onde ela incide e como repercute, com dois verbos deste campo."
     }
   ],
   "missions": [

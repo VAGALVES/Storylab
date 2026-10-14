@@ -3670,110 +3670,140 @@
     ]
   },
   {
-    "scene": "Uma estação de metrô na hora do rush",
-    "focus": "Algumas palavras mudam de função conforme o modo verbal, a posição na frase ou o contexto. Antes de usar, pergunte: aqui ela indica tempo, causa, contraste ou condição?",
+    "scene": "Uma decisão de reforma que muda a vida de uma rua",
+    "focus": "Estes verbos carregam uma imagem física — a luz que incide, o som que reverbera, a onda que se propaga — e a usam para ligar causa e efeito. Escolha o verbo pela trajetória que você quer descrever: onde algo bate, como volta, até onde se espalha.",
     "quiz": "definition",
     "terms": [
       [
-        "enquanto",
-        "Pode indicar tempo simultâneo (“enquanto chovia”) ou contraste (= ao passo que).",
-        "Enquanto a plataforma norte lota, a sul permanece quase vazia.",
-        "Evite “enquanto” no sentido de “na condição de” (“enquanto repórter”); prefira “como”."
+        "incidir",
+        "Literalmente, cair ou bater sobre uma superfície (a luz incide na fachada). Por extensão, recair sobre algo e produzir efeito ali: aplicar-se, atingir.",
+        "A nova taxa incide sobre o aluguel das lojas térreas e chega ao preço do café.",
+        "Rege “sobre” ou “em”. Use quando houver um ponto preciso de efeito; para efeitos difusos, prefira “repercutir”."
       ],
       [
-        "já",
-        "Pode indicar tempo (“já fechou”) ou, no início da frase, introduzir o segundo termo de um contraste.",
-        "O primeiro trem chega lotado. Já o segundo vem com assentos livres.",
-        "O “já” contrastivo só funciona depois de apresentado o primeiro termo."
+        "recair",
+        "Cair de novo ou cair sobre alguém; por extensão, ficar a cargo de alguém ou atingir determinado alvo.",
+        "O custo da obra recai sobre os comerciantes, segundo a associação.",
+        "Indica quem arca com o peso de algo. Atribua a fonte: dizer sobre quem algo recai já é uma afirmação forte."
       ],
       [
-        "logo",
-        "Pode indicar tempo (= em seguida) ou conclusão (= portanto).",
-        "O sinal toca e, logo depois, as portas se fecham.",
-        "Em “penso, logo existo”, é conclusão. Leia a frase inteira para saber qual sentido está em jogo."
+        "repercutir",
+        "Literalmente, fazer o som bater e voltar. Por extensão, produzir efeitos que se espalham além do ponto de origem.",
+        "A mudança de horário do metrô repercutiu no movimento de todo o quarteirão.",
+        "Mostre como a repercussão chega: por que caminho, até onde, com que evidência."
       ],
       [
-        "assim",
-        "Pode indicar modo (= desta maneira) ou conclusão (= portanto).",
-        "Os passageiros formam filas nas marcações; assim, o embarque fica mais rápido.",
-        "Se puder trocar por “desse modo”, é modo; por “portanto”, é conclusão."
+        "reverberar",
+        "Literalmente, o som ou a luz que se refletem repetidas vezes num espaço. Por extensão, um efeito que persiste e continua ecoando depois do fato.",
+        "A demolição das casas antigas ainda reverbera nas conversas da feira.",
+        "Mais intenso e duradouro que “repercutir”. Evite em fatos pequenos: o verbo amplifica."
       ],
       [
-        "como",
-        "Pode indicar causa (no início da frase), comparação, modo ou função (“como repórter”).",
-        "Como o trem atrasou, a plataforma encheu em poucos minutos.",
-        "No início da frase, costuma ser causal; no meio, comparação. A posição decide."
+        "ecoar",
+        "Literalmente, repetir um som por reflexão. Por extensão, retomar ou reproduzir uma ideia, uma fala ou um sentimento.",
+        "A queixa dos moradores ecoa a de outros bairros reformados nos últimos anos.",
+        "Bom para mostrar que uma ideia retorna em outro lugar; diga onde ela já tinha aparecido."
       ],
       [
-        "desde que",
-        "Com indicativo, marca o início de um período; com subjuntivo, indica condição.",
-        "Desde que a nova linha abriu, a estação recebe o dobro de passageiros.",
-        "Compare: “desde que a linha abriu” (tempo) × “desde que haja vaga” (condição)."
+        "refletir",
+        "Literalmente, devolver luz ou imagem, como um espelho. Por extensão, expressar ou mostrar algo de forma indireta.",
+        "A queda nas vendas reflete a mudança no trajeto de quem sai do metrô.",
+        "Afirma uma relação de causa; sustente com dados. Na dúvida, use “pode refletir”."
       ],
       [
-        "uma vez que",
-        "Com indicativo, indica causa (= já que); com particípio, tempo ou condição.",
-        "Uma vez que o horário mudou, a comparação com o ano passado perde força.",
-        "“Uma vez concluída a obra” é tempo; “uma vez que concluiu” é causa."
+        "irradiar",
+        "Literalmente, emitir raios a partir de um centro. Por extensão, espalhar-se a partir de um ponto de origem.",
+        "A valorização irradia da nova estação para as ruas vizinhas.",
+        "Use quando há um centro identificável; diga qual é."
       ],
       [
-        "mesmo",
-        "Pode reforçar (“ele mesmo”), indicar concessão (“mesmo cansado”), igualdade (“o mesmo trem”) ou inclusão (= até).",
-        "Mesmo cheia, a estação funciona sem empurra-empurra.",
-        "“Mesmo” como pronome substituto (“o mesmo foi visto”) é criticado por manuais; prefira “ele”."
+        "propagar-se",
+        "Espalhar-se, transmitir-se de um ponto a outro, como uma onda.",
+        "O rumor sobre o fechamento do mercado se propagou mais rápido que a nota oficial.",
+        "Forma pronominal: “o rumor se propagou”. Descreva o meio de propagação: boca a boca, redes, imprensa."
       ],
       [
-        "ora",
-        "Pode indicar alternância (“ora… ora”) ou introduzir uma argumentação (= pois bem).",
-        "Os anúncios ora são em mandarim, ora em inglês.",
-        "Não confunda com “hora” (tempo). O “ora” argumentativo é formal na fala."
+        "desdobrar-se",
+        "Literalmente, abrir o que estava dobrado. Por extensão, desenvolver-se em consequências ou etapas sucessivas.",
+        "A decisão da prefeitura se desdobrou em três frentes: obras, aluguéis e trânsito.",
+        "Em reportagem, “desdobramento” é a continuação de uma história; enumere os desdobramentos."
       ],
       [
-        "sobretudo",
-        "Advérbio (= principalmente) ou substantivo (casaco longo).",
-        "A estação lota sobretudo entre 8h e 9h.",
-        "O contexto resolve: “sobretudo de lã” é casaco; “sobretudo às 8h” é destaque."
+        "permear",
+        "Atravessar, penetrar por todos os lados, como a água em um tecido. Por extensão, estar presente em todas as partes de algo.",
+        "A preocupação com o aluguel permeia todas as entrevistas feitas na rua.",
+        "Forte: afirma presença generalizada. Use só se apareceu de fato em quase todas as fontes."
+      ],
+      [
+        "atravessar",
+        "Passar de um lado a outro. Por extensão, perpassar diferentes partes, grupos ou momentos.",
+        "O tema da memória atravessa as falas de moradores antigos e novos.",
+        "Mostra continuidade entre partes diferentes; diga quais partes o tema atravessa."
+      ],
+      [
+        "decorrer de",
+        "Resultar de, ser consequência de. Também: transcorrer no tempo (“o ano decorreu sem obras”).",
+        "O congestionamento decorre do fechamento de duas faixas da avenida.",
+        "Rege “de”. Liga efeito à causa; atribua a explicação se ela não for sua."
+      ],
+      [
+        "acarretar",
+        "Trazer como consequência, causar (geralmente algo indesejado ou trabalhoso).",
+        "A reforma acarretou a perda de vinte vagas de estacionamento.",
+        "É transitivo direto: “acarretou a perda”, e não “acarretou na perda”."
+      ],
+      [
+        "suscitar",
+        "Provocar, fazer surgir — uma dúvida, um debate, uma reação.",
+        "A proposta de demolição suscitou um abaixo-assinado entre os moradores.",
+        "Indica que algo despertou uma resposta; diga qual foi a resposta."
+      ],
+      [
+        "convergir",
+        "Literalmente, dirigir-se para um mesmo ponto. Por extensão, chegar a uma mesma conclusão ou resultado.",
+        "Os relatos dos comerciantes convergem: o movimento caiu depois das obras.",
+        "Rege “para” ou “em”. Afirma concordância entre fontes; mostre quantas e quais."
       ]
     ],
     "model": [
-      "Na estação, os trens chegam a cada dois minutos e as plataformas enchem rapidamente.",
-      "Enquanto a plataforma norte lota, a sul permanece quase vazia; logo depois, o fluxo se inverte.",
-      "Como o trem anterior atrasou, este chega lotado. Já o seguinte vem com assentos livres, sobretudo nos últimos vagões.",
-      "Minha impressão é que a estação funciona como um relógio — mesmo cheia, quase não há empurra-empurra, ao menos nos dias em que observei."
+      "A prefeitura decidiu fechar duas faixas da avenida para a reforma da calçada.",
+      "A decisão incide primeiro sobre os motoristas e logo repercute nas lojas, que perdem clientes de passagem.",
+      "Enquanto o efeito sobre o trânsito se dissipa em semanas, o impacto no comércio se desdobra em aluguéis renegociados e lojas fechadas.",
+      "Minha leitura, a partir das entrevistas que convergem nesse ponto, é que a obra reverbera mais no bolso do comerciante do que no relógio do motorista — hipótese que dados de vendas confirmariam."
     ],
     "swaps": [
       {
-        "vague": "aí",
+        "vague": "mexe com",
         "options": [
-          "logo",
-          "assim",
-          "já"
+          "incidir",
+          "repercutir",
+          "recair"
         ],
-        "weak": "Aí o trem chegou e aí todo mundo entrou.",
-        "strong": "Logo depois, o trem chegou; assim que as portas abriram, os passageiros embarcaram.",
+        "weak": "A obra mexe com as lojas.",
+        "strong": "A obra incide diretamente sobre as lojas térreas e repercute no movimento de todo o quarteirão.",
+        "flag": true
+      },
+      {
+        "vague": "causa",
+        "options": [
+          "acarretar",
+          "suscitar",
+          "decorrer de"
+        ],
+        "weak": "A obra causa problema.",
+        "strong": "A obra acarretou o fechamento de duas faixas e suscitou um abaixo-assinado.",
         "flag": false
       },
       {
-        "vague": "então",
+        "vague": "tem a ver com",
         "options": [
-          "assim",
-          "logo",
-          "já"
+          "decorrer de",
+          "refletir",
+          "convergir"
         ],
-        "weak": "Então a estação lotou.",
-        "strong": "Assim, em poucos minutos, a estação lotou.",
-        "flag": false
-      },
-      {
-        "vague": "igual",
-        "options": [
-          "como",
-          "mesmo",
-          "assim"
-        ],
-        "weak": "Ele explica igual um guia.",
-        "strong": "Ele explica como um guia: aponta, contextualiza e espera as perguntas.",
-        "flag": false
+        "weak": "A fila tem a ver com o novo horário.",
+        "strong": "A fila decorre do novo horário, que concentrou a saída dos trabalhadores às 18h.",
+        "flag": true
       }
     ]
   }

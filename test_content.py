@@ -36,7 +36,7 @@ print('Conteúdo: 43 disciplinas, 172 aulas, 657 frases em 30 famílias, 24 tran
 
 atlas=json.loads((r/'content/atlas_guides.json').read_text(encoding='utf8'))
 assert len(atlas)==len(d['atlas'])==28
-assert sum(len(group['terms']) for group in atlas)==410
+assert sum(len(group['terms']) for group in atlas)==415
 assert sum(len(group['model']) for group in atlas)==112
 for i,group in enumerate(atlas):
     assert len(group['terms'])>=10 and len(group['model'])==4
@@ -61,4 +61,4 @@ for i,group in enumerate(atlas):
         assert len(s['weak'])>=10 and len(s['strong'])>len(s['weak'])
         assert any(o.lower()[:5] in s['strong'].lower() for o in s['options']),'Frase forte deve usar uma das opções: '+s['strong']
 subprocess.run([sys.executable,str(r/'generate_atlas.py'),'--check'],check=True)
-print('Atlas: 28 campos, 410 verbetes, 112 modelos progressivos e 84 trocas de precisão — OK')
+print('Atlas: 28 campos, 415 verbetes, 112 modelos progressivos e 84 trocas de precisão — OK')
