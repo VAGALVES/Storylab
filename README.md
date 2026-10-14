@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 1.0 — primeira entrega funcional
+## Journalism Academy · Versão 1.1 — Escola da Fala expandida
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -12,9 +12,9 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Escolas | 6 | Estruturadas |
 | Disciplinas | 43 | Ementas e competências publicadas |
 | Unidades curriculares | 172 | Planejadas, com objetivos |
-| Aulas centrais | 19 | Texto, 3 conceitos, exemplos, atividade e rubrica |
+| Aulas integrais | 49 | Texto, 3 conceitos, exemplos, atividade e rubrica |
 | Famílias de linguagem | 24 | Com definição de intenção |
-| Frases-base em português | 432 | Editáveis em conteúdo-fonte, pesquisáveis no app |
+| Frases-base em português | 552 | Editáveis em conteúdo-fonte, pesquisáveis no app |
 | Equivalentes em inglês | 36 | Seleção inicial, explicitamente incompleta |
 | Equivalentes em mandarim | 12 | Seleção inicial com pinyin |
 | Atlas de vocabulário | 16 campos; 160 termos | Publicado |
@@ -22,10 +22,19 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
 
+### Novidades da v1.1
+
+- Escola de Comunicação: 10 disciplinas x 4 unidades = 40 aulas completas com atividades e rubricas específicas.
+- 120 novas estruturas narrativas em português distribuídas entre as 24 famílias, totalizando 552.
+- Oficina da Fala com 24 exercícios de reformulação, versões comentadas e registro de prática.
+- Construtor de raciocínio com oito situações de campo e quatro registros de narração.
+- Roteiros locais podem ser guardados, restaurados, excluídos, copiados, ouvidos ou enviados ao teleprompter.
+- A oficina preserva IDs e armazenamento dos usuários existentes; dados novos também entram no backup.
+
 ### O que realmente funciona agora
 
 - Navegação por escolas, disciplinas e unidades; pesquisa de disciplinas.
-- Leitura das 19 aulas-base com demonstrações, prática e avaliação orientada.
+- Leitura das 49 aulas integrais com demonstrações, prática e avaliação orientada.
 - Fraseoteca com busca de texto, 24 famílias, filtros por idioma, favoritos, detalhes e reprodução por `speechSynthesis` (quando o navegador oferece voz adequada).
 - Registro de cartões estudados e agendamento local de revisões em 1, 3, 7, 14 e 30 dias.
 - Estúdio da Voz: desafio aleatório, gravação com `MediaRecorder` se o navegador permitir, reprodução, arquivo para salvar manualmente e autorrubrica 1–5.
@@ -38,7 +47,7 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 
 ### Como abrir
 
-**Opção A — arquivo único, sem instalação:** abra `storylab-shanghai-offline.html` no navegador. O arquivo está na raiz do repositório. Contém interface, dados, lógica e ilustração embutidos; não solicita acesso a servidores para exibir as aulas e frases. Recursos de voz e gravação dependem das capacidades e permissões do navegador.
+**Opção A — arquivo único, sem instalação:** abra `storylab-shanghai-offline.html` no navegador. Este arquivo está na raiz do repositório. Contém interface, dados, lógica e ilustração embutidos; não solicita acesso a servidores para exibir as aulas e frases. Recursos de voz e gravação dependem das capacidades e permissões do navegador.
 
 **Opção B — projeto completo:** abra um terminal na pasta `storylab-shanghai` e execute:
 
@@ -68,19 +77,19 @@ storylab-shanghai/
 ├── style.css                 # Design editorial responsivo
 ├── app.js                    # Interface, eventos, estado, gravação, backup
 ├── data.js                   # Dados gerados (não edite diretamente)
-├── content/storylab_data.json # Fonte editorial de disciplinas e frases\n├── generate_data.py          # Gera data.js a partir do JSON
+├── generate_data.py          # Fonte principal de disciplinas e frases
 ├── build_standalone.py       # Produz o HTML único
 ├── service-worker.js         # Cache da versão estática
 ├── manifest.webmanifest      # Instalação PWA
 ├── assets/
 │   ├── icon.svg
 │   └── skyline.svg
-├── test_content.py           # Teste de integridade (sem dependências)
+├── test_app.py               # Testes básicos de ponta a ponta
 ├── PLANO_MESTRE.md           # Conteúdo e roteiro de expansão
 └── README.md
 ```
 
-Para alterar o conteúdo editorial, edite `content/storylab_data.json` e execute `python generate_data.py`. Para refazer o HTML único, execute `python build_standalone.py`. Para verificar integridade, execute `python test_content.py`. O teste de ponta a ponta com Playwright foi executado durante a criação inicial e poderá ser incorporado ao repositório posteriormente.
+Para alterar disciplinas, aulas, frases, traduções e missões, edite `generate_data.py` e execute `python generate_data.py`. Para refazer o HTML único, execute `python build_standalone.py`. Para testar, instale Playwright para Python e um Chromium compatível, depois execute `python test_app.py`.
 
 ### Princípios de conteúdo
 

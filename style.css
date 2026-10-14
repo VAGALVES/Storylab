@@ -3,3 +3,18 @@
 [data-theme="dark"]{--bg:#101a1e;--paper:#1b2a2e;--white:#223036;--ink:#eff0e7;--ink2:#d4dbd7;--muted:#a7b6b6;--faint:#869b9e;--line:#344449;--wash:#293c3f;--accent:#eba781;--accentsoft:#48342e;--pine:#354c51;--shadow:none;--focus:#efb18c}
 [data-theme="dark"] .topbar{background:rgba(16,26,30,.95)}[data-theme="dark"] .example{background:#352f2b;color:#e5c9b4}[data-theme="dark"] .highlight,[data-theme="dark"] .notice{background:#3d3430;border-color:#59463e;color:#f1cfba}[data-theme="dark"] .notice.info{background:#233a3a;color:#bfd6d0}[data-theme="dark"] .checklist label,[data-theme="dark"] .output{background:#23343a}[data-theme="dark"] .action-card .card-icon{background:#45392f;color:#eba781}[data-theme="dark"] .chip.accent{color:#f4baa0}[data-theme="dark"] .btn.secondary{background:#223136}
 @media(max-width:1200px){.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1.2fr .8fr}}@media(max-width:900px){:root{--sidebar:0px}.layout{grid-template-columns:1fr}.sidebar{position:fixed;left:0;top:0;width:265px;transform:translateX(-100%);transition:transform .25s;box-shadow:15px 0 30px #0002}.layout.menu-open .sidebar{transform:translateX(0)}.layout.menu-open .menu-scrim{display:block;position:fixed;inset:0;background:#0008;z-index:11;border:0}.mobile-menu{display:grid}.topbar{height:67px}.page{min-height:calc(100vh - 67px)}.hero{min-height:340px}.hero-copy{padding:32px}.hero-art{min-width:200px}}@media(max-width:650px){.page{padding:23px 17px 60px}.topbar{padding:0 16px}.topbar-label{font-size:10px}.hero{grid-template-columns:1fr}.hero-copy{padding:31px 24px 20px}.hero h1{font-size:40px}.hero-art{height:175px}.hero-art img{object-position:center 47%}.hero p{font-size:13px}.hero-statline{gap:15px}.grid-2,.grid-3,.grid-4,.two-col{grid-template-columns:1fr}.scale-grid{grid-template-columns:1fr 1fr}.page-head{display:block}.page-head .btn{margin-top:15px}.section-title{align-items:flex-start}.section-title h2{font-size:26px}.panel-pad{padding:18px}.course-card,.action-card{min-height:unset}.side-help{position:static}.record-stage .timer{font-size:50px}.prompter-inner{font-size:23px}.phrase-card{min-height:unset}.toast{left:18px;right:18px}.btn{white-space:normal}.stat-card .stat{font-size:29px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+/* v1.1 — Oficina da Fala */
+.clinic-tips{margin:13px 0 18px;padding-left:21px;color:var(--ink2);font-size:13px;line-height:1.85}
+.clinic-tips li{padding-left:4px;margin:7px 0}
+.clinic-before,.clinic-after{padding:20px;border-radius:12px;margin:15px 0}
+.clinic-before{background:var(--wash);border:1px solid var(--line)}
+.clinic-after{background:var(--accentsoft);border:1px solid var(--line)}
+.clinic-before p,.clinic-after p{font-family:Georgia,serif;font-size:20px;line-height:1.6;margin:13px 0;color:var(--ink)}
+.clinic-after .small{font-family:inherit;font-size:13px;color:var(--muted);line-height:1.7}
+.clinic-saved{padding:13px 0;border-bottom:1px solid var(--line)}
+.clinic-saved:last-child{border:0}
+.clinic-saved strong{display:block;margin-bottom:5px}
+.clinic-saved p{margin:8px 0}
+.clinic-saved .form-row{gap:6px}
+.clinic-saved button{font-size:11px}
+@media(max-width:650px){.clinic-before p,.clinic-after p{font-size:18px}}

@@ -474,3 +474,11 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - Definir testes de regressão para todos os filtros, backups, gravações e navegação móvel.
 - Nunca declarar uma funcionalidade “com IA” se a edição usar apenas modelos de texto e regras determinísticas.
 - Manter interface responsiva e prática adequada a conexões instáveis e bloqueios de serviços externos.
+
+## Evolução v1.1 — Escola da Fala
+
+- Escola de Comunicação: 10 disciplinas x 4 unidades = 40 aulas completas, com atividades e critérios de verificação (mais 9 aulas integrais de outras escolas).
+- Fraseoteca: 552 frases autorais, 24 famílias; traduções existentes permanecem apenas onde foram efetivamente redigidas.
+- Oficina da Fala: 24 transformações entre frases vagas e versões precisas com explicação e microprática.
+- Construtor de Raciocínio: oito cenas, quatro registros, observação, detalhe, contexto, fonte informada e reflexão; nenhum fato é verificado automaticamente.
+- Evoluções preservam o mesmo localStorage e os IDs anteriores.

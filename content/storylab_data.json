@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "schools": [
     {
       "id": "fundamentos",
@@ -5759,6 +5759,846 @@
       "en": null,
       "zh": null,
       "pinyin": null
+    },
+    {
+      "id": "abertura-extra-01",
+      "family": "abertura",
+      "pt": "Existe uma pergunta simples por trás desta caminhada: o que este lugar revela sobre a cidade?",
+      "style": "natural",
+      "use": "Apresentar uma pergunta, promessa ou contradição"
+    },
+    {
+      "id": "abertura-extra-02",
+      "family": "abertura",
+      "pt": "A minha curiosidade hoje não está nos grandes monumentos, mas no que acontece entre eles.",
+      "style": "natural",
+      "use": "Apresentar uma pergunta, promessa ou contradição"
+    },
+    {
+      "id": "abertura-extra-03",
+      "family": "abertura",
+      "pt": "Antes de chegarmos à conclusão, quero mostrar três elementos que encontrei pelo caminho.",
+      "style": "natural",
+      "use": "Apresentar uma pergunta, promessa ou contradição"
+    },
+    {
+      "id": "abertura-extra-04",
+      "family": "abertura",
+      "pt": "Este vídeo começa com uma impressão; ao longo da visita, vamos ver se ela se sustenta.",
+      "style": "natural",
+      "use": "Apresentar uma pergunta, promessa ou contradição"
+    },
+    {
+      "id": "abertura-extra-05",
+      "family": "abertura",
+      "pt": "Um pequeno detalhe deste cenário foi suficiente para mudar a pauta que eu havia preparado.",
+      "style": "natural",
+      "use": "Apresentar uma pergunta, promessa ou contradição"
+    },
+    {
+      "id": "localizacao-extra-01",
+      "family": "localizacao",
+      "pt": "Estamos no trecho que liga esta estação a uma área predominantemente comercial.",
+      "style": "natural",
+      "use": "Situar pessoas no ambiente"
+    },
+    {
+      "id": "localizacao-extra-02",
+      "family": "localizacao",
+      "pt": "A entrada fica alguns metros adiante, depois do cruzamento que aparece no quadro.",
+      "style": "natural",
+      "use": "Situar pessoas no ambiente"
+    },
+    {
+      "id": "localizacao-extra-03",
+      "family": "localizacao",
+      "pt": "Para se situar, observe a avenida principal e as ruas menores que saem dela.",
+      "style": "natural",
+      "use": "Situar pessoas no ambiente"
+    },
+    {
+      "id": "localizacao-extra-04",
+      "family": "localizacao",
+      "pt": "Este ponto oferece uma vista parcial; vamos mudar de lado para compreender o conjunto.",
+      "style": "natural",
+      "use": "Situar pessoas no ambiente"
+    },
+    {
+      "id": "localizacao-extra-05",
+      "family": "localizacao",
+      "pt": "À medida que nos aproximamos da esquina, percebemos uma transição no uso dos edifícios.",
+      "style": "natural",
+      "use": "Situar pessoas no ambiente"
+    },
+    {
+      "id": "descricao-extra-01",
+      "family": "descricao",
+      "pt": "A superfície não é uniforme: há uma alternância entre elementos lisos e relevos discretos.",
+      "style": "natural",
+      "use": "Nomear detalhes observáveis"
+    },
+    {
+      "id": "descricao-extra-02",
+      "family": "descricao",
+      "pt": "A estrutura se organiza em três faixas horizontais que ficam claras neste enquadramento.",
+      "style": "natural",
+      "use": "Nomear detalhes observáveis"
+    },
+    {
+      "id": "descricao-extra-03",
+      "family": "descricao",
+      "pt": "Os materiais aparentes têm acabamentos diferentes, especialmente nas junções.",
+      "style": "natural",
+      "use": "Nomear detalhes observáveis"
+    },
+    {
+      "id": "descricao-extra-04",
+      "family": "descricao",
+      "pt": "O elemento central se destaca pelo tamanho, não necessariamente pela cor.",
+      "style": "natural",
+      "use": "Nomear detalhes observáveis"
+    },
+    {
+      "id": "descricao-extra-05",
+      "family": "descricao",
+      "pt": "Os contornos são simples, mas há muitos pequenos detalhes na parte superior.",
+      "style": "natural",
+      "use": "Nomear detalhes observáveis"
+    },
+    {
+      "id": "perspectiva-extra-01",
+      "family": "perspectiva",
+      "pt": "No primeiro plano vemos o movimento das bicicletas; mais ao fundo, as fachadas.",
+      "style": "natural",
+      "use": "Conduzir o olhar por planos e distâncias"
+    },
+    {
+      "id": "perspectiva-extra-02",
+      "family": "perspectiva",
+      "pt": "A partir daqui, a escala da construção parece diferente da que vimos de perto.",
+      "style": "natural",
+      "use": "Conduzir o olhar por planos e distâncias"
+    },
+    {
+      "id": "perspectiva-extra-03",
+      "family": "perspectiva",
+      "pt": "O enquadramento comprime visualmente a distância entre as estruturas.",
+      "style": "natural",
+      "use": "Conduzir o olhar por planos e distâncias"
+    },
+    {
+      "id": "perspectiva-extra-04",
+      "family": "perspectiva",
+      "pt": "Olhem para o espaço negativo entre esses dois volumes.",
+      "style": "natural",
+      "use": "Conduzir o olhar por planos e distâncias"
+    },
+    {
+      "id": "perspectiva-extra-05",
+      "family": "perspectiva",
+      "pt": "Quando a câmera se desloca, a relação entre a fachada e a rua fica mais evidente.",
+      "style": "natural",
+      "use": "Conduzir o olhar por planos e distâncias"
+    },
+    {
+      "id": "luz-extra-01",
+      "family": "luz",
+      "pt": "A luz lateral deixa os relevos mais perceptíveis do que a iluminação frontal.",
+      "style": "natural",
+      "use": "Traduzir características sensoriais"
+    },
+    {
+      "id": "luz-extra-02",
+      "family": "luz",
+      "pt": "As sombras neste horário criam faixas irregulares sobre a calçada.",
+      "style": "natural",
+      "use": "Traduzir características sensoriais"
+    },
+    {
+      "id": "luz-extra-03",
+      "family": "luz",
+      "pt": "O reflexo do vidro mistura o interior da loja à paisagem externa.",
+      "style": "natural",
+      "use": "Traduzir características sensoriais"
+    },
+    {
+      "id": "luz-extra-04",
+      "family": "luz",
+      "pt": "As áreas mais iluminadas chamam o olhar antes dos elementos em sombra.",
+      "style": "natural",
+      "use": "Traduzir características sensoriais"
+    },
+    {
+      "id": "luz-extra-05",
+      "family": "luz",
+      "pt": "A diferença de temperatura de cor altera a sensação visual deste ambiente.",
+      "style": "natural",
+      "use": "Traduzir características sensoriais"
+    },
+    {
+      "id": "sons-extra-01",
+      "family": "sons",
+      "pt": "Antes de falar, quero deixar alguns segundos para ouvirmos o ritmo deste lugar.",
+      "style": "natural",
+      "use": "Trazer o ambiente para a narração"
+    },
+    {
+      "id": "sons-extra-02",
+      "family": "sons",
+      "pt": "O sino da entrada se destaca sobre o ruído constante da rua.",
+      "style": "natural",
+      "use": "Trazer o ambiente para a narração"
+    },
+    {
+      "id": "sons-extra-03",
+      "family": "sons",
+      "pt": "Os sons mais próximos parecem vir do preparo dos pedidos.",
+      "style": "natural",
+      "use": "Trazer o ambiente para a narração"
+    },
+    {
+      "id": "sons-extra-04",
+      "family": "sons",
+      "pt": "Neste trecho, o ruído do trânsito se sobrepõe às conversas.",
+      "style": "natural",
+      "use": "Trazer o ambiente para a narração"
+    },
+    {
+      "id": "sons-extra-05",
+      "family": "sons",
+      "pt": "Vou manter o áudio original desta cena para preservar a atmosfera registrada.",
+      "style": "natural",
+      "use": "Trazer o ambiente para a narração"
+    },
+    {
+      "id": "movimento-extra-01",
+      "family": "movimento",
+      "pt": "A circulação muda quando o sinal abre e as pessoas atravessam.",
+      "style": "natural",
+      "use": "Narrar ações e progressões"
+    },
+    {
+      "id": "movimento-extra-02",
+      "family": "movimento",
+      "pt": "Enquanto a câmera acompanha o deslocamento, reparem no que permanece imóvel.",
+      "style": "natural",
+      "use": "Narrar ações e progressões"
+    },
+    {
+      "id": "movimento-extra-03",
+      "family": "movimento",
+      "pt": "O movimento acontece em camadas: pedestres próximos e veículos mais ao fundo.",
+      "style": "natural",
+      "use": "Narrar ações e progressões"
+    },
+    {
+      "id": "movimento-extra-04",
+      "family": "movimento",
+      "pt": "A cena ganha outro ritmo quando os funcionários começam a organizar as mesas.",
+      "style": "natural",
+      "use": "Narrar ações e progressões"
+    },
+    {
+      "id": "movimento-extra-05",
+      "family": "movimento",
+      "pt": "Não precisamos acelerar a imagem para perceber a velocidade deste processo.",
+      "style": "natural",
+      "use": "Narrar ações e progressões"
+    },
+    {
+      "id": "comparacao-extra-01",
+      "family": "comparacao",
+      "pt": "Os dois espaços usam materiais semelhantes, mas produzem impressões diferentes.",
+      "style": "natural",
+      "use": "Aproximar ideias por critérios claros"
+    },
+    {
+      "id": "comparacao-extra-02",
+      "family": "comparacao",
+      "pt": "Em relação ao trecho anterior, aqui as fachadas estão mais próximas da calçada.",
+      "style": "natural",
+      "use": "Aproximar ideias por critérios claros"
+    },
+    {
+      "id": "comparacao-extra-03",
+      "family": "comparacao",
+      "pt": "A diferença não está apenas no tamanho: a iluminação também muda a leitura.",
+      "style": "natural",
+      "use": "Aproximar ideias por critérios claros"
+    },
+    {
+      "id": "comparacao-extra-04",
+      "family": "comparacao",
+      "pt": "Na visita anterior, encontrei mais movimento; isso pode refletir o horário, não uma regra.",
+      "style": "natural",
+      "use": "Aproximar ideias por critérios claros"
+    },
+    {
+      "id": "comparacao-extra-05",
+      "family": "comparacao",
+      "pt": "Enquanto o primeiro modelo prioriza portabilidade, o segundo oferece mais possibilidades de enquadramento.",
+      "style": "natural",
+      "use": "Aproximar ideias por critérios claros"
+    },
+    {
+      "id": "contexto-extra-01",
+      "family": "contexto",
+      "pt": "Para entender esta transformação, precisamos saber quando e por que ela aconteceu.",
+      "style": "natural",
+      "use": "Adicionar informação apurada"
+    },
+    {
+      "id": "contexto-extra-02",
+      "family": "contexto",
+      "pt": "Esta é uma explicação provisória; ainda falta ouvir quem utiliza o espaço diariamente.",
+      "style": "natural",
+      "use": "Adicionar informação apurada"
+    },
+    {
+      "id": "contexto-extra-03",
+      "family": "contexto",
+      "pt": "Uma informação de contexto ajuda a diferenciar aparência atual e função original.",
+      "style": "natural",
+      "use": "Adicionar informação apurada"
+    },
+    {
+      "id": "contexto-extra-04",
+      "family": "contexto",
+      "pt": "O nome da estação é apenas o ponto de partida para compreender este trajeto.",
+      "style": "natural",
+      "use": "Adicionar informação apurada"
+    },
+    {
+      "id": "contexto-extra-05",
+      "family": "contexto",
+      "pt": "Vou separar o que observei pessoalmente do que encontrei em fontes documentais.",
+      "style": "natural",
+      "use": "Adicionar informação apurada"
+    },
+    {
+      "id": "observacao-extra-01",
+      "family": "observacao",
+      "pt": "Vejo várias pessoas esperando, mas não consigo determinar a causa apenas pela imagem.",
+      "style": "natural",
+      "use": "Separar o visto da interpretação"
+    },
+    {
+      "id": "observacao-extra-02",
+      "family": "observacao",
+      "pt": "Este detalhe sugere uma hipótese; precisamos verificar antes de afirmá-la.",
+      "style": "natural",
+      "use": "Separar o visto da interpretação"
+    },
+    {
+      "id": "observacao-extra-03",
+      "family": "observacao",
+      "pt": "Minha impressão mudou quando examinei o mesmo espaço de outro ângulo.",
+      "style": "natural",
+      "use": "Separar o visto da interpretação"
+    },
+    {
+      "id": "observacao-extra-04",
+      "family": "observacao",
+      "pt": "O que sabemos até aqui é limitado à visita que estou registrando.",
+      "style": "natural",
+      "use": "Separar o visto da interpretação"
+    },
+    {
+      "id": "observacao-extra-05",
+      "family": "observacao",
+      "pt": "A primeira leitura parece plausível, mas existe pelo menos uma alternativa.",
+      "style": "natural",
+      "use": "Separar o visto da interpretação"
+    },
+    {
+      "id": "evidencia-extra-01",
+      "family": "evidencia",
+      "pt": "Esta informação foi retirada de uma fonte oficial, que deixarei identificada na descrição.",
+      "style": "natural",
+      "use": "Atribuir e qualificar afirmações"
+    },
+    {
+      "id": "evidencia-extra-02",
+      "family": "evidencia",
+      "pt": "A estimativa aparece em diferentes fontes, mas os métodos de cálculo não são iguais.",
+      "style": "natural",
+      "use": "Atribuir e qualificar afirmações"
+    },
+    {
+      "id": "evidencia-extra-03",
+      "family": "evidencia",
+      "pt": "Até o momento, não encontrei confirmação independente para essa afirmação.",
+      "style": "natural",
+      "use": "Atribuir e qualificar afirmações"
+    },
+    {
+      "id": "evidencia-extra-04",
+      "family": "evidencia",
+      "pt": "O dado se refere ao período indicado, não necessariamente à situação de hoje.",
+      "style": "natural",
+      "use": "Atribuir e qualificar afirmações"
+    },
+    {
+      "id": "evidencia-extra-05",
+      "family": "evidencia",
+      "pt": "Para conferir este ponto, comparei o documento com a informação apresentada no local.",
+      "style": "natural",
+      "use": "Atribuir e qualificar afirmações"
+    },
+    {
+      "id": "transicao-extra-01",
+      "family": "transicao",
+      "pt": "Agora que vimos a fachada, quero entrar na questão de como o espaço é usado.",
+      "style": "natural",
+      "use": "Conectar cenas e raciocínios"
+    },
+    {
+      "id": "transicao-extra-02",
+      "family": "transicao",
+      "pt": "Esse detalhe visual nos leva a uma pergunta sobre a experiência das pessoas.",
+      "style": "natural",
+      "use": "Conectar cenas e raciocínios"
+    },
+    {
+      "id": "transicao-extra-03",
+      "family": "transicao",
+      "pt": "Vamos sair da visão geral e observar uma escolha de design mais de perto.",
+      "style": "natural",
+      "use": "Conectar cenas e raciocínios"
+    },
+    {
+      "id": "transicao-extra-04",
+      "family": "transicao",
+      "pt": "Até aqui falamos da aparência; a seguir, vamos examinar o funcionamento.",
+      "style": "natural",
+      "use": "Conectar cenas e raciocínios"
+    },
+    {
+      "id": "transicao-extra-05",
+      "family": "transicao",
+      "pt": "Antes de continuar, vale corrigir uma impressão que tive no início do percurso.",
+      "style": "natural",
+      "use": "Conectar cenas e raciocínios"
+    },
+    {
+      "id": "curiosidade-extra-01",
+      "family": "curiosidade",
+      "pt": "À primeira vista, essa diferença quase não aparece, mas muda quando nos aproximamos.",
+      "style": "natural",
+      "use": "Criar perguntas sem exagerar"
+    },
+    {
+      "id": "curiosidade-extra-02",
+      "family": "curiosidade",
+      "pt": "Eu esperava encontrar uma solução simples; a visita revelou mais de uma possibilidade.",
+      "style": "natural",
+      "use": "Criar perguntas sem exagerar"
+    },
+    {
+      "id": "curiosidade-extra-03",
+      "family": "curiosidade",
+      "pt": "O que acontece no próximo trecho ajuda a responder a nossa pergunta inicial.",
+      "style": "natural",
+      "use": "Criar perguntas sem exagerar"
+    },
+    {
+      "id": "curiosidade-extra-04",
+      "family": "curiosidade",
+      "pt": "A parte mais interessante não é o objeto em si, e sim a maneira como ele é usado.",
+      "style": "natural",
+      "use": "Criar perguntas sem exagerar"
+    },
+    {
+      "id": "curiosidade-extra-05",
+      "family": "curiosidade",
+      "pt": "Para compreender este detalhe, precisamos olhar para o outro lado da rua.",
+      "style": "natural",
+      "use": "Criar perguntas sem exagerar"
+    },
+    {
+      "id": "entrevista-extra-01",
+      "family": "entrevista",
+      "pt": "Você pode descrever como é um dia comum de trabalho aqui?",
+      "style": "natural",
+      "use": "Convidar pessoas a contar experiências"
+    },
+    {
+      "id": "entrevista-extra-02",
+      "family": "entrevista",
+      "pt": "Qual parte do seu processo exige mais atenção e por quê?",
+      "style": "natural",
+      "use": "Convidar pessoas a contar experiências"
+    },
+    {
+      "id": "entrevista-extra-03",
+      "family": "entrevista",
+      "pt": "Quando você percebeu essa mudança pela primeira vez?",
+      "style": "natural",
+      "use": "Convidar pessoas a contar experiências"
+    },
+    {
+      "id": "entrevista-extra-04",
+      "family": "entrevista",
+      "pt": "Que informação alguém de fora costuma entender errado sobre este lugar?",
+      "style": "natural",
+      "use": "Convidar pessoas a contar experiências"
+    },
+    {
+      "id": "entrevista-extra-05",
+      "family": "entrevista",
+      "pt": "Existe algo que você preferiria não ter registrado em vídeo?",
+      "style": "natural",
+      "use": "Convidar pessoas a contar experiências"
+    },
+    {
+      "id": "escuta-extra-01",
+      "family": "escuta",
+      "pt": "Você mencionou uma mudança; consegue situar quando ela ocorreu?",
+      "style": "natural",
+      "use": "Acompanhar respostas com precisão"
+    },
+    {
+      "id": "escuta-extra-02",
+      "family": "escuta",
+      "pt": "Quando você fala em facilidade, qual etapa é a mais simples para você?",
+      "style": "natural",
+      "use": "Acompanhar respostas com precisão"
+    },
+    {
+      "id": "escuta-extra-03",
+      "family": "escuta",
+      "pt": "Gostaria de voltar ao exemplo que você contou alguns minutos atrás.",
+      "style": "natural",
+      "use": "Acompanhar respostas com precisão"
+    },
+    {
+      "id": "escuta-extra-04",
+      "family": "escuta",
+      "pt": "Posso confirmar se compreendi corretamente o que você quis dizer?",
+      "style": "natural",
+      "use": "Acompanhar respostas com precisão"
+    },
+    {
+      "id": "escuta-extra-05",
+      "family": "escuta",
+      "pt": "Isso aconteceu uma única vez ou costuma se repetir?",
+      "style": "natural",
+      "use": "Acompanhar respostas com precisão"
+    },
+    {
+      "id": "intercultural-extra-01",
+      "family": "intercultural",
+      "pt": "Não posso tomar uma única experiência como retrato de toda a sociedade.",
+      "style": "natural",
+      "use": "Compreender sem generalizar"
+    },
+    {
+      "id": "intercultural-extra-02",
+      "family": "intercultural",
+      "pt": "Para evitar uma comparação apressada, vou explicar o contexto em que observei isso.",
+      "style": "natural",
+      "use": "Compreender sem generalizar"
+    },
+    {
+      "id": "intercultural-extra-03",
+      "family": "intercultural",
+      "pt": "Esta expressão não tem tradução perfeitamente equivalente; vou explicar a nuance.",
+      "style": "natural",
+      "use": "Compreender sem generalizar"
+    },
+    {
+      "id": "intercultural-extra-04",
+      "family": "intercultural",
+      "pt": "A minha referência brasileira influencia a maneira como interpreto esta prática.",
+      "style": "natural",
+      "use": "Compreender sem generalizar"
+    },
+    {
+      "id": "intercultural-extra-05",
+      "family": "intercultural",
+      "pt": "Em vez de perguntar por que fazem diferente, quero entender como esse costume surgiu.",
+      "style": "natural",
+      "use": "Compreender sem generalizar"
+    },
+    {
+      "id": "moda-extra-01",
+      "family": "moda",
+      "pt": "O acabamento visível nesta costura indica uma escolha técnica que merece aproximação.",
+      "style": "natural",
+      "use": "Descrever design, comportamento e acabamentos"
+    },
+    {
+      "id": "moda-extra-02",
+      "family": "moda",
+      "pt": "A silhueta privilegia volume na parte superior e uma base mais ajustada.",
+      "style": "natural",
+      "use": "Descrever design, comportamento e acabamentos"
+    },
+    {
+      "id": "moda-extra-03",
+      "family": "moda",
+      "pt": "A repetição de materiais cria continuidade entre as peças expostas.",
+      "style": "natural",
+      "use": "Descrever design, comportamento e acabamentos"
+    },
+    {
+      "id": "moda-extra-04",
+      "family": "moda",
+      "pt": "Antes de chamar isso de tendência, seria preciso observar mais marcas e coleções.",
+      "style": "natural",
+      "use": "Descrever design, comportamento e acabamentos"
+    },
+    {
+      "id": "moda-extra-05",
+      "family": "moda",
+      "pt": "A iluminação da vitrine interfere diretamente na percepção de cor e textura.",
+      "style": "natural",
+      "use": "Descrever design, comportamento e acabamentos"
+    },
+    {
+      "id": "gastronomia-extra-01",
+      "family": "gastronomia",
+      "pt": "A primeira sensação é de crocância, seguida por uma textura mais macia no interior.",
+      "style": "natural",
+      "use": "Narrar ingredientes, textura e preparo"
+    },
+    {
+      "id": "gastronomia-extra-02",
+      "family": "gastronomia",
+      "pt": "O aroma parece trazer uma nota tostada, embora eu ainda não saiba o ingrediente responsável.",
+      "style": "natural",
+      "use": "Narrar ingredientes, textura e preparo"
+    },
+    {
+      "id": "gastronomia-extra-03",
+      "family": "gastronomia",
+      "pt": "A apresentação valoriza o contraste de cores entre os elementos do prato.",
+      "style": "natural",
+      "use": "Narrar ingredientes, textura e preparo"
+    },
+    {
+      "id": "gastronomia-extra-04",
+      "family": "gastronomia",
+      "pt": "Vou experimentar primeiro sem molho para entender o sabor predominante.",
+      "style": "natural",
+      "use": "Narrar ingredientes, textura e preparo"
+    },
+    {
+      "id": "gastronomia-extra-05",
+      "family": "gastronomia",
+      "pt": "O preparo é feito em etapas que consigo acompanhar pelo balcão.",
+      "style": "natural",
+      "use": "Narrar ingredientes, textura e preparo"
+    },
+    {
+      "id": "tecnologia-extra-01",
+      "family": "tecnologia",
+      "pt": "O ganho mais perceptível neste teste foi a estabilidade do movimento.",
+      "style": "natural",
+      "use": "Explicar funções, testes e limites"
+    },
+    {
+      "id": "tecnologia-extra-02",
+      "family": "tecnologia",
+      "pt": "Em vez de repetir a especificação, vou mostrar o que ela altera na gravação.",
+      "style": "natural",
+      "use": "Explicar funções, testes e limites"
+    },
+    {
+      "id": "tecnologia-extra-03",
+      "family": "tecnologia",
+      "pt": "Este resultado vale para as condições de luz e distância que utilizei.",
+      "style": "natural",
+      "use": "Explicar funções, testes e limites"
+    },
+    {
+      "id": "tecnologia-extra-04",
+      "family": "tecnologia",
+      "pt": "As duas opções atendem a necessidades diferentes, então vou comparar pelo uso.",
+      "style": "natural",
+      "use": "Explicar funções, testes e limites"
+    },
+    {
+      "id": "tecnologia-extra-05",
+      "family": "tecnologia",
+      "pt": "Este ajuste economizou alguns passos no meu fluxo, mas ainda preciso testar a consistência.",
+      "style": "natural",
+      "use": "Explicar funções, testes e limites"
+    },
+    {
+      "id": "mobilidade-extra-01",
+      "family": "mobilidade",
+      "pt": "O percurso inclui uma transferência, que precisa ser considerada no tempo total.",
+      "style": "natural",
+      "use": "Comunicar trajetos e experiência urbana"
+    },
+    {
+      "id": "mobilidade-extra-02",
+      "family": "mobilidade",
+      "pt": "No meu teste, a espera na plataforma foi menor que o deslocamento até a estação.",
+      "style": "natural",
+      "use": "Comunicar trajetos e experiência urbana"
+    },
+    {
+      "id": "mobilidade-extra-03",
+      "family": "mobilidade",
+      "pt": "Uma entrada aparentemente próxima nem sempre conduz ao acesso mais conveniente.",
+      "style": "natural",
+      "use": "Comunicar trajetos e experiência urbana"
+    },
+    {
+      "id": "mobilidade-extra-04",
+      "family": "mobilidade",
+      "pt": "Vou registrar o trajeto completo, inclusive caminhada e tempo de espera.",
+      "style": "natural",
+      "use": "Comunicar trajetos e experiência urbana"
+    },
+    {
+      "id": "mobilidade-extra-05",
+      "family": "mobilidade",
+      "pt": "A facilidade de acesso pode variar conforme bagagem, mobilidade e horário.",
+      "style": "natural",
+      "use": "Comunicar trajetos e experiência urbana"
+    },
+    {
+      "id": "pessoal-extra-01",
+      "family": "pessoal",
+      "pt": "Eu imaginava encontrar outra coisa, e isso tornou a visita ainda mais interessante.",
+      "style": "natural",
+      "use": "Relatar reações com responsabilidade"
+    },
+    {
+      "id": "pessoal-extra-02",
+      "family": "pessoal",
+      "pt": "Não quero transformar a minha surpresa em uma conclusão sobre quem vive aqui.",
+      "style": "natural",
+      "use": "Relatar reações com responsabilidade"
+    },
+    {
+      "id": "pessoal-extra-03",
+      "family": "pessoal",
+      "pt": "Uma dificuldade que tive foi compreender a orientação das placas.",
+      "style": "natural",
+      "use": "Relatar reações com responsabilidade"
+    },
+    {
+      "id": "pessoal-extra-04",
+      "family": "pessoal",
+      "pt": "Depois de algumas tentativas, percebi uma forma mais simples de realizar a tarefa.",
+      "style": "natural",
+      "use": "Relatar reações com responsabilidade"
+    },
+    {
+      "id": "pessoal-extra-05",
+      "family": "pessoal",
+      "pt": "Essa experiência acrescentou uma pergunta nova ao meu roteiro de descobertas.",
+      "style": "natural",
+      "use": "Relatar reações com responsabilidade"
+    },
+    {
+      "id": "argumentacao-extra-01",
+      "family": "argumentacao",
+      "pt": "A minha conclusão depende de dois critérios que posso mostrar neste vídeo.",
+      "style": "natural",
+      "use": "Organizar ideias e reconhecer limites"
+    },
+    {
+      "id": "argumentacao-extra-02",
+      "family": "argumentacao",
+      "pt": "Existe um argumento contrário que merece ser levado a sério.",
+      "style": "natural",
+      "use": "Organizar ideias e reconhecer limites"
+    },
+    {
+      "id": "argumentacao-extra-03",
+      "family": "argumentacao",
+      "pt": "Os exemplos ajudam a explicar o ponto, mas não substituem dados representativos.",
+      "style": "natural",
+      "use": "Organizar ideias e reconhecer limites"
+    },
+    {
+      "id": "argumentacao-extra-04",
+      "family": "argumentacao",
+      "pt": "Por esse motivo, prefiro formular a recomendação como uma escolha condicionada.",
+      "style": "natural",
+      "use": "Organizar ideias e reconhecer limites"
+    },
+    {
+      "id": "argumentacao-extra-05",
+      "family": "argumentacao",
+      "pt": "Com as informações disponíveis, esta é a interpretação mais prudente que consigo sustentar.",
+      "style": "natural",
+      "use": "Organizar ideias e reconhecer limites"
+    },
+    {
+      "id": "direcao-extra-01",
+      "family": "direcao",
+      "pt": "Vou começar por um plano geral para mostrar onde a ação acontece.",
+      "style": "natural",
+      "use": "Indicar enquadramentos e movimentos"
+    },
+    {
+      "id": "direcao-extra-02",
+      "family": "direcao",
+      "pt": "Um plano detalhe agora permite observar o acabamento que mencionei.",
+      "style": "natural",
+      "use": "Indicar enquadramentos e movimentos"
+    },
+    {
+      "id": "direcao-extra-03",
+      "family": "direcao",
+      "pt": "Neste movimento lateral, quero revelar a relação entre os dois espaços.",
+      "style": "natural",
+      "use": "Indicar enquadramentos e movimentos"
+    },
+    {
+      "id": "direcao-extra-04",
+      "family": "direcao",
+      "pt": "Aqui a câmera permanece parada para que o movimento venha da própria cena.",
+      "style": "natural",
+      "use": "Indicar enquadramentos e movimentos"
+    },
+    {
+      "id": "direcao-extra-05",
+      "family": "direcao",
+      "pt": "Vou preservar alguns segundos de som direto antes de entrar com a narração.",
+      "style": "natural",
+      "use": "Indicar enquadramentos e movimentos"
+    },
+    {
+      "id": "encerramento-extra-01",
+      "family": "encerramento",
+      "pt": "A visita respondeu à pergunta inicial, mas deixou outra investigação em aberto.",
+      "style": "natural",
+      "use": "Terminar histórias com significado"
+    },
+    {
+      "id": "encerramento-extra-02",
+      "family": "encerramento",
+      "pt": "O detalhe que parecia secundário no começo acabou orientando toda a história.",
+      "style": "natural",
+      "use": "Terminar histórias com significado"
+    },
+    {
+      "id": "encerramento-extra-03",
+      "family": "encerramento",
+      "pt": "No fim, o que ficou foi a diferença entre a minha expectativa e o que observei.",
+      "style": "natural",
+      "use": "Terminar histórias com significado"
+    },
+    {
+      "id": "encerramento-extra-04",
+      "family": "encerramento",
+      "pt": "Esta conclusão se aplica à experiência de hoje, não a todas as situações possíveis.",
+      "style": "natural",
+      "use": "Terminar histórias com significado"
+    },
+    {
+      "id": "encerramento-extra-05",
+      "family": "encerramento",
+      "pt": "Vamos encerrar com a própria cena, sem acrescentar palavras desnecessárias.",
+      "style": "natural",
+      "use": "Terminar histórias com significado"
     }
   ],
   "deepLessons": {
@@ -6198,6 +7038,696 @@
       ],
       "assignment": "Faça um percurso curto e registre cinco mudanças de ambiente, sem filmar de modo a atrapalhar pessoas.",
       "rubric": "Mostrei espaço e uso? Qualifiquei observações por local/horário? Incluí acessibilidade?"
+    },
+    "comunicacao-verbal:1": {
+      "title": "As nove camadas em uma cena",
+      "intro": "Uma boa narração alterna função, profundidade e intenção. As nove camadas são possibilidades, não uma lista que precisa aparecer em todo vídeo.",
+      "steps": [
+        {
+          "title": "Camada observável",
+          "body": "Comece com o que uma câmera ou um microfone pode registrar: forma, direção, intensidade e ação. Não atribua causa antes de apurá-la.",
+          "example": "Vejo árvores nos dois lados da rua; algumas pessoas atravessam a faixa de pedestres."
+        },
+        {
+          "title": "Camada de contexto",
+          "body": "Localização, origem e finalidade pedem fonte. Se não sabe por que a rua é assim, formule uma pergunta em vez de preencher a lacuna com certeza aparente.",
+          "example": "A origem desse conjunto de fachadas é algo que ainda preciso pesquisar."
+        },
+        {
+          "title": "Camada de significado",
+          "body": "Interpretação e síntese são o lugar da sua voz autoral. Torne explícito que se trata de uma leitura, nunca de um fato confirmado.",
+          "example": "Para mim, a escala menor das lojas torna a caminhada mais convidativa."
+        }
+      ],
+      "assignment": "Grave a mesma rua em 3 versões de 30 segundos: registro factual, visita guiada e reflexão pessoal. Identifique em voz alta qual camada está usando.",
+      "rubric": "Pelo menos três detalhes verificáveis, uma pergunta de apuração e uma interpretação corretamente sinalizada."
+    },
+    "comunicacao-verbal:2": {
+      "title": "Estruturas que sustentam a fluência",
+      "intro": "Fluência não significa falar sem respirar: significa oferecer ao ouvinte um caminho inteligível entre ideias.",
+      "steps": [
+        {
+          "title": "Estrutura tema–detalhe–efeito",
+          "body": "Abra o tópico, descreva uma evidência e explique por que ela importa. O ouvinte deve perceber claramente a progressão.",
+          "example": "Esta rua favorece a caminhada. Há sombra ao longo da calçada. Isso torna o percurso mais confortável sob o sol."
+        },
+        {
+          "title": "Pontes sem redundância",
+          "body": "Escolha conectores segundo a relação lógica: contraste, consequência, sequência, ressalva. Evite iniciar toda frase com “e aí”.",
+          "example": "Além disso indica acréscimo; por outro lado indica contraste; por isso indica consequência."
+        },
+        {
+          "title": "Retomada elegante",
+          "body": "Se perder uma palavra, reformule a ideia. Pausas deliberadas são melhores do que acelerar e empilhar muletas verbais.",
+          "example": "Melhor dizendo: não é a rua inteira que está vazia; é este trecho, neste horário."
+        }
+      ],
+      "assignment": "Descreva um ambiente por 60 segundos usando três relações diferentes: adição, contraste e consequência. Ouça e marque onde a transição ficou artificial.",
+      "rubric": "Cada conector corresponde à relação pretendida; duas pausas úteis; conclusão compreensível."
+    },
+    "comunicacao-verbal:3": {
+      "title": "Síntese sem simplificação enganosa",
+      "intro": "Uma narração curta precisa escolher o essencial sem apagar as ressalvas relevantes.",
+      "steps": [
+        {
+          "title": "Pergunta editorial",
+          "body": "Antes de reduzir o texto, escreva qual pergunta o vídeo responde. Tudo o que não ajuda a respondê-la pode ficar fora.",
+          "example": "Pergunta: como esta praça é usada no começo do dia?"
+        },
+        {
+          "title": "Três níveis de duração",
+          "body": "A versão de 15 segundos entrega a ideia central; a de 45 acrescenta evidência; a de 90 inclui contexto e limites.",
+          "example": "15 s: praça movimentada; 45 s: horários e ações observadas; 90 s: comparação cautelosa com outra visita."
+        },
+        {
+          "title": "Precisão sob pressão",
+          "body": "Não troque “neste horário” por “sempre” para ganhar velocidade. Cuidado especial com números, generalizações e falas atribuídas.",
+          "example": "Observei três lojas abertas às 8h; não posso afirmar que todas abrem nesse horário."
+        }
+      ],
+      "assignment": "Grave versões de 15, 45 e 90 segundos sobre o mesmo local. Transcreva as três e circule detalhes essenciais preservados.",
+      "rubric": "Todas respondem à mesma pergunta; as versões curtas preservam contexto mínimo e incertezas importantes."
+    },
+    "oratoria-retorica:1": {
+      "title": "Arquitetura de um argumento auditivo",
+      "intro": "Argumentar para a câmera exige tese delimitada, razões reconhecíveis e espaço para o contraponto.",
+      "steps": [
+        {
+          "title": "Tese proporcional",
+          "body": "Faça uma afirmação que suas observações realmente possam sustentar. A frase “na minha visita” é diferente de “na cidade inteira”.",
+          "example": "Neste trajeto, o metrô foi mais previsível do que o deslocamento de carro que testei."
+        },
+        {
+          "title": "Razão e evidência",
+          "body": "Não confunda opinião com prova. A razão explica seu pensamento; a evidência verificável apoia ou enfraquece a afirmação.",
+          "example": "Razão: menos variação no tempo; evidência: os tempos registrados em três viagens."
+        },
+        {
+          "title": "Contraponto honesto",
+          "body": "Antecipe a limitação mais forte da sua própria conclusão. Uma ressalva relevante aumenta credibilidade.",
+          "example": "Isso não significa que o metrô seja melhor para pessoas com mobilidade reduzida em todas as rotas."
+        }
+      ],
+      "assignment": "Defenda uma escolha cotidiana em até 70 segundos, com uma tese, duas razões, um dado observado e uma ressalva.",
+      "rubric": "Não há generalização indevida; razões distintas; ressalva não anula o argumento, apenas delimita."
+    },
+    "oratoria-retorica:2": {
+      "title": "Ethos, logos e pathos sem manipulação",
+      "intro": "A retórica organiza confiança, explicação e atenção emocional. Jornalismo exige que esses recursos não distorçam evidências.",
+      "steps": [
+        {
+          "title": "Ethos: transparência",
+          "body": "Mostre de onde você fala, o que sabe e o que ainda não verificou. Não finja especialização.",
+          "example": "Visitei este espaço duas vezes; não entrevistei moradores, então minha leitura é parcial."
+        },
+        {
+          "title": "Logos: encadeamento",
+          "body": "Organize relações que possam ser acompanhadas pelo público. Números sem base e causalidades presumidas enfraquecem a explicação.",
+          "example": "A contagem aumentou neste período; não sabemos ainda se isso reflete uma tendência duradoura."
+        },
+        {
+          "title": "Pathos: humanidade sem exploração",
+          "body": "A emoção aproxima o espectador; jamais substitui consentimento, contexto ou dignidade de quem é filmado.",
+          "example": "Uma história pessoal pode ilustrar a rotina, mas não representa automaticamente todo um bairro."
+        }
+      ],
+      "assignment": "Reescreva uma narração excessivamente dramática em três parágrafos: transparência, evidência e significado humano.",
+      "rubric": "Credibilidade explícita, lógica verificável e emoção sem exagero."
+    },
+    "oratoria-retorica:3": {
+      "title": "Explicar e persuadir com integridade",
+      "intro": "Um bom comunicador ajuda a audiência a compreender uma escolha sem ocultar alternativas ou limites.",
+      "steps": [
+        {
+          "title": "Prepare o contrato com o público",
+          "body": "Diga o que será explicado, para quem e com qual recorte. Uma promessa específica orienta as próximas cenas.",
+          "example": "Vou mostrar três critérios que usei para escolher uma câmera de viagem."
+        },
+        {
+          "title": "Trabalhe objeções concretas",
+          "body": "Compare critérios que realmente mudariam a decisão. Não crie adversários fictícios para derrotá-los.",
+          "example": "Para quem grava à noite, o desempenho em baixa luz pode importar mais do que o zoom."
+        },
+        {
+          "title": "Termine com escolha condicionada",
+          "body": "Uma recomendação responsável depende de necessidades, condições e incertezas. Evite conclusões universais.",
+          "example": "Se a prioridade é portabilidade, eu escolheria A; para telefoto, avaliaria B."
+        }
+      ],
+      "assignment": "Grave um guia de decisão de 90 segundos, informando critérios, trade-offs e para quem a conclusão se aplica.",
+      "rubric": "O público consegue repetir critérios; contrapontos foram apresentados; não há promessas infundadas."
+    },
+    "locucao-voz:1": {
+      "title": "Dicção e articulação inteligível",
+      "intro": "Uma dicção clara depende de articulação coordenada, não de pronunciar todas as sílabas artificialmente.",
+      "steps": [
+        {
+          "title": "Ataque limpo",
+          "body": "Comece a frase sem atropelar a primeira palavra. Prepare o ar e inicie após uma pausa curta.",
+          "example": "Compare “nesta esquina” dito com início precipitado versus início calmo."
+        },
+        {
+          "title": "Consoantes estratégicas",
+          "body": "Preste atenção às terminações que distinguem palavras. Grave em ritmo normal, depois escute se o sentido se mantém.",
+          "example": "“três vitrines” versus “treze vitrines”: a inteligibilidade importa mais que a velocidade."
+        },
+        {
+          "title": "Articulação sem rigidez",
+          "body": "Solte mandíbula e lábios. Treine primeiro devagar e depois recupere ritmo natural; tensão excessiva torna a fala menos expressiva.",
+          "example": "Repetir “contraste entre estruturas” com clareza sem encenar cada consoante."
+        }
+      ],
+      "assignment": "Leia cinco frases informativas em três velocidades; avalie em qual delas as palavras permanecem naturais e compreensíveis.",
+      "rubric": "Ataques audíveis, consoantes decisivas preservadas e ausência de tensão perceptível."
+    },
+    "locucao-voz:2": {
+      "title": "Ritmo, entonação e silêncio",
+      "intro": "A pontuação que o ouvido percebe nasce das pausas e mudanças de entonação, não apenas da vírgula no roteiro.",
+      "steps": [
+        {
+          "title": "Agrupe ideias pela respiração",
+          "body": "Marque barras no texto onde uma unidade de sentido termina. Não interrompa entre sujeito e verbo sem intenção expressiva.",
+          "example": "A rua está tranquila / mas o comércio começou a abrir / e a circulação deve mudar."
+        },
+        {
+          "title": "Palavra de foco",
+          "body": "Escolha um único elemento principal por frase; o excesso de ênfase produz monotonia dramática.",
+          "example": "O detalhe mais interessante é a LUZ — não necessariamente a loja inteira."
+        },
+        {
+          "title": "Silêncio informativo",
+          "body": "Dê tempo para o espectador examinar a imagem. Uma pausa pode ser conteúdo: mostra, não apenas afirma.",
+          "example": "Depois de “escute o ambiente”, deixe dois segundos reais de som local."
+        }
+      ],
+      "assignment": "Narre um trecho de 40 segundos duas vezes, primeiro sem marcações, depois com três pausas e duas palavras de foco.",
+      "rubric": "Pausas respeitam unidades de sentido; variação de ritmo ajuda a compreender; silêncio não soa como falha."
+    },
+    "locucao-voz:3": {
+      "title": "Leitura expressiva para vídeo",
+      "intro": "Ler bem diante de uma câmera é interpretar uma intenção, não recitar letras sem contato com o público.",
+      "steps": [
+        {
+          "title": "Escreva para a voz",
+          "body": "Prefira sintaxe que caiba numa respiração e substitua construções tipicamente burocráticas por enunciados claros.",
+          "example": "Troque “no que concerne ao deslocamento” por “quando falamos de deslocamento”."
+        },
+        {
+          "title": "Marcação mínima",
+          "body": "Use barras para pausa, maiúsculas pontuais para ênfase e colchetes para ação. Não exagere nos sinais.",
+          "example": "[MOSTRAR A FACHADA] É aqui / que o material revela sua textura."
+        },
+        {
+          "title": "Olho na lente",
+          "body": "Divida o roteiro em unidades que possa lembrar. Fale uma ideia olhando para a lente, depois consulte a próxima.",
+          "example": "Uma frase-chave por cartão é mais manejável do que oito linhas corridas."
+        }
+      ],
+      "assignment": "Prepare um texto de 120 palavras com marcações de performance e grave uma versão lendo e outra apoiada só em palavras-chave.",
+      "rubric": "Voz natural, nenhuma afirmação omitida, olhar frequente para a lente."
+    },
+    "comunicacao-camera:1": {
+      "title": "Gestos, postura e linguagem corporal",
+      "intro": "A postura funciona como informação contextual. O gesto deve esclarecer onde olhar, não disputar atenção com o conteúdo.",
+      "steps": [
+        {
+          "title": "Organize o espaço corporal",
+          "body": "Mantenha estabilidade quando o quadro exige explicação; mova-se quando o deslocamento fizer parte da história.",
+          "example": "Em um close de produto, aproxime as mãos lentamente para indicar o acabamento."
+        },
+        {
+          "title": "Gesto com propósito",
+          "body": "Associe gestos a funções: apontar a referência, dimensionar uma distância, contrastar duas opções. Evite coreografar tudo.",
+          "example": "Com a mão esquerda indico a fachada antiga; com a direita, a intervenção recente."
+        },
+        {
+          "title": "Coerência entre emoção e voz",
+          "body": "Expressões faciais devem acompanhar o significado. Assuntos delicados pedem presença respeitosa, não entusiasmo automático.",
+          "example": "Para falar de uma dificuldade vivida por alguém, reduza o sorriso de apresentação."
+        }
+      ],
+      "assignment": "Grave uma explicação de um objeto por 45 segundos em plano fixo. Faça duas versões: gestos livres e gestos com função.",
+      "rubric": "Gestos ajudam a identificar elementos, postura não impede áudio e intenção combina com tema."
+    },
+    "comunicacao-camera:2": {
+      "title": "Falar sem depender do teleprompter",
+      "intro": "O objetivo do treino é internalizar a estrutura do raciocínio, não decorar o texto completo.",
+      "steps": [
+        {
+          "title": "Reduza o texto em camadas",
+          "body": "Leia o texto integral; transforme em cinco frases-chave; reduza a três palavras por bloco; por fim grave livremente.",
+          "example": "Roteiro: abertura → rua → textura → pessoas → síntese."
+        },
+        {
+          "title": "Use âncoras visuais",
+          "body": "Associe cada ideia a algo que apareça na imagem. Isso reduz a carga de memória e fortalece a naturalidade.",
+          "example": "Ao mostrar a esquina, fale de orientação; ao aproximar da fachada, fale de material."
+        },
+        {
+          "title": "Recupere-se de tropeços",
+          "body": "Se perder a linha, pare e retome do conceito mais próximo. Na edição, corte a pausa; não é preciso fingir uma tomada perfeita.",
+          "example": "“Voltando ao ponto central: a iluminação altera o modo como percebemos a vitrine.”"
+        }
+      ],
+      "assignment": "Grave quatro tomadas de 30 segundos, cada vez com menos apoio: roteiro, tópicos, palavras-chave e nenhum texto.",
+      "rubric": "Ideia essencial preservada, continuidade retomada após tropeços e presença visual convincente."
+    },
+    "comunicacao-camera:3": {
+      "title": "Presença em movimento",
+      "intro": "Falar e caminhar exige uma logística de segurança, áudio e atenção ambiental diferente da apresentação parada.",
+      "steps": [
+        {
+          "title": "Escolha o ritmo do corpo",
+          "body": "Diminua o passo quando uma explicação exigir precisão. Não caminhe de costas em áreas movimentadas.",
+          "example": "Pare antes de apresentar números ou instruções que o espectador precisa entender."
+        },
+        {
+          "title": "Separe fala e cobertura",
+          "body": "Se o ambiente estiver ruidoso, registre imagens de apoio e faça locução posterior, identificando quando a fala foi gravada depois.",
+          "example": "Capte dez segundos da travessia; narre a observação em um local mais silencioso."
+        },
+        {
+          "title": "Use marcos espaciais",
+          "body": "Faça a progressão da história coincidir com pontos visuais. Evite “aqui” sem o público saber a que se refere.",
+          "example": "Ao cruzar a esquina, mostre a mudança de escala e diga qual elemento mudou."
+        }
+      ],
+      "assignment": "Produza uma sequência de três pontos: introdução parado, caminhada de dez metros e detalhe imóvel com locução.",
+      "rubric": "Deslocamento seguro, som inteligível e referência espacial inequívoca."
+    },
+    "linguagem-descritiva:1": {
+      "title": "O atlas dos detalhes observáveis",
+      "intro": "A descrição rica nasce de escolhas visuais exatas: material, forma, luz, relação e movimento.",
+      "steps": [
+        {
+          "title": "Da categoria ao detalhe",
+          "body": "Não pare em “prédio”, “vitrine” ou “árvore”. Descreva um traço que permitiria reconhecer a cena em outra fotografia.",
+          "example": "Fachada de tijolos escuros, com janelas estreitas e molduras metálicas."
+        },
+        {
+          "title": "Vocabulário com prova visual",
+          "body": "O adjetivo deve corresponder ao que pode ser visto ou justificado. “Histórico” não se prova pela aparência envelhecida.",
+          "example": "Prefira “fachada com ornamentos” a “fachada centenária” sem fonte."
+        },
+        {
+          "title": "Relação entre detalhes",
+          "body": "Uma lista de características não é uma cena. Explique como uma característica altera a percepção de outra.",
+          "example": "A vitrine iluminada ganha destaque porque a calçada ao redor está em sombra."
+        }
+      ],
+      "assignment": "Encontre cinco elementos em uma fotografia sua: material, forma, cor, iluminação e relação espacial. Descreva todos em até 70 segundos.",
+      "rubric": "Nenhum adjetivo vazio; detalhes correspondem à imagem; há pelo menos duas relações entre elementos."
+    },
+    "linguagem-descritiva:2": {
+      "title": "Vocabulário de relações espaciais",
+      "intro": "Um narrador conduz o olhar com palavras de orientação, hierarquia e distância, mantendo o público situado.",
+      "steps": [
+        {
+          "title": "Eixo de referência",
+          "body": "Estabeleça quem está olhando e para onde. “À direita” pode se referir à sua direita ou ao lado direito do quadro.",
+          "example": "À direita do enquadramento há uma fileira de bicicletas."
+        },
+        {
+          "title": "Escala relativa",
+          "body": "Indique proporção com referência concreta em vez de estimativas arbitrárias.",
+          "example": "A porta ocupa quase toda a altura do primeiro pavimento."
+        },
+        {
+          "title": "Movimento do observador",
+          "body": "Quando muda o ponto de vista, avise: por dentro, de cima, próximo, ao fundo, cruzando a rua.",
+          "example": "Deste lado, os volumes parecem compactos; do outro, percebemos o recuo das fachadas."
+        }
+      ],
+      "assignment": "Faça um passeio descritivo em 50 segundos por uma imagem fixa usando primeiro plano, fundo, esquerda, direita e mudança de perspectiva.",
+      "rubric": "Referências consistentes, sem ambiguidades de orientação, escala sustentada."
+    },
+    "linguagem-descritiva:3": {
+      "title": "Descrição cinematográfica sem exagero",
+      "intro": "A descrição audiovisual eficiente informa o que a imagem não comunica sozinha e dá espaço para a observação silenciosa.",
+      "steps": [
+        {
+          "title": "Escolha o que verbalizar",
+          "body": "Se o espectador já vê uma bicicleta vermelha, a voz pode explicar por que você decidiu acompanhá-la, não apenas repetir a cor.",
+          "example": "A câmera acompanha a bicicleta até onde a rua fica mais estreita."
+        },
+        {
+          "title": "Associe escala e sensação",
+          "body": "Descreva o que provoca a sensação, não apenas o sentimento que quer impor.",
+          "example": "As sombras longas tornam o corredor visualmente mais profundo."
+        },
+        {
+          "title": "Economia e silêncio",
+          "body": "Deixe momentos sem fala quando som e imagem entregarem a informação. Não preencha toda pausa com adjetivos.",
+          "example": "A porta abre; ouve-se o sino; a câmera permanece na entrada por dois segundos."
+        }
+      ],
+      "assignment": "Monte um vídeo de cinco planos e escreva até 65 palavras de narração, incluindo um silêncio intencional.",
+      "rubric": "Imagem e voz são complementares; descrição precisa; nenhuma emoção imposta como fato."
+    },
+    "storytelling:1": {
+      "title": "Progressão, expectativa e virada",
+      "intro": "Uma boa história não é uma sequência de imagens bonitas: cada cena acrescenta conhecimento ou altera a pergunta.",
+      "steps": [
+        {
+          "title": "Pergunta motriz",
+          "body": "Abra uma curiosidade que a reportagem possa responder, sem prometer revelações inexistentes.",
+          "example": "Por que esta rua parece tão diferente das avenidas vizinhas?"
+        },
+        {
+          "title": "Progressão de descoberta",
+          "body": "Ordene as cenas em etapas reais do processo: percepção, busca, evidência, revisão e conclusão.",
+          "example": "Primeiro observo a arquitetura; depois consulto uma fonte sobre o bairro; por fim atualizo a interpretação."
+        },
+        {
+          "title": "Virada honesta",
+          "body": "A surpresa pode ser uma mudança na sua hipótese. Não invente conflito para criar drama.",
+          "example": "Eu imaginava que o lugar fosse exclusivamente comercial, mas encontrei moradias no mesmo quarteirão."
+        }
+      ],
+      "assignment": "Crie a escaleta de seis cenas sobre uma descoberta real. Registre a pergunta de cada cena e a nova informação acrescentada.",
+      "rubric": "Cada cena muda algo; a virada é verdadeira; a resposta final corresponde às provas."
+    },
+    "storytelling:2": {
+      "title": "Cenas, tempo e montagem narrativa",
+      "intro": "A montagem cria relações entre acontecimentos, mas não deve sugerir uma cronologia falsa em material documental.",
+      "steps": [
+        {
+          "title": "Cena versus resumo",
+          "body": "Cena mostra ação concreta no espaço e no tempo; resumo explica mudanças mais amplas. Intercale os dois.",
+          "example": "Cena: barista entrega o copo; resumo: ao longo da manhã, o movimento aumenta."
+        },
+        {
+          "title": "Pontes temporais",
+          "body": "Use referências verificáveis como depois, no dia seguinte ou em outra visita; não simule continuidade inexistente.",
+          "example": "Em outra manhã, voltei à mesma rua e encontrei uma situação diferente."
+        },
+        {
+          "title": "Montagem com responsabilidade",
+          "body": "Não conecte reações e falas de pessoas de modo que pareçam responder a algo que não ouviram.",
+          "example": "Intercale B-roll da vitrine com sua própria locução, sem atribuir comentários a clientes."
+        }
+      ],
+      "assignment": "Escreva o roteiro de um minuto com uma cena, um resumo e uma passagem de tempo explicitamente sinalizada.",
+      "rubric": "Cronologia honesta, cenas específicas e ligações de causa não inventadas."
+    },
+    "storytelling:3": {
+      "title": "Encerramentos que deixam sentido",
+      "intro": "Um encerramento potente muda a forma como o público interpreta a história, sem precisar de moral genérica.",
+      "steps": [
+        {
+          "title": "Retorne à pergunta inicial",
+          "body": "Encerre retomando a curiosidade que motivou o vídeo e diga o que foi de fato respondido.",
+          "example": "Comecei procurando sinais de vida de bairro; encontrei três formas distintas de ocupar a calçada."
+        },
+        {
+          "title": "Síntese com imagem concreta",
+          "body": "Uma observação específica ajuda mais a memória do que uma frase grandiosa que poderia servir a qualquer lugar.",
+          "example": "Quando a última mesa é recolhida, a calçada volta a ser um corredor de passagem."
+        },
+        {
+          "title": "Abra uma próxima pergunta",
+          "body": "Admita o que ainda não foi investigado. Uma pergunta legítima convida a novos episódios.",
+          "example": "Ainda quero entender como os moradores percebem essa transformação."
+        }
+      ],
+      "assignment": "Escreva três encerramentos para a mesma reportagem: resposta direta, reflexão pessoal e pergunta em aberto.",
+      "rubric": "Coerência com as cenas; nenhum dado novo sem fonte; último plano reforça a ideia."
+    },
+    "improvisacao:1": {
+      "title": "Conectores e retomadas naturais",
+      "intro": "A improvisação melhora quando o repertório oferece relações prontas, não textos inteiros a decorar.",
+      "steps": [
+        {
+          "title": "Acréscimo e progressão",
+          "body": "Além de acrescentar informação, conectores permitem subir um nível de abstração. Escolha os que ajudam a audiência.",
+          "example": "Primeiro o desenho da fachada; além disso, o uso das cores; juntos, esses elementos criam unidade."
+        },
+        {
+          "title": "Contraste e concessão",
+          "body": "A conjunção precisa sinalizar oposição real ou restrição importante, não apenas ornamentar a frase.",
+          "example": "O corredor é amplo, mas o fluxo de pessoas reduz o espaço disponível."
+        },
+        {
+          "title": "Retomada sem desculpas excessivas",
+          "body": "Perder o fio é normal. Prefira marcadores que recuperam o tópico: “o ponto é”, “voltando à cena”.",
+          "example": "O ponto principal é que a luz muda conforme caminhamos."
+        }
+      ],
+      "assignment": "Fale por 75 segundos sobre uma rua usando um conector de sequência, um de contraste e uma retomada intencional.",
+      "rubric": "Conectores correspondem ao raciocínio; retomada não contradiz o que veio antes; fala segue compreensível."
+    },
+    "improvisacao:2": {
+      "title": "Reformular sem perder o significado",
+      "intro": "Reformulação é habilidade profissional: permite corrigir precisão, adequar público e recuperar a comunicação.",
+      "steps": [
+        {
+          "title": "Troca de registro",
+          "body": "Transforme uma frase coloquial em explicação técnica e vice-versa sem acrescentar fatos.",
+          "example": "“A peça cai bem” → “o caimento acompanha o corpo sem formar dobras excessivas neste ponto”."
+        },
+        {
+          "title": "Autocorreção explícita",
+          "body": "Corrija números ou generalizações na própria gravação quando necessário. Uma correção clara é melhor que esconder a mudança.",
+          "example": "Eu disse “todos”; o correto é “os três estabelecimentos que observei”."
+        },
+        {
+          "title": "Paráfrase acessível",
+          "body": "Explique termos novos na primeira utilização e retome a palavra técnica depois.",
+          "example": "Profundidade de campo é a faixa da imagem que aparece em foco."
+        }
+      ],
+      "assignment": "Reformule seis frases de um roteiro: duas mais precisas, duas mais simples, uma com ressalva e uma em outro registro.",
+      "rubric": "O significado factual se mantém e as mudanças de registro tornam o texto mais adequado."
+    },
+    "improvisacao:3": {
+      "title": "Improviso em situação de rua",
+      "intro": "Na rua, a observação muda; a fala deve responder ao presente sem perder segurança, consentimento e direção narrativa.",
+      "steps": [
+        {
+          "title": "Ponto de entrada",
+          "body": "Comece por um detalhe que acabou de perceber. Não é preciso fingir que sabe o desfecho.",
+          "example": "Eu pretendia mostrar esta loja, mas reparem no movimento que se formou na esquina."
+        },
+        {
+          "title": "Roteiro flexível",
+          "body": "Leve três âncoras: pergunta, evidência desejada e saída possível. Se a evidência não aparecer, conte isso.",
+          "example": "Pergunta: como funciona o serviço? Se não obtiver resposta, registre apenas o funcionamento visível."
+        },
+        {
+          "title": "Saída responsável",
+          "body": "Saiba encerrar quando a situação se torna desconfortável, restrita ou insegura. Não transforme recusa em conflito.",
+          "example": "Não vamos gravar dentro do estabelecimento; sigo mostrando o entorno público."
+        }
+      ],
+      "assignment": "Faça duas tomadas de 45 segundos num ambiente seguro: uma seguindo uma pauta e outra reagindo a um detalhe inesperado.",
+      "rubric": "Improviso observa de verdade, não atribui motivos a terceiros e preserva a segurança."
+    },
+    "semiotica:1": {
+      "title": "Gestos, expressão e distância social",
+      "intro": "Gestos carregam significado contextual. A interpretação varia com cultura, situação, interlocutores e intenção.",
+      "steps": [
+        {
+          "title": "Não leia mente pelo corpo",
+          "body": "Um gesto isolado não comprova humor, caráter ou intenção. Descreva antes de inferir.",
+          "example": "A pessoa cruza os braços; isso não prova que esteja desconfortável."
+        },
+        {
+          "title": "Espaço e enquadramento",
+          "body": "A câmera altera a percepção de proximidade. Peça consentimento quando filmar alguém identificável.",
+          "example": "Um close aproxima emocionalmente, mesmo sem que haja intimidade real."
+        },
+        {
+          "title": "Coerência multimodal",
+          "body": "Sua expressão, voz e enquadramento devem cooperar. A divergência pode ser intencional, mas precisa de função clara.",
+          "example": "Tom neutro e plano estável ajudam numa explicação técnica."
+        }
+      ],
+      "assignment": "Analise três quadros sem interpretar estados psicológicos. Depois formule hipóteses marcadas como hipóteses.",
+      "rubric": "Observação separada de inferência, consentimento respeitado e contexto identificado."
+    },
+    "semiotica:2": {
+      "title": "Códigos visuais de imagem e marca",
+      "intro": "Cores, materiais e formas acionam associações culturais; elas não têm significado universal ou automático.",
+      "steps": [
+        {
+          "title": "Sinal versus convenção",
+          "body": "Diferencie o que é visível de sentidos atribuídos socialmente.",
+          "example": "A cor vermelha está presente; associá-la à sorte depende de contexto cultural específico."
+        },
+        {
+          "title": "Marca e narrativa visual",
+          "body": "Observe repetição de formas, materiais, escala e disposição. Só atribua intenção ao designer com evidência.",
+          "example": "O padrão geométrico se repete no letreiro e na embalagem."
+        },
+        {
+          "title": "Conotações concorrentes",
+          "body": "Uma estética minimalista pode sugerir sofisticação a alguns públicos e frieza a outros. Não imponha leitura única.",
+          "example": "O espaço usa poucas cores; minha impressão é de sobriedade, mas essa leitura não é universal."
+        }
+      ],
+      "assignment": "Escolha uma vitrine e produza um inventário de sinais observáveis, seguido de duas interpretações possíveis.",
+      "rubric": "Sinais sustentados pela imagem, interpretação condicional e ausência de estereótipos."
+    },
+    "semiotica:3": {
+      "title": "Análise semiótica de uma cena urbana",
+      "intro": "Analisar comunicação visual é ligar um detalhe material a um sistema de sentidos sem confundir associação e comprovação.",
+      "steps": [
+        {
+          "title": "Inventário e recorte",
+          "body": "Escolha cinco sinais: placas, cores, trajetos, organização dos objetos e linguagem escrita.",
+          "example": "Há setas no piso, um aviso bilíngue e três pontos de acesso."
+        },
+        {
+          "title": "Código em contexto",
+          "body": "Pergunte quem interpreta o sinal, com quais referências e em que situação. Uma placa pode ser óbvia ao morador e confusa ao visitante.",
+          "example": "Uma instrução apenas em caracteres chineses pode exigir tradução para mim."
+        },
+        {
+          "title": "Narrativa de descoberta",
+          "body": "Mostre o sinal, conte sua primeira leitura, verifique a interpretação e apresente o que aprendeu.",
+          "example": "Achei que o símbolo indicava saída; conferi e descobri que orienta para outra plataforma."
+        }
+      ],
+      "assignment": "Produza cinco tomadas detalhando um sistema de sinalização pública e explique suas leituras e verificações.",
+      "rubric": "Apresenta contexto, distingue suposição de confirmação e preserva a interpretação original do sinal."
+    },
+    "psicologia-comunicacao:1": {
+      "title": "Emoção e memória na narrativa",
+      "intro": "Informações memoráveis combinam concretude, relação humana e estrutura, sem precisar fabricar emoção.",
+      "steps": [
+        {
+          "title": "Imagem mental específica",
+          "body": "Palavras concretas ajudam a audiência a reconstruir uma cena. Substitua generalidades por acontecimentos.",
+          "example": "Em vez de “um movimento intenso”, diga “três entregadores aguardam diante da porta”."
+        },
+        {
+          "title": "Âncora narrativa",
+          "body": "Retomar um detalhe no final ajuda o público a perceber continuidade e mudança.",
+          "example": "A bicicleta estacionada na abertura volta no fim, quando a loja fecha."
+        },
+        {
+          "title": "Emoção como perspectiva",
+          "body": "Diga quando o sentimento é seu; não trate a reação do público como obrigatória.",
+          "example": "Para mim, a cena transmite tranquilidade — mas a rua também abriga trabalho intenso."
+        }
+      ],
+      "assignment": "Grave uma história de um minuto com uma imagem mental, um detalhe retomado e uma reflexão pessoal claramente situada.",
+      "rubric": "Há estrutura reconhecível e emoção baseada em experiência, não em insinuação sobre terceiros."
+    },
+    "psicologia-comunicacao:2": {
+      "title": "Vieses, primeira impressão e enquadramento",
+      "intro": "O cérebro completa lacunas; o jornalismo exige resistir à tentação de transformar a primeira impressão em conclusão.",
+      "steps": [
+        {
+          "title": "Viés de confirmação",
+          "body": "Depois de formar uma hipótese, procure ativamente informações que poderiam contrariá-la.",
+          "example": "Achei a rua vazia: visitei em outro horário para testar se a impressão persistia."
+        },
+        {
+          "title": "Disponibilidade e seleção",
+          "body": "Uma cena marcante não representa a frequência do fenômeno. Indique o tamanho e o limite da observação.",
+          "example": "Vi uma fila longa hoje; isso não prova que a loja vive lotada."
+        },
+        {
+          "title": "Enquadramento editorial",
+          "body": "Mostre como um close e um plano geral mudam a interpretação de uma cena; nenhum deles é necessariamente a história completa.",
+          "example": "O close revela a fila; o plano aberto mostra outros guichês sem espera."
+        }
+      ],
+      "assignment": "Crie dois roteiros sobre o mesmo local com enquadramentos diferentes e explique o que cada um omite.",
+      "rubric": "Inferências identificadas, hipótese testável e consciência das omissões do quadro."
+    },
+    "psicologia-comunicacao:3": {
+      "title": "Clareza para públicos diferentes",
+      "intro": "Explicar o mesmo fato para públicos diferentes pede mudanças de ordem, vocabulário e analogias, não mudanças arbitrárias de evidência.",
+      "steps": [
+        {
+          "title": "Modelo mental inicial",
+          "body": "Pergunte o que o público provavelmente já sabe; defina apenas os termos que bloqueiam compreensão.",
+          "example": "Para quem nunca usou metrô, explique catraca, transferência e plataforma antes das dicas."
+        },
+        {
+          "title": "Exemplo antes do conceito",
+          "body": "Comece com um caso concreto e nomeie o princípio depois.",
+          "example": "Mostro a mão ajustando o foco; então explico profundidade de campo."
+        },
+        {
+          "title": "Analogia com limite",
+          "body": "Uma comparação ajuda até o ponto em que as diferenças importam. Explicite esse limite.",
+          "example": "O roteiro é como um mapa: orienta caminhos, mas não prevê tudo que acontecerá."
+        }
+      ],
+      "assignment": "Explique uma técnica de filmagem a um iniciante em 45 segundos e a um colega experiente em 90 segundos.",
+      "rubric": "Os dois entendem a mesma ideia correta; jargões são definidos; analogias não enganam."
+    },
+    "comunicacao-intercultural:1": {
+      "title": "Perguntas sem exotização",
+      "intro": "Cobrir outra cultura exige curiosidade genuína e perguntas que não pressuponham que uma experiência individual represente milhões de pessoas.",
+      "steps": [
+        {
+          "title": "Comece pela experiência da pessoa",
+          "body": "Pergunte sobre prática concreta em vez de iniciar com uma tese sobre “como os chineses são”.",
+          "example": "Como você costuma escolher onde tomar café neste bairro?"
+        },
+        {
+          "title": "Evite comparação hierárquica",
+          "body": "Comparar Brasil e China pode gerar descobertas, mas “melhor” e “atrasado” sem critério são julgamentos vazios.",
+          "example": "O processo aqui é diferente do que eu usava no Brasil: vou mostrar as etapas."
+        },
+        {
+          "title": "Permita a recusa",
+          "body": "Consentimento deve ser específico e contínuo. Gravar não obriga a pessoa a responder ou autorizar publicação.",
+          "example": "Prefere responder sem aparecer? Podemos não gravar, sem problema."
+        }
+      ],
+      "assignment": "Escreva oito perguntas de entrevista sobre um costume local e revise pressuposições culturais em cada uma.",
+      "rubric": "Perguntas abertas, nenhum estereótipo como premissa e forma de consentimento explicitada."
+    },
+    "comunicacao-intercultural:2": {
+      "title": "Tradução de nuances em entrevistas",
+      "intro": "Uma palavra pode carregar relações de formalidade e cultura que uma equivalência literal não reproduz.",
+      "steps": [
+        {
+          "title": "Traduza sentido e registro",
+          "body": "Verifique se a expressão original é formal, íntima, técnica ou coloquial. Não invente uma tradução mais dramática.",
+          "example": "Um “talvez” educado não deve aparecer na legenda como recusa categórica."
+        },
+        {
+          "title": "Diferencie sua voz da fala alheia",
+          "body": "A locução pode resumir contexto, mas nunca apresente paráfrase como citação literal.",
+          "example": "Minha síntese: ela prefere horários mais tranquilos. A fala original será legendada separadamente."
+        },
+        {
+          "title": "Verificação e revisão",
+          "body": "Em entrevistas importantes, peça confirmação de nomes, unidades e passagens ambíguas; considere revisão por falante fluente.",
+          "example": "O entrevistado falou de “dez minutos” ou “dez estações”? Confirme antes de editar."
+        }
+      ],
+      "assignment": "Crie legendas para cinco falas curtas com versões literal e natural e anote onde há perda de nuance.",
+      "rubric": "Fidelidade ao sentido, atribuição clara e incertezas resolvidas ou sinalizadas."
+    },
+    "comunicacao-intercultural:3": {
+      "title": "Escuta respeitosa e reciprocidade",
+      "intro": "Uma conversa intercultural boa não é coleta de curiosidades: é um encontro entre perspectivas com assimetria de conhecimento.",
+      "steps": [
+        {
+          "title": "Escute sem completar",
+          "body": "Evite terminar frases do entrevistado ou reinterpretá-las imediatamente a partir de referências próprias.",
+          "example": "Quando você diz “comunidade”, o que essa palavra significa para você neste contexto?"
+        },
+        {
+          "title": "Contextualize sem reduzir",
+          "body": "Uma pessoa pode falar apenas por si. Evite generalizar a partir de roupa, idade, origem ou local de trabalho.",
+          "example": "Esta é a experiência dela; outras pessoas poderão contar versões diferentes."
+        },
+        {
+          "title": "Retorno ético",
+          "body": "Explique uso do material, peça permissão e permita correções factuais relevantes sem prometer controle editorial irrestrito.",
+          "example": "Gostaria de enviar a você a tradução do seu nome e cargo para confirmar antes de publicar."
+        }
+      ],
+      "assignment": "Planeje uma entrevista de 5 minutos com abertura respeitosa, escuta ativa, confirmação de detalhes e encerramento claro.",
+      "rubric": "Consentimento respeitado, perguntas não indutivas e distinção entre testemunho e generalização."
     }
   },
   "atlas": [
@@ -7360,6 +8890,200 @@
       "title": "Sintetizar",
       "question": "Que ideia legítima fica depois da cena?",
       "example": "Conhecer a cidade também é perceber suas pequenas rotinas."
+    }
+  ],
+  "speechDrills": [
+    {
+      "id": "clinic-01",
+      "topic": "Precisão lexical",
+      "weak": "Que lugar maravilhoso, muito legal mesmo!",
+      "strong": "A luz atravessa as copas das árvores e destaca os detalhes das fachadas.",
+      "why": "Substitua adjetivos vazios por elementos observáveis da cena.",
+      "challenge": "Descreva uma fachada sem bonito, incrível ou legal."
+    },
+    {
+      "id": "clinic-02",
+      "topic": "Limite da observação",
+      "weak": "Aqui ninguém usa dinheiro em espécie.",
+      "strong": "Nos pagamentos que observei hoje, as pessoas utilizaram aplicativos. Não investiguei outras formas de pagamento.",
+      "why": "Uma visita limitada não permite concluir o comportamento de toda a cidade.",
+      "challenge": "Transforme uma generalização sobre transporte em observação situada."
+    },
+    {
+      "id": "clinic-03",
+      "topic": "Causa versus correlação",
+      "weak": "Tem fila porque a comida é a melhor do bairro.",
+      "strong": "Há uma fila neste horário. Ainda não perguntei às pessoas por que escolheram o restaurante.",
+      "why": "Uma cena não revela automaticamente os motivos de quem participa dela.",
+      "challenge": "Descreva um lugar cheio sem explicar a causa de forma especulativa."
+    },
+    {
+      "id": "clinic-04",
+      "topic": "Detalhes espaciais",
+      "weak": "Tem um negócio ali atrás daquilo.",
+      "strong": "Ao fundo, à direita do quadro, há uma entrada sob uma marquise de vidro.",
+      "why": "Referência de quadro, direção e objeto específico orientam o espectador.",
+      "challenge": "Guie uma pessoa imaginária por três elementos do seu enquadramento."
+    },
+    {
+      "id": "clinic-05",
+      "topic": "Conexão causal",
+      "weak": "Tem sombra. E também tem árvore. E isso é legal.",
+      "strong": "As copas das árvores projetam sombra sobre boa parte da calçada. Isso muda a experiência de caminhar aqui neste horário.",
+      "why": "Conecte detalhe a consequência sem repetir o mesmo adjetivo.",
+      "challenge": "Ligue material, iluminação e sensação em três frases."
+    },
+    {
+      "id": "clinic-06",
+      "topic": "Foco narrativo",
+      "weak": "Aqui tem muita coisa, loja, árvore, prédio, pessoa, tudo.",
+      "strong": "Quero destacar dois elementos: o desenho da fachada e a maneira como a calçada é ocupada.",
+      "why": "Selecionar é parte da edição oral: dois pontos bem desenvolvidos valem mais que uma enumeração vaga.",
+      "challenge": "Escolha só dois detalhes de uma vitrine e desenvolva cada um."
+    },
+    {
+      "id": "clinic-07",
+      "topic": "Contraste fundamentado",
+      "weak": "No Brasil não tem nada disso.",
+      "strong": "Este procedimento é diferente daquele que eu costumava utilizar no Brasil; vou mostrar as etapas e suas limitações.",
+      "why": "Diferencie experiência pessoal e comparação universal entre países.",
+      "challenge": "Compare duas formas de pagar sem estereotipar culturas."
+    },
+    {
+      "id": "clinic-08",
+      "topic": "Ritmo de locução",
+      "weak": "Vamos-entrar-aqui-agora-e-ver-tudo-junto.",
+      "strong": "Vamos entrar aqui. [pausa] Primeiro, observe a organização do espaço. Depois, vamos aos detalhes.",
+      "why": "Pausas intencionais transformam sequência acelerada em instruções audíveis.",
+      "challenge": "Marque três pausas num roteiro de 60 palavras."
+    },
+    {
+      "id": "clinic-09",
+      "topic": "Fonte explícita",
+      "weak": "Parece que esse lugar tem cem anos.",
+      "strong": "O edifício apresenta elementos ornamentais. A data de construção precisa ser verificada em uma fonte histórica.",
+      "why": "Estilo e aparência não comprovam idade.",
+      "challenge": "Troque três dados históricos supostos por perguntas de pesquisa."
+    },
+    {
+      "id": "clinic-10",
+      "topic": "Observação e opinião",
+      "weak": "Aquela loja é a mais sofisticada.",
+      "strong": "A vitrine combina iluminação discreta e poucos elementos. A composição me transmite uma sensação de sofisticação.",
+      "why": "A segunda frase assume a natureza interpretativa da experiência estética.",
+      "challenge": "Separe descrição e avaliação em um review de produto."
+    },
+    {
+      "id": "clinic-11",
+      "topic": "Linguagem sensorial",
+      "weak": "O café é muito bom e delicioso.",
+      "strong": "O primeiro gole tem acidez perceptível e um aroma que me lembra frutas cítricas.",
+      "why": "Ao relatar sabor, nomeie sensações próprias sem afirmar composição sem comprovação.",
+      "challenge": "Descreva uma bebida em aroma, textura e intensidade."
+    },
+    {
+      "id": "clinic-12",
+      "topic": "Abordagem de entrevista",
+      "weak": "Você não acha que isso está errado?",
+      "strong": "Como você avalia essa mudança? O que melhorou e o que se tornou mais difícil?",
+      "why": "Perguntas abertas reduzem indução e permitem respostas inesperadas.",
+      "challenge": "Crie uma pergunta aberta para um comerciante."
+    },
+    {
+      "id": "clinic-13",
+      "topic": "Escuta ativa",
+      "weak": "Tá, legal. Próxima pergunta.",
+      "strong": "Você mencionou uma dificuldade com o horário. Pode contar um episódio que mostre como isso acontece?",
+      "why": "Aprofundar a resposta do entrevistado cria informação, em vez de avançar mecanicamente.",
+      "challenge": "Formule duas perguntas de seguimento para uma resposta fictícia."
+    },
+    {
+      "id": "clinic-14",
+      "topic": "Reformulação elegante",
+      "weak": "É… tipo… sabe… o lugar é bem…",
+      "strong": "O que quero destacar é a diferença entre a iluminação interna e a luz da rua.",
+      "why": "Recomeçar com uma frase-âncora recupera estrutura sem preencher cada pausa.",
+      "challenge": "Grave um comentário de 30 segundos e troque muletas por silêncio."
+    },
+    {
+      "id": "clinic-15",
+      "topic": "Hierarquia de informação",
+      "weak": "Tem umas pessoas e uma placa e uma calçada e uma obra.",
+      "strong": "A mudança principal é a obra na calçada. A sinalização orienta os pedestres para o outro lado da rua.",
+      "why": "Primeiro a informação relevante; depois os detalhes que a explicam.",
+      "challenge": "Reordene três observações começando pela mais importante."
+    },
+    {
+      "id": "clinic-16",
+      "topic": "Cuidado intercultural",
+      "weak": "Os chineses são assim mesmo.",
+      "strong": "Nesta interação, a pessoa preferiu explicar o procedimento por gestos. Não sei se isso reflete um costume mais amplo.",
+      "why": "Não transforme um encontro individual em característica de uma população.",
+      "challenge": "Reescreva um comentário cultural para manter curiosidade sem generalização."
+    },
+    {
+      "id": "clinic-17",
+      "topic": "Fechamento específico",
+      "weak": "E é isso. Lugar incrível. Tchau!",
+      "strong": "Começamos observando a fachada; terminamos entendendo como a luz e o movimento da rua mudam sua aparência.",
+      "why": "Uma síntese recupera o assunto e mostra progresso de conhecimento.",
+      "challenge": "Feche um vídeo retomando uma pergunta lançada na abertura."
+    },
+    {
+      "id": "clinic-18",
+      "topic": "Expressividade",
+      "weak": "Olha isso! Meu Deus! Insano!",
+      "strong": "Repare na altura deste vão. Só quando uma pessoa passa por ele percebemos a escala da estrutura.",
+      "why": "A surpresa pode ser comunicada com medida relativa, sem excesso de exclamações.",
+      "challenge": "Crie um comentário de surpresa usando escala e comparação."
+    },
+    {
+      "id": "clinic-19",
+      "topic": "Apresentação de informação técnica",
+      "weak": "Essa câmera tem um sensor melhor, então é perfeita.",
+      "strong": "Neste teste com pouca luz, a imagem manteve detalhes nas sombras. Isso não garante o mesmo resultado em todas as cenas.",
+      "why": "Relate condições do teste e evite absolutismos de produto.",
+      "challenge": "Explique uma especificação mostrando consequência e limitação."
+    },
+    {
+      "id": "clinic-20",
+      "topic": "Visual e narração",
+      "weak": "Isso é uma bicicleta vermelha, como vocês podem ver.",
+      "strong": "A bicicleta entra no quadro e cruza a rua. Vou deixar o som original para observarmos o ritmo da cena.",
+      "why": "Quando a imagem já entrega uma característica, a voz pode acrescentar intenção ou contexto.",
+      "challenge": "Escreva uma locução que não repita o que o vídeo mostra."
+    },
+    {
+      "id": "clinic-21",
+      "topic": "Dado com contexto",
+      "weak": "O aluguel custa oito mil!",
+      "strong": "Nesta pesquisa, encontrei um anúncio por 8.000 yuans mensais. Ainda preciso confirmar condomínio, contas e condições contratuais.",
+      "why": "Preço exige moeda, período, fonte e condições; não é uma média de mercado.",
+      "challenge": "Apresente uma cotação sem tratá-la como preço universal."
+    },
+    {
+      "id": "clinic-22",
+      "topic": "Pergunta como motor",
+      "weak": "Vou filmar essa praça porque ela é bonita.",
+      "strong": "Quero descobrir como diferentes pessoas usam esta praça ao longo da manhã.",
+      "why": "Uma pergunta verificável cria linha editorial além da contemplação.",
+      "challenge": "Formule uma pergunta jornalística para um mercado de rua."
+    },
+    {
+      "id": "clinic-23",
+      "topic": "Precisão temporal",
+      "weak": "A estação está sempre cheia.",
+      "strong": "Às 18h desta quarta-feira, encontrei a plataforma bastante movimentada.",
+      "why": "O horário é parte da informação; “sempre” requer dados muito mais amplos.",
+      "challenge": "Converta uma afirmação absoluta em relato observacional."
+    },
+    {
+      "id": "clinic-24",
+      "topic": "Transição com lógica",
+      "weak": "Mas enfim, bora pra outra coisa.",
+      "strong": "Entendemos o desenho da vitrine. Agora vamos observar como os produtos são apresentados.",
+      "why": "A transição explica por que o próximo assunto vem depois do anterior.",
+      "challenge": "Conecte arquitetura externa e experiência dentro de uma loja."
     }
   ]
 }
