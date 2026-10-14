@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 1.1 — Escola da Fala expandida
+## Journalism Academy · Versão 1.2 — Atlas Descritivo Vivo
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -17,10 +17,18 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Frases-base em português | 552 | Editáveis em conteúdo-fonte, pesquisáveis no app |
 | Equivalentes em inglês | 36 | Seleção inicial, explicitamente incompleta |
 | Equivalentes em mandarim | 12 | Seleção inicial com pinyin |
-| Atlas de vocabulário | 16 campos; 160 termos | Publicado |
+| Atlas de vocabulário | 16 campos; 160 termos; 64 verbetes comentados | Publicado |
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v1.2
+
+- Atlas ampliado com 64 verbetes comentados: definições, exemplos e alertas editoriais, preservando os 160 termos originais.
+- Busca global no Atlas e 16 cenários hipotéticos detalhados.
+- Laboratório progressivo: quatro etapas por campo, totalizando 64 modelos de narração, com escuta por síntese de voz quando disponível.
+- Caderno pessoal: rascunhos locais, indicadores lexicais básicos, autoavaliação de 1 a 5, histórico de até 200 práticas, reabertura e teleprompter.
+- Rascunhos e registros incluídos no backup principal. Nenhuma análise semântica por IA ou verificação factual automática é anunciada.
 
 ### Novidades da v1.1
 
@@ -115,3 +123,6 @@ Para alterar disciplinas, aulas, frases, traduções e missões, edite `generate
 ---
 
 **A base foi construída para expansão de conteúdo sem refazer a arquitetura.**
+### Conteúdo do Atlas v1.2
+
+Edite `content/atlas_guides.json` e execute `python generate_atlas.py` para gerar `atlas-data.js`; valide com `python generate_atlas.py --check`. A interface reside em `atlas-engine.js` e compartilha com o aplicativo a mesma chave de armazenamento local. O backup inclui rascunhos e avaliações.

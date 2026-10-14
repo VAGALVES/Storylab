@@ -482,3 +482,12 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - Oficina da Fala: 24 transformações entre frases vagas e versões precisas com explicação e microprática.
 - Construtor de Raciocínio: oito cenas, quatro registros, observação, detalhe, contexto, fonte informada e reflexão; nenhum fato é verificado automaticamente.
 - Evoluções preservam o mesmo localStorage e os IDs anteriores.
+
+
+## Evolução v1.2 — Atlas Descritivo Vivo
+
+- 16 campos e 160 termos essenciais mantidos, com 64 verbetes enriquecidos por explicações e alertas de precisão lexical.
+- 16 cenas hipotéticas, com quatro modelos progressivos por cena: 64 exemplos de prática.
+- Quatro níveis por área: 20, 40, 60 e 90 segundos (duração sugerida, não cronômetro integrado).
+- Busca, síntese de voz para exemplos, rascunhos automáticos, indicadores determinísticos sem avaliação por IA, autoavaliação, histórico e teleprompter.
+- Expansão seguinte: detalhar os 96 termos restantes e integrar gravação vinculada ao próprio exercício.

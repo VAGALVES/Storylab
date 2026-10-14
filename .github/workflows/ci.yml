@@ -17,3 +17,5 @@ jobs:
         run: |
           node --check app.js
           node --check data.js
+          node --check atlas-data.js
+          node --check atlas-engine.js

@@ -18,3 +18,24 @@
 .clinic-saved .form-row{gap:6px}
 .clinic-saved button{font-size:11px}
 @media(max-width:650px){.clinic-before p,.clinic-after p{font-size:18px}}
+
+
+/* v1.2 — Atlas comentado e prática progressiva */
+.atlas12-toolbar{display:grid;grid-template-columns:minmax(210px,1fr) minmax(240px,1.5fr);gap:16px;margin-bottom:20px}
+.atlas12-toolbar .field-label{margin-bottom:8px}.atlas12-toolbar select,.atlas12-toolbar input{width:100%;max-width:100%}
+.atlas12-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:20px;align-items:start}
+.atlas12-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+.atlas12-term{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;padding:10px 13px;text-align:left;display:inline-flex;flex-direction:column;gap:3px;align-items:start;line-height:1.35}
+.atlas12-term span{color:var(--accent);font-size:10px}.atlas12-term small{color:var(--muted);font-size:10px}.atlas12-term.active,.atlas12-term:focus-visible{border-color:var(--accent);background:var(--accentsoft)}
+.atlas12-list{margin-top:16px}.atlas12-detail h2,.atlas12-work h2{font-family:Georgia,serif;font-size:clamp(25px,3vw,34px);line-height:1.2;margin:15px 0}
+.atlas12-definition{font-size:17px;line-height:1.7;margin-bottom:21px;color:var(--ink2)}
+.atlas12-example,.atlas12-warning,.atlas12-feedback{padding:16px;border:1px solid var(--line);border-radius:12px;margin:14px 0;background:var(--wash)}
+.atlas12-example{background:var(--accentsoft)}.atlas12-warning p,.atlas12-example p{line-height:1.8;font-size:15px;margin:10px 0}
+.atlas12-feedback ul{margin:10px 0 0;padding-left:21px;line-height:1.75}.atlas12-feedback p{margin:10px 0}
+.atlas12-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:18px 0}
+.atlas12-step{padding:11px 4px;text-align:center;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);font-weight:600;font-size:11px;line-height:1.4}
+.atlas12-step.active{color:var(--accent);border-color:var(--accent);background:var(--accentsoft)}
+.atlas12-writing{line-height:1.75;min-height:168px}.atlas12-history{border-top:1px solid var(--line);padding:12px 0}
+.atlas12-history p{margin:7px 0;white-space:normal;word-break:break-word}.atlas12-history .btn{margin-left:7px}
+@media(max-width:850px){.atlas12-toolbar,.atlas12-columns{grid-template-columns:1fr}}
+@media(max-width:500px){.atlas12-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas12-detail h2,.atlas12-work h2{font-size:25px}.atlas12-term{padding:9px 11px}}

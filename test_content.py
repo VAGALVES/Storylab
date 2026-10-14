@@ -23,3 +23,17 @@ for name in ('index.html','style.css','app.js','data.js','service-worker.js','ma
  assert (r/name).is_file(),name
 subprocess.run([sys.executable,str(r/'generate_data.py'),'--check'],check=True)
 print('Conteúdo: 43 disciplinas, 49 aulas, 552 frases, 24 transformações — OK')
+
+atlas=json.loads((r/'content/atlas_guides.json').read_text(encoding='utf8'))
+assert len(atlas)==len(d['atlas'])==16
+assert sum(len(group['terms']) for group in atlas)==64
+assert sum(len(group['model']) for group in atlas)==64
+for i,group in enumerate(atlas):
+    assert len(group['terms'])==4 and len(group['model'])==4
+    assert all(len(s)>=60 for s in group['model'])
+    for term,definition,example,caution in group['terms']:
+        assert term in d['atlas'][i]['terms']
+        assert all(len(v)>=15 for v in (definition,example,caution))
+assert (r/'atlas-engine.js').is_file()
+subprocess.run([sys.executable,str(r/'generate_atlas.py'),'--check'],check=True)
+print('Atlas: 64 verbetes detalhados e 64 modelos progressivos — OK')
