@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 1.3 — Atlas Completo e Estúdio de Voz
+## Journalism Academy · Versão 1.3.1 — Estabilização offline e testes
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -21,6 +21,14 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v1.3.1
+
+- Corrigida a codificação UTF-8 do texto alternativo do SVG de Xangai.
+- Service worker com fingerprint gerado a partir dos arquivos estáticos, estratégia adequada para atualização e fallback offline de navegação.
+- Verificação de SVG e textos de codificação, consistência de documentação e equivalência do HTML offline gerado na CI.
+- Correção de teste que esperava 64 verbetes após a expansão real para 160.
+- Configuração de cache HTTP do Netlify e instruções reais de desenvolvimento.
 
 ### Novidades da v1.3
 
@@ -85,27 +93,65 @@ Depois acesse `http://localhost:8000`. Em uma hospedagem HTTPS, o aplicativo tam
 - O app não constitui autorização para filmar ou exercer jornalismo profissional na China. Regras de imagem, privacidade, locais privados, trabalho e publicação devem ser verificadas conforme a situação concreta.
 - A trilha de 12 semanas não pretende equivaler a uma graduação; é um percurso inicial para competências selecionadas.
 
-### Estrutura do código
+### Estrutura real do repositório
+
+O repositório possui os arquivos diretamente na **raiz**, sem subpasta `storylab-shanghai`.
 
 ```text
-storylab-shanghai/
-├── index.html                # Entrada PWA
-├── style.css                 # Design editorial responsivo
-├── app.js                    # Interface, eventos, estado, gravação, backup
-├── data.js                   # Dados gerados (não edite diretamente)
-├── generate_data.py          # Fonte principal de disciplinas e frases
-├── build_standalone.py       # Produz o HTML único
-├── service-worker.js         # Cache da versão estática
-├── manifest.webmanifest      # Instalação PWA
+Storylab/
+├── index.html                 # Entrada da aplicação estática
+├── app.js                     # Navegação, dados locais e backup
+├── style.css                  # Interface editorial responsiva
+├── data.js                    # Conteúdo gerado (não edite manualmente)
+├── atlas-data.js              # Atlas gerado (não edite manualmente)
+├── atlas-engine.js            # Exploração lexical e prática guiada
+├── atlas-recorder.js          # Gravação de voz local
+├── atlas-audio-ui.js          # UI de gravação e autorrubrica
+├── content/
+│   ├── storylab_data.json     # Fonte das disciplinas e frases
+│   └── atlas_guides.json      # Fonte dos verbetes do Atlas
+├── generate_data.py           # Gera data.js
+├── generate_atlas.py          # Gera atlas-data.js
+├── generate_service_worker.py # Gera versão de cache a partir do conteúdo
+├── build_standalone.py        # Reconstrói o HTML único
+├── service-worker.js          # PWA e fallback de navegação offline
+├── storylab-shanghai-offline.html
+├── test_content.py            # Integridade editorial
+├── test_quality.py            # Integridade SVG, SW e documentação
+├── test_atlas.mjs             # Interações do Atlas (Node.js)
+├── test_recorder.mjs          # Fluxo de gravação simulado (Node.js)
+├── netlify.toml               # Publicação raiz e headers de atualização
+├── manifest.webmanifest
 ├── assets/
 │   ├── icon.svg
 │   └── skyline.svg
-├── test_app.py               # Testes básicos de ponta a ponta
-├── PLANO_MESTRE.md           # Conteúdo e roteiro de expansão
-└── README.md
+└── .github/workflows/ci.yml
 ```
 
-Para alterar disciplinas, aulas, frases, traduções e missões, edite `generate_data.py` e execute `python generate_data.py`. Para refazer o HTML único, execute `python build_standalone.py`. Para testar, instale Playwright para Python e um Chromium compatível, depois execute `python test_app.py`.
+Para editar conteúdo, altere os JSON e execute `python generate_data.py` e `python generate_atlas.py`.
+Após qualquer mudança em arquivos estáticos, execute `python generate_service_worker.py` e `python build_standalone.py`.
+
+Verificação local:
+
+```bash
+python test_content.py
+python test_quality.py
+python generate_service_worker.py --check
+node --check app.js
+node --check atlas-engine.js
+node --check atlas-recorder.js
+node --check atlas-audio-ui.js
+node test_atlas.mjs
+node test_recorder.mjs
+```
+
+Na CI, o build offline é regenerado e comparado ao arquivo versionado. Isso impede publicar um HTML único desatualizado.
+
+### Atualização do PWA / cache
+
+O arquivo `service-worker.js` é **gerado**, não editado manualmente. Seu nome de cache contém um fingerprint determinístico dos arquivos da aplicação. O GitHub Actions falha se o worker não acompanhar alterações no código. Uma navegação procura a versão online e retorna ao `index.html` em cache em caso de falha de rede, depois da primeira visita bem-sucedida. A versão offline permanece dependente das permissões e compatibilidade do dispositivo para captação de áudio.
+
+O `netlify.toml` evita cache HTTP prolongado para o worker e o HTML principal. Se um dispositivo ainda exibir a interface anterior, feche e abra novamente o site para permitir a atualização do service worker.
 
 ### Princípios de conteúdo
 
@@ -118,9 +164,9 @@ Para alterar disciplinas, aulas, frases, traduções e missões, edite `generate
 
 ### Próxima expansão recomendada
 
-**V1.1 — Profundidade da Escola da Fala:** acrescentar novos exemplos em cada uma das nove camadas, cinquenta exercícios de transformação de frase e ampliar aulas dos quatro módulos de Comunicação Verbal, Linguagem Descritiva, Improvisação e Locução.
+**V1.4 — Evolução da Fala:** conservar gravações opcionalmente no próprio aparelho com IndexedDB, comparar takes e oferecer controles de exclusão e backup separado para mídia.
 
-**V1.2 — Fraseoteca expandida:** acrescentar novas estruturas revisadas, combinações e variantes contextualizadas por moda, arquitetura, gastronomia, entrevistas e audiovisual, com revisão bilíngue/trilíngue de alto nível.
+**V1.5 — Fraseoteca contextual:** expandir construções realmente distintas para vídeos, moda, arquitetura e entrevistas. Traduções precisam de revisão linguística.
 
 **V2 — Redação e estúdio audiovisual:** storyboard visual, biblioteca de enquadramentos, planos de captação, fichas de pauta, fontes e checagem.
 

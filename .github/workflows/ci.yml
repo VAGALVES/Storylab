@@ -12,7 +12,10 @@ jobs:
         with:
           python-version: '3.12'
       - name: Checar integridade do conteúdo
-        run: python test_content.py
+        run: |
+          python test_content.py
+          python test_quality.py
+          python generate_service_worker.py --check
       - name: Checar sintaxe de JavaScript
         run: |
           node --check app.js
@@ -29,3 +32,4 @@ jobs:
         run: |
           python build_standalone.py
           python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 6; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h"
+          git diff --exit-code -- storylab-shanghai-offline.html

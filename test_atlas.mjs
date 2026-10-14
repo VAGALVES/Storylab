@@ -32,7 +32,7 @@ function click(action, extra = {}) {
 }
 const initial = atlas.render();
 assert.match(initial, /160/);
-assert.match(initial, /64/);
+assert.match(initial, /Verbetes aprofundados: 160/);
 assert.match(initial, /retilíneo/);
 click('word', {topic:'9', word:'caimento'});
 assert.match(atlas.render(), /Modo como um tecido/);

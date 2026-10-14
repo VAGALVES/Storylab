@@ -1,0 +1,40 @@
+"""Quality gates for SVG encoding, generated bundles, and deploy essentials."""
+from pathlib import Path
+from xml.etree import ElementTree as ET
+import re
+import json
+
+root = Path(__file__).resolve().parent
+index = (root / 'index.html').read_text(encoding='utf-8')
+assert 'atlas-recorder.js' in index and 'atlas-audio-ui.js' in index
+assert '<html lang="pt-BR">' in index
+assert 'service-worker.js' in (root / 'app.js').read_text(encoding='utf-8')
+
+for path in sorted((root / 'assets').glob('*.svg')):
+    raw = path.read_text(encoding='utf-8')
+    assert '\ufffd' not in raw, f'Unicode replacement marker in {path}'
+    assert not re.search(r'Ã[\u0080-\u00bf\u00a0-\u00ff]', raw), f'Likely mojibake in {path}'
+    ET.fromstring(raw)  # XML well-formedness
+skyline = (root / 'assets/skyline.svg').read_text(encoding='utf-8')
+assert 'Ilustração editorial' in skyline
+assert 'IlustraÃ' not in skyline
+
+data = json.loads((root / 'content/storylab_data.json').read_text(encoding='utf-8'))
+guides = json.loads((root / 'content/atlas_guides.json').read_text(encoding='utf-8'))
+assert len(data['atlas']) == len(guides) == 16
+assert all(len(topic['terms']) == len(guide['terms']) == 10 for topic, guide in zip(data['atlas'], guides))
+assert all([entry[0] for entry in guide['terms']] == topic['terms'] for topic, guide in zip(data['atlas'], guides))
+
+worker = (root / 'service-worker.js').read_text(encoding='utf-8')
+assert 'storylab-static-' in worker and '__HASH__' not in worker
+assert "request.mode === 'navigate'" in worker
+assert "caches.match(OFFLINE_PAGE)" in worker
+for name in ('app.js','style.css','data.js','atlas-engine.js','atlas-recorder.js','atlas-audio-ui.js'):
+    assert "'./" + name + "'" in worker
+
+readme = (root / 'README.md').read_text(encoding='utf-8')
+assert 'test_app.py' not in readme, 'Documentação menciona teste que não existe'
+assert 'generate_service_worker.py' in readme
+assert 'python test_content.py' in readme
+assert 'python test_atlas.mjs' not in readme
+print('Qualidade: SVG, codificação, cache offline, dados e documentação — OK')
