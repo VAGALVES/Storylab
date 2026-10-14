@@ -71,9 +71,13 @@ assert.match(atlas.render(),/ESTÚDIO DE VOZ/);
 assert.match(atlas.render(),/Dicção/);
 if(process.env.STORYLAB_STAGE==='interface') { console.log('Passed stage: interface'); process.exit(0) }
 await click('start',{},'atlasAudio');
+// Let the microtask scheduled by the browser-style async permission request complete.
+await new Promise(setImmediate);
 assert.equal(rec.state().kind,'recording');
+if(process.env.STORYLAB_STAGE==='audio-start') {console.log('Passed stage: audio-start');process.exit(0)}
 await click('stop',{},'atlasAudio');
 assert.equal(rec.state().kind,'ready');
+if(process.env.STORYLAB_STAGE==='audio-stop') {console.log('Passed stage: audio-stop');process.exit(0)}
 assert.match(atlas.render(),/Baixar áudio/);
 if(process.env.STORYLAB_STAGE==='playback') { console.log('Passed stage: playback'); process.exit(0) }
 store.atlasDrafts['0:0']='A fachada apresenta linhas retilíneas e um pórtico. Vejo duas árvores próximas à entrada e comparo as formas de cada estrutura.';

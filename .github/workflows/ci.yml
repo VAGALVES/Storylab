@@ -30,6 +30,10 @@ jobs:
         run: STORYLAB_STAGE=media node test_recorder.mjs
       - name: Verificar montagem do painel de voz
         run: STORYLAB_STAGE=interface node test_recorder.mjs
+      - name: Verificar início de gravação
+        run: STORYLAB_STAGE=audio-start node test_recorder.mjs
+      - name: Verificar finalização do take
+        run: STORYLAB_STAGE=audio-stop node test_recorder.mjs
       - name: Verificar reprodução e descarte
         run: STORYLAB_STAGE=playback node test_recorder.mjs
       - name: Verificar registro de sessão oral
