@@ -1,0 +1,20 @@
+from pathlib import Path
+import base64
+r=Path(__file__).parent
+html=(r/'index.html').read_text(encoding='utf-8')
+css=(r/'style.css').read_text(encoding='utf-8')
+data=(r/'data.js').read_text(encoding='utf-8')
+app=(r/'app.js').read_text(encoding='utf-8')
+svg=(r/'assets/skyline.svg').read_bytes();icon=(r/'assets/icon.svg').read_bytes()
+hero_data='data:image/svg+xml;base64,'+base64.b64encode(svg).decode()
+icon_data='data:image/svg+xml;base64,'+base64.b64encode(icon).decode()
+html=html.replace('<link rel="icon" href="assets/icon.svg" type="image/svg+xml">',f'<link rel="icon" href="{icon_data}" type="image/svg+xml">')
+html=html.replace('<link rel="manifest" href="manifest.webmanifest">','')
+html=html.replace('<link rel="stylesheet" href="style.css">','<style>\n'+css+'\n</style>')
+html=html.replace('<script src="data.js"></script>','<script>\n'+data.replace('</script','<\\/script')+'\n</script>')
+html=html.replace('<script src="app.js"></script>','<script>\n'+app.replace('</script','<\\/script')+'\n</script>')
+html=html.replace('src=\\"assets/skyline.svg\\"','src=\\"'+hero_data+'\\"')
+html=html.replace('src="assets/skyline.svg"','src="'+hero_data+'"')
+out=r/'storylab-shanghai-offline.html'
+out.write_text(html,encoding='utf-8')
+print('HTML único:',out)

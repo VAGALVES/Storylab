@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 440" fill="none" role="img" aria-label="IlustraÃ§Ã£o editorial da paisagem urbana de Xangai">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18262a"/><stop offset="1" stop-color="#34464b"/></linearGradient></defs>
+<rect x="0" y="0" width="660" height="440" fill="url(#g)"/>
+<circle cx="490" cy="91" r="80" fill="#E7A57F" opacity=".92"/>
+<path d="M0 365H660" stroke="#F2EAD8" opacity=".23"/><path d="M0 384H660" stroke="#F2EAD8" opacity=".2"/><path d="M0 402H660" stroke="#F2EAD8" opacity=".2"/>
+<path d="M32 375V230H94V375M75 230V192H115V375M121 375V274H170V375M180 375V152H230V375M230 375V264H280V375M281 375V320H334V375M354 375V179H399V375M399 375V243H453V375M458 375V286H510V375M516 375V221H574V375M582 375V275H650V375" stroke="#E7D9C1" stroke-width="2" opacity=".75"/>
+<path d="M205 152V130M358 179V154M91 192V170M547 221V194" stroke="#E7D9C1" stroke-width="2" opacity=".75"/>
+<path d="M303 378V152M303 152L305 117M303 152L299 117M290 186H317M293 229H314M303 264C277 264 276 283 303 293C329 283 327 264 303 264Z" stroke="#EBAD86" stroke-width="2.5"/>
+<ellipse cx="303" cy="212" rx="26" ry="24" fill="#EBAD86"/><ellipse cx="303" cy="212" rx="14" ry="12" fill="#18262a"/><circle cx="303" cy="298" r="15" fill="#EBAD86"/><path d="M307 140L303 80L299 140" fill="#EBAD86"/>
+<path d="M0 391C104 375 163 398 241 388S390 384 454 392S568 387 660 380" stroke="#E7A57F" stroke-width="2"/><path d="M-5 414C114 399 182 425 260 411S417 417 498 409S586 411 665 399" stroke="#E7D9C1" opacity=".45"/>
+<g fill="#E7D9C1" opacity=".45"><rect x="48" y="250" width="5" height="5"/><rect x="60" y="250" width="5" height="5"/><rect x="197" y="180" width="5" height="5"/><rect x="212" y="180" width="5" height="5"/><rect x="371" y="205" width="5" height="5"/><rect x="531" y="251" width="5" height="5"/><rect x="548" y="251" width="5" height="5"/></g>
+<rect x="0" y="0" width="660" height="440" fill="none" stroke="#e3c4a0" stroke-opacity=".12"/>
+</svg>
+
