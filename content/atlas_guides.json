@@ -1710,5 +1710,1075 @@
         "flag": false
       }
     ]
+  },
+  {
+    "scene": "Um vendedor de frutas atrás da banca, no fim da manhã",
+    "focus": "Descreva traços visíveis com neutralidade. Aparência não revela idade exata, origem, renda, profissão nem estado de saúde — e quem aparece em destaque precisa consentir.",
+    "terms": [
+      [
+        "estatura",
+        "Altura de uma pessoa percebida em relação ao ambiente ou a outras pessoas.",
+        "De estatura mediana, ele alcança o toldo da banca sem precisar se esticar.",
+        "Prefira comparações com o ambiente a números; não use estatura como qualidade ou defeito."
+      ],
+      [
+        "compleição",
+        "Conjunto da constituição física: largura dos ombros, estrutura e proporções do corpo.",
+        "De compleição esguia, ela se move com facilidade entre as caixas empilhadas.",
+        "Descreva sem julgar o corpo; evite termos depreciativos e associações com saúde ou caráter."
+      ],
+      [
+        "grisalho",
+        "Cabelo ou barba com fios brancos ou cinzentos misturados aos de cor original.",
+        "O cabelo grisalho aparece sob o boné azul quando ele se abaixa.",
+        "Fios brancos não indicam idade exata; não deduza quantos anos a pessoa tem."
+      ],
+      [
+        "cacheado",
+        "Cabelo com ondas fechadas que formam cachos definidos.",
+        "Os cabelos cacheados estão presos no alto da cabeça com uma presilha.",
+        "Descreva o cabelo sem associá-lo a origem étnica ou a julgamentos de arrumação."
+      ],
+      [
+        "rabo de cavalo",
+        "Penteado em que o cabelo é preso na parte de trás da cabeça e cai em mecha única.",
+        "Um rabo de cavalo baixo balança a cada vez que ela vira para atender alguém.",
+        "Penteado é escolha momentânea; não o use para supor personalidade ou ocupação."
+      ],
+      [
+        "barbado",
+        "Que tem barba crescida, cheia ou aparada.",
+        "O homem barbado confere o troco contando as moedas na palma da mão.",
+        "Barba não indica religião, nacionalidade nem descuido; descreva apenas o que se vê."
+      ],
+      [
+        "rugas de expressão",
+        "Linhas na pele formadas pela repetição de movimentos do rosto, como sorrir ou franzir.",
+        "Quando ele ri, rugas de expressão se acentuam ao redor dos olhos.",
+        "Rugas não definem idade com precisão; evite transformar a observação em comentário sobre envelhecimento."
+      ],
+      [
+        "tatuagem",
+        "Desenho permanente feito na pele com tinta.",
+        "Uma tatuagem de folhas contorna o pulso esquerdo da vendedora.",
+        "Não interprete o significado de uma tatuagem sem perguntar; evite closes sem consentimento."
+      ],
+      [
+        "uniformizado",
+        "Que veste roupa padronizada de uma empresa, serviço ou instituição.",
+        "Um funcionário uniformizado, de colete laranja, recolhe as caixas vazias.",
+        "Uniforme indica vínculo provável, não confirma cargo; verifique antes de afirmar a função."
+      ],
+      [
+        "acessório",
+        "Objeto usado junto ao corpo ou à roupa, como óculos, relógio, colar ou boné.",
+        "O único acessório visível é um relógio de pulseira de couro gasta.",
+        "Acessórios não comprovam renda ou estilo de vida; descreva-os sem inferir status social."
+      ]
+    ],
+    "model": [
+      "Atrás da banca, um homem de estatura mediana organiza laranjas em pirâmide sobre um caixote.",
+      "Ele está uniformizado com um avental verde, e o cabelo grisalho aparece sob um boné azul desbotado.",
+      "Enquanto o colega ao lado usa rabo de cavalo e fala com os clientes, ele trabalha em silêncio, concentrado nas frutas.",
+      "Minha impressão é que a banca funciona em dupla: um cuida da exposição, o outro do atendimento — algo que só uma conversa confirmaria."
+    ],
+    "swaps": [
+      {
+        "vague": "bonita",
+        "options": [
+          "compleição",
+          "cacheado",
+          "acessório"
+        ],
+        "weak": "A vendedora é bonita.",
+        "strong": "De compleição esguia, a vendedora tem cabelos cacheados presos e usa um único acessório: brincos de argola.",
+        "flag": true
+      },
+      {
+        "vague": "velhinho",
+        "options": [
+          "grisalho",
+          "rugas de expressão",
+          "estatura"
+        ],
+        "weak": "Um velhinho vende frutas.",
+        "strong": "Um homem grisalho, de estatura baixa, vende frutas; rugas de expressão marcam o rosto quando sorri.",
+        "flag": true
+      },
+      {
+        "vague": "arrumado",
+        "options": [
+          "uniformizado",
+          "acessório",
+          "rabo de cavalo"
+        ],
+        "weak": "Ele estava bem arrumado.",
+        "strong": "Ele estava uniformizado, com camisa passada, e usava como acessório um relógio de metal.",
+        "flag": true
+      }
+    ]
+  },
+  {
+    "scene": "Duas pessoas conversando num banco de praça",
+    "focus": "Descreva o movimento do rosto e das mãos, não a emoção. Gestos variam entre culturas e situações: o que parece irritação pode ser concentração.",
+    "terms": [
+      [
+        "semblante",
+        "Aspecto geral do rosto em determinado momento.",
+        "O semblante dela permanece sereno enquanto o amigo fala rápido.",
+        "Semblante é aparência, não sentimento confirmado; evite afirmar o estado interior."
+      ],
+      [
+        "cenho franzido",
+        "Testa contraída, com as sobrancelhas aproximadas.",
+        "Com o cenho franzido, ele lê a mensagem no celular duas vezes.",
+        "Franzir pode indicar dúvida, sol forte ou esforço de leitura — não necessariamente raiva."
+      ],
+      [
+        "sorriso contido",
+        "Sorriso discreto, com os lábios pouco abertos.",
+        "Um sorriso contido aparece quando ela ouve a resposta.",
+        "Não deduza timidez ou ironia apenas pelo tamanho do sorriso."
+      ],
+      [
+        "olhar fixo",
+        "Olhar mantido por um tempo no mesmo ponto.",
+        "Ele mantém o olhar fixo na fonte enquanto escuta.",
+        "Olhar fixo pode ser atenção, distração ou reflexão; descreva a direção, não a intenção."
+      ],
+      [
+        "gesticulação",
+        "Uso frequente das mãos e dos braços para acompanhar a fala.",
+        "A gesticulação ampla dele desenha no ar o caminho até a estação.",
+        "Intensidade de gestos varia culturalmente; não a interprete como nervosismo ou exagero."
+      ],
+      [
+        "aceno",
+        "Movimento curto de mão ou cabeça para cumprimentar, concordar ou chamar.",
+        "Um aceno de cabeça encerra a conversa antes de ela se levantar.",
+        "O sentido do aceno depende do contexto; confirme se é concordância ou apenas despedida."
+      ],
+      [
+        "dar de ombros",
+        "Levantar e baixar os ombros, gesto que costuma indicar dúvida ou indiferença.",
+        "Diante da pergunta, ele dá de ombros e aponta para o mapa.",
+        "O gesto não tem o mesmo sentido em todas as culturas; trate a interpretação como hipótese."
+      ],
+      [
+        "braços cruzados",
+        "Postura com os braços dobrados à frente do peito.",
+        "Ela escuta de braços cruzados, com o casaco fechado até o pescoço.",
+        "Braços cruzados podem ser frio ou conforto; não afirme que a pessoa está fechada ou na defensiva."
+      ],
+      [
+        "sobrancelhas arqueadas",
+        "Sobrancelhas erguidas, formando um arco acima dos olhos.",
+        "Com as sobrancelhas arqueadas, ela repete o preço em voz alta.",
+        "Pode indicar surpresa, pergunta ou ênfase; o contexto da fala ajuda a distinguir."
+      ],
+      [
+        "expressivo",
+        "Que demonstra muito movimento no rosto e no corpo ao se comunicar.",
+        "O rosto expressivo do senhor acompanha cada parte da história que conta.",
+        "Ser expressivo é estilo de comunicação, não sinal de exagero ou falta de seriedade."
+      ]
+    ],
+    "model": [
+      "No banco da praça, duas pessoas conversam lado a lado, voltadas para a fonte.",
+      "Ele fala com gesticulação ampla, enquanto ela escuta de braços cruzados, com semblante sereno.",
+      "Diferentemente do amigo, que muda de expressão a cada frase, ela responde apenas com acenos curtos e um sorriso contido.",
+      "Para mim, o contraste sugere ritmos diferentes de conversa, não desacordo — mas eu não sei o que cada um sentia."
+    ],
+    "swaps": [
+      {
+        "vague": "bravo",
+        "options": [
+          "cenho franzido",
+          "braços cruzados",
+          "olhar fixo"
+        ],
+        "weak": "Ele parecia bravo.",
+        "strong": "Ele manteve o cenho franzido e o olhar fixo no celular, de braços cruzados — o motivo eu não sei.",
+        "flag": false
+      },
+      {
+        "vague": "feliz",
+        "options": [
+          "sorriso contido",
+          "expressivo",
+          "semblante"
+        ],
+        "weak": "Ela estava feliz.",
+        "strong": "Ela sorria abertamente, com o rosto expressivo, e o semblante ficou mais leve ao fim da conversa.",
+        "flag": false
+      },
+      {
+        "vague": "animado",
+        "options": [
+          "gesticulação",
+          "expressivo",
+          "sobrancelhas arqueadas"
+        ],
+        "weak": "Ele falava todo animado.",
+        "strong": "Ele falava com gesticulação ampla, sobrancelhas arqueadas e rosto expressivo a cada frase.",
+        "flag": false
+      }
+    ]
+  },
+  {
+    "scene": "Um entregador esperando o semáforo abrir, ao lado de pedestres",
+    "focus": "Postura e passo revelam relação com o espaço e com o tempo. Não conclua cansaço, pressa ou tristeza sem outros indícios.",
+    "terms": [
+      [
+        "ereto",
+        "Com o tronco e a cabeça alinhados na vertical.",
+        "Ereto sobre a scooter, ele observa o semáforo com as mãos no guidão.",
+        "Postura ereta não prova confiança nem disciplina; descreva a forma do corpo."
+      ],
+      [
+        "curvado",
+        "Com o tronco inclinado para a frente ou as costas arqueadas.",
+        "Curvada sobre o carrinho, a senhora empurra sacolas pela calçada.",
+        "Curvatura pode resultar de carga, frio ou hábito; evite associá-la a desânimo."
+      ],
+      [
+        "apoiado",
+        "Com o peso do corpo sustentado em algo, como parede, grade ou objeto.",
+        "Apoiado na grade, um rapaz espera com o capacete no braço.",
+        "Apoiar-se não indica preguiça; descreva o ponto de apoio."
+      ],
+      [
+        "agachado",
+        "Com os joelhos dobrados e o corpo próximo do chão.",
+        "Agachado, o entregador ajusta a corrente da bicicleta.",
+        "Diga o que a pessoa faz agachada; a posição sozinha não explica a ação."
+      ],
+      [
+        "inclinado",
+        "Com o corpo pendendo levemente para um lado ou para a frente.",
+        "Inclinado para a frente, ele tenta ler o número do prédio do outro lado.",
+        "Inclinação pode ser movimento passageiro; registre o momento observado."
+      ],
+      [
+        "passo apressado",
+        "Caminhada rápida, com passadas curtas e frequentes.",
+        "Com passo apressado, um grupo atravessa antes de o sinal fechar.",
+        "Passo rápido pode ser hábito local; não deduza atraso ou ansiedade."
+      ],
+      [
+        "passo arrastado",
+        "Caminhada lenta, com os pés pouco levantados do chão.",
+        "Um homem segue de passo arrastado, de chinelos, rumo ao mercado.",
+        "Evite interpretar o passo como sinal de doença ou desânimo."
+      ],
+      [
+        "imóvel",
+        "Sem se mover durante o intervalo observado.",
+        "Imóvel na esquina, uma mulher segura o guarda-chuva fechado.",
+        "Imobilidade é relativa ao tempo de observação; diga por quanto tempo observou."
+      ],
+      [
+        "desenvolto",
+        "Que se movimenta com facilidade e naturalidade no espaço.",
+        "Desenvolto, o entregador desvia dos pedestres sem reduzir muito a velocidade.",
+        "Desenvoltura não comprova experiência profissional; é impressão de movimento."
+      ],
+      [
+        "hesitante",
+        "Que interrompe ou retoma o movimento, como quem decide o caminho.",
+        "Hesitante, o turista dá dois passos, para e consulta o mapa outra vez.",
+        "Hesitação aparente pode ser cautela ou atenção ao trânsito; trate como hipótese."
+      ]
+    ],
+    "model": [
+      "Na esquina, um entregador espera o semáforo sentado na scooter, com o capacete preso no guidão.",
+      "Ereto e imóvel, ele observa o sinal; ao lado, uma senhora curvada apoia as mãos num carrinho de compras.",
+      "Quando o sinal abre, ele parte desenvolto entre os carros, enquanto os pedestres atravessam com passo apressado.",
+      "Minha impressão é que a esquina tem dois tempos — o das rodas e o dos pés — convivendo no mesmo minuto."
+    ],
+    "swaps": [
+      {
+        "vague": "cansado",
+        "options": [
+          "curvado",
+          "passo arrastado",
+          "apoiado"
+        ],
+        "weak": "Ele parecia cansado.",
+        "strong": "Ele seguia curvado, de passo arrastado, e parou apoiado no poste por um minuto.",
+        "flag": false
+      },
+      {
+        "vague": "perdido",
+        "options": [
+          "hesitante",
+          "inclinado",
+          "imóvel"
+        ],
+        "weak": "O turista estava perdido.",
+        "strong": "Hesitante, o turista parou imóvel na esquina e se inclinou para ler a placa.",
+        "flag": false
+      },
+      {
+        "vague": "rápido",
+        "options": [
+          "passo apressado",
+          "desenvolto",
+          "ereto"
+        ],
+        "weak": "Ela andava rápido.",
+        "strong": "Ela andava de passo apressado, ereta, desviando desenvolta dos carrinhos de compras.",
+        "flag": false
+      }
+    ]
+  },
+  {
+    "scene": "Uma banca de antiguidades montada numa calçada",
+    "focus": "Marcas de uso contam histórias, mas não provam idade, valor nem autenticidade. Descreva o desgaste antes de imaginar a origem.",
+    "terms": [
+      [
+        "desgastado",
+        "Com a superfície gasta pelo uso ou pelo tempo.",
+        "O cabo desgastado da chaleira perdeu a cor onde as mãos o seguravam.",
+        "Desgaste não indica idade exata nem antiguidade autêntica."
+      ],
+      [
+        "intacto",
+        "Sem quebras, rachaduras ou partes faltando.",
+        "A tampa de porcelana está intacta, apesar da poeira acumulada.",
+        "Intacto descreve a integridade visível, não o funcionamento."
+      ],
+      [
+        "lascado",
+        "Com pequenos pedaços perdidos na borda ou na superfície.",
+        "A borda lascada da tigela revela o barro claro sob o esmalte azul.",
+        "Diferencie lasca de rachadura: a lasca perde material; a rachadura abre uma fenda."
+      ],
+      [
+        "enferrujado",
+        "Coberto por ferrugem, a oxidação avermelhada do ferro.",
+        "O cadeado enferrujado ainda prende a corrente da bicicleta.",
+        "Ferrugem indica exposição à umidade, não necessariamente abandono."
+      ],
+      [
+        "remendado",
+        "Consertado com material ou técnica visível, diferente do original.",
+        "O guarda-chuva remendado tem uma faixa de tecido mais escura entre as varetas.",
+        "O conserto mostra cuidado ou necessidade; não deduza a situação econômica do dono."
+      ],
+      [
+        "artesanal",
+        "Feito à mão ou em pequena escala, com variações entre peças.",
+        "As xícaras artesanais têm alças de tamanhos ligeiramente diferentes.",
+        "Não afirme que algo é artesanal só pela aparência rústica; confirme com quem vende."
+      ],
+      [
+        "industrializado",
+        "Produzido em série por processo de fábrica, com peças idênticas.",
+        "As garrafas industrializadas se repetem na prateleira com o mesmo rótulo.",
+        "Produção em série não significa baixa qualidade."
+      ],
+      [
+        "utilitário",
+        "Feito principalmente para cumprir uma função prática.",
+        "Um banquinho utilitário de plástico serve de apoio para as caixas.",
+        "Objetos utilitários também podem ter valor estético ou afetivo."
+      ],
+      [
+        "ornamental",
+        "Feito principalmente para enfeitar ou decorar.",
+        "Um vaso ornamental, sem flores, ocupa o centro da mesa.",
+        "Função decorativa pode coexistir com uso prático; observe como o objeto é usado."
+      ],
+      [
+        "portátil",
+        "Leve e pequeno o bastante para ser carregado com facilidade.",
+        "Um rádio portátil toca baixo ao lado do caixa.",
+        "Portátil descreve o tamanho e o peso, não a tecnologia do objeto."
+      ]
+    ],
+    "model": [
+      "Sobre um pano estendido na calçada, há chaleiras, xícaras, cadeados e um rádio portátil.",
+      "Uma chaleira de metal tem o cabo desgastado, e ao lado uma tigela de esmalte azul aparece com a borda lascada.",
+      "Enquanto as xícaras artesanais variam de tamanho, as garrafas industrializadas se repetem com o mesmo rótulo.",
+      "Para mim, a banca é um arquivo de usos cotidianos — mas idade e procedência de cada peça só o vendedor poderia informar."
+    ],
+    "swaps": [
+      {
+        "vague": "antigo",
+        "options": [
+          "desgastado",
+          "enferrujado",
+          "remendado"
+        ],
+        "weak": "É um objeto antigo.",
+        "strong": "O objeto está desgastado, com partes enferrujadas e uma alça remendada com arame.",
+        "flag": false
+      },
+      {
+        "vague": "estragado",
+        "options": [
+          "lascado",
+          "enferrujado",
+          "desgastado"
+        ],
+        "weak": "A tigela está estragada.",
+        "strong": "A tigela está lascada na borda e o esmalte, desgastado no fundo.",
+        "flag": true
+      },
+      {
+        "vague": "feito à mão",
+        "options": [
+          "artesanal",
+          "ornamental",
+          "utilitário"
+        ],
+        "weak": "As peças são feitas à mão.",
+        "strong": "As peças parecem artesanais, segundo o vendedor; algumas são ornamentais e outras, utilitárias.",
+        "flag": false
+      }
+    ]
+  },
+  {
+    "scene": "Uma chaleira, uma lanterna de papel e uma bicicleta estacionada",
+    "focus": "Nomear as partes de um objeto substitui “aquela coisa” por precisão. Use o nome técnico só quando ele ajuda o público a visualizar.",
+    "terms": [
+      [
+        "alça",
+        "Parte curva, geralmente lateral ou superior, feita para segurar ou carregar.",
+        "A alça de bambu da chaleira forma um arco sobre a tampa.",
+        "Diferencie alça (segurar com a mão em arco) de cabo (empunhar como haste)."
+      ],
+      [
+        "cabo",
+        "Parte alongada por onde se segura um utensílio ou ferramenta.",
+        "O cabo de madeira da frigideira escureceu perto do encaixe.",
+        "Não chame de cabo uma alça em arco; observe como a mão segura."
+      ],
+      [
+        "tampa",
+        "Peça que fecha a abertura de um recipiente.",
+        "A tampa de metal tem um pequeno furo por onde sai o vapor.",
+        "Diga se a tampa encaixa, rosqueia ou apenas repousa sobre a abertura."
+      ],
+      [
+        "base",
+        "Parte inferior que sustenta o objeto.",
+        "A base larga da lanterna impede que ela tombe com o vento.",
+        "Base é a parte de apoio; não a confunda com o fundo interno de um recipiente."
+      ],
+      [
+        "haste",
+        "Peça fina e longa que sustenta ou liga outras partes.",
+        "Uma haste de bambu prende a lanterna de papel ao beiral.",
+        "Use haste para peças finas; partes largas pedem outro termo, como coluna ou suporte."
+      ],
+      [
+        "bojo",
+        "Parte arredondada e mais larga de um recipiente ou objeto.",
+        "O bojo da chaleira reflete as luzes da rua.",
+        "Bojo é a parte abaulada; não serve para objetos totalmente retos."
+      ],
+      [
+        "encaixe",
+        "Ponto em que duas peças se unem por ajuste de formas.",
+        "No encaixe entre o cabo e a lâmina, a madeira está mais clara.",
+        "Descreva o tipo de união (encaixe, parafuso, solda, cola) só se for visível."
+      ],
+      [
+        "dobradiça",
+        "Peça articulada que permite abrir e fechar portas, tampas ou abas.",
+        "A dobradiça da caixa range quando a vendedora a abre.",
+        "Não confunda dobradiça com encaixe fixo: a dobradiça permite giro."
+      ],
+      [
+        "empilhável",
+        "Projetado para ser colocado um sobre o outro sem cair.",
+        "Cadeiras empilháveis formam uma torre colorida no canto do restaurante.",
+        "Empilhar objetos não os torna empilháveis por projeto; observe se há encaixe próprio."
+      ],
+      [
+        "cilíndrico",
+        "Com forma de cilindro: corpo reto e seção circular.",
+        "A lanterna cilíndrica de papel vermelho tem franjas douradas na base.",
+        "Cilíndrico exige lados paralelos; formas que se estreitam são cônicas."
+      ]
+    ],
+    "model": [
+      "Na calçada, há uma chaleira de metal, uma lanterna vermelha pendurada e uma bicicleta estacionada.",
+      "A chaleira tem bojo arredondado, tampa com furo de vapor e uma alça de bambu em arco.",
+      "Diferente da chaleira, a lanterna é cilíndrica e leve, presa ao beiral por uma haste fina de bambu.",
+      "Minha impressão é que os três objetos resolvem o mesmo problema de formas distintas: como ser segurado, pendurado ou apoiado."
+    ],
+    "swaps": [
+      {
+        "vague": "negócio",
+        "options": [
+          "alça",
+          "haste",
+          "encaixe"
+        ],
+        "weak": "Tem um negócio em cima da chaleira.",
+        "strong": "Há uma alça de bambu em arco sobre a chaleira, presa por dois encaixes de metal.",
+        "flag": false
+      },
+      {
+        "vague": "redondo",
+        "options": [
+          "cilíndrico",
+          "bojo",
+          "base"
+        ],
+        "weak": "A lanterna é redonda.",
+        "strong": "A lanterna é cilíndrica, com bojo levemente abaulado no meio e base franjada.",
+        "flag": false
+      },
+      {
+        "vague": "pecinha",
+        "options": [
+          "dobradiça",
+          "tampa",
+          "encaixe"
+        ],
+        "weak": "A caixa abre por uma pecinha.",
+        "strong": "A caixa abre por uma dobradiça de latão, e a tampa se fecha por encaixe.",
+        "flag": true
+      }
+    ]
+  },
+  {
+    "scene": "Um gato deitado na janela de uma casa antiga",
+    "focus": "Descreva pelagem, cores e partes do corpo com precisão. Raça, idade e saúde de um animal raramente podem ser afirmadas só pela aparência.",
+    "terms": [
+      [
+        "pelagem",
+        "Conjunto dos pelos que cobrem o corpo de um animal.",
+        "A pelagem curta e cinzenta do gato brilha onde o sol bate.",
+        "Não deduza raça pela pelagem; muitas cores aparecem em animais sem raça definida."
+      ],
+      [
+        "plumagem",
+        "Conjunto das penas de uma ave.",
+        "A plumagem do pombo muda de verde para roxo no pescoço conforme a luz.",
+        "Cores de plumagem variam com a luz e a estação; descreva o que viu naquele momento."
+      ],
+      [
+        "malhado",
+        "Com manchas de cores diferentes distribuídas pelo corpo.",
+        "Um cachorro malhado de preto e branco dorme sob o banco.",
+        "Diga as cores e onde ficam as manchas, em vez de apenas “malhado”."
+      ],
+      [
+        "rajado",
+        "Com listras ou faixas de cor no pelo.",
+        "O gato rajado tem listras escuras que descem da espinha para a barriga.",
+        "Rajado (listras) é diferente de malhado (manchas)."
+      ],
+      [
+        "focinho",
+        "Parte da frente da cabeça de um animal, onde ficam o nariz e a boca.",
+        "O focinho úmido do cachorro encosta na grade do portão.",
+        "Focinho úmido ou seco não serve como diagnóstico de saúde."
+      ],
+      [
+        "cauda",
+        "Prolongamento posterior do corpo de muitos animais; o mesmo que rabo.",
+        "A cauda do gato pende da janela e se move devagar.",
+        "Movimentos da cauda variam entre espécies; não os traduza diretamente em emoção."
+      ],
+      [
+        "porte",
+        "Tamanho e estrutura geral de um animal.",
+        "Um cão de pequeno porte acompanha o passo da dona.",
+        "Use porte para tamanho; ele não indica idade nem raça."
+      ],
+      [
+        "bico",
+        "Estrutura dura e alongada da boca das aves.",
+        "Com o bico curto, o pardal recolhe migalhas entre as pedras.",
+        "Formato do bico ajuda a distinguir aves, mas identificação de espécie exige fonte."
+      ],
+      [
+        "patas",
+        "Membros de apoio e locomoção dos animais.",
+        "As patas brancas do gato contrastam com o pelo escuro do corpo.",
+        "Diferencie patas dianteiras e traseiras quando a posição importar para a cena."
+      ],
+      [
+        "escamoso",
+        "Coberto por escamas, placas pequenas e sobrepostas.",
+        "O peixe escamoso reflete a luz no balde de água do mercado.",
+        "Escamas indicam grupo de animal, não frescor ou qualidade do alimento."
+      ]
+    ],
+    "model": [
+      "Na janela de uma casa antiga, um gato está deitado sobre o parapeito de madeira.",
+      "Ele é rajado, com pelagem cinzenta e listras escuras, e as patas dianteiras brancas pendem para fora.",
+      "Ao contrário dos pombos na calçada, cuja plumagem muda de cor com a luz, o gato quase não se move.",
+      "Para mim, o gato parece parte da fachada — uma impressão minha, já que não sei se ele vive ali."
+    ],
+    "swaps": [
+      {
+        "vague": "fofo",
+        "options": [
+          "pelagem",
+          "porte",
+          "patas"
+        ],
+        "weak": "Era um cachorro fofo.",
+        "strong": "Era um cachorro de pequeno porte, de pelagem longa e clara, com patas curtas.",
+        "flag": true
+      },
+      {
+        "vague": "pintado",
+        "options": [
+          "malhado",
+          "rajado",
+          "plumagem"
+        ],
+        "weak": "O gato é pintado.",
+        "strong": "O gato é rajado, com listras escuras sobre o fundo cinza; o vizinho é malhado de branco.",
+        "flag": true
+      },
+      {
+        "vague": "bicho",
+        "options": [
+          "porte",
+          "pelagem",
+          "cauda"
+        ],
+        "weak": "Tinha um bicho na janela.",
+        "strong": "Havia um gato de porte médio na janela, de pelagem escura e cauda longa.",
+        "flag": true
+      }
+    ]
+  },
+  {
+    "scene": "Pombos e um cachorro numa praça ao amanhecer",
+    "focus": "Descreva ações observáveis. Evite atribuir pensamentos e sentimentos humanos aos animais — o antropomorfismo pode ser charmoso, mas não é informação.",
+    "terms": [
+      [
+        "ciscar",
+        "Revolver o chão com as patas ou o bico em busca de alimento.",
+        "Os pombos ciscam entre as pedras perto da lixeira.",
+        "Ciscar é ação de aves; não o use para outros animais."
+      ],
+      [
+        "empoleirado",
+        "Pousado em ponto elevado, como galho, fio ou beiral.",
+        "Um pardal empoleirado no fio observa o movimento da calçada.",
+        "Diga onde a ave está pousada e por quanto tempo."
+      ],
+      [
+        "à espreita",
+        "Observando com atenção e imóvel, como antes de uma ação.",
+        "O gato permanece à espreita atrás do vaso, com os olhos nos pombos.",
+        "A postura sugere atenção; não afirme o que o animal pretende fazer."
+      ],
+      [
+        "arisco",
+        "Que se afasta rapidamente quando alguém se aproxima.",
+        "Arisco, o gato some sob o carro quando a criança chega perto.",
+        "Evite associar o comportamento a maus-tratos sem evidência."
+      ],
+      [
+        "dócil",
+        "Que aceita a aproximação ou o toque sem se afastar.",
+        "Dócil, o cachorro deixa a criança acariciar sua cabeça.",
+        "Comportamento dócil num momento não garante segurança; não incentive aproximar-se de animais desconhecidos."
+      ],
+      [
+        "enrodilhado",
+        "Deitado com o corpo curvado em círculo.",
+        "Enrodilhado sobre o capô ainda morno, o gato dorme.",
+        "Descreva a posição; frio ou conforto são hipóteses."
+      ],
+      [
+        "saltitante",
+        "Que se desloca com pequenos saltos.",
+        "Saltitante, o pardal avança entre as mesas do café.",
+        "Use para o modo de deslocamento, não para o humor do animal."
+      ],
+      [
+        "em bando",
+        "Em grupo, movendo-se ou permanecendo juntos.",
+        "Em bando, os pombos levantam voo quando o ônibus passa.",
+        "Bando é termo usual para aves; para outros animais, prefira grupo, matilha ou cardume."
+      ],
+      [
+        "farejar",
+        "Cheirar repetidamente para examinar algo.",
+        "O cachorro fareja cada poste antes de seguir o passeio.",
+        "Farejar é ação observável; o que o animal identificou é suposição."
+      ],
+      [
+        "alerta",
+        "Com a cabeça erguida e atenção voltada para um estímulo.",
+        "Com as orelhas erguidas, o cão fica alerta ao som da bicicleta.",
+        "Diga o estímulo que provocou a reação, se ele for visível ou audível."
+      ]
+    ],
+    "model": [
+      "Na praça, ao amanhecer, um bando de pombos cisca perto da lixeira e um cachorro fareja os canteiros.",
+      "Um pardal empoleirado no fio observa o movimento, enquanto um gato permanece à espreita atrás de um vaso.",
+      "Quando um ônibus passa, os pombos levantam voo em bando; o cachorro, alerta, apenas ergue as orelhas.",
+      "Minha impressão é que cada animal ocupa a praça num ritmo próprio — impressão de observador, não leitura do que eles sentem."
+    ],
+    "swaps": [
+      {
+        "vague": "medroso",
+        "options": [
+          "arisco",
+          "alerta",
+          "à espreita"
+        ],
+        "weak": "O gato é medroso.",
+        "strong": "O gato é arisco: afastou-se para baixo do carro e ficou alerta até a criança ir embora.",
+        "flag": false
+      },
+      {
+        "vague": "bonzinho",
+        "options": [
+          "dócil",
+          "farejar",
+          "alerta"
+        ],
+        "weak": "O cachorro é bonzinho.",
+        "strong": "O cachorro foi dócil: deixou a criança se aproximar depois de farejar sua mão.",
+        "flag": true
+      },
+      {
+        "vague": "brincando",
+        "options": [
+          "saltitante",
+          "ciscar",
+          "em bando"
+        ],
+        "weak": "Os passarinhos estavam brincando.",
+        "strong": "Os pardais estavam saltitantes entre as mesas, ciscando migalhas em bando.",
+        "flag": false
+      }
+    ]
+  },
+  {
+    "scene": "A vista do alto de um mirante sobre o rio",
+    "focus": "Uma vista ampla precisa de ordem: do primeiro plano ao horizonte. Distâncias estimadas a olho devem ser apresentadas como estimativas.",
+    "terms": [
+      [
+        "horizonte",
+        "Linha onde o céu parece encontrar a terra ou a água.",
+        "No horizonte, as torres se dissolvem na névoa da tarde.",
+        "A visibilidade do horizonte depende do clima; registre as condições."
+      ],
+      [
+        "skyline",
+        "Contorno dos edifícios de uma cidade recortado contra o céu.",
+        "O skyline de Lujiazui forma uma linha irregular de torres do outro lado do rio.",
+        "Termo em inglês consagrado; em português, “perfil urbano” ou “silhueta da cidade” também servem."
+      ],
+      [
+        "mirante",
+        "Lugar elevado de onde se observa uma vista ampla.",
+        "Do mirante, o rio aparece como uma faixa cinza entre as duas margens.",
+        "Diga como se chega ao mirante e se ele é público, caso o público possa querer ir."
+      ],
+      [
+        "panorama",
+        "Vista ampla de uma paisagem ou cidade em várias direções.",
+        "O panorama abrange a curva do rio, as pontes e os bairros baixos ao sul.",
+        "Um panorama não é visto por inteiro de uma vez; diga a direção do olhar."
+      ],
+      [
+        "vista aérea",
+        "Visão de cima para baixo, como a partir de um ponto muito alto ou de um drone.",
+        "Na vista aérea, os pátios dos lilongs formam retângulos regulares.",
+        "Imagens de drone exigem verificação de regras locais e indicação de origem."
+      ],
+      [
+        "ponto de fuga",
+        "Ponto em que linhas paralelas parecem se encontrar na distância.",
+        "Os trilhos convergem para um ponto de fuga sob a ponte.",
+        "É efeito de perspectiva, não característica real do espaço."
+      ],
+      [
+        "à distância",
+        "Afastado do observador; longe.",
+        "À distância, um navio cargueiro avança devagar rio acima.",
+        "Estimativas de distância a olho são imprecisas; indique como chegou ao número."
+      ],
+      [
+        "emoldurado",
+        "Visto através de algo que o envolve como moldura, como janela, arco ou galhos.",
+        "O pagode aparece emoldurado pelos galhos dos salgueiros.",
+        "A moldura é escolha de enquadramento; diga quando você escolheu o ângulo."
+      ],
+      [
+        "desobstruído",
+        "Sem barreiras que impeçam a visão.",
+        "Do último andar, a vista do rio é desobstruída em toda a extensão.",
+        "Vista desobstruída num ponto não vale para o local inteiro."
+      ],
+      [
+        "recortado",
+        "Com contorno nítido destacado contra um fundo.",
+        "As antenas das torres aparecem recortadas contra o céu laranja.",
+        "O efeito depende da luz; à noite ou com névoa, o contorno muda."
+      ]
+    ],
+    "model": [
+      "Do mirante, vejo o rio em curva, duas pontes e, à distância, um conjunto de torres.",
+      "Em primeiro plano estão os telhados baixos; ao fundo, o skyline aparece recortado contra o céu da tarde.",
+      "Enquanto a margem próxima é horizontal e densa, a margem oposta sobe em torres que dominam o horizonte.",
+      "Minha impressão é que o rio separa duas escalas de cidade — leitura pessoal de quem a observa de um único ponto."
+    ],
+    "swaps": [
+      {
+        "vague": "vista linda",
+        "options": [
+          "panorama",
+          "desobstruído",
+          "horizonte"
+        ],
+        "weak": "Que vista linda!",
+        "strong": "Do mirante, o panorama é desobstruído até o horizonte, onde o rio faz uma curva.",
+        "flag": true
+      },
+      {
+        "vague": "lá longe",
+        "options": [
+          "à distância",
+          "horizonte",
+          "ponto de fuga"
+        ],
+        "weak": "Lá longe tem uns prédios.",
+        "strong": "À distância, perto do horizonte, há um conjunto de torres.",
+        "flag": true
+      },
+      {
+        "vague": "dá pra ver tudo",
+        "options": [
+          "panorama",
+          "vista aérea",
+          "mirante"
+        ],
+        "weak": "Lá de cima dá pra ver tudo.",
+        "strong": "Do mirante, o panorama abrange o rio, as pontes e os bairros ao sul, quase como uma vista aérea.",
+        "flag": true
+      }
+    ]
+  },
+  {
+    "scene": "Um parque com lago, ponte de pedra e colinas ao longe",
+    "focus": "Nomeie relevo, água e vegetação com precisão geográfica simples. Em parques urbanos, diferencie o que é natural do que foi construído ou plantado.",
+    "terms": [
+      [
+        "relevo",
+        "Conjunto das formas do terreno: elevações, depressões e planos.",
+        "O relevo do parque é suave, com pequenas elevações ao redor do lago.",
+        "Parques urbanos podem ter relevo artificial; pesquise antes de chamá-lo de natural."
+      ],
+      [
+        "colina",
+        "Elevação de terreno arredondada e de pouca altura.",
+        "Uma colina coberta de bambus fecha a vista ao norte.",
+        "Colina é menor e mais suave que um morro ou montanha."
+      ],
+      [
+        "planície",
+        "Extensão de terreno plano ou quase plano.",
+        "Além do parque, a planície se estende até as primeiras torres.",
+        "Diga o que ocupa a planície: campo, cidade, cultivo."
+      ],
+      [
+        "margem",
+        "Faixa de terra ao longo de um rio, lago ou canal.",
+        "Na margem do lago, salgueiros inclinam os galhos sobre a água.",
+        "Margem é a terra junto à água; a própria água junto à terra é a beira ou a orla."
+      ],
+      [
+        "vegetação rasteira",
+        "Plantas baixas que cobrem o solo, como grama e arbustos pequenos.",
+        "Vegetação rasteira cobre as encostas entre as pedras.",
+        "Diferencie vegetação rasteira de canteiros plantados com espécies ornamentais."
+      ],
+      [
+        "copa",
+        "Parte superior de uma árvore, formada por galhos e folhas.",
+        "As copas largas dos plátanos se encontram sobre a alameda.",
+        "Identificar a espécie da árvore exige fonte ou placa; descreva a forma se não souber."
+      ],
+      [
+        "bosque",
+        "Área de árvores próximas, menor que uma floresta.",
+        "Um pequeno bosque de pinheiros abafa o barulho da avenida.",
+        "Em parques, o bosque costuma ser plantado; diga se não for possível saber."
+      ],
+      [
+        "espelho d'água",
+        "Superfície de água parada que reflete o entorno.",
+        "O espelho d'água reflete o pavilhão vermelho quase sem distorção.",
+        "O reflexo depende de vento e luz; no dia seguinte a superfície pode estar agitada."
+      ],
+      [
+        "curso d'água",
+        "Água que corre por um leito, como rio, riacho ou canal.",
+        "Um curso d'água estreito liga o lago a um canal mais antigo.",
+        "Diferencie rio, riacho e canal; canais são geralmente construídos."
+      ],
+      [
+        "ribeirinho",
+        "Situado à beira de um rio ou que vive junto a ele.",
+        "Casas ribeirinhas de dois andares acompanham a curva do canal.",
+        "Ao falar de comunidades ribeirinhas, evite romantizar ou generalizar modos de vida."
+      ]
+    ],
+    "model": [
+      "No parque, um lago ocupa o centro, atravessado por uma ponte de pedra em arco.",
+      "Na margem, salgueiros inclinam as copas sobre o espelho d'água, e uma colina de bambus fecha a vista ao norte.",
+      "Diferentemente da margem sul, plana e gramada, a margem norte sobe em relevo suave coberto de vegetação rasteira.",
+      "Para mim, o parque imita uma paisagem natural — mas, como em muitos jardins urbanos, boa parte dela provavelmente foi desenhada."
+    ],
+    "swaps": [
+      {
+        "vague": "natureza",
+        "options": [
+          "bosque",
+          "vegetação rasteira",
+          "copa"
+        ],
+        "weak": "O parque tem muita natureza.",
+        "strong": "O parque tem um bosque de pinheiros, vegetação rasteira nas encostas e copas largas sobre a alameda.",
+        "flag": false
+      },
+      {
+        "vague": "laguinho",
+        "options": [
+          "espelho d'água",
+          "margem",
+          "curso d'água"
+        ],
+        "weak": "Tem um laguinho no meio.",
+        "strong": "No centro, há um espelho d'água com margens de pedra, ligado a um curso d'água estreito.",
+        "flag": true
+      },
+      {
+        "vague": "morrinho",
+        "options": [
+          "colina",
+          "relevo",
+          "planície"
+        ],
+        "weak": "Tem um morrinho no fundo.",
+        "strong": "Ao fundo, uma colina baixa quebra o relevo plano da planície ao redor.",
+        "flag": true
+      }
+    ]
+  },
+  {
+    "scene": "Uma avenida minutos antes de uma chuva de verão",
+    "focus": "Clima muda em minutos: indique a hora e o lugar. Diferencie o que você observa (nuvens, vento) de dados meteorológicos, que exigem fonte.",
+    "terms": [
+      [
+        "encoberto",
+        "Com o céu totalmente coberto de nuvens.",
+        "Com o céu encoberto, as fachadas de vidro perdem os reflexos.",
+        "Diferencie encoberto (totalmente) de nublado com abertas."
+      ],
+      [
+        "límpido",
+        "Claro, sem nuvens nem névoa.",
+        "Depois da chuva, o céu límpido deixa ver as colinas a oeste.",
+        "Céu límpido não significa ar limpo; qualidade do ar exige dado oficial."
+      ],
+      [
+        "neblina",
+        "Névoa próxima do chão que reduz a visibilidade.",
+        "A neblina apaga o topo das torres às sete da manhã.",
+        "Não confunda neblina com poluição; sem medição, descreva apenas a visibilidade."
+      ],
+      [
+        "garoa",
+        "Chuva muito fina e contínua.",
+        "Uma garoa fina deixa a calçada brilhante sem formar poças.",
+        "Garoa é diferente de chuvisco intermitente; observe a continuidade."
+      ],
+      [
+        "aguaceiro",
+        "Chuva forte e repentina, geralmente de curta duração.",
+        "Um aguaceiro de dez minutos alaga a faixa de pedestres.",
+        "Informe a duração observada; “tempestade” exige mais que chuva forte."
+      ],
+      [
+        "mormaço",
+        "Calor abafado com céu nublado ou sol fraco.",
+        "No mormaço da tarde, os vendedores se abrigam sob os toldos.",
+        "Mormaço é sensação local; temperatura exata exige fonte."
+      ],
+      [
+        "abafado",
+        "Quente, úmido e com pouca circulação de ar.",
+        "O ar abafado da estação faz as pessoas abanarem os rostos com leques.",
+        "Diga se é sensação sua ou dado medido."
+      ],
+      [
+        "crepúsculo",
+        "Período de luz difusa logo após o pôr do sol ou antes do nascer.",
+        "No crepúsculo, as luzes do rio acendem enquanto o céu ainda está azul.",
+        "Crepúsculo é intervalo de tempo; indique o horário aproximado."
+      ],
+      [
+        "rajada",
+        "Golpe de vento forte e passageiro.",
+        "Uma rajada vira os guarda-chuvas na esquina e espalha folhas.",
+        "Rajada é vento momentâneo, diferente de ventania contínua."
+      ],
+      [
+        "orvalho",
+        "Gotículas de água que se formam em superfícies frias durante a noite.",
+        "O orvalho ainda cobre os bancos do parque às seis da manhã.",
+        "Orvalho não é sinal de chuva noturna; observe se o chão está seco."
+      ]
+    ],
+    "model": [
+      "Às cinco da tarde, o céu sobre a avenida está encoberto, e o ar parece parado.",
+      "No mormaço, os vendedores puxam os toldos; uma rajada levanta poeira e folhas pela calçada.",
+      "Minutos depois, a garoa fina dá lugar a um aguaceiro, e a avenida, antes abafada, se esvazia rapidamente.",
+      "Minha impressão é que a chuva reorganiza a rua em segundos — impressão de um único fim de tarde, não um padrão da cidade."
+    ],
+    "swaps": [
+      {
+        "vague": "feio",
+        "options": [
+          "encoberto",
+          "neblina",
+          "aguaceiro"
+        ],
+        "weak": "O tempo está feio.",
+        "strong": "O céu está encoberto, com neblina sobre o rio e risco de aguaceiro no fim da tarde, segundo a previsão.",
+        "flag": true
+      },
+      {
+        "vague": "quente",
+        "options": [
+          "abafado",
+          "mormaço",
+          "encoberto"
+        ],
+        "weak": "Está muito quente.",
+        "strong": "O ar está abafado, num mormaço sem vento — a temperatura exata eu não medi.",
+        "flag": false
+      },
+      {
+        "vague": "chuvinha",
+        "options": [
+          "garoa",
+          "aguaceiro",
+          "neblina"
+        ],
+        "weak": "Caiu uma chuvinha.",
+        "strong": "Caiu uma garoa fina por meia hora, sem formar poças.",
+        "flag": true
+      }
+    ]
   }
 ]

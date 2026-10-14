@@ -93,11 +93,14 @@ function vagueIndex(){
 function findVague(text){
  const t=' '+api.norm(text).replace(/[^a-z0-9\s-]/g,' ')+' ',found=new Map();
  vagueIndex().forEach(v=>{
-  const hits=v.forms.reduce((n,f)=>n+(t.match(new RegExp('\\s'+escRe(f)+'(?=\\s)','g'))||[]).length,0);
-  if(!hits)return;
-  // A mesma palavra vaga pode ter troca em vários campos: prefere a do campo atual
-  const prev=found.get(v.word);
-  if(!prev||(v.topic===view.topic&&prev.topic!==view.topic))found.set(v.word,{...v,hits});
+  const matched=v.forms.filter(f=>new RegExp('\\s'+escRe(f)+'(?=\\s)').test(t));
+  if(!matched.length)return;
+  const hits=matched.reduce((n,f)=>n+(t.match(new RegExp('\\s'+escRe(f)+'(?=\\s)','g'))||[]).length,0);
+  // Agrupa pelas formas encontradas no texto: "bonita" pode vir de "bonito" (Formas)
+  // ou de "bonita" (Pessoas) — é a mesma ocorrência e deve ser contada uma vez.
+  // Entre trocas equivalentes, prefere a do campo atual.
+  const k=matched.sort().join('|'),prev=found.get(k);
+  if(!prev||(v.topic===view.topic&&prev.topic!==view.topic))found.set(k,{...v,hits});
  });
  return [...found.values()];
 }
@@ -292,7 +295,8 @@ function init(context){
  });
  document.addEventListener('input',e=>{
   const t=e.target;
-  if(t.matches('[data-atlas-query]')){view.query=t.value;refreshQuery(t)}
+  // Os resultados da busca vivem na aba de vocabulário: digitar em outra aba leva até eles
+  if(t.matches('[data-atlas-query]')){view.query=t.value;if(t.value.trim())view.tab='explore';refreshQuery(t)}
   if(t.matches('[data-atlas-writing]')){const st=api.getStore();st.atlasDrafts[key()]=t.value.slice(0,3000);view.feedback=null;api.save();const n=document.getElementById('atlas12-count');if(n)n.textContent=sayWords(t.value)+' palavras'}
  });
  document.addEventListener('change',e=>{

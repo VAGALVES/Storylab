@@ -28,9 +28,9 @@ subprocess.run([sys.executable,str(r/'generate_data.py'),'--check'],check=True)
 print('Conteúdo: 43 disciplinas, 172 aulas, 552 frases, 24 transformações — OK')
 
 atlas=json.loads((r/'content/atlas_guides.json').read_text(encoding='utf8'))
-assert len(atlas)==len(d['atlas'])==16
-assert sum(len(group['terms']) for group in atlas)==160
-assert sum(len(group['model']) for group in atlas)==64
+assert len(atlas)==len(d['atlas'])==26
+assert sum(len(group['terms']) for group in atlas)==260
+assert sum(len(group['model']) for group in atlas)==104
 for i,group in enumerate(atlas):
     assert len(group['terms'])==10 and len(group['model'])==4
     assert all(len(s)>=60 for s in group['model'])
@@ -42,7 +42,7 @@ assert (r/'atlas-engine.js').is_file()
 assert (r/'atlas-recorder.js').is_file() and (r/'atlas-audio-ui.js').is_file()
 # Trocas de precisão: palavra genérica → termos do próprio campo
 all_terms={t for topic in d['atlas'] for t in topic['terms']}
-assert sum(len(group['swaps']) for group in atlas)==48
+assert sum(len(group['swaps']) for group in atlas)==78
 for i,group in enumerate(atlas):
     assert len(group['swaps'])==3
     for s in group['swaps']:
@@ -53,4 +53,4 @@ for i,group in enumerate(atlas):
         assert len(s['weak'])>=10 and len(s['strong'])>len(s['weak'])
         assert any(o.lower()[:5] in s['strong'].lower() for o in s['options']),'Frase forte deve usar uma das opções: '+s['strong']
 subprocess.run([sys.executable,str(r/'generate_atlas.py'),'--check'],check=True)
-print('Atlas: 160 verbetes, 64 modelos progressivos e 48 trocas de precisão — OK')
+print('Atlas: 26 campos, 260 verbetes, 104 modelos progressivos e 78 trocas de precisão — OK')

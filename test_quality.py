@@ -21,7 +21,7 @@ assert 'IlustraÃ' not in skyline
 
 data = json.loads((root / 'content/storylab_data.json').read_text(encoding='utf-8'))
 guides = json.loads((root / 'content/atlas_guides.json').read_text(encoding='utf-8'))
-assert len(data['atlas']) == len(guides) == 16
+assert len(data['atlas']) == len(guides) == 26
 assert all(len(topic['terms']) == len(guide['terms']) == 10 for topic, guide in zip(data['atlas'], guides))
 assert all([entry[0] for entry in guide['terms']] == topic['terms'] for topic, guide in zip(data['atlas'], guides))
 

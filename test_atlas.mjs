@@ -35,9 +35,9 @@ function click(action, extra = {}) {
   handlers.click({ preventDefault() {}, target: { closest() { return {dataset:{atlasAction:action,...extra}} } } });
 }
 const initial = atlas.render();
-assert.match(initial, /160/);
-assert.match(initial, /Verbetes aprofundados: 160/);
-assert.match(initial, /Termos dominados: 0 \/ 160/);
+assert.match(initial, /260/);
+assert.match(initial, /Verbetes aprofundados: 260/);
+assert.match(initial, /Termos dominados: 0 \/ 260/);
 assert.match(initial, /Troque a palavra genérica|TROQUE A PALAVRA GENÉRICA/);
 assert.match(initial, /retilíneo/);
 click('word', {topic:'9', word:'caimento'});
@@ -67,6 +67,15 @@ assert.equal(JSON.stringify(words), JSON.stringify(['bonito', 'grande', 'incrív
 assert.ok(!words.includes('lugar') && !words.includes('bom'), 'palavras comuns não devem gerar alarme');
 assert.ok(found.swaps.find(s => s.word === 'grande').swap.options.includes('monumental'));
 assert.equal(atlas.analyze('A fachada retilínea alinha as janelas no térreo.').vague, 0);
+// Mesma ocorrência coberta por dois campos ("bonito" em Formas, "bonita" em Pessoas): conta uma vez
+click('word', {topic:'16', word:'estatura'});
+const pessoa = atlas.analyze('A vendedora é bonita e simpática.');
+assert.equal(pessoa.vague, 1);
+assert.equal(pessoa.swaps.length, 1);
+assert.equal(pessoa.swaps[0].topic, 16, 'prefere a troca do campo atual');
+assert.match(atlas.render(), /estatura/);
+assert.equal(atlas.analyze('Um cachorro fofo e um gato pintado.').swaps.length, 2);
+assert.equal(atlas.analyze('Fiquei feliz e cansado no fim do dia.').vague, 0, 'emoções não geram alerta');
 
 // ── Treino de precisão ──
 const DAY = 86400000;
