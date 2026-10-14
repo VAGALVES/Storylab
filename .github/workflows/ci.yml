@@ -19,3 +19,9 @@ jobs:
           node --check data.js
           node --check atlas-data.js
           node --check atlas-engine.js
+      - name: Testar interações do Atlas
+        run: node test_atlas.mjs
+      - name: Montar versão offline
+        run: |
+          python build_standalone.py
+          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 4; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h"
