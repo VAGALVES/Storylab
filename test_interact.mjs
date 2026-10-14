@@ -58,4 +58,30 @@ assert.equal(T.checkTiles(dup), true);
 assert.equal(T.checkTiles({ ...dup, placed: [1, 3, 2, 0, 4] }), false);
 assert.equal(T.checkTiles({ ...dup, placed: [0, 1] }), false, 'frase incompleta não vale');
 
-console.log('Interatividade: sequência, revisão, busca universal e Monte a frase OK');
+// ── Conquistas ──
+const base = { reviews: {}, completed: [], missions: [], atlasMastery: {}, activity: {} };
+assert.deepEqual([...T.computeBadges(base, D, '2026-10-14')], []);
+const many = { ...base, reviews: Object.fromEntries(D.phrases.slice(0, 50).map(p => [p.id, { level: 1 }])) };
+assert.ok(T.computeBadges(many, D).includes('frases-50') && T.computeBadges(many, D).includes('primeiro-cartao'));
+const week = {}; for (let i = 0; i < 7; i++) week[T.shiftDay('2026-10-14', -i)] = 1;
+const b7 = T.computeBadges({ ...base, activity: week }, D, '2026-10-14');
+assert.ok(b7.includes('sequencia-3') && b7.includes('sequencia-7') && !b7.includes('sequencia-30'));
+const masteredTen = Object.fromEntries(Array.from({ length: 10 }, (_, i) => ['0:t' + i, { level: 3 }]));
+assert.ok(T.computeBadges({ ...base, atlasMastery: { ...masteredTen, '1:x': { level: 2 } } }, D).includes('termos-10'));
+assert.ok(!T.computeBadges({ ...base, atlasMastery: { '1:x': { level: 2 } } }, D).includes('termos-10'), 'nível 2 ainda não é domínio');
+const school = D.schools[0].id;
+const allLessons = D.courses.filter(c => c.school === school).flatMap(c => c.modules.map((_, i) => c.id + ':' + i));
+assert.ok(T.computeBadges({ ...base, completed: allLessons }, D).includes('escola-completa'));
+assert.ok(!T.computeBadges({ ...base, completed: allLessons.slice(1) }, D).includes('escola-completa'));
+assert.equal(new Set(T.BADGES.map(b => b[0])).size, T.BADGES.length, 'IDs de conquista únicos');
+
+// ── Revisão do dia: frases e termos intercalados ──
+const mixed = T.mixDeck([1, 2, 3, 4].map(n => ({ k: 'p', n })), [5, 6].map(n => ({ k: 't', n })), 30);
+assert.equal(mixed.length, 6);
+assert.ok(mixed[0].k !== mixed[1].k, 'intercala as fontes');
+assert.equal(T.mixDeck([1, 2, 3].map(n => ({ n })), [4, 5, 6].map(n => ({ n })), 4).length, 4, 'respeita o limite');
+
+// ── Cronômetro ──
+assert.equal(T.fmt(90), '1:30'); assert.equal(T.fmt(5.2), '0:06'); assert.equal(T.fmt(-3), '0:00');
+
+console.log('Interatividade: sequência, revisão, busca, Monte a frase, conquistas, revisão do dia e cronômetro OK');

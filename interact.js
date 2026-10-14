@@ -85,6 +85,29 @@ function makeTiles(text,rand=Math.random){
 // Compara pelas palavras, não pelos índices: palavras repetidas podem trocar de lugar
 function checkTiles(t){return t.placed.length===t.tokens.length&&t.placed.map(i=>t.tokens[i]).join(' ')===t.tokens.join(' ')}
 
+// Conquistas: cada marco é uma condição sobre o progresso salvo
+const BADGES=[
+ ['primeiro-cartao','Primeiro cartão','Estudou a primeira frase da Fraseoteca',(s)=>Object.keys(s.reviews||{}).length>=1],
+ ['frases-50','Repertório em formação','50 frases estudadas',(s)=>Object.keys(s.reviews||{}).length>=50],
+ ['sequencia-3','Constância','3 dias seguidos de estudo',(s,x)=>x.streak>=3],
+ ['sequencia-7','Uma semana inteira','7 dias seguidos de estudo',(s,x)=>x.streak>=7],
+ ['sequencia-30','Hábito de redação','30 dias seguidos de estudo',(s,x)=>x.streak>=30],
+ ['termos-10','Olhar preciso','10 termos do Atlas dominados',(s,x)=>x.mastered>=10],
+ ['termos-50','Vocabulário de repórter','50 termos do Atlas dominados',(s,x)=>x.mastered>=50],
+ ['termos-150','Atlas vivo','150 termos do Atlas dominados',(s,x)=>x.mastered>=150],
+ ['aulas-10','Dez aulas','10 aulas concluídas',(s)=>(s.completed||[]).length>=10],
+ ['aulas-50','Meio caminho andado','50 aulas concluídas',(s)=>(s.completed||[]).length>=50],
+ ['escola-completa','Escola concluída','Todas as aulas de uma escola concluídas',(s,x)=>x.schoolDone],
+ ['missoes-5','Repórter de campo','5 missões de campo realizadas',(s)=>(s.missions||[]).length>=5],
+];
+function computeBadges(s,D,today=iso()){
+ const masteredN=Object.values(s.atlasMastery||{}).filter(r=>Number(r?.level)>=3).length;
+ const done=new Set(s.completed||[]);
+ const schoolDone=D.schools.some(sc=>{const keys=D.courses.filter(c=>c.school===sc.id).flatMap(c=>c.modules.map((_,i)=>c.id+':'+i));return keys.length&&keys.every(k=>done.has(k))});
+ const ctx={streak:streak(s.activity||{},today),mastered:masteredN,schoolDone};
+ return BADGES.filter(b=>b[3](s,ctx)).map(b=>b[0]);
+}
+
 /* ── Atividade, sequência e meta diária ─────────────────────────── */
 function st(){return api.getStore()}
 function activity(){const s=st();if(!s.activity||typeof s.activity!=='object'||Array.isArray(s.activity))s.activity={};return s.activity}
@@ -98,6 +121,22 @@ function bump(n=1){
  api.save();
  if(before<goal()&&before+n>=goal()&&celebratedOn!==t){celebratedOn=t;celebrate()}
  refreshChips();
+ checkBadges();
+}
+// Avisa uma única vez cada conquista nova e guarda a data em que foi obtida
+function checkBadges(){
+ const s=st();
+ if(!s.badges||typeof s.badges!=='object'||Array.isArray(s.badges))s.badges={};
+ const fresh=computeBadges(s,api.D).filter(id=>!s.badges[id]);
+ if(!fresh.length)return;
+ fresh.forEach(id=>s.badges[id]=iso());
+ api.save();
+ const b=BADGES.find(x=>x[0]===fresh[0]);
+ setTimeout(()=>api.toast('🏅 Conquista: '+b[1]+' — '+b[2]+'.'),celebratedOn===iso()?1600:0);
+}
+function badges(){
+ const {esc}=api,s=st(),got=s.badges&&typeof s.badges==='object'?s.badges:{};
+ return '<section class="panel panel-pad ix-badges-panel"><div class="eyebrow">CONQUISTAS · '+Object.keys(got).filter(k=>BADGES.some(b=>b[0]===k)).length+' DE '+BADGES.length+'</div><div class="ix-badges">'+BADGES.map(([id,title,desc])=>'<div class="ix-badge'+(got[id]?' on':'')+'" title="'+esc(desc)+'"><span class="ix-badge-icon" aria-hidden="true">'+(got[id]?'🏅':'🔒')+'</span><strong>'+esc(title)+'</strong><small>'+esc(desc)+(got[id]?' · '+esc(got[id].split('-').reverse().join('/')):'')+'</small></div>').join('')+'</div></section>';
 }
 function refreshChips(){
  const chip=document.getElementById('ix-streak');
@@ -139,7 +178,7 @@ function home(){
  const week=new Intl.DateTimeFormat('pt-BR',{weekday:'short'});
  return '<section class="panel panel-pad ix-daily"><div class="ix-daily-ring">'+ring(t,g)+'</div><div class="ix-daily-body"><div class="eyebrow">META DO DIA · SEQUÊNCIA DE ESTUDO</div><h2>'+(t>=g?'Meta cumprida hoje.':'Faltam '+(g-t)+' atividade(s) para a meta de hoje.')+'</h2><p class="muted">🔥 '+n+' dia(s) seguidos. Contam: aulas concluídas, frases estudadas, cartões, “Monte a frase”, treino e prática do Atlas, missões e práticas de voz.</p>'+
   '<div class="ix-week" aria-label="Atividades nos últimos 7 dias">'+days.map(d=>{const [y,m,dd]=d.day.split('-').map(Number);return '<div class="ix-week-col" title="'+d.count+' atividade(s)"><span style="height:'+Math.max(4,Math.round(d.count/max*44))+'px" class="'+(d.count>=g?'full':d.count?'some':'')+'"></span><small>'+esc(week.format(new Date(y,m-1,dd)).replace('.',''))+'</small></div>'}).join('')+'</div>'+
-  '<div class="form-row ix-daily-actions"><button class="btn accent sm" data-ix="cards">Cartões de frases</button><button class="btn secondary sm" data-ix="tiles">Monte a frase</button><button class="btn secondary sm" data-ix="search">Buscar · Ctrl K</button><label class="ix-goal">Meta diária <select data-ix-goal="1">'+GOAL_OPTIONS.map(o=>'<option value="'+o+'"'+(o===g?' selected':'')+'>'+o+'</option>').join('')+'</select></label></div></div></section>';
+  '<div class="form-row ix-daily-actions"><button class="btn accent sm" data-ix="review">Revisão do dia'+(dueCount()?' · '+dueCount():'')+'</button><button class="btn secondary sm" data-ix="cards">Cartões de frases</button><button class="btn secondary sm" data-ix="term-cards">Cartões do Atlas</button><button class="btn secondary sm" data-ix="tiles">Monte a frase</button><button class="btn secondary sm" data-ix="search">Buscar · Ctrl K</button><label class="ix-goal">Meta diária <select data-ix-goal="1">'+GOAL_OPTIONS.map(o=>'<option value="'+o+'"'+(o===g?' selected':'')+'>'+o+'</option>').join('')+'</select></label></div></div></section>';
 }
 function phraseActions(){return '<div class="form-row ix-phrase-actions"><button class="btn accent sm" data-ix="cards">'+api.ico('spark',14)+' Estudar em cartões</button><button class="btn secondary sm" data-ix="tiles">'+api.ico('shuffle',14)+' Monte a frase</button></div>'}
 
@@ -154,7 +193,7 @@ function open(kind){
  state.overlay=kind;draw();
 }
 function close(){
- state.overlay=null;state.cards=null;state.tiles=null;
+ state.overlay=null;state.cards=null;state.tiles=null;state.timer=null;clearInterval(timerId);
  if(root)root.innerHTML='';
  document.documentElement.classList.remove('ix-locked');
  api.render();
@@ -162,13 +201,14 @@ function close(){
  lastFocus?.focus?.();
 }
 function frame(title,body,label){
- return '<div class="ix-backdrop" data-ix="close"></div><div class="ix-dialog ix-'+state.overlay+'" role="dialog" aria-modal="true" aria-label="'+label+'"><div class="ix-dialog-head"><strong>'+title+'</strong><button class="icon-btn" data-ix="close" aria-label="Fechar (Esc)">'+api.ico('close',16)+'</button></div>'+body+'</div>';
+ return '<div class="ix-backdrop" data-ix="close"></div><div class="ix-dialog ix-dlg-'+state.overlay+'" role="dialog" aria-modal="true" aria-label="'+label+'"><div class="ix-dialog-head"><strong>'+title+'</strong><button class="icon-btn" data-ix="close" aria-label="Fechar (Esc)">'+api.ico('close',16)+'</button></div>'+body+'</div>';
 }
 function draw(){
  const r=ensureRoot();
  document.documentElement.classList.add('ix-locked');
  if(state.overlay==='search')r.innerHTML=frame('Buscar em todo o StoryLab',searchBody(),'Busca universal');
- else if(state.overlay==='cards')r.innerHTML=frame('Cartões de estudo',cardsBody(),'Cartões de estudo');
+ else if(state.overlay==='cards')r.innerHTML=frame(api.esc(state.cards.title||'Cartões de estudo'),cardsBody(),'Cartões de estudo');
+ else if(state.overlay==='timer')r.innerHTML=frame('Cronômetro de fala',timerBody(),'Cronômetro de fala');
  else if(state.overlay==='tiles')r.innerHTML=frame('Monte a frase',tilesBody(),'Jogo Monte a frase');
  else if(state.overlay==='help')r.innerHTML=frame('Atalhos de teclado',helpBody(),'Atalhos de teclado');
  const focus=r.querySelector('[data-ix-autofocus]');
@@ -208,6 +248,7 @@ function go(it){
 }
 
 /* ── Cartões de estudo (Fraseoteca) ─────────────────────────────── */
+function duePhrases(s,now=Date.now()){return api.D.phrases.filter(p=>s.reviews[p.id]&&s.reviews[p.id].next<=now)}
 function buildDeck(){
  const s=st(),ui=api.ui,now=Date.now();
  let pool=api.D.phrases.filter(p=>(ui.phraseFamily==='all'||p.family===ui.phraseFamily)&&(ui.phraseView!=='favorites'||s.favorites.includes(p.id)));
@@ -215,24 +256,52 @@ function buildDeck(){
  const dueP=pool.filter(p=>s.reviews[p.id]&&s.reviews[p.id].next<=now);
  const fresh=pool.filter(p=>!s.reviews[p.id]);
  const rest=pool.filter(p=>s.reviews[p.id]&&s.reviews[p.id].next>now);
- return [...shuffle(dueP),...shuffle(fresh),...shuffle(rest)].slice(0,DECK_SIZE).map(p=>p.id);
+ return [...shuffle(dueP),...shuffle(fresh),...shuffle(rest)].slice(0,DECK_SIZE).map(p=>({k:'p',id:p.id}));
 }
-function openCards(){state.cards={deck:buildDeck(),i:0,flipped:false,right:0,again:0};open('cards')}
+// Revisão do dia: tudo o que venceu hoje, de frases e de termos do Atlas, num só baralho
+function reviewDeck(){
+ const terms=window.StoryLabAtlas?.termDeck?.(null,40)?.due||[];
+ return mixDeck(duePhrases(st()).map(p=>({k:'p',id:p.id})),terms.map(t=>({k:'t',...t})),30);
+}
+// Intercala as duas fontes para a revisão não virar um bloco só de frases ou de termos
+function mixDeck(a,b,limit){const x=shuffle(a),y=shuffle(b),out=[];while((x.length||y.length)&&out.length<limit){if(x.length)out.push(x.shift());if(y.length&&out.length<limit)out.push(y.shift())}return out}
+function dueCount(){return duePhrases(st()).length+(window.StoryLabAtlas?.termDeck?.(null,999)?.due.length||0)}
+function startDeck(deck,title,emptyHtml){state.cards={deck,i:0,flipped:false,right:0,again:0,title,emptyHtml};open('cards')}
+function openCards(){startDeck(buildDeck(),'Cartões de frases')}
+function openReview(){startDeck(reviewDeck(),'Revisão do dia','<div class="ix-done"><h3>Nada vencido hoje</h3><p class="muted">Tudo em dia. Que tal aprender algo novo?</p><div class="form-row" style="justify-content:center"><button class="btn accent" data-ix="cards">Cartões de frases</button><button class="btn secondary" data-ix="term-cards">Termos novos do Atlas</button></div></div>')}
+function openTermCards(topic){
+ const d=window.StoryLabAtlas?.termDeck?.(topic??null,DECK_SIZE);
+ const deck=[...(d?.due||[]),...(d?.fresh||[])].slice(0,DECK_SIZE).map(t=>({k:'t',...t}));
+ startDeck(deck,'Cartões do Atlas','<p class="muted">Todos os termos deste campo já foram revisados e nenhum está vencido. Volte quando houver revisão pendente.</p>');
+}
 function cardsBody(){
  const {esc,D}=api,c=state.cards;
- if(!c.deck.length)return '<p class="muted">Não há frases para estudar com o filtro atual.</p>';
- if(c.i>=c.deck.length)return '<div class="ix-done"><h3>Rodada concluída</h3><p class="muted">'+c.right+' lembrada(s) · '+c.again+' para rever. Frases marcadas “de novo” voltam na próxima rodada.</p><div class="form-row"><button class="btn accent" data-ix="cards">Nova rodada</button><button class="btn secondary" data-ix="close">Fechar</button></div></div>';
- const p=D.phrases.find(x=>x.id===c.deck[c.i]),fam=D.families.find(f=>f.id===p.family);
- const progress='<div class="ix-progress"><span style="width:'+Math.round(c.i/c.deck.length*100)+'%"></span></div><p class="muted small">Cartão '+(c.i+1)+' de '+c.deck.length+'</p>';
+ if(!c.deck.length)return c.emptyHtml||'<p class="muted">Não há frases para estudar com o filtro atual.</p>';
+ if(c.i>=c.deck.length)return '<div class="ix-done"><h3>Rodada concluída</h3><p class="muted">'+c.right+' lembrada(s) · '+c.again+' para rever. Frases marcadas “de novo” voltam na próxima rodada.</p><div class="form-row" style="justify-content:center"><button class="btn accent" data-ix="'+(c.title==='Cartões do Atlas'?'term-cards':c.title==='Revisão do dia'?'review':'cards')+'">Nova rodada</button><button class="btn secondary" data-ix="close">Fechar</button></div></div>';
+ const item=c.deck[c.i];
+ if(item.k==='t')return termCardHtml(item,c);
+ const p=D.phrases.find(x=>x.id===item.id),fam=D.families.find(f=>f.id===p.family);
  const front='<div class="ix-face ix-front"><span class="chip">'+esc(fam?.title||'')+'</span><p class="ix-intent">'+esc(p.use)+'</p><p class="muted">Como você formularia esta intenção? Pense ou diga em voz alta, depois vire o cartão.</p><span class="ix-tap">Toque ou pressione Espaço para virar</span></div>';
  const back='<div class="ix-face ix-back"><span class="chip">'+esc(fam?.title||'')+'</span><p class="ix-phrase">'+esc(p.pt)+'</p>'+(p.note?'<p class="ix-note"><strong>Nota de uso:</strong> '+esc(p.note)+'</p>':'')+'</div>';
- const actions=c.flipped?'<div class="form-row ix-grade"><button class="btn secondary" data-ix="again">↺ De novo <kbd>1</kbd></button><button class="btn accent" data-ix="right">✓ Lembrei <kbd>2</kbd></button><button class="btn secondary sm" data-ix="speak" aria-label="Ouvir a frase">'+api.ico('volume',14)+'</button></div><p class="muted small ix-hint">No celular, arraste o cartão: → lembrei · ← de novo</p>':'<div class="form-row ix-grade"><button class="btn accent" data-ix="flip" data-ix-autofocus>Virar cartão <kbd>Espaço</kbd></button></div>';
+ return cardFrame(c,front,back);
+}
+function cardFrame(c,front,back){
+ const progress='<div class="ix-progress"><span style="width:'+Math.round(c.i/c.deck.length*100)+'%"></span></div><p class="muted small">Cartão '+(c.i+1)+' de '+c.deck.length+'</p>';
+ const actions=c.flipped?'<div class="form-row ix-grade"><button class="btn secondary" data-ix="again">↺ De novo <kbd>1</kbd></button><button class="btn accent" data-ix="right">✓ Lembrei <kbd>2</kbd></button><button class="btn secondary sm" data-ix="speak" aria-label="Ouvir">'+api.ico('volume',14)+'</button></div><p class="muted small ix-hint">No celular, arraste o cartão: → lembrei · ← de novo</p>':'<div class="form-row ix-grade"><button class="btn accent" data-ix="flip" data-ix-autofocus>Virar cartão <kbd>Espaço</kbd></button></div>';
  return progress+'<div class="ix-card'+(c.flipped?' flipped':'')+'" data-ix="flip" id="ix-card" tabindex="0"><div class="ix-card-inner">'+front+back+'</div></div>'+actions;
+}
+// Cartão de termo: recordação livre — a definição na frente, o termo no verso
+function termCardHtml(t,c){
+ const {esc}=api;
+ const front='<div class="ix-face ix-front"><span class="chip">Atlas · '+esc(t.field)+'</span><p class="ix-definition">'+esc(t.definition)+'</p><p class="muted">Qual é o termo? Diga em voz alta antes de virar.</p><span class="ix-tap">Toque ou pressione Espaço para virar</span></div>';
+ const back='<div class="ix-face ix-back"><span class="chip">Atlas · '+esc(t.field)+'</span><p class="ix-intent">'+esc(t.term)+'</p><p class="ix-note"><strong>Diga assim:</strong> '+esc(t.example)+'</p><p class="ix-note"><strong>Cuidado:</strong> '+esc(t.caution)+'</p></div>';
+ return cardFrame(c,front,back);
 }
 function gradeCard(remembered){
  const c=state.cards;if(!c||!c.flipped||c.i>=c.deck.length)return;
- const s=st(),id=c.deck[c.i];
- s.reviews[id]=gradeReview(s.reviews[id],remembered);
+ const s=st(),item=c.deck[c.i];
+ if(item.k==='t')window.StoryLabAtlas?.gradeTerm?.(item.topic,item.term,remembered);
+ else s.reviews[item.id]=gradeReview(s.reviews[item.id],remembered);
  api.save();bump();
  remembered?c.right++:c.again++;
  c.i++;c.flipped=false;draw();
@@ -269,9 +338,40 @@ function tilesBody(){
  return html;
 }
 
+/* ── Cronômetro de fala ─────────────────────────────────────────── */
+let timerId=null;
+function fmt(sec){sec=Math.max(0,Math.ceil(sec));return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0')}
+function openTimer(seconds,title,instruction){
+ clearInterval(timerId);
+ state.timer={total:Math.max(5,Number(seconds)||60),left:Math.max(5,Number(seconds)||60),running:false,endAt:0,title:title||'',instruction:instruction||'',done:false};
+ open('timer');
+}
+function timerBody(){
+ const {esc}=api,t=state.timer,r=70,c=2*Math.PI*r,p=t.left/t.total;
+ return '<div class="ix-timer"><p class="muted">'+esc(t.title)+'</p><svg class="ix-timer-ring" viewBox="0 0 160 160" aria-hidden="true"><circle cx="80" cy="80" r="'+r+'" class="ix-ring-bg"/><circle cx="80" cy="80" r="'+r+'" class="ix-ring-fg" id="ix-timer-arc" stroke-dasharray="'+c.toFixed(1)+'" stroke-dashoffset="'+(c*(1-p)).toFixed(1)+'"/></svg><div class="ix-timer-time'+(t.done?' done':'')+'" id="ix-timer-time" role="timer" aria-live="off">'+(t.done?'Tempo!':fmt(t.left))+'</div><p class="ix-timer-instruction">'+esc(t.instruction)+'</p><div class="form-row" style="justify-content:center"><button class="btn accent" data-ix="timer-toggle" data-ix-autofocus>'+(t.running?'Pausar':t.done?'Falar de novo':t.left<t.total?'Continuar':'Começar a falar')+' <kbd>Espaço</kbd></button><button class="btn secondary" data-ix="timer-reset">Reiniciar</button></div><p class="muted small ix-hint">O tempo é sugestão: termine a ideia mesmo que o relógio acabe.</p></div>';
+}
+function timerToggle(){
+ const t=state.timer;if(!t)return;
+ if(t.done){t.left=t.total;t.done=false}
+ if(t.running){t.running=false;t.left=Math.max(0,(t.endAt-Date.now())/1000);clearInterval(timerId)}
+ else{t.running=true;t.endAt=Date.now()+t.left*1000;clearInterval(timerId);timerId=setInterval(timerTick,200)}
+ draw();
+}
+function timerReset(){const t=state.timer;if(!t)return;clearInterval(timerId);t.running=false;t.done=false;t.left=t.total;draw()}
+function timerTick(){
+ const t=state.timer;if(!t||!t.running)return clearInterval(timerId);
+ t.left=Math.max(0,(t.endAt-Date.now())/1000);
+ const el=document.getElementById('ix-timer-time'),arc=document.getElementById('ix-timer-arc');
+ if(el)el.textContent=fmt(t.left);
+ if(arc){const c=2*Math.PI*70;arc.setAttribute('stroke-dashoffset',(c*(1-t.left/t.total)).toFixed(1))}
+ if(t.left<=0){clearInterval(timerId);t.running=false;t.done=true;beep();navigator.vibrate?.(200);bump();draw()}
+}
+// Sinal curto e discreto ao fim do tempo (sem arquivos de áudio)
+function beep(){try{const ctx=new (window.AudioContext||window.webkitAudioContext)(),o=ctx.createOscillator(),g=ctx.createGain();o.frequency.value=660;g.gain.setValueAtTime(.12,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+.5);o.connect(g).connect(ctx.destination);o.start();o.stop(ctx.currentTime+.5)}catch{}}
+
 /* ── Atalhos ────────────────────────────────────────────────────── */
 function helpBody(){
- const rows=[['Ctrl K  ou  /','Abrir a busca universal'],['?','Mostrar estes atalhos'],['Esc','Fechar janelas e menus'],['↑ ↓  ·  Enter','Navegar e abrir resultados da busca'],['Espaço','Virar o cartão de estudo'],['1  ·  2','Cartão: “de novo” · “lembrei”'],['Arrastar ← →','Avaliar o cartão no celular']];
+ const rows=[['Ctrl K  ou  /','Abrir a busca universal'],['R','Abrir a revisão do dia'],['?','Mostrar estes atalhos'],['Esc','Fechar janelas e menus'],['↑ ↓  ·  Enter','Navegar e abrir resultados da busca'],['Espaço','Virar o cartão de estudo'],['1  ·  2','Cartão: “de novo” · “lembrei”'],['Arrastar ← →','Avaliar o cartão no celular']];
  return '<table class="ix-keys">'+rows.map(([k,d])=>'<tr><td><kbd>'+api.esc(k)+'</kbd></td><td>'+api.esc(d)+'</td></tr>').join('')+'</table>';
 }
 
@@ -288,6 +388,7 @@ function onKey(e){
    else if(k==='Enter'&&s.results[s.sel]){e.preventDefault();go(s.results[s.sel])}
    return;
   }
+  if(state.overlay==='timer'&&(k===' ')&&!typing(e.target)){e.preventDefault();timerToggle();return}
   if(state.overlay==='cards'&&!typing(e.target)){
    const c=state.cards;
    if((k===' '||k==='Enter')&&c&&c.i<c.deck.length&&!c.flipped){e.preventDefault();c.flipped=true;draw()}
@@ -299,6 +400,7 @@ function onKey(e){
  if(typing(e.target))return;
  if(k==='/'){e.preventDefault();openSearch()}
  else if(k==='?'){e.preventDefault();open('help')}
+ else if(k==='r'||k==='R'){if(!e.ctrlKey&&!e.metaKey&&!e.altKey){e.preventDefault();openReview()}}
 }
 function onClick(e){
  const b=e.target.closest?.('[data-ix]');
@@ -314,7 +416,11 @@ function onClick(e){
  else if(a==='go'){const it=state.search.results[Number(b.dataset.index)];if(it)go(it)}
  else if(a==='again')gradeCard(false);
  else if(a==='right')gradeCard(true);
- else if(a==='speak'){const id=state.cards?.deck[state.cards.i];const p=api.D.phrases.find(x=>x.id===id);if(p)api.say(p.pt)}
+ else if(a==='speak'){const it=state.cards?.deck[state.cards.i];if(it?.k==='t')api.say(it.term+'. '+it.example);else{const p=api.D.phrases.find(x=>x.id===it?.id);if(p)api.say(p.pt)}}
+ else if(a==='review')openReview();
+ else if(a==='term-cards')openTermCards(b.dataset.topic!==undefined?Number(b.dataset.topic):null);
+ else if(a==='timer-toggle')timerToggle();
+ else if(a==='timer-reset')timerReset();
  else if(state.tiles&&(a==='place'||a==='unplace')){
   const t=state.tiles,i=Number(b.dataset.i);
   if(a==='place'){t.pool=t.pool.filter(x=>x!==i);t.placed.push(i)}else{t.placed=t.placed.filter(x=>x!==i);t.pool.push(i)}
@@ -332,6 +438,7 @@ function onChange(e){
 
 function init(context){
  api=context;
+ setTimeout(()=>{try{checkBadges()}catch{}},0);
  document.addEventListener('click',trackStudy,true);   // fase de captura: antes do app mudar o estado
  document.addEventListener('click',onClick);
  document.addEventListener('keydown',onKey);
@@ -342,7 +449,7 @@ function init(context){
  document.addEventListener('pointerup',e=>{if(onPointerUp())e.preventDefault()});
 }
 
-return {init,topbar,home,phraseActions,openSearch,bump,
+return {init,topbar,home,phraseActions,badges,openSearch,openTimer,openTermCards,openReview,bump,
  // Funções puras expostas para os testes automatizados
- _test:{iso,shiftDay,streak,lastDays,gradeReview,buildIndex,search,makeTiles,checkTiles}};
+ _test:{iso,shiftDay,streak,lastDays,gradeReview,buildIndex,search,makeTiles,checkTiles,computeBadges,mixDeck,fmt,BADGES}};
 })();
