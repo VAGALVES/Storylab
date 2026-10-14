@@ -1,9 +1,9 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 1.3.1 — Estabilização offline e testes
+## Journalism Academy · Versão 1.4 — Currículo integral e Atlas com treino de precisão
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
-**Status:** aplicação funcional de fundação acadêmica, não currículo universitário completo nem serviço de ensino credenciado. O projeto distingue intencionalmente aulas já redigidas de unidades apenas planejadas.
+**Status:** aplicação funcional de fundação acadêmica, não currículo universitário completo nem serviço de ensino credenciado. Todas as 172 unidades curriculares têm aula integral redigida; o conteúdo é autoral e ainda não passou por revisão de especialistas externos.
 
 ### Conteúdo desta edição
 
@@ -11,16 +11,34 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 |---|---:|---|
 | Escolas | 6 | Estruturadas |
 | Disciplinas | 43 | Ementas e competências publicadas |
-| Unidades curriculares | 172 | Planejadas, com objetivos |
-| Aulas integrais | 49 | Texto, 3 conceitos, exemplos, atividade e rubrica |
+| Unidades curriculares | 172 | Todas com aula integral |
+| Aulas integrais | 172 | Texto, 3 conceitos, exemplos, atividade e rubrica |
 | Famílias de linguagem | 24 | Com definição de intenção |
 | Frases-base em português | 552 | Editáveis em conteúdo-fonte, pesquisáveis no app |
 | Equivalentes em inglês | 36 | Seleção inicial, explicitamente incompleta |
 | Equivalentes em mandarim | 12 | Seleção inicial com pinyin |
-| Atlas de vocabulário | 16 campos; 160 termos; 160 verbetes comentados | Publicado |
+| Atlas de vocabulário | 16 campos; 160 termos; 160 verbetes comentados; 48 trocas de precisão | Publicado, com treino e revisão espaçada |
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v1.4 — Atlas Descritivo
+
+O Atlas passa a cobrir o ciclo completo de aprendizagem lexical: **entender → discriminar → produzir → revisar**.
+
+- **Treino de precisão:** rodadas de 8 perguntas geradas dos próprios verbetes (definição → termo e frase com lacuna → termo). As alternativas vêm do mesmo campo, para treinar a diferença entre termos vizinhos. A explicação mostra a definição correta, o alerta editorial e o sentido da alternativa escolhida.
+- **Domínio e revisão espaçada por termo:** acertos espaçam revisões em 1, 3, 7, 14 e 30 dias; erros trazem o termo de volta no próximo treino. Um termo conta como dominado após três acertos seguidos. Revisões pendentes têm prioridade e aparecem como selo na aba.
+- **Trocas de precisão:** 48 pares “palavra genérica → termos do campo”, com frase vaga e frase precisa, exibidos no vocabulário de cada campo.
+- **Detector de palavras genéricas ampliado:** passa de 5 palavras fixas para 31 (22 com troca específica no Atlas), com variações de gênero e número, e sugere os termos do Atlas que podem substituí-las. Palavras comuns e legítimas (“lugar”, “bom”, “depois”) não geram alertas falsos.
+- Progresso de domínio por campo no seletor, nos chips de termos e nos indicadores do topo; vocabulário do campo visível durante a prática escrita.
+- O domínio é salvo localmente, entra no backup JSON e é validado na importação.
+
+### Novidades da v1.3.2
+
+- As 123 unidades que eram apenas plano curricular ganharam aula integral: as 43 disciplinas das seis escolas agora têm 4 aulas cada (172 no total).
+- Escolas antes sem conteúdo aprofundado — Fundamentos, Jornalismo e Mídias Digitais e a maior parte de Reportagem, Audiovisual e Laboratórios — passam a ter percurso completo.
+- Aulas de Legislação e Direitos são orientativas e indicam verificação de regras locais; aulas de economia ensinam a coletar preços e câmbio com fonte e data, em vez de fixar valores que envelhecem.
+- `test_content.py` passa a exigir as 4 aulas em todas as disciplinas, o esquema completo de cada aula e títulos únicos.
 
 ### Novidades da v1.3.1
 
@@ -58,13 +76,13 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 ### O que realmente funciona agora
 
 - Navegação por escolas, disciplinas e unidades; pesquisa de disciplinas.
-- Leitura das 49 aulas integrais com demonstrações, prática e avaliação orientada.
+- Leitura das 172 aulas integrais (todas as disciplinas) com demonstrações, prática e avaliação orientada.
 - Fraseoteca com busca de texto, 24 famílias, filtros por idioma, favoritos, detalhes e reprodução por `speechSynthesis` (quando o navegador oferece voz adequada).
 - Registro de cartões estudados e agendamento local de revisões em 1, 3, 7, 14 e 30 dias.
 - Estúdio da Voz: desafio aleatório, gravação com `MediaRecorder` se o navegador permitir, reprodução, arquivo para salvar manualmente e autorrubrica 1–5.
 - Construtor de narração usando apenas observações inseridas pelo estudante, estilos documental, espontâneo, contemplativo e didático.
 - Nove camadas de comunicação e teleprompter com rolagem e retirada progressiva do texto.
-- Atlas de 160 termos para descrição mais precisa.
+- Atlas de 160 termos para descrição mais precisa, com treino de precisão, domínio por termo, revisão espaçada e trocas de palavras genéricas.
 - 30 missões com plano de imagem, estruturas de fala, cautela e notas pessoais.
 - Trilha de 12 semanas e acompanhamento de aulas, prática e missões.
 - Tema claro/escuro, navegação móvel, dados em `localStorage`, backup JSON, importação e reinício.
@@ -172,7 +190,7 @@ O `netlify.toml` evita cache HTTP prolongado para o worker e o HTML principal. S
 
 **V3 — Avaliação avançada:** transcrição e feedback de fala com consentimento explícito e processamento transparente; revisão assistida de roteiros sem inventar fatos.
 
-**V4 — Formação longa:** aprofundar os demais módulos das 43 disciplinas, exercícios de pesquisa com fontes, bibliografia verificável, projetos avaliativos e um portfólio editorial.
+**V4 — Formação longa:** revisão editorial especializada das 172 aulas, exercícios de pesquisa com fontes, bibliografia verificável por disciplina, projetos avaliativos e um portfólio editorial.
 
 ---
 

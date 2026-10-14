@@ -15,7 +15,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 ### Escola 01 — Fundamentos do Jornalismo
 *Pensar como jornalista*
 
-**Teorias da Comunicação** — Compreenda como mensagens circulam, criam sentido e são interpretadas em contextos diferentes. (aula central pendente)
+**Teorias da Comunicação** — Compreenda como mensagens circulam, criam sentido e são interpretadas em contextos diferentes. (aula central publicada)
 
   1. Emissor, mensagem e contexto
   2. Agenda, enquadramento e percepção
@@ -24,7 +24,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Explique como uma mesma imagem admite interpretações distintas.
 
-**História do Jornalismo** — Conheça transformações da imprensa e as mudanças na produção, circulação e consumo de notícias. (aula central pendente)
+**História do Jornalismo** — Conheça transformações da imprensa e as mudanças na produção, circulação e consumo de notícias. (aula central publicada)
 
   1. Primeiras práticas de notícia
   2. Imprensa, rádio e televisão
@@ -33,7 +33,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Compare um formato histórico com um formato digital contemporâneo.
 
-**Fundamentos do Jornalismo** — Diferencie notícia, reportagem, entrevista, crônica, perfil e documentário. (aula central pendente)
+**Fundamentos do Jornalismo** — Diferencie notícia, reportagem, entrevista, crônica, perfil e documentário. (aula central publicada)
 
   1. Informação, apuração e publicação
   2. Gêneros jornalísticos
@@ -42,7 +42,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Escolha o gênero apropriado para um acontecimento observado.
 
-**Teoria da Notícia** — Entenda noticiabilidade, seleção editorial, relevância pública e limitações de uma pauta. (aula central pendente)
+**Teoria da Notícia** — Entenda noticiabilidade, seleção editorial, relevância pública e limitações de uma pauta. (aula central publicada)
 
   1. O que torna algo notícia
   2. Valores-notícia
@@ -51,7 +51,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Justifique por que um acontecimento merece ser explicado ao público.
 
-**Ética Jornalística** — Pratique precisão, independência, transparência, correção e cuidado com pessoas retratadas. (aula central pendente)
+**Ética Jornalística** — Pratique precisão, independência, transparência, correção e cuidado com pessoas retratadas. (aula central publicada)
 
   1. Fatos, opiniões e inferências
   2. Consentimento e possíveis danos
@@ -60,7 +60,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Produza conteúdo sem confundir inferências e fatos observados.
 
-**Legislação e Direitos** — Identifique questões de imagem, privacidade, autoria, gravações e publicação em diferentes jurisdições. (aula central pendente)
+**Legislação e Direitos** — Identifique questões de imagem, privacidade, autoria, gravações e publicação em diferentes jurisdições. (aula central publicada)
 
   1. Imagem e privacidade
   2. Autorizações e espaços privados
@@ -69,7 +69,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Planeje uma gravação respeitosa com verificação de regras locais.
 
-**Jornalismo Internacional** — Desenvolva contexto, escuta intercultural e cuidado com generalizações sobre sociedades. (aula central pendente)
+**Jornalismo Internacional** — Desenvolva contexto, escuta intercultural e cuidado com generalizações sobre sociedades. (aula central publicada)
 
   1. Fontes e contexto internacional
   2. Tradução e mediação cultural
@@ -81,7 +81,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 ### Escola 02 — Reportagem e Investigação
 *Pesquisar, verificar, perguntar*
 
-**Técnicas de Reportagem** — Organize observação, entrevistas, documentos e cenas em uma reportagem consistente. (aula central pendente)
+**Técnicas de Reportagem** — Organize observação, entrevistas, documentos e cenas em uma reportagem consistente. (aula central publicada)
 
   1. Ideia e hipótese de pauta
   2. Plano de apuração
@@ -117,7 +117,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Produza um pequeno dossiê com afirmações e fontes.
 
-**Jornalismo de Dados** — Utilize tabelas, proporções e visualizações para explicar fenômenos sem induzir conclusões erradas. (aula central pendente)
+**Jornalismo de Dados** — Utilize tabelas, proporções e visualizações para explicar fenômenos sem induzir conclusões erradas. (aula central publicada)
 
   1. Perguntas quantitativas
   2. Limpeza e denominadores
@@ -126,7 +126,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Apresente uma comparação de preços metodologicamente correta.
 
-**Jornalismo Investigativo** — Estruture hipóteses, trilhas documentais e confirmação responsável de informações. (aula central pendente)
+**Jornalismo Investigativo** — Estruture hipóteses, trilhas documentais e confirmação responsável de informações. (aula central publicada)
 
   1. Hipóteses e interesse público
   2. Documentação e trilha de evidência
@@ -258,7 +258,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Filme uma sequência coerente de seis planos.
 
-**Direção de Fotografia** — Planeje iluminação, contraste, profundidade, cor e trajetória de câmera. (aula central pendente)
+**Direção de Fotografia** — Planeje iluminação, contraste, profundidade, cor e trajetória de câmera. (aula central publicada)
 
   1. Qualidade e direção da luz
   2. Profundidade e camadas
@@ -276,7 +276,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Crie uma pauta audiovisual de um minuto com cinco cenas.
 
-**Captação Sonora** — Capture voz e ambiente com clareza e construa espaço sonoro significativo. (aula central pendente)
+**Captação Sonora** — Capture voz e ambiente com clareza e construa espaço sonoro significativo. (aula central publicada)
 
   1. Som direto e ruído
   2. Posicionamento do microfone
@@ -285,7 +285,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Grave três ambientes distinguíveis e uma fala inteligível.
 
-**Edição e Pós-Produção** — Use cortes, ritmo, áudio, legendas e correção de cor para reforçar sentido. (aula central pendente)
+**Edição e Pós-Produção** — Use cortes, ritmo, áudio, legendas e correção de cor para reforçar sentido. (aula central publicada)
 
   1. Seleção e organização de takes
   2. Montagem e ritmo
@@ -294,7 +294,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Edite uma sequência clara que sobreviva sem música.
 
-**Documentário** — Explore ponto de vista, personagens, tempo, ética e montagem de histórias reais. (aula central pendente)
+**Documentário** — Explore ponto de vista, personagens, tempo, ética e montagem de histórias reais. (aula central publicada)
 
   1. Premissa e pesquisa
   2. Personagem e conflito
@@ -306,7 +306,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 ### Escola 05 — Jornalismo e Mídias Digitais
 *Criar para cada formato*
 
-**Jornalismo Digital** — Adapte verificações e narrativas para navegação, vídeo, áudio e publicação digital. (aula central pendente)
+**Jornalismo Digital** — Adapte verificações e narrativas para navegação, vídeo, áudio e publicação digital. (aula central publicada)
 
   1. Hipertexto e leitura digital
   2. Multiformato
@@ -315,7 +315,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Publique uma história com título, contexto, fontes e mídias coordenadas.
 
-**Produção para YouTube** — Estruture episódios com abertura, promessa, progressão e retenção honesta. (aula central pendente)
+**Produção para YouTube** — Estruture episódios com abertura, promessa, progressão e retenção honesta. (aula central publicada)
 
   1. Proposta de episódio
   2. Abertura e ritmo
@@ -324,7 +324,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Crie um roteiro de cinco minutos com capítulos úteis.
 
-**Produção para Redes Sociais** — Construa vídeos curtos claros sem perder contexto nem cair em sensacionalismo. (aula central pendente)
+**Produção para Redes Sociais** — Construa vídeos curtos claros sem perder contexto nem cair em sensacionalismo. (aula central publicada)
 
   1. Primeiros segundos
   2. Estrutura de vídeo curto
@@ -333,7 +333,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Adapte uma reportagem de dois minutos em um minuto.
 
-**Design Editorial** — Organize títulos, fotografias, legendas, ritmo visual e hierarquia de informação. (aula central pendente)
+**Design Editorial** — Organize títulos, fotografias, legendas, ritmo visual e hierarquia de informação. (aula central publicada)
 
   1. Hierarquia e tipografia
   2. Imagem e contraste
@@ -342,7 +342,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Crie capa editorial com mensagem clara.
 
-**Audiência e Estratégia** — Interprete métricas e distribua conteúdo mantendo coerência editorial. (aula central pendente)
+**Audiência e Estratégia** — Interprete métricas e distribua conteúdo mantendo coerência editorial. (aula central publicada)
 
   1. Público e necessidades
   2. Distribuição e descoberta
@@ -354,7 +354,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 ### Escola 06 — Laboratórios de Especialização
 *Xangai como sala de aula*
 
-**Jornalismo Cultural** — Pesquise artistas, eventos, referências estéticas e contextos culturais. (aula central pendente)
+**Jornalismo Cultural** — Pesquise artistas, eventos, referências estéticas e contextos culturais. (aula central publicada)
 
   1. Contexto cultural
   2. Crítica e descrição
@@ -381,7 +381,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Crie reportagem sobre a experiência de uma rua.
 
-**Jornalismo de Viagens** — Produza relatos úteis e honestos que diferenciem preferência, fato e serviço. (aula central pendente)
+**Jornalismo de Viagens** — Produza relatos úteis e honestos que diferenciem preferência, fato e serviço. (aula central publicada)
 
   1. Experiência e público
   2. Pesquisa do destino
@@ -390,7 +390,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Monte um miniguia audiovisual com informações verificadas.
 
-**Jornalismo de Gastronomia** — Descreva sabores, técnicas, produtos e contexto sem exotizar culinárias. (aula central pendente)
+**Jornalismo de Gastronomia** — Descreva sabores, técnicas, produtos e contexto sem exotizar culinárias. (aula central publicada)
 
   1. Vocabulário sensorial
   2. Técnica e ingredientes
@@ -399,7 +399,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Narre uma experiência gastronômica rica em sensações.
 
-**Jornalismo de Tecnologia** — Traduza inovação, especificações e impactos em explicações compreensíveis. (aula central pendente)
+**Jornalismo de Tecnologia** — Traduza inovação, especificações e impactos em explicações compreensíveis. (aula central publicada)
 
   1. Entendendo o produto
   2. Teste e método
@@ -408,7 +408,7 @@ O currículo é uma composição autoral de disciplinas típicas e áreas comple
 
   - **Competência:** Demonstre um equipamento separando dados e experiência pessoal.
 
-**Jornalismo Econômico** — Interprete preços, consumo, negócios e indicadores sem confundir correlação com causa. (aula central pendente)
+**Jornalismo Econômico** — Interprete preços, consumo, negócios e indicadores sem confundir correlação com causa. (aula central publicada)
 
   1. Conceitos econômicos
   2. Preço e poder de compra
@@ -500,3 +500,23 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - Avaliação oral em quatro dimensões: dicção, fluidez, pausas e expressividade, registradas somente pelo estudante.
 - Metadados de gravação e autoavaliação são incluídos no backup, mas o áudio permanece exclusivamente na memória do navegador até download e não é armazenado na nuvem ou em localStorage.
 - Próximo passo: conectar os exercícios às estruturas da Fraseoteca, com filtros semânticos e prática de entrevista.
+
+
+## Evolução v1.3.2 — Currículo integral
+
+- As 123 unidades que existiam apenas como plano curricular foram redigidas: todas as 43 disciplinas das seis escolas têm agora 4 aulas integrais (172 no total).
+- Cada aula segue a unidade mínima do app: problema/introdução, três conceitos com exemplo aplicado, oficina de campo e autoverificação.
+- Escolas antes descobertas — Fundamentos, Jornalismo e Mídias Digitais e a maior parte de Reportagem, Audiovisual e Laboratórios — passam a ter percurso completo.
+- Conteúdos com dimensão jurídica (Legislação e Direitos) são explicitamente orientativos e remetem à verificação de regras locais e a consulta especializada.
+- Dados econômicos, de preço e de horário não são fixados no texto: as aulas ensinam a coletá-los com fonte e data, porque mudam com o tempo.
+- Próximo passo: revisão editorial por especialistas, bibliografia verificável por disciplina e vínculo de cada aula a famílias da Fraseoteca e a missões de campo.
+
+
+## Evolução v1.4 — Atlas como ciclo de aprendizagem lexical
+
+- **Diagnóstico:** o Atlas cobria compreensão (verbetes) e produção (escada de quatro níveis), mas não treinava a discriminação entre termos próximos nem a retenção ao longo do tempo.
+- **Discriminar:** Treino de precisão com perguntas de definição e de lacuna geradas dos verbetes; distratores do mesmo campo.
+- **Revisar:** domínio por termo com repetição espaçada (1, 3, 7, 14, 30 dias), mesmo esquema da Fraseoteca.
+- **Ponte com o vocabulário cotidiano:** 48 trocas de precisão e detector de palavras genéricas com sugestões do Atlas — sempre com a ressalva de usar o termo só se ele corresponder à observação.
+- Nenhuma avaliação por IA: perguntas, notas e sugestões são determinísticas e explicáveis.
+- Próximos passos: frases de lacuna escritas especificamente para o treino (hoje reaproveitam os exemplos dos verbetes, em que mais de um termo pode soar plausível), pares de contraste explícitos por termo e vínculo entre termos dominados e os exercícios orais da Fraseoteca.
