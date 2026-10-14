@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 1.5 — Atlas ampliado: pessoas, objetos, animais, vistas e paisagens
+## Journalism Academy · Versão 1.6 — Fraseoteca com a linguagem real do jornalismo
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -13,14 +13,23 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Disciplinas | 43 | Ementas e competências publicadas |
 | Unidades curriculares | 172 | Todas com aula integral |
 | Aulas integrais | 172 | Texto, 3 conceitos, exemplos, atividade e rubrica |
-| Famílias de linguagem | 24 | Com definição de intenção |
-| Frases-base em português | 552 | Editáveis em conteúdo-fonte, pesquisáveis no app |
+| Famílias de linguagem | 30 | Com definição de intenção |
+| Frases-base em português | 657 | 105 com nota de uso específica; pesquisáveis no app |
 | Equivalentes em inglês | 36 | Seleção inicial, explicitamente incompleta |
 | Equivalentes em mandarim | 12 | Seleção inicial com pinyin |
 | Atlas de vocabulário | 26 campos; 260 termos; 260 verbetes comentados; 78 trocas de precisão | Publicado, com treino e revisão espaçada |
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v1.6 — Fraseoteca jornalística
+
+- **6 famílias novas e 105 estruturas** com a linguagem que o jornalismo de fato usa: Encadeamento lógico, Atribuição e verbos de declaração, Leads e títulos, Telejornalismo e vídeo, Precisão e cautela, Estilo e clareza.
+- **Nota de uso em cada estrutura nova:** sentido exato, nuance e armadilha. Exemplos: *à medida que* (proporção) × *na medida em que* (causa); *desde que* com indicativo (tempo) × com subjuntivo (condição); *alegar* sugere dúvida, *admitir* pressupõe algo desfavorável, *revelar* pressupõe segredo.
+- Vocabulário de redação de TV (cabeça, off, passagem, sonora, nota pé, escalada) com modelos de fala e a função de cada trecho.
+- A busca da Fraseoteca também encontra o conteúdo das notas (“subjuntivo”, “concessão”, “contraditório”).
+- Famílias novas foram acrescentadas ao final: favoritos e revisões já salvos continuam válidos.
+- As estruturas novas são apenas em português; nenhuma tradução foi inventada.
 
 ### Novidades da v1.5 — Atlas ampliado
 
@@ -86,7 +95,7 @@ O Atlas passa a cobrir o ciclo completo de aprendizagem lexical: **entender → 
 
 - Navegação por escolas, disciplinas e unidades; pesquisa de disciplinas.
 - Leitura das 172 aulas integrais (todas as disciplinas) com demonstrações, prática e avaliação orientada.
-- Fraseoteca com busca de texto, 24 famílias, filtros por idioma, favoritos, detalhes e reprodução por `speechSynthesis` (quando o navegador oferece voz adequada).
+- Fraseoteca com busca de texto, 30 famílias (6 delas com notas de uso jornalístico), filtros por idioma, favoritos, detalhes e reprodução por `speechSynthesis` (quando o navegador oferece voz adequada).
 - Registro de cartões estudados e agendamento local de revisões em 1, 3, 7, 14 e 30 dias.
 - Estúdio da Voz: desafio aleatório, gravação com `MediaRecorder` se o navegador permitir, reprodução, arquivo para salvar manualmente e autorrubrica 1–5.
 - Construtor de narração usando apenas observações inseridas pelo estudante, estilos documental, espontâneo, contemplativo e didático.

@@ -1,5 +1,5 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "schools": [
     {
       "id": "fundamentos",
@@ -1437,6 +1437,42 @@
       "title": "Sínteses e encerramentos",
       "description": "Terminar histórias com significado",
       "style": "closing"
+    },
+    {
+      "id": "encadeamento",
+      "title": "Encadeamento lógico",
+      "description": "Conectar ideias com a relação lógica exata: causa, contraste, concessão, conclusão",
+      "style": "analytical"
+    },
+    {
+      "id": "atribuicao",
+      "title": "Atribuição e verbos de declaração",
+      "description": "Atribuir cada informação à sua fonte com o verbo exato, sem distorcer a intenção",
+      "style": "documentary"
+    },
+    {
+      "id": "leads",
+      "title": "Leads e títulos",
+      "description": "Abrir textos e vídeos com as estruturas que o jornalismo realmente usa",
+      "style": "documentary"
+    },
+    {
+      "id": "telejornalismo",
+      "title": "Telejornalismo e vídeo",
+      "description": "Escrever e falar com a estrutura de uma reportagem de TV: cabeça, off, passagem, sonora e nota pé",
+      "style": "filmmaking"
+    },
+    {
+      "id": "precisao",
+      "title": "Precisão e cautela",
+      "description": "Quantificar, estimar e relativizar com honestidade, sem exagerar nem esconder a incerteza",
+      "style": "analytical"
+    },
+    {
+      "id": "estilo",
+      "title": "Estilo e clareza",
+      "description": "Escrever com precisão e economia, trocando clichês e vícios pela forma direta",
+      "style": "analytical"
     }
   ],
   "phrases": [
@@ -6599,6 +6635,846 @@
       "pt": "Vamos encerrar com a própria cena, sem acrescentar palavras desnecessárias.",
       "style": "natural",
       "use": "Terminar histórias com significado"
+    },
+    {
+      "id": "encadeamento-01",
+      "family": "encadeamento",
+      "pt": "Embora a rua esteja cheia, quase ninguém para diante das vitrines.",
+      "style": "analytical",
+      "use": "Concessão",
+      "note": "“Embora” admite um fato que não impede o outro e pede subjuntivo (“esteja”, não “está”). Não é sinônimo de “porque” nem de “mas”: a frase toda gira em torno da surpresa."
+    },
+    {
+      "id": "encadeamento-02",
+      "family": "encadeamento",
+      "pt": "A fila cresce, mas o atendimento continua no mesmo ritmo.",
+      "style": "analytical",
+      "use": "Oposição",
+      "note": "“Mas” é o adversativo mais neutro e o mais natural na fala. O que vem depois dele pesa mais na conclusão do público — coloque ali a informação principal."
+    },
+    {
+      "id": "encadeamento-03",
+      "family": "encadeamento",
+      "pt": "O preço subiu; ainda assim, o movimento se manteve.",
+      "style": "analytical",
+      "use": "Concessão posterior",
+      "note": "“Ainda assim” reconhece o fato anterior e afirma o contrário com ênfase. É mais forte que “mas” e funciona bem na fala, depois de uma pausa."
+    },
+    {
+      "id": "encadeamento-04",
+      "family": "encadeamento",
+      "pt": "No entanto, os comerciantes ouvidos relatam o contrário.",
+      "style": "analytical",
+      "use": "Oposição formal",
+      "note": "“No entanto”, “contudo” e “entretanto” são adversativos de registro mais formal; podem abrir a frase ou vir entre vírgulas. Cuidado: “entretanto” não significa “portanto”."
+    },
+    {
+      "id": "encadeamento-05",
+      "family": "encadeamento",
+      "pt": "Portanto, a mudança não se explica apenas pelo aluguel.",
+      "style": "analytical",
+      "use": "Conclusão",
+      "note": "“Portanto” só se sustenta se as premissas foram apresentadas antes. Concluir sem base é o erro mais comum — e o mais fácil de o público perceber."
+    },
+    {
+      "id": "encadeamento-06",
+      "family": "encadeamento",
+      "pt": "Como a estação fecha às 23h, o movimento cai logo depois das 22h30.",
+      "style": "analytical",
+      "use": "Causa anteposta",
+      "note": "No início da frase, “como” é causal (= já que). No meio, costuma indicar comparação ou modo (“fala como um guia”). A posição muda o sentido."
+    },
+    {
+      "id": "encadeamento-07",
+      "family": "encadeamento",
+      "pt": "O movimento diminui à medida que a noite avança.",
+      "style": "analytical",
+      "use": "Proporção",
+      "note": "“À medida que” indica progressão simultânea (quanto mais uma coisa, mais a outra). Não confunda com “na medida em que” (causa). “À medida em que” é forma não padrão."
+    },
+    {
+      "id": "encadeamento-08",
+      "family": "encadeamento",
+      "pt": "A obra importa na medida em que altera o trajeto de quem vem do metrô.",
+      "style": "analytical",
+      "use": "Causa ou grau",
+      "note": "“Na medida em que” equivale a “porque”, “visto que” ou “no grau em que”. Trocar por “à medida que” muda o raciocínio de causa para proporção."
+    },
+    {
+      "id": "encadeamento-09",
+      "family": "encadeamento",
+      "pt": "Enquanto o lado norte foi reformado, o lado sul mantém as fachadas originais.",
+      "style": "analytical",
+      "use": "Contraste simultâneo",
+      "note": "“Enquanto” pode ser temporal (“enquanto chovia”) ou contrastivo (= ao passo que), como aqui. Evite “enquanto” no sentido de “na condição de” (“enquanto jornalista”): prefira “como”."
+    },
+    {
+      "id": "encadeamento-10",
+      "family": "encadeamento",
+      "pt": "Já o segundo mercado funciona apenas aos fins de semana.",
+      "style": "analytical",
+      "use": "Contraste de comparação",
+      "note": "No início da frase, “já” introduz o segundo termo de uma comparação. Também é advérbio de tempo (“já fechou”). Use o contrastivo só depois de apresentar o primeiro termo."
+    },
+    {
+      "id": "encadeamento-11",
+      "family": "encadeamento",
+      "pt": "Desde que a linha foi inaugurada, o bairro mudou de ritmo.",
+      "style": "analytical",
+      "use": "Tempo (desde)",
+      "note": "Com indicativo (“foi inaugurada”), “desde que” marca o ponto de partida no tempo. Com subjuntivo, vira condição — veja a próxima frase."
+    },
+    {
+      "id": "encadeamento-12",
+      "family": "encadeamento",
+      "pt": "A gravação é permitida, desde que não haja uso de tripé.",
+      "style": "analytical",
+      "use": "Condição",
+      "note": "Com subjuntivo (“haja”), “desde que” significa “contanto que”. O mesmo conector, dois sentidos: o modo verbal decide qual."
+    },
+    {
+      "id": "encadeamento-13",
+      "family": "encadeamento",
+      "pt": "Uma vez que o horário mudou, a comparação com o ano passado perde força.",
+      "style": "analytical",
+      "use": "Causa",
+      "note": "“Uma vez que” + indicativo é causal (= já que). Com particípio, indica tempo ou condição: “uma vez concluída a obra”. Evite “posto que” como adversativo: ele também é causal."
+    },
+    {
+      "id": "encadeamento-14",
+      "family": "encadeamento",
+      "pt": "Aliás, o mesmo padrão aparece na rua paralela.",
+      "style": "analytical",
+      "use": "Acréscimo relevante",
+      "note": "“Aliás” acrescenta algo que reforça o que foi dito, ou corrige (= “ou melhor”). Usado sem função, vira muleta da fala."
+    },
+    {
+      "id": "encadeamento-15",
+      "family": "encadeamento",
+      "pt": "O mercado abre cedo — mais precisamente, às 5h30.",
+      "style": "analytical",
+      "use": "Especificação",
+      "note": "“Mais precisamente”, “ou melhor” e “isto é” refinam a informação anterior. Use quando o segundo dado for mais exato, não para repetir."
+    },
+    {
+      "id": "encadeamento-16",
+      "family": "encadeamento",
+      "pt": "Ou seja: o preço é o mesmo, mas a porção ficou menor.",
+      "style": "analytical",
+      "use": "Reformulação",
+      "note": "“Ou seja” e “isto é” anunciam uma explicação. O que vem depois precisa esclarecer — se apenas repete, corte."
+    },
+    {
+      "id": "encadeamento-17",
+      "family": "encadeamento",
+      "pt": "Além disso, a calçada foi alargada no mesmo período.",
+      "style": "analytical",
+      "use": "Adição",
+      "note": "“Além disso” soma um argumento do mesmo peso. “Ademais” é formal e soa artificial na fala; “também” costuma bastar."
+    },
+    {
+      "id": "encadeamento-18",
+      "family": "encadeamento",
+      "pt": "A reforma mudou a rua e, sobretudo, a forma de atravessá-la.",
+      "style": "analytical",
+      "use": "Destaque",
+      "note": "Como advérbio, “sobretudo” significa “principalmente” e aponta o elemento mais importante. Como substantivo, é um casaco: o contexto resolve."
+    },
+    {
+      "id": "encadeamento-19",
+      "family": "encadeamento",
+      "pt": "Até os moradores mais antigos estranharam a mudança.",
+      "style": "analytical",
+      "use": "Argumento mais forte",
+      "note": "“Até” e “até mesmo” introduzem o caso mais improvável de uma escala, o que reforça o argumento. Na fala, “inclusive” com esse papel tende a virar muleta."
+    },
+    {
+      "id": "encadeamento-20",
+      "family": "encadeamento",
+      "pt": "Se a tendência se confirmar, a rua deve perder metade das lojas de roupa.",
+      "style": "analytical",
+      "use": "Condição e projeção",
+      "note": "Mantenha a correlação verbal: “se” + futuro do subjuntivo (“se confirmar”) pede futuro ou “deve”. E diga de quem é a projeção."
+    },
+    {
+      "id": "encadeamento-21",
+      "family": "encadeamento",
+      "pt": "A sinalização foi trocada para que os turistas encontrem a saída correta.",
+      "style": "analytical",
+      "use": "Finalidade",
+      "note": "“Para que” pede subjuntivo. Atribuir intenção a alguém exige fonte: a finalidade foi informada por quem trocou a placa?"
+    },
+    {
+      "id": "encadeamento-22",
+      "family": "encadeamento",
+      "pt": "Não apenas o preço mudou, mas também o público.",
+      "style": "analytical",
+      "use": "Adição correlata",
+      "note": "Em “não apenas… mas também”, os dois termos devem ter a mesma forma gramatical (preço/público). O paralelismo facilita a escuta."
+    },
+    {
+      "id": "encadeamento-23",
+      "family": "encadeamento",
+      "pt": "De um lado, há quem defenda a reforma; de outro, quem lamente a perda das bancas.",
+      "style": "analytical",
+      "use": "Apresentação de posições",
+      "note": "A correlação organiza duas posições, mas não as torna equivalentes. Se uma delas tem mais evidência, diga — equilíbrio não é dar o mesmo peso a tudo."
+    },
+    {
+      "id": "atribuicao-01",
+      "family": "atribuicao",
+      "pt": "O gerente afirmou que o mercado abre todos os dias às 6h.",
+      "style": "documentary",
+      "use": "Declaração neutra",
+      "note": "“Afirmar” e “dizer” são neutros e seguros. Repetir “disse” é melhor do que variar com verbos que acrescentam juízo sem querer."
+    },
+    {
+      "id": "atribuicao-02",
+      "family": "atribuicao",
+      "pt": "Segundo a administração, a reforma termina em dezembro.",
+      "style": "documentary",
+      "use": "Atribuição sem verbo",
+      "note": "“Segundo” e “de acordo com” deixam claro que a informação é da fonte, não sua. Use sempre que o dado não foi verificado pela reportagem."
+    },
+    {
+      "id": "atribuicao-03",
+      "family": "atribuicao",
+      "pt": "A empresa informou, em nota, que o serviço foi suspenso.",
+      "style": "documentary",
+      "use": "Comunicação oficial",
+      "note": "Diga por qual canal a fonte se manifestou: nota, entrevista, rede social, documento. O canal ajuda o público a avaliar a informação."
+    },
+    {
+      "id": "atribuicao-04",
+      "family": "atribuicao",
+      "pt": "A vendedora explicou que os preços variam conforme a estação.",
+      "style": "documentary",
+      "use": "Explicação da fonte",
+      "note": "Use “explicar” quando a fonte de fato apresenta razões. Para uma afirmação simples, “disse” é mais preciso."
+    },
+    {
+      "id": "atribuicao-05",
+      "family": "atribuicao",
+      "pt": "O morador admitiu que nunca usou a nova ciclovia.",
+      "style": "documentary",
+      "use": "Reconhecimento",
+      "note": "“Admitir” e “reconhecer” pressupõem algo desfavorável ou contrário ao interesse de quem fala. Para declarações neutras, soam como acusação."
+    },
+    {
+      "id": "atribuicao-06",
+      "family": "atribuicao",
+      "pt": "A prefeitura negou que haja plano de demolição.",
+      "style": "documentary",
+      "use": "Negação",
+      "note": "Ao usar “negar”, deixe claro quem fez a afirmação negada. Note o subjuntivo depois de “negar que” (“haja”)."
+    },
+    {
+      "id": "atribuicao-07",
+      "family": "atribuicao",
+      "pt": "A associação alega que as obras reduziram o movimento em 40%.",
+      "style": "documentary",
+      "use": "Afirmação não comprovada",
+      "note": "“Alegar” sinaliza que a afirmação ainda não foi comprovada — e pode soar como descrédito. Use com consciência, de forma igual para todos os lados."
+    },
+    {
+      "id": "atribuicao-08",
+      "family": "atribuicao",
+      "pt": "O pesquisador ressaltou que os dados são preliminares.",
+      "style": "documentary",
+      "use": "Ênfase da fonte",
+      "note": "“Ressaltar” e “destacar” indicam que a ênfase é da fonte. Não os use para dar ênfase a algo que só você considera importante."
+    },
+    {
+      "id": "atribuicao-09",
+      "family": "atribuicao",
+      "pt": "A diretora ponderou que a mudança ainda está em fase de testes.",
+      "style": "documentary",
+      "use": "Relativização",
+      "note": "“Ponderar” indica que a fonte pesa prós e contras ou relativiza. É útil para registrar cautela sem enfraquecer a declaração."
+    },
+    {
+      "id": "atribuicao-10",
+      "family": "atribuicao",
+      "pt": "Procurada, a empresa não se manifestou até a publicação desta reportagem.",
+      "style": "documentary",
+      "use": "Contraditório",
+      "note": "Fórmula-padrão de quem buscou o outro lado. Seja exato: “não respondeu”, “não quis comentar” e “não foi localizada” são situações diferentes."
+    },
+    {
+      "id": "atribuicao-11",
+      "family": "atribuicao",
+      "pt": "O comerciante criticou a falta de sinalização na entrada.",
+      "style": "documentary",
+      "use": "Crítica atribuída",
+      "note": "A crítica é da fonte, não da reportagem. Se houver resposta do criticado, ela deve aparecer com destaque proporcional."
+    },
+    {
+      "id": "atribuicao-12",
+      "family": "atribuicao",
+      "pt": "O secretário rebateu as críticas e citou o aumento de passageiros.",
+      "style": "documentary",
+      "use": "Resposta",
+      "note": "“Rebater” pressupõe uma crítica anterior, que precisa ter sido apresentada ao público antes da resposta."
+    },
+    {
+      "id": "atribuicao-13",
+      "family": "atribuicao",
+      "pt": "A artista acrescentou que a exposição muda a cada três meses.",
+      "style": "documentary",
+      "use": "Complemento",
+      "note": "“Acrescentar” liga uma informação nova à declaração anterior da mesma fonte. Não serve para introduzir uma fonte nova."
+    },
+    {
+      "id": "atribuicao-14",
+      "family": "atribuicao",
+      "pt": "A operadora garante que o serviço será retomado na segunda-feira.",
+      "style": "documentary",
+      "use": "Promessa",
+      "note": "“Garantir” e “prometer” registram compromissos futuros — trate como promessa, não como fato. Se não se cumprir, volte ao assunto."
+    },
+    {
+      "id": "atribuicao-15",
+      "family": "atribuicao",
+      "pt": "O diretor anunciou o novo cronograma durante a entrevista coletiva.",
+      "style": "documentary",
+      "use": "Anúncio público",
+      "note": "Prefira “anunciar” ou “apresentar” para comunicados públicos. “Revelar” pressupõe segredo; “confessar” pressupõe culpa; “disparar” é sensacionalista."
+    },
+    {
+      "id": "atribuicao-16",
+      "family": "atribuicao",
+      "pt": "Nas palavras da moradora: “A rua ficou bonita, mas virou passagem.”",
+      "style": "documentary",
+      "use": "Citação direta",
+      "note": "Use citação direta quando a forma da fala importa. Reproduza com fidelidade; cortes não podem mudar o sentido, e ajustes devem ser mínimos."
+    },
+    {
+      "id": "atribuicao-17",
+      "family": "atribuicao",
+      "pt": "Em entrevista à reportagem, o cozinheiro contou que aprendeu a receita com a avó.",
+      "style": "documentary",
+      "use": "Relato pessoal",
+      "note": "“Contar” e “relatar” combinam com experiências e histórias. Para números e dados, prefira “informar” e indique a origem do dado."
+    },
+    {
+      "id": "atribuicao-18",
+      "family": "atribuicao",
+      "pt": "Um funcionário, que pediu para não ser identificado, confirmou a mudança de horário.",
+      "style": "documentary",
+      "use": "Fonte anônima",
+      "note": "O anonimato é exceção: explique o motivo ao público e busque confirmação com outra fonte. Nunca use anonimato para opiniões ou ataques."
+    },
+    {
+      "id": "atribuicao-19",
+      "family": "atribuicao",
+      "pt": "A versão da empresa difere da relatada pelos clientes.",
+      "style": "documentary",
+      "use": "Versões conflitantes",
+      "note": "Apresente as versões sem arbitrar quando não houver prova. Se houver documento que favoreça uma delas, diga qual e por quê."
+    },
+    {
+      "id": "atribuicao-20",
+      "family": "atribuicao",
+      "pt": "O documento, obtido pela reportagem, mostra que o contrato foi renovado em março.",
+      "style": "documentary",
+      "use": "Atribuição documental",
+      "note": "“Obtido pela reportagem” indica acesso próprio. Informe se o documento é público e o que ele mostra — sem extrapolar o que ele não diz."
+    },
+    {
+      "id": "atribuicao-21",
+      "family": "atribuicao",
+      "pt": "Em tom de brincadeira, o vendedor disse que o segredo é a paciência.",
+      "style": "documentary",
+      "use": "Tom da fala",
+      "note": "Registre o tom quando ele muda o sentido. Sem o contexto, uma ironia transcrita pode virar afirmação literal."
+    },
+    {
+      "id": "leads-01",
+      "family": "leads",
+      "pt": "Uma nova linha de ônibus noturno passa a ligar, a partir desta segunda-feira, a estação central aos bairros do sul, segundo a operadora.",
+      "style": "documentary",
+      "use": "Lead clássico",
+      "note": "Responde, na primeira frase, ao essencial: o quê, quando, onde e segundo quem. O “como” e o “por quê” podem vir na frase seguinte."
+    },
+    {
+      "id": "leads-02",
+      "family": "leads",
+      "pt": "Às cinco da manhã, antes de a primeira loja abrir, a fila do mercado já dobra a esquina.",
+      "style": "documentary",
+      "use": "Lead de cena",
+      "note": "Abre com uma cena observada para criar presença. A regra: no máximo dois parágrafos depois, o texto precisa dizer qual é a notícia."
+    },
+    {
+      "id": "leads-03",
+      "family": "leads",
+      "pt": "A fila é o sinal mais visível de uma mudança maior: em dois anos, o bairro perdeu metade dos mercados de rua, segundo a associação local.",
+      "style": "documentary",
+      "use": "Parágrafo-síntese",
+      "note": "Depois de um lead de cena, este parágrafo diz por que a história importa. Sem ele, a cena vira curiosidade sem notícia."
+    },
+    {
+      "id": "leads-04",
+      "family": "leads",
+      "pt": "A rua mais fotografada do bairro é também a que mais perdeu moradores na última década, segundo dados distritais.",
+      "style": "documentary",
+      "use": "Lead de contraste",
+      "note": "O contraste prende a atenção, mas os dois lados precisam estar verificados. Contraste baseado em impressão é efeito, não informação."
+    },
+    {
+      "id": "leads-05",
+      "family": "leads",
+      "pt": "Três em cada dez lojas da rua trocaram de ramo desde o ano passado, segundo levantamento feito pela reportagem.",
+      "style": "documentary",
+      "use": "Lead de dado",
+      "note": "Um número por lead, com fonte e método. Proporções (“três em cada dez”) são mais fáceis de entender que percentuais na leitura em voz alta."
+    },
+    {
+      "id": "leads-06",
+      "family": "leads",
+      "pt": "“Aqui ninguém mais compra de manhã”, resume a vendedora mais antiga do mercado, há 30 anos na mesma banca.",
+      "style": "documentary",
+      "use": "Lead de citação",
+      "note": "Manuais desaconselham abrir com citação — exceto quando a fala sintetiza a história melhor que qualquer frase sua. Identifique a fonte logo em seguida."
+    },
+    {
+      "id": "leads-07",
+      "family": "leads",
+      "pt": "Para onde foram os vendedores depois da reforma? A pergunta, repetida pelos moradores, tem mais de uma resposta.",
+      "style": "documentary",
+      "use": "Lead de pergunta",
+      "note": "Só abra com pergunta se o texto realmente responder a ela. Perguntas retóricas vazias (“Você sabia que…?”) enfraquecem a abertura."
+    },
+    {
+      "id": "leads-08",
+      "family": "leads",
+      "pt": "Nova linha de ônibus liga estação central aos bairros do sul",
+      "style": "documentary",
+      "use": "Título de notícia",
+      "note": "Convenção de muitos manuais brasileiros: verbo no presente, sem artigo inicial e sem ponto final. O título informa; não enfeita."
+    },
+    {
+      "id": "leads-09",
+      "family": "leads",
+      "pt": "Mercado tradicional resiste à reforma do bairro",
+      "style": "documentary",
+      "use": "Título interpretativo",
+      "note": "Verbos como “resiste” já são interpretação. Só use se o texto sustentar a leitura com fatos — senão, prefira um verbo descritivo."
+    },
+    {
+      "id": "leads-10",
+      "family": "leads",
+      "pt": "Vendedores relatam queda no movimento; prefeitura diz que obras terminam em dezembro",
+      "style": "documentary",
+      "use": "Linha fina",
+      "note": "A linha fina (subtítulo) complementa o título. Quando há versões em disputa, é um bom lugar para apresentar as duas."
+    },
+    {
+      "id": "leads-11",
+      "family": "leads",
+      "pt": "Comi em cinco bancas de rua com 30 yuan — e uma delas superou as outras",
+      "style": "documentary",
+      "use": "Título de vídeo",
+      "note": "Promessa concreta e cumprível. Evite iscas como “você não vai acreditar”: o título é um compromisso com o público."
+    },
+    {
+      "id": "leads-12",
+      "family": "leads",
+      "pt": "O que mudou depois das obras",
+      "style": "documentary",
+      "use": "Intertítulo",
+      "note": "Intertítulos organizam a leitura e devem informar o conteúdo do bloco. Evite intertítulos decorativos ou de uma palavra só."
+    },
+    {
+      "id": "leads-13",
+      "family": "leads",
+      "pt": "Atualização, 18h: a estação foi reaberta às 17h40, segundo a operadora.",
+      "style": "documentary",
+      "use": "Atualização",
+      "note": "Marque a hora da atualização e o que mudou. Não reescreva o texto em silêncio: o público tem o direito de saber o que foi atualizado."
+    },
+    {
+      "id": "leads-14",
+      "family": "leads",
+      "pt": "Correção: diferentemente do que foi publicado, a obra termina em dezembro, não em novembro.",
+      "style": "documentary",
+      "use": "Correção",
+      "note": "A correção deve ser visível, dizer o que estava errado e qual é a informação certa. Apagar o erro sem aviso compromete a credibilidade."
+    },
+    {
+      "id": "leads-15",
+      "family": "leads",
+      "pt": "Esta reportagem faz parte da série “Uma rua por semana”, que percorre o centro de Xangai.",
+      "style": "documentary",
+      "use": "Contexto de série",
+      "note": "Situa o conteúdo num projeto maior e ajuda o público a encontrar os outros episódios."
+    },
+    {
+      "id": "telejornalismo-01",
+      "family": "telejornalismo",
+      "pt": "Um bairro inteiro mudou de ritmo depois da chegada do metrô. Nossa reportagem foi até lá ver o que ficou e o que se perdeu.",
+      "style": "filmmaking",
+      "use": "Cabeça",
+      "note": "A cabeça é o texto que o apresentador lê para introduzir a reportagem: curta, com a notícia na primeira frase e a chamada para a matéria na segunda."
+    },
+    {
+      "id": "telejornalismo-02",
+      "family": "telejornalismo",
+      "pt": "Às seis da manhã, o primeiro trem chega lotado. Em poucos minutos, a calçada vira corredor.",
+      "style": "filmmaking",
+      "use": "Off",
+      "note": "O off é a narração do repórter sobre as imagens. Escreva para a imagem: acrescente o que ela não mostra, sem descrever o óbvio."
+    },
+    {
+      "id": "telejornalismo-03",
+      "family": "telejornalismo",
+      "pt": "Estou no ponto exato onde a rua antiga encontra a avenida nova. De um lado, casas de dois andares; do outro, torres de trinta.",
+      "style": "filmmaking",
+      "use": "Passagem",
+      "note": "Na passagem, o repórter aparece no meio da matéria. Ela precisa justificar a presença dele no lugar — mostrar algo que só se entende estando ali."
+    },
+    {
+      "id": "telejornalismo-04",
+      "family": "telejornalismo",
+      "pt": "Quem acompanha essa mudança de perto é dona Li, que vende chá nesta esquina há trinta anos.",
+      "style": "filmmaking",
+      "use": "Apresentação de sonora",
+      "note": "Antes da sonora (trecho de entrevista), apresente quem vai falar e por que essa pessoa importa. A fala deve trazer o que só ela pode dizer."
+    },
+    {
+      "id": "telejornalismo-05",
+      "family": "telejornalismo",
+      "pt": "A preocupação de dona Li se repete entre os vizinhos.",
+      "style": "filmmaking",
+      "use": "Costura entre sonoras",
+      "note": "Frases de costura ligam uma sonora a outra. “Se repete” exige ter ouvido várias pessoas — não generalize a partir de uma única fala."
+    },
+    {
+      "id": "telejornalismo-06",
+      "family": "telejornalismo",
+      "pt": "Segundo a operadora, são 40 mil passageiros por dia — o dobro do previsto.",
+      "style": "filmmaking",
+      "use": "Off de dado",
+      "note": "No off, um número por frase e sempre com fonte. Comparações (“o dobro”) ajudam o público a entender a escala de ouvido."
+    },
+    {
+      "id": "telejornalismo-07",
+      "family": "telejornalismo",
+      "pt": "A prefeitura informou que as obras terminam em dezembro.",
+      "style": "filmmaking",
+      "use": "Nota pé",
+      "note": "A nota pé é lida pelo apresentador depois da reportagem: em geral, a posição oficial, o outro lado ou uma atualização."
+    },
+    {
+      "id": "telejornalismo-08",
+      "family": "telejornalismo",
+      "pt": "Neste momento, a estação continua fechada. A última informação da operadora, de vinte minutos atrás, é que não há previsão de reabertura.",
+      "style": "filmmaking",
+      "use": "Entrada ao vivo",
+      "note": "Ao vivo, diga a hora da informação e de quem ela vem. O que ainda não se sabe deve ser dito como tal — nada de especular para preencher o tempo."
+    },
+    {
+      "id": "telejornalismo-09",
+      "family": "telejornalismo",
+      "pt": "Este é o último mercado de rua do bairro. Segundo a administração, ele pode fechar em três meses.",
+      "style": "filmmaking",
+      "use": "Passagem de abertura",
+      "note": "Quando o repórter abre a matéria na cena, a afirmação mais forte precisa vir atribuída. A imagem do lugar não substitui a fonte."
+    },
+    {
+      "id": "telejornalismo-10",
+      "family": "telejornalismo",
+      "pt": "Metrô muda a rotina de um bairro inteiro. E a comida de rua que resiste à reforma.",
+      "style": "filmmaking",
+      "use": "Escalada",
+      "note": "A escalada é a sequência de manchetes no início do programa: frases curtas, verbo no presente, uma ideia por frase."
+    },
+    {
+      "id": "telejornalismo-11",
+      "family": "telejornalismo",
+      "pt": "Enquanto a cidade dorme, os caminhões de entrega ocupam a faixa da direita.",
+      "style": "filmmaking",
+      "use": "Off de ambientação",
+      "note": "Off curto para imagens de apoio. Funciona quando a imagem confirma exatamente o que o texto diz."
+    },
+    {
+      "id": "telejornalismo-12",
+      "family": "telejornalismo",
+      "pt": "A rua continua de pé. A pergunta agora é quem vai conseguir continuar morando nela.",
+      "style": "filmmaking",
+      "use": "Encerramento",
+      "note": "O encerramento retoma a pergunta central da reportagem. Evite conclusões que o material não sustenta e frases de efeito sem conteúdo."
+    },
+    {
+      "id": "telejornalismo-13",
+      "family": "telejornalismo",
+      "pt": "Em Xangai, para o StoryLab, eu sou…",
+      "style": "filmmaking",
+      "use": "Assinatura",
+      "note": "A assinatura fecha a passagem final com lugar, veículo e nome. Mantenha sempre a mesma ordem para criar identidade."
+    },
+    {
+      "id": "precisao-01",
+      "family": "precisao",
+      "pt": "Cerca de 200 pessoas aguardavam às 9h, segundo contagem da reportagem.",
+      "style": "analytical",
+      "use": "Estimativa",
+      "note": "“Cerca de” e “aproximadamente” sinalizam estimativa. Diga quem estimou e como — contagem própria, organizadores ou autoridade."
+    },
+    {
+      "id": "precisao-02",
+      "family": "precisao",
+      "pt": "Pelo menos três lojas fecharam desde janeiro.",
+      "style": "analytical",
+      "use": "Piso confirmado",
+      "note": "“Pelo menos” indica o mínimo confirmado: pode haver mais. É mais honesto do que arredondar para cima."
+    },
+    {
+      "id": "precisao-03",
+      "family": "precisao",
+      "pt": "A maioria dos comerciantes ouvidos — sete de dez — relatou queda no movimento.",
+      "style": "analytical",
+      "use": "Proporção com universo",
+      "note": "“Maioria” precisa vir com o número e o universo (“dos ouvidos”). Sem isso, parece representar o bairro inteiro."
+    },
+    {
+      "id": "precisao-04",
+      "family": "precisao",
+      "pt": "Quase metade das bancas — 23 de 50 — fecha antes das 14h.",
+      "style": "analytical",
+      "use": "Aproximação exata",
+      "note": "“Quase” indica que o valor não chega ao marco citado. Quando você tem o número, mostre-o."
+    },
+    {
+      "id": "precisao-05",
+      "family": "precisao",
+      "pt": "Estima-se que o trajeto leve 40 minutos, segundo o aplicativo da operadora.",
+      "style": "analytical",
+      "use": "Estimativa atribuída",
+      "note": "“Estima-se” esconde quem fez a estimativa. Complete sempre com a fonte — ou reescreva: “A operadora estima…”."
+    },
+    {
+      "id": "precisao-06",
+      "family": "precisao",
+      "pt": "Os dados são preliminares e podem ser revisados.",
+      "style": "analytical",
+      "use": "Provisoriedade",
+      "note": "Avisar que um dado é preliminar protege o público e a reportagem. Se ele mudar, atualize."
+    },
+    {
+      "id": "precisao-07",
+      "family": "precisao",
+      "pt": "Até o momento, não há confirmação oficial sobre a causa da interrupção.",
+      "style": "analytical",
+      "use": "Lacuna de informação",
+      "note": "Diga o que ainda não se sabe com a mesma clareza do que se sabe. “Até o momento” marca que a situação pode mudar."
+    },
+    {
+      "id": "precisao-08",
+      "family": "precisao",
+      "pt": "Com os dados disponíveis, não é possível afirmar que a reforma causou a queda nas vendas.",
+      "style": "analytical",
+      "use": "Correlação e causa",
+      "note": "Duas coisas que acontecem juntas não são, necessariamente, causa e efeito. Separe a coincidência da explicação comprovada."
+    },
+    {
+      "id": "precisao-09",
+      "family": "precisao",
+      "pt": "Segundo a polícia, o homem detido é suspeito de furtar bicicletas na região.",
+      "style": "analytical",
+      "use": "Presunção de inocência",
+      "note": "Atribua a suspeita à autoridade e não trate suspeito como culpado. “Suposto” atenua, mas não substitui a atribuição."
+    },
+    {
+      "id": "precisao-10",
+      "family": "precisao",
+      "pt": "O preço é 20% maior que o do ano passado, sem descontar a inflação.",
+      "style": "analytical",
+      "use": "Valor nominal",
+      "note": "Informe se a comparação considera a inflação. Um aumento nominal pode ser, na prática, estabilidade ou até queda real."
+    },
+    {
+      "id": "precisao-11",
+      "family": "precisao",
+      "pt": "Os números absolutos cresceram, mas a proporção se manteve estável.",
+      "style": "analytical",
+      "use": "Absoluto e relativo",
+      "note": "Números absolutos e proporções contam histórias diferentes. Diga qual dos dois sustenta a sua conclusão."
+    },
+    {
+      "id": "precisao-12",
+      "family": "precisao",
+      "pt": "A informação não pôde ser verificada de forma independente.",
+      "style": "analytical",
+      "use": "Transparência de verificação",
+      "note": "Quando divulgar algo sem confirmação própria, diga isso explicitamente — e por que, mesmo assim, a informação é relevante."
+    },
+    {
+      "id": "precisao-13",
+      "family": "precisao",
+      "pt": "A reportagem visitou o local em três dias diferentes para confirmar o padrão.",
+      "style": "analytical",
+      "use": "Método",
+      "note": "Explicar o método mostra ao público o tamanho da evidência. Três visitas sustentam um padrão local, não uma regra da cidade."
+    },
+    {
+      "id": "precisao-14",
+      "family": "precisao",
+      "pt": "Em tese, a nova linha reduziria o tempo de viagem; na prática, os usuários relatam atrasos.",
+      "style": "analytical",
+      "use": "Expectativa e realidade",
+      "note": "“Em tese” e “na prática” contrapõem o previsto ao observado. Os dois lados precisam de fonte."
+    },
+    {
+      "id": "precisao-15",
+      "family": "precisao",
+      "pt": "Aparentemente, a banca está fechada há semanas: há poeira acumulada e correspondência na porta.",
+      "style": "analytical",
+      "use": "Inferência com indícios",
+      "note": "“Aparentemente” sinaliza inferência. Mostre os indícios que levaram a ela — e confirme com alguém antes de afirmar."
+    },
+    {
+      "id": "precisao-16",
+      "family": "precisao",
+      "pt": "Ainda não se sabe quantos moradores serão afetados.",
+      "style": "analytical",
+      "use": "Incerteza assumida",
+      "note": "Assumir a incerteza é melhor do que preenchê-la com estimativas sem base. Indique quando a informação deve sair, se souber."
+    },
+    {
+      "id": "precisao-17",
+      "family": "precisao",
+      "pt": "O dado se refere a 2024; não há números mais recentes publicados.",
+      "style": "analytical",
+      "use": "Data do dado",
+      "note": "Todo número tem data. Informe o período e se existe atualização — números velhos apresentados como atuais distorcem a realidade."
+    },
+    {
+      "id": "estilo-01",
+      "family": "estilo",
+      "pt": "A decisão será tomada em reunião na próxima semana.",
+      "style": "analytical",
+      "use": "Sem “a nível de”",
+      "note": "Evite “a nível de” (“a decisão será tomada a nível de reunião”). “Em nível de” só faz sentido quando há níveis reais: “em nível federal”."
+    },
+    {
+      "id": "estilo-02",
+      "family": "estilo",
+      "pt": "Há dez anos, a rua era residencial.",
+      "style": "analytical",
+      "use": "Sem redundância temporal",
+      "note": "Use “há dez anos” ou “dez anos atrás” — nunca os dois juntos (“há dez anos atrás”)."
+    },
+    {
+      "id": "estilo-03",
+      "family": "estilo",
+      "pt": "O bairro em que cresci mudou muito.",
+      "style": "analytical",
+      "use": "“Onde” só para lugar",
+      "note": "“Onde” indica lugar físico (“a rua onde moro”). Para tempo, situação ou ideia, use “em que”, “no qual” ou “quando”: “a reunião em que se decidiu”."
+    },
+    {
+      "id": "estilo-04",
+      "family": "estilo",
+      "pt": "Como repórter, procurei ouvir os dois lados.",
+      "style": "analytical",
+      "use": "“Como”, não “enquanto”",
+      "note": "No sentido de “na condição de”, prefira “como”. “Enquanto” é temporal ou contrastivo, e o uso “enquanto repórter” é criticado por manuais."
+    },
+    {
+      "id": "estilo-05",
+      "family": "estilo",
+      "pt": "O preço subiu.",
+      "style": "analytical",
+      "use": "Verbo direto",
+      "note": "Prefira o verbo ao substantivo: “subiu” em vez de “sofreu um aumento”. Preços não sofrem; frases diretas são mais claras e mais curtas."
+    },
+    {
+      "id": "estilo-06",
+      "family": "estilo",
+      "pt": "A obra começou em março e terminou em outubro.",
+      "style": "analytical",
+      "use": "Sem nominalização",
+      "note": "“A obra teve início em março e foi finalizada em outubro” diz o mesmo com mais palavras. Verbos concretos dão ritmo à fala."
+    },
+    {
+      "id": "estilo-07",
+      "family": "estilo",
+      "pt": "A loja fechou porque o aluguel dobrou, segundo o dono.",
+      "style": "analytical",
+      "use": "Causa sem rodeios",
+      "note": "“Devido ao fato de que” e “em virtude de” alongam a frase sem acrescentar sentido. “Porque” resolve."
+    },
+    {
+      "id": "estilo-08",
+      "family": "estilo",
+      "pt": "Três problemas se repetem nas falas dos moradores: barulho, preço e falta de sombra.",
+      "style": "analytical",
+      "use": "Enumeração concreta",
+      "note": "“Uma série de questões” é vago. Se você sabe quais são, enumere."
+    },
+    {
+      "id": "estilo-09",
+      "family": "estilo",
+      "pt": "O trânsito ficou parado por duas horas na avenida principal.",
+      "style": "analytical",
+      "use": "Descrição no lugar do clichê",
+      "note": "Evite “caos no trânsito” sem dado. Descreva o que aconteceu: onde, por quanto tempo, com que efeito."
+    },
+    {
+      "id": "estilo-10",
+      "family": "estilo",
+      "pt": "A feira reúne 40 expositores.",
+      "style": "analytical",
+      "use": "Sem “conta com”",
+      "note": "“A feira conta com a presença de 40 expositores” é prolixo. Diga diretamente o que acontece."
+    },
+    {
+      "id": "estilo-11",
+      "family": "estilo",
+      "pt": "O projeto foi aprovado por 7 votos a 2.",
+      "style": "analytical",
+      "use": "Número no lugar do adjetivo",
+      "note": "“Por ampla maioria” é avaliação. O placar informa — e deixa o público julgar se a maioria foi ampla."
+    },
+    {
+      "id": "estilo-12",
+      "family": "estilo",
+      "pt": "O resultado surpreendeu os organizadores.",
+      "style": "analytical",
+      "use": "Sem redundância",
+      "note": "Evite pleonasmos comuns: “surpresa inesperada”, “elo de ligação”, “acabamento final”, “fato real”, “encarar de frente”."
+    },
+    {
+      "id": "estilo-13",
+      "family": "estilo",
+      "pt": "A ponte foi reaberta ontem, depois de duas semanas de reparos.",
+      "style": "analytical",
+      "use": "Tempo concreto",
+      "note": "Quando você sabe a data, diga. “Recentemente” e “há algum tempo” deixam o público sem referência."
+    },
+    {
+      "id": "estilo-14",
+      "family": "estilo",
+      "pt": "Com base nos dados da operadora, o trajeto ficou dez minutos mais curto.",
+      "style": "analytical",
+      "use": "Sentido preciso de “a partir de”",
+      "note": "“A partir de” é temporal (“a partir de segunda”). No sentido de fundamento, “com base em” evita ambiguidade."
+    },
+    {
+      "id": "estilo-15",
+      "family": "estilo",
+      "pt": "Os moradores pediram mais iluminação na praça.",
+      "style": "analytical",
+      "use": "Sem muletas da fala",
+      "note": "Na fala, “inclusive”, “na verdade” e “tipo” viram enchimento. Releia a transcrição e corte o que não muda o sentido."
+    },
+    {
+      "id": "estilo-16",
+      "family": "estilo",
+      "pt": "A estação recebe cerca de 40 mil pessoas por dia.",
+      "style": "analytical",
+      "use": "Frase curta para dado",
+      "note": "Uma informação por frase quando há número. Frases longas com vários dados obrigam o público a reler — e, no vídeo, ele não pode."
     }
   ],
   "deepLessons": {
