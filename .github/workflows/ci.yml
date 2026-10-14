@@ -24,10 +24,10 @@ jobs:
           node --check atlas-engine.js
           node --check atlas-recorder.js
           node --check atlas-audio-ui.js
-      - name: Testar interações do Atlas
-        run: |
-          node test_atlas.mjs
-          node test_recorder.mjs
+      - name: Testar navegação e conteúdo do Atlas
+        run: node test_atlas.mjs
+      - name: Testar gravador local
+        run: node test_recorder.mjs
       - name: Montar versão offline
         run: |
           python build_standalone.py
