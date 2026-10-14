@@ -69,6 +69,41 @@
       "O desenho curvilíneo dos galhos contrasta com a geometria dos edifícios.",
       "Enquanto a fachada se organiza em eixos regulares, a vegetação ocupa o espaço de maneira menos uniforme.",
       "Minha impressão é que essa diferença de formas torna a caminhada visualmente mais variada."
+    ],
+    "swaps": [
+      {
+        "vague": "bonito",
+        "options": [
+          "simétrico",
+          "orgânico",
+          "modular"
+        ],
+        "weak": "A fachada é bonita.",
+        "strong": "A fachada é quase simétrica: duas janelas iguais ladeiam a porta central.",
+        "flag": true
+      },
+      {
+        "vague": "diferente",
+        "options": [
+          "assimétrico",
+          "curvilíneo",
+          "angular"
+        ],
+        "weak": "O prédio tem um formato diferente.",
+        "strong": "O prédio tem um volume curvilíneo que se destaca entre blocos angulares.",
+        "flag": true
+      },
+      {
+        "vague": "estranho",
+        "options": [
+          "assimétrico",
+          "orgânico",
+          "angular"
+        ],
+        "weak": "O banco tem um design estranho.",
+        "strong": "O banco tem contorno orgânico, sem linhas retas, ao contrário dos canteiros.",
+        "flag": true
+      }
     ]
   },
   {
@@ -141,6 +176,41 @@
       "O espaço de entrada de uma das lojas é compacto, com vitrine e porta muito próximas.",
       "A diferença entre o edifício e as lojas fica mais clara quando incluímos pessoas no enquadramento como referência de escala.",
       "Na minha leitura, essa variação de proporções ajuda a revelar camadas diferentes da paisagem urbana."
+    ],
+    "swaps": [
+      {
+        "vague": "grande",
+        "options": [
+          "monumental",
+          "amplo",
+          "imponente"
+        ],
+        "weak": "É um prédio grande.",
+        "strong": "É um edifício monumental: a torre ocupa todo o campo de visão a partir da calçada.",
+        "flag": true
+      },
+      {
+        "vague": "pequeno",
+        "options": [
+          "compacto",
+          "estreito",
+          "baixo"
+        ],
+        "weak": "A loja é pequena.",
+        "strong": "A loja é estreita: cabe apenas um balcão e duas pessoas lado a lado.",
+        "flag": true
+      },
+      {
+        "vague": "enorme",
+        "options": [
+          "monumental",
+          "alongado",
+          "imponente"
+        ],
+        "weak": "A avenida é enorme.",
+        "strong": "A avenida é ampla e alongada; atravessá-la exige duas fases de semáforo.",
+        "flag": true
+      }
     ]
   },
   {
@@ -213,6 +283,41 @@
       "Sobre a madeira, a incidência rasante evidencia veios e pequenas irregularidades.",
       "Enquanto o balcão está iluminado, o corredor ao fundo permanece mais escuro, criando contraste.",
       "Para mim, a passagem entre essas áreas de luz e sombra conduz o olhar até o preparo do café."
+    ],
+    "swaps": [
+      {
+        "vague": "claro",
+        "options": [
+          "difusa",
+          "natural",
+          "refletida"
+        ],
+        "weak": "O café é bem claro.",
+        "strong": "O café recebe luz natural difusa pelas janelas altas, sem sombras marcadas.",
+        "flag": false
+      },
+      {
+        "vague": "escuro",
+        "options": [
+          "indireta",
+          "contrastada",
+          "irregular"
+        ],
+        "weak": "O corredor é escuro.",
+        "strong": "O corredor tem iluminação indireta e irregular: só o fundo recebe luz.",
+        "flag": false
+      },
+      {
+        "vague": "bonita",
+        "options": [
+          "dourada",
+          "rasante",
+          "suave"
+        ],
+        "weak": "A luz da tarde estava bonita.",
+        "strong": "A luz dourada e rasante da tarde revela a textura dos tijolos.",
+        "flag": false
+      }
     ]
   },
   {
@@ -285,6 +390,41 @@
       "O vermelho mais saturado do letreiro se destaca diante das roupas de baixa intensidade cromática.",
       "Comparada à parede neutra do fundo, a combinação das peças cria um conjunto cromático mais quente.",
       "Minha impressão é que o contraste ajuda a organizar a atenção, mas a intenção da marca exigiria confirmação."
+    ],
+    "swaps": [
+      {
+        "vague": "colorido",
+        "options": [
+          "saturado",
+          "vibrante",
+          "complementar"
+        ],
+        "weak": "A vitrine é colorida.",
+        "strong": "A vitrine usa cores saturadas, com vermelho e verde em contraste complementar.",
+        "flag": true
+      },
+      {
+        "vague": "sem graça",
+        "options": [
+          "neutro",
+          "dessaturado",
+          "monocromático"
+        ],
+        "weak": "As roupas são sem graça.",
+        "strong": "As peças seguem uma paleta neutra e dessaturada, em cinzas e beges.",
+        "flag": true
+      },
+      {
+        "vague": "chamativo",
+        "options": [
+          "vibrante",
+          "saturado",
+          "quente"
+        ],
+        "weak": "O letreiro é chamativo.",
+        "strong": "O letreiro usa tons quentes e vibrantes que se destacam do concreto.",
+        "flag": true
+      }
     ]
   },
   {
@@ -357,6 +497,41 @@
       "Um vaso de acabamento fosco contrasta com uma peça metálica que produz reflexos mais nítidos.",
       "Enquanto o vidro deixa ver o fundo, o painel translúcido deixa passar luz e desfoca as formas.",
       "Na minha avaliação, essa alternância de materiais dá ritmo à exposição sem precisar de muitos objetos."
+    ],
+    "swaps": [
+      {
+        "vague": "macio",
+        "options": [
+          "acetinado",
+          "aveludado",
+          "polido"
+        ],
+        "weak": "A cerâmica é macia.",
+        "strong": "A cerâmica tem acabamento acetinado: reflete pouco e parece suave ao toque.",
+        "flag": true
+      },
+      {
+        "vague": "brilhante",
+        "options": [
+          "polido",
+          "metálico",
+          "translúcido"
+        ],
+        "weak": "O balcão é brilhante.",
+        "strong": "O balcão de aço polido reflete as luminárias do teto.",
+        "flag": true
+      },
+      {
+        "vague": "velho",
+        "options": [
+          "áspero",
+          "poroso",
+          "fosco"
+        ],
+        "weak": "A parede é velha.",
+        "strong": "A parede tem reboco áspero e poroso, com pintura fosca descascando.",
+        "flag": true
+      }
     ]
   },
   {
@@ -429,6 +604,41 @@
       "A disposição dos assentos e a iluminação baixa dão ao salão um aspecto intimista.",
       "Ao contrário de um espaço de circulação rápida, este ambiente parece convidar a permanências mais longas.",
       "Eu o descreveria como acolhedor, mas essa é minha impressão diante dos detalhes observados."
+    ],
+    "swaps": [
+      {
+        "vague": "legal",
+        "options": [
+          "acolhedor",
+          "descontraído",
+          "arejado"
+        ],
+        "weak": "O lugar é legal.",
+        "strong": "O salão é arejado e descontraído: mesas espaçadas e conversa em voz baixa.",
+        "flag": true
+      },
+      {
+        "vague": "cheio",
+        "options": [
+          "movimentado",
+          "agitado",
+          "concentrado"
+        ],
+        "weak": "O restaurante estava cheio.",
+        "strong": "O restaurante estava movimentado: todas as mesas ocupadas e fila na porta às 12h.",
+        "flag": false
+      },
+      {
+        "vague": "tranquilo",
+        "options": [
+          "contemplativo",
+          "silencioso",
+          "intimista"
+        ],
+        "weak": "O jardim é tranquilo.",
+        "strong": "O jardim é silencioso e contemplativo; ouve-se apenas a água do lago.",
+        "flag": false
+      }
     ]
   },
   {
@@ -501,6 +711,41 @@
       "O fluxo parece contínuo durante alguns segundos, enquanto o toque das campainhas é intermitente.",
       "Quando comparamos a passagem das bicicletas ao deslocamento dos pedestres, percebemos ritmos diferentes no mesmo espaço.",
       "Minha interpretação é que esses ritmos ajudam a contar a história da praça, mesmo sem uma entrevista."
+    ],
+    "swaps": [
+      {
+        "vague": "rápido",
+        "options": [
+          "acelerado",
+          "brusco",
+          "contínuo"
+        ],
+        "weak": "As bicicletas passam rápido.",
+        "strong": "As bicicletas passam em fluxo contínuo e acelerado quando o sinal abre.",
+        "flag": false
+      },
+      {
+        "vague": "devagar",
+        "options": [
+          "gradual",
+          "cadenciado",
+          "fluido"
+        ],
+        "weak": "As pessoas andam devagar.",
+        "strong": "Os praticantes de tai chi se movem de forma cadenciada e fluida.",
+        "flag": false
+      },
+      {
+        "vague": "confuso",
+        "options": [
+          "intermitente",
+          "oscilante",
+          "brusco"
+        ],
+        "weak": "O trânsito é confuso.",
+        "strong": "O trânsito é intermitente: avança em blocos e para de forma brusca.",
+        "flag": true
+      }
     ]
   },
   {
@@ -573,6 +818,41 @@
       "A volumetria combina um bloco central mais alto e uma ala lateral de menor altura.",
       "Diferentemente de uma construção com frente plana, esse conjunto projeta volumes em profundidades distintas.",
       "Na minha leitura, observar esses recuos ajuda a entender a composição antes mesmo de procurar sua história."
+    ],
+    "swaps": [
+      {
+        "vague": "prédio antigo",
+        "options": [
+          "fachada",
+          "cornija",
+          "arcada"
+        ],
+        "weak": "É um prédio antigo bonito.",
+        "strong": "A fachada de pedra termina numa cornija ornamentada e abre-se em arcada no térreo.",
+        "flag": false
+      },
+      {
+        "vague": "entrada",
+        "options": [
+          "pórtico",
+          "marquise",
+          "vão"
+        ],
+        "weak": "A entrada é grande.",
+        "strong": "Um pórtico de colunas marca a entrada, protegido por uma marquise de vidro.",
+        "flag": false
+      },
+      {
+        "vague": "moderno",
+        "options": [
+          "volumetria",
+          "pilotis",
+          "recuo"
+        ],
+        "weak": "O edifício é moderno.",
+        "strong": "O edifício se apoia em pilotis e tem volumetria de blocos sobrepostos, com recuo da calçada.",
+        "flag": false
+      }
     ]
   },
   {
@@ -645,6 +925,41 @@
       "Uma vitrine ocupa boa parte da fachada, enquanto a travessia fica próxima ao cruzamento.",
       "Em comparação a uma frente fechada, as portas e vitrines oferecem mais pontos de contato visual com a rua.",
       "Minha impressão é que esses elementos tornam a caminhada mais interessante; para avaliar acessibilidade, seria preciso observar o percurso completo."
+    ],
+    "swaps": [
+      {
+        "vague": "movimentado",
+        "options": [
+          "fluxo",
+          "travessia",
+          "fachada ativa"
+        ],
+        "weak": "A rua é movimentada.",
+        "strong": "A rua tem fluxo intenso de pedestres e fachada ativa: lojas abertas em toda a quadra.",
+        "flag": false
+      },
+      {
+        "vague": "agradável",
+        "options": [
+          "arborização",
+          "mobiliário urbano",
+          "permeabilidade"
+        ],
+        "weak": "A praça é agradável.",
+        "strong": "A praça tem arborização densa, bancos sombreados e permeabilidade para várias ruas.",
+        "flag": true
+      },
+      {
+        "vague": "lugar",
+        "options": [
+          "esquina",
+          "quarteirão",
+          "praça"
+        ],
+        "weak": "Fui a um lugar perto do metrô.",
+        "strong": "Fui a uma esquina a um quarteirão da saída 3 do metrô.",
+        "flag": false
+      }
     ]
   },
   {
@@ -717,6 +1032,41 @@
       "Um pesponto visível acompanha a borda do bolso e destaca o acabamento.",
       "Enquanto o casaco mantém linhas mais estruturadas, o tecido da calça forma dobras suaves.",
       "Na minha avaliação, o interesse visual está na relação entre rigidez e fluidez; para julgar a modelagem, precisaria examinar a peça."
+    ],
+    "swaps": [
+      {
+        "vague": "elegante",
+        "options": [
+          "silhueta",
+          "caimento",
+          "modelagem"
+        ],
+        "weak": "O terno é elegante.",
+        "strong": "O terno tem silhueta ajustada e caimento reto, sem rugas nas costas.",
+        "flag": true
+      },
+      {
+        "vague": "bem-feito",
+        "options": [
+          "acabamento",
+          "pesponto",
+          "arremate"
+        ],
+        "weak": "A peça é bem-feita.",
+        "strong": "O pesponto é regular e o arremate interno esconde as costuras.",
+        "flag": true
+      },
+      {
+        "vague": "diferente",
+        "options": [
+          "recorte",
+          "volume",
+          "pregas"
+        ],
+        "weak": "O vestido é diferente.",
+        "strong": "O vestido tem recortes assimétricos e pregas que criam volume no quadril.",
+        "flag": true
+      }
     ]
   },
   {
@@ -789,6 +1139,41 @@
       "Ao provar, a cobertura parece crocante e o molho oferece sensação untuosa.",
       "Comparando as duas texturas, uma se rompe ao mastigar enquanto a outra permanece mais envolvente.",
       "Para mim, esse contraste é o aspecto mais marcante do prato, mas seus ingredientes devem ser confirmados no cardápio ou com a cozinha."
+    ],
+    "swaps": [
+      {
+        "vague": "gostoso",
+        "options": [
+          "aromático",
+          "untuoso",
+          "persistente"
+        ],
+        "weak": "O caldo é gostoso.",
+        "strong": "O caldo é aromático e untuoso, com sabor de gengibre persistente.",
+        "flag": true
+      },
+      {
+        "vague": "delicioso",
+        "options": [
+          "crocante",
+          "cremoso",
+          "defumado"
+        ],
+        "weak": "O bolinho é delicioso.",
+        "strong": "O bolinho é crocante por fora e cremoso por dentro.",
+        "flag": true
+      },
+      {
+        "vague": "forte",
+        "options": [
+          "ácido",
+          "defumado",
+          "persistente"
+        ],
+        "weak": "O molho tem um gosto forte.",
+        "strong": "O molho é ácido, com vinagre escuro, e deixa um retrogosto defumado.",
+        "flag": false
+      }
     ]
   },
   {
@@ -861,6 +1246,41 @@
       "Em alguns pontos do corredor, o anúncio parece permanecer por instantes devido à reverberação.",
       "Enquanto a voz surge em intervalos, o zumbido do ambiente se mantém mais constante durante a gravação.",
       "Na minha escuta, esse contraste de duração ajuda a transmitir a escala do espaço sem precisar nomear equipamentos desconhecidos."
+    ],
+    "swaps": [
+      {
+        "vague": "barulhento",
+        "options": [
+          "ruído",
+          "reverberação",
+          "intensidade"
+        ],
+        "weak": "A estação é barulhenta.",
+        "strong": "A estação tem ruído constante, e a reverberação do teto alto aumenta a intensidade dos anúncios.",
+        "flag": true
+      },
+      {
+        "vague": "silencioso",
+        "options": [
+          "silêncio",
+          "sussurro",
+          "zumbido"
+        ],
+        "weak": "O museu é silencioso.",
+        "strong": "No museu, o silêncio só é interrompido pelo zumbido do ar-condicionado.",
+        "flag": false
+      },
+      {
+        "vague": "som",
+        "options": [
+          "estalo",
+          "cadência",
+          "eco"
+        ],
+        "weak": "Dava para ouvir um som.",
+        "strong": "Ouvia-se o estalo regular das rodas do carrinho, numa cadência de dois tempos.",
+        "flag": false
+      }
     ]
   },
   {
@@ -933,6 +1353,41 @@
       "O enquadramento coloca a figura em primeiro plano e deixa fachadas desfocadas ao fundo.",
       "Comparada a uma imagem com todos os planos nítidos, essa escolha dirige mais atenção à pessoa.",
       "Na minha leitura, a relação entre figura e ambiente dá unidade à cena; a intenção do fotógrafo precisaria ser confirmada."
+    ],
+    "swaps": [
+      {
+        "vague": "foto boa",
+        "options": [
+          "enquadramento",
+          "exposição",
+          "profundidade de campo"
+        ],
+        "weak": "Tirei uma foto boa.",
+        "strong": "O enquadramento isola o vendedor, e a pouca profundidade de campo desfoca a fila.",
+        "flag": false
+      },
+      {
+        "vague": "escura",
+        "options": [
+          "contraluz",
+          "silhueta",
+          "exposição"
+        ],
+        "weak": "A foto ficou escura.",
+        "strong": "Em contraluz, o ciclista virou silhueta porque a exposição foi feita para o céu.",
+        "flag": false
+      },
+      {
+        "vague": "embaçada",
+        "options": [
+          "desfoque",
+          "primeiro plano",
+          "perspectiva"
+        ],
+        "weak": "A foto ficou embaçada.",
+        "strong": "O desfoque no primeiro plano direciona o olhar para a perspectiva da rua.",
+        "flag": false
+      }
     ]
   },
   {
@@ -1005,6 +1460,41 @@
       "Minha primeira reação foi de estranhamento, mas a música de uma cafeteria trouxe familiaridade.",
       "Em vez de classificar o lugar como estranho, consigo comparar essa reação às experiências que já vivi em outros bairros.",
       "Essa mistura de surpresa e reconhecimento descreve minha percepção pessoal, não uma característica universal do bairro."
+    ],
+    "swaps": [
+      {
+        "vague": "incrível",
+        "options": [
+          "admiração",
+          "encantamento",
+          "surpresa"
+        ],
+        "weak": "Foi incrível chegar lá.",
+        "strong": "Senti surpresa ao ver o bairro antigo atrás das torres, e depois admiração pelos detalhes.",
+        "flag": true
+      },
+      {
+        "vague": "esquisito",
+        "options": [
+          "estranhamento",
+          "ambivalência",
+          "curiosidade"
+        ],
+        "weak": "Foi esquisito no começo.",
+        "strong": "No início senti estranhamento; com o tempo, a curiosidade venceu.",
+        "flag": true
+      },
+      {
+        "vague": "bom",
+        "options": [
+          "calma",
+          "familiaridade",
+          "nostalgia"
+        ],
+        "weak": "Foi bom estar ali.",
+        "strong": "A rua me deu uma sensação de familiaridade e calma, quase nostalgia.",
+        "flag": false
+      }
     ]
   },
   {
@@ -1077,6 +1567,41 @@
       "Um canteiro fica adjacente ao primeiro banco; ao fundo, vemos uma pequena escadaria.",
       "Enquanto a fonte atrai o olhar imediatamente, os bancos intercalados com canteiros conduzem a atenção pelas laterais.",
       "Minha impressão é que essa organização ajuda o visitante a perceber diferentes zonas da praça, embora a experiência varie com o trajeto."
+    ],
+    "swaps": [
+      {
+        "vague": "perto",
+        "options": [
+          "adjacente",
+          "em primeiro plano",
+          "sobreposto"
+        ],
+        "weak": "A banca fica perto da fonte.",
+        "strong": "A banca é adjacente à fonte, do lado leste da praça.",
+        "flag": false
+      },
+      {
+        "vague": "atrás",
+        "options": [
+          "ao fundo",
+          "sobreposto",
+          "nas extremidades"
+        ],
+        "weak": "Tem prédios atrás.",
+        "strong": "Ao fundo, as torres aparecem sobrepostas aos telhados baixos.",
+        "flag": false
+      },
+      {
+        "vague": "espalhado",
+        "options": [
+          "intercalado",
+          "alinhado",
+          "na diagonal"
+        ],
+        "weak": "Os bancos ficam espalhados.",
+        "strong": "Os bancos estão intercalados com canteiros e alinhados na diagonal.",
+        "flag": false
+      }
     ]
   },
   {
@@ -1149,6 +1674,41 @@
       "Gradualmente, mais pessoas aparecem na passagem central, enquanto um funcionário termina de arrumar as caixas.",
       "Na sequência, o ritmo fica mais intenso do que nos primeiros instantes filmados.",
       "Minha leitura é que essa progressão oferece uma boa estrutura de história, desde que a montagem preserve a cronologia real."
+    ],
+    "swaps": [
+      {
+        "vague": "depois",
+        "options": [
+          "posteriormente",
+          "na sequência",
+          "mais adiante"
+        ],
+        "weak": "Depois, o mercado encheu.",
+        "strong": "Na sequência, por volta das 7h, os primeiros clientes chegaram.",
+        "flag": false
+      },
+      {
+        "vague": "de repente",
+        "options": [
+          "repentinamente",
+          "no intervalo",
+          "enquanto isso"
+        ],
+        "weak": "De repente, todo mundo saiu.",
+        "strong": "Repentinamente, quando a chuva começou, as bancas cobriram as mercadorias.",
+        "flag": false
+      },
+      {
+        "vague": "aos poucos",
+        "options": [
+          "gradualmente",
+          "ao amanhecer",
+          "ao final"
+        ],
+        "weak": "Aos poucos a rua mudou.",
+        "strong": "Gradualmente, ao amanhecer, as portas de aço foram se abrindo uma a uma.",
+        "flag": false
+      }
     ]
   }
 ]
