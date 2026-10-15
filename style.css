@@ -569,3 +569,48 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 @media(prefers-reduced-motion:reduce){
   .ling-figure-controls .ling-diagram-button{transition:none}
 }
+
+/* v2.12 · Curadoria de ações: contraste real nos modos claro e escuro.
+   Não modifica largura, escala nem distribuição dos diagramas. */
+:root{
+  --action-bg:#a65438;--action-hover:#8d472f;--action-text:#fffefa;
+  --action-disabled-bg:#dde0db;--action-disabled-text:#65706c;
+}
+[data-theme="dark"]{
+  --action-bg:#a65438;--action-hover:#8d472f;--action-text:#fffefa;
+  --action-disabled-bg:#29383b;--action-disabled-text:#a2afac;
+}
+.btn:not(.secondary):not(.ghost){
+  background:var(--action-bg);border-color:var(--action-bg);
+  color:var(--action-text);font-weight:750;
+}
+.btn:not(.secondary):not(.ghost):hover:not(:disabled){
+  background:var(--action-hover);border-color:var(--action-hover);
+}
+.btn:not(.secondary):not(.ghost):focus-visible{
+  outline:3px solid var(--focus);outline-offset:3px;
+}
+[data-theme="dark"] .btn.secondary{
+  background:rgba(255,255,255,.035);
+  border-color:#61777b;color:#f5f0e8;
+}
+[data-theme="dark"] .btn.secondary:hover:not(:disabled){
+  background:rgba(255,255,255,.09);border-color:#95a9aa;
+}
+[data-theme="dark"] .btn.ghost{color:#e2eae6}
+.btn:disabled,.btn[disabled],.btn:not(.secondary):not(.ghost):disabled,.btn:not(.secondary):not(.ghost)[disabled]{
+  opacity:1;background:var(--action-disabled-bg);
+  color:var(--action-disabled-text);border-color:var(--action-disabled-bg);
+  cursor:not-allowed;box-shadow:none;transform:none;
+}
+.btn:disabled:hover,.btn[disabled]:hover{transform:none;box-shadow:none}
+.btn svg{flex:none;stroke:currentColor}
+.ling-figure-controls .ling-diagram-button:focus-visible{
+  outline:3px solid var(--focus);outline-offset:3px;
+}
+.ling-figure-controls .ling-diagram-button[aria-pressed="true"]{
+  background:var(--study-active);border-color:var(--study-active);color:var(--study-on);
+}
+.ling-figure figcaption strong{display:block;margin-top:9px;line-height:1.65;color:var(--ink)}
+.ling-figure-controls{gap:10px}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}

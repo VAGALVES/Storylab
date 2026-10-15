@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.11 — Curadoria visual, rigor e contraste
+## Journalism Academy · Versão 2.12 — Curadoria dos diagramas e hierarquia de ações
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -385,3 +385,7 @@ Edite `content/atlas_guides.json` e execute `python generate_atlas.py` para gera
 ### Privacidade das gravações
 
 A gravação ocorre com a API `MediaRecorder` exclusivamente no navegador, conforme permissão e compatibilidade. Os bytes permanecem num `Blob` temporário. Clique em **Baixar áudio** antes de mudar de exercício ou fechar a aba. Não existe upload, sincronização ou arquivamento automático dos áudios. Apenas os metadados (duração e indicação de take, se houver) e suas autoavaliações entram no backup JSON. A gravação normalmente exige HTTPS e permissão do microfone. Formatos disponíveis dependem do navegador.
+
+### Atualização v2.12 · direção pedagógica e sistema de ações
+
+Revisão de oito diagramas interativos da Academia da Linguagem: três etapas visuais semanticamente distintas em cada um, legenda individual e foco conceitual verificável. Botões principais foram padronizados em cobre de alto contraste, com secundários discretos no modo escuro, estados desabilitados explícitos e foco de teclado. Nenhuma alteração de largura/zoom. Critérios, decisões e limites da auditoria: [CURADORIA_VISUAL.md](CURADORIA_VISUAL.md).

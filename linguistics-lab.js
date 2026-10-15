@@ -1,4 +1,4 @@
-/* StoryLab Shanghai — Academia da Linguagem, v2.1.
+/* StoryLab Shanghai — Academia da Linguagem, revisão de curadoria.
    Estudo acadêmico aprofundado com diagramas semânticos específicos.
    Dados autorais carregados de content/linguistics_chapters.json.
    Nenhuma pontuação automática, rastreador externo ou serviço remoto. */
@@ -17,35 +17,83 @@ window.StoryLabLinguistics = (() => {
     svgText(x+w/2,y+54,desc,'font-size="12" text-anchor="middle" fill="'+(active?'#dfebe4':'#62716c')+'"');
   }
   function diagramNote(item,step){
-    const index=Math.max(0,Math.min(2,Number(step)||0));
-    if(item.visual.kind==='syntax')return [
-      '01 · Oração simples: “O prédio” (sintagma nominal) + “foi reformado” (sintagma verbal).',
-      '02 · Oração com encaixe: a relativa “que fica ao lado do museu” modifica “o prédio”.',
-      '03 · Reformulação para narração: duas frases autônomas ligadas pelo pronome “ele”.'
-    ][index];
-    if(item.visual.kind==='camera')return [
-      '01 · Câmera ao sul, apontada ao norte: a loja aparece à esquerda da entrada.',
-      '02 · Câmera ao norte, apontada ao sul: a praça aparece à esquerda; o referencial se inverte.',
-      '03 · Câmera a oeste, apontada ao leste: a loja fica antes do edifício no percurso.'
-    ][index];
-    return 'Etapa '+String(index+1).padStart(2,'0')+' de 03 · Observe no esquema qual elemento foi destacado.';
+    const i=Math.max(0,Math.min(2,Number(step)||0));
+    const stages={
+      voice:[
+        '01 · Fonética: acompanhe o ar, a fonação, a articulação e a emissão do som.',
+        '02 · Fonologia: trocar /p/ por /b/ distingue “pato” de “bato” em português.',
+        '03 · Variação: “tia” pode ter [t] ou [tʃ] em variedades do português, sem mudar a palavra.'
+      ],
+      stress:[
+        '01 · Foco no referente: o que mudou foi a vitrine.',
+        '02 · Foco no acontecimento: a vitrine mudou, em vez de permanecer igual.',
+        '03 · Foco no tempo: o acontecimento foi ontem.'
+      ],
+      syntax:[
+        '01 · Oração simples: sintagma nominal + sintagma verbal.',
+        '02 · Oração relativa: “que fica ao lado do museu” modifica “o prédio”.',
+        '03 · Reformulação: duas frases independentes ligadas pelo pronome “ele”.'
+      ],
+      layers:[
+        '01 · O dito: “algumas lojas abriram” é a afirmação literal.',
+        '02 · O inferido: “não todas” é uma leitura possível, não uma consequência lógica necessária.',
+        '03 · O verificável: é preciso checar o que ocorreu com as demais lojas.'
+      ],
+      camera:[
+        '01 · Câmera ao sul, apontada ao norte: a loja está à esquerda.',
+        '02 · Câmera ao norte, apontada ao sul: a praça fica à esquerda.',
+        '03 · Câmera a oeste, olhando para leste: a loja antecede o edifício no percurso.'
+      ],
+      chain:[
+        '01 · Enumeração: as palavras não apresentam uma relação discursiva estabelecida.',
+        '02 · Retomada: “árvores”, “copas” e “sombra” passam a sustentar um fio temático.',
+        '03 · Progressão: cada frase retoma uma ideia e apresenta a próxima.'
+      ],
+      act:[
+        '01 · Forma: uma pergunta sobre a capacidade de fechar a janela.',
+        '02 · Força: pode funcionar como pedido indireto naquele contexto.',
+        '03 · Efeito: a pessoa pode atender, recusar ou solicitar esclarecimento.'
+      ],
+      turns:[
+        '01 · Turno inicial: o repórter formula uma pergunta.',
+        '02 · Turno seguinte: a fonte começa a responder e faz uma pausa.',
+        '03 · Autorreparo: a fonte corrige “vinte” para “vinte e duas”.'
+      ]
+    };
+    return (stages[item.visual.kind]||[])[i]||'Etapa '+(i+1)+' de três.';
   }
   function diagramSvg(item, step){
-    const kind=item.visual.kind, active=step%3;
+    const kind=item.visual.kind, active=Math.max(0,Math.min(2,Number(step)||0));
     let art='';
     if(kind==='voice'){
-      const nodes=[['Pulmões','Fluxo de ar'],['Laringe','Vibração'],['Articuladores','Língua e lábios'],['Escuta','Percepção']];
-      art+='<path d="M70 185 Q52 121 84 114 Q115 112 113 183 M124 183 Q124 113 153 114 Q186 121 166 185" fill="#d9e7db" stroke="#214b42" stroke-width="2" opacity=".5"/>';
-      nodes.forEach((n,i)=>{const x=52+i*171;art+=card(x,100,144,81,n[0],n[1],active===Math.min(i,2));if(i<3)art+=line(x+148,140,x+165,140,'marker-end="url(#lingArrow)"')});
-      art+=svgText(380,226,'A fonética descreve a produção e a percepção físicas dos sons.','font-size="14" text-anchor="middle" fill="#62716c"');
-      art+=svgText(380,248,'A fonologia explica como os contrastes funcionam no sistema da língua.','font-size="13" text-anchor="middle" fill="#62716c"');
+
+      if(active===0){
+        art+=card(33,111,153,84,'AR','Pulmões',true)+card(223,111,153,84,'FONAÇÃO','Laringe')+card(413,111,153,84,'ARTICULAÇÃO','Língua e lábios')+card(603,111,124,84,'SOM','Onda física');
+        [189,379,569].forEach(x=>art+=line(x,152,x+30,152,'marker-end="url(#lingArrow)"'));
+        art+=svgText(380,246,'01 · Fonética: como a fala é produzida e transmitida.','font-size="15" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }else if(active===1){
+        art+=card(65,105,280,111,'PATO','/p/ no início',true)+card(414,105,280,111,'BATO','/b/ no início',true);
+        art+=line(349,158,409,158,'marker-start="url(#lingArrow)" marker-end="url(#lingArrow)"');
+        art+=svgText(380,80,'UM CONTRASTE DISTINGUE PALAVRAS','font-size="17" font-weight="700" text-anchor="middle" fill="#a45c42"');
+        art+=svgText(380,255,'02 · Fonologia: /p/ e /b/ distinguem palavras em português.','font-size="15" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }else{
+        art+=card(46,105,216,109,'TIA','Realização [t]',true)+card(498,105,216,109,'TIA','Realização [tʃ]',true);
+        art+=line(267,157,491,157,'stroke-dasharray="6 5"');
+        art+='<circle cx="380" cy="157" r="33" fill="#d9e7db" stroke="#214b42" stroke-width="2"/>';
+        art+=svgText(380,151,'MESMA','font-size="12" font-weight="700" text-anchor="middle" fill="#214b42"')+svgText(380,170,'PALAVRA','font-size="11" text-anchor="middle" fill="#214b42"');
+        art+=svgText(380,255,'03 · Variação de pronúncia não é erro por definição.','font-size="15" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }
     } else if(kind==='stress'){
-      const words=['A VITRINE','MUDOU','ONTEM'],positions=[128,360,595];
-      words.forEach((w,i)=>{const is=i===active, width=i===0?204:165, x=positions[i]-(width/2);art+='<rect x="'+x+'" y="122" width="'+width+'" height="82" rx="13" fill="'+(is?'#214b42':'#f1e3d6')+'"/>'+svgText(positions[i],170,w,'font-size="22" text-anchor="middle" font-weight="'+(is?'760':'530')+'" fill="'+(is?'#fffefa':'#20302d')+'"');});
-      const ys=[[70,102,106],[108,67,108],[111,102,66]][active];
-      art+='<path d="M53 112 Q90 '+ys[0]+' 130 '+ys[0]+' S275 '+ys[1]+' 360 '+ys[1]+' S525 '+ys[2]+' 592 '+ys[2]+' S681 110 707 113" fill="none" stroke="#a45c42" stroke-width="4" stroke-linecap="round"/>';
-      art+=svgText(380,245,['O quê mudou? — A VITRINE.','O que aconteceu? — MUDOU.','Quando aconteceu? — ONTEM.'][active],'font-size="16" text-anchor="middle" fill="#214b42" font-weight="600"');
-      art+=svgText(380,280,'Linha melódica ilustrativa · não representa uma medição acústica','font-size="12" text-anchor="middle" fill="#62716c"');
+
+      const words=['A VITRINE','MUDOU','ONTEM'],xs=[132,380,628],widths=[207,194,194];
+      words.forEach((word,i)=>{
+        const chosen=i===active,w=widths[i],x=xs[i]-w/2;
+        art+='<rect x="'+x+'" y="112" width="'+w+'" height="'+(chosen?104:82)+'" rx="13" fill="'+(chosen?'#214b42':'#f1e3d6')+'" stroke="'+(chosen?'#214b42':'#d3bca8')+'" stroke-width="2"/>';
+        art+=svgText(xs[i],155,word,'font-size="22" font-weight="700" text-anchor="middle" fill="'+(chosen?'#fffefa':'#20302d')+'"');
+        if(chosen){art+=svgText(xs[i],182,'FOCO','font-size="13" font-weight="700" text-anchor="middle" fill="#d9e7db"');art+='<path d="M'+(xs[i]-49)+' 98 L'+(xs[i]+49)+' 98" stroke="#a45c42" stroke-width="5" stroke-linecap="round"/>'}
+      });
+      art+=svgText(380,256,['01 · O que mudou? — A VITRINE.','02 · O que aconteceu? — MUDOU.','03 · Quando mudou? — ONTEM.'][active],'font-size="16" font-weight="600" text-anchor="middle" fill="#214b42"');
+      art+=svgText(380,280,'Ênfase ilustrativa; não é uma medição acústica.','font-size="12" text-anchor="middle" fill="#62716c"');
     } else if(kind==='syntax'){
       if(active===0){
         // 01 — Oração simples: constituintes e funções, sem encaixes.
@@ -55,11 +103,15 @@ window.StoryLabLinguistics = (() => {
         art+=card(428,132,274,86,'SINTAGMA VERBAL','foi reformado');
         art+=svgText(380,257,'01  ·  Duas unidades constituintes formam uma oração.','font-size="15" text-anchor="middle" fill="#214b42" font-weight="600"');
       } else if(active===1){
-        // 02 — Uma relativa encaixada dentro do sintagma nominal.
-        art+=card(195,34,370,68,'ORAÇÃO PRINCIPAL','O prédio ... foi reformado',true);
-        art+=line(381,104,381,144,'marker-end="url(#lingArrow)"');
-        art+=card(210,149,340,76,'ORAÇÃO RELATIVA','que fica ao lado do museu');
-        art+=svgText(380,263,'02  ·  O encaixe adiciona informação sobre “o prédio”.','font-size="15" text-anchor="middle" fill="#214b42" font-weight="600"');
+        // 02 — A relativa integra o sintagma nominal; não é adjunto da oração inteira.
+        art+=card(276,20,208,60,'ORAÇÃO','estrutura completa',true);
+        art+=line(380,82,201,109)+line(380,82,555,109);
+        art+=card(38,112,326,70,'SINTAGMA NOMINAL','O prédio que fica ao lado...');
+        art+=card(419,112,305,70,'SINTAGMA VERBAL','foi reformado');
+        art+=line(201,184,201,197,'marker-end="url(#lingArrow)"');
+        art+=card(42,201,322,61,'ORAÇÃO RELATIVA','que fica ao lado do museu',true);
+        art+=svgText(551,245,'Modifica “o prédio”','font-size="14" font-weight="600" text-anchor="middle" fill="#214b42"');
+        art+=svgText(380,282,'02 · A relativa está encaixada no sintagma nominal.','font-size="14" text-anchor="middle" fill="#214b42"');
       } else {
         // 03 — Reformulação para voz: duas orações e uma retomada anafórica.
         art+=card(35,107,314,94,'FRASE 1','O prédio foi reformado.',true);
@@ -69,12 +121,19 @@ window.StoryLabLinguistics = (() => {
         art+=svgText(380,257,'03  ·  A anáfora conecta duas frases mais curtas.','font-size="15" text-anchor="middle" fill="#214b42" font-weight="600"');
       }
     } else if(kind==='layers'){
-      art+=card(26,108,211,91,'O QUE FOI DITO','Algumas lojas abriram',active===0);
-      art+=card(274,108,211,91,'O QUE FOI INFERIDO','Talvez nem todas',active===1);
-      art+=card(522,108,211,91,'O QUE FALTA SABER','As outras abriram?',active===2);
-      art+=line(241,153,269,153,'marker-end="url(#lingArrow)" stroke-dasharray="5 5"');
-      art+=line(489,153,516,153,'marker-end="url(#lingArrow)" stroke-dasharray="5 5"');
-      art+=svgText(380,249,'Inferência conversacional ≠ evidência de que a hipótese é verdadeira.','font-size="14" text-anchor="middle" fill="#214b42"');
+
+      if(active===0){
+        art+=card(175,108,410,100,'AFIRMAÇÃO LITERAL','Algumas lojas abriram.',true);
+        art+=svgText(380,248,'01 · É isso que a frase afirma diretamente.','font-size="15" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }else if(active===1){
+        art+=card(45,109,292,93,'DITO','Algumas lojas abriram.')+card(421,109,292,93,'INFERÊNCIA','Talvez nem todas tenham aberto',true);
+        art+=line(341,155,415,155,'stroke-dasharray="6 5" marker-end="url(#lingArrow)"');
+        art+=svgText(380,246,'02 · Inferência possível, não uma conclusão necessária.','font-size="14" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }else{
+        art+=card(51,112,257,92,'HIPÓTESE','Nem todas abriram?')+card(452,112,257,92,'CHECAGEM','E as demais lojas?',true);
+        art+=line(314,156,446,156,'stroke-dasharray="6 5" marker-end="url(#lingArrow)"');
+        art+=svgText(380,249,'03 · Verificar é perguntar, observar ou buscar evidência.','font-size="15" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }
     } else if(kind==='camera'){
       // Representação esquemática em planta; cima=N e baixo=S.
       // A posição da câmera e o sentido do olhar mudam a cada etapa.
@@ -103,18 +162,59 @@ window.StoryLabLinguistics = (() => {
         '03  ·  Olhando para leste: a loja vem antes do edifício.'
       ][active],'font-size="13" text-anchor="middle" fill="#214b42" font-weight="600"');
     } else if(kind==='chain'){
-      const terms=[['ÁRVORES','tema'],['COPAS','retomada'],['SOMBRA','informação nova'],['BANCOS','novo foco']];
-      terms.forEach((n,i)=>{const x=26+i*183;art+=card(x,108,161,84,n[0],n[1],active===Math.min(i,2));if(i<3)art+=line(x+163,148,x+179,148,'marker-end="url(#lingArrow)"')});
-      art+=svgText(380,236,'A repetição controlada mantém o referente reconhecível entre frases.','font-size="14" fill="#214b42" text-anchor="middle"');
+
+      if(active===0){
+        [['ÁRVORES',95],['FACHADAS',284],['BANCOS',473],['PESSOAS',662]].forEach(([name,x])=>{
+          art+='<rect x="'+(x-78)+'" y="117" width="156" height="80" rx="13" fill="#f1e3d6" stroke="#d3bca8"/>';
+          art+=svgText(x,161,name,'font-size="15" font-weight="700" text-anchor="middle" fill="#20302d"');
+        });
+        art+=svgText(380,244,'01 · Detalhes isolados: ainda não há progressão temática.','font-size="14" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }else if(active===1){
+        art+=card(49,113,194,86,'ÁRVORES','Referente inicial',true)+card(283,113,194,86,'COPAS','Retomada lexical')+card(517,113,194,86,'SOMBRA','Informação nova');
+        art+=line(247,155,276,155,'marker-end="url(#lingArrow)"')+line(481,155,510,155,'marker-end="url(#lingArrow)"');
+        art+=svgText(380,244,'02 · Um referente retomado prepara o próximo detalhe.','font-size="14" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }else{
+        [['1. AS ÁRVORES','possuem copas amplas'],['2. ESSAS COPAS','formam áreas de sombra'],['3. NA SOMBRA','observamos bancos']].forEach((n,i)=>{
+          const x=38+i*248;art+=card(x,114,224,94,n[0],n[1],i===2);
+          if(i<2)art+=line(x+227,160,x+244,160,'marker-end="url(#lingArrow)"');
+        });
+        art+=svgText(380,253,'03 · Tema conhecido → acréscimo → novo tema de narração.','font-size="14" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }
     } else if(kind==='act'){
-      const labels=[['FORMA','Você pode fechar?'],['AÇÃO POSSÍVEL','Pedido indireto'],['REAÇÃO POSSÍVEL','Pode fechar a janela']];
-      labels.forEach((n,i)=>{const x=27+i*249;art+=card(x,112,207,86,n[0],n[1],active===i);if(i<2)art+=line(x+210,156,x+245,156,'marker-end="url(#lingArrow)"')});
-      art+=svgText(380,243,'A passagem da forma à ação depende de contexto e interlocutores.','font-size="14" fill="#214b42" text-anchor="middle"');
+
+      if(active===0){
+        art+=card(144,105,470,111,'FORMA INTERROGATIVA','Você consegue fechar a janela?',true);
+        art+=svgText(380,249,'01 · Literalmente, pergunta sobre capacidade.','font-size="15" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }else if(active===1){
+        art+=card(52,115,299,93,'FORMA','Você consegue fechar?')+card(406,115,299,93,'ATO POSSÍVEL','Pedido indireto',true);
+        art+=line(355,158,399,158,'stroke-dasharray="6 5" marker-end="url(#lingArrow)"');
+        art+=svgText(380,250,'02 · Contexto e relação social ajudam a interpretar o pedido.','font-size="14" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }else{
+        art+=card(41,106,202,90,'PEDIDO','Fechar a janela',true);
+        art+=card(316,54,402,79,'REAÇÃO POSSÍVEL A','A pessoa fecha a janela');
+        art+=card(316,173,402,79,'REAÇÃO POSSÍVEL B','A pessoa recusa ou pede esclarecimento');
+        art+='<path d="M246 150 L278 150 L278 94 L310 94 M278 150 L278 214 L310 214" fill="none" stroke="#a45c42" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#lingArrow)"/>';
+        art+=svgText(380,280,'03 · A reação não é garantida pelo enunciado.','font-size="13" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }
     } else if(kind==='turns'){
-      const turns=[['REPÓRTER','Quantas unidades?',35,50,210],['FONTE','Foram vinte...',225,118,195],['FONTE','melhor: vinte e duas',430,180,288]];
-      turns.forEach((n,i)=>{const x=n[2];art+='<rect x="'+x+'" y="'+n[3]+'" width="'+n[4]+'" height="58" rx="10" fill="'+(active===i?'#214b42':i===0?'#d9e7db':'#f1e3d6')+'" />'+svgText(x+11,n[3]+20,n[0],'font-size="12" font-weight="700" fill="'+(active===i?'#fff':'#62716c')+'"')+svgText(x+11,n[3]+42,n[1],'font-size="15" fill="'+(active===i?'#fff':'#20302d')+'"');});
-      art+='<path d="M245 91 Q292 108 322 117 M420 152 Q449 179 466 181" fill="none" stroke="#a45c42" stroke-dasharray="6 6" stroke-width="2"/>';
-      art+=svgText(380,262,'Pergunta → resposta inicial → reparo: o sentido evolui na sequência.','font-size="13" fill="#214b42" text-anchor="middle"');
+
+      if(active===0){
+        art+=card(74,102,273,98,'REPÓRTER','Quantas unidades?',true);
+        art+=card(414,102,273,98,'FONTE','Aguardando resposta');
+        art+=line(352,150,408,150,'marker-end="url(#lingArrow)"');
+        art+=svgText(380,253,'01 · O primeiro turno cria uma expectativa de resposta.','font-size="14" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }else if(active===1){
+        art+=card(56,105,257,102,'PERGUNTA','Quantas unidades?');
+        art+=card(436,105,268,102,'RESPOSTA PARCIAL','Foram vinte...',true);
+        art+=line(318,157,429,157,'marker-end="url(#lingArrow)"');
+        art+=svgText(380,249,'02 · As reticências registram uma pausa, não provam intenção.','font-size="14" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }else{
+        art+=card(35,111,240,97,'PRIMEIRA VERSÃO','Foram vinte...');
+        art+=card(485,111,240,97,'AUTORREPARO','Melhor: vinte e duas',true);
+        art+=line(280,156,479,156,'stroke-dasharray="6 5" marker-end="url(#lingArrow)"');
+        art+=svgText(380,79,'ATUALIZAÇÃO DO DADO','font-size="17" font-weight="700" text-anchor="middle" fill="#a45c42"');
+        art+=svgText(380,252,'03 · O número corrigido é 22; não preserve 20 como resposta final.','font-size="14" font-weight="600" text-anchor="middle" fill="#214b42"');
+      }
     }
     return '<svg class="ling-diagram" viewBox="0 0 760 300" role="img" aria-label="'+escape(item.visual.title+': '+item.visual.caption+' '+diagramNote(item,active))+'" xmlns="http://www.w3.org/2000/svg">'+base+
     '<rect x="1" y="1" width="758" height="298" rx="21" fill="#fffefa" stroke="#e0d6cb" stroke-width="2"/>'+

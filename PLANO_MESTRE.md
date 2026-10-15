@@ -609,3 +609,8 @@ A academia existente conta com 172 aulas introdutórias. Para atacar a superfici
 - Multimodalidade, legenda e relação entre imagem, som e fala.
 
 Cada novo capítulo deve ser escrito e revisado individualmente. Não elevar contagens apenas por variações superficiais nem sugerir que leitura externa já foi integralmente auditada por docentes.
+
+
+## Ciclo v2.12 — Direção de arte e curadoria da Academia da Linguagem
+
+Os oito diagramas da trilha de linguística possuem 24 perspectivas visuais (3 por conceito), revistas para mostrar relações efetivas e evitar causalidade fictícia. A prova de qualidade usa testes de mudança **geométrica**, não apenas mudança de legenda. Ações primárias recebem cor cobre com contraste WCAG AA; secundárias usam superfícies discretas e alto contraste no modo noturno. Largura e ampliação dos esquemas não foram modificadas. Ver `CURADORIA_VISUAL.md` para o quadro de decisões por tema.

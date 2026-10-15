@@ -80,15 +80,23 @@ function contrast(a,b){
 assert.ok(contrast('#24594d','#fffefa')>=4.5,'seleção clara com contraste AA');
 assert.ok(contrast('#b4dac9','#172d27')>=4.5,'seleção escura com contraste AA');
 
+assert.ok(contrast('#a65438','#fffefa')>=4.5,'botão primário cobre com contraste AA');
+assert.ok(contrast('#8d472f','#fffefa')>=4.5,'hover do botão cobre com contraste AA');
+assert.ok(contrast('#f5f0e8','#213238')>=4.5,'botão secundário no tema escuro tem contraste AA');
+assert.match(css,/--action-bg:#a65438/);
+assert.match(css,/\[data-theme="dark"\] \.btn\.secondary/);
+
 const chapters=JSON.parse(read('./content/linguistics_chapters.json'));
 const WL={STORYLAB_LINGUISTICS:chapters};
 vm.runInNewContext(read('./linguistics-lab.js'),{window:WL,document:{addEventListener(){}}});
 for(const ch of chapters){
  const steps=[0,1,2].map(i=>WL.StoryLabLinguistics.diagramSvg(ch,i));
  assert.equal(new Set(steps).size,3,ch.id+' tem três perspectivas distintas');
+ const shapes=steps.map(svg=>svg.replace(/aria-label="[^"]*"/g,'').replace(/<text[^>]*>[^<]*<\/text>/g,''));
+ assert.equal(new Set(shapes).size,3,ch.id+' precisa mudar o mecanismo visual, não apenas a legenda');
 }
 assert.match(WL.StoryLabLinguistics.diagramSvg(chapters.find(c=>c.visual.kind==='stress'),1),
- /não representa uma medição acústica/);
+ /não é uma medição acústica/);
 assert.match(WL.StoryLabLinguistics.diagramSvg(chapters.find(c=>c.visual.kind==='act'),2),
  /REAÇÃO POSSÍVEL/);
 console.log('Curadoria visual: 351 SVGs, 148 progressões sem falsa precisão, 8 diagramas de 3 estados, contraste AA — OK');

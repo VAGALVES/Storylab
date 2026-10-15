@@ -59,6 +59,27 @@ for(const c of chapters){
   assert.match(app.diagramSvg(c,1),/STORYLAB/);
   assert.match(app.diagramSvg(c,2),/<\/svg>/);
 }
+// Curadoria pedagógica: o traçado dos três estados precisa mudar, não só a legenda.
+const expectedStages={
+ voice:[/Pulmões/,/PATO/,/Realização \[tʃ\]/],
+ stress:[/A VITRINE/,/MUDOU/,/ONTEM/],
+ syntax:[/SINTAGMA NOMINAL/,/ORAÇÃO RELATIVA/,/FRASE 2/],
+ layers:[/AFIRMAÇÃO LITERAL/,/INFERÊNCIA/,/CHECAGEM/],
+ camera:[/Olhando para o norte/,/Olhando para o sul/,/Olhando para leste/],
+ chain:[/FACHADAS/,/Retomada lexical/,/NA SOMBRA/],
+ act:[/FORMA INTERROGATIVA/,/Pedido indireto/,/REAÇÃO POSSÍVEL B/],
+ turns:[/REPÓRTER/,/RESPOSTA PARCIAL/,/AUTORREPARO/]
+};
+for(const ch of chapters){
+ const stages=[0,1,2].map(i=>app.diagramSvg(ch,i));
+ const geometry=stages.map(s=>s.replace(/aria-label="[^"]*"/g,'').replace(/<text[^>]*>[^<]*<\/text>/g,''));
+ assert.equal(new Set(geometry).size,3,ch.id+' deve ter três composições gráficas distintas');
+ stages.forEach((svg,i)=>{
+  assert.match(svg,expectedStages[ch.visual.kind][i],ch.id+' etapa '+(i+1));
+  assert.match(svg,new RegExp('0'+(i+1)+' ·|Etapa '+(i+1)),ch.id+' precisa contextualizar a etapa');
+ });
+}
+
 // Regressões encontradas em Android: três estados precisam ser visualmente distintos.
 const syntaxChapter=chapters.find(x=>x.visual.kind==='syntax');
 const deixisChapter=chapters.find(x=>x.visual.kind==='camera');
@@ -80,9 +101,9 @@ assert.match(deixisStages[2],/cx="51" cy="239"/);
 event('chapter',{index:'2'});
 assert.match(app.render(),/01 · Oração simples/);
 event('diagram',{index:'1'});
-assert.match(app.render(),/02 · Oração com encaixe/);
+assert.match(app.render(),/02 · Oração relativa/);
 event('diagram',{index:'2'});
-assert.match(app.render(),/03 · Reformulação para narração/);
+assert.match(app.render(),/03 · Reformulação/);
 event('chapter',{index:'4'});
 assert.match(app.render(),/01 · Câmera ao sul/);
 event('diagram',{index:'1'});

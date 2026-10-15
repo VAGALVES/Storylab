@@ -74,3 +74,26 @@ O GitHub Actions executa esse teste junto dos testes de currículo, Atlas, naveg
 4. Evitar ampliar a coleção apenas por quantidade: o próximo passo preferencial é refinar a explicação e a validade das figuras existentes.
 
 **Princípio editorial:** toda seta, cor e posição precisa ter uma razão didática demonstrável.
+
+## Revisão independente v2.12 — diagramas de Linguística Aplicada
+
+Esta revisão é sobre os **oito diagramas interativos da Academia da Linguagem**. Ela complementa a inspeção estrutural dos 351 esquemas curriculares e do Atlas, sem alegar inspeção visual manual de todos eles. Fonte dos oito diagramas: `linguistics-lab.js`.
+
+| Tema | Etapa 01 | Etapa 02 | Etapa 03 | Principal correção |
+| --- | --- | --- | --- | --- |
+| Fonética / fonologia | Produção da fala | Contraste /p/–/b/: *pato/bato* | Variantes de pronúncia de *tia* | Distingue realização física, contraste linguístico e variação |
+| Prosódia | Ênfase em *vitrine* | Ênfase em *mudou* | Ênfase em *ontem* | Aplica foco informacional sem simular medição acústica |
+| Sintaxe | Dois constituintes da oração | Relativa **dentro do sintagma nominal** | Duas frases ligadas por anáfora | Corrige o vínculo sintático que podia ficar ambíguo |
+| Pragmática | Enunciado literal | Implicatura possível | Investigação da hipótese | Não representa inferência como fato apurado |
+| Dêixis | Câmera ao sul | Câmera ao norte | Câmera a oeste | Mantém três pontos de observação, com legenda espacial |
+| Coesão | Lista solta de detalhes | Retomada lexical | Progressão entre três enunciados | Substitui mero destaque cromático por transformação do discurso |
+| Atos de fala | Forma de pergunta | Pedido indireto possível | Duas reações alternativas | Resposta não aparece como consequência inevitável |
+| Análise da conversa | Pergunta | Resposta parcial / pausa | Autorreparo de 20 para 22 | Mostra mudança do dado efetivamente comunicado |
+
+**Gramática visual:** verde-petróleo = elemento conceitual em foco; bege = elemento de apoio; cobre = relação, contraste ou seta; cinza-esverdeado = explicação auxiliar; fundo técnico off-white. Diagramas e legendas têm funções diferentes: rótulos curtos dentro dos SVG e precisão/ressalvas fora do quadro. A perspectiva 01/02/03 representa mudança de mecanismo e não somente uma decoração.
+
+**Ações:** botão primário cobre escuro `#a65438` com texto `#fffefa` (contraste calculado superior a 5:1), hover `#8d472f`. Botão secundário no modo escuro com texto `#f5f0e8` sobre `#213238` como referência nominal; contraste superior a 11:1. Estados desabilitados recebem aparência distinta. A largura e o zoom dos esquemas configurados pelo usuário **não foram alterados**.
+
+**Cobertura automatizada:** `test_linguistics.mjs` e `test_visual_curator.mjs` devem exigir três estados geometricamente distintos por dossiê e preservar os testes dos demais 351 SVGs, incluindo checagens de contraste. Testes estáticos não substituem revisão visual no navegador real e não certificam correção científica das outras áreas.
+
+**Ponto para a próxima inspeção humana:** abrir os oito dossiês em Android, alternar 01/02/03 em temas claro/escuro e verificar legibilidade dos rótulos internos especialmente nas etapas 02 de Sintaxe e 03 de Atos de Fala.
