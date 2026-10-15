@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.3 — Regência e Construções Descritivas
+## Journalism Academy · Versão 2.4 — Diagramas Semânticos por Verbo
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -21,6 +21,15 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v2.4 — Diagramas Semânticos por Verbo
+
+- **Precisão visual por verbo, não por grupo:** oito ilustrações SVG distintas para o campo `Percurso e travessia`: **atravessar**, **cruzar**, **transpor**, **percorrer**, **desviar**, **serpentear**, **bifurcar-se** e **convergir**.
+- **Distinções visuais explícitas:** bifurcar-se mostra um percurso se dividindo em dois; convergir mostra dois percursos se unindo; serpentear mostra um traçado sinuoso; desviar mostra o contorno de um obstáculo; transpor mostra a superação de uma barreira.
+- **Interface integrada e responsiva:** mesmo desenho específico no cartão pequeno do verbo e no detalhe lexical; miniaturas proporcionais em telas móveis, ícones com nome acessível no detalhe e miniaturas decorativas ocultas de leitores de tela.
+- **Arquitetura extensível:** os novos desenhos vivem em `spatial-verb-icons.js`, referenciados por `iconKey` na fonte `spatial-verbs-data.js`; os demais 56 verbos continuam com os esquemas de grupo existentes até a próxima expansão, sem figuras vazias.
+- **Compatibilidade:** verbetes, regência, exercícios, progresso local, cache do PWA e HTML offline preservados. Não aumenta a quantidade de verbetes (**62 campos e 712 verbetes**).
+- **Testes:** `test_spatial_icons.mjs` valida a exclusividade dos oito SVGs, renderização nas duas dimensões, leitura acessível, organização semântica e fallback dos demais campos.
 
 ### Novidades da v2.3 — Regência e Construções Descritivas
 
