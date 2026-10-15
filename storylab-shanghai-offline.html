@@ -268,7 +268,7 @@ for(let i=0;i<raw.length;i++){
   const blank=example.replace(pattern,'_____');
   const scene=blank.length>=60?blank:(blank+' A equipe registra o contexto antes de tirar conclusões sobre o bairro.');
   const caution=cautions[pt]||'Evite generalizações e não atribua intenções, causas ou medições sem dados ou fontes identificadas.';
-  terms.push([pt,definition,example,caution,scene]);
+  terms.push([pt,'Inglês: '+en+'. '+definition,example,caution,scene]);
   meta[index][pt]={en,englishSentence:special[pt]||'',relations:[]};
   all.push({term:pt,topic:index,english:en});
   if(!lookup[accents(pt)])lookup[accents(pt)]={term:pt,topic:index};
