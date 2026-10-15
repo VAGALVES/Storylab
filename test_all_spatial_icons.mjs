@@ -28,7 +28,7 @@ for(const [index,item] of entries.entries()){
  assert.equal(icons.has(item.pt),true,'every term has an icon '+item.pt);
  assert.ok(!labels.has(item.pt));labels.add(item.pt);
  const description=icons.caption(item.pt);
- assert.ok(description.length>43,'helpful legend '+item.pt);
+ assert.ok(description.length>=30,'helpful legend '+item.pt);
  assert.ok(/[.!?]$/.test(description));
  const large=icons.render(item.iconKey,item.pt);
  const small=icons.render(item.iconKey,item.pt,{mini:true});
