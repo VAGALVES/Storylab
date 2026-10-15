@@ -210,3 +210,40 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 @media(max-width:980px){.vl-layout{grid-template-columns:minmax(160px,.65fr) minmax(0,1fr)}.vl-examples{grid-template-columns:1fr}}
 @media(max-width:720px){.vl-layout{grid-template-columns:1fr}.vl-list{max-height:none;display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;padding-bottom:10px;scrollbar-width:thin}.vl-list .vl-kicker{display:none}.vl-item{flex:0 0 auto;width:auto;min-width:112px;flex-direction:column;align-items:flex-start}.vl-item span{max-width:none;text-align:left}.vl-examples{grid-template-columns:1fr}.vl-family-cell strong{font-size:16px}}
 @media(max-width:430px){.vl-derivation{grid-template-columns:1fr}.vl-head{align-items:flex-start}.vl-diagram{width:112px;height:70px}.vl-head h2{font-size:28px}}
+
+
+/* StoryLab 2.3 — oficina de regência: construções PT/EN e exercícios */
+.vr-regency{margin:23px 0;padding:19px;border:1px solid var(--line);border-radius:15px;background:var(--wash)}
+.vr-section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.vr-section-heading h3{font-family:Georgia,serif;font-size:24px;letter-spacing:-.02em;margin:5px 0}
+.vr-context,.vr-grammar-note{font-size:12px;line-height:1.75;color:var(--ink2)}
+.vr-pattern-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+.vr-pattern{background:var(--paper);border:1px solid var(--line);padding:15px;border-radius:12px;min-width:0;display:flex;flex-direction:column;gap:7px}
+.vr-pattern p{line-height:1.6;font-size:13px;margin:0;overflow-wrap:anywhere}
+.vr-pattern-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.vr-structure{font-family:Georgia,serif;color:var(--ink);font-size:16px;line-height:1.35}
+.vr-english{color:var(--muted);font-style:italic}
+.vr-copy{border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink2);padding:4px 8px;font-size:11px}
+.vr-copy:hover{border-color:var(--accent);color:var(--accent)}
+.vr-grammar-note{margin-bottom:0;padding-left:12px;border-left:3px solid var(--accent)}
+.vr-intro h2{margin:6px 0 10px;font-size:clamp(25px,3vw,36px)}
+.vr-intro p{font-size:13px;color:var(--muted);max-width:750px}
+.vr-intro .btn{margin-top:15px}
+.vr-quiz{max-width:830px}
+.vr-quiz h3{font-size:22px;margin:15px 0}
+.vr-progress-label{font-size:12px;color:var(--muted);font-weight:800;margin-top:14px}
+.vr-progress{margin:9px 0 21px;height:7px;border-radius:10px;background:var(--wash);overflow:hidden}
+.vr-progress span{display:block;height:100%;background:var(--accent);border-radius:10px;transition:width .15s}
+.vr-prompt{font-family:Georgia,serif;font-size:clamp(19px,2.2vw,26px);line-height:1.65;background:var(--wash);padding:20px;border-radius:13px;margin:18px 0;overflow-wrap:anywhere}
+.vr-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+.vr-option{background:var(--paper);color:var(--ink);padding:13px 17px;border:1px solid var(--line);border-radius:11px;min-height:53px;text-align:center;font-size:15px;font-weight:700}
+.vr-option:hover:not(:disabled){border-color:var(--accent)}
+.vr-option:disabled{cursor:default;opacity:.65}
+.vr-option.correct{background:var(--oksoft);border-color:var(--ok);color:var(--ok);opacity:1}
+.vr-option.wrong{background:var(--nosoft);border-color:var(--no);color:var(--no);opacity:1}
+.vr-feedback{border:1px solid var(--line);padding:17px;margin:18px 0;border-radius:12px;background:var(--wash)}
+.vr-feedback.ok{border-color:var(--ok)}.vr-feedback.wrong{border-color:var(--no)}
+.vr-feedback strong{color:var(--ink)}.vr-feedback p{font-size:13px;color:var(--ink2);margin:9px 0;line-height:1.65}
+.vr-feedback [lang=en]{font-style:italic;color:var(--muted)}
+@media(max-width:850px){.vr-pattern-grid{grid-template-columns:1fr}}
+@media(max-width:550px){.vr-regency{padding:13px}.vr-options{grid-template-columns:1fr}.vr-pattern{padding:13px}.vr-prompt{padding:15px}.vr-section-heading .btn{width:100%}}
