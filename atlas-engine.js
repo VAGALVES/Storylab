@@ -205,6 +205,14 @@ function dictionary(){
  let detail='<div class="panel panel-pad atlas12-detail"><div class="eyebrow">CONCEITO EM CONTEXTO · '+esc(area.title.toUpperCase())+'</div><h2>'+esc(term)+'</h2>';
  if(c)detail+='<p class="atlas12-definition">'+esc(c[1])+'</p><div class="atlas12-example"><div class="eyebrow">DIGA ASSIM</div><p>'+esc(c[2])+'</p></div><div class="atlas12-warning"><div class="eyebrow">PRECISÃO E CUIDADO</div><p>'+esc(c[3])+'</p></div>';
  else detail+='<p class="muted">Termo do repertório essencial. O verbete aprofundado ainda está em construção. Evite empregar uma palavra cujo significado ou aplicação não tenha confirmado.</p><div class="notice info">'+esc(area.prompt)+'</div>';
+ const bilingual=window.STORYLAB_URBANISM?.byField?.[view.topic]?.[term];
+ if(bilingual){
+  detail+='<div class="atlas12-example"><div class="eyebrow">ENGLISH · EQUIVALENTE</div><p><strong lang="en">'+esc(bilingual.en)+'</strong></p>'+
+   (bilingual.englishSentence?'<p lang="en">'+esc(bilingual.englishSentence)+'</p>':'')+
+   '<div class="form-row">'+button('copy-en',ico('copy',14)+' Copiar inglês','btn secondary sm')+'</div></div>';
+  if(bilingual.relations?.length)detail+='<div class="atlas12-example"><div class="eyebrow">REDE SEMÂNTICA · CONCEITOS RELACIONADOS</div><p class="muted small">Toque para explorar a relação em outro campo:</p><div class="atlas12-tags">'+
+   bilingual.relations.map(x=>button('word',esc(x.term),'atlas14-chip','data-topic="'+x.topic+'" data-word="'+esc(x.term)+'"')).join('')+'</div></div>';
+ }
  detail+='<p class="atlas14-status '+st+'">'+MARK[st]+' '+LABEL[st]+(r?' · '+r.right+' acerto(s), '+r.wrong+' erro(s)':'')+'</p>';
  detail+='<div class="form-row">'+button('copy',ico('copy',15)+' Copiar termo','btn secondary sm')+button('train-field',ico('target',15)+' Treinar este campo','btn secondary sm')+button('practice',ico('mic',15)+' Praticar este campo','btn accent sm')+'</div></div>';
  return '<div class="atlas12-columns"><div class="stack"><div class="panel panel-pad"><div class="eyebrow">ENCONTRE A PALAVRA PRECISA</div><p class="muted small">'+esc(g().focus)+'</p>'+termButtons()+'</div>'+(view.query.trim()?'':swapsPanel())+'</div>'+detail+'</div>';
@@ -308,6 +316,7 @@ function init(context){
   if(action==='explore'||action==='practice'||action==='train'){view.tab=action;view.feedback=null;view.show=false}
   else if(action==='word'){const i=Number(b.dataset.topic);if(!api.D.atlas[i]?.terms.includes(b.dataset.word))return;view.topic=i;view.word=b.dataset.word;view.query='';view.feedback=null;view.tab='explore'}
   else if(action==='copy'){api.copy(currentCard().term);return}
+  else if(action==='copy-en'){const extra=window.STORYLAB_URBANISM?.byField?.[view.topic]?.[currentCard().term];if(extra)api.copy(extra.en);return}
   else if(action==='level'){const i=Number(b.dataset.level);if(i<0||i>3||!Number.isInteger(i))return;view.level=i;view.show=false;view.feedback=null}
   else if(action==='model')view.show=!view.show;
   else if(action==='review'){const text=draft();if(text.trim().length<20){api.toast('Escreva pelo menos 20 caracteres antes de analisar.');return}view.feedback=analyze(text)}
