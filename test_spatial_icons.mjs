@@ -65,7 +65,7 @@ for(const word of routes){
 const inherited=entries.find(v=>v.pt==='ladear');
 lab.focus(inherited.topic,inherited.pt);html=lab.render();
 assert.match(html,/Esquema simplificado: Lateralidade e vizinhança/,'outros campos ainda usam fallback seguro');
-assert.equal((html.match(/class="vl-mini-diagram"/g)||[]).length,1,'um contraste com ícone, mas o verbete sem desenho próprio usa fallback');
+assert.equal((html.match(/class="vl-mini-diagram"/g)||[]).length,0,'catálogo básico não desenha grupos que ainda não foram carregados');
 const css=read('style.css');
 assert.match(css,/\.vl-item-illustrated/);
 assert.match(css,/\.vl-mini-diagram/);
