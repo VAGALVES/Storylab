@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.0 — Fraseoteca curada, frases de cena e três novos campos do Atlas
+## Journalism Academy · Versão 2.1 — Atlas Semântico do Urbanismo
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -17,10 +17,21 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Frases-base em português | 657 | Todas com nota de uso específica; pesquisáveis no app |
 | Equivalentes em inglês | 36 | Seleção inicial, explicitamente incompleta |
 | Equivalentes em mandarim | 12 | Seleção inicial com pinyin |
-| Atlas de vocabulário | 31 campos; 460 termos; 460 verbetes comentados, cada um com frase de cena para o treino; 93 trocas de precisão | Publicado, com treino e revisão espaçada |
+| Atlas de vocabulário | 54 campos; 648 verbetes (incluindo 23 campos e 188 conceitos bilíngues de urbanismo); treino, relações entre áreas e revisão espaçada | Publicado |
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v2.1 — Atlas Semântico do Urbanismo (Português ↔ Inglês)
+
+- **Ampliação integrada do Atlas existente:** 23 novos campos ao final dos 31 anteriores, sem renumerar conteúdo e sem perder rascunhos ou progresso de revisão. Total: **54 campos e 648 verbetes**.
+- **13 áreas interdisciplinares, 104 conceitos:** mobilidade pendular, engenharia de transportes, morfologia, geografia metropolitana, sociologia, espaços públicos, psicologia ambiental, ecologia, economia urbana, planejamento, geotecnologia, saúde e economia criativa/moda.
+- **8 famílias de vocabulário fundamental, 64 palavras:** forma urbana, mobilidade, espaços públicos, infraestrutura, uso do solo, habitação, sustentabilidade e política urbana.
+- **Linguagem em uso, 20 entradas:** 12 collocations com equivalentes em inglês e 8 distinções de conceitos frequentemente confundidos.
+- **Modo bilíngue nos novos verbetes:** tradução inglesa, definições, exemplos de narração, cautela editorial, frase-lacuna para recuperação ativa, exemplos selecionados em inglês e botões para copiar. Relações semânticas navegáveis ligam fenômenos a outros campos.
+- **Estudo integrado:** os novos termos entram no seletor, pesquisa, cartões, treino de precisão, revisão espaçada, prática progressiva e versão offline.
+- **Rigor terminológico:** commuting é a tradução corrente de deslocamento pendular, não confundida com migration; em inglês britânico high street é mais contextual do que em inglês americano; bike lane e ciclovia segregada nem sempre são equivalentes exatos.
+- **Arquivos dedicados:** `urbanism-concepts.js` (13 campos), `urbanism-lexicon.js` (fundamentos, collocations e distinções), `urbanism-atlas.js` (integração) e `test_urbanism.mjs` (testes). A fonte gerada `data.js` continua intocada.
 
 ### Novidades da v2.0 — Curadoria e precisão
 
