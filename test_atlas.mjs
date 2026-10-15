@@ -199,9 +199,11 @@ let fieldPage = atlas.render();
 assert.match(fieldPage, /atlas20-fig/);
 assert.match(fieldPage, /Partes de uma fachada/);
 assert.match(fieldPage, /fig-lead-on/, 'o termo selecionado fica em destaque no desenho');
+assert.match(fieldPage, /show-fig/, 'atalho Ver no esquema para termo que está no desenho');
 click('word', {topic: '7', word: 'pórtico'});
 assert.ok(!/fig-lead-on/.test(atlas.render()), 'termo sem peça no desenho não destaca nada');
-click('word', {topic: '3', word: 'saturado'});
+assert.ok(!/show-fig/.test(atlas.render()), 'sem atalho para termo que não está no desenho');
+click('word', {topic: '26', word: 'contudo'});
 assert.ok(!/atlas20-fig/.test(atlas.render()), 'campo sem esquema não mostra figura');
 console.log('Atlas 2.2: esquema do campo e destaque do termo selecionado OK');
 
@@ -212,3 +214,11 @@ const prat = atlas.render();
 assert.match(prat, /atlas20-ladder/);
 assert.match(prat, /fig-step-on/);
 console.log('Atlas 2.2: escada narrativa na prática OK');
+
+// Treino: a escada do domínio mostra os 5 níveis e destaca os que contam como dominado
+click('train');
+const trein = atlas.render();
+assert.match(trein, /Ver como o domínio cresce/);
+assert.equal((trein.match(/fig-step-on/g) || []).length, 3, 'níveis 3 a 5 em destaque');
+assert.match(trein, /30 dias/);
+console.log('Atlas 2.2: escada do domínio no treino OK');
