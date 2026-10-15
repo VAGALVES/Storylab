@@ -35,9 +35,9 @@ function click(action, extra = {}) {
   handlers.click({ preventDefault() {}, target: { closest() { return {dataset:{atlasAction:action,...extra}} } } });
 }
 const initial = atlas.render();
-assert.match(initial, /460/);
-assert.match(initial, /Verbetes aprofundados: 460/);
-assert.match(initial, /Termos dominados: 0 \/ 460/);
+assert.match(initial, /465/);
+assert.match(initial, /Verbetes aprofundados: 465/);
+assert.match(initial, /Termos dominados: 0 \/ 465/);
 assert.match(initial, /Troque a palavra genérica|TROQUE A PALAVRA GENÉRICA/);
 assert.match(initial, /retilíneo/);
 click('word', {topic:'9', word:'caimento'});
@@ -174,4 +174,19 @@ assert.ok(atlas.analyze('O vagão estava lotado e havia muito barulho.').swaps.l
 assert.equal(atlas.analyze('A gente chegou cedo à praça.').vague, 0);
 // Baralho de cartões leva a frase de cena
 assert.ok(atlas.termDeck(29, 50).fresh.every(t => t.scene && t.scene.includes('_____')));
-console.log('Atlas 2.0: 460 frases de cena, quase-sinônimos, 3 novos campos e detector OK');
+console.log('Atlas 2.0: 465 frases de cena, quase-sinônimos, 3 novos campos e detector OK');
+
+// ── Atlas 2.1: colocações no verbete, na prática e nos cartões ──
+click('explore');
+click('word', {topic: '27', word: 'incidir'});
+const verbete = atlas.render();
+assert.match(verbete, /COMBINAÇÕES USUAIS/);
+const colloc = G[27].terms.find(t => t[0] === 'incidir')[5];
+assert.ok(colloc.length >= 4 && colloc.every(c => verbete.includes(escape(c))));
+store.atlasDrafts = {};
+click('insert-colloc', {text: colloc[0]});
+assert.match(atlas.render(), /Prática progressiva|PRÁTICA/i);
+assert.ok(Object.values(store.atlasDrafts).some(d => d.includes(colloc[0])), 'colocação vai para o rascunho da prática');
+assert.ok(atlas.termDeck(27, 50).fresh.every(t => t.collocations.length >= 4));
+assert.ok(['refletir', 'ecoar', 'incidir', 'reverberar'].every(t => D.atlas[27].terms.includes(t)), 'núcleo do campo de incidência');
+console.log('Atlas 2.1: colocações no verbete, na prática e nos cartões OK');

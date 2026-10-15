@@ -18,7 +18,7 @@ assert.equal(entries.length,64);
 assert.equal(lab.groups(),8);
 assert.equal(D.atlas.length,62);
 assert.equal(G.length,62);
-assert.equal(D.atlas.reduce((n,g)=>n+g.terms.length,0),712);
+assert.equal(D.atlas.reduce((n,g)=>n+g.terms.length,0),717);
 assert.equal(JSON.stringify(D.atlas.slice(0,31).map(x=>x.title)),JSON.stringify(original));
 assert.equal(Object.keys(w.STORYLAB_SPATIAL_VERB_DATA).length,8);
 const illustrations=new Set();

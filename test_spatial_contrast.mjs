@@ -20,7 +20,7 @@ assert.equal(contrast.pairs(),32);
 assert.equal(contrast.count(),64);
 assert.equal(D.atlas.length,62);
 assert.equal(G.length,62);
-assert.equal(D.atlas.reduce((n,g)=>n+g.terms.length,0),712);
+assert.equal(D.atlas.reduce((n,g)=>n+g.terms.length,0),717);
 const coverage=new Set(),keys=new Set();
 for(const pair of corpus){
  assert.ok(!keys.has(pair.id));keys.add(pair.id);

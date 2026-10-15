@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.7 — Academia da Linguagem Ilustrada
+## Journalism Academy · Versão 2.8 — Atlas revisto com colocações, esquemas nas aulas e botão voltar
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -42,15 +42,22 @@ Os esquemas são modelos pedagógicos simplificados: setas ilustram relações c
 | Escolas | 6 | Estruturadas |
 | Disciplinas | 43 | Ementas e competências publicadas |
 | Unidades curriculares | 172 | Todas com aula integral |
-| Aulas integrais | 172 | Texto, 3 conceitos, exemplos, atividade e rubrica |
+| Aulas integrais | 172 | Texto, 3 conceitos, exemplos, atividade, rubrica e esquema explicativo (184 esquemas) |
 | Famílias de linguagem | 30 | Com definição de intenção |
 | Frases-base em português | 657 | Todas com nota de uso específica; pesquisáveis no app |
 | Equivalentes em inglês | 36 | Seleção inicial, explicitamente incompleta |
 | Equivalentes em mandarim | 12 | Seleção inicial com pinyin |
-| Atlas de vocabulário | 62 campos; 712 verbetes, incluindo 64 famílias de verbos descritivos bilíngues; treino, relações semânticas e revisão espaçada | Publicado |
+| Atlas de vocabulário | 62 campos; 717 verbetes, incluindo 64 famílias de verbos descritivos bilíngues. Os 31 campos-base foram revistos termo a termo e cada verbete traz frase de cena e 4 a 6 colocações (2.042 no total); treino, relações semânticas e revisão espaçada | Publicado |
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v2.8 — Léxico de Letras, esquemas e navegação
+
+- **Atlas revisto termo a termo:** 170 dos 465 termos dos 31 campos-base foram substituídos por escolhas mais precisas dentro de cada campo semântico. Alguns exemplos: *tez, fisionomia, vinco, esgar, impassível, hirto, claudicar* (pessoas); *pátina, puído, carcomido, rebordo, nervura* (objetos); *escarpa, várzea, meandro, dossel, plúmbeo, bruma* (paisagem e céu); *desaguar em, ricochetear, sedimentar, transbordar* (incidência). Saíram termos básicos como “cabo”, “tampa”, “patas”, “crachá” e “óculos de grau”. Nenhum termo se repete entre campos.
+- **Colocações:** cada verbete traz de 4 a 6 combinações consagradas (“luz rasante”, “incidir sobre”, “a voz ecoa”), 2.042 no total. Elas aparecem no verbete e nos cartões, entram na busca universal e, com um toque, vão para o texto da prática.
+- **Esquemas explicativos nas 172 aulas:** 184 diagramas desenhados em SVG por `illustrations.js` a partir de especificações declarativas (fluxo, ciclo, pirâmide, comparação, matriz, linha do tempo, espectro, núcleo, Venn, camadas, escalas de plano, regra dos terços e barras com base zero). Seguem o tema claro e o escuro e funcionam offline.
+- **Botão voltar do celular:** volta à tela anterior do app em vez de fechá-lo. Na tela inicial, o primeiro toque mostra “Toque em voltar de novo para sair do StoryLab”, e o app fecha só com um segundo toque em até 2 segundos. Janelas abertas e o menu fecham antes.
 
 ### Novidades da v2.6 — Oficina de Contraste Visual
 

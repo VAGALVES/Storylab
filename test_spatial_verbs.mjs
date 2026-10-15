@@ -13,7 +13,7 @@ for(const f of ['urbanism-concepts.js','urbanism-lexicon.js','urbanism-atlas.js'
 const lab=w.StoryLabVerbLab;
 assert.equal(data.atlas.length,62);
 assert.equal(guides.length,62);
-assert.equal(data.atlas.reduce((n,g)=>n+g.terms.length,0),712);
+assert.equal(data.atlas.reduce((n,g)=>n+g.terms.length,0),717);
 assert.equal(lab.base(),54);
 assert.equal(lab.groups(),8);
 assert.equal(lab.entries().length,64);

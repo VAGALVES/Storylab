@@ -556,6 +556,13 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - **Próximos passos:** cartões também para os termos do Atlas, modo cronometrado de fala com contagem regressiva, revisão do dia unificada (frases + termos) e conquistas por marcos de estudo.
 
 
+## Evolução v2.8 — Léxico de Letras, esquemas e navegação
+
+- **Critério lexical explícito:** um termo só fica no Atlas se nomeia uma nuance que a palavra comum apaga. Cada campo cobre suas dimensões de forma sistemática (em pessoas: fisionomia, tez, porte, marcas do tempo, gesto), sem quase-sinônimos disputando lugar.
+- **Colocação como unidade de aprendizagem:** saber a palavra não basta; é preciso saber com quem ela anda. As colocações transformam o verbete em frase pronta para usar diante da câmera.
+- **Imagem que explica:** cada aula ganhou um esquema com a estrutura do conceito (sequência, hierarquia, contraste, eixo). A especificação é dado, não imagem, o que mantém o visual coerente, leve e fácil de revisar.
+- **Navegação nativa:** o botão voltar respeita o percurso do aluno dentro do app e pede confirmação antes de sair.
+
 ## Evolução v2.0 — Curadoria e precisão
 
 - **Nota de uso em 100% da Fraseoteca:** a frase-modelo só ensina quando vem com o critério de uso. Agora as 657 frases dizem onde entram na matéria, como completá-las com dado verificável e qual vício evitar (clichê, opinião sem base, redundância com a imagem).

@@ -41,13 +41,13 @@ print('Conteúdo: 43 disciplinas, 172 aulas, 657 frases com nota de uso em 30 fa
 
 atlas=json.loads((r/'content/atlas_guides.json').read_text(encoding='utf8'))
 assert len(atlas)==len(d['atlas'])==31
-assert sum(len(group['terms']) for group in atlas)==460
+assert sum(len(group['terms']) for group in atlas)==465
 assert sum(len(group['model']) for group in atlas)==124
 for i,group in enumerate(atlas):
     assert len(group['terms'])>=10 and len(group['model'])==4
     assert len({t[0] for t in group['terms']})==len(group['terms']),'Termo repetido no campo'
     assert all(len(s)>=60 for s in group['model'])
-    for term,definition,example,caution,scene in group['terms']:
+    for term,definition,example,caution,scene,colloc in group['terms']:
         assert term in d['atlas'][i]['terms']
         assert all(len(v)>=15 for v in (definition,example,caution))
         # Frase de cena do treino: uma lacuna, sem entregar a resposta
@@ -55,6 +55,9 @@ for i,group in enumerate(atlas):
         assert 60<=len(scene)<=220,(i,term)
         assert fold(term) not in fold(scene.replace('_____',' ')),(i,term)
         assert '"' not in scene,(i,term)
+        # Colocações: de 4 a 6 combinações reais, sem repetição
+        assert 4<=len(colloc)<=6 and len(set(colloc))==len(colloc),(i,term)
+        assert all(isinstance(c,str) and 2<=len(c.split())<=6 for c in colloc),(i,term)
     # Grupos de quase-sinônimos: só termos do campo, e sobram distratores suficientes
     for g in group.get('near',[]):
         assert len(g)>=2 and all(t in d['atlas'][i]['terms'] for t in g),(i,g)
@@ -64,6 +67,7 @@ assert (r/'atlas-engine.js').is_file()
 assert (r/'atlas-recorder.js').is_file() and (r/'atlas-audio-ui.js').is_file()
 # Trocas de precisão: palavra genérica → termos do próprio campo
 all_terms={t for topic in d['atlas'] for t in topic['terms']}
+assert len({fold(t) for t in all_terms})==sum(len(f['terms']) for f in d['atlas']),'Termo repetido entre campos'
 assert sum(len(group['swaps']) for group in atlas)==93
 for i,group in enumerate(atlas):
     assert len(group['swaps'])==3
@@ -75,4 +79,4 @@ for i,group in enumerate(atlas):
         assert len(s['weak'])>=10 and len(s['strong'])>len(s['weak'])
         assert any(o.lower()[:5] in s['strong'].lower() for o in s['options']),'Frase forte deve usar uma das opções: '+s['strong']
 subprocess.run([sys.executable,str(r/'generate_atlas.py'),'--check'],check=True)
-print('Atlas: 31 campos, 460 verbetes com frase de cena, 124 modelos progressivos e 93 trocas de precisão — OK')
+print('Atlas: 31 campos, 465 verbetes com frase de cena e colocações, 124 modelos progressivos e 93 trocas de precisão — OK')
