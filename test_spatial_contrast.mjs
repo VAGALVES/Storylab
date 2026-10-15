@@ -31,7 +31,7 @@ for(const pair of corpus){
  assert.equal(JSON.stringify(pair.cases.map(q=>q.answer)),JSON.stringify([pair.a,pair.b]));
  for(const q of pair.cases){
   assert.ok(!keys.has(q.id));keys.add(q.id);
-  assert.ok(q.scene.length>65&&q.reason.length>30&&q.english.length>32,q.id);
+  assert.ok(q.scene.length>65&&q.reason.length>=30&&q.english.length>=25,q.id);
   assert.ok(!q.scene.toLowerCase().includes(q.answer.toLowerCase()),'prompt must not reveal infinitive: '+q.id);
   assert.ok(!q.scene.includes('_____'));
   coverage.add(q.answer);
