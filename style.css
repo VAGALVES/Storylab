@@ -357,3 +357,92 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 @media(max-width:760px){.vc-entry{grid-template-columns:1fr}.vc-entry-actions{display:grid;grid-template-columns:1fr 1fr}.vc-entry-actions .btn:first-child{grid-column:1/-1}.vc-top-row{align-items:flex-start}.vc-choice{min-height:190px;padding:12px}.vc-choice .vc-art{height:88px}.vc-scene{padding:14px 16px}}
 @media(max-width:450px){.vc-totals{min-width:77px;padding:12px 8px}.vc-totals strong{font-size:23px}.vc-totals small{font-size:9px}.vc-top h2{font-size:29px}.vc-options{gap:9px}.vc-choice{min-height:172px;padding:10px 8px 16px;gap:9px;border-radius:13px}.vc-choice .vc-art{height:78px}.vc-choice strong{font-size:14px}.vc-choice-number{font-size:9px}.vc-choice-mark{right:9px;top:7px}.vc-scene{font-size:17px}.vc-next-row{align-items:stretch;flex-direction:column-reverse}.vc-next-row .btn{width:100%;justify-content:center}.vc-entry-actions{grid-template-columns:1fr}.vc-entry-actions .btn:first-child{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){.vc-choice,.vc-progress span{transition:none}}
+
+/* Academia da Linguagem v2.1 — dossiês teóricos com diagramas conceituais autorais. */
+.ling-stats .stat-card .stat{font-variant-numeric:tabular-nums}
+.ling-shell{display:grid;grid-template-columns:minmax(240px,290px) minmax(0,1fr);gap:23px;align-items:start}
+.ling-syllabus{position:sticky;top:94px;border:1px solid var(--line);background:var(--paper);border-radius:18px;padding:21px 14px;max-height:calc(100vh - 113px);overflow-y:auto}
+.ling-syllabus>.eyebrow,.ling-syllabus>p{margin-left:8px;margin-right:8px}
+.ling-syllabus>p{margin-top:10px;margin-bottom:18px;font-size:12px;color:var(--muted);line-height:1.7}
+.ling-chapter-list{display:grid;gap:7px}
+.ling-chapter{display:flex;text-align:left;align-items:center;gap:10px;min-width:0;width:100%;padding:13px 10px;border:1px solid transparent;background:transparent;color:var(--ink);border-radius:12px;transition:background .2s,border-color .2s}
+.ling-chapter:hover{background:var(--wash)}.ling-chapter.active{background:var(--accentsoft);border-color:var(--accent)}
+.ling-chapter-num{width:30px;height:30px;display:grid;place-items:center;flex:none;border-radius:10px;border:1px solid var(--line);font-family:Georgia,serif;font-size:15px;color:var(--muted)}
+.ling-chapter.active .ling-chapter-num{background:var(--accent);color:#fff;border-color:var(--accent)}
+.ling-chapter-label{display:grid;flex:1;gap:3px;min-width:0}
+.ling-chapter-label strong{font-size:12.5px;line-height:1.35;letter-spacing:-.01em}
+.ling-chapter-label small{font-size:10px;color:var(--muted);line-height:1.45}
+.ling-chapter-status{flex:none;color:var(--accent);font-size:17px}.ling-chapter.is-done .ling-chapter-status{color:#4b876d;font-weight:bold}
+.ling-article{min-width:0;display:grid;gap:19px}
+.ling-hero{display:flex;gap:20px;justify-content:space-between;align-items:start;padding:30px 34px;background:#172b2e;color:#f4f0e7;border-radius:18px;position:relative;overflow:hidden}
+.ling-hero::after{content:"";position:absolute;width:220px;height:220px;right:-110px;bottom:-130px;border:1px solid #8faba0;border-radius:50%;opacity:.35}
+.ling-hero .eyebrow{color:#f1ae86}.ling-hero h2{font-size:clamp(27px,2.8vw,39px);line-height:1.18;max-width:630px;margin:12px 0}
+.ling-hero p{color:#c6d5d2;max-width:650px;line-height:1.8;font-size:14px;margin:0}
+.ling-duration{font-size:37px;font-family:Georgia,serif;border:1px solid #54706d;border-radius:13px;padding:12px 16px;text-align:center;line-height:1.1;white-space:nowrap;z-index:1}
+.ling-duration span{display:block;font-size:10px;line-height:1.5;font-family:Inter,"Segoe UI",sans-serif;color:#aec5bc;letter-spacing:.05em;margin-top:6px}
+.ling-figure{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px 24px 18px;margin:0;min-width:0}
+.ling-figure-heading{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap;margin:0 0 15px}
+.ling-figure-heading strong{font-family:Georgia,serif;font-size:21px;font-weight:normal}
+.ling-diagram{display:block;width:100%;height:auto;max-height:360px;aspect-ratio:760/300;border-radius:16px}
+.ling-figure figcaption{font-size:12px;color:var(--muted);line-height:1.75;margin-top:12px}
+.ling-figure-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:15px;margin-top:15px}
+.ling-figure-controls>span{margin-right:5px}
+.ling-diagram-button{width:41px;height:38px;border:1px solid var(--line);border-radius:9px;background:transparent;color:var(--ink);font-family:Georgia,serif}
+.ling-diagram-button.active{border-color:var(--accent);background:var(--accentsoft);color:var(--accent);font-weight:bold}
+.ling-contrast,.ling-practice,.ling-quiz,.ling-notes,.ling-terms,.ling-references,.ling-related{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px 30px}
+.ling-contrast h3,.ling-practice h3,.ling-quiz h3,.ling-references h3,.ling-related h3{font-family:Georgia,serif;font-size:clamp(21px,2.1vw,28px);font-weight:normal;margin-top:10px;line-height:1.28}
+.ling-comparison{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.ling-comparison>div{border:1px solid var(--line);border-radius:12px;background:var(--wash);padding:19px 17px;min-width:0}
+.ling-comparison .ling-revised{background:var(--accentsoft);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.ling-comparison-label{font-size:9px;font-weight:850;letter-spacing:.13em;color:var(--muted)}
+.ling-comparison p{margin:9px 0 0;font-size:16px;line-height:1.65;overflow-wrap:anywhere}
+.ling-reason{margin:0;line-height:1.8;color:var(--ink2)}
+.ling-tabs{display:flex;gap:8px;border-bottom:1px solid var(--line);padding:4px 0 9px;flex-wrap:wrap}
+.ling-tab{padding:11px 17px;font-weight:700;color:var(--muted);background:transparent;border:1px solid transparent;border-radius:10px}
+.ling-tab:hover{background:var(--wash)}.ling-tab.active{background:var(--paper);border-color:var(--line);color:var(--accent);box-shadow:inset 0 -2px 0 var(--accent)}
+.ling-theory{display:grid;gap:16px}
+.ling-section{border:1px solid var(--line);background:var(--paper);border-radius:16px;padding:29px 30px}
+.ling-section-heading{display:flex;align-items:start;gap:17px;margin-bottom:17px}
+.ling-section-number{width:44px;height:44px;display:grid;place-items:center;background:var(--wash);color:var(--accent);border-radius:12px;font-family:Georgia,serif;font-size:21px;flex:none}
+.ling-section-heading h3{font-family:Georgia,serif;font-size:clamp(22px,2.1vw,28px);line-height:1.25;margin:6px 0 0;font-weight:normal}
+.ling-section>p{font-size:15px;line-height:1.93;color:var(--ink2);margin:0 0 20px}
+.ling-example{padding:17px 19px;border-left:3px solid var(--accent);border-radius:0 12px 12px 0;background:var(--accentsoft)}
+.ling-example p{font-size:15px;font-style:italic;line-height:1.8;margin:9px 0 0}
+.ling-curiosity{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;background:#e9ede4;color:#243c37;border:1px solid #cbd9ca;padding:28px;border-radius:16px}
+.ling-curiosity-icon{font-size:35px;color:#4b7567;line-height:1}
+.ling-curiosity .eyebrow{color:#417063}.ling-curiosity h3{font-family:Georgia,serif;font-size:25px;margin:10px 0 12px;font-weight:normal}
+.ling-curiosity p{line-height:1.85;margin:0}
+.ling-terms-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:15px}
+.ling-terms-grid>div{background:var(--wash);padding:18px 16px;border-radius:11px;min-width:0}
+.ling-terms-grid strong{color:var(--accent);font-size:14px}.ling-terms-grid p{margin:9px 0 0;color:var(--ink2);font-size:12px;line-height:1.75}
+.ling-practice ol{padding-left:24px;line-height:1.85;margin:17px 0 0;color:var(--ink2);font-size:14px}
+.ling-practice li{padding-left:8px;margin-bottom:8px}
+.ling-options{display:grid;gap:10px;margin-top:19px}
+.ling-option{display:flex;align-items:center;text-align:left;padding:16px 17px;background:var(--wash);color:var(--ink);border:1px solid var(--line);border-radius:12px;line-height:1.6}
+.ling-option:hover{border-color:var(--accent)}.ling-option.selected{border-color:var(--accent);background:var(--accentsoft)}
+.ling-option.correct{border-color:#528e70}.ling-option.incorrect{border-color:#c67c63}
+.ling-explanation{margin-top:17px;padding:18px;background:var(--accentsoft);border-radius:12px;line-height:1.75}
+.ling-explanation p{margin:7px 0 0}
+.ling-notes label{display:block;font-weight:650;margin:12px 0 9px}
+.ling-notes textarea{width:100%;min-height:133px;padding:15px;line-height:1.8;border:1px solid var(--line);border-radius:11px;background:var(--wash);color:var(--ink);resize:vertical}
+.ling-notes>p{margin:7px 0 0}
+.ling-references>p{font-size:14px;line-height:1.85;color:var(--ink2)}
+.ling-reading-list{display:grid;gap:9px;margin:17px 0}
+.ling-reading-list>a{display:flex;align-items:center;gap:12px;padding:15px;background:var(--wash);border:1px solid var(--line);border-radius:11px;font-size:13px}
+.ling-reading-list>a:hover{border-color:var(--accent)}.ling-reading-list>a span{color:var(--accent);font-size:19px}
+.ling-usage{border-left:3px solid var(--accent);padding:15px 18px;background:var(--accentsoft);line-height:1.75}
+.ling-related-list{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}
+.ling-related-button{border:1px solid var(--line);border-radius:9px;background:var(--wash);color:var(--ink);padding:11px 14px;display:flex;gap:10px;align-items:center;font-size:12px}
+.ling-related-button:hover{border-color:var(--accent)}.ling-related-button span{color:var(--accent)}
+.ling-footer{padding:8px 5px 25px;display:flex;align-items:center;gap:14px;justify-content:space-between;flex-wrap:wrap}
+.ling-inline-invitation{display:flex;align-items:center;gap:15px;padding:16px 19px;border:1px solid #cbd9ca;border-radius:13px;background:var(--paper);margin:18px 0}
+.ling-inline-invitation>span{font-size:28px;line-height:1;color:var(--accent)}
+.ling-inline-invitation>div{flex:1;min-width:0}.ling-inline-invitation strong{display:block;font-size:14px}
+.ling-inline-invitation p{margin:4px 0 0;font-size:12px;color:var(--muted)}
+[data-theme="dark"] .ling-curiosity{background:#283b35;border-color:#446358;color:#d9e8df}
+[data-theme="dark"] .ling-curiosity .eyebrow{color:#a9d3bd}
+@media(max-width:1220px){.ling-shell{grid-template-columns:245px minmax(0,1fr)}.ling-hero{padding:24px 25px}}
+@media(max-width:980px){.ling-shell{grid-template-columns:1fr}.ling-syllabus{position:static;max-height:none;padding:16px}.ling-chapter-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.ling-chapter{padding:10px}}
+@media(max-width:680px){.ling-chapter-list{grid-template-columns:1fr}.ling-hero{padding:24px 19px}.ling-duration{font-size:27px;padding:9px 10px}.ling-duration span{font-size:9px}.ling-figure{padding:16px 12px}.ling-diagram{overflow:visible;min-height:170px}.ling-comparison{grid-template-columns:1fr}.ling-section,.ling-contrast,.ling-practice,.ling-quiz,.ling-notes,.ling-terms,.ling-references,.ling-related{padding:23px 19px}.ling-section-heading{gap:11px}.ling-section-number{width:34px;height:34px;font-size:17px}.ling-terms-grid{grid-template-columns:1fr}.ling-figure-heading strong{font-size:18px}.ling-diagram-button{width:37px;height:35px}.ling-tab{padding:10px 12px;font-size:12px}.ling-inline-invitation{flex-wrap:wrap}.ling-inline-invitation .btn{width:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){.ling-chapter{transition:none}}
+

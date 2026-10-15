@@ -1,9 +1,39 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.6 — Oficina de Contraste Visual
+## Journalism Academy · Versão 2.7 — Academia da Linguagem Ilustrada
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
 **Status:** aplicação funcional de fundação acadêmica, não currículo universitário completo nem serviço de ensino credenciado. Todas as 172 unidades curriculares têm aula integral redigida; o conteúdo é autoral e ainda não passou por revisão de especialistas externos.
+
+## NOVO · Academia da Linguagem Ilustrada (v2.7)
+
+Aulas curriculares resumidas e fundamentação linguística aprofundada têm papéis diferentes. Agora há uma biblioteca acadêmica própria, ligada às disciplinas correspondentes e aberta pelo menu **Linguística Aplicada**, sem confundir os dossiês com novas unidades curriculares.
+
+- **8 dossiês integrais** com 4 explicações acadêmicas cada (32 seções), aplicações em fala, entrevista e narrativa.
+- **8 desenhos vetoriais específicos e interativos** (não ilustrações genéricas): produção/escuta da fala, prosódia e foco, sintaxe, inferência, dêixis espacial, coesão, ato de fala e organização de turnos.
+- **24 termos do miniglossário**, oito curiosidades científicas e oito contrastes entre formulação vaga e formulação mais precisa.
+- **8 atividades com roteiro de 3 passos** e 8 perguntas de verificação de compreensão, com justificativa.
+- **Bibliografia de consulta** apontando para materiais da International Phonetic Association, MIT OCW, Stanford Encyclopedia of Philosophy, Cambridge University Press e Open University. Os dossiês são autorais e didáticos, sem alegar revisão institucional ou substituição das obras referidas.
+- **Integração curricular contextual:** aulas de oratória, locução, reportagem, audiovisual e descrição exibem ligações para os estudos de linguística relacionados.
+- **Salvamento local:** capítulos estudados, respostas dos quizzes e anotações pessoais são incluídos no mesmo backup JSON do restante do StoryLab.
+- **Offline:** fonte JSON em `content/linguistics_chapters.json`, gerador `generate_linguistics.py`, módulos `linguistics-data.js` e `linguistics-lab.js`, cache PWA e HTML offline autônomo.
+
+### Como acrescentar ou revisar um dossiê
+
+Edite `content/linguistics_chapters.json`, mantenha estrutura com quatro seções, exemplo aplicado, curiosidade, miniglossário, pergunta e ligações curriculares. Depois execute:
+
+```sh
+python generate_linguistics.py
+python generate_service_worker.py
+python build_standalone.py
+python generate_linguistics.py --check
+node test_linguistics.mjs
+python test_content.py
+python test_quality.py
+```
+
+Os esquemas são modelos pedagógicos simplificados: setas ilustram relações conceituais e não são provas de causas, intenções ou mecanismos universais. O teste de quiz verifica a resposta selecionada contra o gabarito editorial; não é análise de voz por IA.
+
 
 ### Conteúdo desta edição
 

@@ -36,6 +36,7 @@ assert all(set(('weak','strong','why','challenge')).issubset(v) for v in d['spee
 for name in ('index.html','style.css','app.js','data.js','service-worker.js','manifest.webmanifest'):
  assert (r/name).is_file(),name
 subprocess.run([sys.executable,str(r/'generate_data.py'),'--check'],check=True)
+subprocess.run([sys.executable,str(r/'generate_linguistics.py'),'--check'],check=True)
 print('Conteúdo: 43 disciplinas, 172 aulas, 657 frases com nota de uso em 30 famílias, 24 transformações — OK')
 
 atlas=json.loads((r/'content/atlas_guides.json').read_text(encoding='utf8'))
