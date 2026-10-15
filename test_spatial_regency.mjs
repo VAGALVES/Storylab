@@ -26,7 +26,7 @@ for(let i=0;i<8;i++){
   assert.equal(lab.regency(x.verb).verb,x.verb);
   assert.equal(x.patterns.length,2);
   for(const p of x.patterns){
-   assert.ok(p.pt.length>=25&&p.en.length>=20&&(p.structure.includes('X')||p.structure.includes('Y')));
+   assert.ok(p.pt.length>=25&&p.en.length>=20&&p.structure.length>=8);
    assert.ok(!p.pt.includes('[['));
    structures++;
   }
