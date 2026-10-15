@@ -2492,6 +2492,20 @@ window.StoryLabLinguistics = (() => {
     svgText(x+w/2,y+32,label,'font-size="17" font-weight="700" text-anchor="middle" fill="'+(active?'#ffffff':'#20302d')+'"')+
     svgText(x+w/2,y+54,desc,'font-size="12" text-anchor="middle" fill="'+(active?'#dfebe4':'#62716c')+'"');
   }
+  function diagramNote(item,step){
+    const index=Math.max(0,Math.min(2,Number(step)||0));
+    if(item.visual.kind==='syntax')return [
+      '01 · Oração simples: “O prédio” (sintagma nominal) + “foi reformado” (sintagma verbal).',
+      '02 · Oração com encaixe: a relativa “que fica ao lado do museu” modifica “o prédio”.',
+      '03 · Reformulação para narração: duas frases autônomas ligadas pelo pronome “ele”.'
+    ][index];
+    if(item.visual.kind==='camera')return [
+      '01 · Câmera ao sul, apontada ao norte: a loja aparece à esquerda da entrada.',
+      '02 · Câmera ao norte, apontada ao sul: a praça aparece à esquerda; o referencial se inverte.',
+      '03 · Câmera a oeste, apontada ao leste: a loja fica antes do edifício no percurso.'
+    ][index];
+    return 'Etapa '+String(index+1).padStart(2,'0')+' de 03 · Observe no esquema qual elemento foi destacado.';
+  }
   function diagramSvg(item, step){
     const kind=item.visual.kind, active=step%3;
     let art='';
@@ -2508,11 +2522,27 @@ window.StoryLabLinguistics = (() => {
       art+='<path d="M53 112 Q90 '+ys[0]+' 130 '+ys[0]+' S275 '+ys[1]+' 360 '+ys[1]+' S525 '+ys[2]+' 592 '+ys[2]+' S681 110 707 113" fill="none" stroke="#a45c42" stroke-width="4" stroke-linecap="round"/>';
       art+=svgText(380,245,['O quê mudou? — A VITRINE.','O que aconteceu? — MUDOU.','Quando aconteceu? — ONTEM.'][active],'font-size="16" text-anchor="middle" fill="#214b42" font-weight="600"');
     } else if(kind==='syntax'){
-      art+=card(292,25,177,59,'ORAÇÃO','',true);
-      art+=line(375,85,187,119)+line(375,85,570,119);
-      art+=card(73,120,230,70,'SINTAGMA NOMINAL','O prédio');art+=card(451,120,232,70,'SINTAGMA VERBAL','foi reformado');
-      art+=line(187,190,187,207)+line(570,190,570,207);
-      art+=card(92,210,194,56,'Referente','de quem falamos');art+=card(475,210,190,56,'Predicação','o que aconteceu');
+      if(active===0){
+        // 01 — Oração simples: constituintes e funções, sem encaixes.
+        art+=card(282,28,196,63,'ORAÇÃO SIMPLES','O prédio foi reformado',true);
+        art+=line(381,92,195,130)+line(381,92,565,130);
+        art+=card(58,132,273,86,'SINTAGMA NOMINAL','O prédio');
+        art+=card(428,132,274,86,'SINTAGMA VERBAL','foi reformado');
+        art+=svgText(380,257,'01  ·  Duas unidades constituintes formam uma oração.','font-size="15" text-anchor="middle" fill="#214b42" font-weight="600"');
+      } else if(active===1){
+        // 02 — Uma relativa encaixada dentro do sintagma nominal.
+        art+=card(195,34,370,68,'ORAÇÃO PRINCIPAL','O prédio ... foi reformado',true);
+        art+=line(381,104,381,144,'marker-end="url(#lingArrow)"');
+        art+=card(210,149,340,76,'ORAÇÃO RELATIVA','que fica ao lado do museu');
+        art+=svgText(380,263,'02  ·  O encaixe adiciona informação sobre “o prédio”.','font-size="15" text-anchor="middle" fill="#214b42" font-weight="600"');
+      } else {
+        // 03 — Reformulação para voz: duas orações e uma retomada anafórica.
+        art+=card(35,107,314,94,'FRASE 1','O prédio foi reformado.',true);
+        art+=card(415,107,314,94,'FRASE 2','Ele fica ao lado do museu.');
+        art+=line(351,151,409,151,'marker-end="url(#lingArrow)"');
+        art+=svgText(380,75,'ELE  →  retoma “O PRÉDIO”','font-size="15" font-weight="650" text-anchor="middle" fill="#a45c42"');
+        art+=svgText(380,257,'03  ·  A anáfora conecta duas frases mais curtas.','font-size="15" text-anchor="middle" fill="#214b42" font-weight="600"');
+      }
     } else if(kind==='layers'){
       art+=card(26,108,211,91,'O QUE FOI DITO','Algumas lojas abriram',active===0);
       art+=card(274,108,211,91,'O QUE FOI INFERIDO','Talvez nem todas',active===1);
@@ -2521,15 +2551,32 @@ window.StoryLabLinguistics = (() => {
       art+=line(489,153,516,153,'marker-end="url(#lingArrow)" stroke-dasharray="5 5"');
       art+=svgText(380,249,'Inferência conversacional ≠ evidência de que a hipótese é verdadeira.','font-size="14" text-anchor="middle" fill="#214b42"');
     } else if(kind==='camera'){
-      art+='<rect x="276" y="50" width="213" height="148" rx="9" fill="#d9e7db" stroke="#648073" stroke-width="3"/>';
-      art+=svgText(380,92,'EDIFÍCIO','font-size="20" font-weight="700" fill="#214b42" text-anchor="middle"');
-      art+='<rect x="322" y="112" width="116" height="57" rx="8" fill="#f1e3d6" stroke="#c3a98f" stroke-width="2"/>'+svgText(380,146,'ENTRADA','font-size="16" font-weight="700" text-anchor="middle" fill="#20302d"');
-      art+='<rect x="70" y="104" width="128" height="69" rx="12" fill="#f1e3d6" stroke="#c3a98f"/>'+svgText(134,146,'LOJA','font-size="17" text-anchor="middle" fill="#20302d"');
-      art+='<rect x="559" y="104" width="128" height="69" rx="12" fill="#f1e3d6" stroke="#c3a98f"/>'+svgText(623,146,'PRAÇA','font-size="17" text-anchor="middle" fill="#20302d"');
-      const c=active===1?612:156;
-      art+='<circle cx="'+c+'" cy="244" r="23" fill="#214b42"/>'+svgText(c,249,'CAM','font-size="12" text-anchor="middle" fill="#ffffff" font-weight="700"');
-      art+='<path d="M'+c+' 215 L380 192" fill="none" stroke="#a45c42" stroke-dasharray="6 5" stroke-width="3" marker-end="url(#lingArrow)"/>';
-      art+=svgText(380,284,active===1?'A praça pode ficar à esquerda ao mudar o ponto de vista.':'A loja aparece à esquerda neste enquadramento.','font-size="13" text-anchor="middle" fill="#214b42"');
+      // Representação esquemática em planta; cima=N e baixo=S.
+      // A posição da câmera e o sentido do olhar mudam a cada etapa.
+      art+='<rect x="283" y="112" width="194" height="107" rx="10" fill="#d9e7db" stroke="#648073" stroke-width="3"/>';
+      art+=svgText(380,142,'EDIFÍCIO','font-size="20" font-weight="700" fill="#214b42" text-anchor="middle"');
+      art+='<rect x="321" y="151" width="118" height="49" rx="8" fill="#f1e3d6" stroke="#c3a98f" stroke-width="2"/>';
+      art+=svgText(380,181,'ENTRADA','font-size="15" font-weight="700" text-anchor="middle" fill="#20302d"');
+      art+='<rect x="85" y="133" width="134" height="69" rx="12" fill="#f1e3d6" stroke="#c3a98f"/>';
+      art+=svgText(152,174,'LOJA','font-size="17" text-anchor="middle" fill="#20302d"');
+      art+='<rect x="542" y="133" width="134" height="69" rx="12" fill="#f1e3d6" stroke="#c3a98f"/>';
+      art+=svgText(609,174,'PRAÇA','font-size="17" text-anchor="middle" fill="#20302d"');
+      art+=svgText(711,53,'N ↑','font-size="15" font-weight="700" text-anchor="middle" fill="#a45c42"');
+      const positions=[[380,259,380,220],[380,68,380,110],[51,239,281,206]];
+      const p=positions[active];
+      art+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="22" fill="#214b42" stroke="#f1e3d6" stroke-width="3"/>';
+      art+=svgText(p[0],p[1]+4,'CAM','font-size="11" text-anchor="middle" fill="#ffffff" font-weight="700"');
+      art+=line(
+        active===2?p[0]+24:p[0],
+        active===0?p[1]-24:active===1?p[1]+24:p[1]-3,
+        p[2],p[3],
+        'stroke-dasharray="6 5" stroke-width="3" marker-end="url(#lingArrow)"'
+      );
+      art+=svgText(380,293,[
+        '01  ·  Olhando para o norte: a loja está à esquerda.',
+        '02  ·  Olhando para o sul: a praça está à esquerda.',
+        '03  ·  Olhando para leste: a loja vem antes do edifício.'
+      ][active],'font-size="13" text-anchor="middle" fill="#214b42" font-weight="600"');
     } else if(kind==='chain'){
       const terms=[['ÁRVORES','tema'],['COPAS','retomada'],['SOMBRA','informação nova'],['BANCOS','novo foco']];
       terms.forEach((n,i)=>{const x=26+i*183;art+=card(x,108,161,84,n[0],n[1],active===Math.min(i,2));if(i<3)art+=line(x+163,148,x+179,148,'marker-end="url(#lingArrow)"')});
@@ -2544,7 +2591,7 @@ window.StoryLabLinguistics = (() => {
       art+='<path d="M245 91 Q292 108 322 117 M420 152 Q449 179 466 181" fill="none" stroke="#a45c42" stroke-dasharray="6 6" stroke-width="2"/>';
       art+=svgText(380,262,'Pergunta → resposta inicial → reparo: o sentido evolui na sequência.','font-size="13" fill="#214b42" text-anchor="middle"');
     }
-    return '<svg class="ling-diagram" viewBox="0 0 760 300" role="img" aria-label="'+escape(item.visual.title+': '+item.visual.caption)+'" xmlns="http://www.w3.org/2000/svg">'+base+
+    return '<svg class="ling-diagram" viewBox="0 0 760 300" role="img" aria-label="'+escape(item.visual.title+': '+item.visual.caption+' '+diagramNote(item,active))+'" xmlns="http://www.w3.org/2000/svg">'+base+
     '<rect x="1" y="1" width="758" height="298" rx="21" fill="#fffefa" stroke="#e0d6cb" stroke-width="2"/>'+
     svgText(30,32,'STORYLAB  /  MECANISMO LINGUÍSTICO','font-size="11" font-weight="700" letter-spacing="2" fill="#a45c42"')+art+'</svg>';
   }
@@ -2585,7 +2632,7 @@ window.StoryLabLinguistics = (() => {
     '<div class="ling-shell"><aside class="ling-syllabus"><div class="eyebrow">ÍNDICE ACADÊMICO</div><p>Escolha um conceito para abrir o dossiê ilustrado.</p><div class="ling-chapter-list">'+chapters.map((ch,i)=>btn('chapter','<span class="ling-chapter-num">'+String(i+1).padStart(2,'0')+'</span><span class="ling-chapter-label"><strong>'+escape(ch.title)+'</strong><small>'+escape(ch.area)+' · '+ch.minutes+' min</small></span><span class="ling-chapter-status" aria-label="'+(checked(ch)?'Concluído':'Não concluído')+'">'+(checked(ch)?'✓':'→')+'</span>','data-index="'+i+'" aria-current="'+(state.active===i?'true':'false')+'"','ling-chapter '+(state.active===i?'active':'')+(checked(ch)?' is-done':''))).join('')+'</div></aside>'+
     '<article class="ling-article"><div class="ling-hero"><div><span class="eyebrow">'+escape(chapter.area.toUpperCase())+' / DOSSIÊ '+String(state.active+1).padStart(2,'0')+'</span><h2>'+escape(chapter.title)+'</h2><p>'+escape(chapter.subtitle)+'</p></div><div class="ling-duration">'+chapter.minutes+'<span>min de estudo</span></div></div>'+
     '<figure class="ling-figure"><div class="ling-figure-heading"><span class="eyebrow">ESQUEMA VISUAL EXPLICADO</span><strong>'+escape(chapter.visual.title)+'</strong></div>'+diagramSvg(chapter,selected)+
-    '<figcaption>'+escape(chapter.visual.caption)+'</figcaption><div class="ling-figure-controls"><span class="small muted">Explore as perspectivas:</span>'+[0,1,2].map(i=>btn('diagram','0'+(i+1),'data-index="'+i+'" aria-pressed="'+(selected===i?'true':'false')+'"','ling-diagram-button '+(selected===i?'active':''))).join('')+'</div></figure>'+
+    '<figcaption>'+escape(chapter.visual.caption)+' <strong>'+escape(diagramNote(chapter,selected))+'</strong></figcaption><div class="ling-figure-controls"><span class="small muted">Explore as perspectivas:</span>'+[0,1,2].map(i=>btn('diagram','0'+(i+1),'data-index="'+i+'" aria-label="Etapa '+(i+1)+' de 3: '+escape(diagramNote(chapter,i))+'" aria-pressed="'+(selected===i?'true':'false')+'"','ling-diagram-button '+(selected===i?'active':''))).join('')+'</div></figure>'+
     caseStudy(chapter)+
     '<div class="ling-tabs" role="tablist" aria-label="Conteúdo acadêmico">'+[['theory','Fundamentação'],['practice','Exercício e revisão'],['references','Referências']].map(([id,label])=>btn('tab',label,'data-tab="'+id+'" role="tab" aria-selected="'+(state.tab===id?'true':'false')+'"','ling-tab '+(state.tab===id?'active':''))).join('')+'</div>'+
     (state.tab==='theory'?theory(chapter):state.tab==='practice'?practice(chapter):references(chapter))+

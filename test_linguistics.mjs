@@ -59,7 +59,38 @@ for(const c of chapters){
   assert.match(app.diagramSvg(c,1),/STORYLAB/);
   assert.match(app.diagramSvg(c,2),/<\/svg>/);
 }
+// Regressões encontradas em Android: três estados precisam ser visualmente distintos.
+const syntaxChapter=chapters.find(x=>x.visual.kind==='syntax');
+const deixisChapter=chapters.find(x=>x.visual.kind==='camera');
+const syntaxStages=[0,1,2].map(i=>app.diagramSvg(syntaxChapter,i));
+const deixisStages=[0,1,2].map(i=>app.diagramSvg(deixisChapter,i));
+assert.equal(new Set(syntaxStages).size,3,'Sintaxe: as três etapas precisam redesenhar o mecanismo');
+assert.equal(new Set(deixisStages).size,3,'Dêixis: etapas 01 e 03 não podem repetir o desenho');
+assert.match(syntaxStages[0],/SINTAGMA NOMINAL/);
+assert.match(syntaxStages[1],/ORAÇÃO RELATIVA/);
+assert.match(syntaxStages[2],/FRASE 2/);
+assert.match(deixisStages[0],/Olhando para o norte/);
+assert.match(deixisStages[1],/Olhando para o sul/);
+assert.match(deixisStages[2],/Olhando para leste/);
+assert.match(deixisStages[0],/cx="380" cy="259"/);
+assert.match(deixisStages[1],/cx="380" cy="68"/);
+assert.match(deixisStages[2],/cx="51" cy="239"/);
+
+// A seleção muda também a descrição pedagógica e a acessibilidade.
+event('chapter',{index:'2'});
+assert.match(app.render(),/01 · Oração simples/);
+event('diagram',{index:'1'});
+assert.match(app.render(),/02 · Oração com encaixe/);
+event('diagram',{index:'2'});
+assert.match(app.render(),/03 · Reformulação para narração/);
+event('chapter',{index:'4'});
+assert.match(app.render(),/01 · Câmera ao sul/);
+event('diagram',{index:'1'});
+assert.match(app.render(),/02 · Câmera ao norte/);
+event('diagram',{index:'2'});
+assert.match(app.render(),/03 · Câmera a oeste/);
 event('chapter',{index:'3'});
+
 html=app.render();
 assert.match(html,/Pragmática/);
 assert.match(html,/Dito ≠ inferido/);
