@@ -13834,6 +13834,27 @@
             "d": "Entrevista, dado ou documento"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da descrição à interpretação",
+        "from": "Observável",
+        "to": "Interpretação",
+        "caption": "Leia assim: comece pelo que se vê, só depois levante hipóteses sobre a intenção e, por fim, ofereça leituras plausíveis com seus limites.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Descrição"
+          },
+          {
+            "at": 0.5,
+            "t": "Hipótese"
+          },
+          {
+            "at": 0.9,
+            "t": "Leituras e limites"
+          }
+        ]
       }
     ],
     "historia-jornalismo:0": [
@@ -13981,6 +14002,31 @@
             "b": "Mais fontes, cenas e aprofundamento"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do fato ao olhar pessoal",
+        "from": "Direto ao fato",
+        "to": "Olhar pessoal",
+        "caption": "Leia assim: a notícia informa de forma direta; a crônica admite o olhar pessoal, desde que marque com clareza o que é impressão.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Notícia"
+          },
+          {
+            "at": 0.36,
+            "t": "Reportagem"
+          },
+          {
+            "at": 0.64,
+            "t": "Perfil"
+          },
+          {
+            "at": 0.92,
+            "t": "Crônica"
+          }
+        ]
       }
     ],
     "fundamentos-jornalismo:2": [
@@ -14047,6 +14093,28 @@
           "Interesse legítimo"
         ],
         "center": "Pauta forte"
+      },
+      {
+        "type": "stairs",
+        "title": "Quantos “sim” a pauta tem",
+        "axis": "Respostas positivas: é novo? afeta pessoas? é curioso?",
+        "caption": "Leia assim: quanto mais respostas positivas às três perguntas, mais forte é a pauta; cada “sim” acrescenta um degrau de relevância.",
+        "steps": [
+          {
+            "t": "Nenhum sim",
+            "d": "Mais fraca"
+          },
+          {
+            "t": "Um sim"
+          },
+          {
+            "t": "Dois sins"
+          },
+          {
+            "t": "Três sins",
+            "d": "Mais forte"
+          }
+        ]
       }
     ],
     "teoria-noticia:1": [
@@ -14199,6 +14267,27 @@
             "label": "Liberdade",
             "a": "Pode recusar e pedir para sair depois",
             "b": "Aceitou sob pressão"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Gravidade do dano possível",
+        "from": "Dano leve",
+        "to": "Dano grave",
+        "caption": "Leia assim: aparecer pode custar de um constrangimento a riscos maiores; quanto maior o dano possível, mais cuidado, sobretudo com pessoas vulneráveis.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Constrangimento"
+          },
+          {
+            "at": 0.5,
+            "t": "Problema no trabalho"
+          },
+          {
+            "at": 0.9,
+            "t": "Risco maior"
           }
         ]
       }
@@ -14387,6 +14476,27 @@
             "t": "Fato atual"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da impressão ao apurado",
+        "from": "Impressão",
+        "to": "Apurado",
+        "caption": "Leia assim: algumas semanas num lugar não fazem um especialista; combine fontes locais, especialistas, documentos e observação direta.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Impressão de visitante"
+          },
+          {
+            "at": 0.5,
+            "t": "Fonte única"
+          },
+          {
+            "at": 0.9,
+            "t": "Fontes variadas"
+          }
+        ]
       }
     ],
     "jornalismo-internacional:1": [
@@ -14511,6 +14621,27 @@
           {
             "t": "Confirmar ou refutar",
             "d": "Apurar sem buscar só o que já se pensa"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Escopo da hipótese",
+        "from": "Ampla demais",
+        "to": "Apurável",
+        "caption": "Leia assim: quanto mais a hipótese define lugar, período e grupo, mais viável é apurá-la com os recursos de um repórter individual.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "A cidade inteira"
+          },
+          {
+            "at": 0.5,
+            "t": "Só o lugar"
+          },
+          {
+            "at": 0.9,
+            "t": "Lugar, período, grupo"
           }
         ]
       }
@@ -14712,6 +14843,27 @@
             "b": "Fontes, contexto e ressalvas"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do adjetivo ao fato",
+        "from": "Afirma",
+        "to": "Mostra",
+        "caption": "Leia assim: adjetivos genéricos pedem confiança cega; quanto mais perto do fato e do detalhe concreto, mais o texto mostra em vez de afirmar.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Adjetivo genérico"
+          },
+          {
+            "at": 0.5,
+            "t": "Detalhe concreto"
+          },
+          {
+            "at": 0.9,
+            "t": "Fato"
+          }
+        ]
       }
     ],
     "tecnicas-entrevista:0": [
@@ -14788,6 +14940,27 @@
             "d": "A pessoa completa o pensamento"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da resposta genérica ao concreto",
+        "from": "Genérica",
+        "to": "Concreta",
+        "caption": "Leia assim: respostas abstratas ganham força com casos concretos; peça exemplos e detalhes até chegar a quando, onde, como e quem.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Resposta abstrata"
+          },
+          {
+            "at": 0.5,
+            "t": "Com exemplo"
+          },
+          {
+            "at": 0.9,
+            "t": "Quando, onde, quem"
+          }
+        ]
       }
     ],
     "tecnicas-entrevista:3": [
@@ -14854,6 +15027,31 @@
           "Observação direta"
         ],
         "center": "Prova forte"
+      },
+      {
+        "type": "spectrum",
+        "title": "Força da confirmação",
+        "from": "Mais fraca",
+        "to": "Mais forte",
+        "caption": "Leia assim: duas fontes que repetem a mesma origem não confirmam; a prova mais forte combina fontes independentes, documento, testemunho e observação.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Fonte única"
+          },
+          {
+            "at": 0.35,
+            "t": "Mesma origem"
+          },
+          {
+            "at": 0.62,
+            "t": "Fontes independentes"
+          },
+          {
+            "at": 0.92,
+            "t": "Tipos combinados"
+          }
+        ]
       }
     ],
     "pesquisa-verificacao:2": [
@@ -14926,6 +15124,27 @@
           },
           {
             "t": "Grau de confiança"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Grau de confiança no registro",
+        "from": "Menos firme",
+        "to": "Mais firme",
+        "caption": "Leia assim: ao lado de cada afirmação, registre se ela está confirmada, se depende de uma fonte única ou se é estimativa própria.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Estimativa própria"
+          },
+          {
+            "at": 0.5,
+            "t": "Fonte única"
+          },
+          {
+            "at": 0.9,
+            "t": "Confirmada"
           }
         ]
       }
@@ -15209,6 +15428,31 @@
             "d": "Pausa e ponte para o próximo bloco"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do observado ao concluído",
+        "from": "O que se observa",
+        "to": "O que se conclui",
+        "caption": "Leia assim: comece pelo que os sentidos registram e adie adjetivos avaliativos até haver elementos que os sustentem.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "Observação"
+          },
+          {
+            "at": 0.38,
+            "t": "Contexto"
+          },
+          {
+            "at": 0.68,
+            "t": "Interpretação"
+          },
+          {
+            "at": 0.94,
+            "t": "Síntese"
+          }
+        ]
       }
     ],
     "comunicacao-verbal:1": [
@@ -15329,6 +15573,27 @@
             "d": "Não vale para todas as rotas e todos os públicos"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da convicção à prova",
+        "from": "Só convicção",
+        "to": "Verificável",
+        "caption": "Leia assim: opinião não é prova; a razão explica seu pensamento, mas só a evidência verificável apoia ou enfraquece a afirmação.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Opinião"
+          },
+          {
+            "at": 0.5,
+            "t": "Razão"
+          },
+          {
+            "at": 0.88,
+            "t": "Evidência verificável"
+          }
+        ]
       }
     ],
     "oratoria-retorica:2": [
@@ -15394,6 +15659,27 @@
           {
             "t": "Uma palavra-chave",
             "d": "Intensidade, duração ou tom; não ressaltar tudo"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto enfatizar",
+        "from": "Sem ênfase",
+        "to": "Tudo enfatizado",
+        "caption": "Leia assim: destaque uma palavra-chave por frase; sem nenhuma ênfase a fala fica monótona, e ressaltar todas as palavras anula o destaque.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Monotonia"
+          },
+          {
+            "at": 0.5,
+            "t": "Palavra-chave"
+          },
+          {
+            "at": 0.92,
+            "t": "Ênfase em tudo"
           }
         ]
       }
@@ -15471,6 +15757,27 @@
             "t": "Pausa curta"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da recitação à intenção",
+        "from": "Recitar letras",
+        "to": "Falar à lente",
+        "caption": "Leia assim: ler diante da câmera é interpretar uma intenção; quanto mais você domina as unidades, mais fala ao público e menos lê.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Recitar"
+          },
+          {
+            "at": 0.5,
+            "t": "Ler com marcação"
+          },
+          {
+            "at": 0.92,
+            "t": "Falar à lente"
+          }
+        ]
       }
     ],
     "comunicacao-camera:0": [
@@ -15495,6 +15802,27 @@
             "label": "Efeito",
             "a": "Conversa com uma pessoa",
             "b": "Conduz a atenção para a cena"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do texto decorado ao natural",
+        "from": "Decorar tudo",
+        "to": "Dominar a mensagem",
+        "caption": "Leia assim: a naturalidade vem do domínio da mensagem, não de decorar cada palavra; apoie-se em poucas ideias contadas com palavras próprias.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Decorar parágrafo"
+          },
+          {
+            "at": 0.5,
+            "t": "Três ideias"
+          },
+          {
+            "at": 0.92,
+            "t": "Mensagem central"
           }
         ]
       }
@@ -15676,6 +16004,27 @@
             "d": "Não preencha a pausa com adjetivos"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto a voz descreve",
+        "from": "Voz ausente",
+        "to": "Voz em excesso",
+        "caption": "Leia assim: a voz entra para dizer o que a imagem não diz, como a razão de seguir a bicicleta; repetir o que já se vê é preencher a pausa.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Silêncio"
+          },
+          {
+            "at": 0.5,
+            "t": "Explica a escolha"
+          },
+          {
+            "at": 0.9,
+            "t": "Repete a cor"
+          }
+        ]
       }
     ],
     "storytelling:0": [
@@ -15848,6 +16197,27 @@
             "b": "Os fatos observados"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do coloquial ao técnico",
+        "from": "Coloquial",
+        "to": "Técnico",
+        "caption": "Leia assim: reformular é mudar de registro sem acrescentar fatos; explique o termo novo na primeira vez e retome a palavra técnica depois.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Frase coloquial"
+          },
+          {
+            "at": 0.5,
+            "t": "Termo explicado"
+          },
+          {
+            "at": 0.9,
+            "t": "Palavra técnica"
+          }
+        ]
       }
     ],
     "improvisacao:3": [
@@ -16002,6 +16372,27 @@
           },
           {
             "t": "Estrutura clara"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do genérico ao concreto",
+        "from": "Generalidade",
+        "to": "Acontecimento",
+        "caption": "Leia assim: palavras concretas ajudam a audiência a reconstruir a cena; quanto mais específico o detalhe, mais memorável a informação.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Generalidade"
+          },
+          {
+            "at": 0.5,
+            "t": "Palavra concreta"
+          },
+          {
+            "at": 0.92,
+            "t": "Acontecimento"
           }
         ]
       }
@@ -16190,6 +16581,31 @@
           }
         ],
         "caption": "O ponto-chave: a conversa intercultural é um encontro, e o retorno ético à pessoa realimenta a confiança para a próxima escuta."
+      },
+      {
+        "type": "spectrum",
+        "title": "Retorno ao entrevistado",
+        "from": "Sem retorno",
+        "to": "Controle total",
+        "caption": "Leia assim: o retorno ético fica no meio do eixo: explicar o uso, pedir permissão e aceitar correções factuais, sem ceder o controle editorial.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Sem retorno"
+          },
+          {
+            "at": 0.37,
+            "t": "Explica o uso"
+          },
+          {
+            "at": 0.64,
+            "t": "Corrige fatos"
+          },
+          {
+            "at": 0.9,
+            "t": "Controle total"
+          }
+        ]
       }
     ],
     "fotojornalismo:0": [
@@ -16310,6 +16726,27 @@
           }
         ],
         "caption": "O ponto-chave: a legenda informa o que o olhar não alcança e declara qualquer intervenção que afete a leitura da imagem."
+      },
+      {
+        "type": "spectrum",
+        "title": "Intervenção na imagem",
+        "from": "Registro",
+        "to": "Encenação",
+        "caption": "Leia assim: quanto mais à direita, maior a intervenção na cena; acima dos ajustes básicos de luz e cor, a legenda precisa declará-la.",
+        "marks": [
+          {
+            "at": 0.14,
+            "t": "Ajuste básico"
+          },
+          {
+            "at": 0.5,
+            "t": "Pose pedida"
+          },
+          {
+            "at": 0.86,
+            "t": "Cena recriada"
+          }
+        ]
       }
     ],
     "fotografia-tecnica:0": [
@@ -16359,6 +16796,27 @@
           }
         ],
         "caption": "O ponto-chave: o tempo de exposição decide se o movimento aparece congelado ou como rastro. No panning, de 1/30 a 1/60 s, o fundo borra."
+      },
+      {
+        "type": "spectrum",
+        "title": "Velocidade do obturador",
+        "from": "Rápida",
+        "to": "Lenta",
+        "caption": "Leia assim: quanto mais lenta a velocidade, mais movimento vira rastro; quanto mais rápida, mais a ação congela e mais luz é preciso.",
+        "marks": [
+          {
+            "at": 0.12,
+            "t": "1/500 s: congela"
+          },
+          {
+            "at": 0.5,
+            "t": "1/60 s: panning"
+          },
+          {
+            "at": 0.88,
+            "t": "1/15 s: rastros"
+          }
+        ]
       }
     ],
     "fotografia-tecnica:2": [
@@ -16523,6 +16981,27 @@
           }
         ],
         "caption": "Leia assim: a principal define a forma, o preenchimento controla o contraste e o recorte separa o personagem do fundo."
+      },
+      {
+        "type": "spectrum",
+        "title": "Contraste da cena",
+        "from": "Alto contraste",
+        "to": "Baixo contraste",
+        "caption": "Leia assim: se o lado oposto à luz principal fica escuro, o contraste sobe; com luz rebatida, ele cai e o clima da cena muda.",
+        "marks": [
+          {
+            "at": 0.12,
+            "t": "Lado escuro"
+          },
+          {
+            "at": 0.5,
+            "t": "Luz rebatida parcial"
+          },
+          {
+            "at": 0.88,
+            "t": "Sombra preenchida"
+          }
+        ]
       }
     ],
     "fotografia-direcao:1": [
@@ -16633,6 +17112,27 @@
           }
         ],
         "caption": "O ponto-chave: imagem e som se complementam; narrar “vemos um homem cozinhando” sobre a cena é desperdício."
+      },
+      {
+        "type": "spectrum",
+        "title": "Imagem e narração",
+        "from": "Repete",
+        "to": "Complementa",
+        "caption": "Leia assim: quanto mais a narração acrescenta o que a imagem não mostra, mais as duas colunas se complementam em vez de se repetir.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Repete a imagem"
+          },
+          {
+            "at": 0.5,
+            "t": "Soma contexto"
+          },
+          {
+            "at": 0.9,
+            "t": "Informa o invisível"
+          }
+        ]
       }
     ],
     "roteiro-audiovisual:2": [
@@ -17419,6 +17919,31 @@
         ],
         "center": "Boa miniatura",
         "caption": "Leia assim: a miniatura só funciona quando os três critérios se cruzam; falhar na fidelidade transforma a promessa em engano."
+      },
+      {
+        "type": "spectrum",
+        "title": "Da miniatura clara à enganosa",
+        "from": "Informa",
+        "to": "Engana",
+        "caption": "Leia assim: quanto mais a miniatura se afasta do que está no vídeo, menos ela informa e mais trai a promessa feita ao público.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Tema claro"
+          },
+          {
+            "at": 0.38,
+            "t": "Expressão exagerada"
+          },
+          {
+            "at": 0.64,
+            "t": "Seta para nada"
+          },
+          {
+            "at": 0.9,
+            "t": "Imagem fora do vídeo"
+          }
+        ]
       }
     ],
     "audiencia-estrategia:0": [
@@ -17514,6 +18039,31 @@
           {
             "t": "Teste uma mudança isolada",
             "d": "Dois títulos para o mesmo tipo de conteúdo"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto a métrica diz da qualidade",
+        "from": "Impressiona",
+        "to": "Informa",
+        "caption": "Leia assim: números de vaidade chamam atenção, mas é à direita, em retenção e retorno do público, que está a leitura da qualidade.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Seguidores"
+          },
+          {
+            "at": 0.34,
+            "t": "Visualizações"
+          },
+          {
+            "at": 0.62,
+            "t": "Comentários úteis"
+          },
+          {
+            "at": 0.9,
+            "t": "Retenção"
           }
         ]
       }
@@ -17653,6 +18203,27 @@
           {
             "t": "Separe da declaração",
             "d": "Leitura própria não é posição oficial da marca"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do que se vê ao que se infere",
+        "from": "Observado",
+        "to": "Inferido",
+        "caption": "Leia assim: quanto mais se avança do registro visual para a proposta estética, mais a leitura é inferência e precisa ser qualificada.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Itens e cores"
+          },
+          {
+            "at": 0.4,
+            "t": "Acabamento visível"
+          },
+          {
+            "at": 0.9,
+            "t": "Hipótese editorial"
           }
         ]
       }
@@ -18114,6 +18685,27 @@
             "b": "“Cerca de um dia de uso intenso”"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da promessa à evidência",
+        "from": "Promessa",
+        "to": "Evidência",
+        "caption": "Leia assim: o que o fabricante afirma é promessa; só o que você testou vira evidência, e as duas coisas devem aparecer separadas no texto.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Diz o fabricante"
+          },
+          {
+            "at": 0.5,
+            "t": "Especificação lida"
+          },
+          {
+            "at": 0.9,
+            "t": "Testado por você"
+          }
+        ]
       }
     ],
     "jornalismo-tecnologia:1": [
@@ -18331,24 +18923,53 @@
             "t": "diminuto"
           },
           {
-            "at": 0.22,
+            "at": 0.21,
             "t": "exíguo"
           },
           {
-            "at": 0.5,
+            "at": 0.4,
             "t": "escala humana"
           },
           {
-            "at": 0.68,
+            "at": 0.58,
             "t": "amplo"
           },
           {
-            "at": 0.84,
+            "at": 0.76,
             "t": "imponente"
           },
           {
-            "at": 0.97,
+            "at": 0.95,
             "t": "monumental"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da silhueta fina à massa larga",
+        "from": "Fino",
+        "to": "Largo",
+        "caption": "O corpo do objeto pode ser lido pela relação entre altura e largura. “Proporcional” é o ponto de comparação; para os lados dele, nomeie o desvio.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "esguio"
+          },
+          {
+            "at": 0.24,
+            "t": "alongado"
+          },
+          {
+            "at": 0.5,
+            "t": "proporcional"
+          },
+          {
+            "at": 0.76,
+            "t": "atarracado"
+          },
+          {
+            "at": 0.94,
+            "t": "maciço"
           }
         ]
       }
@@ -18376,6 +18997,64 @@
             "part": "rebatida",
             "t": "rebatida",
             "side": "right"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da penumbra ao estouro",
+        "from": "Pouca luz",
+        "to": "Luz em excesso",
+        "caption": "Descreva a quantidade de luz pelo efeito que ela tem na imagem, de quase nenhuma até a que apaga os detalhes.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "penumbra"
+          },
+          {
+            "at": 0.26,
+            "t": "mortiça"
+          },
+          {
+            "at": 0.46,
+            "t": "filtrada"
+          },
+          {
+            "at": 0.76,
+            "t": "ofuscante"
+          },
+          {
+            "at": 0.95,
+            "t": "estourada"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Dureza da luz",
+        "from": "Suave",
+        "to": "Dura",
+        "caption": "Quanto mais direta e concentrada a fonte, mais nítida e dura é a borda da sombra; a luz que chega rebatida ou espalhada suaviza.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "difusa"
+          },
+          {
+            "at": 0.3,
+            "t": "indireta"
+          },
+          {
+            "at": 0.56,
+            "t": "direcional"
+          },
+          {
+            "at": 0.76,
+            "t": "rasante"
+          },
+          {
+            "at": 0.95,
+            "t": "dura"
           }
         ]
       }
@@ -18499,6 +19178,27 @@
             "side": "right"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Profundidade da cena",
+        "from": "Perto",
+        "to": "Longe",
+        "caption": "A profundidade se narra em camadas: o que está diante da câmera, o que vem logo atrás e o que fecha o fundo.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "em primeiro plano"
+          },
+          {
+            "at": 0.48,
+            "t": "em segundo plano"
+          },
+          {
+            "at": 0.9,
+            "t": "ao fundo"
+          }
+        ]
       }
     ],
     "15": [
@@ -18536,6 +19236,31 @@
             "when": "18h",
             "t": "de última hora",
             "d": "no limite do prazo"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Ritmo da mudança",
+        "from": "Lenta",
+        "to": "Instantânea",
+        "caption": "O termo de tempo informa também a velocidade: a mudança que se acumula aos poucos e a que vem de uma vez pedem expressões diferentes.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "paulatinamente"
+          },
+          {
+            "at": 0.38,
+            "t": "em crescendo"
+          },
+          {
+            "at": 0.68,
+            "t": "tão logo"
+          },
+          {
+            "at": 0.94,
+            "t": "de súbito"
           }
         ]
       }
@@ -18642,6 +19367,31 @@
             "t": "bruma"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Alcance da vista",
+        "from": "Nítida",
+        "to": "Distante",
+        "caption": "Quanto mais longe, menos nítido: a vista se descreve pelo ponto em que o detalhe se perde e pelo que a luz e a névoa apagam.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "desobstruído"
+          },
+          {
+            "at": 0.44,
+            "t": "esmaecido"
+          },
+          {
+            "at": 0.72,
+            "t": "bruma"
+          },
+          {
+            "at": 0.94,
+            "t": "a perder de vista"
+          }
+        ]
       }
     ],
     "24": [
@@ -18684,6 +19434,35 @@
             "t": "escarpa"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do plano ao íngreme",
+        "from": "Plano",
+        "to": "Íngreme",
+        "caption": "O relevo se lê pela inclinação: da superfície quase plana às paredes quase verticais. Diga de onde se observa antes de dar a altura.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "planície"
+          },
+          {
+            "at": 0.24,
+            "t": "várzea"
+          },
+          {
+            "at": 0.5,
+            "t": "colina"
+          },
+          {
+            "at": 0.74,
+            "t": "encosta"
+          },
+          {
+            "at": 0.95,
+            "t": "escarpa"
+          }
+        ]
       }
     ],
     "25": [
@@ -18709,6 +19488,31 @@
           {
             "at": 0.95,
             "t": "plúmbeo"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da umidade à tempestade",
+        "from": "Pouca água",
+        "to": "Muita água",
+        "caption": "A precipitação se descreve pela intensidade e pela duração: do orvalho que deposita sozinho à chuva com descargas elétricas.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "orvalho"
+          },
+          {
+            "at": 0.28,
+            "t": "garoa"
+          },
+          {
+            "at": 0.6,
+            "t": "aguaceiro"
+          },
+          {
+            "at": 0.94,
+            "t": "trovoada"
           }
         ]
       }
@@ -18743,6 +19547,56 @@
           {
             "part": "pastel",
             "t": "pastel"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da cor apagada à cor máxima",
+        "from": "Pouca cor",
+        "to": "Cor máxima",
+        "caption": "Saturação é a pureza da cor: perdendo pureza, ela se aproxima do cinza; ganhando, chega ao que grita na paisagem.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "desbotado"
+          },
+          {
+            "at": 0.26,
+            "t": "dessaturado"
+          },
+          {
+            "at": 0.46,
+            "t": "pastel"
+          },
+          {
+            "at": 0.75,
+            "t": "saturado"
+          },
+          {
+            "at": 0.95,
+            "t": "berrante"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Temperatura da cor",
+        "from": "Fria",
+        "to": "Quente",
+        "caption": "A temperatura é relativa ao entorno: uma cor só é quente ou fria em comparação com as vizinhas, e o neutro fica entre as duas.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "frio"
+          },
+          {
+            "at": 0.5,
+            "t": "neutro"
+          },
+          {
+            "at": 0.9,
+            "t": "quente"
           }
         ]
       }
@@ -18859,6 +19713,31 @@
             "mouth": "grimace"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do contido ao expressivo",
+        "from": "Contido",
+        "to": "Expressivo",
+        "caption": "A expressão cresce em movimento do rosto: do que não se mexe ao que se contorce. Descreva o movimento, sem presumir o que a pessoa sente.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "impassível"
+          },
+          {
+            "at": 0.3,
+            "t": "sorriso contido"
+          },
+          {
+            "at": 0.62,
+            "t": "sobrancelhas arqueadas"
+          },
+          {
+            "at": 0.94,
+            "t": "esgar"
+          }
+        ]
       }
     ],
     "18": [
@@ -18890,6 +19769,31 @@
           {
             "t": "passada larga",
             "pose": "passada larga"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da rigidez ao relaxamento",
+        "from": "Rígido",
+        "to": "Relaxado",
+        "caption": "A postura se descreve pela tensão do corpo e pelo apoio. Não conclua cansaço, timidez ou confiança a partir dela.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "hirto"
+          },
+          {
+            "at": 0.28,
+            "t": "ereto"
+          },
+          {
+            "at": 0.58,
+            "t": "desenvolto"
+          },
+          {
+            "at": 0.92,
+            "t": "recostado"
           }
         ]
       }
@@ -18955,7 +19859,404 @@
             "n": 90
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do espaço vazio à desordem",
+        "from": "Espaçado",
+        "to": "Desordem",
+        "caption": "Aglomeração se descreve pela distância entre as pessoas. “Tumulto” e “debandada” são fatos e só entram se foram presenciados ou atribuídos a uma fonte.",
+        "marks": [
+          {
+            "at": 0.05,
+            "t": "rarefeito"
+          },
+          {
+            "at": 0.28,
+            "t": "aglomeração"
+          },
+          {
+            "at": 0.52,
+            "t": "ombro a ombro"
+          },
+          {
+            "at": 0.78,
+            "t": "tumulto"
+          },
+          {
+            "at": 0.96,
+            "t": "debandada"
+          }
+        ]
+      }
+    ],
+    "0": [
+      {
+        "type": "spectrum",
+        "title": "Da ordem à liberdade da forma",
+        "from": "Regular",
+        "to": "Livre",
+        "caption": "Leia a forma pela regra que a organiza: o módulo se repete, a simetria espelha, a assimetria equilibra sem espelhar, e o orgânico dispensa a regra.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "modular"
+          },
+          {
+            "at": 0.3,
+            "t": "simétrico"
+          },
+          {
+            "at": 0.58,
+            "t": "assimétrico"
+          },
+          {
+            "at": 0.92,
+            "t": "orgânico"
+          }
+        ]
+      }
+    ],
+    "4": [
+      {
+        "type": "spectrum",
+        "title": "Do liso ao rugoso",
+        "from": "Liso",
+        "to": "Rugoso",
+        "caption": "A textura se descreve pelo que a mão sentiria: da superfície que reflete e desliza até a que prende e raspa.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "polido"
+          },
+          {
+            "at": 0.27,
+            "t": "acetinado"
+          },
+          {
+            "at": 0.47,
+            "t": "fosco"
+          },
+          {
+            "at": 0.72,
+            "t": "áspero"
+          },
+          {
+            "at": 0.94,
+            "t": "rugoso"
+          }
+        ]
+      }
+    ],
+    "5": [
+      {
+        "type": "spectrum",
+        "title": "Energia do ambiente",
+        "from": "Calmo",
+        "to": "Agitado",
+        "caption": "Descreva o ritmo do ambiente pelo que acontece nele (quem se move, quanto se fala), e não pela impressão que ele causa.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "contemplativo"
+          },
+          {
+            "at": 0.28,
+            "t": "sereno"
+          },
+          {
+            "at": 0.48,
+            "t": "descontraído"
+          },
+          {
+            "at": 0.72,
+            "t": "festivo"
+          },
+          {
+            "at": 0.95,
+            "t": "frenético"
+          }
+        ]
+      }
+    ],
+    "6": [
+      {
+        "type": "spectrum",
+        "title": "Da regularidade ao descontrole",
+        "from": "Regular",
+        "to": "Irregular",
+        "caption": "Um movimento pode ser lido por sua constância: da coordenação exata à dispersão sem padrão. Diga o que se repete e o que falha.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "sincronizado"
+          },
+          {
+            "at": 0.28,
+            "t": "ritmado"
+          },
+          {
+            "at": 0.5,
+            "t": "intermitente"
+          },
+          {
+            "at": 0.76,
+            "t": "errático"
+          },
+          {
+            "at": 0.95,
+            "t": "disperso"
+          }
+        ]
+      }
+    ],
+    "10": [
+      {
+        "type": "spectrum",
+        "title": "Do crocante ao untuoso",
+        "from": "Firme",
+        "to": "Macio",
+        "caption": "A textura de um alimento vai da resistência ao primeiro contato até a maciez que envolve a boca; nomeie o ponto, não o prazer.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "crocante"
+          },
+          {
+            "at": 0.34,
+            "t": "fibroso"
+          },
+          {
+            "at": 0.64,
+            "t": "suculento"
+          },
+          {
+            "at": 0.93,
+            "t": "untuoso"
+          }
+        ]
+      }
+    ],
+    "11": [
+      {
+        "type": "spectrum",
+        "title": "Do sussurro ao ensurdecedor",
+        "from": "Baixo",
+        "to": "Muito alto",
+        "caption": "O volume é relativo ao lugar. Use o termo mais forte só quando o som realmente domina a cena, e confira se o áudio gravado confirma.",
+        "marks": [
+          {
+            "at": 0.05,
+            "t": "sussurro"
+          },
+          {
+            "at": 0.3,
+            "t": "ruído de fundo"
+          },
+          {
+            "at": 0.68,
+            "t": "estridente"
+          },
+          {
+            "at": 0.95,
+            "t": "ensurdecedor"
+          }
+        ]
+      }
+    ],
+    "13": [
+      {
+        "type": "spectrum",
+        "title": "Do familiar ao estranho",
+        "from": "Familiar",
+        "to": "Estranho",
+        "caption": "Descreva a relação de quem observa com o lugar: de sentir-se em casa a perder as referências. É a impressão do narrador, e deve ser dita como tal.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "familiaridade"
+          },
+          {
+            "at": 0.26,
+            "t": "nostalgia"
+          },
+          {
+            "at": 0.5,
+            "t": "deslocamento"
+          },
+          {
+            "at": 0.74,
+            "t": "estranhamento"
+          },
+          {
+            "at": 0.94,
+            "t": "desorientação"
+          }
+        ]
+      }
+    ],
+    "19": [
+      {
+        "type": "spectrum",
+        "title": "Desgaste de um objeto",
+        "from": "Novo",
+        "to": "Arruinado",
+        "caption": "O estado de um objeto é uma escala de uso e de tempo: de intacto à perda da função. Descreva o sinal visível antes de contar a história dele.",
+        "marks": [
+          {
+            "at": 0.05,
+            "t": "intacto"
+          },
+          {
+            "at": 0.24,
+            "t": "pátina"
+          },
+          {
+            "at": 0.44,
+            "t": "puído"
+          },
+          {
+            "at": 0.62,
+            "t": "descascado"
+          },
+          {
+            "at": 0.8,
+            "t": "enferrujado"
+          },
+          {
+            "at": 0.96,
+            "t": "carcomido"
+          }
+        ]
+      }
+    ],
+    "22": [
+      {
+        "type": "spectrum",
+        "title": "Da confiança ao medo",
+        "from": "Confiante",
+        "to": "Temeroso",
+        "caption": "O comportamento mostra a distância que o animal aceita de quem o observa: dócil se aproxima, arisco mantém distância, acuado reage.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "dócil"
+          },
+          {
+            "at": 0.55,
+            "t": "arisco"
+          },
+          {
+            "at": 0.92,
+            "t": "acuado"
+          }
+        ]
+      }
+    ],
+    "27": [
+      {
+        "type": "spectrum",
+        "title": "Do ponto ao alcance",
+        "from": "Efeito pontual",
+        "to": "Efeito amplo",
+        "caption": "Os verbos da incidência diferem pela extensão do efeito: do que bate num ponto ao que atravessa tudo, e o verbo certo informa o alcance.",
+        "marks": [
+          {
+            "at": 0.06,
+            "t": "incidir"
+          },
+          {
+            "at": 0.25,
+            "t": "respingar em"
+          },
+          {
+            "at": 0.43,
+            "t": "repercutir"
+          },
+          {
+            "at": 0.61,
+            "t": "irradiar"
+          },
+          {
+            "at": 0.78,
+            "t": "propagar-se"
+          },
+          {
+            "at": 0.95,
+            "t": "permear"
+          }
+        ]
+      }
+    ],
+    "30": [
+      {
+        "type": "spectrum",
+        "title": "Do gotejar ao ribombar",
+        "from": "Suave",
+        "to": "Forte",
+        "caption": "Os sons da natureza se ordenam por intensidade: da gota que cai ao trovão que rola. Só descreva o que o microfone captou.",
+        "marks": [
+          {
+            "at": 0.05,
+            "t": "gotejar"
+          },
+          {
+            "at": 0.22,
+            "t": "murmúrio"
+          },
+          {
+            "at": 0.4,
+            "t": "farfalhar"
+          },
+          {
+            "at": 0.58,
+            "t": "marulho"
+          },
+          {
+            "at": 0.76,
+            "t": "uivo"
+          },
+          {
+            "at": 0.95,
+            "t": "ribombar"
+          }
+        ]
       }
     ]
-  }
+  },
+  "phrasesFigures": [
+    {
+      "type": "spectrum",
+      "title": "Do que se vê ao que se defende",
+      "from": "Mostra",
+      "to": "Defende",
+      "caption": "As famílias da Fraseoteca crescem em interpretação: da descrição, que só mostra, à reflexão pessoal, que assume uma leitura. Quanto mais à direita, mais a frase precisa de fonte ou de aviso de opinião.",
+      "marks": [
+        {
+          "at": 0.06,
+          "t": "descrição"
+        },
+        {
+          "at": 0.24,
+          "t": "fontes"
+        },
+        {
+          "at": 0.42,
+          "t": "contexto"
+        },
+        {
+          "at": 0.6,
+          "t": "comparação"
+        },
+        {
+          "at": 0.78,
+          "t": "argumentação"
+        },
+        {
+          "at": 0.95,
+          "t": "reflexão pessoal"
+        }
+      ]
+    }
+  ]
 }

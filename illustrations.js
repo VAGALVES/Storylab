@@ -112,7 +112,7 @@ const T={
  // Escada: degraus crescentes (níveis de dificuldade, etapas de aprofundamento)
  stairs(f,opts){
   const L=f.steps||[],n=L.length,bw=(W-40)/n,base=200;let out='';
-  L.forEach((st,i)=>{const h=64+i*(110/Math.max(1,n-1)),x=20+i*bw,on=opts&&opts.active===st.t;
+  L.forEach((st,i)=>{const h=64+i*(110/Math.max(1,n-1)),x=20+i*bw,on=!!(opts&&opts.active!=null&&[].concat(opts.active).includes(st.t));
    out+='<rect class="fig-box '+(on?'fig-step-on':tone(i))+'" x="'+(x+2)+'" y="'+(base-h)+'" width="'+(bw-4)+'" height="'+h+'" rx="10"/>'+
     text(st.t,x+bw/2,base-h+24,{size:15,weight:800,max:11})+(st.d?text(st.d,x+bw/2,base-h+46,{size:13,cls:'fig-d',max:12}):'');});
   out+=arrow(24,base+22,W-24,base+22)+text(f.axis||'',W/2,base+42,{size:13,cls:'fig-k',max:60});

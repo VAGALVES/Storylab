@@ -500,3 +500,4 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 .fig-zoom .fig{margin:0 auto;max-width:none;width:max(100%,600px)}.fig-zoom .fig-svg{width:100%;max-width:none;cursor:default}.fig-locked{overflow:hidden}
 .atlas20-seefig{border:1px solid var(--line);background:var(--paper);color:var(--accent);border-radius:100px;padding:7px 12px;font-size:12px;font-weight:760;margin:6px 0 0}
 .fig-zoom-hint{position:fixed;top:18px;left:14px;right:96px;z-index:2;font-size:12px;color:var(--muted);line-height:1.35}
+.atlas20-more{margin:8px 0 0}.atlas20-more>summary{cursor:pointer;font-size:12px;font-weight:760;color:var(--accent);padding:8px 2px;list-style:none}.atlas20-more>summary::before{content:'▾ ';font-size:11px}.atlas20-more:not([open])>summary::before{content:'▸ '}.atlas20-more .fig{margin:6px 0 0;padding:12px}
