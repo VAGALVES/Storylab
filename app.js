@@ -245,6 +245,6 @@ function showUpdateBanner(){const el=document.createElement('div');el.className=
 if('serviceWorker'in navigator&&location.protocol==='https:'||('serviceWorker'in navigator&&location.hostname==='localhost'))registerWorker();
 if(window.StoryLabAtlas)window.StoryLabAtlas.init({D,getStore:()=>store,save,render,navigate,header,stat,esc,norm,ico,say,copy,toast,toTele:(text)=>{ui.teleText=text;ui.studioTab='tele';navigate('studio')}});
 if(window.StoryLabInteract)window.StoryLabInteract.init({D,getStore:()=>store,ui,save,render,navigate,esc,norm,ico,toast,say});
-if(window.StoryLabLinguistics)window.StoryLabLinguistics.init({D,getStore:()=>store,save,render,navigate,esc,ico,say,copy});
+if(window.StoryLabLinguistics)window.StoryLabLinguistics.init({D,getStore:()=>store,save,render,navigate,header,stat,esc,ico,say,copy});
 render();
 })();

@@ -40,6 +40,8 @@ jobs:
           node --check linguistics-lab.js
       - name: Testar Academia da Linguagem e diagramas
         run: node test_linguistics.mjs
+      - name: Testar clique da Linguística Aplicada no menu mobile
+        run: node test_navigation_linguistics.mjs
       - name: Testar navegação e conteúdo do Atlas
         run: node test_atlas.mjs
       - name: Testar o Atlas Semântico do Urbanismo
