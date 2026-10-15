@@ -28,6 +28,8 @@ jobs:
           node --check spatial-regency-data.js
           node --check spatial-verb-icons.js
           node --check spatial-verb-icons-extra.js
+          node --check spatial-contrast-data.js
+          node --check spatial-contrast.js
           node --check spatial-verbs.js
           node --check atlas-engine.js
           node --check atlas-recorder.js
@@ -43,6 +45,8 @@ jobs:
         run: node test_spatial_icons.mjs
       - name: Testar 64 pictogramas semânticos e contrastes inteligentes
         run: node test_all_spatial_icons.mjs
+      - name: Testar duelos visuais e reforço inteligente
+        run: node test_spatial_contrast.mjs
       - name: Testar regência e construções bilíngues
         run: node test_spatial_regency.mjs
       - name: Testar busca, cartões, sequência e Monte a frase
@@ -64,5 +68,5 @@ jobs:
       - name: Montar versão offline
         run: |
           python build_standalone.py
-          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 15; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h"
+          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 17; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h"
           git diff --exit-code -- storylab-shanghai-offline.html
