@@ -268,3 +268,31 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
  .vl-item-words{flex:0 0 auto;align-items:flex-start;width:100%;max-width:none!important}
  .vl-item-words strong{font-size:13px}
 }
+
+
+/* v2.5 — 64 verbos com diagramas semânticos próprios: visual pedagógico responsivo */
+.vl-visual{display:flex;flex:0 0 196px;width:196px;max-width:45%;min-width:0;margin:0;flex-direction:column;align-items:stretch;gap:7px}
+.vl-visual .vl-diagram{display:block;width:100%;height:96px;max-width:100%;flex-shrink:0}
+.vl-diagram-caption{font-size:11px;line-height:1.5;color:var(--muted);text-align:center;max-width:100%;overflow-wrap:anywhere;hyphens:auto}
+.vl-item-illustrated .vl-mini-diagram{max-width:100%}
+.vl-compare{display:flex;align-items:center;gap:8px;padding:6px 12px 6px 7px;min-height:44px}
+.vl-compare .vl-mini-diagram{width:45px;height:28px;flex:0 0 45px}
+.vl-compare span{font-size:12px;font-weight:700;line-height:1.35}
+.vl-compare:hover,.vl-compare:focus-visible{background:var(--accentsoft);border-color:var(--accent)}
+.vl-item-illustrated:focus-visible{outline-offset:1px}
+.vl-item-illustrated.selected .vl-item-icon{outline:1px solid var(--accent);outline-offset:-1px}
+@media(max-width:980px){.vl-visual{flex-basis:164px;width:164px}.vl-diagram-caption{font-size:10px}}
+@media(max-width:720px){
+ .vl-visual{flex:0 0 158px;width:158px;max-width:48%}
+ .vl-visual .vl-diagram{height:87px}
+ .vl-compare{min-height:46px}
+ .vl-compare .vl-mini-diagram{width:42px;height:29px;flex-basis:42px}
+}
+@media(max-width:430px){
+ .vl-visual{flex:0 0 114px;width:114px;max-width:42%}
+ .vl-visual .vl-diagram{width:100%;height:72px;max-width:100%}
+ .vl-diagram-caption{font-size:9px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+ .vl-head h2{font-size:clamp(23px,7vw,31px)}
+ .vl-en{font-size:13px}
+ .vl-compare{padding:6px 9px;gap:5px}
+}
