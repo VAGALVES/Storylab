@@ -308,6 +308,67 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
  .vl-compare{padding:6px 9px;gap:5px}
 }
 
+
+/* StoryLab 2.6 · Oficina de contraste visual — aprendizagem ativa */
+.vc-entry{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(220px,.8fr);gap:17px;margin:19px 0 13px;padding:19px;border:1px solid var(--line);border-radius:15px;background:var(--accentsoft)}
+.vc-entry strong{display:block;font-family:Georgia,serif;font-size:20px;margin:7px 0}
+.vc-entry p{font-size:12px;line-height:1.65;color:var(--ink2);margin:7px 0 0}
+.vc-entry-actions{display:flex;flex-direction:column;gap:8px;justify-content:center}
+.vc-entry-actions .btn{width:100%;justify-content:center}
+.vc-root{display:grid;gap:16px;min-width:0;max-width:1050px;margin-inline:auto}
+.vc-top{background:linear-gradient(130deg,var(--paper),var(--wash))}
+.vc-top h2{font-family:Georgia,serif;font-size:clamp(28px,3.5vw,43px);margin:6px 0 9px}
+.vc-top p{font-size:13px;line-height:1.75;max-width:620px;margin:0;color:var(--ink2)}
+.vc-top-row{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.vc-totals{display:grid;gap:4px;justify-items:center;text-align:center;min-width:100px;padding:14px 16px;border-radius:14px;background:var(--accentsoft);color:var(--ink)}
+.vc-totals strong{font-size:28px;line-height:1;letter-spacing:-.04em}
+.vc-totals strong span{font-size:15px;letter-spacing:0;color:var(--muted)}
+.vc-totals small{font-size:10px;color:var(--muted)}
+.vc-top-bottom{display:flex;gap:8px 22px;flex-wrap:wrap;align-items:center;margin-top:16px;border-top:1px solid var(--line);padding-top:13px;font-size:12px;font-weight:700;color:var(--ink2)}
+.vc-top-bottom span:first-child{color:var(--accent)}
+.vc-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}
+.vc-stage{min-width:0}
+.vc-stage-meta{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:11px;font-weight:750;letter-spacing:.05em}
+.vc-progress{height:7px;border-radius:50px;background:var(--wash);overflow:hidden;margin:11px 0 25px}
+.vc-progress span{display:block;height:100%;border-radius:50px;background:var(--accent);transition:width .16s ease-out}
+.vc-stage>h3{font-family:Georgia,serif;font-size:clamp(22px,2.7vw,32px);margin:8px 0 13px}
+.vc-scene{font-family:Georgia,serif;font-size:clamp(17px,2.2vw,23px);line-height:1.65;margin:0 0 22px;border-left:3px solid var(--accent);padding:17px 17px 17px 20px;background:var(--wash);border-radius:0 11px 11px 0}
+.vc-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:18px 0}
+.vc-choice{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0;min-height:218px;text-align:center;padding:15px 17px 21px;border:2px solid var(--line);background:var(--paper);color:var(--ink);border-radius:17px;transition:border-color .15s,background .15s,transform .15s;box-shadow:0 7px 16px rgba(0,0,0,.025)}
+.vc-choice:hover:not(:disabled){border-color:var(--accent);transform:translateY(-2px);background:var(--wash)}
+.vc-choice:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.vc-choice:disabled{cursor:default;opacity:1}
+.vc-choice-number{align-self:flex-start;font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--muted)}
+.vc-choice .vc-art{display:grid;place-items:center;width:min(100%,210px);height:103px;min-width:0;border-radius:13px;background:var(--wash)}
+.vc-choice .vl-diagram{max-width:100%;width:100%;height:100%;border:0;background:transparent;flex-shrink:1}
+.vc-choice strong{font-size:clamp(15px,1.85vw,21px);font-weight:750;overflow-wrap:anywhere;line-height:1.3}
+.vc-choice-mark{position:absolute;right:14px;top:13px;font-size:17px;color:var(--muted)}
+.vc-choice.is-correct{border-color:var(--ok);background:var(--oksoft)}
+.vc-choice.is-incorrect{border-color:var(--no);background:var(--nosoft)}
+.vc-choice.is-muted{opacity:.68}
+.vc-choice.is-correct .vc-choice-mark{color:var(--ok)}
+.vc-choice.is-incorrect .vc-choice-mark{color:var(--no)}
+.vc-feedback{padding:20px;border:1px solid var(--line);border-radius:15px;background:var(--wash);margin-top:18px}
+.vc-feedback.is-right{border-color:var(--ok)}.vc-feedback.is-wrong{border-color:var(--accent)}
+.vc-feedback-status{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:23px;margin-bottom:9px}
+.vc-feedback-status span{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--paper);color:var(--accent);font-family:system-ui}
+.vc-feedback-answer{font-size:14px}
+.vc-feedback>p{line-height:1.7;font-size:13px}
+.vc-compare-note,.vc-english{margin-top:14px;padding:14px;border-radius:11px;background:var(--paper);border:1px solid var(--line)}
+.vc-compare-note p,.vc-english p{margin:8px 0 0;line-height:1.7;font-size:13px}
+.vc-english p{font-family:Georgia,serif;font-size:16px;font-style:italic}
+.vc-next-row,.vc-result-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap;margin-top:19px}
+.vc-result{display:flex;align-items:center;flex-direction:column;text-align:center;padding-block:30px}
+.vc-result h3{font-family:Georgia,serif;font-size:clamp(22px,2.7vw,31px);margin:17px 0 7px}
+.vc-result>p{max-width:540px;font-size:13px;line-height:1.75;color:var(--ink2)}
+.vc-score{display:grid;place-items:center;width:122px;height:122px;margin-top:16px;border-radius:50%;background:conic-gradient(var(--accent) calc(var(--vc-score)*1%),var(--line) 0);position:relative}
+.vc-score:before{content:'';position:absolute;inset:11px;border-radius:50%;background:var(--paper)}
+.vc-score strong{position:relative;font-size:27px}
+.vc-result-actions{justify-content:center}
+@media(max-width:760px){.vc-entry{grid-template-columns:1fr}.vc-entry-actions{display:grid;grid-template-columns:1fr 1fr}.vc-entry-actions .btn:first-child{grid-column:1/-1}.vc-top-row{align-items:flex-start}.vc-choice{min-height:190px;padding:12px}.vc-choice .vc-art{height:88px}.vc-scene{padding:14px 16px}}
+@media(max-width:450px){.vc-totals{min-width:77px;padding:12px 8px}.vc-totals strong{font-size:23px}.vc-totals small{font-size:9px}.vc-top h2{font-size:29px}.vc-options{gap:9px}.vc-choice{min-height:172px;padding:10px 8px 16px;gap:9px;border-radius:13px}.vc-choice .vc-art{height:78px}.vc-choice strong{font-size:14px}.vc-choice-number{font-size:9px}.vc-choice-mark{right:9px;top:7px}.vc-scene{font-size:17px}.vc-next-row{align-items:stretch;flex-direction:column-reverse}.vc-next-row .btn{width:100%;justify-content:center}.vc-entry-actions{grid-template-columns:1fr}.vc-entry-actions .btn:first-child{grid-column:auto}}
+@media(prefers-reduced-motion:reduce){.vc-choice,.vc-progress span{transition:none}}
+
 </style>
   <title>StoryLab Shanghai — Journalism Academy</title>
 </head>
@@ -723,6 +784,152 @@ window.StoryLabVerbIcons.register({
 
 </script>
   <script>
+/* StoryLab — Oficina do contraste visual.
+ * 32 pares cuidadosamente contrastados: 64 cenas autorais com um critério de precisão.
+ * Figuras representam relações abstratas; não são fotografias ou dados observacionais.
+ */
+window.STORYLAB_VERB_CONTRAST_DATA=[{"id":"par-01","a":"ladear","b":"circundar","dist":"Ladear acompanha os lados; circundar forma um entorno completo.","cases":[{"id":"par-01-a","answer":"ladear","scene":"A avenida possui árvores em duas faixas paralelas, uma de cada lado, sem formar um anel.","reason":"O arranjo acompanha as laterais da via.","english":"Trees line both sides of the avenue."},{"id":"par-01-b","answer":"circundar","scene":"Um pavilhão central está rodeado por jardins em todo o perímetro, incluindo frente, fundos e laterais.","reason":"O contorno abrange o pavilhão por todos os lados.","english":"Gardens surround the pavilion on all sides."}]},{"id":"par-02","a":"flanquear","b":"emoldurar","dist":"Flanquear posiciona elementos nos flancos; emoldurar produz um enquadramento visual.","cases":[{"id":"par-02-a","answer":"flanquear","scene":"Duas torres estão uma de cada lado do portão principal, deixando um corredor de entrada entre elas.","reason":"Os dois volumes ocupam posições laterais ao acesso.","english":"Two towers flank the main gate."},{"id":"par-02-b","answer":"emoldurar","scene":"Vista de dentro do pátio, uma abertura arqueada delimita o panorama do rio como uma moldura.","reason":"O arco constitui um limite visual para a paisagem.","english":"The arch frames the view of the river."}]},{"id":"par-03","a":"margear","b":"contornar","dist":"Margear acompanha uma margem ao longo de um trecho; contornar segue a borda de um obstáculo ou espaço.","cases":[{"id":"par-03-a","answer":"margear","scene":"Um caminho acompanha a mesma borda do canal por várias quadras, mantendo-se paralelo à água.","reason":"O percurso segue longitudinalmente a margem.","english":"A walkway runs alongside the canal."},{"id":"par-03-b","answer":"contornar","scene":"Para evitar a praça central, a ciclovia faz uma curva em volta da sua borda e retorna à rua.","reason":"A rota descreve um desvio em torno da praça.","english":"The cycleway goes around the square."}]},{"id":"par-04","a":"beirar","b":"avizinhar-se","dist":"Beirar indica estar na borda; avizinhar-se indica proximidade sem exigir contato.","cases":[{"id":"par-04-a","answer":"beirar","scene":"As mesas estão instaladas no limite do deck, imediatamente junto ao espelho-d'água.","reason":"A posição é de borda, não somente de proximidade.","english":"The tables sit at the edge of the water."},{"id":"par-04-b","answer":"avizinhar-se","scene":"Uma biblioteca fica a uma curta caminhada do parque, separada dele por duas pequenas ruas.","reason":"Os equipamentos são próximos, mas não partilham a borda.","english":"The library lies near the park."}]},{"id":"par-05","a":"alinhar","b":"justapor","dist":"Alinhar estabelece um eixo ou linha comum; justapor coloca elementos lado a lado.","cases":[{"id":"par-05-a","answer":"alinhar","scene":"Quatro fachadas de alturas diferentes terminam exatamente na mesma linha de frente do quarteirão.","reason":"A coincidência é entre planos de referência.","english":"The façades align along the street."},{"id":"par-05-b","answer":"justapor","scene":"Um bloco de concreto é colocado diretamente ao lado de um bloco de vidro, sem que um fique sobre o outro.","reason":"Duas massas distintas estão lado a lado.","english":"The architect juxtaposes concrete and glass blocks."}]},{"id":"par-06","a":"cercar","b":"isolar","dist":"Cercar envolve uma área por uma barreira; isolar rompe uma conexão com o entorno.","cases":[{"id":"par-06-a","answer":"cercar","scene":"Uma grade contínua delimita os quatro lados de um jardim, com um portão de entrada.","reason":"O perímetro é fechado por uma barreira.","english":"A fence encloses the garden."},{"id":"par-06-b","answer":"isolar","scene":"Uma avenida expressa impede a ligação direta entre as moradias e a orla do rio.","reason":"A continuidade entre bairro e orla foi interrompida.","english":"The expressway separates the houses from the waterfront."}]},{"id":"par-07","a":"rodear","b":"envolver","dist":"Rodear admite elementos separados ao redor; envolver pode formar camada ou estrutura contínua ao redor.","cases":[{"id":"par-07-a","answer":"rodear","scene":"Seis árvores independentes estão distribuídas em torno de um pequeno coreto.","reason":"Os objetos ocupam posições ao redor do centro.","english":"Trees surround the bandstand."},{"id":"par-07-b","answer":"envolver","scene":"Uma estrutura metálica curva envolve a escada em uma única superfície contínua.","reason":"A estrutura compõe uma envoltória contínua.","english":"A metal structure wraps around the stairs."}]},{"id":"par-08","a":"delimitar","b":"demarcar","dist":"Delimitar define onde um espaço começa e termina; demarcar assinala esses limites com marcas identificáveis.","cases":[{"id":"par-08-a","answer":"delimitar","scene":"As bordas dos canteiros estabelecem o início e o fim de cada jardim privativo.","reason":"O foco é a definição espacial dos limites.","english":"Low walls define the boundaries of each garden."},{"id":"par-08-b","answer":"demarcar","scene":"Tinta branca e pequenos marcos numerados indicam exatamente as posições das vagas de estacionamento.","reason":"Os limites foram assinalados explicitamente.","english":"White markings demarcate the parking spaces."}]},{"id":"par-09","a":"sobrepor","b":"recobrir","dist":"Sobrepor produz coincidência entre camadas ou planos; recobrir cobre uma superfície.","cases":[{"id":"par-09-a","answer":"sobrepor","scene":"Na fotografia, a silhueta de uma torre ocupa parcialmente a mesma região da imagem que um prédio antigo ao fundo.","reason":"Dois planos aparecem parcialmente coincidentes.","english":"The tower's silhouette overlaps the old building in the frame."},{"id":"par-09-b","answer":"recobrir","scene":"Trepadeiras se espalham sobre quase toda a parede exterior e escondem grande parte do reboco.","reason":"A vegetação cobre a superfície da parede.","english":"Climbing plants cover most of the wall."}]},{"id":"par-10","a":"superpor","b":"revestir","dist":"Superpor é dispor camadas ou dados um sobre outro; revestir é aplicar acabamento numa superfície.","cases":[{"id":"par-10-a","answer":"superpor","scene":"Um analista apresenta o mapa de temperaturas por cima da malha viária num software cartográfico.","reason":"Os dados são combinados em camadas para leitura.","english":"The analyst superimposes heat data on the street map."},{"id":"par-10-b","answer":"revestir","scene":"Placas de cerâmica foram aplicadas à face externa da fachada como acabamento permanente.","reason":"Há aplicação de uma camada construtiva de acabamento.","english":"Ceramic tiles clad the façade."}]},{"id":"par-11","a":"interpor","b":"intercalar","dist":"Interpor insere algo entre dois referenciais; intercalar alterna itens ao longo de uma sequência.","cases":[{"id":"par-11-a","answer":"interpor","scene":"Há um pequeno jardim entre a calçada e a fachada da escola, separando esses dois elementos.","reason":"Um terceiro elemento ocupa o intervalo entre dois referenciais.","english":"A garden lies between the sidewalk and the school façade."},{"id":"par-11-b","answer":"intercalar","scene":"No passeio, um banco é seguido de um canteiro, depois outro banco e outro canteiro.","reason":"Os elementos aparecem numa ordem alternada e repetida.","english":"Benches alternate with planting beds along the walkway."}]},{"id":"par-12","a":"encaixar","b":"embutir","dist":"Encaixar ajusta duas formas complementares; embutir instala um componente dentro de uma superfície.","cases":[{"id":"par-12-a","answer":"encaixar","scene":"Uma peça nova tem recortes feitos sob medida para entrar exatamente na abertura da estrutura antiga.","reason":"As formas se correspondem e permitem o ajuste.","english":"The new piece fits into the opening."},{"id":"par-12-b","answer":"embutir","scene":"Pequenas luminárias ficam instaladas dentro do forro, sem ultrapassar o plano do teto.","reason":"Os dispositivos estão recuados na superfície.","english":"Recessed lights are embedded in the ceiling."}]},{"id":"par-13","a":"atravessar","b":"cruzar","dist":"Atravessar passa de um lado a outro; cruzar também pode indicar a interseção entre dois eixos.","cases":[{"id":"par-13-a","answer":"atravessar","scene":"Uma passarela liga as duas margens de uma avenida larga, levando pedestres de um lado ao outro.","reason":"A estrutura vence toda a largura da via.","english":"A footbridge crosses the entire avenue."},{"id":"par-13-b","answer":"cruzar","scene":"Duas linhas de ciclovia se interceptam em ângulo reto num único ponto do mapa.","reason":"Há interseção geométrica entre os eixos.","english":"Two cycle routes intersect at a right angle."}]},{"id":"par-14","a":"transpor","b":"desviar","dist":"Transpor supera um obstáculo; desviar altera a rota para evitá-lo.","cases":[{"id":"par-14-a","answer":"transpor","scene":"Uma ponte permite chegar à outra margem do canal passando por cima da água.","reason":"A passagem supera fisicamente a barreira.","english":"The bridge spans the canal."},{"id":"par-14-b","answer":"desviar","scene":"Ao chegar à obra, a trilha curva para um lado e retorna ao trajeto sem passar pelo trecho bloqueado.","reason":"O percurso evita o obstáculo por mudança de rumo.","english":"The path detours around the construction site."}]},{"id":"par-15","a":"percorrer","b":"serpentear","dist":"Percorrer descreve seguir uma extensão; serpentear exige curvas sucessivas.","cases":[{"id":"par-15-a","answer":"percorrer","scene":"O bonde segue toda a avenida central desde o terminal até a última parada, ao longo de um eixo praticamente reto.","reason":"A descrição enfatiza a extensão do trajeto seguida.","english":"The tram travels along the entire avenue."},{"id":"par-15-b","answer":"serpentear","scene":"Uma trilha se desenvolve entre árvores numa sequência contínua de curvas à esquerda e à direita.","reason":"O traçado é repetidamente sinuoso.","english":"The trail winds between the trees."}]},{"id":"par-16","a":"bifurcar-se","b":"convergir","dist":"Bifurcar-se divide um eixo em ramos; convergir reúne trajetórias num ponto.","cases":[{"id":"par-16-a","answer":"bifurcar-se","scene":"Depois da estação, uma ciclovia única dá origem a dois caminhos separados, um para cada parque.","reason":"O movimento passa de um trajeto para dois.","english":"The cycleway forks into two paths."},{"id":"par-16-b","answer":"convergir","scene":"Duas ruas independentes aproximam-se gradualmente até encontrar uma única via de acesso à praça.","reason":"Os dois trajetos se unem numa direção comum.","english":"The two streets converge into one access road."}]},{"id":"par-17","a":"orientar","b":"direcionar","dist":"Orientar estabelece a disposição espacial de algo; direcionar conduz ou aponta fluxos a um destino.","cases":[{"id":"par-17-a","answer":"orientar","scene":"A fachada principal do edifício foi posicionada de modo a receber a luz da manhã pelo lado leste.","reason":"O verbo descreve a disposição da construção em relação a uma direção.","english":"The main façade faces east."},{"id":"par-17-b","answer":"direcionar","scene":"Placas com setas conduzem os visitantes pelo corredor até a saída norte da estação.","reason":"A sinalização indica para onde o fluxo deve seguir.","english":"Signs direct visitors toward the north exit."}]},{"id":"par-18","a":"apontar","b":"projetar","dist":"Apontar indica rumo ou alvo; projetar-se avança além de um plano de referência.","cases":[{"id":"par-18-a","answer":"apontar","scene":"O vértice de uma cobertura triangular está voltado diretamente para a torre ao longe, sem tocar nela.","reason":"A forma estabelece uma direção visual.","english":"The roof's tip points toward the tower."},{"id":"par-18-b","answer":"projetar","scene":"Uma marquise em balanço sai do plano da fachada e cobre uma parte da calçada.","reason":"O volume avança fisicamente além do plano de origem.","english":"The canopy projects out over the sidewalk."}]},{"id":"par-19","a":"inclinar","b":"nivelar","dist":"Inclinar tira um elemento do eixo horizontal ou vertical; nivelar ajusta uma cota de referência.","cases":[{"id":"par-19-a","answer":"inclinar","scene":"O plano do telhado forma um ângulo visível e desce em direção ao pátio.","reason":"A superfície apresenta uma declividade intencional.","english":"The roof slopes toward the courtyard."},{"id":"par-19-b","answer":"nivelar","scene":"Uma equipe ajusta diferentes alturas de um piso até obter uma única superfície plana.","reason":"O trabalho busca uniformizar a cota do piso.","english":"The crew levels the floor."}]},{"id":"par-20","a":"elevar","b":"rebaixar","dist":"Elevar aumenta a cota relativa; rebaixar reduz a cota relativa.","cases":[{"id":"par-20-a","answer":"elevar","scene":"Uma passarela de pedestres foi colocada acima das faixas de circulação de veículos.","reason":"A passagem está num nível superior ao da pista.","english":"The footbridge is raised above the road."},{"id":"par-20-b","answer":"rebaixar","scene":"Junto à travessia, a borda da calçada foi reduzida de altura para facilitar o acesso.","reason":"O elemento passou para uma cota inferior.","english":"The curb is lowered at the crossing."}]},{"id":"par-21","a":"prolongar","b":"expandir","dist":"Prolongar aumenta a extensão ao longo de um eixo; expandir amplia alcance ou área.","cases":[{"id":"par-21-a","answer":"prolongar","scene":"A ciclovia já existente continua em linha pela avenida até alcançar a ponte antes distante.","reason":"Uma infraestrutura linear teve seu alcance estendido.","english":"The cycleway extends all the way to the bridge."},{"id":"par-21-b","answer":"expandir","scene":"Uma mancha de ocupação urbana passa a incluir novos terrenos ao norte e ao oeste do bairro.","reason":"A superfície ocupada cresce para novas direções.","english":"The urban area expands northward and westward."}]},{"id":"par-22","a":"agrupar","b":"dispersar","dist":"Agrupar reúne em conjunto; dispersar distribui elementos separados numa área.","cases":[{"id":"par-22-a","answer":"agrupar","scene":"O projeto coloca todos os quiosques próximos uns dos outros ao redor de uma mesma praça interna.","reason":"Há formação de um conjunto compacto.","english":"The kiosks are grouped around one courtyard."},{"id":"par-22-b","answer":"dispersar","scene":"Pequenos jardins ficam longe uns dos outros em pontos diferentes de todo o distrito.","reason":"Os elementos aparecem espalhados pelo território.","english":"Small gardens are scattered across the district."}]},{"id":"par-23","a":"concentrar","b":"distribuir","dist":"Concentrar acumula em uma porção restrita; distribuir reparte por diversas partes.","cases":[{"id":"par-23-a","answer":"concentrar","scene":"Quase todas as lojas de tecidos ficam em apenas duas ruas de um bairro muito maior.","reason":"A atividade se acumula em uma área específica.","english":"Fabric shops are concentrated on two streets."},{"id":"par-23-b","answer":"distribuir","scene":"Novos bancos foram instalados em intervalos regulares por todas as alamedas do parque.","reason":"O equipamento foi repartido por diferentes setores.","english":"Benches are distributed throughout the park."}]},{"id":"par-24","a":"adensar","b":"verticalizar","dist":"Adensar eleva a concentração por unidade de área; verticalizar aumenta a ocupação construída em altura.","cases":[{"id":"par-24-a","answer":"adensar","scene":"Dez novos edifícios residenciais ocupam pequenos lotes antes vazios perto da estação, aumentando a quantidade construída por hectare.","reason":"A quantidade edificada por área cresce.","english":"New buildings increase development density near the station."},{"id":"par-24-b","answer":"verticalizar","scene":"Uma região de casas baixas passa a ter torres muito altas, embora o número total de moradores ainda não tenha sido medido.","reason":"A mudança comprovada é na altura das edificações.","english":"New towers transform the low-rise district vertically."}]},{"id":"par-25","a":"fragmentar","b":"interligar","dist":"Fragmentar rompe continuidade; interligar cria conexões entre partes.","cases":[{"id":"par-25-a","answer":"fragmentar","scene":"A implantação de uma rodovia divide uma área verde antes contínua em três espaços sem ligação direta.","reason":"O território antes unido passa a ter partes desconectadas.","english":"A new road fragments the green space."},{"id":"par-25-b","answer":"interligar","scene":"Uma passagem coberta une dois pavilhões que antes só podiam ser alcançados por trajetos externos separados.","reason":"Uma conexão física passou a existir entre as estruturas.","english":"A covered walkway links the two pavilions."}]},{"id":"par-26","a":"ocupar","b":"sobressair","dist":"Ocupar indica tomar ou usar espaço; sobressair indica destacar-se visualmente do conjunto.","cases":[{"id":"par-26-a","answer":"ocupar","scene":"Barracas de feira são instaladas em quase todo o piso da praça durante o fim de semana.","reason":"A atividade utiliza fisicamente a área disponível.","english":"Market stalls occupy the square on weekends."},{"id":"par-26-b","answer":"sobressair","scene":"Entre vários prédios baixos, uma torre isolada de altura muito maior domina a vista do bairro.","reason":"Um elemento se destaca visualmente em relação aos demais.","english":"A tall tower stands out among low-rise buildings."}]},{"id":"par-27","a":"alargar","b":"estreitar","dist":"Alargar aumenta largura; estreitar diminui largura.","cases":[{"id":"par-27-a","answer":"alargar","scene":"Uma reforma incorpora uma antiga faixa de estacionamento à calçada, tornando o passeio mais largo.","reason":"A dimensão transversal da passagem aumenta.","english":"The redesign widens the sidewalk."},{"id":"par-27-b","answer":"estreitar","scene":"Dois canteiros avançam para dentro da pista e deixam uma faixa de circulação mais apertada.","reason":"A dimensão transversal disponível diminui.","english":"The planters narrow the roadway."}]},{"id":"par-28","a":"escalonar","b":"ondular","dist":"Escalonar organiza patamares em degraus; ondular forma curvas sucessivas suaves.","cases":[{"id":"par-28-a","answer":"escalonar","scene":"Os três blocos têm coberturas em alturas sucessivas, com saltos nítidos de nível entre elas.","reason":"O perfil é formado por degraus.","english":"The blocks step down in height."},{"id":"par-28-b","answer":"ondular","scene":"A cobertura contínua forma altos e baixos suavemente curvos, repetidos como ondas.","reason":"O perfil apresenta oscilações curvas e contínuas.","english":"The roof undulates across the pavilions."}]},{"id":"par-29","a":"recuar","b":"avançar","dist":"Recuar afasta de uma linha de referência; avançar projeta para além dela.","cases":[{"id":"par-29-a","answer":"recuar","scene":"O térreo fica mais para dentro do lote do que os pavimentos acima, criando um espaço protegido na entrada.","reason":"Há afastamento em relação ao alinhamento superior.","english":"The ground floor is set back from the upper façade."},{"id":"par-29-b","answer":"avançar","scene":"Uma cobertura estende-se além da fachada e alcança a área de embarque dos ônibus.","reason":"O volume ultrapassa a linha da fachada.","english":"The roof extends over the boarding area."}]},{"id":"par-30","a":"refletir","b":"contrastar","dist":"Refletir reproduz luz ou imagem; contrastar evidencia uma diferença perceptível.","cases":[{"id":"par-30-a","answer":"refletir","scene":"A fachada espelhada mostra a imagem invertida das árvores que estão diante dela.","reason":"A superfície devolve a imagem de outro objeto.","english":"The glass façade reflects the trees."},{"id":"par-30-b","answer":"contrastar","scene":"Uma parede de concreto muito clara fica ao lado de um plano de vidro bastante escuro, criando oposição de tonalidades.","reason":"A diferença entre os materiais é o elemento central da descrição.","english":"The pale concrete contrasts with the dark glass."}]},{"id":"par-31","a":"sombrear","b":"iluminar","dist":"Sombrear reduz a luz incidente por projeção de sombra; iluminar faz incidir luz visível.","cases":[{"id":"par-31-a","answer":"sombrear","scene":"As copas bloqueiam o sol do início da tarde e deixam o passeio num trecho sem luz direta.","reason":"Há projeção de sombra sobre o solo.","english":"Tree canopies shade the walkway."},{"id":"par-31-b","answer":"iluminar","scene":"Ao anoitecer, luminárias direcionam luz ao longo da passagem subterrânea.","reason":"A fonte de luz torna o espaço visível.","english":"Lights illuminate the underground passage."}]},{"id":"par-32","a":"ocultar","b":"revelar","dist":"Ocultar impede a visualização; revelar torna visível o que antes não era visto.","cases":[{"id":"par-32-a","answer":"ocultar","scene":"Uma fileira densa de árvores bloqueia a visão da entrada de um edifício a partir da rua.","reason":"O observador deixa de enxergar o acesso.","english":"Trees conceal the entrance from the street."},{"id":"par-32-b","answer":"revelar","scene":"Após uma curva do caminho, surge uma pequena praça antes invisível para quem vinha caminhando.","reason":"O percurso torna uma nova vista perceptível.","english":"The bend reveals a small square."}]}];
+
+</script>
+  <script>
+/* StoryLab · Oficina de contraste visual, independente do treino de regência.
+ * Os ícones são alternativas visuais, não gabaritos: a justificativa surge após a escolha.
+ */
+window.StoryLabVerbContrast=(()=>{
+'use strict';
+const pairs=window.STORYLAB_VERB_CONTRAST_DATA||[];
+const icons=window.StoryLabVerbIcons;
+const items=pairs.flatMap((pair,index)=>pair.cases.map((c,position)=>({...c,pair,index,position})));
+const itemById=new Map(items.map(x=>[x.id,x]));
+let context=null,attached=false,session=null;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const label=s=>({'quick':'Essencial · 8 cenas','weak':'Reforço inteligente · 8 cenas','all':'Atlas completo · 64 cenas','pair':'Duelo de conceitos · 2 cenas'}[s]||'Contraste visual');
+function record(){
+ const st=context?.getStore?.()?.verbContrastStats;
+ return st&&typeof st==='object'&&!Array.isArray(st)?st:{};
+}
+function priority(item,stats){
+ const s=stats[item.id]||{},tries=Math.max(0,Number(s.attempts)||0),right=Math.max(0,Number(s.correct)||0);
+ if(tries>0&&right<tries)return 0+(right/tries);
+ if(!tries)return 2;
+ return 3+(right/tries);
+}
+function takeBest(itemsToChoose,stats){
+ return itemsToChoose.slice().sort((a,b)=>priority(a,stats)-priority(b,stats)||a.index-b.index||a.position-b.position);
+}
+const essentialIndices=[0,7,8,12,16,21,26,30];
+function choose(scope,anchor){
+ const stats=record();
+ if(scope==='pair'){
+  const pair=pairs.find(p=>p.a===anchor||p.b===anchor)||pairs[0];
+  return pair?pair.cases.map(c=>itemById.get(c.id)):[];
+ }
+ if(scope==='all')return pairs.flatMap(p=>p.cases.map(c=>itemById.get(c.id)));
+ if(scope==='weak')return takeBest(items,stats).slice(0,8);
+ return essentialIndices.map(i=>{
+  const p=pairs[i];return p?takeBest(p.cases.map(c=>itemById.get(c.id)),stats)[0]:null;
+ }).filter(Boolean);
+}
+function start(scope='quick',anchor=null){
+ if(!['quick','weak','all','pair'].includes(scope))scope='quick';
+ const questions=choose(scope,anchor);
+ if(!questions.length)return false;
+ session={scope,anchor,ids:questions.map(q=>q.id),cursor:0,selected:null,correct:0,done:false};
+ return true;
+}
+function activeItem(){return session&&!session.done?itemById.get(session.ids[session.cursor]):null}
+function progressSummary(){
+ const stats=record();
+ const attempted=items.filter(i=>(Number(stats[i.id]?.attempts)||0)>0).length;
+ const mastered=items.filter(i=>{const s=stats[i.id];return s&&(Number(s.correct)||0)>0}).length;
+ return {attempted,mastered};
+}
+function visual(verb){
+ const picture=icons?.render?.(verb,verb)||'';
+ return '<span class="vc-art" aria-hidden="true">'+picture+'</span>';
+}
+function choice(verb,question,order){
+ const answered=session.selected!==null,correct=verb===question.answer,picked=session.selected===verb;
+ return '<button type="button" class="vc-choice'+(answered?(correct?' is-correct':picked?' is-incorrect':' is-muted'):'')+'" data-contrast-action="answer" data-choice="'+esc(verb)+'" '+(answered?'disabled':'')+' aria-label="Escolher o verbo '+esc(verb)+'" aria-pressed="'+picked+'">'+
+ '<span class="vc-choice-number">'+String(order+1).padStart(2,'0')+'</span>'+visual(verb)+'<strong>'+esc(verb)+'</strong><span class="vc-choice-mark" aria-hidden="true">'+(answered&&correct?'✓':answered&&picked?'×':'↗')+'</span></button>';
+}
+function actions(){
+ return '<div class="vc-actions"><button type="button" class="btn secondary sm" data-contrast-action="exit">Voltar ao laboratório</button>'+
+ '<button type="button" class="btn secondary sm" data-contrast-action="restart">Recomeçar rodada</button></div>';
+}
+function render(){
+ if(!session)return '<div class="notice info">Escolha um modo de contraste no laboratório de verbos.</div>';
+ const summary=progressSummary(),total=session.ids.length,answered=session.selected!==null;
+ let html='<div class="vc-root"><section class="panel panel-pad vc-top"><div class="vl-kicker">STORYLAB · PRECISÃO SEMÂNTICA</div><div class="vc-top-row"><div><h2>Duelo de verbos</h2><p>Leia a cena, compare os desenhos e escolha o verbo que descreve <strong>melhor a relação espacial</strong>.</p></div><div class="vc-totals" aria-label="'+summary.mastered+' de 64 cenas acertadas ao menos uma vez"><strong>'+summary.mastered+'<span>/64</span></strong><small>cenas com acerto</small></div></div>'+
+ '<div class="vc-top-bottom"><span>'+esc(label(session.scope))+'</span><span>'+summary.attempted+' cenas praticadas</span></div>'+actions()+'</section>';
+ if(session.done){
+  const pct=Math.round(100*session.correct/total);
+  html+='<section class="panel panel-pad vc-result" role="status"><div class="vl-kicker">RODADA FINALIZADA</div><div class="vc-score" style="--vc-score:'+pct+'"><strong>'+pct+'%</strong></div>'+
+  '<h3>'+session.correct+' de '+total+' decisões precisas</h3><p>A precisão melhora quando você distingue orientação, contato, limite e movimento — não apenas reconhece palavras isoladas.</p>'+
+  '<div class="vc-result-actions"><button type="button" class="btn accent" data-contrast-action="restart">Nova rodada</button><button type="button" class="btn secondary" data-contrast-action="start-weak">Reforçar diferenças</button><button type="button" class="btn secondary" data-contrast-action="exit">Voltar aos verbos</button></div></section>';
+  return html+'</div>';
+ }
+ const q=activeItem(),pair=q.pair,options=(q.index%2===0)?[pair.a,pair.b]:[pair.b,pair.a];
+ const value=session.cursor+(answered?1:0),percent=Math.round(100*value/total);
+ html+='<section class="panel panel-pad vc-stage"><div class="vc-stage-meta"><span>QUESTÃO '+(session.cursor+1)+' / '+total+'</span><span>'+session.correct+' acertos na rodada</span></div>'+
+  '<div class="vc-progress" role="progressbar" aria-label="Progresso da rodada" aria-valuemin="0" aria-valuemax="'+total+'" aria-valuenow="'+value+'"><span style="width:'+percent+'%"></span></div>'+
+  '<p class="vl-kicker">OBSERVE A SITUAÇÃO</p><h3>Qual verbo é mais preciso?</h3><p class="vc-scene">'+esc(q.scene)+'</p>'+
+  '<div class="vc-options" role="group" aria-label="Compare dois verbos e selecione um">'+options.map((x,i)=>choice(x,q,i)).join('')+'</div>';
+ if(answered){
+  const correct=session.selected===q.answer;
+  const wrong=q.answer===pair.a?pair.b:pair.a;
+  html+='<div class="vc-feedback '+(correct?'is-right':'is-wrong')+'" role="status" aria-live="polite">'+
+   '<div class="vc-feedback-status"><span aria-hidden="true">'+(correct?'✓':'↗')+'</span><strong>'+(correct?'Excelente escolha.':'Observe esta diferença.')+'</strong></div>'+
+   '<p class="vc-feedback-answer">O verbo mais preciso é <strong>'+esc(q.answer)+'</strong>.</p>'+
+   '<p>'+esc(q.reason)+'</p><div class="vc-compare-note"><span class="vl-small">POR QUE NÃO '+esc(wrong).toUpperCase()+'?</span><p>'+esc(pair.dist)+'</p></div>'+
+   '<div class="vc-english"><span class="vl-small">EXEMPLO NATURAL EM INGLÊS</span><p lang="en">'+esc(q.english)+'</p></div>'+
+   '<div class="vc-next-row"><button type="button" class="btn secondary sm" data-contrast-action="inspect" data-verb="'+esc(q.answer)+'">Explorar a família lexical</button>'+
+   '<button type="button" class="btn accent" data-contrast-action="next">'+(session.cursor===total-1?'Ver resultado':'Próxima cena')+'</button></div></div>';
+ }
+ html+='</section></div>';
+ return html;
+}
+function onAnswer(answer){
+ const q=activeItem();
+ if(!q||session.selected!==null||![q.pair.a,q.pair.b].includes(answer))return false;
+ session.selected=answer;
+ if(answer===q.answer)session.correct++;
+ const store=context?.getStore?.();
+ if(store){
+  if(!store.verbContrastStats||typeof store.verbContrastStats!=='object'||Array.isArray(store.verbContrastStats))store.verbContrastStats={};
+  const prev=store.verbContrastStats[q.id]||{attempts:0,correct:0};
+  store.verbContrastStats[q.id]={attempts:(Number(prev.attempts)||0)+1,correct:(Number(prev.correct)||0)+(answer===q.answer?1:0),last:Date.now()};
+  context.save?.();
+ }
+ return true;
+}
+function next(){
+ if(!session||session.done||session.selected===null)return false;
+ if(session.cursor===session.ids.length-1)session.done=true;
+ else {session.cursor++;session.selected=null}
+ return true;
+}
+function bind(api){
+ context=api;
+ if(attached)return;
+ attached=true;
+ document.addEventListener('click',event=>{
+  const button=event.target?.closest?.('[data-contrast-action]');
+  if(!button)return;
+  event.preventDefault();
+  const action=button.dataset.contrastAction;
+  if(action==='answer'){if(onAnswer(button.dataset.choice))context.render();return}
+  if(action==='next'){if(next())context.render();return}
+  if(action==='exit'){context.exit?.();return}
+  if(action==='restart'){if(session&&start(session.scope,session.anchor))context.render();return}
+  if(action==='start-weak'){if(start('weak'))context.render();return}
+  if(action==='inspect'){const q=itemById.get(session?.ids[session?.cursor]);if(q&&session.selected!==null)context.inspect?.(q.answer);return}
+ });
+}
+return {start,render,bind,summary:progressSummary,pairs:()=>pairs.length,count:()=>items.length,_test:{onAnswer,next,choose,session:()=>session,activeItem}};
+})();
+</script>
+  <script>
 /* StoryLab · Laboratório dos Verbos Descritivos.
  * Extensão de dados append-only + interface independente, sem dependências ou chamadas de rede.
  */
@@ -862,10 +1069,12 @@ function details(v){
   '<div class="vl-warning"><strong>Não confunda:</strong> '+escape(v.contrast)+'</div>'+
   '<div class="vl-actions"><button type="button" class="btn secondary sm" data-verb-action="copy-pt" data-verb-id="'+v.index+'">Copiar frase PT</button>'+
   '<button type="button" class="btn secondary sm" data-verb-action="copy-en" data-verb-id="'+v.index+'">Copiar frase EN</button>'+
-  '<button type="button" class="btn accent sm" data-verb-action="open" data-verb-id="'+v.index+'">Estudar e treinar no Atlas</button></div>'+
+  '<button type="button" class="btn accent sm" data-verb-action="open" data-verb-id="'+v.index+'">Estudar e treinar no Atlas</button>'+
+  '<button type="button" class="btn secondary sm" data-verb-action="contrast-start" data-scope="pair" data-verb-id="'+v.index+'">Duelo visual deste verbo</button></div>'+
   '<div class="vl-related"><div class="vl-small">COMPARE AS RELAÇÕES</div><div class="vl-tags">'+near.map(o=>'<button type="button" class="vl-chip vl-compare" data-verb-action="jump" data-verb-id="'+o.index+'">'+miniDiagram(o)+'<span>'+escape(o.pt)+'</span></button>').join('')+'</div></div></section>';
 }
 function render(){
+ if(state.mode==='contrast')return window.StoryLabVerbContrast?.render?.()||'<div class="notice info">Treino de contraste indisponível.</div>';
  if(state.mode==='practice')return practiceView();
  if(!all.length)return '<div class="notice info">Corpus verbal indisponível.</div>';
  const list=filtered();
@@ -873,7 +1082,9 @@ function render(){
  return '<div class="vl-root">'+
   '<div class="panel panel-pad vl-intro"><div class="vl-kicker">ATLAS · LABORATÓRIO DE PRECISÃO ESPACIAL</div>'+
   '<h2>Verbos que desenham a cena</h2><p>Descreva relações entre objetos, percursos, superfícies e mudanças. Explore o verbo, sua família lexical, regência e equivalentes em inglês — distinguindo derivação real de parentesco semântico.</p>'+
-  '<div class="vl-metrics"><span><strong>'+all.length+'</strong> verbos</span><span><strong>'+source.length+'</strong> campos</span><span><strong>128</strong> construções bilíngues</span></div><div class="vl-actions"><button type="button" class="btn secondary sm" data-verb-action="practice" data-scope="field">Praticar este campo</button><button type="button" class="btn accent sm" data-verb-action="practice" data-scope="all">Treino misto de regência</button></div></div>'+
+  '<div class="vl-metrics"><span><strong>'+all.length+'</strong> verbos</span><span><strong>'+source.length+'</strong> campos</span><span><strong>128</strong> construções bilíngues</span></div>'+
+  '<div class="vc-entry"><div><div class="vl-kicker">NOVO · OFICINA VISUAL</div><strong>Qual verbo descreve melhor a cena?</strong><p>Dois desenhos, uma situação e uma decisão. Receba explicações em português e inglês e reforce as diferenças que ainda confundem.</p></div><div class="vc-entry-actions"><button type="button" class="btn accent sm" data-verb-action="contrast-start" data-scope="quick">Começar · 8 cenas</button><button type="button" class="btn secondary sm" data-verb-action="contrast-start" data-scope="weak">Reforçar dificuldades</button><button type="button" class="btn secondary sm" data-verb-action="contrast-start" data-scope="all">Todas as 64 cenas</button></div></div>'+
+  '<div class="vl-actions"><button type="button" class="btn secondary sm" data-verb-action="practice" data-scope="field">Praticar regência deste campo</button><button type="button" class="btn secondary sm" data-verb-action="practice" data-scope="all">Treino misto de regência</button></div></div>'+
   '<div class="vl-tools panel panel-pad"><label class="field-label" for="vl-search">Buscar verbo, substantivo, adjetivo ou inglês</label>'+
   '<input id="vl-search" class="search" data-verb-search="1" value="'+escape(state.query)+'" placeholder="Ex.: ladear, sobreposição, circundante, overlap">'+
   '<div class="vl-tags vl-group-filter"><button type="button" class="vl-chip '+(state.family===-1?'active':'')+'" data-verb-action="family" data-family="-1" aria-pressed="'+(state.family===-1)+'">Todas</button>'+
@@ -884,6 +1095,7 @@ function render(){
 }
 function bind(api){
  context=api;
+ window.StoryLabVerbContrast?.bind?.({render:()=>context.render(),getStore:()=>context.getStore?.(),save:()=>context.save?.(),exit:()=>{state.mode='explore';context.render()},inspect:verb=>{const item=all.find(v=>v.pt===verb);if(item){state.mode='explore';state.family=item.group;state.term=verb;state.query='';context.render()}}});
  if(linked)return;
  linked=true;
  document.addEventListener('click',event=>{
@@ -891,6 +1103,7 @@ function bind(api){
   if(!b)return;
   event.preventDefault();
   const action=b.dataset.verbAction,id=Number(b.dataset.verbId),v=all[id];
+  if(action==='contrast-start'){const scope=b.dataset.scope||'quick';if(window.StoryLabVerbContrast?.start?.(scope,v?.pt)){state.mode='contrast';context.render()}return}
   if(action==='practice'){beginPractice(b.dataset.scope||'field',v);context.render();return}
   if(action==='practice-exit'){state.mode='explore';state.quiz=null;context.render();return}
   if(action==='practice-restart'){beginPractice(state.quiz?.scope||'field',all[state.quiz?.items?.[0]]);context.render();return}

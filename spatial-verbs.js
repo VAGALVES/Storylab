@@ -137,10 +137,12 @@ function details(v){
   '<div class="vl-warning"><strong>Não confunda:</strong> '+escape(v.contrast)+'</div>'+
   '<div class="vl-actions"><button type="button" class="btn secondary sm" data-verb-action="copy-pt" data-verb-id="'+v.index+'">Copiar frase PT</button>'+
   '<button type="button" class="btn secondary sm" data-verb-action="copy-en" data-verb-id="'+v.index+'">Copiar frase EN</button>'+
-  '<button type="button" class="btn accent sm" data-verb-action="open" data-verb-id="'+v.index+'">Estudar e treinar no Atlas</button></div>'+
+  '<button type="button" class="btn accent sm" data-verb-action="open" data-verb-id="'+v.index+'">Estudar e treinar no Atlas</button>'+
+  '<button type="button" class="btn secondary sm" data-verb-action="contrast-start" data-scope="pair" data-verb-id="'+v.index+'">Duelo visual deste verbo</button></div>'+
   '<div class="vl-related"><div class="vl-small">COMPARE AS RELAÇÕES</div><div class="vl-tags">'+near.map(o=>'<button type="button" class="vl-chip vl-compare" data-verb-action="jump" data-verb-id="'+o.index+'">'+miniDiagram(o)+'<span>'+escape(o.pt)+'</span></button>').join('')+'</div></div></section>';
 }
 function render(){
+ if(state.mode==='contrast')return window.StoryLabVerbContrast?.render?.()||'<div class="notice info">Treino de contraste indisponível.</div>';
  if(state.mode==='practice')return practiceView();
  if(!all.length)return '<div class="notice info">Corpus verbal indisponível.</div>';
  const list=filtered();
@@ -148,7 +150,9 @@ function render(){
  return '<div class="vl-root">'+
   '<div class="panel panel-pad vl-intro"><div class="vl-kicker">ATLAS · LABORATÓRIO DE PRECISÃO ESPACIAL</div>'+
   '<h2>Verbos que desenham a cena</h2><p>Descreva relações entre objetos, percursos, superfícies e mudanças. Explore o verbo, sua família lexical, regência e equivalentes em inglês — distinguindo derivação real de parentesco semântico.</p>'+
-  '<div class="vl-metrics"><span><strong>'+all.length+'</strong> verbos</span><span><strong>'+source.length+'</strong> campos</span><span><strong>128</strong> construções bilíngues</span></div><div class="vl-actions"><button type="button" class="btn secondary sm" data-verb-action="practice" data-scope="field">Praticar este campo</button><button type="button" class="btn accent sm" data-verb-action="practice" data-scope="all">Treino misto de regência</button></div></div>'+
+  '<div class="vl-metrics"><span><strong>'+all.length+'</strong> verbos</span><span><strong>'+source.length+'</strong> campos</span><span><strong>128</strong> construções bilíngues</span></div>'+
+  '<div class="vc-entry"><div><div class="vl-kicker">NOVO · OFICINA VISUAL</div><strong>Qual verbo descreve melhor a cena?</strong><p>Dois desenhos, uma situação e uma decisão. Receba explicações em português e inglês e reforce as diferenças que ainda confundem.</p></div><div class="vc-entry-actions"><button type="button" class="btn accent sm" data-verb-action="contrast-start" data-scope="quick">Começar · 8 cenas</button><button type="button" class="btn secondary sm" data-verb-action="contrast-start" data-scope="weak">Reforçar dificuldades</button><button type="button" class="btn secondary sm" data-verb-action="contrast-start" data-scope="all">Todas as 64 cenas</button></div></div>'+
+  '<div class="vl-actions"><button type="button" class="btn secondary sm" data-verb-action="practice" data-scope="field">Praticar regência deste campo</button><button type="button" class="btn secondary sm" data-verb-action="practice" data-scope="all">Treino misto de regência</button></div></div>'+
   '<div class="vl-tools panel panel-pad"><label class="field-label" for="vl-search">Buscar verbo, substantivo, adjetivo ou inglês</label>'+
   '<input id="vl-search" class="search" data-verb-search="1" value="'+escape(state.query)+'" placeholder="Ex.: ladear, sobreposição, circundante, overlap">'+
   '<div class="vl-tags vl-group-filter"><button type="button" class="vl-chip '+(state.family===-1?'active':'')+'" data-verb-action="family" data-family="-1" aria-pressed="'+(state.family===-1)+'">Todas</button>'+
@@ -159,6 +163,7 @@ function render(){
 }
 function bind(api){
  context=api;
+ window.StoryLabVerbContrast?.bind?.({render:()=>context.render(),getStore:()=>context.getStore?.(),save:()=>context.save?.(),exit:()=>{state.mode='explore';context.render()},inspect:verb=>{const item=all.find(v=>v.pt===verb);if(item){state.mode='explore';state.family=item.group;state.term=verb;state.query='';context.render()}}});
  if(linked)return;
  linked=true;
  document.addEventListener('click',event=>{
@@ -166,6 +171,7 @@ function bind(api){
   if(!b)return;
   event.preventDefault();
   const action=b.dataset.verbAction,id=Number(b.dataset.verbId),v=all[id];
+  if(action==='contrast-start'){const scope=b.dataset.scope||'quick';if(window.StoryLabVerbContrast?.start?.(scope,v?.pt)){state.mode='contrast';context.render()}return}
   if(action==='practice'){beginPractice(b.dataset.scope||'field',v);context.render();return}
   if(action==='practice-exit'){state.mode='explore';state.quiz=null;context.render();return}
   if(action==='practice-restart'){beginPractice(state.quiz?.scope||'field',all[state.quiz?.items?.[0]]);context.render();return}
