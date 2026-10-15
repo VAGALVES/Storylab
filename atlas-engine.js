@@ -310,7 +310,7 @@ function refreshQuery(el){
 }
 function init(context){
  api=context;
- window.StoryLabVerbLab?.bind?.({render:()=>api.render(),copy:text=>api.copy(text),open:(topic,term)=>openTerm(topic,term)});
+ window.StoryLabVerbLab?.bind?.({render:()=>api.render(),copy:text=>api.copy(text),open:(topic,term)=>openTerm(topic,term),getStore:()=>api.getStore(),save:()=>api.save()});
  document.addEventListener('click',event=>{
   const b=event.target.closest('[data-atlas-action]');
   if(!b)return;
