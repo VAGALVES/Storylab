@@ -24,6 +24,8 @@ jobs:
           node --check urbanism-concepts.js
           node --check urbanism-lexicon.js
           node --check urbanism-atlas.js
+          node --check spatial-verbs-data.js
+          node --check spatial-verbs.js
           node --check atlas-engine.js
           node --check atlas-recorder.js
           node --check atlas-audio-ui.js
@@ -32,6 +34,8 @@ jobs:
         run: node test_atlas.mjs
       - name: Testar o Atlas Semântico do Urbanismo
         run: node test_urbanism.mjs
+      - name: Testar verbos, famílias e laboratório espacial
+        run: node test_spatial_verbs.mjs
       - name: Testar busca, cartões, sequência e Monte a frase
         run: node test_interact.mjs
       - name: Verificar permissões e captura de áudio
@@ -51,5 +55,5 @@ jobs:
       - name: Montar versão offline
         run: |
           python build_standalone.py
-          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 10; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h"
+          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 12; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h"
           git diff --exit-code -- storylab-shanghai-offline.html
