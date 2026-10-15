@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.2 — Laboratório de Verbos Descritivos
+## Journalism Academy · Versão 2.3 — Regência e Construções Descritivas
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -21,6 +21,16 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v2.3 — Regência e Construções Descritivas
+
+- **64 verbos / 128 construções PT–EN:** duas estruturas contextualizadas por verbo, frequentemente contrastando voz ativa, voz passiva, pronominalização e locuções de referência espacial.
+- **64 exercícios de lacuna:** escolha da preposição ou locução no modelo apresentado, feedback específico, exemplos equivalentes em inglês e registro de tentativas e acertos no armazenamento local.
+- **Treinos acessíveis na aba Verbos & famílias:** prática de um único verbo, das oito relações de um campo ou rodada mista com 16 relações; seleção com feedback apenas depois da resposta.
+- **Cautela gramatical:** distinguir complemento regido por verbo (sobrepor algo a algo, interpor algo entre outros elementos) de locuções circunstanciais de posição, percurso ou direção (ao longo de, próximo de, após).
+- **Crase e contrações no uso real:** sobreposto à cobertura; interligado ao centro; embutido no forro; disperso pelo bairro. Tradução inglesa contextual, sem pressupor equivalências palavra a palavra.
+- **Preservação dos índices anteriores:** continuam 62 campos e 712 verbetes; a regência é uma camada vinculada aos 64 verbos, não uma duplicação de verbetes nem uma alteração das chaves da revisão espaçada.
+- **Infraestrutura:** nova fonte `spatial-regency-data.js` incorporada à aplicação, PWA e HTML único. Testes dedicados em `test_spatial_regency.mjs`.
 
 ### Novidades da v2.2 — Laboratório de Verbos Descritivos
 
