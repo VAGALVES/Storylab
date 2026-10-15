@@ -464,3 +464,24 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 @media(max-width:680px){.ling-chapter-list{grid-template-columns:1fr}.ling-hero{padding:24px 19px}.ling-duration{font-size:27px;padding:9px 10px}.ling-duration span{font-size:9px}.ling-figure{padding:16px 12px}.ling-diagram{overflow:visible;min-height:170px}.ling-comparison{grid-template-columns:1fr}.ling-section,.ling-contrast,.ling-practice,.ling-quiz,.ling-notes,.ling-terms,.ling-references,.ling-related{padding:23px 19px}.ling-section-heading{gap:11px}.ling-section-number{width:34px;height:34px;font-size:17px}.ling-terms-grid{grid-template-columns:1fr}.ling-figure-heading strong{font-size:18px}.ling-diagram-button{width:37px;height:35px}.ling-tab{padding:10px 12px;font-size:12px}.ling-inline-invitation{flex-wrap:wrap}.ling-inline-invitation .btn{width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.ling-chapter{transition:none}}
 
+
+/* Anatomia: peças rotuladas */
+:root{--fig-ink:#344047;--fig-dark:#5a6a70;--fig-water:#9ec3d4;--fig-leaf:#7fa088;--fig-earth:#d9c9a6;--fig-sky:#dfe9ee;--fig-far:#b9c6cc;--fig-city:#8d9ca3;--fig-haze:rgba(255,255,255,.55);--fig-grnd:#e3d9c4;--fig-street:#d6d2c8;--fig-on:#bd6a4c}
+[data-theme="dark"]{--fig-ink:#d4dbd7;--fig-dark:#9fb0b2;--fig-water:#3d6b80;--fig-leaf:#4e7a5c;--fig-earth:#5a4e36;--fig-sky:#22343c;--fig-far:#3a4d55;--fig-city:#56707a;--fig-haze:rgba(16,26,30,.45);--fig-grnd:#2e3b36;--fig-street:#3a484c;--fig-on:#eba781}
+.fig-sh{fill:var(--paper);stroke:var(--fig-ink);stroke-width:2}
+.fig-sh2{fill:var(--fig-0);stroke:var(--fig-0s);stroke-width:2}.fig-sh3{fill:var(--fig-1);stroke:var(--fig-1s);stroke-width:2}
+.fig-dark{fill:var(--fig-dark);stroke:var(--fig-ink);stroke-width:1.5}
+.fig-stroke{fill:none;stroke:var(--fig-ink);stroke-width:2;stroke-linecap:round}.fig-slat{stroke:var(--paper);stroke-width:1.5}
+.fig-dash{fill:none;stroke:var(--fig-ink);stroke-width:2;stroke-dasharray:5 4;stroke-linecap:round}
+.fig-accent{fill:none;stroke:var(--fig-0s);stroke-width:3;stroke-linecap:round}.fig-handle{fill:none;stroke:var(--fig-ink);stroke-width:9;stroke-linecap:round}
+.fig-ground{stroke:var(--faint);stroke-width:2;fill:none}.fig-earth{fill:var(--fig-earth);stroke:var(--fig-ink);stroke-width:2}.fig-water{fill:var(--fig-water);stroke:none}
+.fig-trunk{stroke:var(--fig-ink);stroke-width:3}.fig-leaf{fill:var(--fig-leaf);stroke:var(--fig-ink);stroke-width:1.5}.fig-grass{fill:none;stroke:var(--fig-leaf);stroke-width:2;stroke-linecap:round}
+.fig-sky{fill:var(--fig-sky)}.fig-far{fill:var(--fig-far)}.fig-city{fill:var(--fig-city)}.fig-haze{fill:var(--fig-haze)}.fig-ground2{fill:var(--fig-grnd)}.fig-horizon{stroke:var(--fig-ink);stroke-width:2}.fig-road{fill:var(--fig-street);stroke:var(--fig-ink);stroke-width:1.5}
+.fig-ray{fill:none;stroke:var(--fig-0s);stroke-width:4;stroke-linecap:round}.fig-ray2{stroke-dasharray:2 7}.fig-shadow{fill:var(--fig-ink);opacity:.25}
+.fig-street{fill:var(--fig-street);stroke:none}.fig-svg .fig-n2{fill:var(--fig-ink);font-weight:800}
+.fig-lead{stroke:var(--muted);stroke-width:1.5}.fig-lead-on{stroke:var(--fig-on);stroke-width:2.5}.fig-pin{fill:var(--paper);stroke:var(--fig-ink);stroke-width:2}.fig-pin-on{fill:var(--fig-on);stroke:var(--fig-on)}
+.fig-svg text.fig-on{fill:var(--fig-on)}
+.atlas20-fig .fig{margin:16px 0 4px;padding:14px}
+.school-ico{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--accentsoft);color:var(--stripe,var(--accent));margin-bottom:14px}.school-tile .school-index{margin-top:2px}
+.fig-step-on{fill:var(--fig-0);stroke:var(--fig-on);stroke-width:3}
+.atlas20-ladder{margin:14px 0 4px}.atlas20-ladder summary{cursor:pointer;font-size:12px;font-weight:760;color:var(--accent);padding:6px 0}.atlas20-ladder .fig{margin:8px 0 0}

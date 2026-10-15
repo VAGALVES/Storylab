@@ -11,6 +11,7 @@ vm.runInNewContext(read('./atlas-engine.js'), {
   window: w,
   document: { addEventListener(type, handler) { handlers[type] = handler; } }
 });
+vm.runInNewContext(read('./illustrations.js'), { window: w });
 const atlas = w.StoryLabAtlas;
 const store = { atlasDrafts: {}, atlasHistory: [] };
 let lastTele = '';
@@ -190,3 +191,24 @@ assert.ok(Object.values(store.atlasDrafts).some(d => d.includes(colloc[0])), 'co
 assert.ok(atlas.termDeck(27, 50).fresh.every(t => t.collocations.length >= 4));
 assert.ok(['refletir', 'ecoar', 'incidir', 'reverberar'].every(t => D.atlas[27].terms.includes(t)), 'núcleo do campo de incidência');
 console.log('Atlas 2.1: colocações no verbete, na prática e nos cartões OK');
+
+// ── Atlas 2.2: esquema do campo com destaque do termo selecionado ──
+click('explore');
+click('word', {topic: '7', word: 'frontão'});
+let fieldPage = atlas.render();
+assert.match(fieldPage, /atlas20-fig/);
+assert.match(fieldPage, /Partes de uma fachada/);
+assert.match(fieldPage, /fig-lead-on/, 'o termo selecionado fica em destaque no desenho');
+click('word', {topic: '7', word: 'pórtico'});
+assert.ok(!/fig-lead-on/.test(atlas.render()), 'termo sem peça no desenho não destaca nada');
+click('word', {topic: '3', word: 'saturado'});
+assert.ok(!/atlas20-fig/.test(atlas.render()), 'campo sem esquema não mostra figura');
+console.log('Atlas 2.2: esquema do campo e destaque do termo selecionado OK');
+
+// Escada narrativa recolhida na prática, com o nível atual em destaque
+click('practice');
+click('level', {level: '2'});
+const prat = atlas.render();
+assert.match(prat, /atlas20-ladder/);
+assert.match(prat, /fig-step-on/);
+console.log('Atlas 2.2: escada narrativa na prática OK');
