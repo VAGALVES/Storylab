@@ -13762,6 +13762,27 @@
             "t": "Contexto"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto contexto a frase carrega",
+        "from": "Ambígua",
+        "to": "Inequívoca",
+        "caption": "Leia assim: “A fila está enorme” pode significar sucesso, falha ou feriado; só deixa de ser ambígua quando o jornalista explicita o contexto que o público não vê.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Frase solta"
+          },
+          {
+            "at": 0.5,
+            "t": "Local e hora"
+          },
+          {
+            "at": 0.9,
+            "t": "Causa explicada"
+          }
+        ]
       }
     ],
     "teorias-comunicacao:1": [
@@ -13782,6 +13803,27 @@
           {
             "t": "Percepção",
             "d": "o que o público filtra e entende"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Contexto que evita a conclusão pronta",
+        "from": "Conclusão genérica",
+        "to": "Conclusão própria",
+        "caption": "Leia assim: quanto mais contexto o enquadramento oferece, menos o público cai no “é sempre assim” e mais chega às próprias conclusões.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Rua lotada, sem data"
+          },
+          {
+            "at": 0.5,
+            "t": "Dia e horário"
+          },
+          {
+            "at": 0.9,
+            "t": "Contexto suficiente"
           }
         ]
       }
@@ -13807,6 +13849,27 @@
           },
           {
             "t": "Reinterpretação"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto explicar a cada público",
+        "from": "Quem não conhece",
+        "to": "Quem vive lá",
+        "caption": "Leia assim: quanto mais distante o público do assunto, mais profundidade a explicação pede; para quem vive o lugar, explicar o lilong pode soar óbvio.",
+        "marks": [
+          {
+            "at": 0.12,
+            "t": "Explicar o termo"
+          },
+          {
+            "at": 0.5,
+            "t": "Dar um exemplo"
+          },
+          {
+            "at": 0.88,
+            "t": "Dispensar o óbvio"
           }
         ]
       }
@@ -13877,6 +13940,27 @@
             "t": "Folhas avulsas"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do rumor à verificação",
+        "from": "Rumor",
+        "to": "Verificação",
+        "caption": "Leia assim: o panfleto sem fonte é o ancestral da postagem viral; o boletim oficial informa a decisão, e só a reportagem verifica e pergunta quem é afetado.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Panfleto sem fonte"
+          },
+          {
+            "at": 0.5,
+            "t": "Boletim oficial"
+          },
+          {
+            "at": 0.9,
+            "t": "Reportagem"
+          }
+        ]
       }
     ],
     "historia-jornalismo:1": [
@@ -13899,6 +13983,27 @@
             "when": "Televisão",
             "t": "A imagem como prova",
             "d": "Força de evidência, mas também escolha pelo impacto visual"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Peso da imagem em cada meio",
+        "from": "Só palavras",
+        "to": "Imagem decide",
+        "caption": "Leia assim: do texto impresso à televisão, a imagem pesa cada vez mais; por isso uma cena dramática pode dominar a cobertura sem representar a situação geral.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Imprensa: texto"
+          },
+          {
+            "at": 0.5,
+            "t": "Rádio: imagem mental"
+          },
+          {
+            "at": 0.9,
+            "t": "TV: imagem como prova"
           }
         ]
       }
@@ -13925,6 +14030,30 @@
             "label": "Como chega",
             "a": "Ordem definida pela edição",
             "b": "Algoritmo que premia engajamento e rapidez"
+          }
+        ]
+      },
+      {
+        "type": "stairs",
+        "title": "Checagem do vídeo de morador",
+        "axis": "Quanto já foi verificado",
+        "caption": "O ponto-chave: conteúdo de terceiros só vira notícia depois de passar por cada degrau; pular um deles transfere o risco ao público.",
+        "steps": [
+          {
+            "t": "Recebido",
+            "d": "vídeo bruto"
+          },
+          {
+            "t": "Data",
+            "d": "quando"
+          },
+          {
+            "t": "Local",
+            "d": "onde"
+          },
+          {
+            "t": "Autorização",
+            "d": "uso liberado"
           }
         ]
       }
@@ -13956,6 +14085,27 @@
             "d": "Comentários, correções e desdobramentos"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Como tratar o dado que mudou",
+        "from": "Some o rastro",
+        "to": "Deixa o rastro",
+        "caption": "Leia assim: se um preço mudou, a nota de atualização preserva a informação anterior e mostra a correção; apagar ou trocar sem aviso esconde o erro.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Apagar o dado"
+          },
+          {
+            "at": 0.5,
+            "t": "Corrigir em silêncio"
+          },
+          {
+            "at": 0.9,
+            "t": "Nota de atualização"
+          }
+        ]
       }
     ],
     "fundamentos-jornalismo:0": [
@@ -13979,6 +14129,26 @@
           {
             "t": "Publicação responsável",
             "d": "O que se sabe, como se sabe e o que não se sabe"
+          }
+        ]
+      },
+      {
+        "type": "stairs",
+        "title": "Do boato ao texto publicável",
+        "axis": "Grau de confirmação da informação",
+        "caption": "Leia assim: “ouvi dizer” é ponto de partida; só depois de conferir com várias fontes a informação pode ser publicada, com as ressalvas que restarem.",
+        "steps": [
+          {
+            "t": "Boato",
+            "d": "ouvi dizer"
+          },
+          {
+            "t": "Apurado",
+            "d": "2+ fontes"
+          },
+          {
+            "t": "Publicado",
+            "d": "c/ ressalva"
           }
         ]
       }
@@ -14055,6 +14225,27 @@
             "t": "Transparência"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Precisão de uma frase",
+        "from": "Vaga",
+        "to": "Verificável",
+        "caption": "Leia assim: cada acréscimo torna a frase mais checável; “muita gente” vira número, e o número ganha hora e fonte da contagem para o público poder conferir.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Muita gente"
+          },
+          {
+            "at": 0.5,
+            "t": "Cerca de 200 pessoas"
+          },
+          {
+            "at": 0.9,
+            "t": "Com hora e fonte"
+          }
+        ]
       }
     ],
     "fundamentos-jornalismo:3": [
@@ -14078,6 +14269,29 @@
           {
             "t": "Fontes, cenas e riscos",
             "d": "Quem responde, o que prova e o que pode dar errado"
+          }
+        ]
+      },
+      {
+        "type": "stairs",
+        "title": "Maturidade da pauta",
+        "axis": "Do fato solto ao plano de trabalho",
+        "caption": "Leia assim: cada degrau acrescenta uma decisão; o fato só vira pauta quando tem pergunta, ângulo, público, fontes e riscos definidos.",
+        "steps": [
+          {
+            "t": "Fato"
+          },
+          {
+            "t": "Pergunta",
+            "d": "o que saber"
+          },
+          {
+            "t": "Ângulo",
+            "d": "e público"
+          },
+          {
+            "t": "Pauta",
+            "d": "com riscos"
           }
         ]
       }
@@ -14174,6 +14388,27 @@
             "d": "Chamativa, mas distorce se dominar"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto da cena a pauta mostra",
+        "from": "Só o chamativo",
+        "to": "Informa e serve",
+        "caption": "Leia assim: numa reportagem sobre chuva forte, o impacto chama a atenção, mas o serviço (rotas, horários) é o que ajuda o público a decidir.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Só dramático"
+          },
+          {
+            "at": 0.5,
+            "t": "Impacto"
+          },
+          {
+            "at": 0.9,
+            "t": "Impacto e serviço"
+          }
+        ]
       }
     ],
     "teoria-noticia:2": [
@@ -14200,6 +14435,27 @@
             "b": "Engana, mesmo sem dizer nada falso"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Transparência do recorte",
+        "from": "Escondido",
+        "to": "Explícito",
+        "caption": "Leia assim: toda seleção é inevitável; o que muda a ética é o leitor saber o que ficou de fora, em que ordem e em que condições se observou.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Corte silencioso"
+          },
+          {
+            "at": 0.5,
+            "t": "Ordem que sugere"
+          },
+          {
+            "at": 0.9,
+            "t": "Recorte explicado"
+          }
+        ]
       }
     ],
     "teoria-noticia:3": [
@@ -14223,6 +14479,34 @@
           {
             "t": "Decida e registre",
             "d": "A decisão e os motivos, para revisar depois"
+          }
+        ]
+      },
+      {
+        "type": "stairs",
+        "title": "Da ideia à pauta decidida",
+        "axis": "Maturidade da pauta apresentada",
+        "caption": "Leia assim: uma pauta madura não para no tema; ela traz a pergunta, explica por que importa, mostra evidência e termina numa decisão registrada.",
+        "steps": [
+          {
+            "t": "Tema",
+            "d": "cardápios"
+          },
+          {
+            "t": "Pergunta",
+            "d": "idosos?"
+          },
+          {
+            "t": "Relevância",
+            "d": "importa"
+          },
+          {
+            "t": "Evidência",
+            "d": "12 de 15"
+          },
+          {
+            "t": "Decisão",
+            "d": "escolhida"
           }
         ]
       }
@@ -14315,6 +14599,27 @@
             "d": "Abra mão do benefício ou não publique"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Independência diante da vantagem",
+        "from": "Dependente",
+        "to": "Independente",
+        "caption": "Leia assim: aceitar a vantagem e calar é o pior ponto; declarar protege o público, e recusar a aprovação prévia preserva a independência.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Aceita e não conta"
+          },
+          {
+            "at": 0.5,
+            "t": "Declara a vantagem"
+          },
+          {
+            "at": 0.9,
+            "t": "Recusa aprovação"
+          }
+        ]
       }
     ],
     "etica-jornalistica:3": [
@@ -14402,6 +14707,31 @@
             "b": "Procurar regras oficiais e pedir autorização registrada"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Liberdade para gravar em cada lugar",
+        "from": "Mais livre",
+        "to": "Mais restrito",
+        "caption": "Leia assim: quanto mais privado o lugar, maior o controle de quem o administra; por isso a autorização é parte do planejamento, e não um detalhe.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Espaço público"
+          },
+          {
+            "at": 0.38,
+            "t": "Museu: com regras"
+          },
+          {
+            "at": 0.66,
+            "t": "Loja: pode vetar"
+          },
+          {
+            "at": 0.92,
+            "t": "Cozinha: pedir antes"
+          }
+        ]
       }
     ],
     "legislacao-direitos:2": [
@@ -14425,6 +14755,27 @@
           {
             "t": "Credite e documente",
             "d": "Guarde a prova da licença ou autorização"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto a licença permite",
+        "from": "Uso proibido",
+        "to": "Uso mais livre",
+        "caption": "Leia assim: sem licença, a obra não pode ser usada; CC BY-NC libera com crédito, mas proíbe fins comerciais; CC BY exige só o crédito ao autor.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Foto sem licença"
+          },
+          {
+            "at": 0.5,
+            "t": "CC BY-NC"
+          },
+          {
+            "at": 0.9,
+            "t": "CC BY"
           }
         ]
       }
@@ -14453,6 +14804,27 @@
           },
           {
             "t": "Uso e temas sensíveis"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Firmeza do consentimento",
+        "from": "Mais risco",
+        "to": "Menos risco",
+        "caption": "Leia assim: quanto mais claro e registrado o consentimento, menor a surpresa depois; gravá-lo no início da entrevista deixa a prova junto com o conteúdo.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Não perguntado"
+          },
+          {
+            "at": 0.5,
+            "t": "Dito sem gravar"
+          },
+          {
+            "at": 0.9,
+            "t": "Gravado no início"
           }
         ]
       }
@@ -14546,6 +14918,27 @@
             "b": "Pessoas locais sobre a própria experiência"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "De quem é a voz",
+        "from": "Olhar de fora",
+        "to": "Voz de dentro",
+        "caption": "Leia assim: descrever uma festa como “curiosa” fica no olhar de fora; mostrar também a rotina e ouvir o morador explicar o sentido devolve a voz a quem vive ali.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Festa “curiosa”"
+          },
+          {
+            "at": 0.5,
+            "t": "Mostrar a rotina"
+          },
+          {
+            "at": 0.9,
+            "t": "Morador explica"
+          }
+        ]
       }
     ],
     "jornalismo-internacional:3": [
@@ -14596,6 +14989,31 @@
           {
             "t": "Síntese",
             "d": "Conclusão que respeita as diferenças"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do relato pessoal ao fenômeno",
+        "from": "Uma experiência",
+        "to": "Um fenômeno",
+        "caption": "Leia assim: equilibrar não é dar o mesmo peso; um turista ilustra, mas só um estudo de deslocamento sustenta afirmações sobre a população do bairro.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Turista"
+          },
+          {
+            "at": 0.36,
+            "t": "Morador"
+          },
+          {
+            "at": 0.64,
+            "t": "Urbanista"
+          },
+          {
+            "at": 0.9,
+            "t": "Estudo de deslocamento"
           }
         ]
       }
@@ -14673,6 +15091,30 @@
             "d": "Com perguntas melhores, informadas pelo que já se viu"
           }
         ]
+      },
+      {
+        "type": "stairs",
+        "title": "Prontidão do plano de apuração",
+        "axis": "Do que se quer saber ao que se faz",
+        "caption": "Leia assim: o plano amadurece quando as perguntas ganham fontes, ordem de trabalho e tempo estimado para cada parte do dia.",
+        "steps": [
+          {
+            "t": "Perguntas",
+            "d": "o que saber"
+          },
+          {
+            "t": "Fontes",
+            "d": "onde buscar"
+          },
+          {
+            "t": "Ordem",
+            "d": "antes/depois"
+          },
+          {
+            "t": "Tempo",
+            "d": "no dia"
+          }
+        ]
       }
     ],
     "tecnicas-reportagem:2": [
@@ -14691,6 +15133,31 @@
           {
             "t": "Não confirmado",
             "d": "Boato ou fonte única fraca"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto o nome do arquivo diz",
+        "from": "Difícil de achar",
+        "to": "Pronto para usar",
+        "caption": "Leia assim: um nome com data, local e consentimento permite achar o áudio e usá-lo dentro do contexto, sem depender da memória de quem gravou.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Sem nome"
+          },
+          {
+            "at": 0.36,
+            "t": "Só a data"
+          },
+          {
+            "at": 0.64,
+            "t": "Data e local"
+          },
+          {
+            "at": 0.92,
+            "t": "Com consentimento"
           }
         ]
       }
@@ -14722,6 +15189,27 @@
             "d": "O que foi respondido e o que segue aberto"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Certeza da conclusão",
+        "from": "Incerta",
+        "to": "Firme",
+        "caption": "Leia assim: a conclusão tem o tamanho da apuração; quando a hipótese se confirma só em parte, o texto diz até onde foi e o que não se conseguiu apurar.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Sem resposta da fonte"
+          },
+          {
+            "at": 0.5,
+            "t": "Em parte confirmada"
+          },
+          {
+            "at": 0.9,
+            "t": "Confirmada"
+          }
+        ]
       }
     ],
     "redacao-jornalistica:0": [
@@ -14748,6 +15236,30 @@
           },
           {
             "t": "Como"
+          }
+        ]
+      },
+      {
+        "type": "stairs",
+        "title": "Do rascunho ao texto para o ouvido",
+        "axis": "Quanto o texto já está pronto para ser ouvido",
+        "caption": "Leia assim: cada nível tira uma dificuldade do ouvinte, que não pode reler; a leitura em voz alta é o teste final para achar o que ainda tropeça.",
+        "steps": [
+          {
+            "t": "Rascunho",
+            "d": "oração longa"
+          },
+          {
+            "t": "Direto",
+            "d": "duas frases"
+          },
+          {
+            "t": "Essencial",
+            "d": "vem primeiro"
+          },
+          {
+            "t": "Ensaiado",
+            "d": "voz alta"
           }
         ]
       }
@@ -14791,6 +15303,27 @@
             "d": "O desfecho, agora com o contexto"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quando o essencial aparece",
+        "from": "Essencial primeiro",
+        "to": "Revelação gradual",
+        "caption": "Leia assim: na pirâmide invertida o leitor já tem o principal na abertura; no diamante e na cena, o sentido se constrói ao longo do texto.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Pirâmide invertida"
+          },
+          {
+            "at": 0.5,
+            "t": "Diamante"
+          },
+          {
+            "at": 0.92,
+            "t": "Cronológica e cena"
+          }
+        ]
       }
     ],
     "redacao-jornalistica:2": [
@@ -14815,6 +15348,27 @@
             "label": "Repetição",
             "a": "Soa redundante",
             "b": "Retomar o tema orienta quem se distraiu"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Número feito para o ouvido",
+        "from": "Exato demais",
+        "to": "Fácil de guardar",
+        "caption": "Leia assim: quem ouve não consegue reler; arredondar e comparar (“quase 3 mil”, “mais que um estádio pequeno”) ajuda mais que o número exato.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "2.874 pessoas"
+          },
+          {
+            "at": 0.5,
+            "t": "Quase 3 mil"
+          },
+          {
+            "at": 0.92,
+            "t": "Com comparação"
           }
         ]
       }
@@ -14889,6 +15443,26 @@
             "t": "Confirme"
           }
         ]
+      },
+      {
+        "type": "stairs",
+        "title": "Perguntas que nascem da escuta",
+        "axis": "Quanto a pergunta vem do que se ouviu",
+        "caption": "Leia assim: a lista prepara, mas a descoberta vem quando o repórter retoma o que o entrevistado disse e pergunta “em que sentido?”.",
+        "steps": [
+          {
+            "t": "Preparada",
+            "d": "da pesquisa"
+          },
+          {
+            "t": "Retomada",
+            "d": "“você disse”"
+          },
+          {
+            "t": "Aprofundada",
+            "d": "do que ouviu"
+          }
+        ]
       }
     ],
     "tecnicas-entrevista:1": [
@@ -14913,6 +15487,31 @@
             "label": "Use para",
             "a": "Encontrar a história",
             "b": "Checar o que precisa ser exato"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Liberdade que a pergunta dá à resposta",
+        "from": "Resposta fechada",
+        "to": "Resposta livre",
+        "caption": "Leia assim: quanto mais fechada a pergunta, mais ela confirma um dado; quanto mais aberta, mais o entrevistado narra com as próprias palavras.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Abriu em 2008?"
+          },
+          {
+            "at": 0.36,
+            "t": "Quantos funcionários?"
+          },
+          {
+            "at": 0.64,
+            "t": "Como o aluguel afetou?"
+          },
+          {
+            "at": 0.92,
+            "t": "Como era esta rua?"
           }
         ]
       }
@@ -15012,6 +15611,31 @@
           {
             "t": "Grau de certeza",
             "d": "Confirmado, provável ou não verificado"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanta certeza a afirmação tem",
+        "from": "Incerta",
+        "to": "Firme",
+        "caption": "Leia assim: a certeza sobe com a independência das fontes; enquanto não subir, diga o limite: “não foi possível confirmar a data de abertura”.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Não confirmado"
+          },
+          {
+            "at": 0.36,
+            "t": "Uma só fonte"
+          },
+          {
+            "at": 0.64,
+            "t": "Documento"
+          },
+          {
+            "at": 0.92,
+            "t": "Documento e registro"
           }
         ]
       }
@@ -15172,6 +15796,27 @@
             "d": "Dado oficial existente ou contagem própria"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Comparação justa entre bairros",
+        "from": "Pouco comparável",
+        "to": "Comparável",
+        "caption": "Leia assim: cada igualdade imposta, como dia, tamanho e unidade, aproxima a comparação de um padrão justo entre os preços de café nos bairros.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Dias diferentes"
+          },
+          {
+            "at": 0.5,
+            "t": "Mesmo dia"
+          },
+          {
+            "at": 0.9,
+            "t": "Mesmo dia e tamanho"
+          }
+        ]
       }
     ],
     "jornalismo-dados:1": [
@@ -15243,6 +15888,27 @@
             "b": "Sem fonte, data ou unidade: depende do narrador"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Contexto da informação",
+        "from": "Sem contexto",
+        "to": "Contexto completo",
+        "caption": "Leia assim: “40% mais caro” só informa quando se diz comparado a quê e como os dados foram obtidos; sem isso, até um número correto engana.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Só o percentual"
+          },
+          {
+            "at": 0.5,
+            "t": "Comparação nomeada"
+          },
+          {
+            "at": 0.9,
+            "t": "Data, copo e coleta"
+          }
+        ]
       }
     ],
     "jornalismo-dados:3": [
@@ -15263,6 +15929,27 @@
           },
           {
             "t": "O que ele não mostra"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do número seco à escala humana",
+        "from": "Número seco",
+        "to": "Escala humana",
+        "caption": "Leia assim: o mesmo dado fica mais compreensível quando ganha uma comparação e uma referência do cotidiano, como uma passagem ou uma hora de trabalho.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "38 yuan"
+          },
+          {
+            "at": 0.5,
+            "t": "Paga uma passagem"
+          },
+          {
+            "at": 0.9,
+            "t": "Uma hora de trabalho"
           }
         ]
       }
@@ -15327,6 +16014,27 @@
             "d": "A trilha mostra como se chegou a cada conclusão"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Como o documento é obtido",
+        "from": "Sem consentimento",
+        "to": "Voluntário",
+        "caption": "Leia assim: a prova não vale mais que o modo de obtê-la; pedir que o cliente compartilhe o recibo é mais seguro, ético e legal que fotografar o de outro.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Foto sem pedir"
+          },
+          {
+            "at": 0.5,
+            "t": "Autorização pedida"
+          },
+          {
+            "at": 0.9,
+            "t": "Cliente compartilha"
+          }
+        ]
       }
     ],
     "jornalismo-investigativo:2": [
@@ -15354,6 +16062,27 @@
             "when": "Publicação",
             "t": "Resposta com destaque justo",
             "d": "Fiel e proporcional, não escondida no final"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Justiça no tratamento da resposta",
+        "from": "Ignora",
+        "to": "Confronta",
+        "caption": "Leia assim: ouvir o outro lado não basta; a resposta é tratada com justiça quando é publicada e confrontada com o que a apuração encontrou, como a falta de aviso.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Omite a resposta"
+          },
+          {
+            "at": 0.5,
+            "t": "Cita a versão"
+          },
+          {
+            "at": 0.92,
+            "t": "Cita e checa os fatos"
           }
         ]
       }
@@ -15522,6 +16251,27 @@
             "d": "Comparação cautelosa com outra visita"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Alcance da afirmação",
+        "from": "Generaliza",
+        "to": "Só o observado",
+        "caption": "Leia assim: em narração curta, a frase deve cobrir só o que foi visto; “vi três lojas abertas às 8h” é mais precisa do que dizer que todas abrem cedo.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Todas abrem às 8h"
+          },
+          {
+            "at": 0.5,
+            "t": "Muitas abrem cedo"
+          },
+          {
+            "at": 0.9,
+            "t": "Vi três abertas às 8h"
+          }
+        ]
       }
     ],
     "oratoria-retorica:0": [
@@ -15546,6 +16296,30 @@
             "label": "Alcance",
             "a": "Soa universal",
             "b": "“Isso não comprova que a região é sempre assim”"
+          }
+        ]
+      },
+      {
+        "type": "stairs",
+        "title": "Do adjetivo ao argumento",
+        "axis": "Solidez de um argumento",
+        "caption": "Leia assim: um adjetivo forte não sustenta nada; a solidez cresce com tese, razões e exemplos e, por fim, com o reconhecimento honesto dos limites.",
+        "steps": [
+          {
+            "t": "Adjetivo",
+            "d": "só impressão"
+          },
+          {
+            "t": "Tese",
+            "d": "afirmação"
+          },
+          {
+            "t": "Razões",
+            "d": "e exemplos"
+          },
+          {
+            "t": "Limite",
+            "d": "objeção"
           }
         ]
       }
@@ -15607,6 +16381,27 @@
         ],
         "center": "Sem manipulação",
         "caption": "Leia assim: confiança, explicação e emoção se reforçam quando nenhuma delas distorce a evidência ou a dignidade de quem é filmado."
+      },
+      {
+        "type": "spectrum",
+        "title": "Alcance do que a evidência sustenta",
+        "from": "Alcance menor",
+        "to": "Alcance maior",
+        "caption": "Leia assim: a afirmação só vai até onde a evidência chega; uma história ilustra, uma contagem situa um período e só mais fontes falariam do bairro.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Uma história pessoal"
+          },
+          {
+            "at": 0.5,
+            "t": "Contagem no período"
+          },
+          {
+            "at": 0.9,
+            "t": "Todo o bairro"
+          }
+        ]
       }
     ],
     "oratoria-retorica:3": [
@@ -15898,6 +16693,27 @@
             "d": "Diga qual elemento mudou ao cruzar a esquina"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto movimento cada fala aguenta",
+        "from": "Parado",
+        "to": "Em movimento",
+        "caption": "Leia assim: números e instruções pedem que você pare; os marcos do trajeto aguentam a fala caminhando; a travessia pode ir só com imagem.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Números e instruções"
+          },
+          {
+            "at": 0.5,
+            "t": "Marcos do trajeto"
+          },
+          {
+            "at": 0.9,
+            "t": "Travessia sem fala"
+          }
+        ]
       }
     ],
     "linguagem-descritiva:0": [
@@ -15924,6 +16740,27 @@
             "b": "“A vegetação sombreia a calçada; as vitrines iluminam as fachadas”"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Detalhe que faz imaginar",
+        "from": "Genérico",
+        "to": "Relacional",
+        "caption": "Leia assim: a descrição ganha força ao sair do adjetivo vago, passar por forma, material e luz, e chegar às relações entre os elementos da cena.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Bonita"
+          },
+          {
+            "at": 0.5,
+            "t": "Reflete as luzes"
+          },
+          {
+            "at": 0.9,
+            "t": "Sombreia a calçada"
+          }
+        ]
       }
     ],
     "linguagem-descritiva:1": [
@@ -15944,6 +16781,27 @@
           {
             "t": "Molduras metálicas",
             "d": "o traço que identifica a cena"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto o adjetivo se apoia no visível",
+        "from": "Sem prova",
+        "to": "Prova visual",
+        "caption": "Leia assim: “fachada centenária” sem fonte é afirmação; “ornamentos” e “molduras metálicas” podem ser vistos e conferidos pelo público.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Centenária"
+          },
+          {
+            "at": 0.5,
+            "t": "Com ornamentos"
+          },
+          {
+            "at": 0.9,
+            "t": "Molduras metálicas"
           }
         ]
       }
@@ -15969,6 +16827,27 @@
           },
           {
             "t": "Movimento do observador"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da descrição vaga à situada",
+        "from": "Vaga",
+        "to": "Situada",
+        "caption": "Leia assim: a descrição melhora quando o público sabe de onde se vê e qual a posição de cada coisa em relação ao enquadramento.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Há bicicletas"
+          },
+          {
+            "at": 0.5,
+            "t": "Fileira de bicicletas"
+          },
+          {
+            "at": 0.9,
+            "t": "Fileira à direita"
           }
         ]
       }
@@ -16049,6 +16928,27 @@
             "d": "O que foi respondido e o que segue em aberto"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Mostrar antes de concluir",
+        "from": "Concluir antes",
+        "to": "Mostrar antes",
+        "caption": "Leia assim: dizer “a rotina é intensa” entrega a conclusão pronta; mostrar ações e perguntar sobre a rotina deixa o público chegar a ela.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Dizer a conclusão"
+          },
+          {
+            "at": 0.5,
+            "t": "Mostrar ações"
+          },
+          {
+            "at": 0.9,
+            "t": "Mostrar e perguntar"
+          }
+        ]
       }
     ],
     "storytelling:1": [
@@ -16078,6 +16978,27 @@
             "d": "Interpretação atualizada e declarada"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da hipótese à revisão",
+        "from": "Expectativa",
+        "to": "Revisão",
+        "caption": "Leia assim: a virada honesta nasce quando um sinal contrário, como moradias no mesmo quarteirão, obriga o narrador a corrigir a própria hipótese.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Só comercial"
+          },
+          {
+            "at": 0.5,
+            "t": "Moradias no quarteirão"
+          },
+          {
+            "at": 0.9,
+            "t": "Hipótese revista"
+          }
+        ]
       }
     ],
     "storytelling:2": [
@@ -16104,6 +17025,27 @@
             "b": "“Em outra manhã, voltei à mesma rua”"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto tempo cabe na frase",
+        "from": "Muito tempo",
+        "to": "Um instante",
+        "caption": "Leia assim: o resumo comprime horas numa frase, a ponte temporal liga dois momentos, e a cena mostra um instante inteiro, como o barista entregando o copo.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "O movimento aumenta"
+          },
+          {
+            "at": 0.5,
+            "t": "Voltei em outra manhã"
+          },
+          {
+            "at": 0.9,
+            "t": "Barista entrega o copo"
+          }
+        ]
       }
     ],
     "storytelling:3": [
@@ -16124,6 +17066,27 @@
           },
           {
             "t": "Nova pergunta"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto o final fecha ou abre",
+        "from": "Conclui",
+        "to": "Abre",
+        "caption": "Leia assim: o encerramento pode fechar com uma imagem, retomar a pergunta inicial ou deixar uma nova pergunta que convida a continuar.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Síntese concreta"
+          },
+          {
+            "at": 0.5,
+            "t": "Retorno à pergunta"
+          },
+          {
+            "at": 0.9,
+            "t": "Próxima pergunta"
           }
         ]
       }
@@ -16149,6 +17112,27 @@
           {
             "t": "Fechamento",
             "d": "Síntese curta; dois blocos bons valem mais que dez soltos"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "O mesmo assunto em três tempos",
+        "from": "Mais enxuto",
+        "to": "Mais desenvolvido",
+        "caption": "Leia assim: treinar o mesmo assunto em 15, 30 e 60 segundos obriga a escolher o essencial; com mais tempo, cabem mais blocos de ideia.",
+        "marks": [
+          {
+            "at": 0.12,
+            "t": "15 segundos"
+          },
+          {
+            "at": 0.5,
+            "t": "30 segundos"
+          },
+          {
+            "at": 0.88,
+            "t": "60 segundos"
           }
         ]
       }
@@ -16240,6 +17224,27 @@
             "t": "Saída responsável"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto do roteiro sobrevive",
+        "from": "Roteiro mantido",
+        "to": "Roteiro trocado",
+        "caption": "Leia assim: improvisar é ajustar o roteiro ao que a rua oferece, do simples desvio de olhar até a troca do plano, sem perder consentimento e direção.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Mostrar a loja"
+          },
+          {
+            "at": 0.5,
+            "t": "Notar a esquina"
+          },
+          {
+            "at": 0.9,
+            "t": "Só o entorno público"
+          }
+        ]
       }
     ],
     "semiotica:0": [
@@ -16266,6 +17271,27 @@
             "b": "Precisa de argumento; é culturalmente situada"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do descrito ao interpretado",
+        "from": "Descrição",
+        "to": "Interpretação",
+        "caption": "Leia assim: descrever o que aparece vem antes; a composição já guia o olhar, e a conotação, no extremo, é uma leitura culturalmente situada.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Fundo bege"
+          },
+          {
+            "at": 0.5,
+            "t": "Luz dirige o olhar"
+          },
+          {
+            "at": 0.9,
+            "t": "Sugere sobriedade"
+          }
+        ]
       }
     ],
     "semiotica:1": [
@@ -16287,6 +17313,27 @@
             "d": "Uma leitura possível, nunca a prova de um estado"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Distância criada pelo enquadramento",
+        "from": "Distante",
+        "to": "Próximo",
+        "caption": "Leia assim: quanto mais fechado o enquadramento, mais o espectador se aproxima; a proximidade é emocional e não prova intimidade real.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Plano aberto"
+          },
+          {
+            "at": 0.5,
+            "t": "Plano médio"
+          },
+          {
+            "at": 0.9,
+            "t": "Close"
+          }
+        ]
       }
     ],
     "semiotica:2": [
@@ -16303,6 +17350,27 @@
           },
           {
             "t": "O que se vê"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "De onde vem o sentido",
+        "from": "Impressão pessoal",
+        "to": "Convenção cultural",
+        "caption": "Leia assim: nenhuma cor ou forma tem significado universal; quanto mais a leitura depende de contexto cultural, mais o texto deve explicar de onde ela vem.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Minha impressão"
+          },
+          {
+            "at": 0.5,
+            "t": "Contexto específico"
+          },
+          {
+            "at": 0.9,
+            "t": "Convenção partilhada"
           }
         ]
       }
@@ -16325,6 +17393,27 @@
           },
           {
             "t": "Nova leitura"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Da associação à comprovação",
+        "from": "Associação",
+        "to": "Comprovação",
+        "caption": "Leia assim: achar que um símbolo indica saída é só associação; conferir é o que transforma a impressão em descoberta, como a indicação de outra plataforma.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Achei que era saída"
+          },
+          {
+            "at": 0.5,
+            "t": "Conferi"
+          },
+          {
+            "at": 0.9,
+            "t": "Outra plataforma"
           }
         ]
       }
@@ -16350,6 +17439,27 @@
           {
             "t": "Síntese",
             "d": "“Ou seja...”, com palavras novas, sem repetir"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do abstrato ao concreto",
+        "from": "Abstrato",
+        "to": "Concreto",
+        "caption": "Leia assim: um termo como “escala humana” só fixa na memória quando ganha uma relação visível, como pessoa e fachada, e uma comparação concreta.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "“Escala humana”"
+          },
+          {
+            "at": 0.5,
+            "t": "Pessoa e fachada"
+          },
+          {
+            "at": 0.9,
+            "t": "Comparar com pedestres"
           }
         ]
       }
@@ -16441,6 +17551,27 @@
             "b": "Também é um recorte"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quantas observações sustentam",
+        "from": "Impressão",
+        "to": "Conclusão",
+        "caption": "Leia assim: uma fila longa hoje não prova que a loja vive lotada; a impressão só vira conclusão depois de observar outros horários e outros dias.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Uma fila hoje"
+          },
+          {
+            "at": 0.5,
+            "t": "Outro horário"
+          },
+          {
+            "at": 0.92,
+            "t": "Vários dias e horários"
+          }
+        ]
       }
     ],
     "psicologia-comunicacao:3": [
@@ -16468,6 +17599,27 @@
             "when": "Por fim",
             "t": "Analogia com limite",
             "d": "O roteiro é um mapa, mas não prevê tudo"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto o público já conhece",
+        "from": "Iniciante",
+        "to": "Conhecedor",
+        "caption": "Leia assim: quanto menos o público sabe, mais o roteiro precisa de modelo mental e exemplo antes do conceito; a evidência continua a mesma.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Explique a catraca"
+          },
+          {
+            "at": 0.5,
+            "t": "Exemplo, depois termo"
+          },
+          {
+            "at": 0.9,
+            "t": "Conceito direto"
           }
         ]
       }
@@ -16527,6 +17679,27 @@
           }
         ],
         "caption": "O ponto-chave: a boa pergunta parte da experiência de quem responde e deixa sempre aberta a possibilidade de recusar."
+      },
+      {
+        "type": "spectrum",
+        "title": "Exposição que o entrevistado aceita",
+        "from": "Mais protegido",
+        "to": "Mais exposto",
+        "caption": "Leia assim: oferecer opções reduz a pressão sobre o entrevistado; ele pode recusar a gravação, aparecer sem identificação ou aceitar rosto e nome.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Sem gravar"
+          },
+          {
+            "at": 0.5,
+            "t": "Sem aparecer"
+          },
+          {
+            "at": 0.9,
+            "t": "Rosto e nome"
+          }
+        ]
       }
     ],
     "comunicacao-intercultural:2": [
@@ -16664,6 +17837,27 @@
           }
         ],
         "caption": "O ponto-chave: cada camada conta uma parte da história, e o que fica fora do quadro também muda a interpretação."
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto contexto cabe no quadro",
+        "from": "Pouco contexto",
+        "to": "Muito contexto",
+        "caption": "Leia assim: o enquadramento decide o que o público entende; mostrar só a parte vazia sugere fracasso, e incluir camadas devolve atividade e escala.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Só a parte vazia"
+          },
+          {
+            "at": 0.5,
+            "t": "Vendedor e fila"
+          },
+          {
+            "at": 0.9,
+            "t": "Três camadas"
+          }
+        ]
       }
     ],
     "fotojornalismo:2": [
@@ -16875,6 +18069,27 @@
           }
         ],
         "caption": "O ponto-chave: varie só abertura, velocidade ou ISO por vez; assim cada diferença tem uma causa identificável."
+      },
+      {
+        "type": "spectrum",
+        "title": "O que fica nítido na cena",
+        "from": "Só o vendedor",
+        "to": "A rua inteira",
+        "caption": "Leia assim: quanto mais fechada a abertura (número f maior), mais da cena fica nítida; em f/2.8 só o vendedor, em f/11 a rua inteira.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "f/2.8"
+          },
+          {
+            "at": 0.5,
+            "t": "f/5.6"
+          },
+          {
+            "at": 0.9,
+            "t": "f/11"
+          }
+        ]
       }
     ],
     "linguagem-cinematografica:0": [
@@ -17023,6 +18238,27 @@
           }
         ],
         "caption": "O ponto-chave: elementos em distâncias diferentes dão profundidade, e a profundidade de campo escolhe qual camada fica nítida."
+      },
+      {
+        "type": "spectrum",
+        "title": "Profundidade de campo",
+        "from": "Rosto isolado",
+        "to": "Relação com a rua",
+        "caption": "Leia assim: abertura grande isola o rosto do entrevistado; abertura pequena mantém a rua legível e mostra a relação do personagem com ela.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Abertura grande"
+          },
+          {
+            "at": 0.5,
+            "t": "Abertura média"
+          },
+          {
+            "at": 0.9,
+            "t": "Abertura pequena"
+          }
+        ]
       }
     ],
     "fotografia-direcao:2": [
@@ -17036,6 +18272,27 @@
         ],
         "center": "Atmosfera",
         "caption": "Leia assim: a atmosfera nasce quando paleta, contraste e textura reforçam a mesma intenção da história."
+      },
+      {
+        "type": "spectrum",
+        "title": "Contraste de cor",
+        "from": "Harmonia",
+        "to": "Contraste forte",
+        "caption": "Leia assim: paletas uniformes criam atmosfera e coerência; quanto maior o contraste de cor, como o vermelho sobre o verde, mais o olhar é puxado para um ponto.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Paleta uniforme"
+          },
+          {
+            "at": 0.5,
+            "t": "Quente contra frio"
+          },
+          {
+            "at": 0.9,
+            "t": "Vermelho no verde"
+          }
+        ]
       }
     ],
     "fotografia-direcao:3": [
@@ -17086,6 +18343,30 @@
           }
         ],
         "caption": "Leia assim: o roteiro orienta o que captar, mas é reescrito com o que foi realmente gravado e verificado."
+      },
+      {
+        "type": "stairs",
+        "title": "Maturidade do roteiro",
+        "axis": "Da hipótese ao roteiro verificado",
+        "caption": "Leia assim: o roteiro começa como hipótese e só amadurece quando é confrontado com o que foi gravado e reescrito.",
+        "steps": [
+          {
+            "t": "Hipótese",
+            "d": "duas colunas"
+          },
+          {
+            "t": "Cobertura",
+            "d": "mínima"
+          },
+          {
+            "t": "Gravação",
+            "d": "o gravado"
+          },
+          {
+            "t": "Revisão",
+            "d": "reescrito"
+          }
+        ]
       }
     ],
     "roteiro-audiovisual:1": [
@@ -17161,6 +18442,27 @@
           }
         ],
         "caption": "Leia assim: sem esses elementos, a edição fica presa a poucas opções e a erros sem conserto."
+      },
+      {
+        "type": "spectrum",
+        "title": "Do plano geral ao detalhe",
+        "from": "Contexto",
+        "to": "Detalhe",
+        "caption": "Leia assim: cada plano mostra menos espaço e mais pormenor; a cobertura pede os três para a edição ter opções de corte.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Geral da banca"
+          },
+          {
+            "at": 0.5,
+            "t": "Médio do vendedor"
+          },
+          {
+            "at": 0.9,
+            "t": "Detalhe das mãos"
+          }
+        ]
       }
     ],
     "roteiro-audiovisual:3": [
@@ -17259,6 +18561,27 @@
           }
         ],
         "caption": "Leia assim: som ambiente não é ruído, é a assinatura do lugar; grave de 30 a 60 segundos limpos de cada locação."
+      },
+      {
+        "type": "spectrum",
+        "title": "Do ruído à assinatura do lugar",
+        "from": "Ruído",
+        "to": "Identidade",
+        "caption": "Leia assim: som ambiente não é ruído; limpo e sem narração, ele vira material de cena, e o anúncio do metrô é a assinatura sonora da cidade.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Ruído de fundo"
+          },
+          {
+            "at": 0.5,
+            "t": "Ambiente limpo"
+          },
+          {
+            "at": 0.9,
+            "t": "Assinatura sonora"
+          }
+        ]
       }
     ],
     "captacao-sonora:3": [
@@ -17288,6 +18611,27 @@
           }
         ],
         "caption": "O ponto-chave: a entrevista é onde todas as técnicas de som se encontram, da escolha do local ao silêncio de quem pergunta."
+      },
+      {
+        "type": "spectrum",
+        "title": "Ajuste do ganho",
+        "from": "Baixo demais",
+        "to": "Alto demais",
+        "caption": "O ponto-chave: o ganho certo deixa a voz forte sem distorcer; baixo demais ela se perde no ambiente, alto demais ela estoura e não tem conserto.",
+        "marks": [
+          {
+            "at": 0.12,
+            "t": "Voz some no ruído"
+          },
+          {
+            "at": 0.5,
+            "t": "Forte sem distorcer"
+          },
+          {
+            "at": 0.88,
+            "t": "Distorce"
+          }
+        ]
       }
     ],
     "edicao-pos:0": [
@@ -17361,6 +18705,27 @@
           }
         ],
         "caption": "Leia assim: tudo fica abaixo da voz. Se a história só funciona com música, o problema está na montagem."
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanta música o vídeo pede",
+        "from": "Sem música",
+        "to": "Música constante",
+        "caption": "Leia assim: uma edição que se sustenta pede pouca música; o silêncio, o som real e a trilha nas pontas já bastam quando a montagem funciona.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "3 s só de ambiente"
+          },
+          {
+            "at": 0.5,
+            "t": "Som real no miolo"
+          },
+          {
+            "at": 0.9,
+            "t": "Música nas pontas"
+          }
+        ]
       }
     ],
     "edicao-pos:3": [
@@ -17386,6 +18751,29 @@
           }
         ],
         "caption": "O ponto-chave: o acabamento torna o vídeo contínuo e acessível, sem filtros que alterem a realidade documental."
+      },
+      {
+        "type": "stairs",
+        "title": "Do corte ao arquivo final",
+        "axis": "Quanto o vídeo está acabado",
+        "caption": "O ponto-chave: depois da montagem, cada degrau do acabamento torna o vídeo mais contínuo, acessível e pronto para a plataforma.",
+        "steps": [
+          {
+            "t": "Montagem"
+          },
+          {
+            "t": "Cor",
+            "d": "consistente"
+          },
+          {
+            "t": "Legendas",
+            "d": "revisadas"
+          },
+          {
+            "t": "Exportação",
+            "d": "por formato"
+          }
+        ]
       }
     ],
     "documentario:0": [
@@ -17552,6 +18940,27 @@
           }
         ],
         "caption": "Leia assim: a rotina leva minutos e evita erros que se espalham rápido e são difíceis de corrigir."
+      },
+      {
+        "type": "spectrum",
+        "title": "Escopo do título",
+        "from": "Amplo demais",
+        "to": "Fiel ao dado",
+        "caption": "Leia assim: o título deve ter só o alcance do que foi comparado; “do mundo” e “da cidade” prometem mais do que cinco mercados conseguem mostrar.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Do mundo"
+          },
+          {
+            "at": 0.5,
+            "t": "Da cidade"
+          },
+          {
+            "at": 0.9,
+            "t": "Dos cinco comparados"
+          }
+        ]
       }
     ],
     "jornalismo-digital:3": [
@@ -17606,6 +19015,27 @@
           }
         ],
         "caption": "Leia assim: transformar o tema em pergunta dá direção ao episódio, e a entrega final é a promessa a cumprir."
+      },
+      {
+        "type": "spectrum",
+        "title": "Do tema à promessa específica",
+        "from": "Vaga",
+        "to": "Específica",
+        "caption": "Leia assim: o tema sozinho não promete nada; a pergunta dá direção, e a entrega concreta diz ao público o que ele terá ao final.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Comida de rua"
+          },
+          {
+            "at": 0.5,
+            "t": "Comer bem com 30 yuan?"
+          },
+          {
+            "at": 0.92,
+            "t": "Lista de cinco comidas"
+          }
+        ]
       }
     ],
     "producao-youtube:1": [
@@ -17635,6 +19065,27 @@
           }
         ],
         "caption": "O ponto-chave: a abertura mostra promessa e tom sem iscas falsas; os horários são referência, não regra fixa."
+      },
+      {
+        "type": "spectrum",
+        "title": "O que a abertura promete",
+        "from": "Promete pouco",
+        "to": "Promete claro",
+        "caption": "Leia assim: o gancho prende a atenção, a pergunta do episódio dá direção e a promessa explícita diz o que o público vai receber, sem iscas falsas.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Só o gancho"
+          },
+          {
+            "at": 0.5,
+            "t": "Pergunta do episódio"
+          },
+          {
+            "at": 0.9,
+            "t": "Promessa explícita"
+          }
+        ]
       }
     ],
     "producao-youtube:2": [
@@ -17669,6 +19120,27 @@
           }
         ],
         "caption": "Leia assim: cada capítulo responde a uma parte da pergunta, e a conclusão fica para o momento de maior expectativa."
+      },
+      {
+        "type": "spectrum",
+        "title": "Utilidade do título de capítulo",
+        "from": "Pouco útil",
+        "to": "Muito útil",
+        "caption": "Leia assim: um bom título de capítulo diz onde está e o que mostra; hora, nome do prato e uma descrição ajudam quem navega pelo episódio.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Só um número"
+          },
+          {
+            "at": 0.5,
+            "t": "Só o nome do prato"
+          },
+          {
+            "at": 0.9,
+            "t": "Hora, nome e descrição"
+          }
+        ]
       }
     ],
     "producao-youtube:3": [
@@ -17755,6 +19227,27 @@
             "b": "Frustração e desconfiança"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Concretude do gancho",
+        "from": "Vago",
+        "to": "Concreto",
+        "caption": "Leia assim: a isca promete sem mostrar nada; um dado específico já informa, e uma cena concreta seguida de pergunta cumpre a promessa.",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Você não vai acreditar"
+          },
+          {
+            "at": 0.5,
+            "t": "Mercado de 1930"
+          },
+          {
+            "at": 0.92,
+            "t": "Cestas e pergunta"
+          }
+        ]
       }
     ],
     "producao-redes:1": [
@@ -17812,6 +19305,27 @@
             "t": "Legendas sincronizadas"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quantidade de texto na tela",
+        "from": "Pouco texto",
+        "to": "Muito texto",
+        "caption": "Leia assim: em tela vertical pequena, a legibilidade cai conforme o bloco cresce; o limite sugerido é de cinco a sete palavras por bloco.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Cinco palavras"
+          },
+          {
+            "at": 0.5,
+            "t": "Sete palavras"
+          },
+          {
+            "at": 0.9,
+            "t": "Parágrafo"
+          }
+        ]
       }
     ],
     "producao-redes:3": [
@@ -17831,6 +19345,26 @@
           },
           {
             "t": "Núcleo"
+          }
+        ]
+      },
+      {
+        "type": "stairs",
+        "title": "Quanto o espectador recebe",
+        "axis": "Informação disponível no vídeo curto",
+        "caption": "Leia assim: cortar é descer da reportagem completa, mas sem abrir mão do contexto mínimo; o link na bio leva quem quer o conteúdo inteiro.",
+        "steps": [
+          {
+            "t": "Núcleo",
+            "d": "bairros"
+          },
+          {
+            "t": "Contexto",
+            "d": "data, fonte"
+          },
+          {
+            "t": "Completo",
+            "d": "link na bio"
           }
         ]
       }
@@ -17878,6 +19412,27 @@
             "col": 2
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Onde pôr o título",
+        "from": "Pouco contraste",
+        "to": "Muito contraste",
+        "caption": "Leia assim: o título perde legibilidade sobre detalhes coloridos; ganha sobre área lisa e fica mais claro em branco sobre fundo escuro, como o céu.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Sobre detalhes"
+          },
+          {
+            "at": 0.5,
+            "t": "Sobre área lisa"
+          },
+          {
+            "at": 0.9,
+            "t": "Branco sobre escuro"
+          }
+        ]
       }
     ],
     "design-editorial:2": [
@@ -17904,6 +19459,27 @@
           },
           {
             "t": "Modelo de gráfico"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Grau de padronização",
+        "from": "Caso a caso",
+        "to": "Sistema",
+        "caption": "Leia assim: quanto mais regras se repetem, de cores e fontes a grid e componentes, mais a identidade fica clara e a produção, rápida.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Decisão caso a caso"
+          },
+          {
+            "at": 0.5,
+            "t": "Cores e fontes fixas"
+          },
+          {
+            "at": 0.9,
+            "t": "Grid e componentes"
           }
         ]
       }
@@ -17967,6 +19543,27 @@
           },
           {
             "t": "Registrar e analisar"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Base da decisão editorial",
+        "from": "Palpite",
+        "to": "Dados do público",
+        "caption": "Leia assim: um perfil suposto é só ponto de partida; a necessidade mapeada e as perguntas que se repetem dão base mais firme para escolher pautas.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Perfil suposto"
+          },
+          {
+            "at": 0.5,
+            "t": "Necessidade mapeada"
+          },
+          {
+            "at": 0.9,
+            "t": "Perguntas recorrentes"
           }
         ]
       }
@@ -18095,6 +19692,30 @@
             "d": "Após alguns episódios, não no primeiro"
           }
         ]
+      },
+      {
+        "type": "stairs",
+        "title": "Quanto a série está planejada",
+        "axis": "Do vídeo avulso à série com metas",
+        "caption": "Leia assim: uma série se constrói em camadas; só com conceito, formato fixo e indicadores definidos antes da estreia ela pode ser avaliada.",
+        "steps": [
+          {
+            "t": "Avulso",
+            "d": "1 vídeo"
+          },
+          {
+            "t": "Conceito",
+            "d": "o tema"
+          },
+          {
+            "t": "Formato",
+            "d": "fixo"
+          },
+          {
+            "t": "Indicadores",
+            "d": "metas"
+          }
+        ]
       }
     ],
     "jornalismo-cultural:0": [
@@ -18108,6 +19729,27 @@
         ],
         "center": "Obra explicada",
         "caption": "Leia assim: a obra se explica no cruzamento de quando nasceu, de quem produz e consome, e das linguagens que usa ou rompe."
+      },
+      {
+        "type": "spectrum",
+        "title": "Profundidade da cobertura",
+        "from": "Só agenda",
+        "to": "Com contexto",
+        "caption": "Leia assim: jornalismo cultural vai além da agenda; descrever a obra ajuda, mas só explicar o contexto histórico, social e estético a faz ser compreendida.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Agenda do evento"
+          },
+          {
+            "at": 0.5,
+            "t": "Descreve a obra"
+          },
+          {
+            "at": 0.9,
+            "t": "Explica o contexto"
+          }
+        ]
       }
     ],
     "jornalismo-cultural:1": [
@@ -18154,6 +19796,27 @@
             "t": "Nova reportagem"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Distância da fonte à obra",
+        "from": "Perto da obra",
+        "to": "Longe da obra",
+        "caption": "Leia assim: a obra vista e o curador são fontes primárias; o artigo acadêmico é fonte especializada, que dá contexto, mas fala de mais longe.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Obra vista"
+          },
+          {
+            "at": 0.5,
+            "t": "Texto do curador"
+          },
+          {
+            "at": 0.9,
+            "t": "Artigo acadêmico"
+          }
+        ]
       }
     ],
     "jornalismo-cultural:3": [
@@ -18178,6 +19841,27 @@
             "label": "O que dá ao público",
             "a": "Entender o que aconteceu",
             "b": "Sentir o evento"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do dado à impressão",
+        "from": "Verificável",
+        "to": "Pessoal",
+        "caption": "Leia assim: a crônica de evento vai do dado atribuído à voz pessoal; quanto mais pessoal, mais a marca “para mim” precisa aparecer.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Segundo a organização"
+          },
+          {
+            "at": 0.5,
+            "t": "Cena observada"
+          },
+          {
+            "at": 0.9,
+            "t": "Para mim"
           }
         ]
       }
@@ -18338,6 +20022,27 @@
             "d": "Clima, ocasião e as escolhas da pessoa"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanta exposição pede consentimento",
+        "from": "Menos exposição",
+        "to": "Mais exposição",
+        "caption": "Leia assim: quanto mais da pessoa aparece, mais claro deve ser o consentimento; autorizar a foto da roupa não autoriza mostrar o rosto nem contar a história.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Só a roupa"
+          },
+          {
+            "at": 0.5,
+            "t": "Rosto aparece"
+          },
+          {
+            "at": 0.9,
+            "t": "Fala e história"
+          }
+        ]
       }
     ],
     "jornalismo-urbano:0": [
@@ -18366,6 +20071,27 @@
             "t": "Escala humana"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do registro à inferência",
+        "from": "Registro",
+        "to": "Inferência",
+        "caption": "Leia assim: bancos e travessias são fatos observáveis, com horário; deduzir quem vive ou trabalha ali já é inferência e pede outra fonte.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Bancos na calçada"
+          },
+          {
+            "at": 0.5,
+            "t": "Travessia concentrada"
+          },
+          {
+            "at": 0.9,
+            "t": "Quem mora ali"
+          }
+        ]
       }
     ],
     "jornalismo-urbano:1": [
@@ -18379,6 +20105,27 @@
         ],
         "center": "Reportagem",
         "caption": "Leia assim: dados mostram tempos e custos, a observação checa rampas e elevadores, e quem faz o trajeto revela o que os dados não mostram."
+      },
+      {
+        "type": "spectrum",
+        "title": "Do medido ao vivido",
+        "from": "Medido",
+        "to": "Vivido",
+        "caption": "Leia assim: o tempo do trajeto mede, a checagem do elevador observa e o relato de quem faz o percurso revela o que os números não mostram.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Tempo do trajeto"
+          },
+          {
+            "at": 0.5,
+            "t": "Elevador funcionando"
+          },
+          {
+            "at": 0.9,
+            "t": "Relato da usuária"
+          }
+        ]
       }
     ],
     "jornalismo-urbano:2": [
@@ -18405,6 +20152,27 @@
           },
           {
             "t": "Camadas históricas"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Escala do espaço urbano",
+        "from": "Escala humana",
+        "to": "Escala monumental",
+        "caption": "Leia assim: ruas estreitas e prédios baixos favorecem o pedestre; avenidas largas e torres mudam a escala, e descrevê-la ajuda a explicar o lugar.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Concessão Francesa"
+          },
+          {
+            "at": 0.5,
+            "t": "Avenidas largas"
+          },
+          {
+            "at": 0.9,
+            "t": "Torres de Lujiazui"
           }
         ]
       }
@@ -18441,6 +20209,27 @@
             "d": "Fecho do percurso e da progressão"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Proximidade ao longo do percurso",
+        "from": "Distante",
+        "to": "Próximo",
+        "caption": "Leia assim: o percurso narrado vai do ambiente observado à pessoa; cada parada aproxima o público da rua, do prédio com data e fonte até o morador.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Barulho e plátanos"
+          },
+          {
+            "at": 0.5,
+            "t": "Edifício com data"
+          },
+          {
+            "at": 0.9,
+            "t": "Conversa com morador"
+          }
+        ]
       }
     ],
     "jornalismo-viagens:0": [
@@ -18465,6 +20254,27 @@
             "label": "Como apresentar",
             "a": "Com quando e em que condições foi vivida",
             "b": "Verificado e com fonte"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do gosto ao fato",
+        "from": "Opinião",
+        "to": "Fato mensurável",
+        "caption": "Leia assim: “cansativo” é opinião; a data e a hora da visita situam a experiência; os 2,5 km sem sombra são um fato que o público pode conferir.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Achei cansativo"
+          },
+          {
+            "at": 0.5,
+            "t": "Visitei num sábado"
+          },
+          {
+            "at": 0.9,
+            "t": "2,5 km sem sombra"
           }
         ]
       }
@@ -18496,6 +20306,27 @@
             "d": "Ingresso na hora ou só por aplicativo?"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quão atual é a informação",
+        "from": "Pode estar velha",
+        "to": "Atualizada",
+        "caption": "Leia assim: informação de viagem muda rápido; o blog antigo é só pista, o site oficial é melhor e a confirmação no local é a mais segura.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Blog de três anos"
+          },
+          {
+            "at": 0.5,
+            "t": "Site oficial"
+          },
+          {
+            "at": 0.9,
+            "t": "Confirmado no local"
+          }
+        ]
       }
     ],
     "jornalismo-viagens:2": [
@@ -18522,6 +20353,27 @@
           },
           {
             "t": "Reservas e restrições"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Completude da informação de serviço",
+        "from": "Incompleta",
+        "to": "Utilizável",
+        "caption": "Leia assim: um preço solto não basta; com data e fonte ganha confiança, e num box com endereço, saída, horário e avisos vira informação de uso.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Preço solto"
+          },
+          {
+            "at": 0.5,
+            "t": "Preço, data e fonte"
+          },
+          {
+            "at": 0.9,
+            "t": "Box completo"
           }
         ]
       }
@@ -18558,6 +20410,27 @@
             "d": "“Informações verificadas entre 10 e 14/10/2026”"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Entre o serviço e a narrativa",
+        "from": "Só serviço",
+        "to": "Só narrativa",
+        "caption": "Leia assim: nos extremos o roteiro vira lista ou crônica; o roteiro contado fica no meio, com cena, preço, horário e dica de filas na mesma página.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Box com preço"
+          },
+          {
+            "at": 0.5,
+            "t": "Cena + box + dica"
+          },
+          {
+            "at": 0.9,
+            "t": "Cena do jardim"
+          }
+        ]
       }
     ],
     "jornalismo-gastronomia:0": [
@@ -18583,6 +20456,27 @@
             "t": "Aparência"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do elogio vazio ao prato descrito",
+        "from": "Genérico",
+        "to": "Sensorial",
+        "caption": "Leia assim: “delicioso” não informa; sabor, textura e temperatura concretos permitem que o público imagine o prato sem tê-lo provado.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Delicioso"
+          },
+          {
+            "at": 0.5,
+            "t": "Caldo com umami"
+          },
+          {
+            "at": 0.9,
+            "t": "Rompe e libera caldo"
+          }
+        ]
       }
     ],
     "jornalismo-gastronomia:1": [
@@ -18602,6 +20496,27 @@
             "label": "Resultado",
             "a": "Crocante",
             "b": "Macio"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do gosto à explicação",
+        "from": "Opinião",
+        "to": "Informação",
+        "caption": "Leia assim: dizer que gostou é opinião; descrever a textura informa; explicar a técnica diz por que o prato é assim e dá ao leitor algo que ele pode checar.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Gostei do prato"
+          },
+          {
+            "at": 0.5,
+            "t": "Descreve a textura"
+          },
+          {
+            "at": 0.9,
+            "t": "Explica a técnica"
           }
         ]
       }
@@ -18657,6 +20572,27 @@
           {
             "t": "Serviço e transparência",
             "d": "“Refeição paga pela reportagem; 120 yuan”"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do sensorial ao verificável",
+        "from": "Sensação",
+        "to": "Dado objetivo",
+        "caption": "Leia assim: a refeição se conta em três graus; a textura é percepção, as doze mesas são observação, e os 120 yuan podem ser conferidos pelo leitor.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Textura e sabor"
+          },
+          {
+            "at": 0.5,
+            "t": "Doze mesas, cozinha"
+          },
+          {
+            "at": 0.9,
+            "t": "120 yuan para dois"
           }
         ]
       }
@@ -18731,6 +20667,27 @@
             "t": "Repetir e tirar média"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Rigor de um teste",
+        "from": "Impressão",
+        "to": "Teste confiável",
+        "caption": "Leia assim: um resultado isolado pode ser exceção; condições iguais para todos e repetição das medições aumentam a confiança na comparação.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Resultado isolado"
+          },
+          {
+            "at": 0.5,
+            "t": "Mesmas 20 frases"
+          },
+          {
+            "at": 0.9,
+            "t": "Média de três rodadas"
+          }
+        ]
       }
     ],
     "jornalismo-tecnologia:2": [
@@ -18757,6 +20714,27 @@
           },
           {
             "t": "Quem fica de fora"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quem o impacto alcança",
+        "from": "Quem usa",
+        "to": "Quem fica de fora",
+        "caption": "Leia assim: o benefício aparece para quem usa; limites surgem no processo; os impactos mais amplos mostram quem fica de fora, como idosos sem smartphone.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Benefício concreto"
+          },
+          {
+            "at": 0.5,
+            "t": "Limite do cadastro"
+          },
+          {
+            "at": 0.9,
+            "t": "Idosos sem celular"
           }
         ]
       }
@@ -18788,6 +20766,27 @@
             "d": "Comprado ou cedido, patrocínio, tempo de uso"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Transparência do teste",
+        "from": "Opaco",
+        "to": "Transparente",
+        "caption": "Leia assim: a demonstração ganha credibilidade quando separa dado de impressão pessoal e declara como o aparelho foi obtido e por quanto tempo foi usado.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Só a impressão"
+          },
+          {
+            "at": 0.5,
+            "t": "Dado e opinião"
+          },
+          {
+            "at": 0.9,
+            "t": "Método declarado"
+          }
+        ]
       }
     ],
     "jornalismo-economico:0": [
@@ -18812,6 +20811,27 @@
             "label": "Fonte",
             "a": "Etiqueta ou tabela de preços",
             "b": "Índice oficial de inflação, com data"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Do “barato” à comparação real",
+        "from": "Impressão",
+        "to": "Comparação real",
+        "caption": "Leia assim: “café barato” é impressão; “10% em dois anos” é número nominal; só descontada a inflação a comparação diz algo sobre o poder de compra.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "“Café barato”"
+          },
+          {
+            "at": 0.5,
+            "t": "Aumento de 10%"
+          },
+          {
+            "at": 0.9,
+            "t": "Descontada a inflação"
           }
         ]
       }
@@ -18893,6 +20913,27 @@
             "d": "Busque especialistas e evidências"
           }
         ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Quanto o indicador diz sozinho",
+        "from": "Isolado",
+        "to": "Contextualizado",
+        "caption": "Leia assim: um número solto engana; saber o que ele mede, compará-lo no tempo e evitar causas fáceis o transforma em informação.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Índice isolado"
+          },
+          {
+            "at": 0.5,
+            "t": "Comparado no tempo"
+          },
+          {
+            "at": 0.9,
+            "t": "Causa não presumida"
+          }
+        ]
       }
     ],
     "jornalismo-economico:3": [
@@ -18906,6 +20947,27 @@
         ],
         "center": "Consumo contado",
         "caption": "Leia assim: números respondem à pergunta, pessoas explicam os motivos, e o método declarado mostra os limites da amostra."
+      },
+      {
+        "type": "spectrum",
+        "title": "Até onde a amostra vale",
+        "from": "Caso isolado",
+        "to": "Generalização",
+        "caption": "Leia assim: três famílias em uma semana ilustram o tema, mas não são uma média da cidade; declarar o método mostra até onde a conclusão vai.",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Uma família"
+          },
+          {
+            "at": 0.5,
+            "t": "Três famílias"
+          },
+          {
+            "at": 0.9,
+            "t": "Média da cidade"
+          }
+        ]
       }
     ]
   },

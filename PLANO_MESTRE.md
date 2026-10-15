@@ -556,7 +556,12 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - **Próximos passos:** cartões também para os termos do Atlas, modo cronometrado de fala com contagem regressiva, revisão do dia unificada (frases + termos) e conquistas por marcos de estudo.
 
 
-## Evolução v2.10 — Mais esquemas e leitura no celular
+## Evolução v2.10 — Escalas, mais esquemas e leitura no celular
+
+- **Escala como padrão de ilustração:** sempre que um conceito admite graduação, ele ganha uma escala. O fluxo mostra a ordem, a comparação mostra dois polos, e a escala mostra os graus intermediários, onde está a maior parte das decisões de redação.
+- **Ordem defensável:** as marcas de cada escala usam os exemplos da própria aula ou os termos reais do campo, e a ordem precisa ser defensável (se dois jornalistas discordariam, o eixo foi trocado).
+- **Cobertura por rigor, não por volume:** 137 de 172 aulas têm escala. As demais ficaram sem, porque o único eixo possível repetia uma figura existente ou exigiria marcas inventadas.
+
 
 - **Esquema como ferramenta de descrição:** os campos de pessoas ganharam desenhos que ensinam a olhar por partes (rosto, expressão, postura), o que reduz a tentação de descrever por impressão.
 - **Legibilidade em tela pequena:** a ampliação resolve o limite físico do celular sem refazer os desenhos; o mesmo SVG serve ao cartão e à janela ampliada.

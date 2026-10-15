@@ -34,7 +34,10 @@ for (const key of keys) {
 assert.ok(!F.render({ type: 'hub', title: '<b>', caption: 'x'.repeat(50), center: '<i>', nodes: [{ t: '&' }, { t: 'a' }, { t: 'b' }] }).includes('<b>'));
 assert.deepEqual([...F.wrap('uma frase curta para quebrar em linhas', 12)], ['uma frase', 'curta para', 'quebrar em', 'linhas']);
 assert.ok(Object.keys(types).length >= 8, 'variedade de tipos');
-console.log(`Esquemas: ${total} figuras em ${keys.length} aulas, ${Object.keys(types).length} tipos — OK`);
+// Escalas: a maioria das aulas ilustra a gradação do conceito com uma escala
+const withScale = keys.filter(k => D.figures[k].some(f => ['spectrum', 'stairs', 'bars'].includes(f.type))).length;
+assert.ok(withScale >= 130, 'aulas com escala: ' + withScale);
+console.log(`Esquemas: ${total} figuras em ${keys.length} aulas (${withScale} com escala), ${Object.keys(types).length} tipos — OK`);
 
 // ── Esquemas do Atlas: cada rótulo é um termo real do campo ──
 const A = D.atlasFigures;
