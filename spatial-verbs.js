@@ -120,5 +120,6 @@ function bind(api){
   if(next){next.focus();next.setSelectionRange?.(caret,caret)}
  });
 }
-return {render,bind,lookup,entries:()=>all.slice(),base:()=>base,groups:()=>source.length,_test:{filtered,selectFamily:i=>{state.family=i;state.query=''},search:q=>{state.query=q;state.family=-1}}};
+function focus(topic,term){const v=lookup(topic,term);if(!v)return false;state.family=v.group;state.term=v.pt;state.query='';return true}
+return {render,bind,lookup,focus,entries:()=>all.slice(),base:()=>base,groups:()=>source.length,_test:{filtered,selectFamily:i=>{state.family=i;state.query=''},search:q=>{state.query=q;state.family=-1}}};
 })();
