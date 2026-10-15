@@ -18458,7 +18458,8 @@
           {
             "t": "assunto",
             "row": 2,
-            "col": 2
+            "col": 2,
+            "free": true
           },
           {
             "t": "espaço negativo",
@@ -18708,6 +18709,250 @@
           {
             "at": 0.95,
             "t": "plúmbeo"
+          }
+        ]
+      }
+    ],
+    "3": [
+      {
+        "type": "anatomy",
+        "shape": "wheel",
+        "title": "A roda de cores",
+        "caption": "O anel externo é a cor saturada; o interno, a mesma cor em versão pastel. Cores quentes ficam de um lado e frias do outro, análogas são vizinhas, e complementares ficam frente a frente.",
+        "labels": [
+          {
+            "part": "quente",
+            "t": "quente"
+          },
+          {
+            "part": "complementar",
+            "t": "complementar"
+          },
+          {
+            "part": "análogo",
+            "t": "análogo"
+          },
+          {
+            "part": "frio",
+            "t": "frio"
+          },
+          {
+            "part": "saturado",
+            "t": "saturado"
+          },
+          {
+            "part": "pastel",
+            "t": "pastel"
+          }
+        ]
+      }
+    ],
+    "8": [
+      {
+        "type": "anatomy",
+        "shape": "street",
+        "title": "A rua em corte",
+        "caption": "Descreva a rua do prédio para a pista: a fachada ativa convida quem passa, a árvore e o mobiliário urbano qualificam o caminho, e a travessia liga um lado ao outro.",
+        "labels": [
+          {
+            "part": "fachada ativa",
+            "t": "fachada ativa"
+          },
+          {
+            "part": "mobiliário urbano",
+            "t": "mobiliário urbano"
+          },
+          {
+            "part": "arborização",
+            "t": "arborização"
+          },
+          {
+            "part": "travessia",
+            "t": "travessia"
+          }
+        ]
+      }
+    ],
+    "16": [
+      {
+        "type": "anatomy",
+        "shape": "face",
+        "title": "Marcas de um rosto",
+        "caption": "Nomeie o traço observável, sem concluir idade, saúde ou origem a partir dele. Cada termo descreve o que se vê.",
+        "labels": [
+          {
+            "part": "calvície",
+            "t": "calvície"
+          },
+          {
+            "part": "vinco",
+            "t": "vinco"
+          },
+          {
+            "part": "armação",
+            "t": "armação"
+          },
+          {
+            "part": "olheiras",
+            "t": "olheiras"
+          },
+          {
+            "part": "mecha",
+            "t": "mecha",
+            "side": "right"
+          },
+          {
+            "part": "grisalho",
+            "t": "grisalho"
+          },
+          {
+            "part": "cicatriz",
+            "t": "cicatriz"
+          },
+          {
+            "part": "barba por fazer",
+            "t": "barba por fazer"
+          }
+        ]
+      }
+    ],
+    "17": [
+      {
+        "type": "faces",
+        "title": "Seis expressões, seis termos",
+        "caption": "A expressão se descreve pelo que o rosto faz (sobrancelhas, olhos, boca), e não pelo que se imagina que a pessoa sente.",
+        "faces": [
+          {
+            "t": "cenho franzido",
+            "brow": "furrow",
+            "eyes": "open",
+            "mouth": "flat"
+          },
+          {
+            "t": "sorriso contido",
+            "brow": "flat",
+            "eyes": "open",
+            "mouth": "smirk"
+          },
+          {
+            "t": "sobrancelhas arqueadas",
+            "brow": "arch",
+            "eyes": "wide",
+            "mouth": "flat"
+          },
+          {
+            "t": "olhos semicerrados",
+            "brow": "flat",
+            "eyes": "narrow",
+            "mouth": "flat"
+          },
+          {
+            "t": "impassível",
+            "brow": "flat",
+            "eyes": "dot",
+            "mouth": "flat"
+          },
+          {
+            "t": "esgar",
+            "brow": "furrow",
+            "eyes": "narrow",
+            "mouth": "grimace"
+          }
+        ]
+      }
+    ],
+    "18": [
+      {
+        "type": "poses",
+        "title": "Posturas e passos",
+        "caption": "A postura diz onde o corpo se apoia e para onde se inclina; descreva o ângulo e o apoio, sem deduzir o estado de ânimo.",
+        "poses": [
+          {
+            "t": "ereto",
+            "pose": "ereto"
+          },
+          {
+            "t": "curvado",
+            "pose": "curvado"
+          },
+          {
+            "t": "debruçado",
+            "pose": "debruçado"
+          },
+          {
+            "t": "recostado",
+            "pose": "recostado"
+          },
+          {
+            "t": "de cócoras",
+            "pose": "de cócoras"
+          },
+          {
+            "t": "passada larga",
+            "pose": "passada larga"
+          }
+        ]
+      }
+    ],
+    "28": [
+      {
+        "type": "anatomy",
+        "shape": "room",
+        "title": "Um interior em corte",
+        "caption": "Leia o ambiente de cima para baixo: o pé-direito mede a altura, o forro e as vigas cobrem, a luz entra pela claraboia, e o piso fecha a cena.",
+        "labels": [
+          {
+            "part": "pé-direito",
+            "t": "pé-direito"
+          },
+          {
+            "part": "forro",
+            "t": "forro"
+          },
+          {
+            "part": "lambri",
+            "t": "lambri"
+          },
+          {
+            "part": "piso de taco",
+            "t": "piso de taco"
+          },
+          {
+            "part": "viga aparente",
+            "t": "viga aparente"
+          },
+          {
+            "part": "claraboia",
+            "t": "claraboia"
+          },
+          {
+            "part": "luminária pendente",
+            "t": "luminária pendente"
+          },
+          {
+            "part": "nicho",
+            "t": "nicho"
+          }
+        ]
+      }
+    ],
+    "29": [
+      {
+        "type": "density",
+        "title": "Do rarefeito ao ombro a ombro",
+        "caption": "Descreva a densidade pelo que se vê, e atribua qualquer número de público à fonte que o forneceu: a imagem mostra a escala, não a contagem.",
+        "panels": [
+          {
+            "t": "rarefeito",
+            "n": 9
+          },
+          {
+            "t": "aglomeração",
+            "n": 36
+          },
+          {
+            "t": "ombro a ombro",
+            "n": 90
           }
         ]
       }

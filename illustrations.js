@@ -162,12 +162,12 @@ const T={
   return [out,348];
  },
  // Regra dos terços: quadro 3×3 com pontos de interesse
- thirds(f){
+ thirds(f,opts){
   const x0=14,y0=14,w=W-28,h=(W-28)*9/16;let out=box(x0,y0,w,h,'fig-frame fig-tone0',6);
   [1,2].forEach(k=>{out+='<line class="fig-grid" x1="'+(x0+w*k/3)+'" y1="'+y0+'" x2="'+(x0+w*k/3)+'" y2="'+(y0+h)+'"/><line class="fig-grid" x1="'+x0+'" y1="'+(y0+h*k/3)+'" x2="'+(x0+w)+'" y2="'+(y0+h*k/3)+'"/>'});
   if(f.horizon)out+='<line class="fig-line" x1="'+x0+'" y1="'+(y0+h*2/3)+'" x2="'+(x0+w)+'" y2="'+(y0+h*2/3)+'"/>'+text(f.horizon,x0+10,y0+h*2/3+18,{size:13,anchor:'start',cls:'fig-k',max:40});
   (f.points||[]).forEach((p,i)=>{const px=x0+w*(p.col===2?2/3:1/3),py=y0+h*(p.row===2?2/3:1/3);
-   out+='<circle class="fig-dot '+tone(i+1)+'" cx="'+px+'" cy="'+py+'" r="13"/>'+text(p.t,px,py-34,{size:15,max:18,weight:700})});
+   out+='<circle class="fig-dot '+tone(i+1)+'" cx="'+px+'" cy="'+py+'" r="13"/>'+text(p.t,px,py-34,{size:15,max:18,weight:opts&&opts.active===p.t?800:700,cls:opts&&opts.active===p.t?'fig-t fig-on':'fig-t'})});
   return [out,y0+h+16];
  },
  // Barras horizontais com base zero (visualização honesta)
@@ -246,6 +246,50 @@ const SHAPES={
    R_(10,20,85,90,'fig-sh')+R_(95,20,85,90,'fig-sh')+R_(215,20,60,90,'fig-sh3')+
    '<text class="fig-n2" x="52" y="230" text-anchor="middle" font-size="22">A</text><text class="fig-n2" x="137" y="230" text-anchor="middle" font-size="22">B</text>'}
 };
+
+// ── Formas adicionais: rosto, rua, interior, roda de cores ──
+const POL=(cx,cy,r,a)=>[cx+r*Math.cos(a*Math.PI/180),cy+r*Math.sin(a*Math.PI/180)];
+const F1=n=>(Math.round(n*10)/10);
+const WEDGE=(cx,cy,r0,r1,a0,a1)=>{const A=POL(cx,cy,r1,a0),B=POL(cx,cy,r1,a1),C=POL(cx,cy,r0,a1),D=POL(cx,cy,r0,a0);return 'M'+F1(A[0])+' '+F1(A[1])+'A'+r1+' '+r1+' 0 0 1 '+F1(B[0])+' '+F1(B[1])+'L'+F1(C[0])+' '+F1(C[1])+'A'+r0+' '+r0+' 0 0 0 '+F1(D[0])+' '+F1(D[1])+'Z'};
+const ARC=(cx,cy,r,a0,a1)=>{const A=POL(cx,cy,r,a0),B=POL(cx,cy,r,a1);return 'M'+F1(A[0])+' '+F1(A[1])+'A'+r+' '+r+' 0 '+(a1-a0>180?1:0)+' 1 '+F1(B[0])+' '+F1(B[1])};
+Object.assign(SHAPES,{
+ // Rosto de frente: calvície, grisalho, mecha, vinco, olheiras, armação, barba por fazer, cicatriz
+ face:{h:300,anchors:{'calvície':[98,94],grisalho:[214,112],mecha:[134,106],vinco:[112,128],olheiras:[104,166],'armação':[94,150],'barba por fazer':[200,230],cicatriz:[192,196]},
+  svg:()=>'<ellipse class="fig-sh" cx="60" cy="158" rx="9" ry="20"/><ellipse class="fig-sh" cx="220" cy="158" rx="9" ry="20"/><ellipse class="fig-sh" cx="140" cy="152" rx="80" ry="100"/>'+
+   P('M62 135C58 70 100 42 140 42C180 42 222 70 218 135C210 112 196 100 184 96C176 88 160 84 140 90C120 84 104 88 96 96C84 100 70 112 62 135Z','fig-hair')+
+   '<path class="fig-streak" d="M70 112L84 100M210 112L196 100M76 128L88 112M204 128L192 112"/>'+
+   '<path class="fig-hairline" d="M126 90C116 108 126 124 136 114"/>'+
+   '<path class="fig-fine" d="M112 122Q140 116 168 122M114 130Q140 125 166 130"/>'+
+   '<path class="fig-fine" d="M114 192C106 208 108 222 114 232M166 192C174 208 172 222 166 232"/>'+
+   '<ellipse class="fig-dark" cx="112" cy="150" rx="6" ry="4"/><ellipse class="fig-dark" cx="168" cy="150" rx="6" ry="4"/>'+
+   '<path class="fig-shade" d="M98 162Q112 172 126 162M154 162Q168 172 182 162"/>'+
+   '<rect class="fig-glass" x="92" y="136" width="40" height="28" rx="11"/><rect class="fig-glass" x="148" y="136" width="40" height="28" rx="11"/><path class="fig-glass" d="M132 148L148 148"/>'+
+   '<path class="fig-stroke" d="M140 152L135 182L147 184"/><path class="fig-stroke" d="M118 214Q140 224 162 214"/>'+
+   [[96,214],[102,224],[110,232],[120,238],[130,242],[140,243],[150,242],[160,238],[170,232],[178,224],[184,214],[104,208],[116,226],[128,232],[152,232],[164,226],[176,208],[134,236],[146,236]].map(a=>'<circle class="fig-stub" cx="'+a[0]+'" cy="'+a[1]+'" r="1.6"/>').join('')+
+   '<path class="fig-scar" d="M184 180L198 208M181 192L190 189M187 200L196 197"/>'},
+ // Rua em corte: fachada ativa, calçada, arborização, mobiliário urbano, travessia
+ street:{h:290,anchors:{'fachada ativa':[34,196],'calçada':[96,258],'arborização':[134,150],'mobiliário urbano':[96,242],'travessia':[210,266]},
+  svg:()=>R_(0,40,76,222,'fig-sh')+R_(8,176,60,60,'fig-dark')+P('M4 168L72 168L66 182L10 182Z','fig-sh2')+[14,26,38,50].map(x=>L_(x,60,x,150,'fig-slat')).join('')+R_(14,70,16,24,'fig-dark')+R_(46,70,16,24,'fig-dark')+
+   R_(76,254,70,12,'fig-sh3')+R_(146,266,134,14,'fig-road')+L_(146,254,146,266)+
+   L_(124,254,124,196,'fig-trunk')+C_(124,172,28,'fig-leaf')+C_(110,184,16,'fig-leaf')+C_(140,184,16,'fig-leaf')+
+   R_(86,242,34,5,'fig-sh2')+L_(88,242,88,230)+L_(120,242,120,230)+R_(86,226,34,4,'fig-sh2')+L_(92,247,92,254)+L_(114,247,114,254)+
+   '<path class="fig-dash2" d="M156 273L270 273"/>'+L_(10,262,146,262)},
+ // Interior em corte: pé-direito, forro, viga aparente, claraboia, luminária pendente, nicho, lambri, piso de taco
+ room:{h:290,anchors:{'pé-direito':[10,150],forro:[34,46],lambri:[38,214],'piso de taco':[70,262],'viga aparente':[180,58],claraboia:[150,38],'luminária pendente':[142,96],nicho:[242,130]},
+  svg:()=>R_(20,40,240,212,'fig-room')+R_(20,40,240,12,'fig-sh2')+R_(60,52,18,12,'fig-beam')+R_(190,52,18,12,'fig-beam')+R_(110,34,56,10,'fig-glass2')+
+   R_(20,170,50,82,'fig-wood')+[30,40,50,60].map(x=>L_(x,170,x,252,'fig-slat2')).join('')+
+   R_(226,108,32,44,'fig-dark')+L_(226,152,258,152)+
+   L_(138,52,138,92)+P('M124 106C124 94 132 90 138 90C144 90 152 94 152 106Z','fig-sh2')+
+   R_(20,252,240,18,'fig-floor')+[0,1,2,3,4,5,6,7,8,9,10,11].map(i=>R_(24+i*20,254,16,6,'fig-parq')+R_(34+i*20,262,16,6,'fig-parq')).join('')+
+   '<path class="fig-dim" d="M8 40L8 252M3 46L8 40L13 46M3 246L8 252L13 246"/>'},
+ // Roda de cores: saturado, pastel, quente, frio, complementar, análogo
+ wheel:{h:290,anchors:{quente:[194,46],complementar:[182,66],'análogo':[200,244],frio:[86,233],saturado:[55,140],pastel:[91,168]},
+  svg:()=>Array.from({length:12},(_,i)=>{const a=i*30-90;return '<path class="fig-wedge" fill="hsl('+i*30+' 78% 52%)" d="'+WEDGE(140,140,70,100,a-15,a+15)+'"/><path class="fig-wedge" fill="hsl('+i*30+' 55% 86%)" d="'+WEDGE(140,140,42,70,a-15,a+15)+'"/>'}).join('')+
+   '<path class="fig-warm" d="'+ARC(140,140,108,-135,15)+'"/><path class="fig-cool" d="'+ARC(140,140,108,45,195)+'"/>'+
+   '<path class="fig-bracket" d="'+ARC(140,140,121,15,105)+'"/>'+
+   (()=>{const A=POL(140,140,86,-60),B=POL(140,140,86,120);return '<line class="fig-chord" x1="'+F1(A[0])+'" y1="'+F1(A[1])+'" x2="'+F1(B[0])+'" y2="'+F1(B[1])+'"/><circle class="fig-chord-dot" cx="'+F1(A[0])+'" cy="'+F1(A[1])+'" r="5"/><circle class="fig-chord-dot" cx="'+F1(B[0])+'" cy="'+F1(B[1])+'" r="5"/>'})()}
+});
+
 T.anatomy=function(f,opts){
  const sh=SHAPES[f.shape];if(!sh)return ['',100];
  const X0=100,labels=(f.labels||[]).filter(l=>sh.anchors[l.part]);
@@ -268,16 +312,90 @@ T.anatomy=function(f,opts){
  return [out,h];
 };
 
+// ── Painéis: rostos (expressões), figuras (posturas) e densidade ──
+const CELL=(i,cols,cw,ch)=>[(i%cols)*cw+cw/2,Math.floor(i/cols)*ch];
+function faceSvg(cx,cy,r,p){
+ const e=r*0.34,ey=cy-r*0.1;let o='<circle class="fig-sh" cx="'+cx+'" cy="'+cy+'" r="'+r+'"/>';
+ const brow={flat:[[-.52,-.34,-.16,-.34],[.16,-.34,.52,-.34]],furrow:[[-.52,-.44,-.14,-.28],[.14,-.28,.52,-.44]],arch:[[-.52,-.30,-.14,-.50],[.14,-.50,.52,-.30]]}[p.brow||'flat'];
+ brow.forEach(b=>{o+='<line class="fig-brow" x1="'+F1(cx+b[0]*r)+'" y1="'+F1(cy+b[1]*r)+'" x2="'+F1(cx+b[2]*r)+'" y2="'+F1(cy+b[3]*r)+'"/>'});
+ if(p.brow==='furrow')o+='<path class="fig-fine" d="M'+F1(cx-r*.06)+' '+F1(cy-r*.46)+'l0 '+F1(r*.14)+'M'+F1(cx+r*.06)+' '+F1(cy-r*.46)+'l0 '+F1(r*.14)+'"/>';
+ [-1,1].forEach(sg=>{const x=cx+sg*e;
+  if(p.eyes==='narrow')o+='<line class="fig-brow" x1="'+F1(x-r*.14)+'" y1="'+F1(ey)+'" x2="'+F1(x+r*.14)+'" y2="'+F1(ey)+'"/>';
+  else if(p.eyes==='wide')o+='<circle class="fig-sh" cx="'+F1(x)+'" cy="'+F1(ey)+'" r="'+F1(r*.14)+'"/><circle class="fig-dark" cx="'+F1(x)+'" cy="'+F1(ey)+'" r="'+F1(r*.06)+'"/>';
+  else o+='<circle class="fig-dark" cx="'+F1(x)+'" cy="'+F1(ey)+'" r="'+F1(r*(p.eyes==='dot'?.05:.08))+'"/>';});
+ const m={flat:'M'+F1(cx-r*.28)+' '+F1(cy+r*.42)+'L'+F1(cx+r*.28)+' '+F1(cy+r*.42),
+  smirk:'M'+F1(cx-r*.26)+' '+F1(cy+r*.42)+'Q'+F1(cx+r*.02)+' '+F1(cy+r*.5)+' '+F1(cx+r*.3)+' '+F1(cy+r*.32),
+  grimace:'M'+F1(cx-r*.32)+' '+F1(cy+r*.44)+'L'+F1(cx-r*.12)+' '+F1(cy+r*.34)+'L'+F1(cx+r*.08)+' '+F1(cy+r*.48)+'L'+F1(cx+r*.3)+' '+F1(cy+r*.3)}[p.mouth||'flat'];
+ return o+'<path class="fig-brow" d="'+m+'"/>';
+}
+T.faces=function(f,opts){
+ const L=f.faces||[],cols=3,cw=W/cols,ch=150,r=46;let out='';
+ L.forEach((fc,i)=>{const [cx,y]=CELL(i,cols,cw,ch),on=opts&&opts.active===fc.t;
+  out+=faceSvg(cx,y+r+10,r,fc)+text(fc.t,cx,y+r*2+34,{size:14,max:15,lh:16,weight:on?800:700,cls:on?'fig-t fig-on':'fig-t'});});
+ return [out,Math.ceil(L.length/cols)*ch+6];
+};
+// Figuras de palitos: cada postura é uma lista de segmentos (x1,y1,x2,y2) numa caixa 70×120
+const POSES={
+ ereto:[[35,26,35,72],[35,32,26,58],[35,32,44,58],[35,72,30,112],[35,72,40,112]],
+ curvado:[[40,28,30,72],[40,34,50,62],[40,34,56,60],[30,72,26,112],[30,72,38,112]],
+ 'debruçado':[[26,70,60,42],[60,42,64,40],[60,44,70,60],[26,70,22,112],[26,70,32,112]],
+ recostado:[[22,30,16,72],[22,36,32,60],[16,72,34,112],[16,72,22,112]],
+ 'de cócoras':[[36,68,34,92],[34,70,54,92],[34,92,58,94],[58,94,48,112],[34,92,20,112],[34,72,56,92]],
+ 'passada larga':[[40,28,36,72],[38,34,56,54],[38,34,20,56],[36,72,10,112],[36,72,62,112]]
+};
+const HEAD={ereto:[35,14],curvado:[46,18],'debruçado':[70,34],recostado:[24,16],'de cócoras':[38,56],'passada larga':[42,16]};
+T.poses=function(f,opts){
+ const L=f.poses||[],cols=3,cw=W/cols,ch=170;let out='';
+ L.forEach((ps,i)=>{const [cx,y]=CELL(i,cols,cw,ch),on=opts&&opts.active===ps.t,seg=POSES[ps.pose]||[],hd=HEAD[ps.pose]||[35,14];
+  out+='<g transform="translate('+F1(cx-35)+' '+(y+10)+')">'+(ps.pose==='recostado'?L_(8,0,8,120,'fig-wall'):'')+(ps.pose==='debruçado'?L_(58,56,70,56,'fig-wall')+L_(58,56,58,112,'fig-wall'):'')+
+   L_(0,114,70,114,'fig-ground')+seg.map(a=>'<line class="fig-body" x1="'+a[0]+'" y1="'+a[1]+'" x2="'+a[2]+'" y2="'+a[3]+'"/>').join('')+'<circle class="fig-headc" cx="'+hd[0]+'" cy="'+hd[1]+'" r="10"/></g>'+
+   text(ps.t,cx,y+148,{size:14,max:15,lh:16,weight:on?800:700,cls:on?'fig-t fig-on':'fig-t'});});
+ return [out,Math.ceil(L.length/cols)*ch+6];
+};
+T.density=function(f,opts){
+ const L=f.panels||[],n=L.length,cw=(W-20)/n,box=Math.min(cw-16,140);let out='';
+ L.forEach((pn,i)=>{const x=10+i*cw+(cw-box)/2,y=14,on=opts&&opts.active===pn.t,N=pn.n,g=Math.ceil(Math.sqrt(N)),sp=box/g;
+  out+=box_(x,y,box,box,'fig-frame '+tone(i))+Array.from({length:N},(_,k)=>{const cxi=k%g,cyi=Math.floor(k/g),j=((k*37)%11)/11-.5,j2=((k*53)%13)/13-.5;return '<circle class="fig-person" cx="'+F1(x+sp*(cxi+.5)+j*sp*.4)+'" cy="'+F1(y+sp*(cyi+.5)+j2*sp*.4)+'" r="'+F1(Math.min(6,sp*.3))+'"/>'}).join('')+
+   text(pn.t,x+box/2,y+box+22,{size:14,max:14,lh:16,weight:on?800:700,cls:on?'fig-t fig-on':'fig-t'});});
+ return [out,box+62];
+};
+const box_=(x,y,w,h,c)=>box(x,y,w,h,c,8);
+
 const TYPES=Object.keys(T);
 
+// Termos que o esquema nomeia (rótulos, marcas, rostos, figuras, painéis): servem ao leitor de tela e à busca
+function names(f){return [...(f.labels||[]),...(f.marks||[]),...(f.faces||[]),...(f.poses||[]),...(f.panels||[]),...(f.steps||[]),...(f.events||[]),...(f.points||[]).filter(p=>!p.free)].map(x=>x.t).filter(Boolean)}
 function svg(f,opts){
  const draw=T[f&&f.type];if(!draw)return '';
  const [body,h]=draw(f,opts);
- return '<svg class="fig-svg" viewBox="0 0 '+W+' '+Math.ceil(h)+'" role="img" aria-label="'+esc(f.title)+'" xmlns="http://www.w3.org/2000/svg">'+DEFS+body+'</svg>';
+ const nm=names(f);
+ return '<svg class="fig-svg" viewBox="0 0 '+W+' '+Math.ceil(h)+'" role="img" aria-label="'+esc(f.title+(nm.length?'. Termos no esquema: '+nm.join(', ')+'.':''))+'" xmlns="http://www.w3.org/2000/svg">'+DEFS+body+'</svg>';
 }
 function render(f,opts){
  const s=svg(f,opts);if(!s)return '';
- return '<figure class="fig"><div class="fig-head"><span class="eyebrow">ESQUEMA</span><strong>'+esc(f.title)+'</strong></div>'+s+(f.caption?'<figcaption>'+esc(f.caption)+'</figcaption>':'')+'</figure>';
+ return '<figure class="fig"><div class="fig-head"><span class="eyebrow">ESQUEMA</span><strong>'+esc(f.title)+'</strong><button type="button" class="fig-zoom-btn" data-fig-zoom aria-label="Ampliar o esquema">Ampliar</button></div>'+s+(f.caption?'<figcaption>'+esc(f.caption)+'</figcaption>':'')+'</figure>';
 }
-return {render,svg,wrap,TYPES};
+// Ampliação: o esquema abre numa janela rolável e com zoom por pinça, para ler os rótulos no celular
+let zoomEl=null;
+function closeZoom(){if(zoomEl){zoomEl.remove();zoomEl=null;document.documentElement.classList.remove('fig-locked')}}
+function openZoom(fig){
+ closeZoom();
+ zoomEl=document.createElement('div');zoomEl.className='fig-zoom';zoomEl.setAttribute('role','dialog');zoomEl.setAttribute('aria-modal','true');zoomEl.setAttribute('aria-label','Esquema ampliado');
+ const clone=fig.cloneNode(true);const b=clone.querySelector('[data-fig-zoom]');if(b)b.remove();
+ zoomEl.innerHTML='<button type="button" class="btn accent sm fig-zoom-close" data-fig-close>Fechar</button><span class="fig-zoom-hint">Deslize para os lados ou gire o aparelho para ver inteiro.</span><div class="fig-zoom-body"></div>';
+ zoomEl.querySelector('.fig-zoom-body').appendChild(clone);
+ document.body.appendChild(zoomEl);document.documentElement.classList.add('fig-locked');zoomEl.scrollLeft=Math.max(0,(zoomEl.scrollWidth-zoomEl.clientWidth)/2);zoomEl.querySelector('[data-fig-close]').focus({preventScroll:true});
+}
+if(typeof document!=='undefined'){
+ document.addEventListener('click',e=>{
+  const t=e.target;if(!t||!t.closest)return;
+  if(t.closest('[data-fig-close]')){closeZoom();return}
+  const inZoom=t.closest('.fig-zoom');
+  const btn=t.closest('[data-fig-zoom]');
+  if(btn){e.preventDefault();openZoom(btn.closest('.fig'));return}
+  const sv=t.closest('.fig-svg');if(sv&&!inZoom){openZoom(sv.closest('.fig'))}
+ });
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&zoomEl){e.preventDefault();closeZoom()}});
+}
+return {render,svg,wrap,names,TYPES,closeZoom,zoomOpen:()=>!!zoomEl};
 })();

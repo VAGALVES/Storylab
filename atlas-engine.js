@@ -136,6 +136,8 @@ function gapSentence(term,example){
 function ladderFigure(){if(!window.StoryLabFigures)return '';const spec={type:'stairs',title:'A escada da narração',axis:'mais tempo, mais relação entre as ideias',caption:'Cada degrau acrescenta uma camada: observe antes de descrever, descreva antes de comparar, e só então interprete, marcando a opinião como sua.',steps:LEVELS.map(l=>({t:l[0],d:l[1]}))};return '<details class="atlas20-ladder"><summary>Ver a escada narrativa</summary>'+window.StoryLabFigures.render(spec,{active:LEVELS[view.level][0]})+'</details>'}
 // Esquema do campo (D.atlasFigures): o termo selecionado fica em destaque no desenho
 function fieldFigure(){const f=(api.D.atlasFigures||{})[view.topic];return f&&f[0]&&window.StoryLabFigures?'<div class="atlas20-fig">'+window.StoryLabFigures.render(f[0],{active:view.word})+'</div>':''}
+// Atalho do termo para o esquema do campo, quando o termo aparece no desenho
+function figChip(term){const f=((api.D.atlasFigures||{})[view.topic]||[])[0];return f&&window.StoryLabFigures&&window.StoryLabFigures.names(f).includes(term)?button('show-fig','Ver no esquema','atlas20-seefig'):''}
 // Colocações: combinações consagradas do termo (6º item do verbete)
 function collocations(c){return Array.isArray(c&&c[5])?c[5].filter(x=>typeof x==='string'&&x.trim()):[]}
 function collocHtml(c){const list=collocations(c);return list.length?'<div class="atlas20-colloc"><div class="eyebrow">COMBINAÇÕES USUAIS</div><div class="atlas20-colloc-list">'+list.map(x=>button('insert-colloc',api.esc(x),'atlas20-chip','data-text="'+api.esc(x)+'" title="Usar na prática"')).join('')+'</div></div>':''}
@@ -210,7 +212,7 @@ function swapsPanel(){
 function dictionary(){
  const {esc,ico}=api,{term,card:c}=currentCard(),area=api.D.atlas[view.topic],st=status(view.topic,term),r=record(view.topic,term);
  let detail='<div class="panel panel-pad atlas12-detail"><div class="eyebrow">CONCEITO EM CONTEXTO · '+esc(area.title.toUpperCase())+'</div><h2>'+esc(term)+'</h2>';
- if(c)detail+='<p class="atlas12-definition">'+esc(c[1])+'</p>'+collocHtml(c)+'<div class="atlas12-example"><div class="eyebrow">DIGA ASSIM</div><p>'+esc(c[2])+'</p></div><div class="atlas12-warning"><div class="eyebrow">PRECISÃO E CUIDADO</div><p>'+esc(c[3])+'</p></div>';
+ if(c)detail+='<p class="atlas12-definition">'+esc(c[1])+'</p>'+figChip(term)+collocHtml(c)+'<div class="atlas12-example"><div class="eyebrow">DIGA ASSIM</div><p>'+esc(c[2])+'</p></div><div class="atlas12-warning"><div class="eyebrow">PRECISÃO E CUIDADO</div><p>'+esc(c[3])+'</p></div>';
  else detail+='<p class="muted">Termo do repertório essencial. O verbete aprofundado ainda está em construção. Evite empregar uma palavra cujo significado ou aplicação não tenha confirmado.</p><div class="notice info">'+esc(area.prompt)+'</div>';
  const bilingual=window.STORYLAB_URBANISM?.byField?.[view.topic]?.[term];
  if(bilingual){
@@ -340,6 +342,7 @@ function init(context){
   else if(action==='restore'){const item=st.atlasHistory[Number(b.dataset.index)];if(!item||!api.D.atlas[item.topic])return;view.topic=item.topic;view.level=item.level;view.tab='practice';view.score=item.score;view.show=false;view.feedback=null;st.atlasDrafts[key()]=item.text;api.save()}
   else if(action==='insert'){insertTerm(b.dataset.word);return}
   // Leva a combinação para o rascunho da prática do campo atual
+  else if(action==='show-fig'){const el=document.querySelector('.atlas20-fig');if(el)el.scrollIntoView({behavior:window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});return}
   else if(action==='insert-colloc'){const text=String(b.dataset.text||'').slice(0,80);if(!text)return;const d=st.atlasDrafts[key()]||'';st.atlasDrafts[key()]=(d+(d&&!/\s$/.test(d)?' ':'')+text).slice(0,3000);view.tab='practice';view.feedback=null;api.save();api.toast('“'+text+'” levada para a prática.')}
   else if(action==='timer'){window.StoryLabInteract?.openTimer?.(parseInt(LEVELS[view.level][1],10),LEVELS[view.level][0]+' · '+g().scene,LEVELS[view.level][2]);return}
   else if(action==='train-field'){view.tab='train';startQuiz('field')}

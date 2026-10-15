@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.9 — Atlas ilustrado
+## Journalism Academy · Versão 2.10 — Atlas ilustrado e ampliação de esquemas
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -51,6 +51,15 @@ Os esquemas são modelos pedagógicos simplificados: setas ilustram relações c
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v2.10 — Mais esquemas e leitura no celular
+
+- **19 campos do Atlas com esquema** (eram 12). Entraram os campos de descrever pessoas e lugares: *Cores e contraste* (roda de cores com quente, frio, complementar, análogo, saturado e pastel), *Cidade* (a rua em corte), *Pessoas: aparência* (marcas de um rosto), *Pessoas: expressão e gestos* (seis rostos, seis termos), *Pessoas: postura e movimento* (seis posturas), *Interiores* (um interior em corte) e *Multidões e público* (do rarefeito ao ombro a ombro).
+- **Três tipos novos de esquema:** rostos com expressões, figuras de postura e painéis de densidade, além de quatro desenhos de anatomia (rosto, rua, interior, roda de cores). No total são 12 anatomias.
+- **Ampliar o esquema:** cada esquema tem o botão *Ampliar* (ou um toque no desenho). A janela abre centralizada, com rótulos maiores, rolagem e zoom por pinça; fecha com *Fechar*, com a tecla Esc ou com o botão voltar do aparelho.
+- **Ver no esquema:** quando o termo aberto aparece no desenho, um atalho leva direto ao esquema, onde ele está em destaque.
+- **Leitor de tela:** o rótulo de cada esquema lista os termos que ele nomeia.
+- **Regra editorial nos esquemas de pessoas:** as legendas orientam a descrever o que se vê (sobrancelhas, olhos, boca, apoio do corpo) e a não deduzir idade, saúde, origem ou estado de ânimo.
 
 ### Novidades da v2.9 — Atlas ilustrado
 

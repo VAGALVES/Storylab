@@ -556,6 +556,12 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - **Próximos passos:** cartões também para os termos do Atlas, modo cronometrado de fala com contagem regressiva, revisão do dia unificada (frases + termos) e conquistas por marcos de estudo.
 
 
+## Evolução v2.10 — Mais esquemas e leitura no celular
+
+- **Esquema como ferramenta de descrição:** os campos de pessoas ganharam desenhos que ensinam a olhar por partes (rosto, expressão, postura), o que reduz a tentação de descrever por impressão.
+- **Legibilidade em tela pequena:** a ampliação resolve o limite físico do celular sem refazer os desenhos; o mesmo SVG serve ao cartão e à janela ampliada.
+- **Densidade sem número:** o painel de público mostra escala, não contagem, de propósito: números de público pertencem à fonte, e o esquema reforça essa regra.
+
 ## Evolução v2.9 — Atlas ilustrado
 
 - **Critério de encaixe:** imagem só entra onde ensina uma estrutura que o texto torna lenta (peças de um objeto, direções da luz, posições no espaço, escalas). Onde o vocabulário descreve sensações ou qualidades, uma figura seria ilustração decorativa e foi deixada de fora.

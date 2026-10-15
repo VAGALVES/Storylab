@@ -199,9 +199,11 @@ let fieldPage = atlas.render();
 assert.match(fieldPage, /atlas20-fig/);
 assert.match(fieldPage, /Partes de uma fachada/);
 assert.match(fieldPage, /fig-lead-on/, 'o termo selecionado fica em destaque no desenho');
+assert.match(fieldPage, /show-fig/, 'atalho Ver no esquema para termo que está no desenho');
 click('word', {topic: '7', word: 'pórtico'});
 assert.ok(!/fig-lead-on/.test(atlas.render()), 'termo sem peça no desenho não destaca nada');
-click('word', {topic: '3', word: 'saturado'});
+assert.ok(!/show-fig/.test(atlas.render()), 'sem atalho para termo que não está no desenho');
+click('word', {topic: '5', word: 'acolhedor'});
 assert.ok(!/atlas20-fig/.test(atlas.render()), 'campo sem esquema não mostra figura');
 console.log('Atlas 2.2: esquema do campo e destaque do termo selecionado OK');
 

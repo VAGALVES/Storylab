@@ -39,13 +39,15 @@ console.log(`Esquemas: ${total} figuras em ${keys.length} aulas, ${Object.keys(t
 // ── Esquemas do Atlas: cada rótulo é um termo real do campo ──
 const A = D.atlasFigures;
 assert.ok(A && Object.keys(A).length >= 12, 'esquemas do Atlas');
-const ANAT = ['facade', 'vessel', 'jacket', 'bird', 'terrain', 'perspective', 'light', 'plan'];
+const ANAT = ['facade', 'vessel', 'jacket', 'bird', 'terrain', 'perspective', 'light', 'plan', 'face', 'street', 'room', 'wheel'];
+const PANELS = ['faces', 'poses', 'density'];
 for (const [k, figs] of Object.entries(A)) {
   const field = D.atlas[Number(k)];
   assert.ok(field && figs.length === 1, 'campo ' + k);
   const f = figs[0];
   assert.ok(F.TYPES.includes(f.type), k);
-  const names = [...(f.labels || []).map(l => l.t), ...(f.marks || []).map(m => m.t)];
+  const names = F.names(f);
+  assert.ok(names.length >= (f.type === 'thirds' ? 1 : 3), 'campo ' + k + ': termos no esquema');
   for (const n of names) assert.ok(field.terms.includes(n), `${field.title}: “${n}” não é termo do campo`);
   const svg = F.svg(f, { active: names[0] });
   assert.ok(!/NaN|undefined|Infinity/.test(svg), 'campo ' + k);
@@ -57,4 +59,13 @@ for (const [k, figs] of Object.entries(A)) {
   }
 }
 assert.ok(ANAT.every(sh => Object.values(A).some(v => v[0].shape === sh)), 'todas as formas usadas');
-console.log(`Esquemas do Atlas: ${Object.keys(A).length} campos, ${ANAT.length} anatomias, rótulos = termos — OK`);
+assert.ok(PANELS.every(t => Object.values(A).some(v => v[0].type === t)), 'todos os painéis usados');
+// Leitor de tela: o rótulo do SVG lista os termos do esquema
+const fa = A['7'][0];
+assert.match(F.svg(fa), /aria-label="Partes de uma fachada\. Termos no esquema: frontão, /);
+assert.match(F.render(fa), /data-fig-zoom/, 'botão Ampliar');
+// Densidade cresce de painel para painel; expressões e posturas têm o mesmo número de termos que figuras
+const dens = A['29'][0].panels.map(p => p.n);
+assert.deepEqual(dens, [...dens].sort((a, b) => a - b));
+assert.equal(A['17'][0].faces.length, 6); assert.equal(A['18'][0].poses.length, 6);
+console.log(`Esquemas do Atlas: ${Object.keys(A).length} campos, ${ANAT.length} anatomias, ${PANELS.length} painéis, rótulos = termos — OK`);
