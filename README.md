@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.5 — Atlas Visual dos 64 Verbos
+## Journalism Academy · Versão 2.6 — Oficina de Contraste Visual
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -21,6 +21,16 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v2.6 — Oficina de Contraste Visual
+
+- **Treino real de escolha do verbo mais preciso:** duas ilustrações específicas lado a lado, uma cena descritiva, duas opções, sem revelar o gabarito antes da resposta. Ao escolher, o aluno vê a justificativa do acerto/erro, a diferença conceitual e uma frase contextual em inglês.
+- **Cobertura integral:** `spatial-contrast-data.js` contém **32 pares de contraste e 64 cenas**, uma para cada verbo do laboratório. Exemplos: *ladear × circundar*, *sobrepor × recobrir*, *bifurcar-se × convergir*, *adensar × verticalizar*, *ocultar × revelar*.
+- **Quatro entradas pedagógicas:** 8 cenas introdutórias (uma de cada área), reforço inteligente de 8 cenas priorizando erros e conceitos não treinados, percurso completo de 64 cenas e duelo de 2 cenas diretamente no verbete selecionado.
+- **Histórico local independente:** cada desafio tem ID estável; o app registra tentativas, acertos e data em `verbContrastStats`, sem alterar a revisão espaçada, a regência ou o progresso já existente.
+- **Experiência responsiva e acessível:** cartas vetoriais amplas lado a lado em telas pequenas, indicação de foco, cores de acerto/erro acompanhadas de texto, andamento da rodada e opção de movimento reduzido.
+- **Arquitetura:** `spatial-contrast.js` implementa treino e estados; `spatial-verbs.js` fornece entrada ao módulo, navegação e armazenamento existente. `test_spatial_contrast.mjs` valida cobertura, escolhas, bloqueio após resposta, modo de reforço e regressão.
+- **Compatibilidade:** mantidos os **62 campos, 712 verbetes, 64 diagramas, 128 construções de regência** e versões PWA e HTML único offline.
 
 ### Novidades da v2.5 — Atlas Visual dos 64 Verbos
 
