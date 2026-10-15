@@ -81,5 +81,5 @@ for(const fn of listeners.click||[])fn({preventDefault(){},target:{closest(sel){
 assert.ok(updates>0);
 assert.match(lab.render(),/FAMÍLIA LEXICAL · Lateralidade e vizinhança/);
 assert.ok(lab.render().includes('Diagrama do verbo contornar'));
-assert.equal(lab.regency('bifurcar-se').exercise.answer,'em');
+assert.equal(lab.regency('bifurcar-se').exercise.answer,'após');
 console.log('Atlas visual: 64/64 pictogramas únicos, descrição, comparação, responsividade, regência e progresso — OK');
