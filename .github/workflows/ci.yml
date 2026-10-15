@@ -26,6 +26,7 @@ jobs:
           node --check urbanism-atlas.js
           node --check spatial-verbs-data.js
           node --check spatial-regency-data.js
+          node --check spatial-verb-icons.js
           node --check spatial-verbs.js
           node --check atlas-engine.js
           node --check atlas-recorder.js
@@ -37,6 +38,8 @@ jobs:
         run: node test_urbanism.mjs
       - name: Testar verbos, famílias e laboratório espacial
         run: node test_spatial_verbs.mjs
+      - name: Testar diagramas semânticos por verbo
+        run: node test_spatial_icons.mjs
       - name: Testar regência e construções bilíngues
         run: node test_spatial_regency.mjs
       - name: Testar busca, cartões, sequência e Monte a frase
@@ -58,5 +61,5 @@ jobs:
       - name: Montar versão offline
         run: |
           python build_standalone.py
-          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 13; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h"
+          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 14; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h"
           git diff --exit-code -- storylab-shanghai-offline.html

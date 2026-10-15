@@ -112,6 +112,8 @@ function practiceView(){
  return html;
 }
 
+function miniDiagram(v){return window.StoryLabVerbIcons?.render?.(v.iconKey||v.pt,v.pt,{mini:true})||''}
+function specificDiagram(v){return window.StoryLabVerbIcons?.render?.(v.iconKey||v.pt,v.pt)||diagram(source[v.group].diagram,source[v.group].name)}
 function details(v){
  const g=source[v.group];
  const near=all.filter(item=>item.group===v.group&&item.pt!==v.pt).slice(0,3);
@@ -120,7 +122,7 @@ function details(v){
   v.pt==='sobrepor'?'A forma “sobreposto” é particípio irregular de sobrepor; “sobreposição” é substantivo derivado.':
   v.pt==='sobressair'?'“Saliência” e “saliente” compartilham a ideia de destaque, mas não são derivações diretas de “sobressair”.':'';
  return '<section class="vl-detail panel panel-pad" aria-label="Família lexical de '+escape(v.pt)+'">'+
-  '<div class="vl-kicker">FAMÍLIA LEXICAL · '+escape(g.name)+'</div><div class="vl-head"><div><h2>'+escape(v.pt)+'</h2><p class="vl-en" lang="en">'+escape(v.en)+'</p></div>'+diagram(g.diagram,g.name)+'</div>'+
+  '<div class="vl-kicker">FAMÍLIA LEXICAL · '+escape(g.name)+'</div><div class="vl-head"><div><h2>'+escape(v.pt)+'</h2><p class="vl-en" lang="en">'+escape(v.en)+'</p></div>'+specificDiagram(v)+'</div>'+
   '<p class="vl-definition">'+escape(v.definition)+'</p>'+
   '<div class="vl-derivation">'+familyCell('SUBSTANTIVO',v.noun,v.nounType)+familyCell('ADJETIVO / PARTICÍPIO',v.adj,v.adjType)+'</div>'+
   '<p class="vl-note"><strong>Regência básica:</strong> '+escape(v.grammar)+'</p>'+
@@ -148,7 +150,7 @@ function render(){
   '<div class="vl-tags vl-group-filter"><button type="button" class="vl-chip '+(state.family===-1?'active':'')+'" data-verb-action="family" data-family="-1" aria-pressed="'+(state.family===-1)+'">Todas</button>'+
   source.map((g,i)=>'<button type="button" class="vl-chip '+(state.family===i?'active':'')+'" data-verb-action="family" data-family="'+i+'" aria-pressed="'+(state.family===i)+'">'+escape(g.name)+'</button>').join('')+'</div></div>'+
   '<div class="vl-layout"><aside class="panel panel-pad vl-list"><div class="vl-kicker">'+list.length+' RESULTADOS</div>'+
-  (list.length?list.map(v=>'<button type="button" class="vl-item '+(v.index===current?.index?'selected':'')+'" data-verb-action="select" data-verb-id="'+v.index+'" aria-current="'+(v.index===current?.index?'true':'false')+'"><strong>'+escape(v.pt)+'</strong><span>'+escape(v.en)+'</span></button>').join(''):'<p class="muted">Nenhum resultado. Selecione “Todas” ou tente outra expressão.</p>')+
+  (list.length?list.map(v=>{const mini=miniDiagram(v);return '<button type="button" class="vl-item '+(mini?'vl-item-illustrated ':'')+(v.index===current?.index?'selected':'')+'" data-verb-action="select" data-verb-id="'+v.index+'" aria-current="'+(v.index===current?.index?'true':'false')+'">'+(mini?'<span class="vl-item-icon">'+mini+'</span>':'')+'<span class="vl-item-words"><strong>'+escape(v.pt)+'</strong><span class="vl-item-en">'+escape(v.en)+'</span></span></button>'}).join(''):'<p class="muted">Nenhum resultado. Selecione “Todas” ou tente outra expressão.</p>')+
   '</aside>'+(current?details(current):'<div class="panel panel-pad">Nenhum verbo encontrado.</div>')+'</div></div>';
 }
 function bind(api){
