@@ -9,6 +9,9 @@ index = (root / 'index.html').read_text(encoding='utf-8')
 assert 'atlas-recorder.js' in index and 'atlas-audio-ui.js' in index
 assert index.index('interact.js') < index.index('app.js'), 'interact.js deve carregar antes do app'
 assert index.index('illustrations.js') < index.index('app.js'), 'illustrations.js deve carregar antes do app'
+# Botão voltar do celular: navegação interna e confirmação antes de sair
+app = (root / 'app.js').read_text(encoding='utf-8')
+assert "addEventListener('popstate',onBack)" in app and 'Toque em voltar de novo para sair' in app
 assert '<html lang="pt-BR">' in index
 assert 'service-worker.js' in (root / 'app.js').read_text(encoding='utf-8')
 app_js = (root / 'app.js').read_text(encoding='utf-8')
