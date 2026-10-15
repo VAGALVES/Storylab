@@ -11,7 +11,8 @@ ROOT = Path(__file__).resolve().parent
 FILES = [
     'index.html', 'style.css', 'app.js', 'data.js',
     'atlas-data.js', 'urbanism-concepts.js', 'urbanism-lexicon.js',
-    'urbanism-atlas.js', 'atlas-engine.js', 'atlas-recorder.js',
+    'urbanism-atlas.js', 'spatial-verbs-data.js', 'spatial-verbs.js',
+    'atlas-engine.js', 'atlas-recorder.js',
     'atlas-audio-ui.js', 'interact.js', 'manifest.webmanifest',
     'assets/icon.svg', 'assets/skyline.svg'
 ]
