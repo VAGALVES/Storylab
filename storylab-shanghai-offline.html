@@ -255,7 +255,7 @@ const cautions={
  'densidade versus aglomeração':'Em inglês crowding não equivale necessariamente a aglomeração no sentido estatístico; density é uma taxa, crowding é condição de ocupação intensa.'
 };
 const all=[],meta={},lookup={};
-function escRe(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\<script src="urbanism-atlas.js"></script>')}
+function escRe(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
 for(let i=0;i<raw.length;i++){
  const [name,discipline,records]=raw[i],index=base+i,rows=records.trim().split('\n').map(line=>line.trim().split('|'));
  const terms=[],seen=new Set();meta[index]={};
@@ -329,7 +329,7 @@ function sayWords(t){return t.trim()?t.trim().split(/\s+/).length:0}
 function now(){return api.now?api.now():Date.now()}
 function rand(){return api.random?api.random():Math.random()}
 function shuffle(list){const a=list.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-function escRe(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\<script src="atlas-engine.js"></script>')}
+function escRe(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
 function card(topic,term){return guides()[topic]?.terms.find(x=>x[0]===term)}
 
 /* ── Domínio por termo ─────────────────────────────────────────────
@@ -919,7 +919,7 @@ function search(items,query,norm,limit=30){
   if(it.nl===q)score+=200;
   else if(it.nl.startsWith(q))score+=120;
   else if(it.nl.includes(q))score+=60;
-  tokens.forEach(t=>{if(new RegExp('(^|[^a-z0-9])'+t.replace(/[.*+?^${}()|[\]\\]/g,'\\<script src="interact.js"></script>')).test(it.nl))score+=12;else if(it.nl.includes(t))score+=6});
+  tokens.forEach(t=>{if(new RegExp('(^|[^a-z0-9])'+t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).test(it.nl))score+=12;else if(it.nl.includes(t))score+=6});
   scored.push([score,it]);
  }
  scored.sort((a,b)=>b[0]-a[0]||a[1].label.length-b[1].label.length);
