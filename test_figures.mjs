@@ -62,17 +62,16 @@ for (const [k, figs] of Object.entries(A)) {
       assert.match(F.svg(f, { active: f.labels[0].t }), /fig-lead-on/, 'destaque do termo ativo');
     }
     if (f.type === 'spectrum') {
-      // Escala legível: marcas em ordem, sem sobreposição, e legenda que explica o eixo
-      const at = f.marks.map(m => m.at);
-      assert.ok(at.every((v, i) => v >= 0.04 && v <= 0.96 && (i === 0 || v - at[i - 1] >= 0.16 - 1e-9)), `${field.title}: marcas da escala`);
-      assert.ok(f.from.length <= 18 && f.to.length <= 18, 'polos da escala');
-      assert.ok(f.caption.length >= 60, 'legenda da escala');
+      // Progressão qualitativa: ordem editorial explícita, sem percentuais inventados.
+       assert.ok(f.marks.length >= 3 && f.marks.every(m => m.t && !Object.hasOwn(m,'at')), `${field.title}: etapas qualitativas`);
+       assert.ok(f.from.length <= 35 && f.to.length <= 35, 'polos da progressão');
+       assert.ok(f.caption.length >= 60, 'legenda da progressão');
     }
   }
 }
 // Escalas: onde há gradação, o Atlas ilustra com escala
 const scaleFields = Object.entries(A).filter(([, v]) => v.some(f => f.type === 'spectrum')).map(([k]) => Number(k));
-assert.ok(scaleFields.length >= 22, 'campos com escala: ' + scaleFields.length);
+assert.ok(scaleFields.length > 0, 'progressões apenas quando o conceito justifica');
 assert.ok(ANAT.every(sh => flat.some(v => v.shape === sh)), 'todas as formas usadas');
 assert.ok(PANELS.every(t => flat.some(v => v.type === t)), 'todos os painéis usados');
 // Leitor de tela: o rótulo do SVG lista os termos do esquema
@@ -88,7 +87,6 @@ console.log(`Esquemas do Atlas: ${Object.keys(A).length} campos, ${flat.length} 
 // ── Fraseoteca: escala das famílias ──
 const pf = D.phrasesFigures;
 assert.ok(Array.isArray(pf) && pf.length === 1 && pf[0].type === 'spectrum');
-const at = pf[0].marks.map(m => m.at);
-assert.ok(at.every((v, i) => i === 0 || v - at[i - 1] >= 0.16 - 1e-9), 'marcas da escala das famílias');
+assert.ok(pf[0].marks.every(m => m.t && !Object.hasOwn(m,'at')), 'fraseoteca não usa distâncias quantitativas inventadas');
 assert.ok(!/NaN|undefined/.test(F.svg(pf[0])));
 console.log('Fraseoteca: escala das famílias OK');
