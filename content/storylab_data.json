@@ -13732,5 +13732,4584 @@
       "why": "A transição explica por que o próximo assunto vem depois do anterior.",
       "challenge": "Conecte arquitetura externa e experiência dentro de uma loja."
     }
-  ]
+  ],
+  "figures": {
+    "teorias-comunicacao:0": [
+      {
+        "type": "hub",
+        "title": "Onde o sentido se forma",
+        "caption": "Leia assim: o sentido nasce do encontro entre os cinco elementos; mude qualquer um deles e a mensagem muda, inclusive pelo ruído.",
+        "center": "Sentido",
+        "nodes": [
+          {
+            "t": "Emissor"
+          },
+          {
+            "t": "Mensagem"
+          },
+          {
+            "t": "Canal"
+          },
+          {
+            "t": "Receptor"
+          },
+          {
+            "t": "Contexto"
+          }
+        ]
+      }
+    ],
+    "teorias-comunicacao:1": [
+      {
+        "type": "frames",
+        "title": "Do mundo ao que o público vê",
+        "caption": "O ponto-chave: cada recorte estreita o quadro. A agenda escolhe o tema, o enquadramento escolhe o ângulo e o público ainda filtra.",
+        "frames": [
+          {
+            "t": "Tudo o que acontece"
+          },
+          {
+            "t": "Agenda: o que é coberto"
+          },
+          {
+            "t": "Enquadramento: o ângulo"
+          },
+          {
+            "t": "Percepção",
+            "d": "o que o público filtra e entende"
+          }
+        ]
+      }
+    ],
+    "teorias-comunicacao:2": [
+      {
+        "type": "cycle",
+        "title": "A viagem da mensagem",
+        "caption": "Leia assim: depois de publicada, a mensagem é recortada, comentada e reinterpretada por públicos diferentes, e volta transformada.",
+        "center": "Circulação",
+        "steps": [
+          {
+            "t": "Publicação"
+          },
+          {
+            "t": "Recorte de trechos"
+          },
+          {
+            "t": "Compartilhamento"
+          },
+          {
+            "t": "Comentários"
+          },
+          {
+            "t": "Reinterpretação"
+          }
+        ]
+      }
+    ],
+    "teorias-comunicacao:3": [
+      {
+        "type": "flow",
+        "title": "Como ler uma mensagem urbana",
+        "caption": "O ponto-chave: descreva antes de interpretar e termine dizendo o que confirmaria cada leitura possível.",
+        "steps": [
+          {
+            "t": "Descreva o observável",
+            "d": "Suporte, tamanho, cores, textos, idioma e local"
+          },
+          {
+            "t": "Identifique o público",
+            "d": "Idioma, referências e lugar indicam a quem se dirige"
+          },
+          {
+            "t": "Proponha leituras",
+            "d": "Duas ou mais interpretações plausíveis"
+          },
+          {
+            "t": "Diga como confirmar",
+            "d": "Entrevista, dado ou documento"
+          }
+        ]
+      }
+    ],
+    "historia-jornalismo:0": [
+      {
+        "type": "hub",
+        "title": "Notícia antes do jornal",
+        "caption": "Leia assim: muito antes dos jornais, a informação já circulava por esses suportes e já enfrentava pressa, rumor, controle e credibilidade.",
+        "center": "Notícia",
+        "nodes": [
+          {
+            "t": "Avisos oficiais"
+          },
+          {
+            "t": "Cartas comerciais"
+          },
+          {
+            "t": "Boletins da corte"
+          },
+          {
+            "t": "Folhas avulsas"
+          }
+        ]
+      }
+    ],
+    "historia-jornalismo:1": [
+      {
+        "type": "timeline",
+        "title": "Cada meio, uma linguagem",
+        "caption": "O ponto-chave: cada meio não só acelerou a notícia, mas criou recursos próprios que ainda hoje usamos nos formatos digitais.",
+        "events": [
+          {
+            "when": "Imprensa",
+            "t": "O texto que se relê",
+            "d": "Manchetes, colunas e editorias; o leitor compara e arquiva"
+          },
+          {
+            "when": "Rádio",
+            "t": "A escrita para o ouvido",
+            "d": "Ao vivo, frases curtas, repetição e imagens mentais"
+          },
+          {
+            "when": "Televisão",
+            "t": "A imagem como prova",
+            "d": "Força de evidência, mas também escolha pelo impacto visual"
+          }
+        ]
+      }
+    ],
+    "historia-jornalismo:2": [
+      {
+        "type": "compare",
+        "title": "Da página ao feed",
+        "caption": "Leia assim: no feed, a notícia não tem hora, qualquer pessoa publica e o algoritmo distribui; ganha-se alcance, mas a precisão fica em risco.",
+        "a": "Página",
+        "b": "Feed",
+        "rows": [
+          {
+            "label": "Quando sai",
+            "a": "Edição com hora para sair",
+            "b": "Publicação contínua, com atualizações marcadas"
+          },
+          {
+            "label": "Quem publica",
+            "a": "Redações profissionais",
+            "b": "Testemunhas, antes de o jornalista chegar"
+          },
+          {
+            "label": "Como chega",
+            "a": "Ordem definida pela edição",
+            "b": "Algoritmo que premia engajamento e rapidez"
+          }
+        ]
+      }
+    ],
+    "historia-jornalismo:3": [
+      {
+        "type": "flow",
+        "title": "A biografia de uma reportagem",
+        "caption": "O ponto-chave: em cada etapa há decisões que podem gerar erros; registrá-las mostra onde corrigir, inclusive depois de publicar.",
+        "steps": [
+          {
+            "t": "Ideia",
+            "d": "Surge a pauta e a primeira escolha de ângulo"
+          },
+          {
+            "t": "Apuração",
+            "d": "Quem entrevistar e que fontes ouvir"
+          },
+          {
+            "t": "Redação e edição",
+            "d": "O que entra, o que é cortado e a revisão"
+          },
+          {
+            "t": "Publicação",
+            "d": "O momento em que o público recebe a história"
+          },
+          {
+            "t": "Repercussão",
+            "d": "Comentários, correções e desdobramentos"
+          }
+        ]
+      }
+    ],
+    "fundamentos-jornalismo:0": [
+      {
+        "type": "flow",
+        "title": "O caminho até o texto",
+        "caption": "Leia assim: o texto publicado é só a última etapa visível de um trabalho de verificação que o público não vê.",
+        "steps": [
+          {
+            "t": "Informação bruta",
+            "d": "Vista, ouvida ou recebida: ainda não confirmada"
+          },
+          {
+            "t": "Apuração",
+            "d": "Fontes independentes, documentos e observação"
+          },
+          {
+            "t": "Organização",
+            "d": "Separar o confirmado do que ainda falta"
+          },
+          {
+            "t": "Publicação responsável",
+            "d": "O que se sabe, como se sabe e o que não se sabe"
+          }
+        ]
+      }
+    ],
+    "fundamentos-jornalismo:1": [
+      {
+        "type": "compare",
+        "title": "Notícia ou reportagem?",
+        "caption": "O ponto-chave: escolher o gênero é a primeira decisão narrativa, porque cada formato responde a uma pergunta diferente.",
+        "a": "Notícia",
+        "b": "Reportagem",
+        "rows": [
+          {
+            "label": "Objetivo",
+            "a": "Informar um fato recente de forma direta",
+            "b": "Explicar causas, contextos e consequências"
+          },
+          {
+            "label": "Recursos",
+            "a": "Texto direto e enxuto",
+            "b": "Mais fontes, cenas e aprofundamento"
+          }
+        ]
+      }
+    ],
+    "fundamentos-jornalismo:2": [
+      {
+        "type": "hub",
+        "title": "Os critérios da qualidade",
+        "caption": "Leia assim: estilo bonito não basta. Um conteúdo é bom quando atende a esses seis critérios, que você pode conferir antes do público.",
+        "center": "Qualidade",
+        "nodes": [
+          {
+            "t": "Precisão"
+          },
+          {
+            "t": "Clareza"
+          },
+          {
+            "t": "Relevância"
+          },
+          {
+            "t": "Contexto"
+          },
+          {
+            "t": "Equilíbrio"
+          },
+          {
+            "t": "Transparência"
+          }
+        ]
+      }
+    ],
+    "fundamentos-jornalismo:3": [
+      {
+        "type": "flow",
+        "title": "Do fato observado à pauta",
+        "caption": "O ponto-chave: a pauta transforma curiosidade em plano de trabalho; sem ela, a gravação vira acúmulo de imagens soltas.",
+        "steps": [
+          {
+            "t": "Fato observado",
+            "d": "Algo que chama a atenção"
+          },
+          {
+            "t": "Pergunta central",
+            "d": "Específica e respondível"
+          },
+          {
+            "t": "Ângulo e público",
+            "d": "O caminho da resposta e o nível de explicação"
+          },
+          {
+            "t": "Fontes, cenas e riscos",
+            "d": "Quem responde, o que prova e o que pode dar errado"
+          }
+        ]
+      }
+    ],
+    "teoria-noticia:0": [
+      {
+        "type": "venn",
+        "title": "Quando o fato vira pauta",
+        "caption": "Leia assim: quanto mais respostas positivas a “é novo?”, “afeta pessoas?” e “desperta curiosidade legítima?”, mais forte a pauta.",
+        "sets": [
+          "Novidade",
+          "Impacto",
+          "Interesse legítimo"
+        ],
+        "center": "Pauta forte"
+      }
+    ],
+    "teoria-noticia:1": [
+      {
+        "type": "hub",
+        "title": "Valores-notícia",
+        "caption": "Leia assim: esses critérios pesam na decisão editorial, muitas vezes sem que o jornalista perceba; conhecê-los permite usá-los com responsabilidade.",
+        "center": "Valores-notícia",
+        "nodes": [
+          {
+            "t": "Proximidade"
+          },
+          {
+            "t": "Impacto"
+          },
+          {
+            "t": "Novidade"
+          },
+          {
+            "t": "Conflito"
+          },
+          {
+            "t": "Raridade"
+          },
+          {
+            "t": "Interesse humano"
+          }
+        ]
+      },
+      {
+        "type": "matrix",
+        "title": "Atenção versus necessidade",
+        "caption": "O ponto-chave: não deixe o mais chamativo dominar. Pergunte o que o público precisa saber, e não só o que vai chamar a atenção.",
+        "x": [
+          "Chama pouca atenção",
+          "Chama muita atenção"
+        ],
+        "y": [
+          "Público precisa pouco",
+          "Público precisa muito"
+        ],
+        "cells": [
+          {
+            "t": "Pauta necessária",
+            "d": "Relevante: exige esforço para atrair"
+          },
+          {
+            "t": "Pauta forte",
+            "d": "Relevante e atraente: prioridade"
+          },
+          {
+            "t": "Descarte",
+            "d": "Nem útil nem atraente"
+          },
+          {
+            "t": "Isca de atenção",
+            "d": "Chamativa, mas distorce se dominar"
+          }
+        ]
+      }
+    ],
+    "teoria-noticia:2": [
+      {
+        "type": "compare",
+        "title": "Recorte assumido ou escondido",
+        "caption": "Leia assim: selecionar é inevitável, mas esconder os critérios engana; o que muda é se o público sabe como o recorte foi feito.",
+        "a": "Recorte assumido",
+        "b": "Recorte escondido",
+        "rows": [
+          {
+            "label": "O público sabe",
+            "a": "O que foi observado, quando e com que limites",
+            "b": "Apenas o resultado final da edição"
+          },
+          {
+            "label": "Corte e ordem",
+            "a": "Mantém o que mudaria a conclusão",
+            "b": "Destaca o conveniente e omite o resto"
+          },
+          {
+            "label": "Efeito",
+            "a": "Honesto: a seleção fica visível",
+            "b": "Engana, mesmo sem dizer nada falso"
+          }
+        ]
+      }
+    ],
+    "teoria-noticia:3": [
+      {
+        "type": "flow",
+        "title": "Uma reunião de pauta",
+        "caption": "O ponto-chave: a pauta precisa caber em 30 segundos, resistir às objeções do editor e ter a decisão registrada para revisão.",
+        "steps": [
+          {
+            "t": "Apresente em 30 segundos",
+            "d": "Fato, pergunta central, por que agora e para quem"
+          },
+          {
+            "t": "Antecipe objeções",
+            "d": "Tem fonte? É novidade? Há risco legal ou ético?"
+          },
+          {
+            "t": "Compare as pautas",
+            "d": "Relevância, viabilidade e risco"
+          },
+          {
+            "t": "Decida e registre",
+            "d": "A decisão e os motivos, para revisar depois"
+          }
+        ]
+      }
+    ],
+    "etica-jornalistica:0": [
+      {
+        "type": "spectrum",
+        "title": "Do verificável ao pessoal",
+        "caption": "Leia assim: quanto mais longe do fato observado, maior a obrigação de sinalizar; inferência é hipótese e opinião precisa ser assumida.",
+        "from": "Verificável",
+        "to": "Julgamento pessoal",
+        "marks": [
+          {
+            "at": 0.05,
+            "t": "Fato"
+          },
+          {
+            "at": 0.5,
+            "t": "Inferência"
+          },
+          {
+            "at": 0.95,
+            "t": "Opinião"
+          }
+        ]
+      }
+    ],
+    "etica-jornalistica:1": [
+      {
+        "type": "compare",
+        "title": "O que é consentimento real",
+        "caption": "O ponto-chave: só vale o consentimento de quem entendeu e podia recusar; pessoas vulneráveis exigem cuidado redobrado.",
+        "a": "Consentimento real",
+        "b": "Só aparente",
+        "rows": [
+          {
+            "label": "Informação",
+            "a": "Sabe quem grava, onde será publicado e para quê",
+            "b": "Não entendeu o que aceitou"
+          },
+          {
+            "label": "Liberdade",
+            "a": "Pode recusar e pedir para sair depois",
+            "b": "Aceitou sob pressão"
+          }
+        ]
+      }
+    ],
+    "etica-jornalistica:2": [
+      {
+        "type": "flow",
+        "title": "Diante de um conflito de interesse",
+        "caption": "Leia assim: todo conflito deve ser reconhecido e declarado; quando a vantagem impede uma avaliação honesta, declarar não basta.",
+        "steps": [
+          {
+            "t": "Reconheça a relação",
+            "d": "Brinde, patrocínio, amizade ou interesse comercial"
+          },
+          {
+            "t": "Declare ao público",
+            "d": "Aviso claro e visível, não escondido"
+          },
+          {
+            "t": "Avalie o peso",
+            "d": "A vantagem impede uma avaliação honesta?"
+          },
+          {
+            "t": "Recuse se necessário",
+            "d": "Abra mão do benefício ou não publique"
+          }
+        ]
+      }
+    ],
+    "etica-jornalistica:3": [
+      {
+        "type": "hub",
+        "title": "Checklist antes de publicar",
+        "caption": "O ponto-chave: o checklist cobre fatos, pessoas e transparência; não substitui o julgamento, mas evita esquecimentos sob pressa.",
+        "center": "Antes de publicar",
+        "nodes": [
+          {
+            "t": "Fatos com fonte"
+          },
+          {
+            "t": "Consentimento"
+          },
+          {
+            "t": "Danos possíveis"
+          },
+          {
+            "t": "Opiniões marcadas"
+          },
+          {
+            "t": "Patrocínios declarados"
+          },
+          {
+            "t": "Correção possível"
+          }
+        ]
+      }
+    ],
+    "legislacao-direitos:0": [
+      {
+        "type": "matrix",
+        "title": "Destaque e sensibilidade",
+        "caption": "Leia assim: o risco cresce com o destaque e com a sensibilidade da situação. Conteúdo orientativo: verifique sempre as regras locais.",
+        "x": [
+          "Incidental na multidão",
+          "Em destaque"
+        ],
+        "y": [
+          "Situação comum",
+          "Situação sensível"
+        ],
+        "cells": [
+          {
+            "t": "Cautela ética",
+            "d": "Mesmo ao fundo, evite expor saúde, fé ou dor"
+          },
+          {
+            "t": "Maior risco",
+            "d": "Exige autorização e forte justificativa"
+          },
+          {
+            "t": "Menor risco",
+            "d": "Pessoa ao fundo, em situação comum"
+          },
+          {
+            "t": "Autorização provável",
+            "d": "Sobretudo em uso comercial"
+          }
+        ]
+      }
+    ],
+    "legislacao-direitos:1": [
+      {
+        "type": "compare",
+        "title": "Público ou aberto ao público",
+        "caption": "O ponto-chave: estar aberto ao público não torna o lugar público; numa propriedade privada, o dono pode proibir ou restringir gravações.",
+        "a": "Espaço público",
+        "b": "Privado aberto",
+        "rows": [
+          {
+            "label": "Exemplos",
+            "a": "Rua e praça",
+            "b": "Shopping, loja, museu, estação, templo"
+          },
+          {
+            "label": "Quem define regras",
+            "a": "A lei local",
+            "b": "O proprietário, além da lei"
+          },
+          {
+            "label": "O que fazer",
+            "a": "Conferir as regras locais vigentes",
+            "b": "Procurar regras oficiais e pedir autorização registrada"
+          }
+        ]
+      }
+    ],
+    "legislacao-direitos:2": [
+      {
+        "type": "flow",
+        "title": "Antes de usar obra alheia",
+        "caption": "Leia assim: a regra é a autoria; o uso depende de permissão, licença ou exceção legal, sempre com crédito e prova guardada.",
+        "steps": [
+          {
+            "t": "Toda obra tem dono",
+            "d": "Estar na internet não é estar liberado"
+          },
+          {
+            "t": "Busque permissão",
+            "d": "Autorização, licença ou exceção legal"
+          },
+          {
+            "t": "Leia as condições",
+            "d": "Uso comercial, modificação, atribuição"
+          },
+          {
+            "t": "Credite e documente",
+            "d": "Guarde a prova da licença ou autorização"
+          }
+        ]
+      }
+    ],
+    "legislacao-direitos:3": [
+      {
+        "type": "hub",
+        "title": "Roteiro de verificação legal",
+        "caption": "O ponto-chave: responder a essas perguntas antes de gravar organiza os riscos, sem substituir orientação jurídica quando necessária.",
+        "center": "Antes de gravar",
+        "nodes": [
+          {
+            "t": "Local e autorização"
+          },
+          {
+            "t": "Equipamentos permitidos"
+          },
+          {
+            "t": "Pessoas e consentimento"
+          },
+          {
+            "t": "Menores e vulneráveis"
+          },
+          {
+            "t": "Materiais de terceiros"
+          },
+          {
+            "t": "Uso e temas sensíveis"
+          }
+        ]
+      }
+    ],
+    "jornalismo-internacional:0": [
+      {
+        "type": "layers",
+        "title": "O contexto em volta do fato",
+        "caption": "Leia assim: o público estrangeiro vê só o centro; o jornalista precisa oferecer as camadas de fora, sem simplificar demais.",
+        "layers": [
+          {
+            "t": "Raízes históricas"
+          },
+          {
+            "t": "Política e sociedade"
+          },
+          {
+            "t": "Cotidiano local"
+          },
+          {
+            "t": "Fato atual"
+          }
+        ]
+      }
+    ],
+    "jornalismo-internacional:1": [
+      {
+        "type": "spectrum",
+        "title": "Literal ou de sentido",
+        "caption": "O ponto-chave: nos extremos, a tradução deforma ou apaga nuances; busque o equilíbrio e indique ao público quando há ambiguidade.",
+        "from": "Palavra a palavra",
+        "to": "Só o sentido",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Deforma"
+          },
+          {
+            "at": 0.5,
+            "t": "Equilíbrio"
+          },
+          {
+            "at": 0.92,
+            "t": "Apaga nuance"
+          }
+        ]
+      }
+    ],
+    "jornalismo-internacional:2": [
+      {
+        "type": "compare",
+        "title": "Estereótipo ou pessoas",
+        "caption": "Leia assim: o estereótipo apaga diferenças e busca o exótico; ver pessoas é mostrar diversidade, cotidiano e vozes locais.",
+        "a": "Estereótipo",
+        "b": "Pessoas reais",
+        "rows": [
+          {
+            "label": "Generalização",
+            "a": "“Todos os chineses...”",
+            "b": "Diversidade regional, geracional e social"
+          },
+          {
+            "label": "O que mostra",
+            "a": "Só o que parece exótico",
+            "b": "O cotidiano comum e as semelhanças"
+          },
+          {
+            "label": "Quem fala",
+            "a": "O visitante fala pelos outros",
+            "b": "Pessoas locais sobre a própria experiência"
+          }
+        ]
+      }
+    ],
+    "jornalismo-internacional:3": [
+      {
+        "type": "hub",
+        "title": "Mapa de perspectivas",
+        "caption": "O ponto-chave: cada grupo vê aspectos diferentes do tema; reunir vários impede que uma única voz represente um país inteiro.",
+        "center": "Tema",
+        "nodes": [
+          {
+            "t": "Quem é afetado"
+          },
+          {
+            "t": "Quem estuda"
+          },
+          {
+            "t": "Quem decide"
+          },
+          {
+            "t": "Quem observa de fora"
+          },
+          {
+            "t": "Dados verificados"
+          }
+        ]
+      },
+      {
+        "type": "flow",
+        "title": "A progressão da narrativa",
+        "caption": "Leia assim: organize as vozes em progressão e equilibre sem igualar, pois evidências verificadas pesam mais que opiniões isoladas.",
+        "steps": [
+          {
+            "t": "Situação",
+            "d": "O que acontece e onde"
+          },
+          {
+            "t": "Vozes",
+            "d": "Moradores, especialistas e visitantes"
+          },
+          {
+            "t": "Contraste",
+            "d": "Onde as perspectivas divergem"
+          },
+          {
+            "t": "Dados",
+            "d": "Evidências verificadas, com mais peso"
+          },
+          {
+            "t": "Síntese",
+            "d": "Conclusão que respeita as diferenças"
+          }
+        ]
+      }
+    ],
+    "tecnicas-reportagem:0": [
+      {
+        "type": "flow",
+        "title": "Da curiosidade à hipótese",
+        "caption": "O ponto-chave: a hipótese é uma afirmação provisória e testável; descobrir que ela está errada também é resultado.",
+        "steps": [
+          {
+            "t": "Curiosidade",
+            "d": "Algo observado que chama a atenção"
+          },
+          {
+            "t": "Afirmação testável",
+            "d": "Específica, limitada e verificável"
+          },
+          {
+            "t": "Escopo delimitado",
+            "d": "Lugar, período e grupo definidos"
+          },
+          {
+            "t": "Confirmar ou refutar",
+            "d": "Apurar sem buscar só o que já se pensa"
+          }
+        ]
+      }
+    ],
+    "tecnicas-reportagem:1": [
+      {
+        "type": "timeline",
+        "title": "A ordem do plano de apuração",
+        "caption": "Leia assim: planeje em casa e, em campo, observe e leia documentos antes das entrevistas, para chegar com perguntas melhores.",
+        "events": [
+          {
+            "when": "Em casa",
+            "t": "Desdobre a hipótese",
+            "d": "Perguntas menores, cada uma com ao menos uma fonte"
+          },
+          {
+            "when": "Em casa",
+            "t": "Mapeie fontes",
+            "d": "Humanas, documentais e observação direta"
+          },
+          {
+            "when": "Primeiro",
+            "t": "Observação e documentos",
+            "d": "Registros, anúncios e dados públicos"
+          },
+          {
+            "when": "Depois",
+            "t": "Entrevistas",
+            "d": "Com perguntas melhores, informadas pelo que já se viu"
+          }
+        ]
+      }
+    ],
+    "tecnicas-reportagem:2": [
+      {
+        "type": "pyramid",
+        "title": "A força da evidência",
+        "caption": "O ponto-chave: só o topo, com duas fontes independentes ou um documento, sustenta uma afirmação; a base ainda precisa de apuração.",
+        "layers": [
+          {
+            "t": "Confirmado"
+          },
+          {
+            "t": "Provável",
+            "d": "Uma fonte confiável"
+          },
+          {
+            "t": "Não confirmado",
+            "d": "Boato ou fonte única fraca"
+          }
+        ]
+      }
+    ],
+    "tecnicas-reportagem:3": [
+      {
+        "type": "flow",
+        "title": "A estrutura da reportagem",
+        "caption": "Leia assim: cada bloco responde a uma parte da pergunta central; a estrutura serve à pergunta, não ao material mais bonito.",
+        "steps": [
+          {
+            "t": "Abertura com cena forte",
+            "d": "Uma situação que apresenta a pergunta"
+          },
+          {
+            "t": "Contexto",
+            "d": "O que o público precisa saber para entender"
+          },
+          {
+            "t": "Fontes e contraste",
+            "d": "Desenvolvimento com vozes que divergem"
+          },
+          {
+            "t": "Dados",
+            "d": "Evidências que respondem à pergunta"
+          },
+          {
+            "t": "Conclusão e limites",
+            "d": "O que foi respondido e o que segue aberto"
+          }
+        ]
+      }
+    ],
+    "redacao-jornalistica:0": [
+      {
+        "type": "hub",
+        "title": "O essencial primeiro",
+        "caption": "Leia assim: comece pelas respostas que já tem, sem forçar as que ainda são desconhecidas, em frases diretas e fáceis de respirar.",
+        "center": "O essencial",
+        "nodes": [
+          {
+            "t": "Quem"
+          },
+          {
+            "t": "O quê"
+          },
+          {
+            "t": "Onde"
+          },
+          {
+            "t": "Quando"
+          },
+          {
+            "t": "Por quê"
+          },
+          {
+            "t": "Como"
+          }
+        ]
+      }
+    ],
+    "redacao-jornalistica:1": [
+      {
+        "type": "pyramid",
+        "inverted": true,
+        "title": "Pirâmide invertida",
+        "caption": "O ponto-chave: o essencial vem primeiro e a importância diminui; o leitor pode parar a qualquer momento e terá o principal.",
+        "layers": [
+          {
+            "t": "Lead",
+            "d": "O essencial do fato"
+          },
+          {
+            "t": "Detalhes principais",
+            "d": "Em ordem decrescente de importância"
+          },
+          {
+            "t": "Detalhes secundários",
+            "d": "Podem ser cortados sem perda"
+          }
+        ]
+      },
+      {
+        "type": "flow",
+        "title": "Estrutura em diamante",
+        "caption": "Leia assim: o diamante parte de um caso específico, amplia para o contexto geral e volta ao caso, alternativa à pirâmide.",
+        "steps": [
+          {
+            "t": "Caso específico",
+            "d": "Uma pessoa ou situação concreta"
+          },
+          {
+            "t": "Contexto geral",
+            "d": "O fenômeno maior que o caso revela"
+          },
+          {
+            "t": "Volta ao caso",
+            "d": "O desfecho, agora com o contexto"
+          }
+        ]
+      }
+    ],
+    "redacao-jornalistica:2": [
+      {
+        "type": "compare",
+        "title": "Texto lido e texto ouvido",
+        "caption": "O ponto-chave: quem ouve não pode voltar a página; o que no papel seria redundância, no áudio é orientação.",
+        "a": "Para ler",
+        "b": "Para ouvir",
+        "rows": [
+          {
+            "label": "Frases",
+            "a": "Admite orações intercaladas",
+            "b": "Uma ideia por frase, numa respiração"
+          },
+          {
+            "label": "Números",
+            "a": "Pode trazer o valor exato",
+            "b": "Arredondados, com referência de escala"
+          },
+          {
+            "label": "Repetição",
+            "a": "Soa redundante",
+            "b": "Retomar o tema orienta quem se distraiu"
+          }
+        ]
+      }
+    ],
+    "redacao-jornalistica:3": [
+      {
+        "type": "compare",
+        "title": "O que cortar e o que manter",
+        "caption": "Leia assim: corte o vazio e troque adjetivos por fatos, mas nunca remova fontes, contexto ou ressalvas que mudam o sentido.",
+        "a": "Corte",
+        "b": "Mantenha",
+        "rows": [
+          {
+            "label": "Expressões",
+            "a": "“É importante destacar que”, “basicamente”",
+            "b": "A informação, dita direto"
+          },
+          {
+            "label": "Adjetivos",
+            "a": "Incrível, lindo, enorme",
+            "b": "Fatos e detalhes concretos"
+          },
+          {
+            "label": "Com critério",
+            "a": "Repetições e excessos",
+            "b": "Fontes, contexto e ressalvas"
+          }
+        ]
+      }
+    ],
+    "tecnicas-entrevista:0": [
+      {
+        "type": "cycle",
+        "title": "O ciclo da entrevista",
+        "caption": "O ponto-chave: a descoberta não está no roteiro, mas na escuta, que gera a pergunta seguinte e faz a entrevista avançar.",
+        "center": "Escuta",
+        "steps": [
+          {
+            "t": "Prepare"
+          },
+          {
+            "t": "Pergunte"
+          },
+          {
+            "t": "Escute"
+          },
+          {
+            "t": "Aprofunde"
+          },
+          {
+            "t": "Confirme"
+          }
+        ]
+      }
+    ],
+    "tecnicas-entrevista:1": [
+      {
+        "type": "compare",
+        "title": "Pergunta aberta ou fechada",
+        "caption": "Leia assim: abertas fazem narrar, fechadas confirmam dados. Em ambas, evite perguntas indutoras e perguntas duplas.",
+        "a": "Aberta",
+        "b": "Fechada",
+        "rows": [
+          {
+            "label": "Começa com",
+            "a": "Como, por que, o que, conte",
+            "b": "Pede sim, não ou um dado específico"
+          },
+          {
+            "label": "Gera",
+            "a": "Relatos, explicações e exemplos",
+            "b": "Confirmação de fatos, datas e números"
+          },
+          {
+            "label": "Use para",
+            "a": "Encontrar a história",
+            "b": "Checar o que precisa ser exato"
+          }
+        ]
+      }
+    ],
+    "tecnicas-entrevista:2": [
+      {
+        "type": "flow",
+        "title": "Como nasce o follow-up",
+        "caption": "O ponto-chave: a melhor pergunta vem da resposta anterior, não do roteiro; respostas genéricas viram conteúdo concreto.",
+        "steps": [
+          {
+            "t": "Escute de verdade",
+            "d": "Palavras-chave, hesitações e emoções"
+          },
+          {
+            "t": "Perceba a pista",
+            "d": "Detalhe, contradição ou resposta genérica"
+          },
+          {
+            "t": "Peça o concreto",
+            "d": "Quando, onde, como e quem"
+          },
+          {
+            "t": "Espere em silêncio",
+            "d": "A pessoa completa o pensamento"
+          }
+        ]
+      }
+    ],
+    "tecnicas-entrevista:3": [
+      {
+        "type": "timeline",
+        "title": "Entrevista na rua",
+        "caption": "Leia assim: com ruído e pressa, cada momento tem uma prioridade: respeito na abordagem, técnica na captação e foco nas perguntas.",
+        "events": [
+          {
+            "when": "Chegada",
+            "t": "Apresente-se",
+            "d": "Explique o propósito, peça permissão e aceite recusas"
+          },
+          {
+            "when": "Antes",
+            "t": "Posicione e teste",
+            "d": "Menos ruído, boa luz, microfone perto, teste de áudio"
+          },
+          {
+            "when": "Gravando",
+            "t": "Duas ou três perguntas",
+            "d": "As mais importantes, com follow-ups breves"
+          }
+        ]
+      }
+    ],
+    "pesquisa-verificacao:0": [
+      {
+        "type": "flow",
+        "title": "A trilha de uma afirmação",
+        "caption": "O ponto-chave: cada afirmação deve percorrer a trilha inteira; o que não pôde ser verificado é dito, nunca apresentado como fato.",
+        "steps": [
+          {
+            "t": "Afirmação",
+            "d": "Separada do comentário pessoal"
+          },
+          {
+            "t": "Origem",
+            "d": "De onde veio a informação"
+          },
+          {
+            "t": "Contexto",
+            "d": "Quando, onde e em que situação"
+          },
+          {
+            "t": "Verificação",
+            "d": "Fontes realmente independentes"
+          },
+          {
+            "t": "Grau de certeza",
+            "d": "Confirmado, provável ou não verificado"
+          }
+        ]
+      }
+    ],
+    "pesquisa-verificacao:1": [
+      {
+        "type": "venn",
+        "title": "Confirmação cruzada",
+        "caption": "Leia assim: a confirmação mais forte está onde documento, testemunho e observação direta, de origens independentes, coincidem.",
+        "sets": [
+          "Documento",
+          "Testemunho",
+          "Observação direta"
+        ],
+        "center": "Prova forte"
+      }
+    ],
+    "pesquisa-verificacao:2": [
+      {
+        "type": "hub",
+        "title": "Verificar uma imagem",
+        "caption": "O ponto-chave: uma imagem real fora de contexto engana; confirme origem, data e local com busca reversa e pistas visuais.",
+        "center": "Imagem alheia",
+        "nodes": [
+          {
+            "t": "Busca reversa"
+          },
+          {
+            "t": "Placas e idioma"
+          },
+          {
+            "t": "Clima e vegetação"
+          },
+          {
+            "t": "Sombras"
+          },
+          {
+            "t": "Veículos e arquitetura"
+          },
+          {
+            "t": "Mapas de referência"
+          }
+        ]
+      },
+      {
+        "type": "bars",
+        "title": "Número sem denominador",
+        "caption": "Leia assim: o bairro A tem mais casos absolutos, mas, dividindo pela população, B tem a maior taxa. Pergunte sempre: em relação a quê?",
+        "unit": "/mil",
+        "note": "Exemplo hipotético: A tem 120 casos em 10 mil habitantes; B, 60 em 2 mil; C, 40 em 5 mil.",
+        "items": [
+          {
+            "t": "Bairro A",
+            "v": 12
+          },
+          {
+            "t": "Bairro B",
+            "v": 30
+          },
+          {
+            "t": "Bairro C",
+            "v": 8
+          }
+        ]
+      }
+    ],
+    "pesquisa-verificacao:3": [
+      {
+        "type": "hub",
+        "title": "O registro de cada afirmação",
+        "caption": "O ponto-chave: o dossiê deve permitir que outra pessoa refaça o caminho da apuração, afirmação por afirmação.",
+        "center": "Afirmação",
+        "nodes": [
+          {
+            "t": "Fonte exata"
+          },
+          {
+            "t": "Cargo ou documento"
+          },
+          {
+            "t": "Link e data de acesso"
+          },
+          {
+            "t": "Captura salva"
+          },
+          {
+            "t": "Grau de confiança"
+          }
+        ]
+      }
+    ],
+    "jornalismo-dados:0": [
+      {
+        "type": "flow",
+        "title": "Da curiosidade à pergunta mensurável",
+        "caption": "Leia assim: o gráfico só é tão bom quanto a pergunta; antes de coletar, defina o que medir, com o que comparar e de onde vem o dado.",
+        "steps": [
+          {
+            "t": "Curiosidade vaga",
+            "d": "“O metrô é caro?”"
+          },
+          {
+            "t": "Pergunta mensurável",
+            "d": "Respondível por contagem, medição ou comparação"
+          },
+          {
+            "t": "Unidade e comparação",
+            "d": "Preço, tempo ou quantidade, comparado a outro grupo"
+          },
+          {
+            "t": "Fonte dos dados",
+            "d": "Dado oficial existente ou contagem própria"
+          }
+        ]
+      }
+    ],
+    "jornalismo-dados:1": [
+      {
+        "type": "flow",
+        "title": "A limpeza antes da análise",
+        "caption": "O ponto-chave: a limpeza é trabalho invisível, mas é ela que torna a comparação confiável; registre cada correção feita.",
+        "steps": [
+          {
+            "t": "Padronize unidades",
+            "d": "Mesma moeda, mesmo tamanho, mesma data de câmbio"
+          },
+          {
+            "t": "Investigue ausências e erros",
+            "d": "Confirme valores absurdos antes de excluir; não invente"
+          },
+          {
+            "t": "Registre as correções",
+            "d": "O que foi alterado, por quê e com base em quê"
+          },
+          {
+            "t": "Escolha o denominador",
+            "d": "Taxas, proporções e per capita para bases diferentes"
+          }
+        ]
+      },
+      {
+        "type": "bars",
+        "title": "Acidentes por 100 mil habitantes",
+        "note": "Exemplo hipotético: a cidade maior tem mais acidentes no total, mas a menor tem a taxa mais alta.",
+        "caption": "Leia assim: números absolutos favorecem quem tem mais gente; a taxa por 100 mil habitantes permite comparar cidades de tamanhos diferentes.",
+        "items": [
+          {
+            "t": "Cidade grande",
+            "v": 18
+          },
+          {
+            "t": "Cidade média",
+            "v": 24
+          },
+          {
+            "t": "Cidade pequena",
+            "v": 31
+          }
+        ]
+      }
+    ],
+    "jornalismo-dados:2": [
+      {
+        "type": "compare",
+        "title": "Gráfico honesto e gráfico enganoso",
+        "a": "Honesto",
+        "b": "Enganoso",
+        "caption": "O ponto-chave: com os mesmos dados corretos, eixo, tipo de gráfico e contexto decidem se a percepção será fiel ou distorcida.",
+        "rows": [
+          {
+            "label": "Eixo",
+            "a": "Barras começam no zero",
+            "b": "Eixo começa em 29 e faz 30 contra 32 parecer enorme"
+          },
+          {
+            "label": "Tipo de gráfico",
+            "a": "Escolhido pela pergunta: barras, linha ou empilhadas",
+            "b": "Pizza com muitas categorias"
+          },
+          {
+            "label": "Contexto",
+            "a": "Título com o achado, fonte, data e unidade",
+            "b": "Sem fonte, data ou unidade: depende do narrador"
+          }
+        ]
+      }
+    ],
+    "jornalismo-dados:3": [
+      {
+        "type": "hub",
+        "title": "Como narrar um número",
+        "center": "Um número",
+        "caption": "Leia assim: cada número escolhido precisa de espaço, de uma referência do cotidiano e de uma declaração honesta do que ele não mostra.",
+        "nodes": [
+          {
+            "t": "Só dois ou três por vez"
+          },
+          {
+            "t": "Escala humana"
+          },
+          {
+            "t": "Comparação concreta"
+          },
+          {
+            "t": "O que ele não mostra"
+          }
+        ]
+      }
+    ],
+    "jornalismo-investigativo:0": [
+      {
+        "type": "matrix",
+        "title": "Interesse público × risco",
+        "x": [
+          "Baixo interesse público",
+          "Alto interesse público"
+        ],
+        "y": [
+          "Risco baixo",
+          "Risco alto"
+        ],
+        "caption": "O ponto-chave: só investigue quando houver interesse público, e só com meios proporcionais ao risco que a apuração envolve.",
+        "cells": [
+          {
+            "t": "Não investigar",
+            "d": "Risco alto sem justificativa pública"
+          },
+          {
+            "t": "Exige estrutura profissional",
+            "d": "Relevante, mas pede meios e proteção"
+          },
+          {
+            "t": "Curiosidade",
+            "d": "Vida privada não justifica apuração"
+          },
+          {
+            "t": "Viável",
+            "d": "Ex.: preços diferentes para turistas"
+          }
+        ]
+      }
+    ],
+    "jornalismo-investigativo:1": [
+      {
+        "type": "flow",
+        "title": "Da suspeita à demonstração",
+        "caption": "Leia assim: cada elo da cadeia precisa de origem, data e forma de obtenção registradas; um elo ilegítimo compromete todo o trabalho.",
+        "steps": [
+          {
+            "t": "Hipótese",
+            "d": "Quem, o quê e onde, de forma verificável"
+          },
+          {
+            "t": "Documentos possíveis",
+            "d": "Que registros existiriam se a hipótese fosse verdadeira?"
+          },
+          {
+            "t": "Obtenção legítima",
+            "d": "Recibos cedidos voluntariamente, sem invasão ou engano"
+          },
+          {
+            "t": "Cadeia de evidências",
+            "d": "Origem, data e forma de obtenção de cada item"
+          },
+          {
+            "t": "Demonstração",
+            "d": "A trilha mostra como se chegou a cada conclusão"
+          }
+        ]
+      }
+    ],
+    "jornalismo-investigativo:2": [
+      {
+        "type": "timeline",
+        "title": "O contraditório antes de publicar",
+        "caption": "O ponto-chave: ouvir o outro lado não é formalidade; a resposta pode revelar outra explicação e precisa aparecer com destaque justo.",
+        "events": [
+          {
+            "when": "Dia 1",
+            "t": "Ouvir os envolvidos",
+            "d": "Enviar recibos e perguntas, com prazo de 48 horas"
+          },
+          {
+            "when": "Prazo",
+            "t": "Testar alternativas",
+            "d": "Promoção, horário, tamanho, cartão de fidelidade?"
+          },
+          {
+            "when": "Resposta",
+            "t": "Revisar a conclusão",
+            "d": "A explicação muda ou confirma o que foi achado?"
+          },
+          {
+            "when": "Publicação",
+            "t": "Resposta com destaque justo",
+            "d": "Fiel e proporcional, não escondida no final"
+          }
+        ]
+      }
+    ],
+    "jornalismo-investigativo:3": [
+      {
+        "type": "pyramid",
+        "inverted": true,
+        "title": "Hierarquia dos achados",
+        "caption": "Leia assim: comece pelo que foi confirmado com mais força; indícios e perguntas abertas vêm depois, claramente marcados.",
+        "layers": [
+          {
+            "t": "Confirmado",
+            "d": "Ex.: 4 de 10 lojas, com recibo"
+          },
+          {
+            "t": "Indícios",
+            "d": "Ex.: 2 lojas, sem recibo"
+          },
+          {
+            "t": "Em aberto",
+            "d": "sem resposta"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Verbos proporcionais à evidência",
+        "from": "Evidência fraca",
+        "to": "Evidência forte",
+        "caption": "O ponto-chave: o verbo escolhido promete uma força de prova; ele não pode prometer mais do que a evidência entrega.",
+        "marks": [
+          {
+            "at": 0.12,
+            "t": "Não confirmou"
+          },
+          {
+            "at": 0.38,
+            "t": "Sugere"
+          },
+          {
+            "at": 0.88,
+            "t": "Demonstrou"
+          },
+          {
+            "at": 0.62,
+            "t": "Indica"
+          }
+        ]
+      }
+    ],
+    "comunicacao-verbal:0": [
+      {
+        "type": "flow",
+        "title": "Uma ideia por bloco",
+        "caption": "Leia assim: cada bloco avança uma relação clara, e a pausa entre eles ajuda o ouvinte a acompanhar o raciocínio.",
+        "steps": [
+          {
+            "t": "Tema",
+            "d": "“Repare na fachada.”"
+          },
+          {
+            "t": "Detalhe",
+            "d": "“Os elementos verticais alongam a composição.”"
+          },
+          {
+            "t": "Consequência",
+            "d": "“De longe, o prédio parece ainda mais alto.”"
+          },
+          {
+            "t": "Transição",
+            "d": "Pausa e ponte para o próximo bloco"
+          }
+        ]
+      }
+    ],
+    "comunicacao-verbal:1": [
+      {
+        "type": "pyramid",
+        "title": "Três grupos de camadas",
+        "caption": "Leia assim: a base observável sustenta o resto; o contexto pede fonte, e o significado, no topo, é leitura autoral declarada como tal.",
+        "layers": [
+          {
+            "t": "Significado"
+          },
+          {
+            "t": "Contexto",
+            "d": "Origem e finalidade pedem fonte"
+          },
+          {
+            "t": "Observável",
+            "d": "O que câmera e microfone registram"
+          }
+        ]
+      }
+    ],
+    "comunicacao-verbal:2": [
+      {
+        "type": "hub",
+        "title": "Conectores pela relação lógica",
+        "center": "Conector",
+        "caption": "O ponto-chave: escolha o conector pela relação entre as ideias, e não por hábito, como no “e aí” repetido.",
+        "nodes": [
+          {
+            "t": "Acréscimo: além disso"
+          },
+          {
+            "t": "Contraste: mas"
+          },
+          {
+            "t": "Consequência: por isso"
+          },
+          {
+            "t": "Sequência: depois"
+          },
+          {
+            "t": "Ressalva: embora"
+          }
+        ]
+      }
+    ],
+    "comunicacao-verbal:3": [
+      {
+        "type": "timeline",
+        "title": "Três durações, mesma pergunta",
+        "caption": "Leia assim: cada versão acrescenta uma camada à anterior, e nenhuma troca “neste horário” por “sempre” para ganhar tempo.",
+        "events": [
+          {
+            "when": "15 s",
+            "t": "Ideia central",
+            "d": "A praça está movimentada"
+          },
+          {
+            "when": "45 s",
+            "t": "Mais evidência",
+            "d": "Horários e ações observadas"
+          },
+          {
+            "when": "90 s",
+            "t": "Mais contexto e limites",
+            "d": "Comparação cautelosa com outra visita"
+          }
+        ]
+      }
+    ],
+    "oratoria-retorica:0": [
+      {
+        "type": "compare",
+        "title": "Adjetivo forte ou argumento",
+        "a": "Adjetivo forte",
+        "b": "Argumento",
+        "caption": "O ponto-chave: a credibilidade vem de tese delimitada, razões observáveis e limites admitidos, não da intensidade do adjetivo.",
+        "rows": [
+          {
+            "label": "Afirmação",
+            "a": "“É uma rua fantástica”",
+            "b": "“Nesta caminhada, a calçada arborizada me pareceu confortável”"
+          },
+          {
+            "label": "Sustentação",
+            "a": "Nenhuma razão explícita",
+            "b": "Sombra contínua e fluxo de pedestres"
+          },
+          {
+            "label": "Alcance",
+            "a": "Soa universal",
+            "b": "“Isso não comprova que a região é sempre assim”"
+          }
+        ]
+      }
+    ],
+    "oratoria-retorica:1": [
+      {
+        "type": "flow",
+        "title": "Arquitetura do argumento",
+        "caption": "Leia assim: a razão explica o pensamento, a evidência o apoia ou enfraquece, e o contraponto mostra até onde a conclusão vale.",
+        "steps": [
+          {
+            "t": "Tese proporcional",
+            "d": "“Neste trajeto”, e não “na cidade inteira”"
+          },
+          {
+            "t": "Razão",
+            "d": "Menos variação no tempo de viagem"
+          },
+          {
+            "t": "Evidência verificável",
+            "d": "Os tempos registrados em três viagens"
+          },
+          {
+            "t": "Contraponto honesto",
+            "d": "Não vale para todas as rotas e todos os públicos"
+          }
+        ]
+      }
+    ],
+    "oratoria-retorica:2": [
+      {
+        "type": "venn",
+        "title": "Os três apelos com integridade",
+        "sets": [
+          "Ethos: transparência",
+          "Logos: encadeamento",
+          "Pathos: humanidade"
+        ],
+        "center": "Sem manipulação",
+        "caption": "Leia assim: confiança, explicação e emoção se reforçam quando nenhuma delas distorce a evidência ou a dignidade de quem é filmado."
+      }
+    ],
+    "oratoria-retorica:3": [
+      {
+        "type": "matrix",
+        "title": "Recomendação condicionada",
+        "x": [
+          "Prioridade: portabilidade",
+          "Prioridade: telefoto"
+        ],
+        "y": [
+          "Grava de dia",
+          "Grava à noite"
+        ],
+        "caption": "O ponto-chave: uma recomendação responsável muda conforme a necessidade de quem escolhe; não existe resposta universal.",
+        "cells": [
+          {
+            "t": "Avaliar baixa luz",
+            "d": "A só serve se render bem no escuro"
+          },
+          {
+            "t": "Comparar com cuidado",
+            "d": "Zoom e baixa luz podem conflitar"
+          },
+          {
+            "t": "Câmera A",
+            "d": "Leve e suficiente para o dia"
+          },
+          {
+            "t": "Câmera B",
+            "d": "O telefoto pesa mais na decisão"
+          }
+        ]
+      }
+    ],
+    "locucao-voz:0": [
+      {
+        "type": "flow",
+        "title": "Como a voz cria hierarquia",
+        "caption": "Leia assim: respiração confortável sustenta a frase, pausas marcam ideias e uma só ênfase mostra o que mais importa.",
+        "steps": [
+          {
+            "t": "Respiração e preparo",
+            "d": "Ombros soltos, garganta livre, aquecimento leve"
+          },
+          {
+            "t": "Unidades de sentido",
+            "d": "“Nesta esquina / a arquitetura muda / e o fluxo aumenta”"
+          },
+          {
+            "t": "Uma palavra-chave",
+            "d": "Intensidade, duração ou tom; não ressaltar tudo"
+          }
+        ]
+      }
+    ],
+    "locucao-voz:1": [
+      {
+        "type": "spectrum",
+        "title": "O ponto da articulação",
+        "from": "Fala atropelada",
+        "to": "Fala rígida",
+        "caption": "O ponto-chave: dicção clara fica no meio do caminho, sem engolir terminações nem encenar cada consoante.",
+        "marks": [
+          {
+            "at": 0.14,
+            "t": "Engole finais"
+          },
+          {
+            "at": 0.32,
+            "t": "Apressada"
+          },
+          {
+            "at": 0.5,
+            "t": "Inteligível"
+          },
+          {
+            "at": 0.68,
+            "t": "Silabada"
+          },
+          {
+            "at": 0.86,
+            "t": "Encenada"
+          }
+        ]
+      }
+    ],
+    "locucao-voz:2": [
+      {
+        "type": "hub",
+        "title": "A pontuação que o ouvido percebe",
+        "center": "Pontuação sonora",
+        "caption": "Leia assim: o ouvinte não vê a vírgula; ele entende a frase pelas pausas, pela entonação, pelo foco e pelo silêncio.",
+        "nodes": [
+          {
+            "t": "Pausa por sentido"
+          },
+          {
+            "t": "Uma palavra de foco"
+          },
+          {
+            "t": "Mudança de entonação"
+          },
+          {
+            "t": "Silêncio informativo"
+          }
+        ]
+      }
+    ],
+    "locucao-voz:3": [
+      {
+        "type": "cycle",
+        "title": "Olho na lente",
+        "center": "Uma ideia por vez",
+        "caption": "Leia assim: consulte uma ideia, erga o olhar e fale para a lente; só então volte ao roteiro para buscar a próxima.",
+        "steps": [
+          {
+            "t": "Consultar o cartão"
+          },
+          {
+            "t": "Erguer o olhar"
+          },
+          {
+            "t": "Falar à lente"
+          },
+          {
+            "t": "Pausa curta"
+          }
+        ]
+      }
+    ],
+    "comunicacao-camera:0": [
+      {
+        "type": "compare",
+        "title": "Para onde olhar",
+        "a": "Olhar na lente",
+        "b": "Olhar no objeto",
+        "caption": "O ponto-chave: o olhar indica ao público com quem você fala e para onde ele deve olhar; o gesto apenas reforça essa direção.",
+        "rows": [
+          {
+            "label": "Quando",
+            "a": "Ao se dirigir ao público",
+            "b": "Ao mostrar uma referência"
+          },
+          {
+            "label": "Gesto",
+            "a": "Contido, sem competir com a fala",
+            "b": "Indica a direção, como “naquele edifício”"
+          },
+          {
+            "label": "Efeito",
+            "a": "Conversa com uma pessoa",
+            "b": "Conduz a atenção para a cena"
+          }
+        ]
+      }
+    ],
+    "comunicacao-camera:1": [
+      {
+        "type": "hub",
+        "title": "Funções do gesto",
+        "center": "Gesto",
+        "caption": "Leia assim: cada gesto precisa de uma função clara; o que não aponta, dimensiona ou contrasta tende a disputar atenção.",
+        "nodes": [
+          {
+            "t": "Apontar a referência"
+          },
+          {
+            "t": "Dimensionar distância"
+          },
+          {
+            "t": "Contrastar duas opções"
+          },
+          {
+            "t": "Acompanhar a emoção"
+          }
+        ]
+      }
+    ],
+    "comunicacao-camera:2": [
+      {
+        "type": "pyramid",
+        "inverted": true,
+        "title": "Reduzir o texto em camadas",
+        "caption": "O ponto-chave: a cada etapa sobra menos texto e mais estrutura, até que o raciocínio esteja internalizado e a fala fique livre.",
+        "layers": [
+          {
+            "t": "Texto integral",
+            "d": "Leitura completa"
+          },
+          {
+            "t": "Cinco frases-chave",
+            "d": "Uma por ideia"
+          },
+          {
+            "t": "Três palavras",
+            "d": "por bloco"
+          },
+          {
+            "t": "Fala livre",
+            "d": "sem roteiro"
+          }
+        ]
+      }
+    ],
+    "comunicacao-camera:3": [
+      {
+        "type": "flow",
+        "title": "Falar enquanto caminha",
+        "caption": "Leia assim: segurança e áudio vêm antes da fala, e os pontos da história devem coincidir com marcos visíveis no trajeto.",
+        "steps": [
+          {
+            "t": "Ritmo do corpo",
+            "d": "Desacelere ou pare antes de números e instruções"
+          },
+          {
+            "t": "Áudio viável?",
+            "d": "Se houver ruído, grave a cobertura e narre depois"
+          },
+          {
+            "t": "Marcos espaciais",
+            "d": "Cada etapa da história ligada a um ponto visual"
+          },
+          {
+            "t": "Sem “aqui” vago",
+            "d": "Diga qual elemento mudou ao cruzar a esquina"
+          }
+        ]
+      }
+    ],
+    "linguagem-descritiva:0": [
+      {
+        "type": "compare",
+        "title": "Adjetivo vago e detalhe observável",
+        "a": "Vago",
+        "b": "Observável",
+        "caption": "O ponto-chave: troque o julgamento pelo que a câmera poderia confirmar sobre forma, luz e relações entre elementos.",
+        "rows": [
+          {
+            "label": "Forma",
+            "a": "“Um prédio bonito”",
+            "b": "“Fachada estreita, janelas altas e linhas verticais repetidas”"
+          },
+          {
+            "label": "Material e luz",
+            "a": "Supor o material sem segurança",
+            "b": "“A superfície lisa reflete as luzes da rua”"
+          },
+          {
+            "label": "Relações",
+            "a": "“Uma rua agradável”",
+            "b": "“A vegetação sombreia a calçada; as vitrines iluminam as fachadas”"
+          }
+        ]
+      }
+    ],
+    "linguagem-descritiva:1": [
+      {
+        "type": "frames",
+        "title": "Da categoria ao detalhe",
+        "caption": "Leia assim: aproxime a descrição até chegar a um traço que permitiria reconhecer a mesma cena em outra fotografia.",
+        "frames": [
+          {
+            "t": "Prédio"
+          },
+          {
+            "t": "Fachada de tijolos escuros"
+          },
+          {
+            "t": "Janelas estreitas"
+          },
+          {
+            "t": "Molduras metálicas",
+            "d": "o traço que identifica a cena"
+          }
+        ]
+      }
+    ],
+    "linguagem-descritiva:2": [
+      {
+        "type": "hub",
+        "title": "Palavras que situam o público",
+        "center": "Olhar do público",
+        "caption": "Leia assim: o narrador conduz o olhar dizendo de onde se vê, quanto algo mede em relação a outro e quando o ponto de vista muda.",
+        "nodes": [
+          {
+            "t": "Eixo de referência"
+          },
+          {
+            "t": "Escala relativa"
+          },
+          {
+            "t": "Hierarquia"
+          },
+          {
+            "t": "Distância"
+          },
+          {
+            "t": "Movimento do observador"
+          }
+        ]
+      }
+    ],
+    "linguagem-descritiva:3": [
+      {
+        "type": "matrix",
+        "title": "Quando a voz deve falar",
+        "x": [
+          "A imagem já mostra",
+          "A imagem não mostra"
+        ],
+        "y": [
+          "Pouco relevante",
+          "Relevante"
+        ],
+        "caption": "O ponto-chave: a voz informa o que a imagem não comunica sozinha; o que a imagem já entrega pede explicação ou silêncio.",
+        "cells": [
+          {
+            "t": "Explique a escolha",
+            "d": "Por que seguir a bicicleta, não a cor"
+          },
+          {
+            "t": "Verbalize",
+            "d": "Só a voz entrega essa informação"
+          },
+          {
+            "t": "Silêncio",
+            "d": "Deixe som e imagem falarem"
+          },
+          {
+            "t": "Corte",
+            "d": "Não preencha a pausa com adjetivos"
+          }
+        ]
+      }
+    ],
+    "storytelling:0": [
+      {
+        "type": "timeline",
+        "title": "Começo, meio e fim",
+        "caption": "Leia assim: uma sequência de imagens vira história quando uma pergunta atravessa as etapas, sem conflitos fabricados.",
+        "events": [
+          {
+            "when": "Começo",
+            "t": "Situação e pergunta",
+            "d": "Como o artesão produz num espaço tão pequeno?"
+          },
+          {
+            "when": "Meio",
+            "t": "Busca e observação",
+            "d": "Tentar ver o processo e ouvir o entrevistado"
+          },
+          {
+            "when": "Fim",
+            "t": "Descoberta ou limite",
+            "d": "O que foi respondido e o que segue em aberto"
+          }
+        ]
+      }
+    ],
+    "storytelling:1": [
+      {
+        "type": "flow",
+        "title": "Progressão de descoberta",
+        "caption": "O ponto-chave: cada cena acrescenta conhecimento, e a virada honesta pode ser apenas a mudança da sua própria hipótese.",
+        "steps": [
+          {
+            "t": "Percepção",
+            "d": "Por que esta rua parece tão diferente das vizinhas?"
+          },
+          {
+            "t": "Busca",
+            "d": "Observar a arquitetura e consultar uma fonte"
+          },
+          {
+            "t": "Evidência",
+            "d": "Moradias no mesmo quarteirão comercial"
+          },
+          {
+            "t": "Revisão (a virada)",
+            "d": "A hipótese inicial muda diante da evidência"
+          },
+          {
+            "t": "Conclusão",
+            "d": "Interpretação atualizada e declarada"
+          }
+        ]
+      }
+    ],
+    "storytelling:2": [
+      {
+        "type": "compare",
+        "title": "Cena e resumo",
+        "a": "Cena",
+        "b": "Resumo",
+        "caption": "Leia assim: a montagem intercala os dois modos, mas sem simular continuidade ou respostas que não aconteceram.",
+        "rows": [
+          {
+            "label": "O que faz",
+            "a": "Mostra ação concreta no espaço e no tempo",
+            "b": "Explica mudanças mais amplas"
+          },
+          {
+            "label": "Exemplo",
+            "a": "A barista entrega o copo",
+            "b": "Ao longo da manhã, o movimento aumenta"
+          },
+          {
+            "label": "Ponte honesta",
+            "a": "Uma cena real por vez",
+            "b": "“Em outra manhã, voltei à mesma rua”"
+          }
+        ]
+      }
+    ],
+    "storytelling:3": [
+      {
+        "type": "cycle",
+        "title": "O encerramento que reabre",
+        "center": "Próximo episódio",
+        "caption": "O ponto-chave: o fim volta à pergunta inicial, fixa uma imagem concreta e admite o que ainda falta investigar.",
+        "steps": [
+          {
+            "t": "Pergunta inicial"
+          },
+          {
+            "t": "O que foi respondido"
+          },
+          {
+            "t": "Imagem concreta"
+          },
+          {
+            "t": "Nova pergunta"
+          }
+        ]
+      }
+    ],
+    "improvisacao:0": [
+      {
+        "type": "flow",
+        "title": "Os quatro blocos do improviso",
+        "caption": "Leia assim: você não sabe cada frase de antemão, mas sabe a ordem dos blocos e consegue retomar o fio em qualquer um deles.",
+        "steps": [
+          {
+            "t": "O que é",
+            "d": "“Estou diante de uma vitrine.”"
+          },
+          {
+            "t": "Um detalhe",
+            "d": "“O contraste de materiais chama atenção.”"
+          },
+          {
+            "t": "Por que interessa",
+            "d": "O que esse detalhe revela sobre a cena"
+          },
+          {
+            "t": "Fechamento",
+            "d": "Síntese curta; dois blocos bons valem mais que dez soltos"
+          }
+        ]
+      }
+    ],
+    "improvisacao:1": [
+      {
+        "type": "pyramid",
+        "title": "Conectores que sobem de nível",
+        "caption": "Leia assim: “primeiro” e “além disso” acumulam detalhes; “juntos, esses elementos criam unidade” sobe um nível e vira ideia.",
+        "layers": [
+          {
+            "t": "Juntos..."
+          },
+          {
+            "t": "Além disso...",
+            "d": "O uso das cores"
+          },
+          {
+            "t": "Primeiro...",
+            "d": "O desenho da fachada"
+          }
+        ]
+      }
+    ],
+    "improvisacao:2": [
+      {
+        "type": "compare",
+        "title": "Trocar de registro sem mudar os fatos",
+        "a": "Coloquial",
+        "b": "Técnico",
+        "caption": "O ponto-chave: reformular muda a forma e o público, nunca a evidência; nenhum fato pode ser acrescentado na troca.",
+        "rows": [
+          {
+            "label": "A mesma observação",
+            "a": "“A peça cai bem”",
+            "b": "“O caimento acompanha o corpo sem formar dobras excessivas”"
+          },
+          {
+            "label": "Termo novo",
+            "a": "“A faixa da imagem que aparece em foco”",
+            "b": "“Profundidade de campo”, retomado depois"
+          },
+          {
+            "label": "O que não muda",
+            "a": "Os fatos observados",
+            "b": "Os fatos observados"
+          }
+        ]
+      }
+    ],
+    "improvisacao:3": [
+      {
+        "type": "hub",
+        "title": "Roteiro flexível na rua",
+        "center": "Roteiro flexível",
+        "caption": "Leia assim: leve âncoras, não falas prontas; se a evidência não aparecer, conte isso e use a saída sem criar conflito.",
+        "nodes": [
+          {
+            "t": "Ponto de entrada"
+          },
+          {
+            "t": "Pergunta"
+          },
+          {
+            "t": "Evidência desejada"
+          },
+          {
+            "t": "Saída responsável"
+          }
+        ]
+      }
+    ],
+    "semiotica:0": [
+      {
+        "type": "compare",
+        "title": "Denotação e conotação",
+        "a": "Denotação",
+        "b": "Conotação",
+        "caption": "O ponto-chave: descreva o que aparece antes de interpretar e apresente a conotação como leitura possível, não universal.",
+        "rows": [
+          {
+            "label": "O que é",
+            "a": "O que aparece na imagem",
+            "b": "Sentidos possíveis, variáveis entre públicos"
+          },
+          {
+            "label": "Exemplo",
+            "a": "“Fundo bege, duas peças, luz lateral”",
+            "b": "“A paleta pode sugerir sobriedade”"
+          },
+          {
+            "label": "Como sustentar",
+            "a": "Qualquer pessoa pode conferir",
+            "b": "Precisa de argumento; é culturalmente situada"
+          }
+        ]
+      }
+    ],
+    "semiotica:1": [
+      {
+        "type": "flow",
+        "title": "Descrever antes de inferir",
+        "caption": "Leia assim: um gesto isolado não prova humor nem intenção; o contexto limita o que se pode dizer sobre ele.",
+        "steps": [
+          {
+            "t": "Gesto observado",
+            "d": "“A pessoa cruza os braços”"
+          },
+          {
+            "t": "Contexto",
+            "d": "Cultura, situação, interlocutores e intenção"
+          },
+          {
+            "t": "Inferência cautelosa",
+            "d": "Uma leitura possível, nunca a prova de um estado"
+          }
+        ]
+      }
+    ],
+    "semiotica:2": [
+      {
+        "type": "layers",
+        "title": "Do sinal ao sentido",
+        "caption": "Leia assim: o centro é o que se vê; os sentidos que o envolvem dependem de convenções, culturas e públicos específicos.",
+        "layers": [
+          {
+            "t": "Público e situação"
+          },
+          {
+            "t": "Convenção cultural"
+          },
+          {
+            "t": "O que se vê"
+          }
+        ]
+      }
+    ],
+    "semiotica:3": [
+      {
+        "type": "cycle",
+        "title": "Narrativa de descoberta",
+        "center": "Código em contexto",
+        "caption": "O ponto-chave: a primeira leitura de um sinal é hipótese; verificá-la diante do público transforma o engano em aprendizado.",
+        "steps": [
+          {
+            "t": "Mostrar o sinal"
+          },
+          {
+            "t": "Primeira leitura"
+          },
+          {
+            "t": "Verificação"
+          },
+          {
+            "t": "Nova leitura"
+          }
+        ]
+      }
+    ],
+    "psicologia-comunicacao:0": [
+      {
+        "type": "flow",
+        "title": "Ordem para uma atenção limitada",
+        "caption": "Leia assim: entregue o indispensável primeiro e uma ideia por vez; a síntese final retoma tudo com palavras novas.",
+        "steps": [
+          {
+            "t": "O que é",
+            "d": "A informação indispensável, antes das curiosidades"
+          },
+          {
+            "t": "Por que importa",
+            "d": "Uma ideia por passagem"
+          },
+          {
+            "t": "Exemplo concreto",
+            "d": "A relação entre pessoa e fachada mostra a escala"
+          },
+          {
+            "t": "Síntese",
+            "d": "“Ou seja...”, com palavras novas, sem repetir"
+          }
+        ]
+      }
+    ],
+    "psicologia-comunicacao:1": [
+      {
+        "type": "hub",
+        "title": "O que torna algo memorável",
+        "center": "Memória",
+        "caption": "O ponto-chave: lembramos do concreto, do que retorna e do que tem estrutura; a emoção entra como perspectiva declarada.",
+        "nodes": [
+          {
+            "t": "Imagem concreta"
+          },
+          {
+            "t": "Âncora narrativa"
+          },
+          {
+            "t": "Emoção como perspectiva"
+          },
+          {
+            "t": "Estrutura clara"
+          }
+        ]
+      }
+    ],
+    "psicologia-comunicacao:2": [
+      {
+        "type": "cycle",
+        "title": "Testar a primeira impressão",
+        "center": "Procurar o contrário",
+        "caption": "Leia assim: depois de formar uma hipótese, busque ativamente o que poderia contrariá-la antes de transformá-la em conclusão.",
+        "steps": [
+          {
+            "t": "Primeira impressão"
+          },
+          {
+            "t": "Hipótese"
+          },
+          {
+            "t": "Novo horário ou visita"
+          },
+          {
+            "t": "Hipótese revista"
+          }
+        ]
+      },
+      {
+        "type": "compare",
+        "title": "O enquadramento muda a leitura",
+        "a": "Close",
+        "b": "Plano aberto",
+        "caption": "O ponto-chave: cada enquadramento seleciona uma parte da cena; nenhum deles, sozinho, é necessariamente a história completa.",
+        "rows": [
+          {
+            "label": "O que mostra",
+            "a": "Uma fila longa",
+            "b": "Outros guichês sem espera"
+          },
+          {
+            "label": "Leitura tentadora",
+            "a": "“A loja vive lotada”",
+            "b": "“Ninguém espera ali”"
+          },
+          {
+            "label": "Limite",
+            "a": "Uma cena não mede frequência",
+            "b": "Também é um recorte"
+          }
+        ]
+      }
+    ],
+    "psicologia-comunicacao:3": [
+      {
+        "type": "timeline",
+        "title": "Explicar para quem chega agora",
+        "caption": "Leia assim: a ordem e o vocabulário mudam conforme o público; a evidência continua a mesma em todas as versões.",
+        "events": [
+          {
+            "when": "Primeiro",
+            "t": "Modelo mental inicial",
+            "d": "Defina catraca, transferência e plataforma"
+          },
+          {
+            "when": "Depois",
+            "t": "Exemplo concreto",
+            "d": "A mão ajustando o foco"
+          },
+          {
+            "when": "Então",
+            "t": "Conceito nomeado",
+            "d": "Profundidade de campo"
+          },
+          {
+            "when": "Por fim",
+            "t": "Analogia com limite",
+            "d": "O roteiro é um mapa, mas não prevê tudo"
+          }
+        ]
+      }
+    ],
+    "comunicacao-intercultural:0": [
+      {
+        "type": "spectrum",
+        "title": "Da observação à generalização",
+        "from": "Situada",
+        "to": "Total",
+        "marks": [
+          {
+            "at": 0.05,
+            "t": "Uma pessoa"
+          },
+          {
+            "at": 0.3,
+            "t": "Uma loja"
+          },
+          {
+            "at": 0.55,
+            "t": "Um bairro"
+          },
+          {
+            "at": 0.8,
+            "t": "Uma cidade"
+          },
+          {
+            "at": 0.97,
+            "t": "“A China”"
+          }
+        ],
+        "caption": "Leia assim: quanto mais à direita, maior o alcance da frase e menor o apoio das suas observações. Diga local, período e fonte."
+      }
+    ],
+    "comunicacao-intercultural:1": [
+      {
+        "type": "compare",
+        "title": "Perguntar sem exotizar",
+        "a": "Pergunta aberta",
+        "b": "Pergunta com tese",
+        "rows": [
+          {
+            "label": "Ponto de partida",
+            "a": "A prática concreta da pessoa",
+            "b": "Uma tese sobre “como eles são”"
+          },
+          {
+            "label": "Comparação",
+            "a": "Mostra diferenças com critério",
+            "b": "Julga “melhor” ou “atrasado”"
+          },
+          {
+            "label": "Consentimento",
+            "a": "Específico, contínuo e com direito à recusa",
+            "b": "Gravar é tratado como autorização total"
+          }
+        ],
+        "caption": "O ponto-chave: a boa pergunta parte da experiência de quem responde e deixa sempre aberta a possibilidade de recusar."
+      }
+    ],
+    "comunicacao-intercultural:2": [
+      {
+        "type": "flow",
+        "title": "Da fala original à legenda",
+        "steps": [
+          {
+            "t": "Fala original",
+            "d": "Identifique se o registro é formal, íntimo, técnico ou coloquial"
+          },
+          {
+            "t": "Tradução de sentido",
+            "d": "Preserve o registro; não dramatize um “talvez” educado"
+          },
+          {
+            "t": "Confirmação",
+            "d": "Nomes, unidades e passagens ambíguas com o entrevistado"
+          },
+          {
+            "t": "Revisão fluente",
+            "d": "Em entrevistas importantes, um falante fluente revisa"
+          },
+          {
+            "t": "Legenda e locução",
+            "d": "Sua síntese nunca aparece como citação literal"
+          }
+        ],
+        "caption": "Leia assim: traduzir é transportar sentido e registro, e cada etapa protege a fala de quem foi entrevistado."
+      }
+    ],
+    "comunicacao-intercultural:3": [
+      {
+        "type": "cycle",
+        "title": "Ciclo da escuta recíproca",
+        "center": "Encontro",
+        "steps": [
+          {
+            "t": "Escutar sem completar"
+          },
+          {
+            "t": "Perguntar o sentido"
+          },
+          {
+            "t": "Contextualizar"
+          },
+          {
+            "t": "Explicar o uso"
+          },
+          {
+            "t": "Confirmar dados"
+          }
+        ],
+        "caption": "O ponto-chave: a conversa intercultural é um encontro, e o retorno ético à pessoa realimenta a confiança para a próxima escuta."
+      }
+    ],
+    "fotojornalismo:0": [
+      {
+        "type": "compare",
+        "title": "Legenda: observação ou suposição",
+        "a": "Observação",
+        "b": "Suposição",
+        "rows": [
+          {
+            "a": "“Pessoa atravessa a rua”",
+            "b": "“Pessoa volta feliz do trabalho”"
+          },
+          {
+            "label": "Sustentação",
+            "a": "Visível na imagem e verificável",
+            "b": "Atribui intenção que a foto não prova"
+          }
+        ],
+        "caption": "A legenda diz só o que se pode sustentar sobre pessoas, tempo, local e ação; intenção inventada vira desinformação."
+      },
+      {
+        "type": "frames",
+        "title": "Sequência do geral ao detalhe",
+        "frames": [
+          {
+            "t": "Plano geral"
+          },
+          {
+            "t": "Plano médio"
+          },
+          {
+            "t": "Detalhe",
+            "d": "gesto ou objeto singular"
+          }
+        ],
+        "caption": "Leia assim: o plano geral dá contexto, o médio mostra a ação e o detalhe revela o que é singular naquela cena."
+      }
+    ],
+    "fotojornalismo:1": [
+      {
+        "type": "layers",
+        "title": "Camadas dentro do quadro",
+        "layers": [
+          {
+            "t": "Fora do quadro"
+          },
+          {
+            "t": "Fundo: prédios"
+          },
+          {
+            "t": "Meio: pedestres"
+          },
+          {
+            "t": "Bicicletas"
+          }
+        ],
+        "caption": "O ponto-chave: cada camada conta uma parte da história, e o que fica fora do quadro também muda a interpretação."
+      }
+    ],
+    "fotojornalismo:2": [
+      {
+        "type": "timeline",
+        "title": "Cinco imagens, uma história",
+        "events": [
+          {
+            "when": "Foto 1",
+            "t": "Abertura",
+            "d": "Plano geral do mercado ao amanhecer"
+          },
+          {
+            "when": "Foto 2",
+            "t": "Desenvolvimento",
+            "d": "Mãos escolhendo legumes"
+          },
+          {
+            "when": "Foto 3",
+            "t": "Desenvolvimento",
+            "d": "Vendedor pesando a mercadoria"
+          },
+          {
+            "when": "Foto 4",
+            "t": "Desenvolvimento",
+            "d": "Cliente negociando"
+          },
+          {
+            "when": "Foto 5",
+            "t": "Fechamento",
+            "d": "Bancas fechando, caixas empilhadas"
+          }
+        ],
+        "caption": "Leia assim: cada imagem acrescenta informação nova, alternando distâncias, até um fechamento que mostra consequência."
+      }
+    ],
+    "fotojornalismo:3": [
+      {
+        "type": "hub",
+        "title": "O que a legenda informa",
+        "center": "Legenda",
+        "nodes": [
+          {
+            "t": "Quem"
+          },
+          {
+            "t": "Onde"
+          },
+          {
+            "t": "Quando"
+          },
+          {
+            "t": "O que acontece"
+          },
+          {
+            "t": "Contexto invisível"
+          },
+          {
+            "t": "Encenação ou edição"
+          }
+        ],
+        "caption": "O ponto-chave: a legenda informa o que o olhar não alcança e declara qualquer intervenção que afete a leitura da imagem."
+      }
+    ],
+    "fotografia-tecnica:0": [
+      {
+        "type": "spectrum",
+        "title": "Velocidade e efeito narrativo",
+        "from": "Rápido",
+        "to": "Lento",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Congela"
+          },
+          {
+            "at": 0.5,
+            "t": "Panorâmica"
+          },
+          {
+            "at": 0.92,
+            "t": "Rastro"
+          }
+        ],
+        "caption": "Leia assim: mais rápido congela a ação e pede mais luz; mais lento cria rastro e pede apoio estável."
+      }
+    ],
+    "fotografia-tecnica:1": [
+      {
+        "type": "compare",
+        "title": "Rápido × lento",
+        "a": "1/500 s ou mais",
+        "b": "1/15 s ou menos",
+        "rows": [
+          {
+            "label": "Efeito",
+            "a": "Congela pessoas e veículos",
+            "b": "Cria rastros de movimento"
+          },
+          {
+            "label": "Exigência",
+            "a": "Mais luz ou ISO mais alto",
+            "b": "Apoio firme ou tripé"
+          },
+          {
+            "label": "Exemplo",
+            "a": "Ciclista nítido em 1/1000 s",
+            "b": "Rastros de faróis em 2 s"
+          }
+        ],
+        "caption": "O ponto-chave: o tempo de exposição decide se o movimento aparece congelado ou como rastro. No panning, de 1/30 a 1/60 s, o fundo borra."
+      }
+    ],
+    "fotografia-tecnica:2": [
+      {
+        "type": "matrix",
+        "title": "Qualidade × direção da luz",
+        "x": [
+          "Luz frontal",
+          "Luz lateral"
+        ],
+        "y": [
+          "Luz suave",
+          "Luz dura"
+        ],
+        "cells": [
+          {
+            "t": "Achatada e marcada",
+            "d": "Sol direto de frente: sombras duras, pouco volume"
+          },
+          {
+            "t": "Textura dramática",
+            "d": "Sol rasante revela tijolos com alto contraste"
+          },
+          {
+            "t": "Rosto uniforme",
+            "d": "Sombra aberta: transições delicadas, pouca textura"
+          },
+          {
+            "t": "Volume delicado",
+            "d": "Janela lateral em dia nublado modela sem sombra dura"
+          }
+        ],
+        "caption": "Leia assim: a qualidade define a força das sombras, e a direção define quanto de textura e volume aparece."
+      }
+    ],
+    "fotografia-tecnica:3": [
+      {
+        "type": "cycle",
+        "title": "Ciclo da prática comparativa",
+        "center": "Decisão consciente",
+        "steps": [
+          {
+            "t": "Mudar um parâmetro"
+          },
+          {
+            "t": "Fotografar"
+          },
+          {
+            "t": "Registrar ajustes"
+          },
+          {
+            "t": "Comparar lado a lado"
+          },
+          {
+            "t": "Escolher pela história"
+          }
+        ],
+        "caption": "O ponto-chave: varie só abertura, velocidade ou ISO por vez; assim cada diferença tem uma causa identificável."
+      }
+    ],
+    "linguagem-cinematografica:0": [
+      {
+        "type": "frames",
+        "title": "Cada plano, uma pergunta",
+        "frames": [
+          {
+            "t": "Geral: onde estamos?"
+          },
+          {
+            "t": "Médio: quem se relaciona?"
+          },
+          {
+            "t": "Detalhe: o que importa?",
+            "d": "direciona a atenção"
+          }
+        ],
+        "caption": "Leia assim: estabeleça o espaço antes de aproximar; o plano geral orienta, o médio mostra relações e o detalhe aponta."
+      }
+    ],
+    "linguagem-cinematografica:1": [
+      {
+        "type": "spectrum",
+        "title": "Altura da câmera e poder",
+        "from": "De cima (plongée)",
+        "to": "De baixo",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Diminui"
+          },
+          {
+            "at": 0.5,
+            "t": "Igualdade"
+          },
+          {
+            "at": 0.9,
+            "t": "Engrandece"
+          }
+        ],
+        "caption": "O ponto-chave: ângulos não são neutros. Na altura dos olhos há igualdade; a contra-plongée engrandece e a plongée pode diminuir."
+      }
+    ],
+    "linguagem-cinematografica:2": [
+      {
+        "type": "compare",
+        "title": "Movimentos de câmera",
+        "a": "Pan e tilt",
+        "b": "Travelling",
+        "rows": [
+          {
+            "label": "O que é",
+            "a": "Giro horizontal (pan) ou vertical (tilt)",
+            "b": "A câmera se desloca com o personagem"
+          },
+          {
+            "label": "Para que serve",
+            "a": "Revelar espaço ou acompanhar uma ação",
+            "b": "Imersão e continuidade espacial"
+          },
+          {
+            "label": "Exemplo",
+            "a": "Tilt revelando a altura de um prédio",
+            "b": "Seguir um entregador por uma viela"
+          }
+        ],
+        "caption": "Todo movimento precisa de início, meio, fim e motivo narrativo; lento e estável funciona melhor que rápido e tremido."
+      }
+    ],
+    "linguagem-cinematografica:3": [
+      {
+        "type": "hub",
+        "title": "Ferramentas de continuidade",
+        "center": "Corte invisível",
+        "nodes": [
+          {
+            "t": "Eixo de 180 graus"
+          },
+          {
+            "t": "Direção do movimento"
+          },
+          {
+            "t": "Corte na ação"
+          }
+        ],
+        "caption": "O ponto-chave: manter o lado da câmera, o sentido do movimento e cortar durante a ação faz planos diferentes parecerem uma só ação."
+      }
+    ],
+    "fotografia-direcao:0": [
+      {
+        "type": "hub",
+        "title": "As três luzes da cena",
+        "center": "Personagem",
+        "nodes": [
+          {
+            "t": "Luz principal"
+          },
+          {
+            "t": "Preenchimento"
+          },
+          {
+            "t": "Luz de recorte"
+          }
+        ],
+        "caption": "Leia assim: a principal define a forma, o preenchimento controla o contraste e o recorte separa o personagem do fundo."
+      }
+    ],
+    "fotografia-direcao:1": [
+      {
+        "type": "layers",
+        "title": "Planos dentro do plano",
+        "layers": [
+          {
+            "t": "Fundo: rua"
+          },
+          {
+            "t": "Plano médio"
+          },
+          {
+            "t": "Primeiro plano"
+          },
+          {
+            "t": "Foco"
+          }
+        ],
+        "caption": "O ponto-chave: elementos em distâncias diferentes dão profundidade, e a profundidade de campo escolhe qual camada fica nítida."
+      }
+    ],
+    "fotografia-direcao:2": [
+      {
+        "type": "venn",
+        "title": "Elementos visuais que narram",
+        "sets": [
+          "Paleta dominante",
+          "Contraste de cor",
+          "Textura"
+        ],
+        "center": "Atmosfera",
+        "caption": "Leia assim: a atmosfera nasce quando paleta, contraste e textura reforçam a mesma intenção da história."
+      }
+    ],
+    "fotografia-direcao:3": [
+      {
+        "type": "flow",
+        "title": "Do plano à gravação",
+        "steps": [
+          {
+            "t": "Intenção visual",
+            "d": "Que sensação a cena transmite: calma, agitação, solidão?"
+          },
+          {
+            "t": "Lista de planos",
+            "d": "Tamanho, ângulo, movimento, luz e objetivo de cada plano"
+          },
+          {
+            "t": "Condições reais",
+            "d": "Horário do sol, clima, movimento de pessoas e autorizações"
+          },
+          {
+            "t": "Plano alternativo",
+            "d": "Se chover, gravar no pavilhão coberto"
+          }
+        ],
+        "caption": "O ponto-chave: a intenção guia as escolhas técnicas, e planejar evita depender da sorte no dia da gravação."
+      }
+    ],
+    "roteiro-audiovisual:0": [
+      {
+        "type": "cycle",
+        "title": "Roteiro como hipótese",
+        "center": "História verificada",
+        "steps": [
+          {
+            "t": "Hipótese"
+          },
+          {
+            "t": "Cobertura mínima"
+          },
+          {
+            "t": "Gravação"
+          },
+          {
+            "t": "Descobertas"
+          },
+          {
+            "t": "Reescrita"
+          }
+        ],
+        "caption": "Leia assim: o roteiro orienta o que captar, mas é reescrito com o que foi realmente gravado e verificado."
+      }
+    ],
+    "roteiro-audiovisual:1": [
+      {
+        "type": "compare",
+        "title": "Roteiro em duas colunas",
+        "a": "Vídeo",
+        "b": "Áudio",
+        "rows": [
+          {
+            "label": "O que entra",
+            "a": "Tamanho do plano, ação, personagens, texto na tela",
+            "b": "Narração, falas, som ambiente, música e duração"
+          },
+          {
+            "label": "Exemplo",
+            "a": "PG da rua às 7h, vapor das cestas",
+            "b": "Som de óleo (3 s) e narração sobre o horário"
+          },
+          {
+            "label": "Regra",
+            "a": "Mostra o que se vê",
+            "b": "Informa o que a imagem não mostra"
+          }
+        ],
+        "caption": "O ponto-chave: imagem e som se complementam; narrar “vemos um homem cozinhando” sobre a cena é desperdício."
+      }
+    ],
+    "roteiro-audiovisual:2": [
+      {
+        "type": "hub",
+        "title": "Cobertura mínima de uma cena",
+        "center": "Cena editável",
+        "nodes": [
+          {
+            "t": "Plano geral"
+          },
+          {
+            "t": "Plano médio"
+          },
+          {
+            "t": "Detalhe"
+          },
+          {
+            "t": "Inserts e reações"
+          },
+          {
+            "t": "10 s estáveis por plano"
+          },
+          {
+            "t": "30 s de som ambiente"
+          }
+        ],
+        "caption": "Leia assim: sem esses elementos, a edição fica presa a poucas opções e a erros sem conserto."
+      }
+    ],
+    "roteiro-audiovisual:3": [
+      {
+        "type": "flow",
+        "title": "Reescrever depois de gravar",
+        "steps": [
+          {
+            "t": "Revisar o material bruto",
+            "d": "Assistir a tudo e anotar minutagem dos melhores momentos"
+          },
+          {
+            "t": "Ajustar a história",
+            "d": "Seguir o que foi registrado, não o plano original"
+          },
+          {
+            "t": "Reescrever a narração",
+            "d": "Complementar as imagens reais"
+          },
+          {
+            "t": "Cortar o que não tem apoio",
+            "d": "Sem imagem do horário de pico, sem frase sobre ele"
+          }
+        ],
+        "caption": "O ponto-chave: no documental, o roteiro final é fiel ao material captado, mesmo que conte outra história."
+      }
+    ],
+    "captacao-sonora:0": [
+      {
+        "type": "flow",
+        "title": "Antes e durante a gravação",
+        "steps": [
+          {
+            "t": "Pare e escute 10 s",
+            "d": "Ar-condicionado, trânsito, música, vento, eco"
+          },
+          {
+            "t": "Reduza o ruído",
+            "d": "Peça para baixar a música ou mude de lugar"
+          },
+          {
+            "t": "Grave o som direto",
+            "d": "Vozes, ambiente e ações do momento"
+          },
+          {
+            "t": "Monitore com fones",
+            "d": "O microfone capta diferente do seu ouvido"
+          }
+        ],
+        "caption": "Leia assim: o público tolera imagem imperfeita, mas abandona áudio ruim; o som limpo começa antes de apertar gravar."
+      }
+    ],
+    "captacao-sonora:1": [
+      {
+        "type": "spectrum",
+        "title": "Distância do microfone à boca",
+        "from": "Perto",
+        "to": "Longe",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Lapela"
+          },
+          {
+            "at": 0.45,
+            "t": "Direcional"
+          },
+          {
+            "at": 0.9,
+            "t": "Embutido"
+          }
+        ],
+        "caption": "O ponto-chave: quanto mais perto da boca, mais clara a voz e menor o ruído; a posição pesa mais que o preço do equipamento."
+      }
+    ],
+    "captacao-sonora:2": [
+      {
+        "type": "hub",
+        "title": "Funções do som ambiente",
+        "center": "Som ambiente",
+        "nodes": [
+          {
+            "t": "Situa o público"
+          },
+          {
+            "t": "Cria atmosfera"
+          },
+          {
+            "t": "Cobre transições"
+          },
+          {
+            "t": "Antecipa a cena"
+          },
+          {
+            "t": "Cria contraste"
+          }
+        ],
+        "caption": "Leia assim: som ambiente não é ruído, é a assinatura do lugar; grave de 30 a 60 segundos limpos de cada locação."
+      }
+    ],
+    "captacao-sonora:3": [
+      {
+        "type": "timeline",
+        "title": "Roteiro de uma entrevista limpa",
+        "events": [
+          {
+            "when": "Antes",
+            "t": "Prepare o ambiente",
+            "d": "Local silencioso, sem vidro e longe da porta"
+          },
+          {
+            "when": "Início",
+            "t": "Teste de voz",
+            "d": "Nome, café da manhã, ajuste do ganho nos fones"
+          },
+          {
+            "when": "Durante",
+            "t": "Silêncio do repórter",
+            "d": "Acenos em vez de “aham” sobre as respostas"
+          },
+          {
+            "when": "Sempre",
+            "t": "Monitoramento",
+            "d": "Fones ligados do começo ao fim"
+          }
+        ],
+        "caption": "O ponto-chave: a entrevista é onde todas as técnicas de som se encontram, da escolha do local ao silêncio de quem pergunta."
+      }
+    ],
+    "edicao-pos:0": [
+      {
+        "type": "flow",
+        "title": "Organizar antes de cortar",
+        "steps": [
+          {
+            "t": "Pastas e nomes",
+            "d": "Vídeo, áudio, imagens e música; data, local e conteúdo"
+          },
+          {
+            "t": "Decupagem",
+            "d": "Minutagem de falas fortes e problemas técnicos"
+          },
+          {
+            "t": "Seleção de takes",
+            "d": "Foco, estabilidade, som e conteúdo decidem"
+          },
+          {
+            "t": "Edição",
+            "d": "Começa com o material conhecido e escolhido"
+          }
+        ],
+        "caption": "Leia assim: cada etapa reduz o material a decidir, e a organização inicial economiza horas na ilha de edição."
+      }
+    ],
+    "edicao-pos:1": [
+      {
+        "type": "spectrum",
+        "title": "Duração do plano e ritmo",
+        "from": "Curtos",
+        "to": "Longos",
+        "marks": [
+          {
+            "at": 0.1,
+            "t": "Close simples"
+          },
+          {
+            "at": 0.5,
+            "t": "Plano médio"
+          },
+          {
+            "at": 0.9,
+            "t": "Geral cheio"
+          }
+        ],
+        "caption": "O ponto-chave: a duração acompanha a quantidade de informação; corte quando ela foi entregue, numa ação ou num som."
+      }
+    ],
+    "edicao-pos:2": [
+      {
+        "type": "pyramid",
+        "title": "Hierarquia da camada sonora",
+        "layers": [
+          {
+            "t": "Voz",
+            "d": "sempre clara"
+          },
+          {
+            "t": "Som ambiente",
+            "d": "abaixo da voz"
+          },
+          {
+            "t": "Música",
+            "d": "só com função"
+          },
+          {
+            "t": "Silêncio",
+            "d": "pausa com um mínimo de ambiente"
+          }
+        ],
+        "caption": "Leia assim: tudo fica abaixo da voz. Se a história só funciona com música, o problema está na montagem."
+      }
+    ],
+    "edicao-pos:3": [
+      {
+        "type": "hub",
+        "title": "Acabamento do vídeo",
+        "center": "Últimos 10%",
+        "nodes": [
+          {
+            "t": "Correção de cor"
+          },
+          {
+            "t": "Mixagem de áudio"
+          },
+          {
+            "t": "Legendas"
+          },
+          {
+            "t": "Créditos"
+          },
+          {
+            "t": "Exportação"
+          }
+        ],
+        "caption": "O ponto-chave: o acabamento torna o vídeo contínuo e acessível, sem filtros que alterem a realidade documental."
+      }
+    ],
+    "documentario:0": [
+      {
+        "type": "compare",
+        "title": "Premissa fraca × premissa forte",
+        "a": "Premissa fraca",
+        "b": "Premissa forte",
+        "rows": [
+          {
+            "label": "Formato",
+            "a": "Afirmação que já traz a resposta",
+            "b": "Pergunta aberta e específica"
+          },
+          {
+            "label": "Exemplo",
+            "a": "“Mostrar que os lilongs são lindos”",
+            "b": "“O que acontece com a vida comunitária na reforma?”"
+          },
+          {
+            "label": "Teste de viabilidade",
+            "a": "Ignorado",
+            "b": "Personagens, acesso e tempo para acompanhar"
+          }
+        ],
+        "caption": "Leia assim: a boa premissa permite descobertas, e a pesquisa prévia ajusta a pergunta à realidade antes de gravar."
+      }
+    ],
+    "documentario:1": [
+      {
+        "type": "venn",
+        "title": "O bom personagem",
+        "sets": [
+          "Ligado à pergunta",
+          "Disposto a participar",
+          "Tem algo em jogo"
+        ],
+        "center": "Personagem",
+        "caption": "O ponto-chave: personagens são encontrados, não inventados, e o conflito real é a tensão entre desejo e obstáculo."
+      }
+    ],
+    "documentario:2": [
+      {
+        "type": "spectrum",
+        "title": "Grau de interferência",
+        "from": "Observar",
+        "to": "Dirigir",
+        "marks": [
+          {
+            "at": 0.08,
+            "t": "Câmera fixa"
+          },
+          {
+            "at": 0.32,
+            "t": "Lente média"
+          },
+          {
+            "at": 0.55,
+            "t": "Câmera móvel"
+          },
+          {
+            "at": 0.78,
+            "t": "Pedir ação"
+          }
+        ],
+        "caption": "Leia assim: quanto mais à esquerda, menos a equipe altera a cena; paciência e equipamento discreto deixam a vida acontecer."
+      }
+    ],
+    "documentario:3": [
+      {
+        "type": "timeline",
+        "title": "Estrutura em três atos",
+        "events": [
+          {
+            "when": "Ato 1",
+            "t": "Apresentação",
+            "d": "Pergunta e personagens: o lilong e a moradora"
+          },
+          {
+            "when": "Ato 2",
+            "t": "Desenvolvimento",
+            "d": "Conflitos e descobertas: a notícia da reforma"
+          },
+          {
+            "when": "Ato 3",
+            "t": "Desfecho",
+            "d": "Mudança ou reflexão meses depois"
+          }
+        ],
+        "caption": "O ponto-chave: reorganizar cenas é comum, mas a montagem nunca pode criar relações de causa que não existiram."
+      }
+    ],
+    "jornalismo-digital:0": [
+      {
+        "type": "pyramid",
+        "inverted": true,
+        "title": "Camadas de profundidade",
+        "layers": [
+          {
+            "t": "Título e intertítulos",
+            "d": "funcionam na varredura"
+          },
+          {
+            "t": "Resumo em tópicos",
+            "d": "para quem tem pressa"
+          },
+          {
+            "t": "Texto completo",
+            "d": "contexto"
+          },
+          {
+            "t": "Links",
+            "d": "fontes"
+          }
+        ],
+        "caption": "Leia assim: todos passam pelo topo, poucos chegam aos links e documentos; cada camada precisa ser útil por si."
+      }
+    ],
+    "jornalismo-digital:1": [
+      {
+        "type": "hub",
+        "title": "O que cada formato conta melhor",
+        "center": "Reportagem",
+        "nodes": [
+          {
+            "t": "Texto: contexto"
+          },
+          {
+            "t": "Foto: momento"
+          },
+          {
+            "t": "Vídeo: ação"
+          },
+          {
+            "t": "Áudio: voz"
+          },
+          {
+            "t": "Gráfico: comparação"
+          }
+        ],
+        "caption": "O ponto-chave: multiformato não é repetir; é dar a cada formato a parte da história que ele conta melhor, com dados idênticos."
+      }
+    ],
+    "jornalismo-digital:2": [
+      {
+        "type": "flow",
+        "title": "Checklist antes de publicar",
+        "steps": [
+          {
+            "t": "Nomes, números e datas",
+            "d": "Conferidos contra a apuração"
+          },
+          {
+            "t": "Links e créditos",
+            "d": "Clicar em todos e checar a fonte de destino"
+          },
+          {
+            "t": "Título fiel",
+            "d": "Promete só o que o conteúdo demonstra"
+          },
+          {
+            "t": "Correção transparente",
+            "d": "Se errar, dizer o que mudou e quando"
+          }
+        ],
+        "caption": "Leia assim: a rotina leva minutos e evita erros que se espalham rápido e são difíceis de corrigir."
+      }
+    ],
+    "jornalismo-digital:3": [
+      {
+        "type": "flow",
+        "title": "Arquitetura da página",
+        "steps": [
+          {
+            "t": "Título e resumo",
+            "d": "A promessa e o essencial para quem tem pressa"
+          },
+          {
+            "t": "Mídia principal",
+            "d": "Vídeo ou foto que abre a história"
+          },
+          {
+            "t": "Texto com intertítulos",
+            "d": "Com fotos e gráfico intercalados"
+          },
+          {
+            "t": "Fontes e créditos",
+            "d": "Data, autor, método: “Como fizemos”"
+          },
+          {
+            "t": "Teste com um leitor",
+            "d": "Ajustar o que gerou confusão"
+          }
+        ],
+        "caption": "O ponto-chave: a história integrada combina estrutura, multiformato e verificação numa ordem clara para o leitor."
+      }
+    ],
+    "producao-youtube:0": [
+      {
+        "type": "flow",
+        "title": "Da ideia à promessa",
+        "steps": [
+          {
+            "t": "Tema",
+            "d": "Comida de rua"
+          },
+          {
+            "t": "Pergunta",
+            "d": "“O que dá para comer bem em Xangai com 30 yuan?”"
+          },
+          {
+            "t": "Público e nível",
+            "d": "Brasileiros que nunca foram à China"
+          },
+          {
+            "t": "Entrega ao final",
+            "d": "Lista de cinco comidas, preços e onde achar"
+          }
+        ],
+        "caption": "Leia assim: transformar o tema em pergunta dá direção ao episódio, e a entrega final é a promessa a cumprir."
+      }
+    ],
+    "producao-youtube:1": [
+      {
+        "type": "timeline",
+        "title": "Os primeiros 30 segundos",
+        "events": [
+          {
+            "when": "00:00",
+            "t": "Gancho honesto",
+            "d": "O melhor momento do episódio, que aparece depois"
+          },
+          {
+            "when": "00:10",
+            "t": "Promessa explícita",
+            "d": "O que o episódio vai entregar"
+          },
+          {
+            "when": "00:30",
+            "t": "Primeira troca",
+            "d": "Da fala para câmera à cena na barraca"
+          },
+          {
+            "when": "A cada 30 s",
+            "t": "Ritmo variado",
+            "d": "Cenas, entrevistas, gráficos e reações"
+          }
+        ],
+        "caption": "O ponto-chave: a abertura mostra promessa e tom sem iscas falsas; os horários são referência, não regra fixa."
+      }
+    ],
+    "producao-youtube:2": [
+      {
+        "type": "timeline",
+        "title": "Capítulos com progressão",
+        "events": [
+          {
+            "when": "Cap. 1",
+            "t": "Introdução",
+            "d": "Pergunta central e regras do teste"
+          },
+          {
+            "when": "Cap. 2",
+            "t": "Jianbing",
+            "d": "Primeira parte da resposta"
+          },
+          {
+            "when": "Cap. 3",
+            "t": "Shengjianbao",
+            "d": "O pão frito com caldo"
+          },
+          {
+            "when": "Cap. 4",
+            "t": "Cong you bing",
+            "d": "Mais uma comida avaliada"
+          },
+          {
+            "when": "Cap. 5",
+            "t": "Comparação final",
+            "d": "Clímax: avaliação e recomendação"
+          }
+        ],
+        "caption": "Leia assim: cada capítulo responde a uma parte da pergunta, e a conclusão fica para o momento de maior expectativa."
+      }
+    ],
+    "producao-youtube:3": [
+      {
+        "type": "matrix",
+        "title": "CTR × retenção",
+        "x": [
+          "CTR baixo",
+          "CTR alto"
+        ],
+        "y": [
+          "Retenção baixa",
+          "Retenção alta"
+        ],
+        "cells": [
+          {
+            "t": "Bom vídeo escondido",
+            "d": "Conteúdo segura, mas título e miniatura não atraem"
+          },
+          {
+            "t": "Promessa cumprida",
+            "d": "Atrai e mantém o público"
+          },
+          {
+            "t": "Rever tudo",
+            "d": "Nem atrai nem mantém"
+          },
+          {
+            "t": "Promessa não cumprida",
+            "d": "Atrai cliques que o vídeo não sustenta"
+          }
+        ],
+        "caption": "O ponto-chave: uma métrica sem a outra engana; leia CTR e retenção juntos antes de decidir o que mudar."
+      }
+    ],
+    "producao-redes:0": [
+      {
+        "type": "timeline",
+        "title": "Os primeiros segundos do vídeo",
+        "caption": "Leia assim: o mais forte vem no segundo zero, o texto situa quem assiste sem som, e a promessa do gancho é cumprida até o fim.",
+        "events": [
+          {
+            "when": "0 s",
+            "t": "Imagem ou fato mais forte",
+            "d": "Vapor de 20 cestas de bambu, sem introdução"
+          },
+          {
+            "when": "1–3 s",
+            "t": "Pergunta ou texto na tela",
+            "d": "“Quantos bolinhos essa banca vende por dia?”"
+          },
+          {
+            "when": "Meio",
+            "t": "Desenvolvimento",
+            "d": "Informações que respondem ao gancho"
+          },
+          {
+            "when": "Fim",
+            "t": "Gancho resolvido",
+            "d": "A resposta prometida aparece no próprio vídeo"
+          }
+        ]
+      },
+      {
+        "type": "compare",
+        "title": "Gancho verdadeiro × isca falsa",
+        "a": "Gancho verdadeiro",
+        "b": "Isca falsa",
+        "caption": "O ponto-chave: o gancho é uma promessa; se o vídeo não a cumpre, a atenção vira frustração e desconfiança.",
+        "rows": [
+          {
+            "label": "Exemplo",
+            "a": "“Quantos bolinhos essa banca vende por dia?”",
+            "b": "“Você não vai acreditar” sobre algo comum"
+          },
+          {
+            "label": "Resolução",
+            "a": "Respondido no próprio vídeo",
+            "b": "Promessa que o conteúdo não cumpre"
+          },
+          {
+            "label": "Efeito",
+            "a": "Atenção com confiança",
+            "b": "Frustração e desconfiança"
+          }
+        ]
+      }
+    ],
+    "producao-redes:1": [
+      {
+        "type": "timeline",
+        "title": "Um minuto em quatro tempos",
+        "caption": "Leia assim: cada trecho tem uma função e um tempo; como cabe uma só ideia central, tudo o que não a serve fica para outro vídeo.",
+        "events": [
+          {
+            "when": "0–3 s",
+            "t": "Gancho",
+            "d": "O vapor saindo das cestas"
+          },
+          {
+            "when": "3–10 s",
+            "t": "Contexto mínimo",
+            "d": "“Esta banca funciona há 40 anos”"
+          },
+          {
+            "when": "10–50 s",
+            "t": "Desenvolvimento",
+            "d": "Duas ou três informações: preço, vendas, fala do dono"
+          },
+          {
+            "when": "Final",
+            "t": "Fechamento",
+            "d": "“Endereço na legenda — e chegue antes das 8h.”"
+          }
+        ]
+      }
+    ],
+    "producao-redes:2": [
+      {
+        "type": "hub",
+        "title": "O que a tela vertical exige",
+        "center": "Tela vertical",
+        "caption": "O ponto-chave: na tela pequena, legibilidade é acessibilidade; elemento central, texto curto e fora das áreas cobertas pela interface.",
+        "nodes": [
+          {
+            "t": "Elemento no centro"
+          },
+          {
+            "t": "Planos fechados e médios"
+          },
+          {
+            "t": "Nada nos 20% inferiores"
+          },
+          {
+            "t": "5 a 7 palavras por bloco"
+          },
+          {
+            "t": "Fonte grande, contraste"
+          },
+          {
+            "t": "Legendas sincronizadas"
+          }
+        ]
+      }
+    ],
+    "producao-redes:3": [
+      {
+        "type": "layers",
+        "title": "O que não pode sumir no corte",
+        "caption": "Leia de fora para dentro: corte o que for preciso, mas o núcleo nunca vai sozinho; data, local, fonte e ressalvas o acompanham.",
+        "layers": [
+          {
+            "t": "Link para a reportagem"
+          },
+          {
+            "t": "Ressalvas e limites"
+          },
+          {
+            "t": "Data, local e fonte"
+          },
+          {
+            "t": "Núcleo"
+          }
+        ]
+      }
+    ],
+    "design-editorial:0": [
+      {
+        "type": "pyramid",
+        "inverted": true,
+        "title": "Níveis de hierarquia",
+        "caption": "Leia assim: cada nível precisa ser claramente distinto do seguinte; três ou quatro níveis bastam para guiar a ordem de leitura.",
+        "layers": [
+          {
+            "t": "Título",
+            "d": "32 pt negrito, serifada editorial"
+          },
+          {
+            "t": "Subtítulo",
+            "d": "18 pt regular"
+          },
+          {
+            "t": "Intertítulo",
+            "d": "separa blocos"
+          },
+          {
+            "t": "Texto",
+            "d": "12 pt"
+          }
+        ]
+      }
+    ],
+    "design-editorial:1": [
+      {
+        "type": "thirds",
+        "title": "Imagem e título em diálogo",
+        "caption": "O ponto-chave: o ponto focal fica num terço e o olhar do personagem conduz ao título, posto sobre área lisa e de bom contraste.",
+        "points": [
+          {
+            "t": "Rosto em close",
+            "row": 1,
+            "col": 1
+          },
+          {
+            "t": "Título à direita",
+            "row": 1,
+            "col": 2
+          }
+        ]
+      }
+    ],
+    "design-editorial:2": [
+      {
+        "type": "hub",
+        "title": "As peças de um sistema editorial",
+        "center": "Sistema editorial",
+        "caption": "O ponto-chave: regras fixas que se repetem de página em página criam identidade e aceleram a produção.",
+        "nodes": [
+          {
+            "t": "Grid de colunas"
+          },
+          {
+            "t": "Paleta fixa"
+          },
+          {
+            "t": "Estilos de texto"
+          },
+          {
+            "t": "Modelo de legenda"
+          },
+          {
+            "t": "Box “Como fizemos”"
+          },
+          {
+            "t": "Modelo de gráfico"
+          }
+        ]
+      }
+    ],
+    "design-editorial:3": [
+      {
+        "type": "venn",
+        "title": "O que faz uma boa miniatura",
+        "sets": [
+          "Legível no celular",
+          "Casa com o título",
+          "Fiel ao vídeo"
+        ],
+        "center": "Boa miniatura",
+        "caption": "Leia assim: a miniatura só funciona quando os três critérios se cruzam; falhar na fidelidade transforma a promessa em engano."
+      }
+    ],
+    "audiencia-estrategia:0": [
+      {
+        "type": "cycle",
+        "title": "Conhecer o público é contínuo",
+        "center": "Público real",
+        "caption": "Leia assim: perfis e necessidades orientam o que se produz, e a escuta dos comentários corrige os perfis a cada volta.",
+        "steps": [
+          {
+            "t": "Descrever perfis"
+          },
+          {
+            "t": "Mapear necessidades"
+          },
+          {
+            "t": "Definir tema e formato"
+          },
+          {
+            "t": "Escutar comentários"
+          },
+          {
+            "t": "Registrar e analisar"
+          }
+        ]
+      }
+    ],
+    "audiencia-estrategia:1": [
+      {
+        "type": "hub",
+        "title": "Caminhos da distribuição",
+        "center": "Distribuição",
+        "caption": "O ponto-chave: ser encontrado depende de adaptar o conteúdo a cada plataforma, falar como o público busca e cultivar comunidade.",
+        "nodes": [
+          {
+            "t": "Plataforma certa"
+          },
+          {
+            "t": "Formato adaptado"
+          },
+          {
+            "t": "Momento adequado"
+          },
+          {
+            "t": "Termos que o público usa"
+          },
+          {
+            "t": "Recomendação"
+          },
+          {
+            "t": "Comunidade"
+          }
+        ]
+      }
+    ],
+    "audiencia-estrategia:2": [
+      {
+        "type": "compare",
+        "title": "Métricas de vaidade × úteis",
+        "a": "Vaidade",
+        "b": "Úteis",
+        "caption": "O ponto-chave: números grandes impressionam, mas retenção e retorno do público dizem mais sobre a qualidade do conteúdo.",
+        "rows": [
+          {
+            "label": "Exemplos",
+            "a": "Visualizações e seguidores",
+            "b": "Retenção, comentários relevantes, público que volta"
+          },
+          {
+            "label": "O que indicam",
+            "a": "Alcance, que impressiona",
+            "b": "Qualidade e relação com o público"
+          }
+        ]
+      },
+      {
+        "type": "flow",
+        "title": "Antes de concluir o que funcionou",
+        "caption": "Leia assim: um número só vira conclusão depois de comparado com conteúdos semelhantes e testado com uma mudança isolada.",
+        "steps": [
+          {
+            "t": "Formule a pergunta",
+            "d": "O que você quer saber com o dado?"
+          },
+          {
+            "t": "Compare com o semelhante",
+            "d": "Seus conteúdos parecidos, no mesmo período"
+          },
+          {
+            "t": "Considere fatores externos",
+            "d": "Feriados, Semana Dourada, algoritmo"
+          },
+          {
+            "t": "Teste uma mudança isolada",
+            "d": "Dois títulos para o mesmo tipo de conteúdo"
+          }
+        ]
+      }
+    ],
+    "audiencia-estrategia:3": [
+      {
+        "type": "flow",
+        "title": "Como planejar uma série",
+        "caption": "O ponto-chave: os indicadores de sucesso são definidos antes da estreia e avaliados só depois de alguns episódios.",
+        "steps": [
+          {
+            "t": "Conceito",
+            "d": "“Uma rua por semana”: amplo e com identidade"
+          },
+          {
+            "t": "Formato fixo",
+            "d": "Esquina, três personagens, um dado, uma dica"
+          },
+          {
+            "t": "Frequência",
+            "d": "Ritmo regular que cria hábito"
+          },
+          {
+            "t": "Indicadores definidos",
+            "d": "Retenção acima de 50%, 10 comentários com perguntas"
+          },
+          {
+            "t": "Avaliação",
+            "d": "Após alguns episódios, não no primeiro"
+          }
+        ]
+      }
+    ],
+    "jornalismo-cultural:0": [
+      {
+        "type": "venn",
+        "title": "Os três contextos de uma obra",
+        "sets": [
+          "Contexto histórico",
+          "Contexto social",
+          "Contexto estético"
+        ],
+        "center": "Obra explicada",
+        "caption": "Leia assim: a obra se explica no cruzamento de quando nasceu, de quem produz e consome, e das linguagens que usa ou rompe."
+      }
+    ],
+    "jornalismo-cultural:1": [
+      {
+        "type": "pyramid",
+        "title": "A crítica se apoia na descrição",
+        "caption": "Leia de baixo para cima: a opinião só se sustenta sobre critérios explícitos, e os critérios, sobre uma descrição precisa.",
+        "layers": [
+          {
+            "t": "Opinião",
+            "d": "assumida e argumentada"
+          },
+          {
+            "t": "Critérios",
+            "d": "coerência, inovação, execução"
+          },
+          {
+            "t": "Descrição precisa",
+            "d": "formas, cores, sons, espaço"
+          }
+        ]
+      }
+    ],
+    "jornalismo-cultural:2": [
+      {
+        "type": "cycle",
+        "title": "Como o repertório cresce",
+        "center": "Repertório",
+        "caption": "Leia assim: cada obra vista, cada fonte lida e cada anotação no caderno alimentam a próxima reportagem.",
+        "steps": [
+          {
+            "t": "Ver a obra"
+          },
+          {
+            "t": "Fontes primárias"
+          },
+          {
+            "t": "Fontes especializadas"
+          },
+          {
+            "t": "Caderno de repertório"
+          },
+          {
+            "t": "Nova reportagem"
+          }
+        ]
+      }
+    ],
+    "jornalismo-cultural:3": [
+      {
+        "type": "compare",
+        "title": "Informação e voz na crônica",
+        "a": "Informação",
+        "b": "Voz pessoal",
+        "caption": "O ponto-chave: a crônica de evento admite impressões, desde que fiquem marcadas como pessoais e nunca se passem por fatos.",
+        "rows": [
+          {
+            "label": "Exemplo",
+            "a": "“Segundo a organização, foram vendidos 480 ingressos.”",
+            "b": "“Para mim, o melhor momento veio no fim.”"
+          },
+          {
+            "label": "Como marcar",
+            "a": "Dado confirmado e atribuído à fonte",
+            "b": "Primeira pessoa, impressão declarada"
+          },
+          {
+            "label": "O que dá ao público",
+            "a": "Entender o que aconteceu",
+            "b": "Sentir o evento"
+          }
+        ]
+      }
+    ],
+    "jornalismo-moda:0": [
+      {
+        "type": "flow",
+        "title": "Da vitrine à hipótese",
+        "caption": "Leia assim: primeiro registrar, depois analisar e só então propor uma leitura, sempre qualificada como inferência.",
+        "steps": [
+          {
+            "t": "Observe sem rotular",
+            "d": "Itens, cores, silhuetas, repetição, luz"
+          },
+          {
+            "t": "Analise a execução",
+            "d": "Modelagem, ajuste e acabamento visível"
+          },
+          {
+            "t": "Construa a hipótese",
+            "d": "“A apresentação sugere…”, como inferência"
+          },
+          {
+            "t": "Separe da declaração",
+            "d": "Leitura própria não é posição oficial da marca"
+          }
+        ]
+      }
+    ],
+    "jornalismo-moda:1": [
+      {
+        "type": "compare",
+        "title": "Do vago ao técnico",
+        "a": "Vago",
+        "b": "Preciso",
+        "caption": "O ponto-chave: vocabulário de fibra, construção e acabamento permite comparar qualidade e preço com critério.",
+        "rows": [
+          {
+            "label": "Fibra e tecido",
+            "a": "“Camisa leve e bonita”",
+            "b": "“Camisa de linho lavado, com textura levemente irregular”"
+          },
+          {
+            "label": "Construção",
+            "a": "“Ombro bem feito”",
+            "b": "“Ombro estruturado com entretela”"
+          },
+          {
+            "label": "Acabamento",
+            "a": "“Estampa caprichada”",
+            "b": "“Estampa alinhada na costura lateral”"
+          }
+        ]
+      }
+    ],
+    "jornalismo-moda:2": [
+      {
+        "type": "hub",
+        "title": "O que a loja comunica",
+        "center": "Posicionamento",
+        "caption": "Leia assim: cada escolha do varejo é um sinal de posicionamento, da loja pequena e intimista à rede global de três andares.",
+        "nodes": [
+          {
+            "t": "Localização"
+          },
+          {
+            "t": "Layout"
+          },
+          {
+            "t": "Iluminação"
+          },
+          {
+            "t": "Música"
+          },
+          {
+            "t": "Atendimento"
+          },
+          {
+            "t": "Comportamento do cliente"
+          }
+        ]
+      },
+      {
+        "type": "spectrum",
+        "title": "Até onde a observação vai",
+        "from": "Observação local",
+        "to": "Tendência geral",
+        "caption": "O ponto-chave: quanto mais ampla a afirmação, mais evidência ela exige; uma loja não representa uma cidade.",
+        "marks": [
+          {
+            "at": 0.05,
+            "t": "Nesta loja"
+          },
+          {
+            "at": 0.35,
+            "t": "Nesta rua"
+          },
+          {
+            "at": 0.5,
+            "t": "Entrevistas"
+          },
+          {
+            "at": 0.65,
+            "t": "Dados"
+          },
+          {
+            "at": 0.95,
+            "t": "Várias fontes"
+          }
+        ]
+      }
+    ],
+    "jornalismo-moda:3": [
+      {
+        "type": "flow",
+        "title": "Reportagem de moda de rua",
+        "caption": "Leia assim: o consentimento vem antes da foto, e a descrição técnica só se completa com o contexto contado pela pessoa.",
+        "steps": [
+          {
+            "t": "Escolha pelo tema",
+            "d": "Diversidade de idades e estilos, não só impacto"
+          },
+          {
+            "t": "Peça consentimento",
+            "d": "Explique o uso e respeite recusas"
+          },
+          {
+            "t": "Fotografe",
+            "d": "Com o rosto apenas se autorizado"
+          },
+          {
+            "t": "Descreva as peças",
+            "d": "Material, marca, origem"
+          },
+          {
+            "t": "Acrescente contexto",
+            "d": "Clima, ocasião e as escolhas da pessoa"
+          }
+        ]
+      }
+    ],
+    "jornalismo-urbano:0": [
+      {
+        "type": "hub",
+        "title": "O que compõe uma rua",
+        "center": "Rua",
+        "caption": "O ponto-chave: observar a rua com método é registrar cada dimensão sem inferir quem vive ou trabalha ali.",
+        "nodes": [
+          {
+            "t": "Circulação"
+          },
+          {
+            "t": "Permanência"
+          },
+          {
+            "t": "Paisagem"
+          },
+          {
+            "t": "Comércio e usos"
+          },
+          {
+            "t": "Acessibilidade"
+          },
+          {
+            "t": "Escala humana"
+          }
+        ]
+      }
+    ],
+    "jornalismo-urbano:1": [
+      {
+        "type": "venn",
+        "title": "Três fontes sobre mobilidade",
+        "sets": [
+          "Observação",
+          "Dados",
+          "Relato de usuários"
+        ],
+        "center": "Reportagem",
+        "caption": "Leia assim: dados mostram tempos e custos, a observação checa rampas e elevadores, e quem faz o trajeto revela o que os dados não mostram."
+      }
+    ],
+    "jornalismo-urbano:2": [
+      {
+        "type": "hub",
+        "title": "Elementos da forma urbana",
+        "center": "Forma da cidade",
+        "caption": "O ponto-chave: largura, altura, quarteirões e camadas históricas ajudam a explicar por que um lugar é agradável, hostil ou transformado.",
+        "nodes": [
+          {
+            "t": "Largura × altura"
+          },
+          {
+            "t": "Tamanho dos quarteirões"
+          },
+          {
+            "t": "Densidade de cruzamentos"
+          },
+          {
+            "t": "Usos mistos no térreo"
+          },
+          {
+            "t": "Espaços abertos"
+          },
+          {
+            "t": "Camadas históricas"
+          }
+        ]
+      }
+    ],
+    "jornalismo-urbano:3": [
+      {
+        "type": "timeline",
+        "title": "Um percurso pela rua Wukang",
+        "caption": "Leia assim: o trajeto tem início, paradas com significado e fim; entre elas, a narração usa referências espaciais e mudanças sensoriais.",
+        "events": [
+          {
+            "when": "Início",
+            "t": "Saída do metrô",
+            "d": "“Ao deixar a avenida, o barulho diminui”"
+          },
+          {
+            "when": "Parada 1",
+            "t": "Prédio Normandie",
+            "d": "Contexto do edifício, com fonte"
+          },
+          {
+            "when": "Parada 2",
+            "t": "Livraria",
+            "d": "Encontro e conversa com um morador"
+          },
+          {
+            "when": "Parada 3",
+            "t": "Casa antiga",
+            "d": "Observação marcada como observação"
+          },
+          {
+            "when": "Fim",
+            "t": "Fim da rua",
+            "d": "Fecho do percurso e da progressão"
+          }
+        ]
+      }
+    ],
+    "jornalismo-viagens:0": [
+      {
+        "type": "compare",
+        "title": "Preferência × fato",
+        "a": "Preferência",
+        "b": "Fato",
+        "caption": "O ponto-chave: a experiência do autor é uma amostra; separar gosto de informação permite que o público decida por conta própria.",
+        "rows": [
+          {
+            "label": "Exemplo",
+            "a": "“Achei o passeio cansativo”",
+            "b": "“São 2,5 km de caminhada sem sombra”"
+          },
+          {
+            "label": "Outros casos",
+            "a": "Gostar ou não de um lugar",
+            "b": "Preço, horário e acesso"
+          },
+          {
+            "label": "Como apresentar",
+            "a": "Com quando e em que condições foi vivida",
+            "b": "Verificado e com fonte"
+          }
+        ]
+      }
+    ],
+    "jornalismo-viagens:1": [
+      {
+        "type": "flow",
+        "title": "Da pesquisa ao campo",
+        "caption": "Leia assim: a pesquisa prévia prepara a viagem, mas tudo o que pode mudar é confirmado no local ou em fonte oficial atualizada.",
+        "steps": [
+          {
+            "t": "Fontes atualizadas",
+            "d": "Site oficial, não blog de três anos atrás"
+          },
+          {
+            "t": "Cruze e cheque datas",
+            "d": "Compare fontes e veja quando foram publicadas"
+          },
+          {
+            "t": "Contexto do destino",
+            "d": "História, costumes, clima, calendário local"
+          },
+          {
+            "t": "Lista de campo",
+            "d": "Preços, horários, acesso, regras de foto"
+          },
+          {
+            "t": "Confirme no local",
+            "d": "Ingresso na hora ou só por aplicativo?"
+          }
+        ]
+      }
+    ],
+    "jornalismo-viagens:2": [
+      {
+        "type": "hub",
+        "title": "O box de serviço",
+        "center": "Serviço",
+        "caption": "O ponto-chave: a informação mais usada pelo público precisa estar completa, fácil de achar e acompanhada da data e da fonte.",
+        "nodes": [
+          {
+            "t": "Endereço"
+          },
+          {
+            "t": "Metrô e saída"
+          },
+          {
+            "t": "Horário"
+          },
+          {
+            "t": "Preço"
+          },
+          {
+            "t": "Data e fonte da checagem"
+          },
+          {
+            "t": "Reservas e restrições"
+          }
+        ]
+      }
+    ],
+    "jornalismo-viagens:3": [
+      {
+        "type": "timeline",
+        "title": "Um dia em Xangai contado",
+        "caption": "Leia assim: o roteiro segue o tempo do dia e alterna cena e serviço; no fim, tudo é revisado e datado antes de publicar.",
+        "events": [
+          {
+            "when": "Manhã",
+            "t": "Jardim Yuyuan",
+            "d": "Cena do jardim + box com preço, horário e filas"
+          },
+          {
+            "when": "Almoço",
+            "t": "Rua Yunnan",
+            "d": "Deslocamento e tempo indicados"
+          },
+          {
+            "when": "Tarde",
+            "t": "Bund",
+            "d": "Experiência e informação prática alternadas"
+          },
+          {
+            "when": "Noite",
+            "t": "Lujiazui",
+            "d": "Fecho do percurso"
+          },
+          {
+            "when": "Ao publicar",
+            "t": "Verificação final",
+            "d": "“Informações verificadas entre 10 e 14/10/2026”"
+          }
+        ]
+      }
+    ],
+    "jornalismo-gastronomia:0": [
+      {
+        "type": "hub",
+        "title": "O vocabulário dos sentidos",
+        "center": "Prato",
+        "caption": "O ponto-chave: “delicioso” não informa; descrever sabor, textura, temperatura, aroma e aparência mostra o prato ao público.",
+        "nodes": [
+          {
+            "t": "Sabor"
+          },
+          {
+            "t": "Textura"
+          },
+          {
+            "t": "Temperatura"
+          },
+          {
+            "t": "Aroma"
+          },
+          {
+            "t": "Aparência"
+          }
+        ]
+      }
+    ],
+    "jornalismo-gastronomia:1": [
+      {
+        "type": "compare",
+        "title": "A técnica explica a textura",
+        "a": "Base",
+        "b": "Topo",
+        "caption": "Leia assim: no shengjianbao, frito numa face e cozido no vapor ao mesmo tempo, cada técnica produz uma textura diferente.",
+        "rows": [
+          {
+            "label": "Técnica",
+            "a": "Fritura em contato com a panela",
+            "b": "Vapor"
+          },
+          {
+            "label": "Resultado",
+            "a": "Crocante",
+            "b": "Macio"
+          }
+        ]
+      }
+    ],
+    "jornalismo-gastronomia:2": [
+      {
+        "type": "compare",
+        "title": "Exotismo × contexto",
+        "a": "Exotismo",
+        "b": "Contexto",
+        "caption": "O ponto-chave: explicar origem e significado com fontes, e comparar com referências do público, substitui o estranhamento pelo entendimento.",
+        "rows": [
+          {
+            "label": "Vocabulário",
+            "a": "“Bizarro”, “estranho”, “nojento”",
+            "b": "Tofu fermentado comparado a queijos curados"
+          },
+          {
+            "label": "Origem",
+            "a": "Prato apresentado sem história",
+            "b": "Procedência e migrações que o trouxeram a Xangai"
+          },
+          {
+            "label": "Significado",
+            "a": "Comida como curiosidade",
+            "b": "Yuebing ligado ao Festival do Meio do Outono"
+          }
+        ]
+      }
+    ],
+    "jornalismo-gastronomia:3": [
+      {
+        "type": "flow",
+        "title": "A refeição como narrativa",
+        "caption": "Leia assim: o ambiente abre a cena, os pratos seguem a ordem servida e o serviço fecha com preço e quem pagou.",
+        "steps": [
+          {
+            "t": "Ambiente e pessoas",
+            "d": "Doze mesas, cozinha aberta, clientes pelo nome"
+          },
+          {
+            "t": "Entrada fria",
+            "d": "Textura e sabor descritos"
+          },
+          {
+            "t": "Prato principal",
+            "d": "Braseado: técnica e resultado"
+          },
+          {
+            "t": "Sobremesa",
+            "d": "Fecho da sequência sensorial"
+          },
+          {
+            "t": "Serviço e transparência",
+            "d": "“Refeição paga pela reportagem; 120 yuan”"
+          }
+        ]
+      }
+    ],
+    "jornalismo-tecnologia:0": [
+      {
+        "type": "compare",
+        "title": "Promessa × evidência",
+        "a": "Promessa",
+        "b": "Evidência",
+        "caption": "O ponto-chave: o que o fabricante afirma é ponto de partida; o que o repórter testa, no uso para o qual o produto foi feito, é o que se informa.",
+        "rows": [
+          {
+            "label": "Quem afirma",
+            "a": "O fabricante",
+            "b": "O repórter, depois de testar"
+          },
+          {
+            "label": "Exemplo",
+            "a": "“48 horas de bateria”",
+            "b": "“Em nosso uso, a bateria durou 30 horas”"
+          },
+          {
+            "label": "Como traduzir",
+            "a": "Especificação técnica: 5.000 mAh",
+            "b": "“Cerca de um dia de uso intenso”"
+          }
+        ]
+      }
+    ],
+    "jornalismo-tecnologia:1": [
+      {
+        "type": "cycle",
+        "title": "O ciclo de um teste confiável",
+        "center": "Resultado confiável",
+        "caption": "Leia assim: critérios ligados ao uso real, condições iguais para todos e repetição; um resultado isolado pode ser exceção.",
+        "steps": [
+          {
+            "t": "Definir critérios"
+          },
+          {
+            "t": "Padronizar condições"
+          },
+          {
+            "t": "Testar"
+          },
+          {
+            "t": "Registrar"
+          },
+          {
+            "t": "Repetir e tirar média"
+          }
+        ]
+      }
+    ],
+    "jornalismo-tecnologia:2": [
+      {
+        "type": "hub",
+        "title": "O que uma avaliação equilibrada pesa",
+        "center": "Tecnologia",
+        "caption": "O ponto-chave: além de desempenho, pergunte quanto custa, que dados coleta e quem se beneficia ou fica de fora.",
+        "nodes": [
+          {
+            "t": "Benefícios observados"
+          },
+          {
+            "t": "Falhas e limites"
+          },
+          {
+            "t": "Custos ocultos"
+          },
+          {
+            "t": "Privacidade de dados"
+          },
+          {
+            "t": "Acessibilidade"
+          },
+          {
+            "t": "Quem fica de fora"
+          }
+        ]
+      }
+    ],
+    "jornalismo-tecnologia:3": [
+      {
+        "type": "flow",
+        "title": "Roteiro de um vídeo de demonstração",
+        "caption": "Leia assim: mostrar o uso real, inclusive as falhas, e separar os números do teste da opinião pessoal, com transparência no fim.",
+        "steps": [
+          {
+            "t": "Uso real",
+            "d": "Mercado barulhento, não cenário ideal"
+          },
+          {
+            "t": "Mostre as falhas",
+            "d": "Quando o produto não funciona também informa"
+          },
+          {
+            "t": "Dados do teste",
+            "d": "Resultados com números, num gráfico"
+          },
+          {
+            "t": "Experiência marcada",
+            "d": "“Pessoalmente, achei a interface confusa”"
+          },
+          {
+            "t": "Transparência",
+            "d": "Comprado ou cedido, patrocínio, tempo de uso"
+          }
+        ]
+      }
+    ],
+    "jornalismo-economico:0": [
+      {
+        "type": "compare",
+        "title": "Valor nominal × valor real",
+        "a": "Nominal",
+        "b": "Real",
+        "caption": "O ponto-chave: comparar preços de anos diferentes sem descontar a inflação pode transformar uma queda em aparente aumento.",
+        "rows": [
+          {
+            "label": "Considera inflação?",
+            "a": "Não",
+            "b": "Sim, ajusta pelo período"
+          },
+          {
+            "label": "Exemplo",
+            "a": "O preço subiu 10% em dois anos",
+            "b": "Se a inflação foi maior, o preço real caiu"
+          },
+          {
+            "label": "Fonte",
+            "a": "Etiqueta ou tabela de preços",
+            "b": "Índice oficial de inflação, com data"
+          }
+        ]
+      }
+    ],
+    "jornalismo-economico:1": [
+      {
+        "type": "flow",
+        "title": "Do preço ao esforço de compra",
+        "caption": "Leia assim: o câmbio diz quanto algo custaria a um brasileiro; o salário local diz quanto pesa para quem mora lá.",
+        "steps": [
+          {
+            "t": "Mesmo produto",
+            "d": "Mesma qualidade, tamanho e tipo de loja"
+          },
+          {
+            "t": "Preço local",
+            "d": "Por exemplo, um almoço de 30 yuan"
+          },
+          {
+            "t": "Câmbio",
+            "d": "Quanto custaria para um brasileiro"
+          },
+          {
+            "t": "Salário por hora local",
+            "d": "Dado oficial e atual"
+          },
+          {
+            "t": "Tempo de trabalho",
+            "d": "Preço ÷ salário por hora"
+          }
+        ]
+      },
+      {
+        "type": "bars",
+        "title": "Um café em minutos de trabalho",
+        "unit": " min",
+        "note": "Exemplo hipotético: preço do café dividido pelo salário médio por hora de cada cidade, com dados oficiais.",
+        "caption": "O ponto-chave: medido em tempo de trabalho, o mesmo café pode pesar muito mais numa cidade do que o câmbio sugere.",
+        "items": [
+          {
+            "t": "Cidade A",
+            "v": 12
+          },
+          {
+            "t": "Cidade B",
+            "v": 25
+          },
+          {
+            "t": "Cidade C",
+            "v": 40
+          }
+        ]
+      }
+    ],
+    "jornalismo-economico:2": [
+      {
+        "type": "flow",
+        "title": "Como ler um indicador",
+        "caption": "Leia assim: antes de interpretar, entenda o que o número mede; depois compare com o mesmo método e desconfie de causas fáceis.",
+        "steps": [
+          {
+            "t": "Leia a definição oficial",
+            "d": "O que mede, como, com que frequência"
+          },
+          {
+            "t": "Veja a abrangência",
+            "d": "A cesta pode não refletir todos os grupos"
+          },
+          {
+            "t": "Compare no tempo",
+            "d": "Mesmo mês do ano anterior"
+          },
+          {
+            "t": "Compare no espaço",
+            "d": "Outras regiões, mesma metodologia"
+          },
+          {
+            "t": "Não confunda com causa",
+            "d": "Busque especialistas e evidências"
+          }
+        ]
+      }
+    ],
+    "jornalismo-economico:3": [
+      {
+        "type": "venn",
+        "title": "O que sustenta a reportagem de consumo",
+        "sets": [
+          "Dados e coleta própria",
+          "Personagens",
+          "Comparação justa"
+        ],
+        "center": "Consumo contado",
+        "caption": "Leia assim: números respondem à pergunta, pessoas explicam os motivos, e o método declarado mostra os limites da amostra."
+      }
+    ]
+  }
 }
