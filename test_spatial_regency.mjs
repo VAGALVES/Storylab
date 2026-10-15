@@ -26,7 +26,7 @@ for(let i=0;i<8;i++){
   assert.equal(lab.regency(x.verb).verb,x.verb);
   assert.equal(x.patterns.length,2);
   for(const p of x.patterns){
-   assert.ok(p.pt.length>=25&&p.en.length>=20&&p.structure.includes('X')||p.structure.includes('Y'));
+   assert.ok(p.pt.length>=25&&p.en.length>=20&&(p.structure.includes('X')||p.structure.includes('Y')));
    assert.ok(!p.pt.includes('[['));
    structures++;
   }
@@ -70,7 +70,7 @@ let html=w.StoryLabAtlas.render();
 assert.match(html,/QUESTÃO 1 DE 1/);
 assert.match(html,/A avenida é ladeada _____/);
 assert.doesNotMatch(html,/A forma passiva emprega por/);
-click('verb','practice-answer',{answer:'a'});
+click('verb','practice-answer',{answer:'à'});
 html=w.StoryLabAtlas.render();
 assert.match(html,/A construção de referência utiliza: por/);
 assert.equal(save.verbRegencyStats.ladear.attempts,1);
