@@ -4,8 +4,11 @@
 window.StoryLabVerbLab=(()=>{
 'use strict';
 const source=window.STORYLAB_SPATIAL_VERB_DATA||[];
+const regencyGroups=window.STORYLAB_SPATIAL_REGENCY_DATA||[];
+const regency=new Map();
+regencyGroups.forEach((group,i)=>group.records.forEach((entry,j)=>{if(source[i]?.verbs[j]?.pt!==entry.verb)throw Error('Regência fora de ordem: '+entry.verb);regency.set(entry.verb,entry)}));
 const D=window.STORYLAB_DATA,G=window.STORYLAB_ATLAS_GUIDES;
-const state={family:0,term:'ladear',query:''};
+const state={family:0,term:'ladear',query:'',mode:'explore',quiz:null};
 const all=[];
 let context=null,linked=false,base=null;
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -45,17 +48,70 @@ if(D&&G&&Array.isArray(D.atlas)&&Array.isArray(G)&&D.atlas.length===G.length&&so
     'Em seguida, comparo os eixos, as superfícies e a escala dos espaços sem misturar observação e inferência.',
     'Concluo com uma hipótese identificada como tal, reconhecendo que a imagem sozinha não comprova causas, intenções ou dados quantitativos.'
   ],swaps:[]});
-  group.verbs.forEach((verb,j)=>all.push({...verb,topic,index:all.length,group:i}));
+  group.verbs.forEach((verb,j)=>all.push({...verb,topic,index:all.length,group:i,regency:regency.get(verb.pt)||null}));
  });
 }
 function lookup(topic,term){return all.find(v=>v.topic===topic&&v.pt===term)||null}
 function filtered(){
  const q=fold(state.query.trim());
- return all.filter(v=>(state.family===-1||v.group===state.family)&&(!q||fold([v.pt,v.en,v.noun,v.adj,v.grammar,v.definition,v.examplePT,v.exampleEN].join(' ')).includes(q)));
+ return all.filter(v=>(state.family===-1||v.group===state.family)&&(!q||fold([v.pt,v.en,v.noun,v.adj,v.grammar,v.definition,v.examplePT,v.exampleEN,...(v.regency?.patterns||[]).flatMap(p=>[p.structure,p.pt,p.en])].join(' ')).includes(q)));
 }
 function familyCell(label,word,type){
  return '<div class="vl-family-cell"><span class="vl-small">'+escape(label)+'</span><strong>'+escape(word)+'</strong><span class="vl-type">'+escape(type==='relacionado'?'Relacionado por sentido':type==='particípio'?'Particípio com uso adjetival':type==='adjetivo'?'Adjetivo': 'Formação derivada')+'</span></div>';
 }
+
+function regencyPanel(v){
+ const entry=v.regency;
+ if(!entry)return '';
+ const patterns=entry.patterns.map((p,i)=>'<div class="vr-pattern"><div class="vr-pattern-top"><span class="vl-small">'+escape(p.label)+'</span><button type="button" class="vr-copy" data-verb-action="copy-pattern" data-verb-id="'+v.index+'" data-pattern="'+i+'" aria-label="Copiar exemplo da construção '+(i+1)+'">Copiar</button></div>'+
+  '<strong class="vr-structure">'+escape(p.structure)+'</strong><p>'+escape(p.pt)+'</p><p class="vr-english" lang="en">'+escape(p.en)+'</p></div>').join('');
+ return '<section class="vr-regency" aria-label="Regência e construções de '+escape(v.pt)+'"><div class="vr-section-heading"><div><div class="vl-kicker">SINTAXE APLICADA</div><h3>Regência e construções</h3></div><button type="button" class="btn accent sm" data-verb-action="practice" data-scope="verb" data-verb-id="'+v.index+'">Praticar regência</button></div>'+
+ '<p class="vr-context">Acompanhe a posição dos complementos e das preposições. Algumas expressões indicam localização ou circunstância: não são necessariamente exigidas pelo verbo.</p>'+
+ '<div class="vr-pattern-grid">'+patterns+'</div><p class="vr-grammar-note"><strong>Critério de precisão:</strong> '+escape(entry.note)+'</p></section>';
+}
+const PREPOSITIONS=['por','de','com','a','à','ao','em','no','na','entre','para','até','sobre','sem','da','pelo','após','ao longo da','ao longo do','à beira de','nas proximidades de','em direção à','em direção ao','na direção da','para fora da','em relação à','em relação ao','junto à','perto da','às'];
+function optionsFor(item){
+ const ans=item.regency.exercise.answer, pool=PREPOSITIONS.filter(x=>x!==ans);
+ const start=(item.index*7+3)%pool.length;
+ const others=[pool[start],pool[(start+9)%pool.length],pool[(start+18)%pool.length]];
+ const values=[ans,...others];const step=item.index%4;
+ return values.slice(step).concat(values.slice(0,step));
+}
+function beginPractice(scope,item){
+ let items=[];
+ if(scope==='verb'&&item)items=[item.index];
+ else if(scope==='all')items=source.flatMap((_,i)=>all.filter(v=>v.group===i).slice(0,2).map(v=>v.index));
+ else items=all.filter(v=>v.group===state.family).map(v=>v.index);
+ if(!items.length)return;
+ state.mode='practice';state.quiz={items,cursor:0,picked:null,correct:0,done:false,scope};
+}
+function practiceView(){
+ const q=state.quiz;
+ if(!q)return '<div class="panel panel-pad">Nenhum exercício ativo.</div>';
+ const total=q.items.length,store=context?.getStore?.()||{},records=store.verbRegencyStats||{};
+ const answered=Object.values(records).filter(v=>v&&v.attempts>0).length;
+ const right=Object.values(records).filter(v=>v&&v.correct>0).length;
+ let html='<div class="vl-root"><div class="panel panel-pad vr-intro"><div class="vl-kicker">OFICINA DE REGÊNCIA · RECUPERAÇÃO ATIVA</div><h2>Construa relações com precisão</h2><p>Escolha a preposição ou locução usada no modelo editorial. Algumas alternativas poderiam formar outras frases; aqui importa a relação específica ensinada.</p><div class="vl-metrics"><span><strong>'+answered+' / 64</strong> estruturas tentadas</span><span><strong>'+right+'</strong> com acerto registrado</span></div>'+
+ '<button type="button" class="btn secondary sm" data-verb-action="practice-exit">Voltar aos verbos</button></div>';
+ if(q.done){
+  html+='<section class="panel panel-pad vr-quiz" role="status"><div class="vl-kicker">RODADA CONCLUÍDA</div><h3>'+q.correct+' de '+total+' respostas corretas</h3><p>As respostas incorretas podem ser praticadas novamente. O histórico de tentativas fica salvo no seu aparelho.</p><div class="vl-actions"><button class="btn accent" data-verb-action="practice-restart">Refazer rodada</button><button class="btn secondary" data-verb-action="practice-exit">Explorar verbos</button></div></section>';
+  return html+'</div>';
+ }
+ const item=all[q.items[q.cursor]],ex=item.regency.exercise,picked=q.picked,correct=picked===ex.answer;
+ html+='<section class="panel panel-pad vr-quiz"><div class="vl-kicker">'+escape(source[item.group].name)+' · '+escape(item.pt)+'</div><div class="vr-progress-label">QUESTÃO '+(q.cursor+1)+' DE '+total+'</div><div class="vr-progress" role="progressbar" aria-label="Progresso do treino" aria-valuemin="0" aria-valuemax="'+total+'" aria-valuenow="'+(q.cursor+(picked!==null?1:0))+'"><span style="width:'+Math.round((q.cursor+(picked!==null?1:0))*100/total)+'%"></span></div>'+
+ '<h3>Qual expressão completa a descrição?</h3><p class="vr-prompt">'+escape(ex.prompt)+'</p><div class="vr-options" role="group" aria-label="Escolha uma resposta">'+optionsFor(item).map(opt=>{
+ let cls='vr-option';if(picked!==null&&opt===ex.answer)cls+=' correct';else if(picked!==null&&opt===picked)cls+=' wrong';
+ return '<button type="button" class="'+cls+'" data-verb-action="practice-answer" data-answer="'+escape(opt)+'" '+(picked!==null?'disabled':'')+'>'+escape(opt)+'</button>';
+ }).join('')+'</div>';
+ if(picked!==null){
+  const p=item.regency.patterns.find(p=>p.pt.includes(ex.answer))||item.regency.patterns[1];
+  html+='<div class="vr-feedback '+(correct?'ok':'wrong')+'" role="status"><strong>'+(correct?'Correto.':'A construção de referência utiliza: '+escape(ex.answer)+'.')+'</strong><p>'+escape(p.pt)+'</p><p lang="en">'+escape(p.en)+'</p><p>'+escape(ex.explanation)+'</p></div>'+
+  '<button type="button" class="btn accent" data-verb-action="practice-next">'+(q.cursor===total-1?'Ver resultado':'Próxima questão')+'</button>';
+ }
+ html+='</section></div>';
+ return html;
+}
+
 function details(v){
  const g=source[v.group];
  const near=all.filter(item=>item.group===v.group&&item.pt!==v.pt).slice(0,3);
@@ -67,8 +123,9 @@ function details(v){
   '<div class="vl-kicker">FAMÍLIA LEXICAL · '+escape(g.name)+'</div><div class="vl-head"><div><h2>'+escape(v.pt)+'</h2><p class="vl-en" lang="en">'+escape(v.en)+'</p></div>'+diagram(g.diagram,g.name)+'</div>'+
   '<p class="vl-definition">'+escape(v.definition)+'</p>'+
   '<div class="vl-derivation">'+familyCell('SUBSTANTIVO',v.noun,v.nounType)+familyCell('ADJETIVO / PARTICÍPIO',v.adj,v.adjType)+'</div>'+
-  '<p class="vl-note"><strong>Regência:</strong> '+escape(v.grammar)+'</p>'+
+  '<p class="vl-note"><strong>Regência básica:</strong> '+escape(v.grammar)+'</p>'+
   (note?'<div class="notice info">'+escape(note)+'</div>':'')+
+  regencyPanel(v)+
   '<div class="vl-examples"><div><div class="vl-small">DESCRIÇÃO EM PORTUGUÊS</div><p>'+escape(v.examplePT)+'</p></div>'+
   '<div><div class="vl-small">ENGLISH · CONTEXTO</div><p lang="en">'+escape(v.exampleEN)+'</p></div></div>'+
   '<div class="vl-warning"><strong>Não confunda:</strong> '+escape(v.contrast)+'</div>'+
@@ -78,13 +135,14 @@ function details(v){
   '<div class="vl-related"><div class="vl-small">VERBOS DO MESMO CAMPO</div><div class="vl-tags">'+near.map(o=>'<button type="button" class="vl-chip" data-verb-action="jump" data-verb-id="'+o.index+'">'+escape(o.pt)+'</button>').join('')+'</div></div></section>';
 }
 function render(){
+ if(state.mode==='practice')return practiceView();
  if(!all.length)return '<div class="notice info">Corpus verbal indisponível.</div>';
  const list=filtered();
  const current=list.find(v=>v.pt===state.term)||list[0];
  return '<div class="vl-root">'+
   '<div class="panel panel-pad vl-intro"><div class="vl-kicker">ATLAS · LABORATÓRIO DE PRECISÃO ESPACIAL</div>'+
   '<h2>Verbos que desenham a cena</h2><p>Descreva relações entre objetos, percursos, superfícies e mudanças. Explore o verbo, sua família lexical, regência e equivalentes em inglês — distinguindo derivação real de parentesco semântico.</p>'+
-  '<div class="vl-metrics"><span><strong>'+all.length+'</strong> verbos</span><span><strong>'+source.length+'</strong> campos</span><span><strong>PT + EN</strong> exemplos</span></div></div>'+
+  '<div class="vl-metrics"><span><strong>'+all.length+'</strong> verbos</span><span><strong>'+source.length+'</strong> campos</span><span><strong>128</strong> construções bilíngues</span></div><div class="vl-actions"><button type="button" class="btn secondary sm" data-verb-action="practice" data-scope="field">Praticar este campo</button><button type="button" class="btn accent sm" data-verb-action="practice" data-scope="all">Treino misto de regência</button></div></div>'+
   '<div class="vl-tools panel panel-pad"><label class="field-label" for="vl-search">Buscar verbo, substantivo, adjetivo ou inglês</label>'+
   '<input id="vl-search" class="search" data-verb-search="1" value="'+escape(state.query)+'" placeholder="Ex.: ladear, sobreposição, circundante, overlap">'+
   '<div class="vl-tags vl-group-filter"><button type="button" class="vl-chip '+(state.family===-1?'active':'')+'" data-verb-action="family" data-family="-1" aria-pressed="'+(state.family===-1)+'">Todas</button>'+
@@ -102,6 +160,29 @@ function bind(api){
   if(!b)return;
   event.preventDefault();
   const action=b.dataset.verbAction,id=Number(b.dataset.verbId),v=all[id];
+  if(action==='practice'){beginPractice(b.dataset.scope||'field',v);context.render();return}
+  if(action==='practice-exit'){state.mode='explore';state.quiz=null;context.render();return}
+  if(action==='practice-restart'){beginPractice(state.quiz?.scope||'field',all[state.quiz?.items?.[0]]);context.render();return}
+  if(action==='practice-answer'){
+   const q=state.quiz;if(!q||q.done||q.picked!==null)return;
+   const item=all[q.items[q.cursor]],answer=b.dataset.answer;
+   if(!optionsFor(item).includes(answer))return;
+   q.picked=answer;
+   const st=context?.getStore?.();
+   if(st){if(!st.verbRegencyStats||typeof st.verbRegencyStats!=='object'||Array.isArray(st.verbRegencyStats))st.verbRegencyStats={};
+    const prev=st.verbRegencyStats[item.pt]||{attempts:0,correct:0};
+    st.verbRegencyStats[item.pt]={attempts:(Number(prev.attempts)||0)+1,correct:(Number(prev.correct)||0)+(answer===item.regency.exercise.answer?1:0),last:Date.now()};
+    context.save?.();
+   }
+   if(answer===item.regency.exercise.answer)q.correct++;
+   context.render();return;
+  }
+  if(action==='practice-next'){
+   const q=state.quiz;if(!q||q.picked===null||q.done)return;
+   if(q.cursor>=q.items.length-1)q.done=true;else{q.cursor++;q.picked=null}
+   context.render();return;
+  }
+  if(action==='copy-pattern'){if(!v)return;const i=Number(b.dataset.pattern),p=v.regency?.patterns[i];if(p)context.copy(p.pt+'\n'+p.en);return}
   if(action==='family'){const index=Number(b.dataset.family);if(index>=-1&&index<source.length){state.family=index;state.query='';state.term='';context.render()}return}
   if(action==='select'||action==='jump'){if(!v)return;state.family=v.group;state.term=v.pt;state.query='';context.render();return}
   if(!v)return;
@@ -121,5 +202,5 @@ function bind(api){
  });
 }
 function focus(topic,term){const v=lookup(topic,term);if(!v)return false;state.family=v.group;state.term=v.pt;state.query='';return true}
-return {render,bind,lookup,focus,entries:()=>all.slice(),base:()=>base,groups:()=>source.length,_test:{filtered,selectFamily:i=>{state.family=i;state.query=''},search:q=>{state.query=q;state.family=-1}}};
+return {render,bind,lookup,focus,regency:term=>regency.get(term)||null,entries:()=>all.slice(),base:()=>base,groups:()=>source.length,_test:{filtered,selectFamily:i=>{state.family=i;state.query=''},search:q=>{state.query=q;state.family=-1}}};
 })();
