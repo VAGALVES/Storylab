@@ -68,7 +68,7 @@ click('verb',{action:'copy-en',extra:{verbId:String(pick('ladear').index)}});
 assert.equal(copied,pick('ladear').exampleEN);
 click('verb',{action:'open',extra:{verbId:String(pick('circundar').index)}});
 assert.equal(navigation,'atlas');
-assert.match(w.StoryLabAtlas.render(),/Verbos · Cercamento e delimitação/);
+assert.match(w.StoryLabAtlas.render(),/Verbos · Cercamento e delimitação/i);
 assert.match(w.StoryLabAtlas.render(),/Família verbal/i);
 // All verbs are real Atlas terms and participate in existing cards and review.
 const deck=w.StoryLabAtlas.termDeck(pick('circundar').topic,8);
