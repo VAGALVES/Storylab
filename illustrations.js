@@ -108,14 +108,24 @@ const T={
   });
   return [out,y+6];
  },
+
+ // Escada: degraus crescentes (níveis de dificuldade, etapas de aprofundamento)
+ stairs(f,opts){
+  const L=f.steps||[],n=L.length,bw=(W-40)/n,base=200;let out='';
+  L.forEach((st,i)=>{const h=64+i*(110/Math.max(1,n-1)),x=20+i*bw,on=opts&&opts.active===st.t;
+   out+='<rect class="fig-box '+(on?'fig-step-on':tone(i))+'" x="'+(x+2)+'" y="'+(base-h)+'" width="'+(bw-4)+'" height="'+h+'" rx="10"/>'+
+    text(st.t,x+bw/2,base-h+24,{size:15,weight:800,max:11})+(st.d?text(st.d,x+bw/2,base-h+46,{size:13,cls:'fig-d',max:12}):'');});
+  out+=arrow(24,base+22,W-24,base+22)+text(f.axis||'',W/2,base+42,{size:13,cls:'fig-k',max:60});
+  return [out,base+56];
+ },
  // Espectro: um contínuo entre dois polos
- spectrum(f){
+ spectrum(f,opts){
   const m=f.marks||[],x0=30,x1=W-30,y=120;let out='<defs><linearGradient id="fig-grad"><stop offset="0" class="fig-stop0"/><stop offset="1" class="fig-stop1"/></linearGradient></defs>';
   out+='<rect x="'+x0+'" y="'+(y-14)+'" width="'+(x1-x0)+'" height="28" rx="14" fill="url(#fig-grad)"/>';
   out+=text(f.from,x0,y+50,{size:16,anchor:'start',weight:800,max:18})+text(f.to,x1,y+50,{size:16,anchor:'end',weight:800,max:18});
   m.forEach((k,i)=>{const x=x0+(x1-x0)*Math.min(1,Math.max(0,k.at)),up=i%2===0;
    out+='<line class="fig-line" x1="'+x+'" y1="'+(y-16)+'" x2="'+x+'" y2="'+(up?y-40:y+82)+'"/><circle class="fig-dot '+tone(i)+'" cx="'+x+'" cy="'+y+'" r="8"/>'+
-    text(k.t,Math.min(x1-44,Math.max(x0+44,x)),up?y-62:y+104,{size:15,max:13,lh:18})});
+    text(k.t,Math.min(x1-44,Math.max(x0+44,x)),up?y-62:y+104,{size:15,max:13,lh:18,weight:opts&&opts.active===k.t?800:null,cls:opts&&opts.active===k.t?'fig-t fig-on':'fig-t'})});
   return [out,y+150];
  },
  // Centro e ramificações
@@ -169,15 +179,104 @@ const T={
   return [out,y+(f.note?44:12)];
  }
 };
+
+// ── Anatomia: um desenho simples com as peças rotuladas pelos termos do Atlas ──
+// Cada forma desenha em coordenadas locais (280 de largura) e declara pontos de ancoragem por nome.
+const P=(d,c='fig-sh')=>'<path class="'+c+'" d="'+d+'"/>';
+const R_=(x,y,w,h,c='fig-sh',r=0)=>'<rect class="'+c+'" x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'"'+(r?' rx="'+r+'"':'')+'/>';
+const L_=(x1,y1,x2,y2,c='fig-stroke')=>'<line class="'+c+'" x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'"/>';
+const C_=(cx,cy,r,c='fig-sh')=>'<circle class="'+c+'" cx="'+cx+'" cy="'+cy+'" r="'+r+'"/>';
+const SHAPES={
+ // Fachada institucional: frontão, cornija, platibanda, marquise, vão, balaustrada, brise, embasamento
+ facade:{h:290,anchors:{'frontão':[112,78],cornija:[206,103],platibanda:[14,157],marquise:[114,199],'vão':[94,145],balaustrada:[192,176],brise:[255,200],embasamento:[272,262]},
+  svg:()=>L_(0,270,280,270)+R_(80,100,120,170)+R_(5,160,75,110)+R_(200,160,75,110)+
+   P('M74 100L140 50L206 100Z','fig-sh2')+R_(74,98,132,10,'fig-sh2')+R_(5,152,75,10,'fig-sh2')+R_(200,152,75,10,'fig-sh2')+
+   R_(5,252,270,18,'fig-sh3')+R_(122,210,36,42,'fig-dark')+R_(112,196,56,7,'fig-sh2')+L_(116,203,122,214)+L_(164,203,158,214)+
+   R_(94,120,20,50,'fig-dark')+R_(166,120,20,50,'fig-dark')+R_(160,170,32,12,'fig-sh')+
+   [164,170,176,182,188].map(x=>L_(x,170,x,182)).join('')+
+   R_(25,185,30,47,'fig-dark')+R_(225,185,30,47,'fig-dark')+[191,197,203,209,215,221,227].map(y=>L_(225,y,255,y,'fig-slat')).join('')},
+ // Vaso: rebordo, bocal, gargalo, bojo, asa, nervura, pedestal
+ vessel:{h:300,anchors:{rebordo:[96,38],bocal:[160,35],gargalo:[106,64],bojo:[60,170],asa:[261,150],nervura:[218,172],pedestal:[96,272]},
+  svg:()=>P('M105 40L105 85C70 105 55 150 60 195C62 235 85 258 100 262L180 262C195 258 218 235 220 195C225 150 210 105 175 85L175 40Z')+
+   '<path class="fig-handle" d="M218 120C268 100 280 180 222 214"/>'+
+   '<path class="fig-accent" d="M61 172Q140 194 219 172"/>'+
+   R_(98,31,84,10,'fig-sh2',4)+'<ellipse class="fig-dark" cx="140" cy="36" rx="36" ry="5"/>'+R_(92,262,96,20,'fig-sh3',3)},
+ // Casaco: lapela, pesponto, pence, aviamentos, arremate
+ jacket:{h:300,anchors:{lapela:[98,96],pesponto:[166,92],pence:[104,205],aviamentos:[144,170],arremate:[76,262]},
+  svg:()=>P('M85 50L195 50L205 270L75 270Z')+P('M85 50L45 72L30 232L56 238L76 116Z')+P('M195 50L235 72L250 232L224 238L204 116Z')+
+   P('M112 50L140 152L118 152L95 96Z','fig-sh2')+P('M168 50L140 152L162 152L185 96Z','fig-sh2')+
+   '<path class="fig-dash" d="M117 58L140 142"/><path class="fig-dash" d="M163 58L140 142"/>'+
+   C_(140,172,4,'fig-dark')+C_(140,206,4,'fig-dark')+
+   '<path class="fig-stroke" d="M104 168L112 168L108 226Z"/><path class="fig-stroke" d="M176 168L168 168L172 226Z"/>'+
+   '<path class="fig-dash" d="M78 262L202 262"/>'},
+ // Ave: crista, penacho, plumagem, dorso, ventre, garras
+ bird:{h:290,anchors:{crista:[78,62],dorso:[168,106],penacho:[258,104],'plumagem':[152,152],ventre:[140,198],garras:[104,262]},
+  svg:()=>'<path class="fig-sh2" d="M205 130C235 100 262 96 270 108C250 112 240 128 218 142Z"/><path class="fig-sh3" d="M208 138C238 128 264 134 272 152C248 150 236 156 214 154Z"/>'+
+   '<ellipse class="fig-sh" cx="140" cy="150" rx="76" ry="50" transform="rotate(-12 140 150)"/>'+
+   C_(80,102,24)+P('M57 98L38 106L57 112Z','fig-sh2')+C_(88,96,3,'fig-dark')+
+   P('M66 82C62 66 70 60 74 70C76 58 86 58 86 74C92 66 98 72 92 84Z','fig-sh2')+
+   '<path class="fig-accent" d="M120 148C150 118 190 128 198 156C170 170 138 168 120 148Z"/>'+
+   L_(124,196,124,250)+L_(156,196,156,250)+
+   [[124,250,104,262],[124,250,124,265],[124,250,144,262],[156,250,136,262],[156,250,156,265],[156,250,176,262]].map(a=>L_(a[0],a[1],a[2],a[3])).join('')+L_(60,270,220,270,'fig-ground')},
+ // Corte de relevo: colina, encosta, sopé, várzea, ribanceira, espelho d'água, escarpa
+ terrain:{h:290,anchors:{colina:[70,84],bosque:[46,102],encosta:[112,146],'sopé':[134,204],'várzea':[166,206],ribanceira:[204,208],"espelho d'água":[222,214],escarpa:[247,150]},
+  svg:()=>P('M0 270L0 205C20 180 38 96 70 84C100 76 118 160 134 206L200 206C204 208 208 212 214 216L230 216C236 212 240 208 244 206L246 100L280 96L280 270Z','fig-earth')+
+   R_(204,208,36,10,'fig-water')+
+   [[28,128],[46,108],[60,150],[90,118]].map(a=>L_(a[0],a[1]+14,a[0],a[1]+2,'fig-trunk')+C_(a[0],a[1]-4,8,'fig-leaf')).join('')+
+   [150,162,174,186].map(x=>'<path class="fig-grass" d="M'+x+' 206l-3-9M'+x+' 206l0-11M'+x+' 206l3-9"/>').join('')},
+ // Perspectiva de vista: linha de cumeada, skyline, horizonte, ponto de fuga, bruma
+ perspective:{h:260,anchors:{'linha de cumeada':[44,92],skyline:[222,104],horizonte:[8,128],'ponto de fuga':[140,128],bruma:[262,126]},
+  svg:()=>R_(0,40,280,88,'fig-sky')+P('M0 128L0 96L30 80L58 98L90 72L124 104L150 86L180 110L204 90L238 112L280 94L280 128Z','fig-far')+
+   P('M170 128L170 112L180 112L180 100L192 100L192 108L202 108L202 90L214 90L214 104L226 104L226 96L238 96L238 128Z','fig-city')+
+   R_(0,110,280,22,'fig-haze')+R_(0,128,280,122,'fig-ground2')+L_(0,128,280,128,'fig-horizon')+
+   P('M70 250L210 250L146 128L134 128Z','fig-road')+'<path class="fig-dash" d="M140 250L140 128"/>'+C_(140,128,4,'fig-dark')},
+ // Luz sobre um volume: zenital, rasante, direcional, rebatida
+ light:{h:290,anchors:{zenital:[140,24],rasante:[14,214],'direcional':[250,60],rebatida:[250,236]},
+  svg:()=>L_(10,262,270,262,'fig-ground')+R_(104,150,72,112,'fig-sh2',6)+'<ellipse class="fig-sh" cx="140" cy="150" rx="36" ry="9"/>'+
+   '<path class="fig-shadow" d="M176 262L250 262L226 250L176 250Z"/>'+
+   '<path class="fig-ray" d="M140 28L140 138" marker-end="url(#fig-arrow)"/>'+
+   '<path class="fig-ray" d="M16 214L98 214" marker-end="url(#fig-arrow)"/>'+
+   '<path class="fig-ray" d="M244 64L178 136" marker-end="url(#fig-arrow)"/>'+
+   R_(244,200,22,56,'fig-sh3')+'<path class="fig-ray fig-ray2" d="M240 226L182 214" marker-end="url(#fig-arrow)"/>'},
+ // Planta urbana: adjacente, defronte, na diagonal, perpendicular, paralelo
+ plan:{h:290,anchors:{adjacente:[95,214],defronte:[50,64],'na diagonal':[242,64],perpendicular:[195,114],paralelo:[8,146]},
+  svg:()=>R_(0,120,280,50,'fig-street')+R_(180,0,30,290,'fig-street')+
+   '<path class="fig-dash" d="M0 145L180 145M210 145L280 145"/>'+
+   R_(10,180,85,90,'fig-sh2')+R_(95,180,85,90,'fig-sh3')+R_(215,180,60,90,'fig-sh')+
+   R_(10,20,85,90,'fig-sh')+R_(95,20,85,90,'fig-sh')+R_(215,20,60,90,'fig-sh3')+
+   '<text class="fig-n2" x="52" y="230" text-anchor="middle" font-size="22">A</text><text class="fig-n2" x="137" y="230" text-anchor="middle" font-size="22">B</text>'}
+};
+T.anatomy=function(f,opts){
+ const sh=SHAPES[f.shape];if(!sh)return ['',100];
+ const X0=100,labels=(f.labels||[]).filter(l=>sh.anchors[l.part]);
+ const place=side=>{
+  const arr=labels.filter(l=>(l.side||(sh.anchors[l.part][0]<140?'left':'right'))===side).map(l=>({l,a:sh.anchors[l.part],y:sh.anchors[l.part][1]+14}));
+  arr.sort((a,b)=>a.y-b.y);
+  arr.forEach((o,i)=>{o.y=Math.max(o.y,i?arr[i-1].y+40:24)});
+  const over=arr.length&&arr[arr.length-1].y-(sh.h+10);if(over>0)arr.forEach(o=>o.y=Math.max(24,o.y-over));
+  for(let i=1;i<arr.length;i++)arr[i].y=Math.max(arr[i].y,arr[i-1].y+40);
+  return arr;
+ };
+ let out='<g transform="translate('+X0+' 14)">'+sh.svg()+'</g>',h=sh.h+28;
+ [['left',place('left')],['right',place('right')]].forEach(([side,arr])=>arr.forEach(o=>{
+  const ax=X0+o.a[0],ay=14+o.a[1],ex=side==='left'?96:W-96,tx=side==='left'?ex-6:ex+6,ly=o.y+14;
+  const on=opts&&opts.active&&opts.active===o.l.t;
+  out+='<line class="fig-lead'+(on?' fig-lead-on':'')+'" x1="'+ax+'" y1="'+ay+'" x2="'+ex+'" y2="'+ly+'"/><circle class="fig-pin'+(on?' fig-pin-on':'')+'" cx="'+ax+'" cy="'+ay+'" r="4"/>'+
+   text(o.l.t,tx,ly,{max:12,size:o.l.t.split(' ').some(w=>w.length>=12)?12:o.l.t.split(' ').some(w=>w.length>=10)?13:14,lh:16,anchor:side==='left'?'end':'start',weight:on?800:700,cls:on?'fig-t fig-on':'fig-t'});
+  h=Math.max(h,ly+30);
+ }));
+ return [out,h];
+};
+
 const TYPES=Object.keys(T);
 
-function svg(f){
+function svg(f,opts){
  const draw=T[f&&f.type];if(!draw)return '';
- const [body,h]=draw(f);
+ const [body,h]=draw(f,opts);
  return '<svg class="fig-svg" viewBox="0 0 '+W+' '+Math.ceil(h)+'" role="img" aria-label="'+esc(f.title)+'" xmlns="http://www.w3.org/2000/svg">'+DEFS+body+'</svg>';
 }
-function render(f){
- const s=svg(f);if(!s)return '';
+function render(f,opts){
+ const s=svg(f,opts);if(!s)return '';
  return '<figure class="fig"><div class="fig-head"><span class="eyebrow">ESQUEMA</span><strong>'+esc(f.title)+'</strong></div>'+s+(f.caption?'<figcaption>'+esc(f.caption)+'</figcaption>':'')+'</figure>';
 }
 return {render,svg,wrap,TYPES};

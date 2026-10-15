@@ -556,6 +556,12 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - **Próximos passos:** cartões também para os termos do Atlas, modo cronometrado de fala com contagem regressiva, revisão do dia unificada (frases + termos) e conquistas por marcos de estudo.
 
 
+## Evolução v2.9 — Atlas ilustrado
+
+- **Critério de encaixe:** imagem só entra onde ensina uma estrutura que o texto torna lenta (peças de um objeto, direções da luz, posições no espaço, escalas). Onde o vocabulário descreve sensações ou qualidades, uma figura seria ilustração decorativa e foi deixada de fora.
+- **Termo ativo no desenho:** o aluno vê a palavra no lugar onde ela se aplica, o que fixa o sentido mais rápido que a definição.
+- **Rótulos são dados:** cada figura referencia termos do Atlas e o teste impede rótulo que não exista no campo, então trocar um termo não deixa uma legenda órfã.
+
 ## Evolução v2.8 — Léxico de Letras, esquemas e navegação
 
 - **Critério lexical explícito:** um termo só fica no Atlas se nomeia uma nuance que a palavra comum apaga. Cada campo cobre suas dimensões de forma sistemática (em pessoas: fisionomia, tez, porte, marcas do tempo, gesto), sem quase-sinônimos disputando lugar.

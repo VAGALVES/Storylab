@@ -35,3 +35,26 @@ assert.ok(!F.render({ type: 'hub', title: '<b>', caption: 'x'.repeat(50), center
 assert.deepEqual([...F.wrap('uma frase curta para quebrar em linhas', 12)], ['uma frase', 'curta para', 'quebrar em', 'linhas']);
 assert.ok(Object.keys(types).length >= 8, 'variedade de tipos');
 console.log(`Esquemas: ${total} figuras em ${keys.length} aulas, ${Object.keys(types).length} tipos — OK`);
+
+// ── Esquemas do Atlas: cada rótulo é um termo real do campo ──
+const A = D.atlasFigures;
+assert.ok(A && Object.keys(A).length >= 12, 'esquemas do Atlas');
+const ANAT = ['facade', 'vessel', 'jacket', 'bird', 'terrain', 'perspective', 'light', 'plan'];
+for (const [k, figs] of Object.entries(A)) {
+  const field = D.atlas[Number(k)];
+  assert.ok(field && figs.length === 1, 'campo ' + k);
+  const f = figs[0];
+  assert.ok(F.TYPES.includes(f.type), k);
+  const names = [...(f.labels || []).map(l => l.t), ...(f.marks || []).map(m => m.t)];
+  for (const n of names) assert.ok(field.terms.includes(n), `${field.title}: “${n}” não é termo do campo`);
+  const svg = F.svg(f, { active: names[0] });
+  assert.ok(!/NaN|undefined|Infinity/.test(svg), 'campo ' + k);
+  if (f.type === 'anatomy') {
+    assert.ok(ANAT.includes(f.shape), f.shape);
+    assert.ok(f.labels.length >= 3, 'ao menos 3 peças rotuladas');
+    assert.match(svg, /fig-lead/, 'linhas de chamada');
+    assert.match(F.svg(f, { active: f.labels[0].t }), /fig-lead-on/, 'destaque do termo ativo');
+  }
+}
+assert.ok(ANAT.every(sh => Object.values(A).some(v => v[0].shape === sh)), 'todas as formas usadas');
+console.log(`Esquemas do Atlas: ${Object.keys(A).length} campos, ${ANAT.length} anatomias, rótulos = termos — OK`);

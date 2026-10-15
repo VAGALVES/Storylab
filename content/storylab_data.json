@@ -18316,5 +18316,401 @@
         "caption": "Leia assim: números respondem à pergunta, pessoas explicam os motivos, e o método declarado mostra os limites da amostra."
       }
     ]
+  },
+  "atlasFigures": {
+    "1": [
+      {
+        "type": "spectrum",
+        "title": "Do diminuto ao monumental",
+        "from": "Pequeno",
+        "to": "Grande",
+        "caption": "Escolha o termo pelo ponto da escala em que o objeto se encontra em relação a quem o vê; “escala humana” é a régua de comparação.",
+        "marks": [
+          {
+            "at": 0.05,
+            "t": "diminuto"
+          },
+          {
+            "at": 0.22,
+            "t": "exíguo"
+          },
+          {
+            "at": 0.5,
+            "t": "escala humana"
+          },
+          {
+            "at": 0.68,
+            "t": "amplo"
+          },
+          {
+            "at": 0.84,
+            "t": "imponente"
+          },
+          {
+            "at": 0.97,
+            "t": "monumental"
+          }
+        ]
+      }
+    ],
+    "2": [
+      {
+        "type": "anatomy",
+        "shape": "light",
+        "title": "De onde vem a luz",
+        "caption": "O nome da luz vem da direção em que ela atinge o objeto: de cima (zenital), de lado e rente à superfície (rasante), em diagonal (direcional) ou devolvida por uma superfície (rebatida).",
+        "labels": [
+          {
+            "part": "zenital",
+            "t": "zenital"
+          },
+          {
+            "part": "rasante",
+            "t": "rasante"
+          },
+          {
+            "part": "direcional",
+            "t": "direcional"
+          },
+          {
+            "part": "rebatida",
+            "t": "rebatida",
+            "side": "right"
+          }
+        ]
+      }
+    ],
+    "7": [
+      {
+        "type": "anatomy",
+        "shape": "facade",
+        "title": "Partes de uma fachada",
+        "caption": "Cada termo nomeia uma peça visível da fachada. Descreva o que se vê antes de atribuir estilo ou época à construção.",
+        "labels": [
+          {
+            "part": "frontão",
+            "t": "frontão"
+          },
+          {
+            "part": "cornija",
+            "t": "cornija"
+          },
+          {
+            "part": "platibanda",
+            "t": "platibanda"
+          },
+          {
+            "part": "marquise",
+            "t": "marquise"
+          },
+          {
+            "part": "balaustrada",
+            "t": "balaustrada"
+          },
+          {
+            "part": "brise",
+            "t": "brise"
+          },
+          {
+            "part": "embasamento",
+            "t": "embasamento"
+          }
+        ]
+      }
+    ],
+    "9": [
+      {
+        "type": "anatomy",
+        "shape": "jacket",
+        "title": "Anatomia de um casaco",
+        "caption": "A lapela, o pesponto e a pence mostram como a peça foi construída; os aviamentos e o arremate revelam o acabamento.",
+        "labels": [
+          {
+            "part": "lapela",
+            "t": "lapela"
+          },
+          {
+            "part": "pence",
+            "t": "pence"
+          },
+          {
+            "part": "arremate",
+            "t": "arremate"
+          },
+          {
+            "part": "pesponto",
+            "t": "pesponto"
+          },
+          {
+            "part": "aviamentos",
+            "t": "aviamentos"
+          }
+        ]
+      }
+    ],
+    "12": [
+      {
+        "type": "thirds",
+        "title": "Regra dos terços e espaço negativo",
+        "horizon": "horizonte no terço inferior",
+        "caption": "Posicionar o assunto sobre uma das linhas, e não no centro, dá lugar ao espaço negativo, a área vazia que orienta o olhar.",
+        "points": [
+          {
+            "t": "assunto",
+            "row": 2,
+            "col": 2
+          },
+          {
+            "t": "espaço negativo",
+            "row": 1,
+            "col": 1
+          }
+        ]
+      }
+    ],
+    "14": [
+      {
+        "type": "anatomy",
+        "shape": "plan",
+        "title": "Relações no plano da rua",
+        "caption": "Tomando a quadra A como referência: B é adjacente; o bloco do outro lado da rua fica defronte; o do outro lado do cruzamento, na diagonal.",
+        "labels": [
+          {
+            "part": "adjacente",
+            "t": "adjacente"
+          },
+          {
+            "part": "defronte",
+            "t": "defronte"
+          },
+          {
+            "part": "paralelo",
+            "t": "paralelo"
+          },
+          {
+            "part": "na diagonal",
+            "t": "na diagonal",
+            "side": "right"
+          },
+          {
+            "part": "perpendicular",
+            "t": "perpendicular",
+            "side": "right"
+          }
+        ]
+      }
+    ],
+    "15": [
+      {
+        "type": "timeline",
+        "title": "Marcadores de tempo numa narração",
+        "caption": "Cada expressão localiza o fato em relação a outro momento; escolha a que informa a posição exata e evite “depois” e “mais tarde”.",
+        "events": [
+          {
+            "when": "Dia 1",
+            "t": "na véspera",
+            "d": "o dia anterior ao fato"
+          },
+          {
+            "when": "06h",
+            "t": "ao amanhecer",
+            "d": "primeira luz do dia"
+          },
+          {
+            "when": "07h",
+            "t": "à primeira hora",
+            "d": "logo no início do expediente"
+          },
+          {
+            "when": "12h",
+            "t": "a certa altura",
+            "d": "um momento não precisado"
+          },
+          {
+            "when": "12h05",
+            "t": "tão logo",
+            "d": "imediatamente depois de outro fato"
+          },
+          {
+            "when": "18h",
+            "t": "de última hora",
+            "d": "no limite do prazo"
+          }
+        ]
+      }
+    ],
+    "20": [
+      {
+        "type": "anatomy",
+        "shape": "vessel",
+        "title": "Partes de um vaso",
+        "caption": "Descrever as partes pelo nome dispensa adjetivos: o bocal é a abertura, o gargalo estreita o corpo, e o bojo é a parte mais larga.",
+        "labels": [
+          {
+            "part": "rebordo",
+            "t": "rebordo"
+          },
+          {
+            "part": "gargalo",
+            "t": "gargalo"
+          },
+          {
+            "part": "bojo",
+            "t": "bojo"
+          },
+          {
+            "part": "pedestal",
+            "t": "pedestal"
+          },
+          {
+            "part": "bocal",
+            "t": "bocal",
+            "side": "right"
+          },
+          {
+            "part": "asa",
+            "t": "asa"
+          },
+          {
+            "part": "nervura",
+            "t": "nervura"
+          }
+        ]
+      }
+    ],
+    "21": [
+      {
+        "type": "anatomy",
+        "shape": "bird",
+        "title": "Anatomia de uma ave",
+        "caption": "Use as partes para localizar o detalhe observado: a crista na cabeça, o dorso nas costas, o ventre na parte de baixo, e as garras nos pés.",
+        "labels": [
+          {
+            "part": "crista",
+            "t": "crista"
+          },
+          {
+            "part": "garras",
+            "t": "garras"
+          },
+          {
+            "part": "ventre",
+            "t": "ventre",
+            "side": "left"
+          },
+          {
+            "part": "dorso",
+            "t": "dorso"
+          },
+          {
+            "part": "plumagem",
+            "t": "plumagem"
+          },
+          {
+            "part": "penacho",
+            "t": "penacho"
+          }
+        ]
+      }
+    ],
+    "23": [
+      {
+        "type": "anatomy",
+        "shape": "perspective",
+        "title": "Linhas de uma vista",
+        "caption": "O ponto de fuga e o horizonte organizam a profundidade; a linha de cumeada e o skyline recortam o fundo, e a bruma suaviza o que está longe.",
+        "labels": [
+          {
+            "part": "linha de cumeada",
+            "t": "linha de cumeada"
+          },
+          {
+            "part": "horizonte",
+            "t": "horizonte"
+          },
+          {
+            "part": "skyline",
+            "t": "skyline"
+          },
+          {
+            "part": "ponto de fuga",
+            "t": "ponto de fuga"
+          },
+          {
+            "part": "bruma",
+            "t": "bruma"
+          }
+        ]
+      }
+    ],
+    "24": [
+      {
+        "type": "anatomy",
+        "shape": "terrain",
+        "title": "Corte de um relevo",
+        "caption": "Do alto da colina à várzea, cada trecho tem nome: a encosta desce até o sopé, e a ribanceira marca a margem do rio.",
+        "labels": [
+          {
+            "part": "colina",
+            "t": "colina"
+          },
+          {
+            "part": "bosque",
+            "t": "bosque"
+          },
+          {
+            "part": "encosta",
+            "t": "encosta"
+          },
+          {
+            "part": "sopé",
+            "t": "sopé"
+          },
+          {
+            "part": "várzea",
+            "t": "várzea"
+          },
+          {
+            "part": "ribanceira",
+            "t": "ribanceira"
+          },
+          {
+            "part": "espelho d'água",
+            "t": "espelho d'água"
+          },
+          {
+            "part": "escarpa",
+            "t": "escarpa"
+          }
+        ]
+      }
+    ],
+    "25": [
+      {
+        "type": "spectrum",
+        "title": "Do límpido ao plúmbeo",
+        "from": "Céu aberto",
+        "to": "Céu fechado",
+        "caption": "A escala vai da ausência de nuvens ao céu totalmente fechado e escuro; escolha o termo pelo que se vê, sem inferir a chuva.",
+        "marks": [
+          {
+            "at": 0.05,
+            "t": "límpido"
+          },
+          {
+            "at": 0.4,
+            "t": "nebulosidade"
+          },
+          {
+            "at": 0.7,
+            "t": "encoberto"
+          },
+          {
+            "at": 0.95,
+            "t": "plúmbeo"
+          }
+        ]
+      }
+    ]
   }
 }

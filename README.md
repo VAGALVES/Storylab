@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.8 — Atlas revisto com colocações, esquemas nas aulas e botão voltar
+## Journalism Academy · Versão 2.9 — Atlas ilustrado
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -51,6 +51,14 @@ Os esquemas são modelos pedagógicos simplificados: setas ilustram relações c
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v2.9 — Atlas ilustrado
+
+- **12 campos do Atlas ganharam esquema**, no painel de vocabulário, logo abaixo do foco do campo: *Escala e proporção, Luz e sombra, Arquitetura, Moda, Fotografia, Relações espaciais, Mudança temporal, Objetos: forma e partes, Animais: aparência, Vista e panorama, Paisagem natural, Céu e clima*. Escolhi só os campos em que o desenho ensina uma estrutura (peças, direções, posições, escala); campos de adjetivos e sensações continuam só com texto, porque uma figura ali seria decorativa.
+- **Anatomia rotulada:** novo tipo de esquema com oito desenhos (fachada, vaso, casaco, ave, corte de relevo, perspectiva de uma vista, luz sobre um volume e planta de rua). Cada peça é rotulada com um termo real do campo. **Ao selecionar um termo que aparece no desenho, ele fica em destaque** (linha e rótulo em laranja).
+- **Escada narrativa:** na Prática progressiva, um desenho recolhível mostra os quatro níveis (observar, descrever, comparar, interpretar) e destaca o nível atual.
+- **Academia:** cada uma das seis escolas ganhou um ícone próprio no cartão.
+- **Verificação:** `test_figures.mjs` confirma que todo rótulo é um termo do campo, que as oito anatomias são usadas e que o destaque funciona; `test_atlas.mjs` confirma a presença do esquema só nos campos certos.
 
 ### Novidades da v2.8 — Léxico de Letras, esquemas e navegação
 
