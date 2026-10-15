@@ -1,0 +1,76 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+const read=name=>readFileSync(new URL(name,import.meta.url),'utf8');
+const data=JSON.parse(read('content/storylab_data.json'));
+const guides=JSON.parse(read('content/atlas_guides.json'));
+const original=data.atlas.map(g=>g.title);
+const w={STORYLAB_DATA:data,STORYLAB_ATLAS_GUIDES:guides};
+const handlers={};
+const doc={addEventListener(k,fn){(handlers[k]??=[]).push(fn)},getElementById(){return null}};
+const env=vm.createContext({window:w,document:doc,console});
+for(const f of ['urbanism-concepts.js','urbanism-lexicon.js','urbanism-atlas.js','spatial-verbs-data.js','spatial-verbs.js','atlas-engine.js'])vm.runInContext(read(f),env,{filename:f});
+const lab=w.StoryLabVerbLab;
+assert.equal(data.atlas.length,62);
+assert.equal(guides.length,62);
+assert.equal(data.atlas.reduce((n,g)=>n+g.terms.length,0),712);
+assert.equal(lab.base(),54);
+assert.equal(lab.groups(),8);
+assert.equal(lab.entries().length,64);
+assert.deepEqual(data.atlas.slice(0,31).map(g=>g.title),original);
+for(let i=54;i<62;i++){
+ assert.equal(data.atlas[i].terms.length,8);
+ assert.equal(guides[i].terms.length,8);
+ for(const v of guides[i].terms){
+  assert.ok(v[0].length>2&&v[1].includes('Inglês:')&&v[2].length>15);
+  assert.ok(v[4].includes('_____'));
+  assert.ok(v[4].length>=60&&v[4].length<=220);
+  assert.ok(!v[4].includes(v[0]));
+ }
+}
+const all=lab.entries();
+const pick=term=>all.find(x=>x.pt===term);
+assert.equal(pick('sobrepor').noun,'sobreposição');
+assert.equal(pick('sobrepor').adj,'sobreposto');
+assert.equal(pick('ladear').nounType,'relacionado');
+assert.equal(pick('ladear').noun,'lado');
+assert.equal(pick('circundar').adj,'circundante');
+assert.equal(pick('serpentear').nounType,'relacionado');
+assert.equal(pick('sobressair').adjType,'relacionado');
+assert.ok(all.every(v=>v.definition&&v.grammar&&v.contrast&&v.examplePT&&v.exampleEN));
+lab._test.search('sobreposição');
+assert.ok(lab._test.filtered().some(v=>v.pt==='sobrepor'));
+lab._test.search('flank');
+assert.ok(lab._test.filtered().some(v=>v.pt==='ladear'));
+lab._test.search('circundante');
+assert.ok(lab._test.filtered().some(v=>v.pt==='circundar'));
+lab._test.selectFamily(0);
+assert.equal(lab._test.filtered().length,8);
+assert.equal(lab.focus(pick('sobrepor').topic,'sobrepor'),true);
+assert.match(lab.render(),/sobreposição/);
+assert.match(lab.render(),/Família lexical/i);
+assert.match(lab.render(),/ENGLISH/);
+const storage={atlasDrafts:{},atlasHistory:[]};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+let copied='',navigation='';
+w.StoryLabAtlas.init({D:data,getStore:()=>storage,save(){},render(){},header:()=>'',stat:(l,v)=>l+': '+v,esc,norm,ico:()=>'',say(){},copy:t=>copied=t,toast(){},navigate:t=>navigation=t,toTele(){},now:()=>Date.now(),random:()=>.17});
+const click=(attr,values)=>{
+ const t={closest(sel){return sel==='[data-'+attr+'-action]'?{dataset:attr==='atlas'?{atlasAction:values.action,...values.extra}:{verbAction:values.action,...values.extra}}:null}};
+ for(const fn of (handlers.click||[]))fn({target:t,preventDefault(){}});
+};
+click('atlas',{action:'verbs'});
+assert.match(w.StoryLabAtlas.render(),/Verbos que desenham a cena/);
+click('verb',{action:'family',extra:{family:'0'}});
+click('verb',{action:'select',extra:{verbId:String(pick('ladear').index)}});
+assert.match(w.StoryLabAtlas.render(),/Ladear não significa/);
+click('verb',{action:'copy-en',extra:{verbId:String(pick('ladear').index)}});
+assert.equal(copied,pick('ladear').exampleEN);
+click('verb',{action:'open',extra:{verbId:String(pick('circundar').index)}});
+assert.equal(navigation,'atlas');
+assert.match(w.StoryLabAtlas.render(),/Verbos · Cercamento e delimitação/i);
+assert.match(w.StoryLabAtlas.render(),/Família verbal/i);
+// All verbs are real Atlas terms and participate in existing cards and review.
+const deck=w.StoryLabAtlas.termDeck(pick('circundar').topic,8);
+assert.equal(deck.fresh.length,8);
+console.log('Verbos: 8 campos, 64 famílias bilíngues, formação lexical, busca, Atlas e revisão — OK');

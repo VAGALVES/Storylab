@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.1 — Atlas Semântico do Urbanismo
+## Journalism Academy · Versão 2.2 — Laboratório de Verbos Descritivos
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -17,10 +17,19 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Frases-base em português | 657 | Todas com nota de uso específica; pesquisáveis no app |
 | Equivalentes em inglês | 36 | Seleção inicial, explicitamente incompleta |
 | Equivalentes em mandarim | 12 | Seleção inicial com pinyin |
-| Atlas de vocabulário | 54 campos; 648 verbetes (incluindo 23 campos e 188 conceitos bilíngues de urbanismo); treino, relações entre áreas e revisão espaçada | Publicado |
+| Atlas de vocabulário | 62 campos; 712 verbetes, incluindo 64 famílias de verbos descritivos bilíngues; treino, relações semânticas e revisão espaçada | Publicado |
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v2.2 — Laboratório de Verbos Descritivos
+
+- **Nova aba no Atlas: "Verbos & famílias"**: exploração filtrável e responsiva de 64 verbos divididos em oito campos — lateralidade, cercamento, camadas, travessia, orientação, distribuição, transformação e percepção visual.
+- **Família lexical completa e sem falsas derivações**: infinitivo, substantivo, adjetivo ou particípio, com rótulo explícito "derivado" versus "relacionado por sentido", regência, definição, contraste semântico e frase em português e inglês.
+- **Rigor de formação:** "lado" é associado a "ladear", não substantivo formado diretamente dele; "sobreposição" e "sobreposto" derivam de "sobrepor"; "circundante" descreve o entorno e "circundado" qualifica o elemento rodeado.
+- **Experiência visual contextualizada:** esquemas abstratos de relações espaciais, filtros por campo, busca por qualquer membro da família ou tradução inglesa, botões de copiar frases e acesso ao verbete completo.
+- **Treino integrado:** cada um dos 64 verbos também é um termo regular no Atlas com frase-lacuna, exemplo, explicação, aviso de uso, cartões, revisão espaçada e registro de prática. Novos campos são acrescentados após os 54 anteriores: índices antigos e progresso preservados.
+- **PWA/offline e QA:** `spatial-verbs-data.js` contém os verbetes editoriais; `spatial-verbs.js` cria a interface e integra o conteúdo; `test_spatial_verbs.mjs` testa a aplicação. Todos são incluídos no HTML offline e no service worker.
 
 ### Novidades da v2.1 — Atlas Semântico do Urbanismo (Português ↔ Inglês)
 

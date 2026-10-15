@@ -171,6 +171,57 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 .ix-badge.on{opacity:1;background:var(--paper);border-color:var(--accent)}
 .ix-badge-icon{font-size:22px}.ix-badge small{color:var(--muted);line-height:1.4}
 
+
+/* v2.2 — Laboratório de Verbos Descritivos · interface responsiva */
+.vl-root{display:grid;gap:16px;min-width:0}
+.vl-intro{background:linear-gradient(125deg,var(--paper),var(--wash));}
+.vl-intro h2{font-size:clamp(28px,3.4vw,39px);margin:8px 0 12px}
+.vl-intro p{font-size:14px;color:var(--ink2);max-width:760px;line-height:1.75}
+.vl-kicker,.vl-small{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.13em;color:var(--accent)}
+.vl-metrics{display:flex;flex-wrap:wrap;gap:20px;border-top:1px solid var(--line);margin-top:20px;padding-top:13px;color:var(--muted);font-size:12px}
+.vl-metrics strong{font-size:17px;color:var(--ink);margin-right:4px}
+.vl-tools{display:grid;gap:12px}
+.vl-tags{display:flex;flex-wrap:wrap;gap:7px}
+.vl-chip{padding:8px 11px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink2);font-size:12px;font-weight:640;text-align:left}
+.vl-chip:hover,.vl-chip:focus-visible{border-color:var(--accent)}
+.vl-chip.active{background:var(--pine);border-color:var(--pine);color:#fff}
+[data-theme="dark"] .vl-chip.active{background:var(--accent);color:#17272b;border-color:var(--accent)}
+.vl-layout{display:grid;grid-template-columns:minmax(195px,.7fr) minmax(0,1.5fr);gap:16px;align-items:start}
+.vl-list{display:grid;gap:6px;max-height:690px;overflow-y:auto;scrollbar-width:thin}
+.vl-list .vl-kicker{padding:0 2px 6px}
+.vl-item{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;background:transparent;color:var(--ink);border:1px solid transparent;border-radius:10px;text-align:left;padding:11px 10px}
+.vl-item strong{font-size:14px;min-width:0}
+.vl-item span{font-size:11px;color:var(--muted);text-align:right;max-width:46%}
+.vl-item.selected{background:var(--accentsoft);border-color:var(--accent)}
+.vl-item:hover{background:var(--wash)}
+.vl-detail{min-width:0}
+.vl-head{display:flex;gap:14px;justify-content:space-between;align-items:center;margin:10px 0 12px}
+.vl-head h2{font-size:clamp(29px,4vw,41px);margin:0 0 5px;overflow-wrap:anywhere}
+.vl-en{font-size:15px;font-weight:650;color:var(--accent);margin:0}
+.vl-diagram{width:178px;height:89px;max-width:42%;background:var(--wash);border:1px solid var(--line);border-radius:13px;flex-shrink:0}
+.vl-core{fill:var(--pine);opacity:.27;stroke:var(--pine);stroke-width:2}
+.vl-focus{fill:var(--accent);opacity:.58;stroke:var(--accent);stroke-width:2}
+.vl-outline{fill:none;stroke:var(--muted);stroke-width:3;stroke-dasharray:5 6}
+.vl-edge{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round}
+.vl-stroke{fill:none;stroke:var(--accent);stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.vl-overlap{fill:var(--accent);opacity:.34}
+.vl-definition{font-family:Georgia,serif;font-size:18px;line-height:1.65}
+.vl-derivation{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.vl-family-cell{min-width:0;padding:14px;background:var(--wash);border:1px solid var(--line);border-radius:12px;display:flex;flex-direction:column;gap:5px}
+.vl-family-cell strong{font-size:19px;overflow-wrap:anywhere}
+.vl-type{font-size:11px;color:var(--muted)}
+.vl-note{font-size:13px;color:var(--ink2)}
+.vl-examples{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:17px 0}
+.vl-examples>div{min-width:0;padding:16px;background:var(--accentsoft);border:1px solid var(--line);border-radius:12px}
+.vl-examples p{font-size:16px;line-height:1.65;margin:12px 0 0}
+.vl-warning{padding:12px 15px;border-left:3px solid var(--accent);background:var(--wash);font-size:13px;line-height:1.7}
+.vl-actions{display:flex;flex-wrap:wrap;gap:8px;margin:17px 0 8px}
+.vl-related{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+.vl-related .vl-tags{margin-top:10px}
+@media(max-width:980px){.vl-layout{grid-template-columns:minmax(160px,.65fr) minmax(0,1fr)}.vl-examples{grid-template-columns:1fr}}
+@media(max-width:720px){.vl-layout{grid-template-columns:1fr}.vl-list{max-height:none;display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;padding-bottom:10px;scrollbar-width:thin}.vl-list .vl-kicker{display:none}.vl-item{flex:0 0 auto;width:auto;min-width:112px;flex-direction:column;align-items:flex-start}.vl-item span{max-width:none;text-align:left}.vl-examples{grid-template-columns:1fr}.vl-family-cell strong{font-size:16px}}
+@media(max-width:430px){.vl-derivation{grid-template-columns:1fr}.vl-head{align-items:flex-start}.vl-diagram{width:112px;height:70px}.vl-head h2{font-size:28px}}
+
 </style>
   <title>StoryLab Shanghai — Journalism Academy</title>
 </head>
@@ -288,6 +339,139 @@ for(const [topic,entries] of Object.entries(meta))for(const [term,item] of Objec
 }
 window.STORYLAB_URBANISM={installed:true,base,count:raw.length,terms:all.length,byField:meta,entries:all,distinctions:raw.find(x=>x[0]==='Distinções entre conceitos próximos')?.[2],collocations:raw.find(x=>x[0]==='Expressões e combinações urbanas')?.[2]};
 delete window.STORYLAB_URBANISM_FIELDS;
+})();
+
+</script>
+  <script>
+/* StoryLab · 64 famílias verbais descritivas, conteúdo autoral bilíngue. */
+window.STORYLAB_SPATIAL_VERB_DATA=[{"name":"Lateralidade e vizinhança","desc":"Lados, bordas, proximidade e alinhamento","diagram":"side","weak":"A rua tem árvores e edifícios próximos.","verbs":[{"pt":"ladear","en":"flank / line","noun":"lado","nounType":"relacionado","adj":"ladeado","adjType":"particípio","grammar":"ladear algo; ser ladeado por","definition":"Estar ou seguir ao lado de um elemento.","examplePT":"Árvores ladeiam a avenida principal.","exampleEN":"Trees line the main avenue.","contrast":"Ladear não significa necessariamente cercar em todo o perímetro."},{"pt":"flanquear","en":"flank","noun":"flanco","nounType":"relacionado","adj":"flanqueado","adjType":"particípio","grammar":"flanquear algo","definition":"Situar-se nos flancos de outro elemento.","examplePT":"Duas torres flanqueiam a entrada do parque.","exampleEN":"Two towers flank the park entrance.","contrast":"Flanquear enfatiza os lados de uma referência central."},{"pt":"margear","en":"run alongside / border","noun":"margem","nounType":"relacionado","adj":"margeado","adjType":"particípio","grammar":"margear um rio ou via","definition":"Acompanhar uma borda ao longo de um trecho.","examplePT":"O passeio margeia o rio.","exampleEN":"The walkway runs alongside the river.","contrast":"Margear aponta para a margem; ladear para a lateralidade."},{"pt":"beirar","en":"border / edge","noun":"beira","nounType":"relacionado","adj":"beirado","adjType":"particípio","grammar":"beirar algo","definition":"Estar perto de uma borda ou limite.","examplePT":"Pequenos cafés beiram a praça.","exampleEN":"Small cafés border the square.","contrast":"Beirar também pode indicar aproximação de quantidade."},{"pt":"alinhar","en":"align","noun":"alinhamento","nounType":"derivado","adj":"alinhado","adjType":"particípio","grammar":"alinhar algo com algo","definition":"Organizar elementos num eixo ou direção.","examplePT":"As fachadas se alinham ao longo da via.","exampleEN":"The façades align along the street.","contrast":"Alinhar não implica simetria."},{"pt":"justapor","en":"juxtapose","noun":"justaposição","nounType":"derivado","adj":"justaposto","adjType":"particípio","grammar":"justapor algo a algo","definition":"Pôr elementos lado a lado.","examplePT":"O projeto justapõe vidro e concreto.","exampleEN":"The design juxtaposes glass and concrete.","contrast":"Justapor não exige sobreposição."},{"pt":"avizinhar-se","en":"lie near","noun":"vizinhança","nounType":"relacionado","adj":"vizinho","adjType":"relacionado","grammar":"avizinhar-se de algo","definition":"Situar-se perto ou tornar-se próximo.","examplePT":"A escola se avizinha do parque linear.","exampleEN":"The school lies near the linear park.","contrast":"Proximidade não significa ligação física."},{"pt":"contornar","en":"skirt / go around","noun":"contorno","nounType":"derivado","adj":"contornado","adjType":"particípio","grammar":"contornar algo","definition":"Acompanhar a borda de um elemento ou obstáculo.","examplePT":"A ciclovia contorna a praça.","exampleEN":"The cycleway skirts the square.","contrast":"Contornar não exige um círculo completo."}]},{"name":"Cercamento e delimitação","desc":"Limites, perímetros, interior e exterior","diagram":"surround","weak":"O jardim está cercado por coisas.","verbs":[{"pt":"circundar","en":"surround / encircle","noun":"entorno","nounType":"relacionado","adj":"circundante","adjType":"adjetivo","grammar":"circundar algo","definition":"Estar em torno ou percorrer toda a volta.","examplePT":"Jardins circundam o pavilhão.","exampleEN":"Gardens surround the pavilion.","contrast":"Circundante caracteriza o entorno; circundado é o que está rodeado."},{"pt":"cercar","en":"enclose / surround","noun":"cercamento","nounType":"derivado","adj":"cercado","adjType":"particípio","grammar":"cercar algo com algo","definition":"Delimitar fisicamente ou envolver espaço.","examplePT":"Uma grade cerca o jardim.","exampleEN":"A fence encloses the garden.","contrast":"Cercar pode implicar barreira física."},{"pt":"rodear","en":"surround","noun":"redondeza","nounType":"relacionado","adj":"rodeado","adjType":"particípio","grammar":"rodear algo","definition":"Ficar em volta de um elemento.","examplePT":"Árvores antigas rodeiam o templo.","exampleEN":"Old trees surround the temple.","contrast":"Rodear é mais cotidiano do que circundar."},{"pt":"envolver","en":"envelop / wrap around","noun":"envolvimento","nounType":"derivado","adj":"envolvente","adjType":"particípio","grammar":"envolver algo","definition":"Estender-se ao redor ou cobrir algo.","examplePT":"Uma estrutura metálica envolve a escada.","exampleEN":"A metal structure wraps around the staircase.","contrast":"Envolver também apresenta sentidos não espaciais."},{"pt":"delimitar","en":"define boundaries","noun":"delimitação","nounType":"derivado","adj":"delimitado","adjType":"particípio","grammar":"delimitar uma área com algo","definition":"Estabelecer limite espacial ou legal.","examplePT":"Muros baixos delimitam os jardins.","exampleEN":"Low walls define the garden boundaries.","contrast":"Delimitar não exige barreira material."},{"pt":"demarcar","en":"mark out / demarcate","noun":"demarcação","nounType":"derivado","adj":"demarcado","adjType":"particípio","grammar":"demarcar com marcas","definition":"Assinalar onde estão os limites.","examplePT":"Linhas pintadas demarcam a espera.","exampleEN":"Painted lines demarcate the waiting area.","contrast":"Demarcar enfatiza a marcação."},{"pt":"emoldurar","en":"frame","noun":"moldura","nounType":"relacionado","adj":"emoldurado","adjType":"particípio","grammar":"emoldurar algo","definition":"Criar enquadramento em torno da vista.","examplePT":"Um arco emoldura o rio.","exampleEN":"An arch frames the river.","contrast":"O enquadramento pode ser apenas visual."},{"pt":"isolar","en":"isolate / separate","noun":"isolamento","nounType":"derivado","adj":"isolado","adjType":"particípio","grammar":"isolar algo de algo","definition":"Separar um elemento de seu contexto.","examplePT":"A rodovia isola o bairro do rio.","exampleEN":"The motorway separates the neighborhood from the river.","contrast":"Separação física não prova segregação social."}]},{"name":"Sobreposição e encaixe","desc":"Camadas, intervalos, contato e revestimentos","diagram":"overlap","weak":"Elementos aparecem uns sobre os outros.","verbs":[{"pt":"sobrepor","en":"overlap / overlay","noun":"sobreposição","nounType":"derivado","adj":"sobreposto","adjType":"particípio","grammar":"sobrepor algo a algo","definition":"Dispor ou perceber um elemento sobre outro.","examplePT":"A torre se sobrepõe visualmente ao mercado.","exampleEN":"The tower visually overlaps the market.","contrast":"Sobreposição visual não garante contato."},{"pt":"superpor","en":"superimpose","noun":"superposição","nounType":"derivado","adj":"superposto","adjType":"particípio","grammar":"superpor algo a algo","definition":"Colocar uma camada sobre outra em composição.","examplePT":"O mapa superpõe dados de calor às ruas.","exampleEN":"The map superimposes heat data onto streets.","contrast":"É mais técnico do que sobrepor."},{"pt":"interpor","en":"place between / interpose","noun":"interposição","nounType":"derivado","adj":"interposto","adjType":"particípio","grammar":"interpor algo entre dois elementos","definition":"Situar elemento entre outros dois.","examplePT":"Um jardim se interpõe entre rua e fachada.","exampleEN":"A garden lies between the street and the façade.","contrast":"Interpor exige dois referenciais externos."},{"pt":"intercalar","en":"interleave / alternate","noun":"intercalação","nounType":"derivado","adj":"intercalado","adjType":"particípio","grammar":"intercalar algo com outro","definition":"Alternar elementos numa sequência.","examplePT":"O passeio intercala bancos e canteiros.","exampleEN":"The walkway alternates benches and planters.","contrast":"Intercalar implica ordem ou repetição."},{"pt":"encaixar","en":"fit into","noun":"encaixe","nounType":"derivado","adj":"encaixado","adjType":"particípio","grammar":"encaixar algo em algo","definition":"Ajustar um volume a abertura ou forma.","examplePT":"O volume novo se encaixa no vão.","exampleEN":"The new volume fits into the opening.","contrast":"Encaixar é mais específico do que aproximar."},{"pt":"embutir","en":"embed / recess","noun":"embutimento","nounType":"derivado","adj":"embutido","adjType":"particípio","grammar":"embutir algo em uma superfície","definition":"Instalar componente dentro de outro.","examplePT":"Luzes embutidas iluminam o teto.","exampleEN":"Recessed lights illuminate the ceiling.","contrast":"Embutido não equivale a sobreposto."},{"pt":"revestir","en":"clad / cover","noun":"revestimento","nounType":"derivado","adj":"revestido","adjType":"particípio","grammar":"revestir algo com material","definition":"Adicionar camada de acabamento a superfície.","examplePT":"Painéis cerâmicos revestem a fachada.","exampleEN":"Ceramic panels clad the façade.","contrast":"Revestimento não informa material estrutural."},{"pt":"recobrir","en":"cover over","noun":"recobrimento","nounType":"derivado","adj":"recoberto","adjType":"particípio","grammar":"recobrir algo com algo","definition":"Cobrir parcial ou integralmente uma superfície.","examplePT":"Trepadeiras recobrem parte do muro.","exampleEN":"Climbing plants cover part of the wall.","contrast":"Recobrimento nem sempre é permanente."}]},{"name":"Percurso e travessia","desc":"Passagem, direção e trajetórias urbanas","diagram":"cross","weak":"Há vários trajetos neste lugar.","verbs":[{"pt":"atravessar","en":"cross / pass through","noun":"travessia","nounType":"derivado","adj":"atravessado","adjType":"particípio","grammar":"atravessar algo","definition":"Passar de um lado a outro.","examplePT":"A passarela atravessa a avenida.","exampleEN":"The footbridge crosses the avenue.","contrast":"Travessia enfatiza mudança de lado."},{"pt":"cruzar","en":"cross / intersect","noun":"cruzamento","nounType":"derivado","adj":"cruzado","adjType":"particípio","grammar":"cruzar algo; cruzar-se com","definition":"Intersetar outra linha ou trajeto.","examplePT":"Duas ciclovias se cruzam na praça.","exampleEN":"Two cycle paths intersect at the square.","contrast":"Cruzamento não exige travessia integral."},{"pt":"transpor","en":"cross over / surmount","noun":"transposição","nounType":"derivado","adj":"transposto","adjType":"particípio","grammar":"transpor um obstáculo","definition":"Ultrapassar um limite ou obstáculo.","examplePT":"A ponte transpõe o canal.","exampleEN":"The bridge crosses over the canal.","contrast":"Transpor enfatiza barreira superada."},{"pt":"percorrer","en":"travel along / follow","noun":"percurso","nounType":"relacionado","adj":"percorrido","adjType":"particípio","grammar":"percorrer uma via","definition":"Mover-se ao longo de uma extensão.","examplePT":"O bonde percorre a avenida.","exampleEN":"The tram travels along the avenue.","contrast":"Percorrer não informa o modo sozinho."},{"pt":"desviar","en":"divert / veer","noun":"desvio","nounType":"derivado","adj":"desviado","adjType":"particípio","grammar":"desviar-se de algo","definition":"Alterar uma trajetória original.","examplePT":"O caminho desvia das obras.","exampleEN":"The path veers away from the works.","contrast":"Desvio pode ser intencional."},{"pt":"serpentear","en":"wind / meander","noun":"sinuosidade","nounType":"relacionado","adj":"serpenteante","adjType":"adjetivo","grammar":"serpentear por ou entre","definition":"Descrever curvas sucessivas.","examplePT":"A trilha serpenteia entre as árvores.","exampleEN":"The path winds between the trees.","contrast":"Uma única curva não é serpentear."},{"pt":"bifurcar-se","en":"fork / branch off","noun":"bifurcação","nounType":"derivado","adj":"bifurcado","adjType":"particípio","grammar":"bifurcar-se em duas vias","definition":"Separar-se em ramificações.","examplePT":"A ciclovia se bifurca após a estação.","exampleEN":"The cycleway forks after the station.","contrast":"Bifurcar é separar; convergir é aproximar."},{"pt":"convergir","en":"converge","noun":"convergência","nounType":"derivado","adj":"convergente","adjType":"particípio","grammar":"convergir para um ponto","definition":"Aproximar linhas ou fluxos a um lugar.","examplePT":"Três ruas convergem para a praça.","exampleEN":"Three streets converge on the square.","contrast":"A convergência geométrica não garante encontro social."}]},{"name":"Orientação e desníveis","desc":"Eixos, direções, projeção e inclinação","diagram":"axis","weak":"A construção muda de direção e de altura.","verbs":[{"pt":"orientar","en":"orient","noun":"orientação","nounType":"derivado","adj":"orientado","adjType":"particípio","grammar":"orientar algo para algo","definition":"Definir posição relativa a uma direção.","examplePT":"A fachada se orienta para o leste.","exampleEN":"The façade faces east.","contrast":"É necessário declarar a referência."},{"pt":"direcionar","en":"direct / channel","noun":"direcionamento","nounType":"derivado","adj":"direcionado","adjType":"particípio","grammar":"direcionar algo para algo","definition":"Conduzir algo rumo a um destino.","examplePT":"Placas direcionam o público à estação.","exampleEN":"Signs direct visitors to the station.","contrast":"Orientação indicada pode diferir de caminho real."},{"pt":"apontar","en":"point toward","noun":"ponta","nounType":"relacionado","adj":"pontudo","adjType":"relacionado","grammar":"apontar para algo","definition":"Indicar uma direção visualmente.","examplePT":"A cobertura triangular aponta para o rio.","exampleEN":"The triangular roof points toward the river.","contrast":"Ponta e pontudo não são derivados diretos do verbo."},{"pt":"inclinar","en":"tilt / slope","noun":"inclinação","nounType":"derivado","adj":"inclinado","adjType":"particípio","grammar":"inclinar algo para","definition":"Dispor em ângulo relativo ao eixo.","examplePT":"A cobertura se inclina para o pátio.","exampleEN":"The roof slopes toward the courtyard.","contrast":"Inclinação não implica instabilidade."},{"pt":"elevar","en":"raise / elevate","noun":"elevação","nounType":"derivado","adj":"elevado","adjType":"particípio","grammar":"elevar algo acima de","definition":"Aumentar a altura de elemento.","examplePT":"A passarela se eleva sobre a avenida.","exampleEN":"The footbridge rises above the avenue.","contrast":"Elevação depende de referência de altura."},{"pt":"rebaixar","en":"lower / recess","noun":"rebaixamento","nounType":"derivado","adj":"rebaixado","adjType":"particípio","grammar":"rebaixar algo em relação a","definition":"Reduzir nível de superfície.","examplePT":"A travessia rebaixa o meio-fio.","exampleEN":"The crossing lowers the curb.","contrast":"Declare sempre o nível de comparação."},{"pt":"projetar","en":"project / extend","noun":"projeção","nounType":"derivado","adj":"projetado","adjType":"particípio","grammar":"projetar-se sobre ou para fora","definition":"Avançar volumetricamente além de plano.","examplePT":"A marquise se projeta sobre a calçada.","exampleEN":"The canopy projects over the sidewalk.","contrast":"Projetar também significa planejar uma obra."},{"pt":"prolongar","en":"extend / lengthen","noun":"prolongamento","nounType":"derivado","adj":"prolongado","adjType":"particípio","grammar":"prolongar algo até algo","definition":"Ampliar um traçado em continuidade.","examplePT":"A ciclovia se prolonga até a ponte.","exampleEN":"The cycle route extends to the bridge.","contrast":"Prolongamento não implica alargamento."}]},{"name":"Agrupamento e distribuição","desc":"Densidade, fragmentação e conexão","diagram":"cluster","weak":"Há coisas espalhadas por uma grande área.","verbs":[{"pt":"agrupar","en":"group / cluster","noun":"agrupamento","nounType":"derivado","adj":"agrupado","adjType":"particípio","grammar":"agrupar algo em","definition":"Reunir elementos em conjunto.","examplePT":"O projeto agrupa quiosques na praça.","exampleEN":"The design groups kiosks in the square.","contrast":"Agrupamento não implica densidade alta."},{"pt":"dispersar","en":"disperse","noun":"dispersão","nounType":"derivado","adj":"disperso","adjType":"adjetivo","grammar":"dispersar algo por","definition":"Espalhar elementos num território.","examplePT":"Jardins se dispersam pelas ruas.","exampleEN":"Small gardens are scattered across the streets.","contrast":"Dispersão pode seguir padrão."},{"pt":"concentrar","en":"concentrate","noun":"concentração","nounType":"derivado","adj":"concentrado","adjType":"particípio","grammar":"concentrar algo em","definition":"Reunir elementos em certa área.","examplePT":"Lojas se concentram no cruzamento.","exampleEN":"Shops cluster around the intersection.","contrast":"Concentração espacial não prova monopólio."},{"pt":"distribuir","en":"distribute","noun":"distribuição","nounType":"derivado","adj":"distribuído","adjType":"particípio","grammar":"distribuir algo por","definition":"Repartir elementos por lugares.","examplePT":"O parque distribui bancos pela trilha.","exampleEN":"The park distributes benches along the path.","contrast":"Distribuição não garante igualdade de acesso."},{"pt":"adensar","en":"densify","noun":"adensamento","nounType":"derivado","adj":"adensado","adjType":"particípio","grammar":"adensar uma área","definition":"Aumentar quantidade de pessoas ou construção por área.","examplePT":"Torres adensam o entorno da estação.","exampleEN":"Towers densify the station area.","contrast":"Não confunda densidade construída e populacional."},{"pt":"fragmentar","en":"fragment","noun":"fragmentação","nounType":"derivado","adj":"fragmentado","adjType":"particípio","grammar":"fragmentar algo em partes","definition":"Separar continuidade espacial.","examplePT":"Rodovias fragmentam as áreas verdes.","exampleEN":"Motorways fragment the green areas.","contrast":"Fragmentação física não prova segregação social."},{"pt":"ocupar","en":"occupy","noun":"ocupação","nounType":"derivado","adj":"ocupado","adjType":"particípio","grammar":"ocupar uma área","definition":"Utilizar fisicamente um lugar.","examplePT":"A feira ocupa a praça aos domingos.","exampleEN":"The market occupies the square on Sundays.","contrast":"Ocupação não implica ilegalidade."},{"pt":"interligar","en":"interconnect / link","noun":"interligação","nounType":"derivado","adj":"interligado","adjType":"particípio","grammar":"interligar algo a algo","definition":"Conectar partes da malha urbana.","examplePT":"Passagens interligam os edifícios.","exampleEN":"Walkways connect the buildings.","contrast":"Conexão não garante acessibilidade universal."}]},{"name":"Transformação e escala","desc":"Expansão, recuo e variação de proporção","diagram":"expand","weak":"A paisagem é diferente de antes.","verbs":[{"pt":"expandir","en":"expand","noun":"expansão","nounType":"derivado","adj":"expandido","adjType":"particípio","grammar":"expandir algo para","definition":"Aumentar extensão ou área ocupada.","examplePT":"O bairro se expande para o norte.","exampleEN":"The neighborhood expands northward.","contrast":"Expansão física não prova aumento populacional."},{"pt":"alargar","en":"widen","noun":"alargamento","nounType":"derivado","adj":"alargado","adjType":"particípio","grammar":"alargar uma via","definition":"Aumentar largura de espaço.","examplePT":"A reforma alarga a calçada.","exampleEN":"The redesign widens the sidewalk.","contrast":"Largura maior não resolve tudo sozinha."},{"pt":"estreitar","en":"narrow","noun":"estreitamento","nounType":"derivado","adj":"estreitado","adjType":"particípio","grammar":"estreitar uma passagem","definition":"Reduzir largura de via ou espaço.","examplePT":"Canteiros estreitam a pista.","exampleEN":"Planters narrow the roadway.","contrast":"Estreitamento pode ser medida de segurança."},{"pt":"verticalizar","en":"build upward","noun":"verticalização","nounType":"derivado","adj":"verticalizado","adjType":"particípio","grammar":"verticalizar um bairro","definition":"Ampliar a ocupação em altura.","examplePT":"Novas torres verticalizam o distrito.","exampleEN":"New towers increase vertical development in the district.","contrast":"Não equivale automaticamente a adensamento populacional."},{"pt":"nivelar","en":"level","noun":"nivelamento","nounType":"derivado","adj":"nivelado","adjType":"particípio","grammar":"nivelar uma superfície","definition":"Regularizar determinada cota.","examplePT":"A equipe nivela o piso da praça.","exampleEN":"The crew levels the square's paving.","contrast":"Nivelar não implica apagar toda declividade."},{"pt":"escalonar","en":"stagger / terrace","noun":"escalonamento","nounType":"derivado","adj":"escalonado","adjType":"particípio","grammar":"escalonar volumes em níveis","definition":"Dispor em alturas sucessivas.","examplePT":"Os blocos se escalonam rumo ao parque.","exampleEN":"The blocks step down toward the park.","contrast":"Escalonar também pode se referir a tempo."},{"pt":"recuar","en":"set back / retreat","noun":"recuo","nounType":"derivado","adj":"recuado","adjType":"particípio","grammar":"recuar em relação a","definition":"Afastar elemento de linha definida.","examplePT":"O térreo recua da linha da fachada.","exampleEN":"The ground floor is set back from the façade line.","contrast":"Sempre indique a linha de referência."},{"pt":"avançar","en":"project / extend forward","noun":"avanço","nounType":"derivado","adj":"avançado","adjType":"particípio","grammar":"avançar sobre uma área","definition":"Projetar-se além de um limite ou plano.","examplePT":"A cobertura avança sobre o embarque.","exampleEN":"The roof extends over the boarding area.","contrast":"Avanço visual não garante avanço do lote."}]},{"name":"Luz e percepção visual","desc":"Sombras, reflexos, textura e destaque","diagram":"light","weak":"As coisas parecem diferentes conforme a luz.","verbs":[{"pt":"refletir","en":"reflect","noun":"reflexo","nounType":"relacionado","adj":"refletido","adjType":"particípio","grammar":"refletir algo em","definition":"Devolver imagem ou luz por superfície.","examplePT":"O vidro reflete as árvores.","exampleEN":"The glass reflects the trees.","contrast":"O verbo também pode significar pensar."},{"pt":"sombrear","en":"shade","noun":"sombreamento","nounType":"derivado","adj":"sombreado","adjType":"particípio","grammar":"sombrear uma área","definition":"Projetar sombra sobre superfície.","examplePT":"Copas sombreiam a calçada.","exampleEN":"Tree canopies shade the sidewalk.","contrast":"Sombra não é medida automática de conforto."},{"pt":"iluminar","en":"illuminate / light","noun":"iluminação","nounType":"derivado","adj":"iluminado","adjType":"particípio","grammar":"iluminar algo com","definition":"Incidir luz sobre um elemento.","examplePT":"Luminárias iluminam a passagem.","exampleEN":"Lights illuminate the passage.","contrast":"Iluminação não prova segurança."},{"pt":"ocultar","en":"conceal / hide","noun":"ocultação","nounType":"derivado","adj":"oculto","adjType":"adjetivo","grammar":"ocultar algo atrás de","definition":"Bloquear a visualização de elemento.","examplePT":"A marquise oculta parte da fachada.","exampleEN":"The canopy conceals part of the façade.","contrast":"Oculto na imagem não significa inexistente."},{"pt":"revelar","en":"reveal","noun":"revelação","nounType":"derivado","adj":"revelado","adjType":"particípio","grammar":"revelar algo a alguém","definition":"Tornar algo visualmente perceptível.","examplePT":"A curva revela uma nova praça.","exampleEN":"The bend reveals another square.","contrast":"Revelar pode ser efeito de enquadramento."},{"pt":"ondular","en":"undulate / ripple","noun":"ondulação","nounType":"derivado","adj":"ondulado","adjType":"particípio","grammar":"ondular ao longo de","definition":"Apresentar curvas sucessivas.","examplePT":"A cobertura ondula sobre os pavilhões.","exampleEN":"The roof undulates above the pavilions.","contrast":"Descreve forma ou movimento conforme o contexto."},{"pt":"sobressair","en":"stand out / protrude","noun":"saliência","nounType":"relacionado","adj":"saliente","adjType":"relacionado","grammar":"sobressair entre","definition":"Destacar-se visualmente do conjunto.","examplePT":"Uma torre sobressai entre os telhados.","exampleEN":"A tower stands out among the rooftops.","contrast":"Saliência e saliente são relacionados e não derivados."},{"pt":"contrastar","en":"contrast","noun":"contraste","nounType":"derivado","adj":"contrastante","adjType":"adjetivo","grammar":"contrastar com algo","definition":"Apresentar diferença perceptível.","examplePT":"O concreto claro contrasta com o vidro.","exampleEN":"Pale concrete contrasts with the glass.","contrast":"Identifique quais atributos contrastam."}]}];
+
+</script>
+  <script>
+/* StoryLab · Laboratório dos Verbos Descritivos.
+ * Extensão de dados append-only + interface independente, sem dependências ou chamadas de rede.
+ */
+window.StoryLabVerbLab=(()=>{
+'use strict';
+const source=window.STORYLAB_SPATIAL_VERB_DATA||[];
+const D=window.STORYLAB_DATA,G=window.STORYLAB_ATLAS_GUIDES;
+const state={family:0,term:'ladear',query:''};
+const all=[];
+let context=null,linked=false,base=null;
+const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fold=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const diagrams={
+side:'<rect x="92" y="20" width="76" height="72" rx="9" class="vl-core"/><rect x="39" y="26" width="24" height="60" rx="6" class="vl-focus"/><rect x="197" y="26" width="24" height="60" rx="6" class="vl-focus"/><path d="M70 56H86M174 56H190" class="vl-edge"/>',
+surround:'<circle cx="130" cy="56" r="42" class="vl-outline"/><circle cx="130" cy="56" r="20" class="vl-core"/><path d="M130 8V17M130 95V104M82 56H90M170 56H179" class="vl-edge"/>',
+overlap:'<rect x="74" y="18" width="91" height="63" rx="10" class="vl-core"/><rect x="113" y="38" width="91" height="63" rx="10" class="vl-focus"/><path d="M113 38H165V81H113Z" class="vl-overlap"/>',
+cross:'<path d="M38 56H222" class="vl-outline"/><path d="M130 9V103" class="vl-edge"/><path d="M215 50L225 56L215 62M124 96L130 106L136 96" class="vl-stroke"/>',
+axis:'<path d="M50 91L204 24" class="vl-edge"/><path d="M191 19L208 22L199 38" class="vl-stroke"/><path d="M50 24V94H121" class="vl-outline"/><circle cx="50" cy="94" r="5" class="vl-focus"/>',
+cluster:'<circle cx="98" cy="40" r="15" class="vl-focus"/><circle cx="130" cy="35" r="15" class="vl-focus"/><circle cx="162" cy="43" r="15" class="vl-focus"/><circle cx="104" cy="75" r="15" class="vl-core"/><circle cx="141" cy="77" r="15" class="vl-core"/><circle cx="177" cy="77" r="15" class="vl-core"/>',
+expand:'<rect x="100" y="32" width="60" height="49" rx="8" class="vl-core"/><rect x="74" y="10" width="112" height="95" rx="12" class="vl-outline"/><path d="M100 56H81M160 56H179M130 32V17M130 81V99" class="vl-edge"/>',
+light:'<path d="M51 90L130 27L210 90" class="vl-outline"/><path d="M130 10V24M82 25L95 38M179 25L166 38" class="vl-edge"/><circle cx="130" cy="54" r="20" class="vl-focus"/>'
+};
+function diagram(kind,label){
+ return '<svg class="vl-diagram" viewBox="0 0 260 115" role="img" aria-label="'+escape('Esquema simplificado: '+label)+'" xmlns="http://www.w3.org/2000/svg">'+(diagrams[kind]||diagrams.side)+'</svg>';
+}
+if(D&&G&&Array.isArray(D.atlas)&&Array.isArray(G)&&D.atlas.length===G.length&&source.length===8){
+ base=D.atlas.length;
+ source.forEach((group,i)=>{
+  const topic=base+i;
+  const terms=group.verbs.map(v=>{
+   const normalized=fold(v.pt);
+   if(!v.pt||!v.en||!v.noun||!v.adj||!v.grammar||!v.examplePT||!v.exampleEN)throw Error('Família verbal incompleta: '+v.pt);
+   const definition=v.definition+' Substantivo '+(v.nounType==='relacionado'?'semanticamente relacionado':'derivado')+': '+v.noun+'. Forma '+v.adjType+': '+v.adj+'. Inglês: '+v.en+'.';
+   const caution=v.contrast+' Regência: '+v.grammar+'.';
+   const hint=v.definition.replace(/[.!]$/,'').toLowerCase();
+   let scene='Para descrever com precisão a relação espacial apresentada, o verbo adequado é _____: '+hint+'. Observe a disposição real dos elementos antes de afirmar essa relação.';
+   if(scene.length>220)scene=scene.slice(0,210).replace(/\s+\S*$/,'')+'.';
+   if(fold(scene).includes(normalized))throw Error('Frase-lacuna revela resposta: '+v.pt);
+   return [v.pt,definition,v.examplePT,caution,scene];
+  });
+  D.atlas.push({title:'Verbos · '+group.name,terms:group.verbs.map(v=>v.pt),prompt:'Descreva relações espaciais usando três verbos com regência correta, e explique como cada substantivo ou adjetivo amplia a descrição.'});
+  G.push({scene:'Exercício de campo hipotético: '+group.name.toLowerCase()+' nas ruas de Xangai.',focus:'Observe formas e trajetórias e use verbos precisos; não confunda aproximação visual com contato físico.',terms,model:[
+    'Primeiro observo a posição dos elementos antes de lhes atribuir um significado.',
+    'A descrição ganha precisão quando utilizo '+group.verbs[0].pt+' e '+group.verbs[1].pt+' para esclarecer relações entre objetos.',
+    'Em seguida, comparo os eixos, as superfícies e a escala dos espaços sem misturar observação e inferência.',
+    'Concluo com uma hipótese identificada como tal, reconhecendo que a imagem sozinha não comprova causas, intenções ou dados quantitativos.'
+  ],swaps:[]});
+  group.verbs.forEach((verb,j)=>all.push({...verb,topic,index:all.length,group:i}));
+ });
+}
+function lookup(topic,term){return all.find(v=>v.topic===topic&&v.pt===term)||null}
+function filtered(){
+ const q=fold(state.query.trim());
+ return all.filter(v=>(state.family===-1||v.group===state.family)&&(!q||fold([v.pt,v.en,v.noun,v.adj,v.grammar,v.definition,v.examplePT,v.exampleEN].join(' ')).includes(q)));
+}
+function familyCell(label,word,type){
+ return '<div class="vl-family-cell"><span class="vl-small">'+escape(label)+'</span><strong>'+escape(word)+'</strong><span class="vl-type">'+escape(type==='relacionado'?'Relacionado por sentido':type==='particípio'?'Particípio com uso adjetival':type==='adjetivo'?'Adjetivo': 'Formação derivada')+'</span></div>';
+}
+function details(v){
+ const g=source[v.group];
+ const near=all.filter(item=>item.group===v.group&&item.pt!==v.pt).slice(0,3);
+ const note=v.pt==='ladear'?'“Lado” é correlato, não substantivo formado diretamente de “ladear”; “ladeamento” existe, mas é pouco frequente.':
+  v.pt==='circundar'?'“Circundante” caracteriza o entorno; “circundado” descreve aquilo que foi rodeado. “Entorno” é relacionado, não derivado.':
+  v.pt==='sobrepor'?'A forma “sobreposto” é particípio irregular de sobrepor; “sobreposição” é substantivo derivado.':
+  v.pt==='sobressair'?'“Saliência” e “saliente” compartilham a ideia de destaque, mas não são derivações diretas de “sobressair”.':'';
+ return '<section class="vl-detail panel panel-pad" aria-label="Família lexical de '+escape(v.pt)+'">'+
+  '<div class="vl-kicker">FAMÍLIA LEXICAL · '+escape(g.name)+'</div><div class="vl-head"><div><h2>'+escape(v.pt)+'</h2><p class="vl-en" lang="en">'+escape(v.en)+'</p></div>'+diagram(g.diagram,g.name)+'</div>'+
+  '<p class="vl-definition">'+escape(v.definition)+'</p>'+
+  '<div class="vl-derivation">'+familyCell('SUBSTANTIVO',v.noun,v.nounType)+familyCell('ADJETIVO / PARTICÍPIO',v.adj,v.adjType)+'</div>'+
+  '<p class="vl-note"><strong>Regência:</strong> '+escape(v.grammar)+'</p>'+
+  (note?'<div class="notice info">'+escape(note)+'</div>':'')+
+  '<div class="vl-examples"><div><div class="vl-small">DESCRIÇÃO EM PORTUGUÊS</div><p>'+escape(v.examplePT)+'</p></div>'+
+  '<div><div class="vl-small">ENGLISH · CONTEXTO</div><p lang="en">'+escape(v.exampleEN)+'</p></div></div>'+
+  '<div class="vl-warning"><strong>Não confunda:</strong> '+escape(v.contrast)+'</div>'+
+  '<div class="vl-actions"><button type="button" class="btn secondary sm" data-verb-action="copy-pt" data-verb-id="'+v.index+'">Copiar frase PT</button>'+
+  '<button type="button" class="btn secondary sm" data-verb-action="copy-en" data-verb-id="'+v.index+'">Copiar frase EN</button>'+
+  '<button type="button" class="btn accent sm" data-verb-action="open" data-verb-id="'+v.index+'">Estudar e treinar no Atlas</button></div>'+
+  '<div class="vl-related"><div class="vl-small">VERBOS DO MESMO CAMPO</div><div class="vl-tags">'+near.map(o=>'<button type="button" class="vl-chip" data-verb-action="jump" data-verb-id="'+o.index+'">'+escape(o.pt)+'</button>').join('')+'</div></div></section>';
+}
+function render(){
+ if(!all.length)return '<div class="notice info">Corpus verbal indisponível.</div>';
+ const list=filtered();
+ const current=list.find(v=>v.pt===state.term)||list[0];
+ return '<div class="vl-root">'+
+  '<div class="panel panel-pad vl-intro"><div class="vl-kicker">ATLAS · LABORATÓRIO DE PRECISÃO ESPACIAL</div>'+
+  '<h2>Verbos que desenham a cena</h2><p>Descreva relações entre objetos, percursos, superfícies e mudanças. Explore o verbo, sua família lexical, regência e equivalentes em inglês — distinguindo derivação real de parentesco semântico.</p>'+
+  '<div class="vl-metrics"><span><strong>'+all.length+'</strong> verbos</span><span><strong>'+source.length+'</strong> campos</span><span><strong>PT + EN</strong> exemplos</span></div></div>'+
+  '<div class="vl-tools panel panel-pad"><label class="field-label" for="vl-search">Buscar verbo, substantivo, adjetivo ou inglês</label>'+
+  '<input id="vl-search" class="search" data-verb-search="1" value="'+escape(state.query)+'" placeholder="Ex.: ladear, sobreposição, circundante, overlap">'+
+  '<div class="vl-tags vl-group-filter"><button type="button" class="vl-chip '+(state.family===-1?'active':'')+'" data-verb-action="family" data-family="-1" aria-pressed="'+(state.family===-1)+'">Todas</button>'+
+  source.map((g,i)=>'<button type="button" class="vl-chip '+(state.family===i?'active':'')+'" data-verb-action="family" data-family="'+i+'" aria-pressed="'+(state.family===i)+'">'+escape(g.name)+'</button>').join('')+'</div></div>'+
+  '<div class="vl-layout"><aside class="panel panel-pad vl-list"><div class="vl-kicker">'+list.length+' RESULTADOS</div>'+
+  (list.length?list.map(v=>'<button type="button" class="vl-item '+(v.index===current?.index?'selected':'')+'" data-verb-action="select" data-verb-id="'+v.index+'" aria-current="'+(v.index===current?.index?'true':'false')+'"><strong>'+escape(v.pt)+'</strong><span>'+escape(v.en)+'</span></button>').join(''):'<p class="muted">Nenhum resultado. Selecione “Todas” ou tente outra expressão.</p>')+
+  '</aside>'+(current?details(current):'<div class="panel panel-pad">Nenhum verbo encontrado.</div>')+'</div></div>';
+}
+function bind(api){
+ context=api;
+ if(linked)return;
+ linked=true;
+ document.addEventListener('click',event=>{
+  const b=event.target?.closest?.('[data-verb-action]');
+  if(!b)return;
+  event.preventDefault();
+  const action=b.dataset.verbAction,id=Number(b.dataset.verbId),v=all[id];
+  if(action==='family'){const index=Number(b.dataset.family);if(index>=-1&&index<source.length){state.family=index;state.query='';state.term='';context.render()}return}
+  if(action==='select'||action==='jump'){if(!v)return;state.family=v.group;state.term=v.pt;state.query='';context.render();return}
+  if(!v)return;
+  if(action==='copy-pt')context.copy(v.examplePT);
+  if(action==='copy-en')context.copy(v.exampleEN);
+  if(action==='open')context.open(v.topic,v.pt);
+ });
+ document.addEventListener('input',event=>{
+  const t=event.target;
+  if(!t?.matches?.('[data-verb-search]'))return;
+  state.query=t.value;
+  state.family=-1;
+  const caret=t.selectionStart??t.value.length;
+  context.render();
+  const next=document.getElementById('vl-search');
+  if(next){next.focus();next.setSelectionRange?.(caret,caret)}
+ });
+}
+function focus(topic,term){const v=lookup(topic,term);if(!v)return false;state.family=v.group;state.term=v.pt;state.query='';return true}
+return {render,bind,lookup,focus,entries:()=>all.slice(),base:()=>base,groups:()=>source.length,_test:{filtered,selectFamily:i=>{state.family=i;state.query=''},search:q=>{state.query=q;state.family=-1}}};
 })();
 
 </script>
@@ -507,6 +691,8 @@ function dictionary(){
   if(bilingual.relations?.length)detail+='<div class="atlas12-example"><div class="eyebrow">REDE SEMÂNTICA · CONCEITOS RELACIONADOS</div><p class="muted small">Toque para explorar a relação em outro campo:</p><div class="atlas12-tags">'+
    bilingual.relations.map(x=>button('word',esc(x.term),'atlas14-chip','data-topic="'+x.topic+'" data-word="'+esc(x.term)+'"')).join('')+'</div></div>';
  }
+ const family=window.StoryLabVerbLab?.lookup?.(view.topic,term);
+ if(family)detail+='<div class="atlas12-example"><div class="eyebrow">FAMÍLIA VERBAL</div><p><strong>'+esc(family.noun)+'</strong> · substantivo '+(family.nounType==='derivado'?'derivado':'relacionado')+'; <strong>'+esc(family.adj)+'</strong> · '+esc(family.adjType)+'</p><p>'+esc(family.grammar)+'</p>'+button('verb-show','Explorar a família lexical','btn secondary sm')+'</div>';
  detail+='<p class="atlas14-status '+st+'">'+MARK[st]+' '+LABEL[st]+(r?' · '+r.right+' acerto(s), '+r.wrong+' erro(s)':'')+'</p>';
  detail+='<div class="form-row">'+button('copy',ico('copy',15)+' Copiar termo','btn secondary sm')+button('train-field',ico('target',15)+' Treinar este campo','btn secondary sm')+button('practice',ico('mic',15)+' Praticar este campo','btn accent sm')+'</div></div>';
  return '<div class="atlas12-columns"><div class="stack"><div class="panel panel-pad"><div class="eyebrow">ENCONTRE A PALAVRA PRECISA</div><p class="muted small">'+esc(g().focus)+'</p>'+termButtons()+'</div>'+(view.query.trim()?'':swapsPanel())+'</div>'+detail+'</div>';
@@ -591,8 +777,8 @@ function render(){
  return header('VOCABULÁRIO / CAMADAS DA COMUNICAÇÃO','Atlas Descritivo','Aprenda palavras pelo contexto, distinga termos vizinhos, pratique quatro níveis de narração e revise no tempo certo. Não confunda impressão pessoal com fato verificado.')+
  '<div class="grid grid-4" style="margin-bottom:20px">'+stat('Verbetes aprofundados',rich)+stat('Termos dominados',t.mastered+' / '+t.total)+stat('Revisões pendentes',t.due)+stat('Práticas registradas',h.length)+'</div>'+
  '<div class="panel panel-pad atlas12-toolbar"><div><label class="field-label" for="atlas12-topic">Campo de observação</label><select id="atlas12-topic" data-atlas-topic="1">'+D.atlas.map((a,i)=>{const p=fieldProgress(i);return '<option value="'+i+'" '+(i===view.topic?'selected':'')+'>'+esc(a.title)+' · '+p.mastered+'/'+p.total+'</option>'}).join('')+'</select></div><div><label class="field-label" for="atlas12-search">Buscar em todo o Atlas</label><input id="atlas12-search" class="search" data-atlas-query="1" value="'+esc(view.query)+'" placeholder="Ex.: luz rasante, caimento, fachada..."></div></div>'+
- '<div class="filters" role="tablist" aria-label="Modos do Atlas">'+button('explore',ico('book',15)+' Vocabulário explicado','chip-button '+(view.tab==='explore'?'active':''))+button('train',ico('target',15)+' Treino de precisão'+(t.due?' <span class="atlas14-badge">'+t.due+'</span>':''),'chip-button '+(view.tab==='train'?'active':''))+button('practice',ico('mic',15)+' Prática progressiva','chip-button '+(view.tab==='practice'?'active':''))+'</div>'+
- (view.tab==='explore'?dictionary():view.tab==='train'?training():exercise());
+ '<div class="filters" role="tablist" aria-label="Modos do Atlas">'+button('explore',ico('book',15)+' Vocabulário explicado','chip-button '+(view.tab==='explore'?'active':''))+button('train',ico('target',15)+' Treino de precisão'+(t.due?' <span class="atlas14-badge">'+t.due+'</span>':''),'chip-button '+(view.tab==='train'?'active':''))+button('practice',ico('mic',15)+' Prática progressiva','chip-button '+(view.tab==='practice'?'active':''))+ (window.StoryLabVerbLab?button('verbs',ico('book',15)+' Verbos & famílias','chip-button '+(view.tab==='verbs'?'active':'')):'')+'</div>'+
+ (view.tab==='verbs'&&window.StoryLabVerbLab?window.StoryLabVerbLab.render():view.tab==='explore'?dictionary():view.tab==='train'?training():exercise());
 }
 function refreshQuery(el){
  const begin=el.selectionStart,end=el.selectionEnd;
@@ -602,13 +788,15 @@ function refreshQuery(el){
 }
 function init(context){
  api=context;
+ window.StoryLabVerbLab?.bind?.({render:()=>api.render(),copy:text=>api.copy(text),open:(topic,term)=>openTerm(topic,term)});
  document.addEventListener('click',event=>{
   const b=event.target.closest('[data-atlas-action]');
   if(!b)return;
   event.preventDefault();
   const action=b.dataset.atlasAction,st=api.getStore();
-  if(action==='explore'||action==='practice'||action==='train'){view.tab=action;view.feedback=null;view.show=false}
+  if(action==='explore'||action==='practice'||action==='train'||action==='verbs'){view.tab=action;view.feedback=null;view.show=false}
   else if(action==='word'){const i=Number(b.dataset.topic);if(!api.D.atlas[i]?.terms.includes(b.dataset.word))return;view.topic=i;view.word=b.dataset.word;view.query='';view.feedback=null;view.tab='explore'}
+  else if(action==='verb-show'){const v=window.StoryLabVerbLab?.lookup?.(view.topic,currentCard().term);if(v){window.StoryLabVerbLab.focus(v.topic,v.pt);view.tab='verbs'}}
   else if(action==='copy'){api.copy(currentCard().term);return}
   else if(action==='copy-en'){const extra=window.STORYLAB_URBANISM?.byField?.[view.topic]?.[currentCard().term];if(extra)api.copy(extra.en);return}
   else if(action==='level'){const i=Number(b.dataset.level);if(i<0||i>3||!Number.isInteger(i))return;view.level=i;view.show=false;view.feedback=null}

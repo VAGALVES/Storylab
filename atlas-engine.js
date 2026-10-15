@@ -213,6 +213,8 @@ function dictionary(){
   if(bilingual.relations?.length)detail+='<div class="atlas12-example"><div class="eyebrow">REDE SEMÂNTICA · CONCEITOS RELACIONADOS</div><p class="muted small">Toque para explorar a relação em outro campo:</p><div class="atlas12-tags">'+
    bilingual.relations.map(x=>button('word',esc(x.term),'atlas14-chip','data-topic="'+x.topic+'" data-word="'+esc(x.term)+'"')).join('')+'</div></div>';
  }
+ const family=window.StoryLabVerbLab?.lookup?.(view.topic,term);
+ if(family)detail+='<div class="atlas12-example"><div class="eyebrow">FAMÍLIA VERBAL</div><p><strong>'+esc(family.noun)+'</strong> · substantivo '+(family.nounType==='derivado'?'derivado':'relacionado')+'; <strong>'+esc(family.adj)+'</strong> · '+esc(family.adjType)+'</p><p>'+esc(family.grammar)+'</p>'+button('verb-show','Explorar a família lexical','btn secondary sm')+'</div>';
  detail+='<p class="atlas14-status '+st+'">'+MARK[st]+' '+LABEL[st]+(r?' · '+r.right+' acerto(s), '+r.wrong+' erro(s)':'')+'</p>';
  detail+='<div class="form-row">'+button('copy',ico('copy',15)+' Copiar termo','btn secondary sm')+button('train-field',ico('target',15)+' Treinar este campo','btn secondary sm')+button('practice',ico('mic',15)+' Praticar este campo','btn accent sm')+'</div></div>';
  return '<div class="atlas12-columns"><div class="stack"><div class="panel panel-pad"><div class="eyebrow">ENCONTRE A PALAVRA PRECISA</div><p class="muted small">'+esc(g().focus)+'</p>'+termButtons()+'</div>'+(view.query.trim()?'':swapsPanel())+'</div>'+detail+'</div>';
@@ -297,8 +299,8 @@ function render(){
  return header('VOCABULÁRIO / CAMADAS DA COMUNICAÇÃO','Atlas Descritivo','Aprenda palavras pelo contexto, distinga termos vizinhos, pratique quatro níveis de narração e revise no tempo certo. Não confunda impressão pessoal com fato verificado.')+
  '<div class="grid grid-4" style="margin-bottom:20px">'+stat('Verbetes aprofundados',rich)+stat('Termos dominados',t.mastered+' / '+t.total)+stat('Revisões pendentes',t.due)+stat('Práticas registradas',h.length)+'</div>'+
  '<div class="panel panel-pad atlas12-toolbar"><div><label class="field-label" for="atlas12-topic">Campo de observação</label><select id="atlas12-topic" data-atlas-topic="1">'+D.atlas.map((a,i)=>{const p=fieldProgress(i);return '<option value="'+i+'" '+(i===view.topic?'selected':'')+'>'+esc(a.title)+' · '+p.mastered+'/'+p.total+'</option>'}).join('')+'</select></div><div><label class="field-label" for="atlas12-search">Buscar em todo o Atlas</label><input id="atlas12-search" class="search" data-atlas-query="1" value="'+esc(view.query)+'" placeholder="Ex.: luz rasante, caimento, fachada..."></div></div>'+
- '<div class="filters" role="tablist" aria-label="Modos do Atlas">'+button('explore',ico('book',15)+' Vocabulário explicado','chip-button '+(view.tab==='explore'?'active':''))+button('train',ico('target',15)+' Treino de precisão'+(t.due?' <span class="atlas14-badge">'+t.due+'</span>':''),'chip-button '+(view.tab==='train'?'active':''))+button('practice',ico('mic',15)+' Prática progressiva','chip-button '+(view.tab==='practice'?'active':''))+'</div>'+
- (view.tab==='explore'?dictionary():view.tab==='train'?training():exercise());
+ '<div class="filters" role="tablist" aria-label="Modos do Atlas">'+button('explore',ico('book',15)+' Vocabulário explicado','chip-button '+(view.tab==='explore'?'active':''))+button('train',ico('target',15)+' Treino de precisão'+(t.due?' <span class="atlas14-badge">'+t.due+'</span>':''),'chip-button '+(view.tab==='train'?'active':''))+button('practice',ico('mic',15)+' Prática progressiva','chip-button '+(view.tab==='practice'?'active':''))+ (window.StoryLabVerbLab?button('verbs',ico('book',15)+' Verbos & famílias','chip-button '+(view.tab==='verbs'?'active':'')):'')+'</div>'+
+ (view.tab==='verbs'&&window.StoryLabVerbLab?window.StoryLabVerbLab.render():view.tab==='explore'?dictionary():view.tab==='train'?training():exercise());
 }
 function refreshQuery(el){
  const begin=el.selectionStart,end=el.selectionEnd;
@@ -308,13 +310,15 @@ function refreshQuery(el){
 }
 function init(context){
  api=context;
+ window.StoryLabVerbLab?.bind?.({render:()=>api.render(),copy:text=>api.copy(text),open:(topic,term)=>openTerm(topic,term)});
  document.addEventListener('click',event=>{
   const b=event.target.closest('[data-atlas-action]');
   if(!b)return;
   event.preventDefault();
   const action=b.dataset.atlasAction,st=api.getStore();
-  if(action==='explore'||action==='practice'||action==='train'){view.tab=action;view.feedback=null;view.show=false}
+  if(action==='explore'||action==='practice'||action==='train'||action==='verbs'){view.tab=action;view.feedback=null;view.show=false}
   else if(action==='word'){const i=Number(b.dataset.topic);if(!api.D.atlas[i]?.terms.includes(b.dataset.word))return;view.topic=i;view.word=b.dataset.word;view.query='';view.feedback=null;view.tab='explore'}
+  else if(action==='verb-show'){const v=window.StoryLabVerbLab?.lookup?.(view.topic,currentCard().term);if(v){window.StoryLabVerbLab.focus(v.topic,v.pt);view.tab='verbs'}}
   else if(action==='copy'){api.copy(currentCard().term);return}
   else if(action==='copy-en'){const extra=window.STORYLAB_URBANISM?.byField?.[view.topic]?.[currentCard().term];if(extra)api.copy(extra.en);return}
   else if(action==='level'){const i=Number(b.dataset.level);if(i<0||i>3||!Number.isInteger(i))return;view.level=i;view.show=false;view.feedback=null}
