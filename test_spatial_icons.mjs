@@ -55,7 +55,7 @@ assert.ok(lab.focus(i.topic,i.pt));
 let html=lab.render();
 assert.match(html,/class="vl-diagram" role="img" aria-label="Diagrama do verbo bifurcar-se"/);
 assert.match(html,/class="vl-mini-diagram" aria-hidden="true"/);
-assert.equal((html.match(/class="vl-mini-diagram"/g)||[]).length,8);
+assert.equal((html.match(/class="vl-mini-diagram"/g)||[]).length,9,'8 miniaturas do campo e 1 contraste ilustrado');
 assert.ok(!html.includes('Esquema simplificado: Percurso e travessia'),'detalhe não herda diagrama genérico');
 for(const word of routes){
  const v=g.find(x=>x.pt===word);
@@ -65,7 +65,7 @@ for(const word of routes){
 const inherited=entries.find(v=>v.pt==='ladear');
 lab.focus(inherited.topic,inherited.pt);html=lab.render();
 assert.match(html,/Esquema simplificado: Lateralidade e vizinhança/,'outros campos ainda usam fallback seguro');
-assert.equal((html.match(/class="vl-mini-diagram"/g)||[]).length,0);
+assert.equal((html.match(/class="vl-mini-diagram"/g)||[]).length,0,'catálogo básico não desenha grupos que ainda não foram carregados');
 const css=read('style.css');
 assert.match(css,/\.vl-item-illustrated/);
 assert.match(css,/\.vl-mini-diagram/);

@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.4 — Diagramas Semânticos por Verbo
+## Journalism Academy · Versão 2.5 — Atlas Visual dos 64 Verbos
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -21,6 +21,15 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Novidades da v2.5 — Atlas Visual dos 64 Verbos
+
+- **64/64 verbos com pictogramas próprios**: foram desenhados mais 56 SVGs específicos nas sete famílias restantes, além dos oito já implementados para percurso. Cada pictograma codifica uma relação diferente, como *margear versus beirar*, *circundar versus contornar*, *sobrepor versus justapor*, *expandir versus alargar* e *ocultar versus revelar*.
+- **Lógica semântica explícita**: 64 legendas curtas explicam o que os traços representam; os SVGs ampliados recebem descrição acessível, enquanto miniaturas decorativas não são narradas em duplicidade por leitores de tela.
+- **Comparação didática inteligente**: dois contrastes relacionados são sugeridos editorialmente por verbo, inclusive entre diferentes campos semânticos; botões com miniaturas levam diretamente ao verbete de comparação.
+- **UI responsiva**: cartões ilustrados, proporção preservada em telas compactas, legendas ajustadas para mobile e controles com foco acessível. Sem imagens externas e com temas claro/escuro.
+- **Arquitetura**: `spatial-verb-icons.js` mantém o catálogo e os 8 primeiros desenhos, `spatial-verb-icons-extra.js` registra os outros 56, e `spatial-verbs-data.js` identifica cada verbo pelo próprio `iconKey`. Não há alteração de índices, resumos, frases de regência ou histórico.
+- **Qualidade**: `test_all_spatial_icons.mjs` testa os 64 diagramas, unicidade geométrica, texto semântico, cards, contraste entre áreas, busca, acessibilidade e totais preservados. PWA e versão HTML única permanecem sincronizados.
 
 ### Novidades da v2.4 — Diagramas Semânticos por Verbo
 

@@ -112,17 +112,21 @@ function practiceView(){
  return html;
 }
 
+/* Relações escolhidas editorialmente: preferir contrastes didáticos a vizinhos aleatórios. */
+const semanticPairs={"ladear":["flanquear","contornar"],"flanquear":["ladear","circundar"],"margear":["beirar","contornar"],"beirar":["margear","avizinhar-se"],"alinhar":["justapor","intercalar"],"justapor":["sobrepor","intercalar"],"avizinhar-se":["justapor","ladear"],"contornar":["circundar","rodear"],"circundar":["contornar","rodear"],"cercar":["delimitar","circundar"],"rodear":["circundar","envolver"],"envolver":["cercar","recobrir"],"delimitar":["demarcar","cercar"],"demarcar":["delimitar","emoldurar"],"emoldurar":["envolver","ocultar"],"isolar":["interligar","fragmentar"],"sobrepor":["justapor","superpor"],"superpor":["sobrepor","revestir"],"interpor":["intercalar","sobrepor"],"intercalar":["interpor","distribuir"],"encaixar":["embutir","justapor"],"embutir":["encaixar","revestir"],"revestir":["recobrir","embutir"],"recobrir":["revestir","sombrear"],"atravessar":["cruzar","transpor"],"cruzar":["atravessar","convergir"],"transpor":["atravessar","desviar"],"percorrer":["serpentear","prolongar"],"desviar":["contornar","percorrer"],"serpentear":["ondular","percorrer"],"bifurcar-se":["convergir","interligar"],"convergir":["bifurcar-se","agrupar"],"orientar":["direcionar","apontar"],"direcionar":["apontar","orientar"],"apontar":["direcionar","projetar"],"inclinar":["rebaixar","elevar"],"elevar":["rebaixar","sobressair"],"rebaixar":["elevar","nivelar"],"projetar":["avançar","recuar"],"prolongar":["expandir","percorrer"],"agrupar":["concentrar","distribuir"],"dispersar":["concentrar","distribuir"],"concentrar":["dispersar","agrupar"],"distribuir":["agrupar","intercalar"],"adensar":["verticalizar","agrupar"],"fragmentar":["interligar","isolar"],"ocupar":["concentrar","distribuir"],"interligar":["fragmentar","isolar"],"expandir":["alargar","prolongar"],"alargar":["estreitar","expandir"],"estreitar":["alargar","recuar"],"verticalizar":["adensar","sobressair"],"nivelar":["escalonar","rebaixar"],"escalonar":["nivelar","verticalizar"],"recuar":["avançar","projetar"],"avançar":["recuar","projetar"],"refletir":["iluminar","sombrear"],"sombrear":["iluminar","ocultar"],"iluminar":["sombrear","revelar"],"ocultar":["revelar","emoldurar"],"revelar":["ocultar","emoldurar"],"ondular":["serpentear","inclinar"],"sobressair":["verticalizar","contrastar"],"contrastar":["sobressair","alinhar"]};
+function relatedVerbs(v){return (semanticPairs[v.pt]||[]).map(name=>all.find(item=>item.pt===name)).filter(Boolean)}
+function diagramCaption(v){return window.StoryLabVerbIcons?.caption?.(v.iconKey||v.pt)||''}
 function miniDiagram(v){return window.StoryLabVerbIcons?.render?.(v.iconKey||v.pt,v.pt,{mini:true})||''}
 function specificDiagram(v){return window.StoryLabVerbIcons?.render?.(v.iconKey||v.pt,v.pt)||diagram(source[v.group].diagram,source[v.group].name)}
 function details(v){
  const g=source[v.group];
- const near=all.filter(item=>item.group===v.group&&item.pt!==v.pt).slice(0,3);
+ const near=relatedVerbs(v);
  const note=v.pt==='ladear'?'“Lado” é correlato, não substantivo formado diretamente de “ladear”; “ladeamento” existe, mas é pouco frequente.':
   v.pt==='circundar'?'“Circundante” caracteriza o entorno; “circundado” descreve aquilo que foi rodeado. “Entorno” é relacionado, não derivado.':
   v.pt==='sobrepor'?'A forma “sobreposto” é particípio irregular de sobrepor; “sobreposição” é substantivo derivado.':
   v.pt==='sobressair'?'“Saliência” e “saliente” compartilham a ideia de destaque, mas não são derivações diretas de “sobressair”.':'';
  return '<section class="vl-detail panel panel-pad" aria-label="Família lexical de '+escape(v.pt)+'">'+
-  '<div class="vl-kicker">FAMÍLIA LEXICAL · '+escape(g.name)+'</div><div class="vl-head"><div><h2>'+escape(v.pt)+'</h2><p class="vl-en" lang="en">'+escape(v.en)+'</p></div>'+specificDiagram(v)+'</div>'+
+  '<div class="vl-kicker">FAMÍLIA LEXICAL · '+escape(g.name)+'</div><div class="vl-head"><div><h2>'+escape(v.pt)+'</h2><p class="vl-en" lang="en">'+escape(v.en)+'</p></div><figure class="vl-visual">'+specificDiagram(v)+'<figcaption class="vl-diagram-caption">'+escape(diagramCaption(v))+'</figcaption></figure></div>'+
   '<p class="vl-definition">'+escape(v.definition)+'</p>'+
   '<div class="vl-derivation">'+familyCell('SUBSTANTIVO',v.noun,v.nounType)+familyCell('ADJETIVO / PARTICÍPIO',v.adj,v.adjType)+'</div>'+
   '<p class="vl-note"><strong>Regência básica:</strong> '+escape(v.grammar)+'</p>'+
@@ -134,7 +138,7 @@ function details(v){
   '<div class="vl-actions"><button type="button" class="btn secondary sm" data-verb-action="copy-pt" data-verb-id="'+v.index+'">Copiar frase PT</button>'+
   '<button type="button" class="btn secondary sm" data-verb-action="copy-en" data-verb-id="'+v.index+'">Copiar frase EN</button>'+
   '<button type="button" class="btn accent sm" data-verb-action="open" data-verb-id="'+v.index+'">Estudar e treinar no Atlas</button></div>'+
-  '<div class="vl-related"><div class="vl-small">VERBOS DO MESMO CAMPO</div><div class="vl-tags">'+near.map(o=>'<button type="button" class="vl-chip" data-verb-action="jump" data-verb-id="'+o.index+'">'+escape(o.pt)+'</button>').join('')+'</div></div></section>';
+  '<div class="vl-related"><div class="vl-small">COMPARE AS RELAÇÕES</div><div class="vl-tags">'+near.map(o=>'<button type="button" class="vl-chip vl-compare" data-verb-action="jump" data-verb-id="'+o.index+'">'+miniDiagram(o)+'<span>'+escape(o.pt)+'</span></button>').join('')+'</div></div></section>';
 }
 function render(){
  if(state.mode==='practice')return practiceView();
