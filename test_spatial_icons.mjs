@@ -49,7 +49,7 @@ assert.equal(D.atlas.length,62);
 assert.equal(D.atlas.reduce((n,t)=>n+t.terms.length,0),712);
 const g=entries.filter(v=>v.group===3);
 assert.equal(g.length,8);
-assert.deepEqual(g.map(v=>v.pt),routes);
+assert.equal(JSON.stringify(g.map(v=>v.pt)),JSON.stringify(routes));
 const i=entries.find(v=>v.pt==='bifurcar-se');
 assert.ok(lab.focus(i.topic,i.pt));
 let html=lab.render();
