@@ -501,3 +501,71 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 .atlas20-seefig{border:1px solid var(--line);background:var(--paper);color:var(--accent);border-radius:100px;padding:7px 12px;font-size:12px;font-weight:760;margin:6px 0 0}
 .fig-zoom-hint{position:fixed;top:18px;left:14px;right:96px;z-index:2;font-size:12px;color:var(--muted);line-height:1.35}
 .atlas20-more{margin:8px 0 0}.atlas20-more>summary{cursor:pointer;font-size:12px;font-weight:760;color:var(--accent);padding:8px 2px;list-style:none}.atlas20-more>summary::before{content:'▾ ';font-size:11px}.atlas20-more:not([open])>summary::before{content:'▸ '}.atlas20-more .fig{margin:6px 0 0;padding:12px}
+
+
+/* v2.11 · Curadoria visual: gramática de cores e estados coerentes.
+   A largura configurada pelo estudante permanece intocada. */
+:root{
+  --study-active:#24594d;
+  --study-on:#fffefa;
+  --study-soft:#e8f1ec;
+  --study-border:#98b9ac;
+  --study-ink:#24594d;
+  --fig-0:#f0ded1; --fig-0s:#ab6f55;
+  --fig-1:#dcece3; --fig-1s:#508473;
+  --fig-2:#f3eedc; --fig-2s:#8f7f4a;
+  --fig-3:#e3e9e9; --fig-3s:#5e7c7c;
+}
+[data-theme="dark"]{
+  --study-active:#b4dac9;
+  --study-on:#172d27;
+  --study-soft:#2a443d;
+  --study-border:#688f80;
+  --study-ink:#c5e4d5;
+  --fig-0:#4a362c; --fig-0s:#dba78f;
+  --fig-1:#29453c; --fig-1s:#a1cbbb;
+  --fig-2:#48412d; --fig-2s:#dac68f;
+  --fig-3:#2d4144; --fig-3s:#a0c2bd;
+}
+.ling-figure-controls .ling-diagram-button{
+  width:44px;height:44px;min-width:44px;min-height:44px;
+  border:1px solid var(--line);border-radius:11px;
+  background:var(--paper);color:var(--ink);
+  font-family:Georgia,serif;font-weight:600;font-size:17px;
+  transition:background .16s,border-color .16s,color .16s;
+}
+.ling-figure-controls .ling-diagram-button:hover:not(.active){
+  background:var(--study-soft);border-color:var(--study-border);
+}
+.ling-figure-controls .ling-diagram-button.active{
+  background:var(--study-active);border-color:var(--study-active);
+  color:var(--study-on);font-weight:750;
+  box-shadow:none;
+}
+.ling-figure-controls .ling-diagram-button:focus-visible,
+.ling-tab:focus-visible,.ling-chapter:focus-visible,
+.ling-option:focus-visible,.fig-zoom-btn:focus-visible{
+  outline:3px solid var(--study-border);outline-offset:3px;
+}
+.ling-tab.active{
+  background:var(--study-soft);border-color:var(--study-border);
+  color:var(--study-ink);box-shadow:inset 0 -2px 0 var(--study-active);
+}
+.ling-chapter.active{
+  background:var(--study-soft);border-color:var(--study-border);
+}
+.ling-chapter.active .ling-chapter-num{
+  background:var(--study-active);border-color:var(--study-active);
+  color:var(--study-on);
+}
+.ling-chapter-status{color:var(--study-ink)}
+.ling-option.selected{background:var(--study-soft);border-color:var(--study-active)}
+.fig-zoom-btn{color:var(--study-ink);border-color:var(--study-border)}
+.fig-zoom-btn:hover{background:var(--study-soft)}
+.fig-stage-active{fill:var(--study-soft);stroke:var(--study-active);stroke-width:2.5}
+.fig-svg text.fig-stage-number{fill:var(--study-ink)}
+.fig-svg .fig-t{fill:var(--ink)}
+.fig-svg text.fig-on{fill:var(--study-ink)}
+@media(prefers-reduced-motion:reduce){
+  .ling-figure-controls .ling-diagram-button{transition:none}
+}

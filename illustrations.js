@@ -56,14 +56,14 @@ const T={
  },
  // Pirâmide (ou pirâmide invertida): camadas de importância
  pyramid(f){
-  const L=f.layers||[],n=L.length,H=n*84,top=14,inv=!!f.inverted;let out='';
+  const L=f.layers||[],n=L.length,H=n*94,top=14,inv=!!f.inverted;let out='';
   L.forEach((l,i)=>{
-   const y0=top+i*84,y1=y0+84,w=k=>inv?(W-60)*(1-k/n*0.82):(W-60)*(0.18+k/n*0.82);
+   const y0=top+i*94,y1=y0+94,w=k=>inv?(W-60)*(1-k/n*0.58):(W-60)*(0.42+k/n*0.58);
    const wa=w(i),wb=w(i+1),xa=(W-wa)/2,xb=(W-wb)/2;
    out+='<path class="fig-box '+tone(i)+'" d="M'+xa+' '+y0+'H'+(xa+wa)+'L'+(xb+wb)+' '+y1+'H'+xb+'Z"/>';
-   const wmin=Math.min(wa,wb),max=Math.max(10,Math.floor(wmin/11));
-   out+=text(l.t,W/2,y0+(l.d?30:42),{max,size:18,weight:700});
-   if(l.d)out+=text(l.d,W/2,y0+58,{max:Math.max(12,Math.floor(wmin/9)),size:14,cls:'fig-d'});
+   const wmin=Math.min(wa,wb),max=Math.max(13,Math.floor(wmin/10.5));
+   out+=text(l.t,W/2,y0+(l.d?31:47),{max,size:16,weight:700});
+   if(l.d)out+=text(l.d,W/2,y0+65,{max:Math.max(13,Math.floor(wmin/9.5)),size:13,cls:'fig-d'});
   });
   return [out,top+H+14];
  },
@@ -120,13 +120,27 @@ const T={
  },
  // Espectro: um contínuo entre dois polos
  spectrum(f,opts){
-  const m=f.marks||[],x0=30,x1=W-30,y=120;let out='<defs><linearGradient id="fig-grad"><stop offset="0" class="fig-stop0"/><stop offset="1" class="fig-stop1"/></linearGradient></defs>';
-  out+='<rect x="'+x0+'" y="'+(y-14)+'" width="'+(x1-x0)+'" height="28" rx="14" fill="url(#fig-grad)"/>';
-  out+=text(f.from,x0,y+50,{size:16,anchor:'start',weight:800,max:18})+text(f.to,x1,y+50,{size:16,anchor:'end',weight:800,max:18});
-  m.forEach((k,i)=>{const x=x0+(x1-x0)*Math.min(1,Math.max(0,k.at)),up=i%2===0;
-   out+='<line class="fig-line" x1="'+x+'" y1="'+(y-16)+'" x2="'+x+'" y2="'+(up?y-40:y+82)+'"/><circle class="fig-dot '+tone(i)+'" cx="'+x+'" cy="'+y+'" r="8"/>'+
-    text(k.t,Math.min(x1-44,Math.max(x0+44,x)),up?y-62:y+104,{size:15,max:13,lh:18,weight:opts&&opts.active===k.t?800:null,cls:opts&&opts.active===k.t?'fig-t fig-on':'fig-t'})});
-  return [out,y+150];
+  // Curadoria: uma progressão qualitativa NÃO possui distâncias mensuradas.
+  // Em vez do gradiente 0–100%, use cartões enumerados, sem falsa precisão.
+  const marks=f.marks||[],n=marks.length;
+  if(!n)return ['',110];
+  const cols=Math.min(3,n),rows=Math.ceil(n/cols),gap=11,x0=16,w=(W-x0*2-gap*(cols-1))/cols;
+  const maxChars=Math.max(9,Math.floor(w/8.4));
+  const maxLines=Math.max(...marks.map(m=>lines(m.t,maxChars)));
+  const rowH=Math.max(90,Math.min(145,40+maxLines*19)),rowGap=24;
+  let out=text('PROGRESSÃO QUALITATIVA · SEM DISTÂNCIA NUMÉRICA',W/2,22,{size:12,cls:'fig-k',weight:800,max:60});
+  marks.forEach((item,i)=>{
+   const col=i%cols,row=Math.floor(i/cols),x=x0+col*(w+gap),y=43+row*(rowH+rowGap);
+   const on=!!(opts&&opts.active===item.t),cls=on?'fig-box fig-stage-active':'fig-box '+tone(i);
+   out+=box(x,y,w,rowH,cls,12);
+   out+=text(String(i+1).padStart(2,'0'),x+16,y+18,{size:13,anchor:'start',weight:800,cls:on?'fig-stage-number fig-on':'fig-k'});
+   out+=text(item.t,x+w/2,y+rowH/2+7,{max:maxChars,size:15,lh:19,weight:on?800:650});
+   if(i<n-1&&col<cols-1)out+=arrow(x+w+1,y+rowH/2,x+w+gap-3,y+rowH/2);
+  });
+  const base=43+rows*rowH+(rows-1)*rowGap;
+  out+=text('INÍCIO: '+(f.from||''),x0,base+18,{size:13,anchor:'start',cls:'fig-k',weight:650,max:29});
+  out+=text('DESTINO: '+(f.to||''),W-x0,base+18,{size:13,anchor:'end',cls:'fig-k',weight:650,max:29});
+  return [out,base+44];
  },
  // Centro e ramificações
  hub(f){
@@ -231,11 +245,11 @@ const SHAPES={
    R_(0,110,280,22,'fig-haze')+R_(0,128,280,122,'fig-ground2')+L_(0,128,280,128,'fig-horizon')+
    P('M70 250L210 250L146 128L134 128Z','fig-road')+'<path class="fig-dash" d="M140 250L140 128"/>'+C_(140,128,4,'fig-dark')},
  // Luz sobre um volume: zenital, rasante, direcional, rebatida
- light:{h:290,anchors:{zenital:[140,24],rasante:[14,214],'direcional':[250,60],rebatida:[250,236]},
+ light:{h:290,anchors:{zenital:[140,24],rasante:[91,158],'direcional':[250,60],rebatida:[250,236]},
   svg:()=>L_(10,262,270,262,'fig-ground')+R_(104,150,72,112,'fig-sh2',6)+'<ellipse class="fig-sh" cx="140" cy="150" rx="36" ry="9"/>'+
    '<path class="fig-shadow" d="M176 262L250 262L226 250L176 250Z"/>'+
    '<path class="fig-ray" d="M140 28L140 138" marker-end="url(#fig-arrow)"/>'+
-   '<path class="fig-ray" d="M16 214L98 214" marker-end="url(#fig-arrow)"/>'+
+   '<path class="fig-ray" d="M80 35L100 210" marker-end="url(#fig-arrow)"/>'+
    '<path class="fig-ray" d="M244 64L178 136" marker-end="url(#fig-arrow)"/>'+
    R_(244,200,22,56,'fig-sh3')+'<path class="fig-ray fig-ray2" d="M240 226L182 214" marker-end="url(#fig-arrow)"/>'},
  // Planta urbana: adjacente, defronte, na diagonal, perpendicular, paralelo
@@ -365,11 +379,17 @@ const TYPES=Object.keys(T);
 
 // Termos que o esquema nomeia (rótulos, marcas, rostos, figuras, painéis): servem ao leitor de tela e à busca
 function names(f){return [...(f.labels||[]),...(f.marks||[]),...(f.faces||[]),...(f.poses||[]),...(f.panels||[]),...(f.steps||[]),...(f.events||[]),...(f.points||[]).filter(p=>!p.free)].map(x=>x.t).filter(Boolean)}
+let figureSerial=0;
 function svg(f,opts){
  const draw=T[f&&f.type];if(!draw)return '';
- const [body,h]=draw(f,opts);
- const nm=names(f);
- return '<svg class="fig-svg" viewBox="0 0 '+W+' '+Math.ceil(h)+'" role="img" aria-label="'+esc(f.title+(nm.length?'. Termos no esquema: '+nm.join(', ')+'.':''))+'" xmlns="http://www.w3.org/2000/svg">'+DEFS+body+'</svg>';
+ const [body,h]=draw(f,opts),nm=names(f);
+ const serial=++figureSerial,arrowId='fig-arrow-'+serial,titleId='fig-title-'+serial,descId='fig-desc-'+serial;
+ const alt=f.title+(nm.length?'. Termos no esquema: '+nm.join(', ')+'.':'');
+ const help=(f.caption||'')+(f.type==='spectrum'?' Progressão conceitual qualitativa; espaçamentos não são medidas.':'');
+ const scopedDefs=DEFS.replace('id="fig-arrow"','id="'+arrowId+'"');
+ const scopedBody=body.replaceAll('url(#fig-arrow)','url(#'+arrowId+')');
+ return '<svg class="fig-svg" viewBox="0 0 '+W+' '+Math.ceil(h)+'" role="img" aria-labelledby="'+titleId+' '+descId+'" aria-label="'+esc(alt)+'" xmlns="http://www.w3.org/2000/svg">'+
+  '<title id="'+titleId+'">'+esc(f.title)+'</title><desc id="'+descId+'">'+esc(help)+'</desc>'+scopedDefs+scopedBody+'</svg>';
 }
 function render(f,opts){
  const s=svg(f,opts);if(!s)return '';

@@ -61,6 +61,8 @@ jobs:
         run: node test_interact.mjs
       - name: Testar esquemas explicativos das aulas
         run: node test_figures.mjs
+      - name: Curadoria editorial, SVG e contraste dos botões
+        run: node test_visual_curator.mjs
       - name: Verificar permissões e captura de áudio
         run: STORYLAB_STAGE=media node test_recorder.mjs
       - name: Verificar montagem do painel de voz

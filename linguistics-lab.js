@@ -45,6 +45,7 @@ window.StoryLabLinguistics = (() => {
       const ys=[[70,102,106],[108,67,108],[111,102,66]][active];
       art+='<path d="M53 112 Q90 '+ys[0]+' 130 '+ys[0]+' S275 '+ys[1]+' 360 '+ys[1]+' S525 '+ys[2]+' 592 '+ys[2]+' S681 110 707 113" fill="none" stroke="#a45c42" stroke-width="4" stroke-linecap="round"/>';
       art+=svgText(380,245,['O quê mudou? — A VITRINE.','O que aconteceu? — MUDOU.','Quando aconteceu? — ONTEM.'][active],'font-size="16" text-anchor="middle" fill="#214b42" font-weight="600"');
+      art+=svgText(380,280,'Linha melódica ilustrativa · não representa uma medição acústica','font-size="12" text-anchor="middle" fill="#62716c"');
     } else if(kind==='syntax'){
       if(active===0){
         // 01 — Oração simples: constituintes e funções, sem encaixes.
@@ -106,7 +107,7 @@ window.StoryLabLinguistics = (() => {
       terms.forEach((n,i)=>{const x=26+i*183;art+=card(x,108,161,84,n[0],n[1],active===Math.min(i,2));if(i<3)art+=line(x+163,148,x+179,148,'marker-end="url(#lingArrow)"')});
       art+=svgText(380,236,'A repetição controlada mantém o referente reconhecível entre frases.','font-size="14" fill="#214b42" text-anchor="middle"');
     } else if(kind==='act'){
-      const labels=[['FORMA','Você pode fechar?'],['AÇÃO POSSÍVEL','Pedido indireto'],['EFEITO','Pessoa fecha']];
+      const labels=[['FORMA','Você pode fechar?'],['AÇÃO POSSÍVEL','Pedido indireto'],['REAÇÃO POSSÍVEL','Pode fechar a janela']];
       labels.forEach((n,i)=>{const x=27+i*249;art+=card(x,112,207,86,n[0],n[1],active===i);if(i<2)art+=line(x+210,156,x+245,156,'marker-end="url(#lingArrow)"')});
       art+=svgText(380,243,'A passagem da forma à ação depende de contexto e interlocutores.','font-size="14" fill="#214b42" text-anchor="middle"');
     } else if(kind==='turns'){

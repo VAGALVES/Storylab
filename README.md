@@ -1,5 +1,5 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.10 — Esquemas, escalas e leitura no celular
+## Journalism Academy · Versão 2.11 — Curadoria visual, rigor e contraste
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
@@ -51,6 +51,15 @@ Os esquemas são modelos pedagógicos simplificados: setas ilustram relações c
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
+
+### Curadoria visual v2.11
+
+- **351 diagramas revisados por integridade de dados e forma SVG**, com protocolo registrado em [CURADORIA_VISUAL.md](CURADORIA_VISUAL.md).
+- As 148 "escalas" conceituais agora aparecem como progressões qualitativas, sem gradientes ou percentuais artificiais.
+- 16 especificações/legendas com risco de induzir conclusões indevidas receberam revisão editorial.
+- A representação de luz rasante foi corrigida; títulos/descrições acessíveis e IDs SVG isolados passaram a integrar os desenhos.
+- Os estados de botões da Academia da Linguagem usam verde-petróleo e neutros com contraste WCAG AA, inclusive no tema escuro. A largura manual dos diagramas foi mantida.
+- A integração contínua agora testa curadoria visual, além do funcionamento das ilustrações.
 
 ### Novidades da v2.10 — Escalas, mais esquemas e leitura no celular
 
