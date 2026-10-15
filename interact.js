@@ -50,7 +50,7 @@ function buildIndex(D,guides,norm){
   add('course',c.title,school?.name||'',c.description,{course:c.id});
   c.modules.forEach((m,i)=>{const deep=D.deepLessons[c.id+':'+i];add('lesson',deep?deep.title:m.title,c.title+' · Unidade '+(i+1),[m.title,deep?.intro||''].join(' '),{lesson:[c.id,i]})});
  });
- D.atlas.forEach((field,topic)=>field.terms.forEach(term=>{const card=(guides?.[topic]?.terms||[]).find(t=>t[0]===term);add('term',term,field.title,card?card[1]:'',{term:[topic,term]})}));
+ D.atlas.forEach((field,topic)=>field.terms.forEach(term=>{const card=(guides?.[topic]?.terms||[]).find(t=>t[0]===term);add('term',term,field.title,card?card[1]+(Array.isArray(card[5])?' · '+card[5].join(' · '):''):'',{term:[topic,term]})}));
  const fam=Object.fromEntries(D.families.map(f=>[f.id,f.title]));
  D.phrases.forEach(p=>add('phrase',p.pt,fam[p.family]||'',[p.use,p.note||''].join(' '),{phrase:p.id}));
  D.missions.forEach(m=>add('mission',m.title,'Missão de campo',m.brief,{mission:m.id}));
@@ -294,7 +294,7 @@ function cardFrame(c,front,back){
 function termCardHtml(t,c){
  const {esc}=api;
  const front='<div class="ix-face ix-front"><span class="chip">Atlas · '+esc(t.field)+'</span><p class="ix-definition">'+esc(t.definition)+'</p>'+(t.scene?'<p class="ix-note ix-scene">'+esc(t.scene)+'</p>':'')+'<p class="muted">Qual é o termo? Diga em voz alta antes de virar.</p><span class="ix-tap">Toque ou pressione Espaço para virar</span></div>';
- const back='<div class="ix-face ix-back"><span class="chip">Atlas · '+esc(t.field)+'</span><p class="ix-intent">'+esc(t.term)+'</p><p class="ix-note"><strong>Diga assim:</strong> '+esc(t.example)+'</p><p class="ix-note"><strong>Cuidado:</strong> '+esc(t.caution)+'</p></div>';
+ const back='<div class="ix-face ix-back"><span class="chip">Atlas · '+esc(t.field)+'</span><p class="ix-intent">'+esc(t.term)+'</p><p class="ix-note"><strong>Diga assim:</strong> '+esc(t.example)+'</p><p class="ix-note"><strong>Cuidado:</strong> '+esc(t.caution)+'</p>'+(t.collocations&&t.collocations.length?'<p class="ix-note"><strong>Combina com:</strong> '+t.collocations.map(esc).join(' · ')+'</p>':'')+'</div>';
  return cardFrame(c,front,back);
 }
 function gradeCard(remembered){
@@ -449,7 +449,7 @@ function init(context){
  document.addEventListener('pointerup',e=>{if(onPointerUp())e.preventDefault()});
 }
 
-return {init,topbar,home,phraseActions,badges,openSearch,openTimer,openTermCards,openReview,bump,
+return {init,isOpen:()=>!!state.overlay,close,topbar,home,phraseActions,badges,openSearch,openTimer,openTermCards,openReview,bump,
  // Funções puras expostas para os testes automatizados
  _test:{iso,shiftDay,streak,lastDays,gradeReview,buildIndex,search,makeTiles,checkTiles,computeBadges,mixDeck,fmt,BADGES}};
 })();

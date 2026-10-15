@@ -170,6 +170,24 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 .ix-badge{display:flex;flex-direction:column;gap:4px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--wash);opacity:.55}
 .ix-badge.on{opacity:1;background:var(--paper);border-color:var(--accent)}
 .ix-badge-icon{font-size:22px}.ix-badge small{color:var(--muted);line-height:1.4}
+/* Diagramas explicativos das aulas (illustrations.js) */
+:root{--fig-0:#e9d6c7;--fig-0s:#b9775a;--fig-1:#d3e1dc;--fig-1s:#4f7c72;--fig-2:#e6dfc8;--fig-2s:#9a8340;--fig-3:#dcd9e6;--fig-3s:#6b6690;--fig-core:#1d3034;--fig-core-t:#f5f3ee}
+[data-theme="dark"]{--fig-0:#4a3329;--fig-0s:#eba781;--fig-1:#203b37;--fig-1s:#8fc3b6;--fig-2:#3d3722;--fig-2s:#d9bd6c;--fig-3:#2f2d40;--fig-3s:#b3add9;--fig-core:#eba781;--fig-core-t:#101a1e}
+.fig{margin:26px 0;padding:18px 18px 16px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius)}
+.fig-head{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}.fig-head strong{font-family:Georgia,serif;font-size:20px;font-weight:normal;line-height:1.3;color:var(--ink)}
+.fig-svg{display:block;width:100%;height:auto;max-width:620px;margin:0 auto}
+.fig figcaption{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);color:var(--ink2);font-size:13px;line-height:1.7}
+.fig-svg text{font-family:Inter,"Segoe UI",-apple-system,Arial,sans-serif;fill:var(--ink)}
+.fig-svg .fig-d{fill:var(--ink2)}.fig-svg .fig-k{fill:var(--muted)}.fig-svg .fig-n,.fig-svg .fig-tc{fill:var(--fig-core-t)}
+.fig-box,.fig-node,.fig-venn{stroke-width:1.5}.fig-venn{fill-opacity:.55}
+.fig-tone0{fill:var(--fig-0);stroke:var(--fig-0s)}.fig-tone1{fill:var(--fig-1);stroke:var(--fig-1s)}.fig-tone2{fill:var(--fig-2);stroke:var(--fig-2s)}.fig-tone3{fill:var(--fig-3);stroke:var(--fig-3s)}
+.fig-dot{stroke-width:2}.fig-dot.fig-tone0,.fig-dot.fig-tone1,.fig-dot.fig-tone2,.fig-dot.fig-tone3{fill:var(--fig-core)}
+.fig-cell{fill:var(--wash);stroke:var(--line)}.fig-frame{fill:none;stroke-width:2.5}.fig-frame.fig-tone0{fill:var(--wash)}
+.fig-line{stroke:var(--muted);stroke-width:2;fill:none}.fig-svg .fig-tip{fill:var(--muted)}.fig-axis{stroke:var(--ink2);stroke-width:2}
+.fig-grid{stroke:var(--faint);stroke-width:1.5;stroke-dasharray:6 6}.fig-ring{fill:none;stroke:var(--line);stroke-width:3}
+.fig-core{fill:var(--fig-core)}.fig-stop0{stop-color:var(--fig-1)}.fig-stop1{stop-color:var(--fig-0s)}
+.atlas20-colloc{margin:14px 0 4px}.atlas20-colloc-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.atlas20-chip{border:1px dashed var(--accent);background:transparent;color:var(--ink);border-radius:100px;padding:7px 12px;font-size:13px;font-style:italic;font-family:Georgia,serif}.atlas20-chip:hover{background:var(--accentsoft)}
 
 </style>
   <title>StoryLab Shanghai — Journalism Academy</title>
@@ -319,6 +337,9 @@ function gapSentence(term,example){
  parts[hit]='_____'+trail;
  return parts.join('');
 }
+// Colocações: combinações consagradas do termo (6º item do verbete)
+function collocations(c){return Array.isArray(c&&c[5])?c[5].filter(x=>typeof x==='string'&&x.trim()):[]}
+function collocHtml(c){const list=collocations(c);return list.length?'<div class="atlas20-colloc"><div class="eyebrow">COMBINAÇÕES USUAIS</div><div class="atlas20-colloc-list">'+list.map(x=>button('insert-colloc',api.esc(x),'atlas20-chip','data-text="'+api.esc(x)+'" title="Usar na prática"')).join('')+'</div></div>':''}
 // Frase de cena escrita para o treino (5º item do verbete): o contexto isola o termo entre todos os do campo
 function sceneSentence(c){return typeof c[4]==='string'&&c[4].split('_____').length===2?c[4]:null}
 function buildQuestion(topic,term,pos){
@@ -390,7 +411,7 @@ function swapsPanel(){
 function dictionary(){
  const {esc,ico}=api,{term,card:c}=currentCard(),area=api.D.atlas[view.topic],st=status(view.topic,term),r=record(view.topic,term);
  let detail='<div class="panel panel-pad atlas12-detail"><div class="eyebrow">CONCEITO EM CONTEXTO · '+esc(area.title.toUpperCase())+'</div><h2>'+esc(term)+'</h2>';
- if(c)detail+='<p class="atlas12-definition">'+esc(c[1])+'</p><div class="atlas12-example"><div class="eyebrow">DIGA ASSIM</div><p>'+esc(c[2])+'</p></div><div class="atlas12-warning"><div class="eyebrow">PRECISÃO E CUIDADO</div><p>'+esc(c[3])+'</p></div>';
+ if(c)detail+='<p class="atlas12-definition">'+esc(c[1])+'</p>'+collocHtml(c)+'<div class="atlas12-example"><div class="eyebrow">DIGA ASSIM</div><p>'+esc(c[2])+'</p></div><div class="atlas12-warning"><div class="eyebrow">PRECISÃO E CUIDADO</div><p>'+esc(c[3])+'</p></div>';
  else detail+='<p class="muted">Termo do repertório essencial. O verbete aprofundado ainda está em construção. Evite empregar uma palavra cujo significado ou aplicação não tenha confirmado.</p><div class="notice info">'+esc(area.prompt)+'</div>';
  detail+='<p class="atlas14-status '+st+'">'+MARK[st]+' '+LABEL[st]+(r?' · '+r.right+' acerto(s), '+r.wrong+' erro(s)':'')+'</p>';
  detail+='<div class="form-row">'+button('copy',ico('copy',15)+' Copiar termo','btn secondary sm')+button('train-field',ico('target',15)+' Treinar este campo','btn secondary sm')+button('practice',ico('mic',15)+' Praticar este campo','btn accent sm')+'</div></div>';
@@ -506,6 +527,8 @@ function init(context){
   else if(action==='voice'){api.navigate('voice');return}
   else if(action==='restore'){const item=st.atlasHistory[Number(b.dataset.index)];if(!item||!api.D.atlas[item.topic])return;view.topic=item.topic;view.level=item.level;view.tab='practice';view.score=item.score;view.show=false;view.feedback=null;st.atlasDrafts[key()]=item.text;api.save()}
   else if(action==='insert'){insertTerm(b.dataset.word);return}
+  // Leva a combinação para o rascunho da prática do campo atual
+  else if(action==='insert-colloc'){const text=String(b.dataset.text||'').slice(0,80);if(!text)return;const d=st.atlasDrafts[key()]||'';st.atlasDrafts[key()]=(d+(d&&!/\s$/.test(d)?' ':'')+text).slice(0,3000);view.tab='practice';view.feedback=null;api.save();api.toast('“'+text+'” levada para a prática.')}
   else if(action==='timer'){window.StoryLabInteract?.openTimer?.(parseInt(LEVELS[view.level][1],10),LEVELS[view.level][0]+' · '+g().scene,LEVELS[view.level][2]);return}
   else if(action==='train-field'){view.tab='train';startQuiz('field')}
   else if(action==='quiz-start'){view.tab='train';startQuiz(b.dataset.scope==='all'?'all':'field')}
@@ -529,7 +552,7 @@ function init(context){
 // Integração com cartões e revisão do dia (interact.js): termos vencidos, novos e nota
 function termDeck(topic,limit=12){
  const t=now(),topics=topic===null||topic===undefined?api.D.atlas.map((_,i)=>i):[topic],due=[],fresh=[];
- topics.forEach(i=>api.D.atlas[i].terms.forEach(term=>{const c=card(i,term);if(!c)return;const s=status(i,term),item={topic:i,term,field:api.D.atlas[i].title,definition:c[1],example:c[2],caution:c[3],scene:sceneSentence(c)};if(s==='due')due.push([Number(record(i,term).next)||t,item]);else if(s==='new')fresh.push(item)}));
+ topics.forEach(i=>api.D.atlas[i].terms.forEach(term=>{const c=card(i,term);if(!c)return;const s=status(i,term),item={topic:i,term,field:api.D.atlas[i].title,definition:c[1],example:c[2],caution:c[3],scene:sceneSentence(c),collocations:collocations(c)};if(s==='due')due.push([Number(record(i,term).next)||t,item]);else if(s==='new')fresh.push(item)}));
  due.sort((a,b)=>a[0]-b[0]);
  return {due:due.map(x=>x[1]).slice(0,limit),fresh:shuffle(fresh).slice(0,limit)};
 }
@@ -734,6 +757,193 @@ window.StoryLabAtlasAudio={rubric:()=>[...rubric],clear};
 
 </script>
   <script>
+/* StoryLab — diagramas explicativos das aulas.
+   Cada figura é uma especificação declarativa ({type, title, caption, ...}) desenhada aqui em SVG.
+   Vantagens: estilo único, cores do tema (claro/escuro), peso mínimo e funcionamento offline. */
+window.StoryLabFigures=(()=>{
+'use strict';
+const W=480;
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// Quebra o texto em linhas de até `max` caracteres, sem cortar palavras
+function wrap(text,max){
+ const words=String(text??'').split(/\s+/).filter(Boolean),lines=[];let cur='';
+ words.forEach(w=>{if(cur&&(cur+' '+w).length>max){lines.push(cur);cur=w}else cur=cur?cur+' '+w:w});
+ if(cur)lines.push(cur);
+ return lines;
+}
+// Bloco de texto centrado (ou alinhado) em x,y, com linhas de altura `lh`
+function text(str,x,y,{max=28,size=19,lh=null,cls='fig-t',anchor='middle',weight=null,valign='middle'}={}){
+ const lines=wrap(str,max),h=lh||Math.round(size*1.25);
+ const top=valign==='middle'?y-(lines.length-1)*h/2:y;
+ return '<text class="'+cls+'" x="'+x+'" y="'+top+'" font-size="'+size+'" text-anchor="'+anchor+'" dominant-baseline="middle"'+(weight?' font-weight="'+weight+'"':'')+'>'+
+  lines.map((l,i)=>'<tspan x="'+x+'" dy="'+(i?h:0)+'">'+esc(l)+'</tspan>').join('')+'</text>';
+}
+const lines=(str,max)=>wrap(str,max).length;
+const box=(x,y,w,h,cls='fig-box',r=14)=>'<rect class="'+cls+'" x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+r+'"/>';
+const arrow=(x1,y1,x2,y2)=>'<line class="fig-line" x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" marker-end="url(#fig-arrow)"/>';
+const DEFS='<defs><marker id="fig-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="fig-tip" d="M0 0L10 5L0 10z"/></marker></defs>';
+const tone=i=>'fig-tone'+(i%4);
+
+// ── Tipos de diagrama ──
+const T={
+ // Etapas em sequência (de cima para baixo)
+ flow(f){
+  const steps=f.steps||[];let y=12,out='';
+  steps.forEach((s,i)=>{
+   const h=Math.max(70,28+lines(s.t,30)*23+(s.d?lines(s.d,42)*21+6:0));
+   out+=box(40,y,W-80,h,'fig-box '+tone(i))+'<circle class="fig-dot '+tone(i)+'" cx="40" cy="'+(y+h/2)+'" r="17"/>'+text(String(i+1),40,y+h/2,{size:16,cls:'fig-n',weight:800});
+   const th=lines(s.t,30)*23,dh=s.d?lines(s.d,42)*21+6:0,top=y+(h-th-dh)/2+12;
+   out+=text(s.t,W/2+8,top,{max:30,size:19,lh:23,weight:700,valign:'top'});
+   if(s.d)out+=text(s.d,W/2+8,top+th+4,{max:42,size:16,lh:21,cls:'fig-d',valign:'top'});
+   y+=h;
+   if(i<steps.length-1){out+=arrow(W/2,y+3,W/2,y+29);y+=34}
+  });
+  return [out,y+12];
+ },
+ // Ciclo: etapas que se realimentam
+ cycle(f){
+  const n=(f.steps||[]).length,cx=W/2,cy=250,R=165,rr=62;let out='<circle class="fig-ring" cx="'+cx+'" cy="'+cy+'" r="'+R+'"/>';
+  f.steps.forEach((s,i)=>{
+   const a=-Math.PI/2+i*2*Math.PI/n,x=cx+R*Math.cos(a),y=cy+R*Math.sin(a);
+   const b=a+Math.PI/n,ax=cx+R*Math.cos(b),ay=cy+R*Math.sin(b);
+   out+='<path class="fig-tip" transform="translate('+ax.toFixed(1)+' '+ay.toFixed(1)+') rotate('+(b*180/Math.PI+90).toFixed(1)+')" d="M-9 -7L5 0L-9 7z"/>';
+   out+='<circle class="fig-node '+tone(i)+'" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+rr+'"/>'+text(s.t,x,y,{max:12,size:16,lh:19,weight:700});
+  });
+  if(f.center)out+=text(f.center,cx,cy,{max:16,size:17,cls:'fig-d',weight:700});
+  return [out,cy+R+rr+14];
+ },
+ // Pirâmide (ou pirâmide invertida): camadas de importância
+ pyramid(f){
+  const L=f.layers||[],n=L.length,H=n*84,top=14,inv=!!f.inverted;let out='';
+  L.forEach((l,i)=>{
+   const y0=top+i*84,y1=y0+84,w=k=>inv?(W-60)*(1-k/n*0.82):(W-60)*(0.18+k/n*0.82);
+   const wa=w(i),wb=w(i+1),xa=(W-wa)/2,xb=(W-wb)/2;
+   out+='<path class="fig-box '+tone(i)+'" d="M'+xa+' '+y0+'H'+(xa+wa)+'L'+(xb+wb)+' '+y1+'H'+xb+'Z"/>';
+   const wmin=Math.min(wa,wb),max=Math.max(10,Math.floor(wmin/11));
+   out+=text(l.t,W/2,y0+(l.d?30:42),{max,size:18,weight:700});
+   if(l.d)out+=text(l.d,W/2,y0+58,{max:Math.max(12,Math.floor(wmin/9)),size:14,cls:'fig-d'});
+  });
+  return [out,top+H+14];
+ },
+ // Comparação em duas colunas
+ compare(f){
+  const rows=f.rows||[],cw=(W-50)/2;let y=10,out=box(20,y,cw-5,56,'fig-box fig-tone0')+box(W/2+5,y,cw-5,56,'fig-box fig-tone1')+
+   text(f.a,20+(cw-5)/2,y+28,{max:19,size:18,weight:800})+text(f.b,W/2+5+(cw-5)/2,y+28,{max:19,size:18,weight:800});
+  y+=66;
+  rows.forEach(r=>{
+   if(r.label){out+=text(r.label,W/2,y+12,{max:60,size:14,cls:'fig-k',weight:800});y+=26}
+   const h=Math.max(lines(r.a,22),lines(r.b,22))*21+26;
+   out+=box(20,y,cw-5,h,'fig-cell')+box(W/2+5,y,cw-5,h,'fig-cell')+text(r.a,20+(cw-5)/2,y+h/2,{max:22,size:16,lh:21})+text(r.b,W/2+5+(cw-5)/2,y+h/2,{max:22,size:16,lh:21});
+   y+=h+10;
+  });
+  return [out,y+4];
+ },
+ // Matriz 2×2 com eixos
+ matrix(f){
+  const c=f.cells||[],x0=56,y0=20,s=(W-x0-24)/2;let out='';
+  c.slice(0,4).forEach((q,i)=>{
+   const x=x0+(i%2)*(s+10),y=y0+Math.floor(i/2)*(s+10);
+   out+=box(x,y,s,s,'fig-box '+tone(i))+text(q.t,x+s/2,y+(q.d?s*0.32:s/2),{max:16,size:18,weight:800});
+   if(q.d)out+=text(q.d,x+s/2,y+s*0.66,{max:21,size:15,lh:20,cls:'fig-d'});
+  });
+  const ax=f.x||[],ay=f.y||[];
+  out+=arrow(x0,y0+2*s+26,x0+2*s+10,y0+2*s+26)+text(ax[0]||'',x0,y0+2*s+50,{size:14,cls:'fig-k',anchor:'start',max:30})+text(ax[1]||'',x0+2*s+10,y0+2*s+50,{size:14,cls:'fig-k',anchor:'end',max:30});
+  out+=arrow(x0-24,y0+2*s+10,x0-24,y0)+'<g transform="rotate(-90 '+(x0-44)+' '+(y0+s)+')">'+text((ay[0]||'')+'  →  '+(ay[1]||''),x0-44,y0+s,{size:14,cls:'fig-k',max:60})+'</g>';
+  return [out,y0+2*s+70];
+ },
+ // Linha do tempo vertical
+ timeline(f){
+  const ev=f.events||[];let y=24,out='';const x=116;
+  const parts=ev.map(e=>{const h=Math.max(58,lines(e.t,30)*22+(e.d?lines(e.d,36)*20:0)+18);return h});
+  const total=parts.reduce((a,b)=>a+b+14,0);
+  out+='<line class="fig-axis" x1="'+x+'" y1="14" x2="'+x+'" y2="'+(24+total)+'"/>';
+  ev.forEach((e,i)=>{
+   const h=parts[i];
+   out+='<circle class="fig-dot '+tone(i)+'" cx="'+x+'" cy="'+(y+20)+'" r="11"/>'+text(e.when,x-22,y+20,{size:15,anchor:'end',weight:800,cls:'fig-k',max:11});
+   out+=text(e.t,x+24,y+14,{size:18,anchor:'start',max:30,lh:22,weight:700,valign:'top'});
+   if(e.d)out+=text(e.d,x+24,y+14+lines(e.t,30)*22,{size:15,anchor:'start',max:36,lh:20,cls:'fig-d',valign:'top'});
+   y+=h+14;
+  });
+  return [out,y+6];
+ },
+ // Espectro: um contínuo entre dois polos
+ spectrum(f){
+  const m=f.marks||[],x0=30,x1=W-30,y=120;let out='<defs><linearGradient id="fig-grad"><stop offset="0" class="fig-stop0"/><stop offset="1" class="fig-stop1"/></linearGradient></defs>';
+  out+='<rect x="'+x0+'" y="'+(y-14)+'" width="'+(x1-x0)+'" height="28" rx="14" fill="url(#fig-grad)"/>';
+  out+=text(f.from,x0,y+50,{size:16,anchor:'start',weight:800,max:18})+text(f.to,x1,y+50,{size:16,anchor:'end',weight:800,max:18});
+  m.forEach((k,i)=>{const x=x0+(x1-x0)*Math.min(1,Math.max(0,k.at)),up=i%2===0;
+   out+='<line class="fig-line" x1="'+x+'" y1="'+(y-16)+'" x2="'+x+'" y2="'+(up?y-40:y+82)+'"/><circle class="fig-dot '+tone(i)+'" cx="'+x+'" cy="'+y+'" r="8"/>'+
+    text(k.t,Math.min(x1-44,Math.max(x0+44,x)),up?y-62:y+104,{size:15,max:13,lh:18})});
+  return [out,y+150];
+ },
+ // Centro e ramificações
+ hub(f){
+  const n=(f.nodes||[]).length,cx=W/2,cy=205,R=150;let out='';
+  f.nodes.forEach((s,i)=>{const a=-Math.PI/2+i*2*Math.PI/n,x=cx+R*Math.cos(a),y=cy+R*Math.sin(a)*0.92;
+   out+='<line class="fig-line" x1="'+cx+'" y1="'+cy+'" x2="'+x.toFixed(1)+'" y2="'+y.toFixed(1)+'"/>'+box(x-72,y-34,144,68,'fig-box '+tone(i))+text(s.t,x,y,{max:13,size:16,lh:19,weight:700})});
+  out+='<circle class="fig-core" cx="'+cx+'" cy="'+cy+'" r="60"/>'+text(f.center,cx,cy,{max:10,size:18,weight:800,cls:'fig-tc'});
+  return [out,cy+R*0.92+50];
+ },
+ // Diagrama de Venn (2 ou 3 conjuntos)
+ venn(f){
+  const s=f.sets||[],three=s.length>2,cy=three?200:180,r=three?108:118;let out='';
+  const pos=three?[[W/2-72,cy-40],[W/2+72,cy-40],[W/2,cy+85]]:[[W/2-75,cy],[W/2+75,cy]];
+  s.slice(0,3).forEach((t,i)=>{const [x,y]=pos[i];out+='<circle class="fig-venn '+tone(i)+'" cx="'+x+'" cy="'+y+'" r="'+r+'"/>';
+   const lx=three?[x-45,x+45,x][i]:(i?x+45:x-45),ly=three?[y-35,y-35,y+52][i]:y;out+=text(t,lx,ly,{max:12,size:16,lh:19,weight:700})});
+  if(f.center)out+=text(f.center,W/2,three?cy+15:cy,{max:10,size:15,cls:'fig-k',weight:800});
+  return [out,(three?cy+85+r:cy+r)+16];
+ },
+ // Camadas concêntricas (de fora para dentro)
+ layers(f){
+  const L=f.layers||[],n=L.length,cx=W/2,cy=200,R0=188;let out='';
+  L.forEach((l,i)=>{const r=R0-i*(R0-55)/Math.max(1,n-1)*(n>1?1:0);out+='<circle class="fig-node '+tone(i)+'" cx="'+cx+'" cy="'+cy+'" r="'+r+'"/>'});
+  L.forEach((l,i)=>{const r=R0-i*(R0-55)/Math.max(1,n-1),next=i<n-1?R0-(i+1)*(R0-55)/Math.max(1,n-1):0,y=i<n-1?cy-(r+next)/2:cy;
+   out+=text(l.t,cx,y,{max:i<n-1?26:12,size:i<n-1?16:17,weight:700})});
+  return [out,cy+R0+14];
+ },
+ // Escalas de plano: quadros encaixados do mais aberto ao mais fechado
+ frames(f){
+  const L=f.frames||[],n=L.length;let out='',x=14,y=14,w=W-28,h=320;
+  L.forEach((l,i)=>{out+=box(x,y,w,h,'fig-frame '+tone(i),6)+text(l.t,x+12,y+20,{size:15,anchor:'start',weight:800,cls:'fig-k',max:30});
+   if(l.d&&i===n-1)out+=text(l.d,x+w/2,y+h/2+10,{size:15,max:Math.floor(w/9),cls:'fig-d'});
+   const dx=w*0.13,dy=h*0.13;x+=dx;y+=dy+10;w-=2*dx;h-=2*dy+10});
+  return [out,348];
+ },
+ // Regra dos terços: quadro 3×3 com pontos de interesse
+ thirds(f){
+  const x0=14,y0=14,w=W-28,h=(W-28)*9/16;let out=box(x0,y0,w,h,'fig-frame fig-tone0',6);
+  [1,2].forEach(k=>{out+='<line class="fig-grid" x1="'+(x0+w*k/3)+'" y1="'+y0+'" x2="'+(x0+w*k/3)+'" y2="'+(y0+h)+'"/><line class="fig-grid" x1="'+x0+'" y1="'+(y0+h*k/3)+'" x2="'+(x0+w)+'" y2="'+(y0+h*k/3)+'"/>'});
+  if(f.horizon)out+='<line class="fig-line" x1="'+x0+'" y1="'+(y0+h*2/3)+'" x2="'+(x0+w)+'" y2="'+(y0+h*2/3)+'"/>'+text(f.horizon,x0+10,y0+h*2/3+18,{size:13,anchor:'start',cls:'fig-k',max:40});
+  (f.points||[]).forEach((p,i)=>{const px=x0+w*(p.col===2?2/3:1/3),py=y0+h*(p.row===2?2/3:1/3);
+   out+='<circle class="fig-dot '+tone(i+1)+'" cx="'+px+'" cy="'+py+'" r="13"/>'+text(p.t,px,py-34,{size:15,max:18,weight:700})});
+  return [out,y0+h+16];
+ },
+ // Barras horizontais com base zero (visualização honesta)
+ bars(f){
+  const it=f.items||[],max=Math.max(...it.map(i=>Number(i.v)||0),1),x0=150,x1=W-64;let y=14,out='';
+  it.forEach((b,i)=>{const w=(x1-x0)*(Number(b.v)||0)/max;out+=text(b.t,x0-10,y+20,{size:15,anchor:'end',max:17})+box(x0,y+4,Math.max(2,w),32,'fig-box '+tone(i),6)+text(String(b.v)+(f.unit?' '+f.unit:''),x0+w+8,y+20,{size:15,anchor:'start',weight:800,max:14});y+=48});
+  out+='<line class="fig-axis" x1="'+x0+'" y1="6" x2="'+x0+'" y2="'+(y+2)+'"/>';
+  if(f.note)out+=text(f.note,W/2,y+24,{size:14,cls:'fig-k',max:56});
+  return [out,y+(f.note?44:12)];
+ }
+};
+const TYPES=Object.keys(T);
+
+function svg(f){
+ const draw=T[f&&f.type];if(!draw)return '';
+ const [body,h]=draw(f);
+ return '<svg class="fig-svg" viewBox="0 0 '+W+' '+Math.ceil(h)+'" role="img" aria-label="'+esc(f.title)+'" xmlns="http://www.w3.org/2000/svg">'+DEFS+body+'</svg>';
+}
+function render(f){
+ const s=svg(f);if(!s)return '';
+ return '<figure class="fig"><div class="fig-head"><span class="eyebrow">ESQUEMA</span><strong>'+esc(f.title)+'</strong></div>'+s+(f.caption?'<figcaption>'+esc(f.caption)+'</figcaption>':'')+'</figure>';
+}
+return {render,svg,wrap,TYPES};
+})();
+
+</script>
+  <script>
 /* StoryLab Shanghai · Interatividade 1.8
    Busca universal, cartões de estudo, jogo "Monte a frase", sequência e meta
    diária e atalhos de teclado. Módulo independente: recebe uma API explícita
@@ -786,7 +996,7 @@ function buildIndex(D,guides,norm){
   add('course',c.title,school?.name||'',c.description,{course:c.id});
   c.modules.forEach((m,i)=>{const deep=D.deepLessons[c.id+':'+i];add('lesson',deep?deep.title:m.title,c.title+' · Unidade '+(i+1),[m.title,deep?.intro||''].join(' '),{lesson:[c.id,i]})});
  });
- D.atlas.forEach((field,topic)=>field.terms.forEach(term=>{const card=(guides?.[topic]?.terms||[]).find(t=>t[0]===term);add('term',term,field.title,card?card[1]:'',{term:[topic,term]})}));
+ D.atlas.forEach((field,topic)=>field.terms.forEach(term=>{const card=(guides?.[topic]?.terms||[]).find(t=>t[0]===term);add('term',term,field.title,card?card[1]+(Array.isArray(card[5])?' · '+card[5].join(' · '):''):'',{term:[topic,term]})}));
  const fam=Object.fromEntries(D.families.map(f=>[f.id,f.title]));
  D.phrases.forEach(p=>add('phrase',p.pt,fam[p.family]||'',[p.use,p.note||''].join(' '),{phrase:p.id}));
  D.missions.forEach(m=>add('mission',m.title,'Missão de campo',m.brief,{mission:m.id}));
@@ -1030,7 +1240,7 @@ function cardFrame(c,front,back){
 function termCardHtml(t,c){
  const {esc}=api;
  const front='<div class="ix-face ix-front"><span class="chip">Atlas · '+esc(t.field)+'</span><p class="ix-definition">'+esc(t.definition)+'</p>'+(t.scene?'<p class="ix-note ix-scene">'+esc(t.scene)+'</p>':'')+'<p class="muted">Qual é o termo? Diga em voz alta antes de virar.</p><span class="ix-tap">Toque ou pressione Espaço para virar</span></div>';
- const back='<div class="ix-face ix-back"><span class="chip">Atlas · '+esc(t.field)+'</span><p class="ix-intent">'+esc(t.term)+'</p><p class="ix-note"><strong>Diga assim:</strong> '+esc(t.example)+'</p><p class="ix-note"><strong>Cuidado:</strong> '+esc(t.caution)+'</p></div>';
+ const back='<div class="ix-face ix-back"><span class="chip">Atlas · '+esc(t.field)+'</span><p class="ix-intent">'+esc(t.term)+'</p><p class="ix-note"><strong>Diga assim:</strong> '+esc(t.example)+'</p><p class="ix-note"><strong>Cuidado:</strong> '+esc(t.caution)+'</p>'+(t.collocations&&t.collocations.length?'<p class="ix-note"><strong>Combina com:</strong> '+t.collocations.map(esc).join(' · ')+'</p>':'')+'</div>';
  return cardFrame(c,front,back);
 }
 function gradeCard(remembered){
@@ -1185,7 +1395,7 @@ function init(context){
  document.addEventListener('pointerup',e=>{if(onPointerUp())e.preventDefault()});
 }
 
-return {init,topbar,home,phraseActions,badges,openSearch,openTimer,openTermCards,openReview,bump,
+return {init,isOpen:()=>!!state.overlay,close,topbar,home,phraseActions,badges,openSearch,openTimer,openTermCards,openReview,bump,
  // Funções puras expostas para os testes automatizados
  _test:{iso,shiftDay,streak,lastDays,gradeReview,buildIndex,search,makeTiles,checkTiles,computeBadges,mixDeck,fmt,BADGES}};
 })();
@@ -1216,7 +1426,25 @@ const deepKeys=Object.keys(D.deepLessons);const deepCount=deepKeys.length;
 function countDone(){return deepKeys.filter(k=>store.completed.includes(k)).length}
 function studied(){return Object.keys(store.reviews).filter(k=>D.phrases.some(p=>p.id===k)).length}
 function due(p){let r=store.reviews[p.id];return r&&r.next<=Date.now()}
-function navigate(page,opts={}){if(page!=='atlas'&&window.StoryLabRecorder)window.StoryLabRecorder.close(true);ui.page=page;ui.menu=false;Object.assign(ui,opts);if(page!=='studio'){stopTele()}render();window.scrollTo({top:0,behavior:'instant'})}
+function navigate(page,opts={},fromHistory=false){if(page!=='atlas'&&window.StoryLabRecorder)window.StoryLabRecorder.close(true);ui.page=page;ui.menu=false;Object.assign(ui,opts);if(page!=='studio'){stopTele()}render();window.scrollTo({top:0,behavior:'instant'});if(!fromHistory)pushNav()}
+// ── Botão voltar do celular ──
+// Cada navegação vira uma entrada no histórico: voltar retorna à tela anterior do app.
+// Na base do histórico, o primeiro toque só avisa; o app fecha apenas com um segundo toque em até 2 s.
+const navSnapshot=()=>({storylab:1,page:ui.page,courseId:ui.courseId,module:ui.module,missionId:ui.missionId});
+function pushNav(){try{const cur=history.state;if(cur&&cur.storylab===1&&cur.page===ui.page&&cur.courseId===ui.courseId&&cur.module===ui.module&&cur.missionId===ui.missionId)return;history.pushState(navSnapshot(),'')}catch{}}
+let exitArmedAt=0;
+function onBack(e){
+ const s=e.state;
+ // Janelas sobrepostas e menu fecham antes de qualquer navegação
+ if(window.StoryLabInteract?.isOpen?.()){window.StoryLabInteract.close();history.pushState(navSnapshot(),'');return}
+ if(ui.menu){ui.menu=false;render();history.pushState(navSnapshot(),'');return}
+ if(s&&s.storylab===1){navigate(s.page,{courseId:s.courseId,module:s.module,missionId:s.missionId},true);return}
+ // Base do histórico (estado-guarda): pede confirmação antes de sair
+ if(Date.now()-exitArmedAt<2000){history.back();return}
+ exitArmedAt=Date.now();history.pushState(navSnapshot(),'');toast('Toque em voltar de novo para sair do StoryLab.');
+}
+// O Chrome no Android ignora entradas criadas sem gesto do usuário; por isso a guarda é armada no primeiro toque
+function initBackButton(){try{history.replaceState({storylab:0},'');window.addEventListener('popstate',onBack);const arm=()=>{if(history.state&&history.state.storylab===0)history.pushState(navSnapshot(),'')};window.addEventListener('pointerdown',arm,{capture:true,once:true});window.addEventListener('keydown',arm,{capture:true,once:true})}catch{}}
 const NAV=[['home','home','Painel principal'],['academy','book','Academia'],['journey','target','Trilha de 12 semanas'],['phrases','quote','Fraseoteca'],['voice','mic','Estúdio da Voz'],['clinic','spark','Oficina da Fala'],['studio','film','Estúdio Narrativo'],['atlas','layers','Atlas Descritivo'],['field','map','Campo Shanghai'],['progress','chart','Minha Evolução']];
 const PAGE_LABEL={home:'Visão geral',academy:'Currículo acadêmico',journey:'Trilha orientada',course:'Disciplina',lesson:'Sala de aula',phrases:'Biblioteca de linguagem',voice:'Prática de expressão',clinic:'Oficina de linguagem',studio:'Criação audiovisual',atlas:'Precisão lexical',field:'Aprendizagem em campo',mission:'Missão em andamento',progress:'Acompanhamento'};
 function sidebar(){return `<aside class="sidebar" aria-label="Navegação principal"><button type="button" class="brand" data-action="navigate" data-page="home"><span class="brand-mark">S</span><span><strong>STORYLAB</strong><small>SHANGHAI ACADEMY</small></span></button><div class="nav-caption">EXPLORAR</div><nav>${NAV.map(([id,ic,label])=>`<button class="nav-item ${ui.page===id||((ui.page==='course'||ui.page==='lesson')&&id==='academy')||(ui.page==='mission'&&id==='field')?'active':''}" data-action="navigate" data-page="${id}" aria-current="${ui.page===id?'page':'false'}">${ico(ic)}<span>${label}</span>${id==='phrases'?`<span class="tiny-count">${D.phrases.length}</span>`:''}</button>`).join('')}</nav><div class="sidebar-footer"><div class="eyebrow" style="color:#dea083">LEARN · OBSERVE · TELL</div><div class="note">Uma escola autodidata em construção, com aulas práticas, roteiros e repertório vivo. Sem diploma ou credenciamento profissional.</div><button data-action="theme">${ico(store.theme==='dark'?'sun':'moon',15)} ${store.theme==='dark'?'Tema claro':'Tema escuro'}</button></div></aside>`}
@@ -1237,8 +1465,10 @@ function academy(){const school=D.schools.find(s=>s.id===ui.school);let filtered
 <div class="section-title"><h2>${school?esc(school.name):'Todas as disciplinas'}</h2><span class="hint">${filtered.length} encontradas</span></div><div class="filters"><button class="chip-button ${ui.school==='all'?'active':''}" data-action="school" data-id="all">Todas</button>${D.schools.map(s=>`<button class="chip-button ${ui.school===s.id?'active':''}" data-action="school" data-id="${s.id}">${esc(s.short)}</button>`).join('')}</div><div class="form-row" style="margin-bottom:18px"><input class="search" style="max-width:500px" type="search" placeholder="Buscar disciplina, tema ou competência..." aria-label="Buscar disciplinas" data-model="courseQuery" value="${esc(ui.courseQuery)}"></div>
 <div class="grid grid-3">${filtered.map(c=>{const s=D.schools.find(s=>s.id===c.school),has=c.modules.every((_,i)=>!!D.deepLessons[c.id+':'+i]);return `<button class="panel course-card school-band" data-action="open-course" data-id="${esc(c.id)}" style="--stripe:${s.accent};text-align:left;cursor:pointer"><div class="row"><span class="chip">${esc(s.short)}</span><span class="chip ${has?'accent':''}">${has?'4 aulas completas':(D.deepLessons[c.id+':0']?'Aulas em desenvolvimento':'Plano curricular')}</span></div><h3>${esc(c.title)}</h3><p>${esc(c.description)}</p><div class="footer"><span class="muted small">4 unidades</span><span class="small-link">Explorar ${ico('arrow',14)}</span></div></button>`}).join('')}</div>${filtered.length?'':`<div class="empty"><h3>Nenhuma disciplina encontrada</h3><p>Experimente outra palavra ou escola.</p></div>`}`}
 function courseView(){const c=D.courses.find(c=>c.id===ui.courseId);if(!c)return academy();const s=D.schools.find(s=>s.id===c.school);return `<div class="breadcrumb"><button data-action="navigate" data-page="academy">Academia</button>${ico('chevron',12)}<span>${esc(s.short)}</span>${ico('chevron',12)}<strong>${esc(c.title)}</strong></div>${header('DISCIPLINA / '+s.short,c.title,c.description,`<span class="chip">4 unidades curriculares</span>`)}<div class="two-col"><div><div class="eyebrow" style="margin-bottom:14px">PLANO DE APRENDIZAGEM</div><div class="lesson-roadmap">${c.modules.map((m,i)=>{let full=!!D.deepLessons[c.id+':'+i],done=store.completed.includes(c.id+':'+i);return `<button class="lesson-row" data-action="open-lesson" data-id="${c.id}" data-index="${i}"><span class="n">${String(i+1).padStart(2,'0')}</span><span class="grow"><strong>${esc(m.title)}</strong><small>${full?'Aula completa com teoria, exemplos e prática':'Ementa e prática previstas — conteúdo aprofundado pendente'}</small></span><span class="chip ${done?'accent':''}">${done?'Concluída':full?'Estudar':'Plano'}</span>${ico('chevron')}</button>`}).join('')}</div></div><aside class="side-help"><div class="panel panel-pad"><div class="eyebrow">COMPETÊNCIA-ALVO</div><h3 style="margin-top:15px">Ao concluir, você deverá...</h3><p>${esc(c.outcome)}</p><div class="divider"></div><p class="muted small">As unidades marcadas como “Plano” apresentam o percurso do curso, mas ainda não são contabilizadas como aulas completas.</p><button class="btn secondary" data-action="navigate" data-page="phrases">Abrir fraseoteca ${ico('arrow')}</button></div></aside></div>`}
+// Esquemas explicativos da aula (desenhados por illustrations.js a partir de D.figures)
+function figureHtml(key,i){const f=(D.figures||{})[key];return f&&f[i]&&window.StoryLabFigures?window.StoryLabFigures.render(f[i]):''}
 function lessonView(){const c=D.courses.find(c=>c.id===ui.courseId);if(!c)return academy();const index=Math.max(0,Math.min(3,Number(ui.module)||0)),m=c.modules[index],key=c.id+':'+index,deep=D.deepLessons[key],done=store.completed.includes(key);return `<div class="breadcrumb"><button data-action="navigate" data-page="academy">Academia</button>${ico('chevron',12)}<button data-action="open-course" data-id="${c.id}">${esc(c.title)}</button>${ico('chevron',12)}<span>Unidade ${index+1}</span></div><div class="lesson-body">${header(`UNIDADE ${String(index+1).padStart(2,'0')} / ${deep?'AULA COMPLETA':'ROTEIRO CURRICULAR'}`,deep?deep.title:m.title,deep?deep.intro:c.description)}</div>
-<div class="two-col"><article class="stack lesson-body">${deep?`<div class="notice info">${ico('book',15)} Esta unidade contém material didático integral: explicação, demonstrações, atividade prática e critérios de revisão.</div>${deep.steps.map((step,i)=>`<section class="panel step"><div class="n">CONCEITO ${String(i+1).padStart(2,'0')}</div><h3>${esc(step.title)}</h3><p>${esc(step.body)}</p><div class="example"><strong>Exemplo aplicado</strong><div>${esc(step.example)}</div></div></section>`).join('')}<div class="panel panel-pad"><div class="eyebrow">OFICINA DE CAMPO</div><h3 style="margin-top:11px">Transforme teoria em competência</h3><p>${esc(deep.assignment)}</p><div class="notice info"><strong>Autoverificação:</strong> ${esc(deep.rubric)}</div><div class="row" style="margin-top:18px;flex-wrap:wrap"><button class="btn ${done?'secondary':'accent'}" data-action="complete-lesson" data-id="${esc(key)}">${ico('check')} ${done?'Marcar como não concluída':'Concluir esta aula'}</button><button class="btn secondary" data-action="navigate" data-page="clinic">Oficina da Fala ${ico('spark')}</button><button class="btn secondary" data-action="navigate" data-page="voice">Gravar ${ico('mic')}</button></div></div>`:`<div class="notice">Esta unidade é parte do planejamento acadêmico. O conteúdo aprofundado ainda não foi redigido e por isso não pode ser marcado como aula concluída.</div><section class="panel panel-pad"><div class="eyebrow">OBJETIVO DA UNIDADE</div><h3 style="margin-top:14px">${esc(m.title)}</h3><p>${esc(c.description)}</p><div class="divider"></div><div class="eyebrow">ATIVIDADE-ALVO</div><p style="margin-top:11px">${esc(c.outcome)}</p><div class="notice info">Um roteiro curricular não equivale a uma aula integral. O programa está disponível para orientar futuros módulos.</div></section>`}</article><aside class="side-help stack"><div class="panel panel-pad"><div class="eyebrow">NAVEGAÇÃO DA DISCIPLINA</div><div class="stack" style="gap:8px;margin-top:15px">${c.modules.map((mod,i)=>`<button class="btn ${i===index?'':'secondary'} sm" style="justify-content:flex-start;text-align:left;white-space:normal" data-action="open-lesson" data-id="${c.id}" data-index="${i}">${String(i+1).padStart(2,'0')} · ${esc(mod.title)}</button>`).join('')}</div></div><div class="panel panel-pad"><div class="eyebrow">COMUNICAÇÃO INTEGRADA</div><p style="margin-top:10px" class="muted small">Após estudar, explique o conceito como se estivesse ensinando uma pessoa que nunca teve contato com o tema. Faça uma versão em 30 e outra em 90 segundos.</p><button class="btn secondary sm" data-action="navigate" data-page="studio">Abrir narrador ${ico('arrow')}</button></div></aside></div>`}
+<div class="two-col"><article class="stack lesson-body">${deep?`<div class="notice info">${ico('book',15)} Esta unidade contém material didático integral: explicação, demonstrações, atividade prática e critérios de revisão.</div>${figureHtml(key,0)}${deep.steps.map((step,i)=>`<section class="panel step"><div class="n">CONCEITO ${String(i+1).padStart(2,'0')}</div><h3>${esc(step.title)}</h3><p>${esc(step.body)}</p><div class="example"><strong>Exemplo aplicado</strong><div>${esc(step.example)}</div></div></section>`).join('')}${figureHtml(key,1)}<div class="panel panel-pad"><div class="eyebrow">OFICINA DE CAMPO</div><h3 style="margin-top:11px">Transforme teoria em competência</h3><p>${esc(deep.assignment)}</p><div class="notice info"><strong>Autoverificação:</strong> ${esc(deep.rubric)}</div><div class="row" style="margin-top:18px;flex-wrap:wrap"><button class="btn ${done?'secondary':'accent'}" data-action="complete-lesson" data-id="${esc(key)}">${ico('check')} ${done?'Marcar como não concluída':'Concluir esta aula'}</button><button class="btn secondary" data-action="navigate" data-page="clinic">Oficina da Fala ${ico('spark')}</button><button class="btn secondary" data-action="navigate" data-page="voice">Gravar ${ico('mic')}</button></div></div>`:`<div class="notice">Esta unidade é parte do planejamento acadêmico. O conteúdo aprofundado ainda não foi redigido e por isso não pode ser marcado como aula concluída.</div><section class="panel panel-pad"><div class="eyebrow">OBJETIVO DA UNIDADE</div><h3 style="margin-top:14px">${esc(m.title)}</h3><p>${esc(c.description)}</p><div class="divider"></div><div class="eyebrow">ATIVIDADE-ALVO</div><p style="margin-top:11px">${esc(c.outcome)}</p><div class="notice info">Um roteiro curricular não equivale a uma aula integral. O programa está disponível para orientar futuros módulos.</div></section>`}</article><aside class="side-help stack"><div class="panel panel-pad"><div class="eyebrow">NAVEGAÇÃO DA DISCIPLINA</div><div class="stack" style="gap:8px;margin-top:15px">${c.modules.map((mod,i)=>`<button class="btn ${i===index?'':'secondary'} sm" style="justify-content:flex-start;text-align:left;white-space:normal" data-action="open-lesson" data-id="${c.id}" data-index="${i}">${String(i+1).padStart(2,'0')} · ${esc(mod.title)}</button>`).join('')}</div></div><div class="panel panel-pad"><div class="eyebrow">COMUNICAÇÃO INTEGRADA</div><p style="margin-top:10px" class="muted small">Após estudar, explique o conceito como se estivesse ensinando uma pessoa que nunca teve contato com o tema. Faça uma versão em 30 e outra em 90 segundos.</p><button class="btn secondary sm" data-action="navigate" data-page="studio">Abrir narrador ${ico('arrow')}</button></div></aside></div>`}
 
 const CLINIC_SCENES=[
  ['Rua arborizada','Descrever a vegetação, a relação entre fachadas e o movimento sem inventar a história do lugar.'],
@@ -1435,6 +1665,7 @@ if('serviceWorker'in navigator&&location.protocol==='https:'||('serviceWorker'in
 if(window.StoryLabAtlas)window.StoryLabAtlas.init({D,getStore:()=>store,save,render,navigate,header,stat,esc,norm,ico,say,copy,toast,toTele:(text)=>{ui.teleText=text;ui.studioTab='tele';navigate('studio')}});
 if(window.StoryLabInteract)window.StoryLabInteract.init({D,getStore:()=>store,ui,save,render,navigate,esc,norm,ico,toast,say});
 render();
+initBackButton();
 })();
 
 </script>

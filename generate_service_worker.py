@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent
 FILES = [
     'index.html', 'style.css', 'app.js', 'data.js',
     'atlas-data.js', 'atlas-engine.js', 'atlas-recorder.js',
-    'atlas-audio-ui.js', 'interact.js', 'manifest.webmanifest',
+    'atlas-audio-ui.js', 'interact.js', 'illustrations.js', 'manifest.webmanifest',
     'assets/icon.svg', 'assets/skyline.svg'
 ]
 TARGET = ROOT / 'service-worker.js'

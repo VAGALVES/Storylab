@@ -132,6 +132,9 @@ function gapSentence(term,example){
  parts[hit]='_____'+trail;
  return parts.join('');
 }
+// Colocações: combinações consagradas do termo (6º item do verbete)
+function collocations(c){return Array.isArray(c&&c[5])?c[5].filter(x=>typeof x==='string'&&x.trim()):[]}
+function collocHtml(c){const list=collocations(c);return list.length?'<div class="atlas20-colloc"><div class="eyebrow">COMBINAÇÕES USUAIS</div><div class="atlas20-colloc-list">'+list.map(x=>button('insert-colloc',api.esc(x),'atlas20-chip','data-text="'+api.esc(x)+'" title="Usar na prática"')).join('')+'</div></div>':''}
 // Frase de cena escrita para o treino (5º item do verbete): o contexto isola o termo entre todos os do campo
 function sceneSentence(c){return typeof c[4]==='string'&&c[4].split('_____').length===2?c[4]:null}
 function buildQuestion(topic,term,pos){
@@ -203,7 +206,7 @@ function swapsPanel(){
 function dictionary(){
  const {esc,ico}=api,{term,card:c}=currentCard(),area=api.D.atlas[view.topic],st=status(view.topic,term),r=record(view.topic,term);
  let detail='<div class="panel panel-pad atlas12-detail"><div class="eyebrow">CONCEITO EM CONTEXTO · '+esc(area.title.toUpperCase())+'</div><h2>'+esc(term)+'</h2>';
- if(c)detail+='<p class="atlas12-definition">'+esc(c[1])+'</p><div class="atlas12-example"><div class="eyebrow">DIGA ASSIM</div><p>'+esc(c[2])+'</p></div><div class="atlas12-warning"><div class="eyebrow">PRECISÃO E CUIDADO</div><p>'+esc(c[3])+'</p></div>';
+ if(c)detail+='<p class="atlas12-definition">'+esc(c[1])+'</p>'+collocHtml(c)+'<div class="atlas12-example"><div class="eyebrow">DIGA ASSIM</div><p>'+esc(c[2])+'</p></div><div class="atlas12-warning"><div class="eyebrow">PRECISÃO E CUIDADO</div><p>'+esc(c[3])+'</p></div>';
  else detail+='<p class="muted">Termo do repertório essencial. O verbete aprofundado ainda está em construção. Evite empregar uma palavra cujo significado ou aplicação não tenha confirmado.</p><div class="notice info">'+esc(area.prompt)+'</div>';
  detail+='<p class="atlas14-status '+st+'">'+MARK[st]+' '+LABEL[st]+(r?' · '+r.right+' acerto(s), '+r.wrong+' erro(s)':'')+'</p>';
  detail+='<div class="form-row">'+button('copy',ico('copy',15)+' Copiar termo','btn secondary sm')+button('train-field',ico('target',15)+' Treinar este campo','btn secondary sm')+button('practice',ico('mic',15)+' Praticar este campo','btn accent sm')+'</div></div>';
@@ -319,6 +322,8 @@ function init(context){
   else if(action==='voice'){api.navigate('voice');return}
   else if(action==='restore'){const item=st.atlasHistory[Number(b.dataset.index)];if(!item||!api.D.atlas[item.topic])return;view.topic=item.topic;view.level=item.level;view.tab='practice';view.score=item.score;view.show=false;view.feedback=null;st.atlasDrafts[key()]=item.text;api.save()}
   else if(action==='insert'){insertTerm(b.dataset.word);return}
+  // Leva a combinação para o rascunho da prática do campo atual
+  else if(action==='insert-colloc'){const text=String(b.dataset.text||'').slice(0,80);if(!text)return;const d=st.atlasDrafts[key()]||'';st.atlasDrafts[key()]=(d+(d&&!/\s$/.test(d)?' ':'')+text).slice(0,3000);view.tab='practice';view.feedback=null;api.save();api.toast('“'+text+'” levada para a prática.')}
   else if(action==='timer'){window.StoryLabInteract?.openTimer?.(parseInt(LEVELS[view.level][1],10),LEVELS[view.level][0]+' · '+g().scene,LEVELS[view.level][2]);return}
   else if(action==='train-field'){view.tab='train';startQuiz('field')}
   else if(action==='quiz-start'){view.tab='train';startQuiz(b.dataset.scope==='all'?'all':'field')}
@@ -342,7 +347,7 @@ function init(context){
 // Integração com cartões e revisão do dia (interact.js): termos vencidos, novos e nota
 function termDeck(topic,limit=12){
  const t=now(),topics=topic===null||topic===undefined?api.D.atlas.map((_,i)=>i):[topic],due=[],fresh=[];
- topics.forEach(i=>api.D.atlas[i].terms.forEach(term=>{const c=card(i,term);if(!c)return;const s=status(i,term),item={topic:i,term,field:api.D.atlas[i].title,definition:c[1],example:c[2],caution:c[3],scene:sceneSentence(c)};if(s==='due')due.push([Number(record(i,term).next)||t,item]);else if(s==='new')fresh.push(item)}));
+ topics.forEach(i=>api.D.atlas[i].terms.forEach(term=>{const c=card(i,term);if(!c)return;const s=status(i,term),item={topic:i,term,field:api.D.atlas[i].title,definition:c[1],example:c[2],caution:c[3],scene:sceneSentence(c),collocations:collocations(c)};if(s==='due')due.push([Number(record(i,term).next)||t,item]);else if(s==='new')fresh.push(item)}));
  due.sort((a,b)=>a[0]-b[0]);
  return {due:due.map(x=>x[1]).slice(0,limit),fresh:shuffle(fresh).slice(0,limit)};
 }

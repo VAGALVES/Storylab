@@ -159,3 +159,21 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 .ix-badge{display:flex;flex-direction:column;gap:4px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--wash);opacity:.55}
 .ix-badge.on{opacity:1;background:var(--paper);border-color:var(--accent)}
 .ix-badge-icon{font-size:22px}.ix-badge small{color:var(--muted);line-height:1.4}
+/* Diagramas explicativos das aulas (illustrations.js) */
+:root{--fig-0:#e9d6c7;--fig-0s:#b9775a;--fig-1:#d3e1dc;--fig-1s:#4f7c72;--fig-2:#e6dfc8;--fig-2s:#9a8340;--fig-3:#dcd9e6;--fig-3s:#6b6690;--fig-core:#1d3034;--fig-core-t:#f5f3ee}
+[data-theme="dark"]{--fig-0:#4a3329;--fig-0s:#eba781;--fig-1:#203b37;--fig-1s:#8fc3b6;--fig-2:#3d3722;--fig-2s:#d9bd6c;--fig-3:#2f2d40;--fig-3s:#b3add9;--fig-core:#eba781;--fig-core-t:#101a1e}
+.fig{margin:26px 0;padding:18px 18px 16px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius)}
+.fig-head{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}.fig-head strong{font-family:Georgia,serif;font-size:20px;font-weight:normal;line-height:1.3;color:var(--ink)}
+.fig-svg{display:block;width:100%;height:auto;max-width:620px;margin:0 auto}
+.fig figcaption{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);color:var(--ink2);font-size:13px;line-height:1.7}
+.fig-svg text{font-family:Inter,"Segoe UI",-apple-system,Arial,sans-serif;fill:var(--ink)}
+.fig-svg .fig-d{fill:var(--ink2)}.fig-svg .fig-k{fill:var(--muted)}.fig-svg .fig-n,.fig-svg .fig-tc{fill:var(--fig-core-t)}
+.fig-box,.fig-node,.fig-venn{stroke-width:1.5}.fig-venn{fill-opacity:.55}
+.fig-tone0{fill:var(--fig-0);stroke:var(--fig-0s)}.fig-tone1{fill:var(--fig-1);stroke:var(--fig-1s)}.fig-tone2{fill:var(--fig-2);stroke:var(--fig-2s)}.fig-tone3{fill:var(--fig-3);stroke:var(--fig-3s)}
+.fig-dot{stroke-width:2}.fig-dot.fig-tone0,.fig-dot.fig-tone1,.fig-dot.fig-tone2,.fig-dot.fig-tone3{fill:var(--fig-core)}
+.fig-cell{fill:var(--wash);stroke:var(--line)}.fig-frame{fill:none;stroke-width:2.5}.fig-frame.fig-tone0{fill:var(--wash)}
+.fig-line{stroke:var(--muted);stroke-width:2;fill:none}.fig-svg .fig-tip{fill:var(--muted)}.fig-axis{stroke:var(--ink2);stroke-width:2}
+.fig-grid{stroke:var(--faint);stroke-width:1.5;stroke-dasharray:6 6}.fig-ring{fill:none;stroke:var(--line);stroke-width:3}
+.fig-core{fill:var(--fig-core)}.fig-stop0{stop-color:var(--fig-1)}.fig-stop1{stop-color:var(--fig-0s)}
+.atlas20-colloc{margin:14px 0 4px}.atlas20-colloc-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.atlas20-chip{border:1px dashed var(--accent);background:transparent;color:var(--ink);border-radius:100px;padding:7px 12px;font-size:13px;font-style:italic;font-family:Georgia,serif}.atlas20-chip:hover{background:var(--accentsoft)}
