@@ -7,6 +7,8 @@ import json
 root = Path(__file__).resolve().parent
 index = (root / 'index.html').read_text(encoding='utf-8')
 assert 'atlas-recorder.js' in index and 'atlas-audio-ui.js' in index
+assert 'linguistics-data.js' in index and 'linguistics-lab.js' in index
+assert index.index('linguistics-data.js') < index.index('linguistics-lab.js') < index.index('app.js')
 assert index.index('interact.js') < index.index('app.js'), 'interact.js deve carregar antes do app'
 assert index.index('illustrations.js') < index.index('app.js'), 'illustrations.js deve carregar antes do app'
 # Botão voltar do celular: navegação interna e confirmação antes de sair
@@ -36,7 +38,7 @@ worker = (root / 'service-worker.js').read_text(encoding='utf-8')
 assert 'storylab-static-' in worker and '__HASH__' not in worker
 assert "request.mode === 'navigate'" in worker
 assert "caches.match(OFFLINE_PAGE)" in worker
-for name in ('app.js','style.css','data.js','atlas-engine.js','atlas-recorder.js','atlas-audio-ui.js','interact.js','illustrations.js'):
+for name in ('app.js','style.css','data.js','atlas-engine.js','atlas-recorder.js','atlas-audio-ui.js','interact.js','illustrations.js','linguistics-data.js','linguistics-lab.js'):
     assert "'./" + name + "'" in worker
 
 readme = (root / 'README.md').read_text(encoding='utf-8')

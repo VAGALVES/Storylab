@@ -15,19 +15,48 @@ jobs:
         run: |
           python test_content.py
           python test_quality.py
+          python generate_linguistics.py --check
           python generate_service_worker.py --check
       - name: Checar sintaxe de JavaScript
         run: |
           node --check app.js
           node --check data.js
           node --check atlas-data.js
+          node --check urbanism-concepts.js
+          node --check urbanism-lexicon.js
+          node --check urbanism-atlas.js
+          node --check spatial-verbs-data.js
+          node --check spatial-regency-data.js
+          node --check spatial-verb-icons.js
+          node --check spatial-verb-icons-extra.js
+          node --check spatial-contrast-data.js
+          node --check spatial-contrast.js
+          node --check spatial-verbs.js
           node --check atlas-engine.js
           node --check atlas-recorder.js
           node --check atlas-audio-ui.js
           node --check interact.js
           node --check illustrations.js
+          node --check linguistics-data.js
+          node --check linguistics-lab.js
+      - name: Testar Academia da Linguagem e diagramas
+        run: node test_linguistics.mjs
+      - name: Testar clique da Linguística Aplicada no menu mobile
+        run: node test_navigation_linguistics.mjs
       - name: Testar navegação e conteúdo do Atlas
         run: node test_atlas.mjs
+      - name: Testar o Atlas Semântico do Urbanismo
+        run: node test_urbanism.mjs
+      - name: Testar verbos, famílias e laboratório espacial
+        run: node test_spatial_verbs.mjs
+      - name: Testar diagramas semânticos por verbo
+        run: node test_spatial_icons.mjs
+      - name: Testar 64 pictogramas semânticos e contrastes inteligentes
+        run: node test_all_spatial_icons.mjs
+      - name: Testar duelos visuais e reforço inteligente
+        run: node test_spatial_contrast.mjs
+      - name: Testar regência e construções bilíngues
+        run: node test_spatial_regency.mjs
       - name: Testar busca, cartões, sequência e Monte a frase
         run: node test_interact.mjs
       - name: Testar esquemas explicativos das aulas
@@ -49,5 +78,5 @@ jobs:
       - name: Montar versão offline
         run: |
           python build_standalone.py
-          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 8; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h"
+          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 20; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h; assert 'StoryLabLinguistics' in h"
           git diff --exit-code -- storylab-shanghai-offline.html

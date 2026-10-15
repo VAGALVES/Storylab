@@ -1,0 +1,91 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+const read=p=>readFileSync(new URL(p,import.meta.url),'utf8');
+const D=JSON.parse(read('content/storylab_data.json'));
+const G=JSON.parse(read('content/atlas_guides.json'));
+const w={STORYLAB_DATA:D,STORYLAB_ATLAS_GUIDES:G};
+const handlers={};
+const doc={addEventListener(type,cb){(handlers[type]??=[]).push(cb)},getElementById(){return null}};
+const ctx=vm.createContext({window:w,document:doc,console});
+for(const file of ['urbanism-concepts.js','urbanism-lexicon.js','urbanism-atlas.js','spatial-verbs-data.js','spatial-regency-data.js','spatial-verbs.js','atlas-engine.js'])vm.runInContext(read(file),ctx,{filename:file});
+const lab=w.StoryLabVerbLab;
+assert.equal(D.atlas.length,62,'não devem ser criados novos índices com a camada de regência');
+assert.equal(G.length,62);
+const original=lab.entries(),sources=w.STORYLAB_SPATIAL_REGENCY_DATA;
+assert.equal(original.length,64);
+assert.equal(sources.length,8);
+assert.equal(sources.reduce((n,g)=>n+g.records.length,0),64);
+let structures=0;
+for(let i=0;i<8;i++){
+ assert.equal(sources[i].field,w.STORYLAB_SPATIAL_VERB_DATA[i].name);
+ assert.equal(sources[i].records.length,8);
+ for(let j=0;j<8;j++){
+  const x=sources[i].records[j],verb=w.STORYLAB_SPATIAL_VERB_DATA[i].verbs[j];
+  assert.equal(x.verb,verb.pt);
+  assert.equal(lab.regency(x.verb).verb,x.verb);
+  assert.equal(x.patterns.length,2);
+  for(const p of x.patterns){
+   assert.ok(p.pt.length>=25&&p.en.length>=20&&p.structure.length>=8);
+   assert.ok(!p.pt.includes('[['));
+   structures++;
+  }
+  assert.ok(x.exercise.prompt.includes('_____'));
+  assert.ok(!x.exercise.prompt.includes('[['));
+  assert.ok(x.exercise.answer.length>0);
+  assert.ok(x.exercise.explanation.length>20);
+ }
+}
+assert.equal(structures,128);
+const ladear=original.find(v=>v.pt==='ladear');
+const sobrepor=original.find(v=>v.pt==='sobrepor');
+const interpor=original.find(v=>v.pt==='interpor');
+assert.equal(lab.regency('ladear').exercise.answer,'por');
+assert.equal(lab.regency('sobrepor').exercise.answer,'à');
+assert.equal(lab.regency('interpor').exercise.answer,'entre');
+assert.ok(lab.regency('sobrepor').patterns[0].structure.includes('a B'));
+assert.match(lab.regency('ladear').patterns[1].pt,/ladeada por/);
+assert.match(lab.regency('circundar').patterns[1].pt,/circundado por/);
+lab.focus(sobrepor.topic,sobrepor.pt);
+assert.match(lab.render(),/Regência e construções/);
+assert.match(lab.render(),/A estrutura nova está sobreposta à cobertura antiga/);
+assert.match(lab.render(),/Praticar regência/);
+lab._test.search('sobreposta à');
+assert.ok(lab._test.filtered().some(v=>v.pt==='sobrepor'),'busca também pelas construções');
+const save={atlasDrafts:{},atlasHistory:[],atlasMastery:{'0:retilíneo':{level:3,next:99999999999}},verbRegencyStats:{}};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+let copy='',updates=0;
+w.StoryLabAtlas.init({D,getStore:()=>save,save(){updates++},render(){},header:()=>'',stat:()=>'',esc,norm,ico:()=>'',say(){},copy:s=>copy=s,toast(){},navigate(){},toTele(){},now:()=>0,random:()=>0.21});
+function click(kind,action,attrs={}){
+ const target={closest(sel){return sel==='[data-'+kind+'-action]'?{dataset:{[kind+'Action']:action,...attrs}}:null}};
+ for(const h of handlers.click||[])h({target,preventDefault(){}});
+}
+click('atlas','verbs');
+lab.focus(ladear.topic,ladear.pt);
+click('verb','copy-pattern',{verbId:String(ladear.index),pattern:'1'});
+assert.match(copy,/ladeada por/);assert.match(copy,/lined with/);
+click('verb','practice',{scope:'verb',verbId:String(ladear.index)});
+let html=w.StoryLabAtlas.render();
+assert.match(html,/QUESTÃO 1 DE 1/);
+assert.match(html,/A avenida é ladeada _____/);
+assert.doesNotMatch(html,/A forma passiva emprega por/);
+click('verb','practice-answer',{answer:'à'});
+html=w.StoryLabAtlas.render();
+assert.match(html,/A construção de referência utiliza: por/);
+assert.equal(save.verbRegencyStats.ladear.attempts,1);
+assert.equal(save.verbRegencyStats.ladear.correct,0);
+click('verb','practice-answer',{answer:'por'});
+assert.equal(save.verbRegencyStats.ladear.attempts,1,'questão só pode ser respondida uma vez');
+click('verb','practice-next');
+assert.match(w.StoryLabAtlas.render(),/RODADA CONCLUÍDA/);
+click('verb','practice-restart');
+click('verb','practice-answer',{answer:'por'});
+assert.equal(save.verbRegencyStats.ladear.correct,1);
+click('verb','practice-next');
+assert.match(w.StoryLabAtlas.render(),/1 de 1 respostas corretas/);
+click('verb','practice-exit');
+assert.match(w.StoryLabAtlas.render(),/Verbos que desenham a cena/);
+assert.deepEqual({...save.atlasMastery['0:retilíneo']},{level:3,next:99999999999},'progresso anterior foi preservado');
+assert.equal(updates,2);
+console.log('Regência: 128 construções, 64 lacunas, crase, busca, feedback e progresso local — OK');

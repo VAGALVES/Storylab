@@ -10,8 +10,11 @@ import argparse
 ROOT = Path(__file__).resolve().parent
 FILES = [
     'index.html', 'style.css', 'app.js', 'data.js',
-    'atlas-data.js', 'atlas-engine.js', 'atlas-recorder.js',
-    'atlas-audio-ui.js', 'interact.js', 'illustrations.js', 'manifest.webmanifest',
+    'atlas-data.js', 'urbanism-concepts.js', 'urbanism-lexicon.js',
+    'urbanism-atlas.js', 'spatial-verbs-data.js', 'spatial-regency-data.js', 'spatial-verb-icons.js', 'spatial-verb-icons-extra.js', 'spatial-contrast-data.js',
+    'spatial-contrast.js', 'spatial-verbs.js',
+    'atlas-engine.js', 'atlas-recorder.js',
+    'atlas-audio-ui.js', 'interact.js', 'illustrations.js', 'linguistics-data.js', 'linguistics-lab.js', 'manifest.webmanifest',
     'assets/icon.svg', 'assets/skyline.svg'
 ]
 TARGET = ROOT / 'service-worker.js'

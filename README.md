@@ -1,9 +1,39 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.1 — Atlas revisto com colocações, esquemas nas aulas e botão voltar
+## Journalism Academy · Versão 2.8 — Atlas revisto com colocações, esquemas nas aulas e botão voltar
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
 **Status:** aplicação funcional de fundação acadêmica, não currículo universitário completo nem serviço de ensino credenciado. Todas as 172 unidades curriculares têm aula integral redigida; o conteúdo é autoral e ainda não passou por revisão de especialistas externos.
+
+## NOVO · Academia da Linguagem Ilustrada (v2.7)
+
+Aulas curriculares resumidas e fundamentação linguística aprofundada têm papéis diferentes. Agora há uma biblioteca acadêmica própria, ligada às disciplinas correspondentes e aberta pelo menu **Linguística Aplicada**, sem confundir os dossiês com novas unidades curriculares.
+
+- **8 dossiês integrais** com 4 explicações acadêmicas cada (32 seções), aplicações em fala, entrevista e narrativa.
+- **8 desenhos vetoriais específicos e interativos** (não ilustrações genéricas): produção/escuta da fala, prosódia e foco, sintaxe, inferência, dêixis espacial, coesão, ato de fala e organização de turnos.
+- **24 termos do miniglossário**, oito curiosidades científicas e oito contrastes entre formulação vaga e formulação mais precisa.
+- **8 atividades com roteiro de 3 passos** e 8 perguntas de verificação de compreensão, com justificativa.
+- **Bibliografia de consulta** apontando para materiais da International Phonetic Association, MIT OCW, Stanford Encyclopedia of Philosophy, Cambridge University Press e Open University. Os dossiês são autorais e didáticos, sem alegar revisão institucional ou substituição das obras referidas.
+- **Integração curricular contextual:** aulas de oratória, locução, reportagem, audiovisual e descrição exibem ligações para os estudos de linguística relacionados.
+- **Salvamento local:** capítulos estudados, respostas dos quizzes e anotações pessoais são incluídos no mesmo backup JSON do restante do StoryLab.
+- **Offline:** fonte JSON em `content/linguistics_chapters.json`, gerador `generate_linguistics.py`, módulos `linguistics-data.js` e `linguistics-lab.js`, cache PWA e HTML offline autônomo.
+
+### Como acrescentar ou revisar um dossiê
+
+Edite `content/linguistics_chapters.json`, mantenha estrutura com quatro seções, exemplo aplicado, curiosidade, miniglossário, pergunta e ligações curriculares. Depois execute:
+
+```sh
+python generate_linguistics.py
+python generate_service_worker.py
+python build_standalone.py
+python generate_linguistics.py --check
+node test_linguistics.mjs
+python test_content.py
+python test_quality.py
+```
+
+Os esquemas são modelos pedagógicos simplificados: setas ilustram relações conceituais e não são provas de causas, intenções ou mecanismos universais. O teste de quiz verifica a resposta selecionada contra o gabarito editorial; não é análise de voz por IA.
+
 
 ### Conteúdo desta edição
 
@@ -17,17 +47,75 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 | Frases-base em português | 657 | Todas com nota de uso específica; pesquisáveis no app |
 | Equivalentes em inglês | 36 | Seleção inicial, explicitamente incompleta |
 | Equivalentes em mandarim | 12 | Seleção inicial com pinyin |
-| Atlas de vocabulário | 31 campos; 465 termos; cada verbete com definição, exemplo, cuidado, frase de cena e 4 a 6 colocações (2.042 no total); 93 trocas de precisão | Publicado, com treino e revisão espaçada |
+| Atlas de vocabulário | 62 campos; 717 verbetes, incluindo 64 famílias de verbos descritivos bilíngues. Os 31 campos-base foram revistos termo a termo e cada verbete traz frase de cena e 4 a 6 colocações (2.042 no total); treino, relações semânticas e revisão espaçada | Publicado |
 | Desafios de expressão oral | 48 | Publicados, em 3 modos |
 | Missões de campo | 30 | Checklist, perguntas, narração e caderno de campo |
 | Percurso guiado | 12 semanas | Vinculado a aulas, famílias verbais e missões |
 
-### Novidades da v2.1 — Léxico de Letras, esquemas e navegação
+### Novidades da v2.8 — Léxico de Letras, esquemas e navegação
 
-- **Atlas revisto termo a termo:** 170 dos 465 termos foram substituídos por escolhas mais precisas dentro de cada campo semântico. Alguns exemplos: *tez, fisionomia, vinco, esgar, impassível, hirto, claudicar* (pessoas); *pátina, puído, carcomido, rebordo, nervura* (objetos); *escarpa, várzea, meandro, dossel, plúmbeo, bruma* (paisagem e céu); *desaguar em, ricochetear, sedimentar, transbordar* (incidência). Saíram termos básicos como “cabo”, “tampa”, “patas”, “crachá” e “óculos de grau”. Nenhum termo se repete entre campos.
+- **Atlas revisto termo a termo:** 170 dos 465 termos dos 31 campos-base foram substituídos por escolhas mais precisas dentro de cada campo semântico. Alguns exemplos: *tez, fisionomia, vinco, esgar, impassível, hirto, claudicar* (pessoas); *pátina, puído, carcomido, rebordo, nervura* (objetos); *escarpa, várzea, meandro, dossel, plúmbeo, bruma* (paisagem e céu); *desaguar em, ricochetear, sedimentar, transbordar* (incidência). Saíram termos básicos como “cabo”, “tampa”, “patas”, “crachá” e “óculos de grau”. Nenhum termo se repete entre campos.
 - **Colocações:** cada verbete traz de 4 a 6 combinações consagradas (“luz rasante”, “incidir sobre”, “a voz ecoa”), 2.042 no total. Elas aparecem no verbete e nos cartões, entram na busca universal e, com um toque, vão para o texto da prática.
 - **Esquemas explicativos nas 172 aulas:** 184 diagramas desenhados em SVG por `illustrations.js` a partir de especificações declarativas (fluxo, ciclo, pirâmide, comparação, matriz, linha do tempo, espectro, núcleo, Venn, camadas, escalas de plano, regra dos terços e barras com base zero). Seguem o tema claro e o escuro e funcionam offline.
 - **Botão voltar do celular:** volta à tela anterior do app em vez de fechá-lo. Na tela inicial, o primeiro toque mostra “Toque em voltar de novo para sair do StoryLab”, e o app fecha só com um segundo toque em até 2 segundos. Janelas abertas e o menu fecham antes.
+
+### Novidades da v2.6 — Oficina de Contraste Visual
+
+- **Treino real de escolha do verbo mais preciso:** duas ilustrações específicas lado a lado, uma cena descritiva, duas opções, sem revelar o gabarito antes da resposta. Ao escolher, o aluno vê a justificativa do acerto/erro, a diferença conceitual e uma frase contextual em inglês.
+- **Cobertura integral:** `spatial-contrast-data.js` contém **32 pares de contraste e 64 cenas**, uma para cada verbo do laboratório. Exemplos: *ladear × circundar*, *sobrepor × recobrir*, *bifurcar-se × convergir*, *adensar × verticalizar*, *ocultar × revelar*.
+- **Quatro entradas pedagógicas:** 8 cenas introdutórias (uma de cada área), reforço inteligente de 8 cenas priorizando erros e conceitos não treinados, percurso completo de 64 cenas e duelo de 2 cenas diretamente no verbete selecionado.
+- **Histórico local independente:** cada desafio tem ID estável; o app registra tentativas, acertos e data em `verbContrastStats`, sem alterar a revisão espaçada, a regência ou o progresso já existente.
+- **Experiência responsiva e acessível:** cartas vetoriais amplas lado a lado em telas pequenas, indicação de foco, cores de acerto/erro acompanhadas de texto, andamento da rodada e opção de movimento reduzido.
+- **Arquitetura:** `spatial-contrast.js` implementa treino e estados; `spatial-verbs.js` fornece entrada ao módulo, navegação e armazenamento existente. `test_spatial_contrast.mjs` valida cobertura, escolhas, bloqueio após resposta, modo de reforço e regressão.
+- **Compatibilidade:** mantidos os **62 campos, 712 verbetes, 64 diagramas, 128 construções de regência** e versões PWA e HTML único offline.
+
+### Novidades da v2.5 — Atlas Visual dos 64 Verbos
+
+- **64/64 verbos com pictogramas próprios**: foram desenhados mais 56 SVGs específicos nas sete famílias restantes, além dos oito já implementados para percurso. Cada pictograma codifica uma relação diferente, como *margear versus beirar*, *circundar versus contornar*, *sobrepor versus justapor*, *expandir versus alargar* e *ocultar versus revelar*.
+- **Lógica semântica explícita**: 64 legendas curtas explicam o que os traços representam; os SVGs ampliados recebem descrição acessível, enquanto miniaturas decorativas não são narradas em duplicidade por leitores de tela.
+- **Comparação didática inteligente**: dois contrastes relacionados são sugeridos editorialmente por verbo, inclusive entre diferentes campos semânticos; botões com miniaturas levam diretamente ao verbete de comparação.
+- **UI responsiva**: cartões ilustrados, proporção preservada em telas compactas, legendas ajustadas para mobile e controles com foco acessível. Sem imagens externas e com temas claro/escuro.
+- **Arquitetura**: `spatial-verb-icons.js` mantém o catálogo e os 8 primeiros desenhos, `spatial-verb-icons-extra.js` registra os outros 56, e `spatial-verbs-data.js` identifica cada verbo pelo próprio `iconKey`. Não há alteração de índices, resumos, frases de regência ou histórico.
+- **Qualidade**: `test_all_spatial_icons.mjs` testa os 64 diagramas, unicidade geométrica, texto semântico, cards, contraste entre áreas, busca, acessibilidade e totais preservados. PWA e versão HTML única permanecem sincronizados.
+
+### Novidades da v2.4 — Diagramas Semânticos por Verbo
+
+- **Precisão visual por verbo, não por grupo:** oito ilustrações SVG distintas para o campo `Percurso e travessia`: **atravessar**, **cruzar**, **transpor**, **percorrer**, **desviar**, **serpentear**, **bifurcar-se** e **convergir**.
+- **Distinções visuais explícitas:** bifurcar-se mostra um percurso se dividindo em dois; convergir mostra dois percursos se unindo; serpentear mostra um traçado sinuoso; desviar mostra o contorno de um obstáculo; transpor mostra a superação de uma barreira.
+- **Interface integrada e responsiva:** mesmo desenho específico no cartão pequeno do verbo e no detalhe lexical; miniaturas proporcionais em telas móveis, ícones com nome acessível no detalhe e miniaturas decorativas ocultas de leitores de tela.
+- **Arquitetura extensível:** os novos desenhos vivem em `spatial-verb-icons.js`, referenciados por `iconKey` na fonte `spatial-verbs-data.js`; os demais 56 verbos continuam com os esquemas de grupo existentes até a próxima expansão, sem figuras vazias.
+- **Compatibilidade:** verbetes, regência, exercícios, progresso local, cache do PWA e HTML offline preservados. Não aumenta a quantidade de verbetes (**62 campos e 712 verbetes**).
+- **Testes:** `test_spatial_icons.mjs` valida a exclusividade dos oito SVGs, renderização nas duas dimensões, leitura acessível, organização semântica e fallback dos demais campos.
+
+### Novidades da v2.3 — Regência e Construções Descritivas
+
+- **64 verbos / 128 construções PT–EN:** duas estruturas contextualizadas por verbo, frequentemente contrastando voz ativa, voz passiva, pronominalização e locuções de referência espacial.
+- **64 exercícios de lacuna:** escolha da preposição ou locução no modelo apresentado, feedback específico, exemplos equivalentes em inglês e registro de tentativas e acertos no armazenamento local.
+- **Treinos acessíveis na aba Verbos & famílias:** prática de um único verbo, das oito relações de um campo ou rodada mista com 16 relações; seleção com feedback apenas depois da resposta.
+- **Cautela gramatical:** distinguir complemento regido por verbo (sobrepor algo a algo, interpor algo entre outros elementos) de locuções circunstanciais de posição, percurso ou direção (ao longo de, próximo de, após).
+- **Crase e contrações no uso real:** sobreposto à cobertura; interligado ao centro; embutido no forro; disperso pelo bairro. Tradução inglesa contextual, sem pressupor equivalências palavra a palavra.
+- **Preservação dos índices anteriores:** continuam 62 campos e 712 verbetes; a regência é uma camada vinculada aos 64 verbos, não uma duplicação de verbetes nem uma alteração das chaves da revisão espaçada.
+- **Infraestrutura:** nova fonte `spatial-regency-data.js` incorporada à aplicação, PWA e HTML único. Testes dedicados em `test_spatial_regency.mjs`.
+
+### Novidades da v2.2 — Laboratório de Verbos Descritivos
+
+- **Nova aba no Atlas: "Verbos & famílias"**: exploração filtrável e responsiva de 64 verbos divididos em oito campos — lateralidade, cercamento, camadas, travessia, orientação, distribuição, transformação e percepção visual.
+- **Família lexical completa e sem falsas derivações**: infinitivo, substantivo, adjetivo ou particípio, com rótulo explícito "derivado" versus "relacionado por sentido", regência, definição, contraste semântico e frase em português e inglês.
+- **Rigor de formação:** "lado" é associado a "ladear", não substantivo formado diretamente dele; "sobreposição" e "sobreposto" derivam de "sobrepor"; "circundante" descreve o entorno e "circundado" qualifica o elemento rodeado.
+- **Experiência visual contextualizada:** esquemas abstratos de relações espaciais, filtros por campo, busca por qualquer membro da família ou tradução inglesa, botões de copiar frases e acesso ao verbete completo.
+- **Treino integrado:** cada um dos 64 verbos também é um termo regular no Atlas com frase-lacuna, exemplo, explicação, aviso de uso, cartões, revisão espaçada e registro de prática. Novos campos são acrescentados após os 54 anteriores: índices antigos e progresso preservados.
+- **PWA/offline e QA:** `spatial-verbs-data.js` contém os verbetes editoriais; `spatial-verbs.js` cria a interface e integra o conteúdo; `test_spatial_verbs.mjs` testa a aplicação. Todos são incluídos no HTML offline e no service worker.
+
+### Novidades da v2.1 — Atlas Semântico do Urbanismo (Português ↔ Inglês)
+
+- **Ampliação integrada do Atlas existente:** 23 novos campos ao final dos 31 anteriores, sem renumerar conteúdo e sem perder rascunhos ou progresso de revisão. Total: **54 campos e 648 verbetes**.
+- **13 áreas interdisciplinares, 104 conceitos:** mobilidade pendular, engenharia de transportes, morfologia, geografia metropolitana, sociologia, espaços públicos, psicologia ambiental, ecologia, economia urbana, planejamento, geotecnologia, saúde e economia criativa/moda.
+- **8 famílias de vocabulário fundamental, 64 palavras:** forma urbana, mobilidade, espaços públicos, infraestrutura, uso do solo, habitação, sustentabilidade e política urbana.
+- **Linguagem em uso, 20 entradas:** 12 collocations com equivalentes em inglês e 8 distinções de conceitos frequentemente confundidos.
+- **Modo bilíngue nos novos verbetes:** tradução inglesa, definições, exemplos de narração, cautela editorial, frase-lacuna para recuperação ativa, exemplos selecionados em inglês e botões para copiar. Relações semânticas navegáveis ligam fenômenos a outros campos.
+- **Estudo integrado:** os novos termos entram no seletor, pesquisa, cartões, treino de precisão, revisão espaçada, prática progressiva e versão offline.
+- **Rigor terminológico:** commuting é a tradução corrente de deslocamento pendular, não confundida com migration; em inglês britânico high street é mais contextual do que em inglês americano; bike lane e ciclovia segregada nem sempre são equivalentes exatos.
+- **Arquivos dedicados:** `urbanism-concepts.js` (13 campos), `urbanism-lexicon.js` (fundamentos, collocations e distinções), `urbanism-atlas.js` (integração) e `test_urbanism.mjs` (testes). A fonte gerada `data.js` continua intocada.
 
 ### Novidades da v2.0 — Curadoria e precisão
 

@@ -556,7 +556,7 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - **Próximos passos:** cartões também para os termos do Atlas, modo cronometrado de fala com contagem regressiva, revisão do dia unificada (frases + termos) e conquistas por marcos de estudo.
 
 
-## Evolução v2.1 — Léxico de Letras, esquemas e navegação
+## Evolução v2.8 — Léxico de Letras, esquemas e navegação
 
 - **Critério lexical explícito:** um termo só fica no Atlas se nomeia uma nuance que a palavra comum apaga. Cada campo cobre suas dimensões de forma sistemática (em pessoas: fisionomia, tez, porte, marcas do tempo, gesto), sem quase-sinônimos disputando lugar.
 - **Colocação como unidade de aprendizagem:** saber a palavra não basta; é preciso saber com quem ela anda. As colocações transformam o verbete em frase pronta para usar diante da câmera.
@@ -576,3 +576,19 @@ Cada frase possui: identificador imutável, família, intenção, estilo, texto 
 - **Recordação livre no Atlas:** os cartões complementam o treino de múltipla escolha — reconhecer (escolher entre opções) e recordar (lembrar sem pistas) são competências diferentes.
 - **Fala com tempo:** o cronômetro torna concreta a duração sugerida de cada nível da escada narrativa, sem impor corte: o tempo é referência, não limite.
 - **Conquistas:** marcos de constância e domínio, calculados a partir do progresso real; nenhum dado sai do aparelho.
+
+
+## Ciclo v2.7 — Fundamentos linguísticos e explicações desenhadas
+
+A academia existente conta com 172 aulas introdutórias. Para atacar a superficialidade acadêmica, esta entrega adiciona oito dossiês aprofundados, 32 capítulos explicativos internos e oito representações SVG individuais, cada uma ancorada em um fenômeno linguístico. Cada dossiê inclui definição, contraposição, curiosidade científica, terminologia, exercício, gabarito explicado e referências externas. Todas as conexões curriculares são explícitas. Registro de estudo é voluntário; quiz não é certificação nem avaliação automatizada de fala.
+
+### Próximos estudos aprofundados
+
+- Semântica lexical, polissemia, sinonímia contextual e redes de palavras.
+- Sociolinguística, variação, prestígio e transcrição ética.
+- Linguística cognitiva e metáforas conceptuais na cobertura cultural.
+- Evidencialidade e modalização para entrevista e checagem de fatos.
+- Retórica, argumentação e construção de inferências.
+- Multimodalidade, legenda e relação entre imagem, som e fala.
+
+Cada novo capítulo deve ser escrito e revisado individualmente. Não elevar contagens apenas por variações superficiais nem sugerir que leitura externa já foi integralmente auditada por docentes.
