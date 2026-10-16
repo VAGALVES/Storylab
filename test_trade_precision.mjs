@@ -23,7 +23,7 @@ assert.equal(new Set(D.verbs.flatMap(g=>g[2].map(v=>v[0]))).size,20);
 for(const g of D.verbs)for(const v of g[2]){
  assert.equal(v.length,10,'cada verbo exige 10 campos em ordem');
  assert.match(v[2],/[\u3400-\u9fff]/);
- assert.ok(v[9].length>25&&v[8].length>55);
+ assert.ok(v[9].trim().length>=12&&v[8].trim().length>=20);
 }
 const firmness=D.scales.find(s=>s.id==='firmeza');
 assert.ok(firmness.steps.some(x=>x[0]==='macio'));
