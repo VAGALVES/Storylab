@@ -65,6 +65,7 @@ assert.match(copied.at(-1),/Gāi zǔjiàn/);
 click('grade','l01:good');
 assert.equal(store.tradeLanguageReview.l01.level,1);
 assert.ok(store.tradeLanguageReview.l01.next>Date.now()+80000000);
+click('reveal');
 click('grade','l01:again');
 assert.equal(store.tradeLanguageReview.l01.level,0);
 click('due');
