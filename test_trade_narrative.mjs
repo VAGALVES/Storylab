@@ -1,4 +1,4 @@
-/* StoryLab v2.22 · Ensaio da narração autoral e escalas visuais. */
+/* StoryLab v2.23 · Ensaio da narração autoral e escalas visuais. */
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {readFileSync} from 'node:fs';
@@ -14,6 +14,13 @@ for(const f of ['trade-data.js','trade-academy-data.js','trade-object-data.js',
 const D=sandbox.window.STORYLAB_NARRATIVE_DATA,N=sandbox.window.StoryLabNarrative,S=sandbox.window.StoryLabScaleDiagrams,P=sandbox.window.StoryLabPrecision,H=sandbox.window.StoryLabTrade;
 assert.equal(D.scenes.length,8);
 assert.equal(D.phases.length,5);
+assert.equal(D.languageBridges.length,5);
+assert.deepEqual(Array.from(D.languageBridges,x=>x.id),Array.from(D.phases,x=>x.id));
+for(const b of D.languageBridges){
+ for(const k of ['pt','en','zh','py','insight'])assert.ok(typeof b[k]==='string'&&b[k].length>=18,b.id+':'+k);
+ assert.match(b.zh,/[一-鿿]/u);
+}
+
 assert.equal(D.rubric.length,5);
 assert.equal(D.sources.length,4);
 assert.equal(new Set(D.scenes.map(s=>s.id)).size,8);
@@ -64,6 +71,20 @@ assert.equal(H.openTab('pratica'),true);
 let html=H.render();
 assert.match(html,/Uma coisa\. Cinco olhares/);
 assert.match(html,/Motocicleta/);
+click('lang');
+let bridgeHtml=H.render();
+assert.match(bridgeHtml,/PONTE DE EXPRESSÃO/);
+assert.match(bridgeHtml,/REFERÊNCIA EM PORTUGUÊS/);
+assert.match(bridgeHtml,/在这个镜头中/);
+click('speak-bridge','en');assert.equal(spoken.at(-1)[1],'en-US');
+assert.equal(spoken.at(-1)[0],D.languageBridges[0].en);
+click('speak-bridge','zh');assert.equal(spoken.at(-1)[1],'zh-CN');
+assert.equal(spoken.at(-1)[0],D.languageBridges[0].zh);
+click('copy-bridge');assert.match(copied.at(-1),/PINYIN:/);
+assert.equal(N.spoken(),'');assert.equal(N.output(),'');
+click('phase','2');assert.match(H.render(),/A superfície parece lisa/);
+click('phase','0');click('lang');assert.doesNotMatch(H.render(),/PONTE DE EXPRESSÃO/);
+
 assert.match(html,/disabled/);
 assert.equal(N.spoken(),'');
 assert.equal(N.output(),'');

@@ -6,6 +6,12 @@
 
 **Arquitetura prioritária:** Atlas Universal do Objeto → Estúdio de Descrição → Atlas Técnico do Produto / Atlas do Fornecedor → Academia Técnica e Radar Setorial. A linguagem original de fábrica permanece acessível, mas deixa de ser a porta de entrada.
 
+## Rodada v2.23 — ponte trilíngue na narração (17/10/2026)
+
+Cada plano tem um exemplo contextual em português (referência), inglês e mandarim (apoios), com pinyin, áudio sintetizado, cópia e nota de regência ou contraste. A ponte é opcional; não altera roteiro autoral, origem, teleprompter, backups ou rubrica. Inclui ligação com Verbos & regência. Não se inventam dados de produto.
+
+Teste: cinco frases alinhadas, navegação, cópia, síntese de voz e isolamento do conteúdo do usuário. Não há tradução automática da escrita livre; vozes dependem do dispositivo e revisão nativa permanece necessária.
+
 ## Entrega v2.19 — precisão descritiva universal
 
 ### Atlas da Coisa, sem privilegiar vestuário

@@ -1,10 +1,10 @@
-/* StoryLab v2.22 · Laboratório da observação à narração.
+/* StoryLab v2.23 · Laboratório da observação à narração.
    Toda frase final é escrita pelo estudante. Não inferir especificações. */
 window.StoryLabNarrative=(()=>{
  'use strict';
  let api=null;
  const data=()=>window.STORYLAB_NARRATIVE_DATA||{scenes:[],phases:[],rubric:[],sources:[]};
- const state={scene:'moto',phase:0,showExample:false};
+ const state={scene:'moto',phase:0,showExample:false,showLanguages:false};
  const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const scene=()=>data().scenes.find(s=>s.id===state.scene)||data().scenes[0];
  const defaultRecord=()=>({responses:['','','','',''],sources:['impressao','impressao','impressao','impressao','impressao'],checks:[]});
@@ -38,6 +38,20 @@ window.StoryLabNarrative=(()=>{
   const p=data().phases[state.phase],txt=String(p.frame||'');
   return '<div class="nar-example"><span class="trade-kicker">ESTRUTURA-GUIA, NÃO UMA AFIRMAÇÃO</span><p>'+esc(txt)+'</p><small>Os campos entre colchetes são espaços de observação. Não substituem ensaio ou conhecimento do produto.</small></div>';
  }
+ function bridge(){
+  const phase=data().phases[state.phase];
+  const b=(data().languageBridges||[]).find(x=>x.id===phase?.id);if(!b)return '';
+  return '<section class="nar-language" aria-label="Ponte trilíngue">'+
+  '<div class="nar-language-heading"><span class="trade-kicker">PONTE DE EXPRESSÃO · PT → EN → 中文</span>'+
+  '<p>Exemplo didático, não tradução da sua narração nem descrição de um produto real.</p></div>'+
+  '<div class="nar-language-pt"><small>01 · REFERÊNCIA EM PORTUGUÊS</small><p lang="pt-BR">'+esc(b.pt)+'</p></div>'+
+  '<div class="nar-language-grid"><article lang="en"><small>02 · ENGLISH · APOIO</small><p>'+esc(b.en)+'</p>'+
+  button('speak-bridge','▶ Ouvir inglês','en')+'</article>'+
+  '<article lang="zh-CN"><small>03 · 中文 · APOIO</small><p>'+esc(b.zh)+'</p><span class="nar-pinyin" lang="zh-Latn-pinyin">'+esc(b.py)+'</span>'+
+  button('speak-bridge','▶ Ouvir mandarim','zh')+'</article></div>'+
+  '<div class="nar-language-insight"><strong>Regência, sentido e limites</strong><p>'+esc(b.insight)+'</p></div>'+
+  '<div class="nar-language-footer">'+button('copy-bridge','Copiar exemplo trilíngue')+button('verbs','Explorar verbos e regência')+'</div></section>';
+ }
  function render(){
   const s=scene(),w=record(),p=data().phases[state.phase];if(!s||!p)return '<p>Laboratório em preparação.</p>';
   const filled=w.responses.filter(x=>String(x||'').trim()).length,checks=data().rubric.filter(q=>w.checks.includes(q[0])).length;
@@ -57,8 +71,8 @@ window.StoryLabNarrative=(()=>{
   '<p class="nar-focus">'+esc(p.focus)+'</p>'+
   '<div class="nar-instruction"><small><span aria-hidden="true">◉</span> DIREÇÃO DE CÂMERA</small><p>'+esc(p.camera)+'</p></div>'+
   '<div class="nar-instruction nar-instruction-alt"><small>PERGUNTA ESPECÍFICA DA CENA</small><p>'+esc(s.questions[state.phase])+'</p></div>'+
-  '<div class="nar-guide-actions">'+button('example',state.showExample?'Ocultar estrutura-guia':'Ver uma estrutura de frase')+'</div>'+
-  (state.showExample?example():'')+
+  '<div class="nar-guide-actions">'+button('example',state.showExample?'Ocultar estrutura-guia':'Ver uma estrutura de frase')+button('lang',state.showLanguages?'Ocultar idiomas de apoio':'Estudar PT · EN · 中文')+'</div>'+
+  (state.showExample?example():'')+(state.showLanguages?bridge():'')+
   '<label class="nar-text-label">SUA NARRAÇÃO EM PORTUGUÊS<textarea data-nar-response data-model="narrativePhase'+state.phase+'" rows="5" maxlength="600" placeholder="Escreva apenas o que você pode observar, atribuir ou comprovar neste plano…">'+esc(w.responses[state.phase]||'')+'</textarea></label>'+
   '<label class="nar-source-label">ORIGEM DA INFORMAÇÃO<select data-nar-source>'+data().sources.map(x=>'<option value="'+x[0]+'"'+((w.sources[state.phase]||'impressao')===x[0]?' selected':'')+'>'+esc(x[1])+'</option>').join('')+'</select></label>'+
   '<div class="nar-caution"><small>VERIFICAÇÃO SEMÂNTICA</small><p>'+esc(p.guard)+'</p></div>'+
@@ -80,6 +94,14 @@ window.StoryLabNarrative=(()=>{
    if(a==='phase'){const n=Number(id);if(Number.isInteger(n)&&n>=0&&n<5){state.phase=n;state.showExample=false;api.render()}return}
    if(a==='prev'||a==='next'){state.phase=(state.phase+(a==='prev'?4:1))%5;state.showExample=false;api.render();return}
    if(a==='example'){state.showExample=!state.showExample;api.render();return}
+    if(a==='lang'){state.showLanguages=!state.showLanguages;api.render();return}
+    if(a==='speak-bridge'||a==='copy-bridge'){
+     const b=(data().languageBridges||[]).find(x=>x.id===data().phases[state.phase]?.id);if(!b)return;
+     if(a==='speak-bridge'&&(id==='en'||id==='zh'))api.say(id==='en'?b.en:b.zh,id==='en'?'en-US':'zh-CN');
+     if(a==='copy-bridge')api.copy(['PORTUGUÊS: '+b.pt,'ENGLISH: '+b.en,'中文: '+b.zh,'PINYIN: '+b.py,'NOTA: '+b.insight].join('\n'));
+     return;
+    }
+    if(a==='verbs'){window.StoryLabTrade?.openTab?.('verbos');return}
    if(a==='copy'){const txt=output();if(txt)api.copy(txt);return}
    if(a==='tele'){const txt=spoken();if(txt&&typeof api.toTele==='function')api.toTele(txt);return}
    if(a==='studio'){window.StoryLabTrade?.openTab?.('roteiro');return}
@@ -106,5 +128,5 @@ window.StoryLabNarrative=(()=>{
    }
   });
  }
- return {init,render,output,spoken,vignette,wordCount};
+ return {init,render,output,spoken,vignette,wordCount,bridge};
 })();

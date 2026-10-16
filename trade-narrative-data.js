@@ -1,4 +1,4 @@
-/* StoryLab v2.22 · Cenas de estudo e roteiro oral. São situações hipotéticas,
+/* StoryLab v2.23 · Cenas de estudo e roteiro oral. São situações hipotéticas,
    nunca fichas de produtos reais nem alegações de fabricantes. */
 window.STORYLAB_NARRATIVE_DATA={
  phases:[
@@ -7,6 +7,38 @@ window.STORYLAB_NARRATIVE_DATA={
   {id:'materia',name:'Matéria & acabamento',kind:'Detalhe / macro',focus:'Qual textura, brilho, junta, borda e superfície você consegue verificar?',camera:'Close estável e luz lateral para mostrar textura, borda e transições.',frame:'Ao observar [superfície], noto [textura]; [material] é [aparente/declarado/confirmado], não uma suposição disfarçada.',guard:'Liso ≠ fosco; revestido ≠ feito inteiramente de determinado material.'},
   {id:'interacao',name:'Função & ergonomia',kind:'Demonstração',focus:'Qual movimento, pega, comando ou resposta foi efetivamente testado?',camera:'Mostre a mão, o objeto e o resultado da ação. Informe duração e condição.',frame:'Durante [tarefa/teste], [parte] [ação]; nessa condição, a experiência [observação com limite].',guard:'Uma demonstração curta não comprova durabilidade, eficiência ou segurança geral.'},
   {id:'sintese',name:'Síntese responsável',kind:'Fechamento',focus:'O que você pode concluir e o que ainda depende de teste ou documentação?',camera:'Retorne ao plano geral e destaque um detalhe que sustente sua conclusão.',frame:'A principal característica observada é [atributo] em [situação]. Falta verificar [evidência] antes de concluir [afirmação].',guard:'Separe opinião, observação, declaração e medição; evite elogio ou crítica sem fundamento.'}
+ ],
+ languageBridges:[
+  {id:'contexto',
+   pt:'Neste plano, apresento o objeto no ambiente em que está.',
+   en:'In this shot, I introduce the object in its setting.',
+   zh:'在这个镜头中，我介绍物品及其所处的环境。',
+   py:'Zài zhège jìngtóu zhōng, wǒ jièshào wùpǐn jí qí suǒ chǔ de huánjìng.',
+   insight:'Plano de filmagem é shot, não plan. 镜头 (jìngtóu) pode indicar tomada ou enquadramento; 环境 (huánjìng) situa o objeto sem inferir finalidade.'},
+  {id:'forma',
+   pt:'Deste ângulo, observo como uma parte se relaciona com outra.',
+   en:'From this angle, I observe how one part relates to another.',
+   zh:'从这个角度，我观察一个部件与另一个部件之间的关系。',
+   py:'Cóng zhège jiǎodù, wǒ guānchá yí gè bùjiàn yǔ lìng yí gè bùjiàn zhījiān de guānxì.',
+   insight:'Relacionar-se com é mais amplo que conectar-se a. Relates to / 与……之间的关系 não exige contato; connects to / 连接 descrevem ligação observável.'},
+  {id:'materia',
+   pt:'A superfície parece lisa, mas ainda não confirmei o material.',
+   en:'The surface looks smooth, but I have not verified the material.',
+   zh:'表面看起来很光滑，但我还没有确认材质。',
+   py:'Biǎomiàn kàn qǐlái hěn guānghuá, dàn wǒ hái méiyǒu quèrèn cáizhì.',
+   insight:'Looks / 看起来 indicam aparência, não composição comprovada. Smooth / 光滑 não são sinônimos de glossy / 有光泽.'},
+  {id:'interacao',
+   pt:'Nesta demonstração, observo como o objeto se comporta durante o uso.',
+   en:'In this demonstration, I observe how the object behaves during use.',
+   zh:'在这次演示中，我观察物品在使用时的表现。',
+   py:'Zài zhè cì yǎnshì zhōng, wǒ guānchá wùpǐn zài shǐyòng shí de biǎoxiàn.',
+   insight:'During use / 在使用时 delimitam a situação. Uma demonstração curta não comprova desempenho duradouro, segurança ou confiabilidade.'},
+  {id:'sintese',
+   pt:'Posso descrever o que observei, mas ainda preciso confirmar os dados técnicos.',
+   en:'I can describe what I observed, but I still need to verify the technical data.',
+   zh:'我可以描述观察到的情况，但还需要核实技术数据。',
+   py:'Wǒ kěyǐ miáoshù guānchá dào de qíngkuàng, dàn hái xūyào héshí jìshù shùjù.',
+   insight:'Describe / 描述 não significa verify / 核实. A conclusão distingue observação, declaração de terceiros e medição verificável.'}
  ],
  scenes:[
  {id:'moto',name:'Motocicleta',tag:'Mobilidade',illustration:'moto',intro:'Uma moto vista em um showroom. Nenhuma potência, autonomia ou medida é conhecida.',nouns:['carenagem','chassi','guidão','banco','comando'],verbs:['contornar','sustentar','articular','alinhar','amortecer'],adjectives:['angular','esguio','aderente','equilibrado','volumoso'],questions:[
