@@ -1,4 +1,4 @@
-/* StoryLab v2.23 · Laboratório da observação à narração.
+/* StoryLab v2.24 · Laboratório da observação à narração.
    Toda frase final é escrita pelo estudante. Não inferir especificações. */
 window.StoryLabNarrative=(()=>{
  'use strict';
@@ -55,6 +55,8 @@ window.StoryLabNarrative=(()=>{
  function render(){
   const s=scene(),w=record(),p=data().phases[state.phase];if(!s||!p)return '<p>Laboratório em preparação.</p>';
   const filled=w.responses.filter(x=>String(x||'').trim()).length,checks=data().rubric.filter(q=>w.checks.includes(q[0])).length;
+  const direction=(data().sceneDirections||{})[s.id]?.[state.phase];
+  const transition=(data().transitions||[])[state.phase]||'';
   const narrative=spoken();
   const mins=narrative?Math.max(1,Math.ceil(wordCount(narrative)/130)):0;
   return '<section class="nar-root"><header class="nar-hero"><div><span class="trade-kicker">LABORATÓRIO DE NARRATIVA / DESCRIÇÃO AUTORAL</span><h2>Uma coisa. Cinco olhares. Uma história bem contada.</h2>'+
@@ -71,6 +73,12 @@ window.StoryLabNarrative=(()=>{
   '<p class="nar-focus">'+esc(p.focus)+'</p>'+
   '<div class="nar-instruction"><small><span aria-hidden="true">◉</span> DIREÇÃO DE CÂMERA</small><p>'+esc(p.camera)+'</p></div>'+
   '<div class="nar-instruction nar-instruction-alt"><small>PERGUNTA ESPECÍFICA DA CENA</small><p>'+esc(s.questions[state.phase])+'</p></div>'+
+  (direction?'<details class="nar-coach" open><summary><span class="nar-coach-marker" aria-hidden="true">↳</span><span><small>DIREÇÃO CONTEXTUAL · '+esc(s.name.toUpperCase())+'</small><strong>'+esc(direction[0])+'</strong></span></summary>'+
+  '<div class="nar-coach-body"><div class="nar-coach-block"><small>VOCABULÁRIO EM RELAÇÃO / COLIGAÇÕES</small><p>'+direction[1].map(esc).join(' <span aria-hidden="true">·</span> ')+'</p></div>'+
+  '<div class="nar-coach-block nar-coach-highlight"><small>ESTRUTURA PARA OBSERVAR E COMPLETAR</small><p>'+esc(direction[2])+'</p></div>'+
+  '<div class="nar-coach-block"><small>TRANSIÇÃO NARRATIVA PARA O PRÓXIMO PLANO</small><p>'+esc(transition)+'</p></div>'+
+  '<div class="nar-coach-limit"><strong>LIMITE DA EVIDÊNCIA</strong><p>'+esc(direction[3])+'</p></div>'+
+  button('copy-direction','Copiar estrutura e direção')+'</div></details>':'')+
   '<div class="nar-guide-actions">'+button('example',state.showExample?'Ocultar estrutura-guia':'Ver uma estrutura de frase')+button('lang',state.showLanguages?'Ocultar idiomas de apoio':'Estudar PT · EN · 中文')+'</div>'+
   (state.showExample?example():'')+(state.showLanguages?bridge():'')+
   '<label class="nar-text-label">SUA NARRAÇÃO EM PORTUGUÊS<textarea data-nar-response data-model="narrativePhase'+state.phase+'" rows="5" maxlength="600" placeholder="Escreva apenas o que você pode observar, atribuir ou comprovar neste plano…">'+esc(w.responses[state.phase]||'')+'</textarea></label>'+
@@ -93,6 +101,7 @@ window.StoryLabNarrative=(()=>{
    if(a==='scene'&&data().scenes.some(s=>s.id===id)){state.scene=id;state.phase=0;state.showExample=false;api.render();return}
    if(a==='phase'){const n=Number(id);if(Number.isInteger(n)&&n>=0&&n<5){state.phase=n;state.showExample=false;api.render()}return}
    if(a==='prev'||a==='next'){state.phase=(state.phase+(a==='prev'?4:1))%5;state.showExample=false;api.render();return}
+   if(a==='copy-direction'){const d=(data().sceneDirections||{})[scene()?.id]?.[state.phase];if(d)api.copy(['DIREÇÃO: '+d[0],'COLIGAÇÕES: '+d[1].join(' · '),'ESTRUTURA: '+d[2],'TRANSIÇÃO: '+((data().transitions||[])[state.phase]||''),'LIMITE: '+d[3]].join('\n'));return}
    if(a==='example'){state.showExample=!state.showExample;api.render();return}
     if(a==='lang'){state.showLanguages=!state.showLanguages;api.render();return}
     if(a==='speak-bridge'||a==='copy-bridge'){
