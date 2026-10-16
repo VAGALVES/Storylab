@@ -18,7 +18,7 @@ window.StoryLabScaleDiagrams=(()=>{
     '<path d="M'+(x+48)+' '+(90-weight)+' L'+(x+56)+' '+(79-weight)+' L'+(x+64)+' '+(90-weight)+'" fill="none" stroke="'+c.hi+'" stroke-width="3"/>';
   }
   if(id==='firmeza'){
-   const indent=n*5;
+   const indent=(6-n)*5;
    return '<path d="M'+(x+15)+' 116 Q'+(x+27)+' 105 '+(x+39)+' 116 Q'+(x+56)+' '+(116+indent)+' '+(x+73)+' 116 Q'+(x+86)+' 105 '+(x+99)+' 116 V145 H'+(x+15)+' Z" fill="'+c.surface+'" stroke="'+c.line+'" stroke-width="2"/>'+
     '<path d="M'+(x+56)+' 59 V96" stroke="'+c.hi+'" stroke-width="4"/>'+
     '<path d="M'+(x+45)+' 86 L'+(x+56)+' 101 L'+(x+67)+' 86" fill="none" stroke="'+c.hi+'" stroke-width="3"/>';
