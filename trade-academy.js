@@ -10,6 +10,35 @@ const saved=()=>api?.getStore?.()||{};
 const completed=()=>Array.isArray(saved().tradeAcademyDone)?saved().tradeAcademyDone:[];
 const answers=()=>saved().tradeAcademyAnswers||{};
 const answerFor=id=>answers()[id];
+const MODELS={
+ 'produto-valor':[['Necessidade','Problema e contexto de uso'],['Atributo','Característica observável ou mensurável'],['Benefício','Efeito avaliado com critérios']],
+ 'arquitetura-sistemas':[['Componentes','Partes e requisitos próprios'],['Interfaces','Trocas e dependências entre partes'],['Sistema','Validação da integração']],
+ 'materiais-processos':[['Composição','Material especificado'],['Processamento','Transformações e acabamento'],['Propriedade','Desempenho no ambiente de uso']],
+ 'producao-capacidade':[['Recursos','Equipamentos, pessoas e insumos'],['Gargalo','Restrição que limita o fluxo'],['Saída real','Produção efetiva por período']],
+ 'qualidade-metrologia':[['Requisito','Grandeza, tolerância e norma'],['Medição','Método, instrumento e amostragem'],['Conclusão','Aceitação dentro do escopo']],
+ 'inovacao-maturidade':[['Hipótese','Objetivo e critério de sucesso'],['Protótipo','Teste em ambiente especificado'],['Campo','Validação sob uso representativo']],
+ 'cadeia-custos':[['Aquisição','Preço e condições de compra'],['Operação','Energia, manutenção e risco'],['Decisão','Custo total comparável']],
+ 'energia-ciclo':[['Função','Unidade funcional equivalente'],['Fronteira','Etapas e dados incluídos'],['Resultado','Impactos e limites declarados']],
+ 'conformidade-etica':[['Mercado','Destino e aplicação previstos'],['Escopo','Exigência e produto abrangido'],['Verificação','Documentação confirmada']]
+};
+const SECTOR_MAPS={
+ automotivo:['Armazenamento','Controle eletrônico','Tração','Uso seguro'],
+ renovaveis:['Recurso natural','Conversão','Proteção','Entrega elétrica'],
+ baterias:['Células','Monitoramento','Módulo','Uso / fim de vida'],
+ eletronicos:['Alimentação','Processamento','Firmware','Interface'],
+ portateis:['Energia','Sensores','Operação','Autonomia'],
+ automacao:['Sensoriamento','Controle','Atuação','Processo'],
+ vestuario:['Fibras','Tecido','Modelagem','Peça final'],
+ 'materiais-avancados':['Matéria-prima','Processo','Geometria','Ensaios'],
+ iot:['Sensor','Conectividade','Plataforma','Resposta']
+};
+function diagram(nodes,caption,type){
+ return '<figure class="trade-concept-map" aria-label="'+esc(caption)+'"><figcaption><span class="trade-kicker">ESQUEMA CONCEITUAL / '+esc(type)+'</span><p>'+esc(caption)+'</p></figcaption>'+
+ '<div class="trade-concept-flow">'+nodes.map((n,i)=>
+ '<div class="trade-concept-step"><span>0'+(i+1)+'</span><strong>'+esc(n[0])+'</strong>'+
+ (n[1]?'<small>'+esc(n[1])+'</small>':'')+'</div>').join('')+'</div>'+
+ '<p class="trade-concept-note">Modelo didático simplificado: não representa uma arquitetura industrial universal nem substitui evidências específicas.</p></figure>';
+}
 function button(action,label,id='',klass=''){
  return '<button type="button" class="trade-academy-button '+klass+'" data-trade-academy="'+action+'" data-id="'+esc(id)+'">'+label+'</button>';
 }
@@ -25,7 +54,7 @@ function lesson(){
  '<div class="trade-learning-stats"><strong>'+completed().filter(id=>chapters.some(c=>c.id===id)).length+' / '+chapters.length+'</strong><span>capítulos estudados</span></div></div>'+
  '<div class="trade-learning-layout"><nav class="trade-learning-syllabus" aria-label="Capítulos da academia">'+chapters.map((c,i)=>button('chapter','<small>'+String(i+1).padStart(2,'0')+' · '+esc(c.area)+'</small><strong>'+esc(c.title)+'</strong><span>'+(completed().includes(c.id)?'✓ Estudado':'Explorar →')+'</span>',c.id,('trade-learning-chapter'+(ch.id===c.id?' is-active':'')))).join('')+'</nav>'+
  '<article class="trade-learning-article"><div class="trade-learning-heading"><span class="trade-kicker">DOSSIÊ ACADÊMICO '+String(index+1).padStart(2,'0')+' / '+chapters.length+' · '+esc(ch.area)+'</span><h3>'+esc(ch.title)+'</h3><p>'+esc(ch.subtitle)+'</p></div>'+
- '<div class="trade-learning-sections">'+ch.sections.map((s,i)=>'<section class="trade-learning-section"><span class="trade-learning-number">'+String(i+1).padStart(2,'0')+'</span><div><h4>'+esc(s[0])+'</h4><p>'+esc(s[1])+'</p><div class="trade-learning-example"><small>EXEMPLO TÉCNICO</small><p>'+esc(s[2])+'</p></div></div></section>').join('')+'</div>'+
+ '<div class="trade-learning-map">'+diagram(MODELS[ch.id]||[], 'Relações conceituais deste capítulo',ch.area)+'</div>''<div class="trade-learning-sections">'+ch.sections.map((s,i)=>'<section class="trade-learning-section"><span class="trade-learning-number">'+String(i+1).padStart(2,'0')+'</span><div><h4>'+esc(s[0])+'</h4><p>'+esc(s[1])+'</p><div class="trade-learning-example"><small>EXEMPLO TÉCNICO</small><p>'+esc(s[2])+'</p></div></div></section>').join('')+'</div>'+
  '<section class="trade-learning-vocabulary"><span class="trade-kicker">VOCABULÁRIO FUNDAMENTAL · PT / EN</span><div>'+ch.terms.map(t=>'<div><strong>'+esc(t[0])+'</strong><small lang="en">'+esc(t[1])+'</small></div>').join('')+'</div></section>'+
  '<section class="trade-learning-case"><div><span class="trade-kicker">ESTUDO DE CASO / LEITURA CRÍTICA</span><h4>Da afirmação à evidência</h4></div>'+
  [['SITUAÇÃO',ch.caseStudy[0]],['ALEGAÇÃO',ch.caseStudy[1]],['O QUE NÃO SE SABE',ch.caseStudy[2]],['CONDUTA TÉCNICA',ch.caseStudy[3]]].map((part,i)=>'<div class="trade-learning-case-row '+(i===3?'is-conclusion':'')+'"><span>'+part[0]+'</span><p>'+esc(part[1])+'</p></div>').join('')+'</section>'+
@@ -44,6 +73,7 @@ function radar(){
  '<div class="trade-learning-stats"><strong>'+sectors.length+'</strong><span>especializações</span></div></div>'+
  '<div class="trade-radar-grid"><nav class="trade-radar-sectors" aria-label="Escolher especialização">'+sectors.map(s=>button('sector','<span>'+esc(s.tag)+'</span><strong>'+esc(s.name)+'</strong><small>'+esc(s.summary)+'</small>',s.id,'trade-radar-sector'+(sector.id===s.id?' is-active':''))).join('')+'</nav>'+
  '<article class="trade-radar-detail"><div class="trade-radar-heading"><span class="trade-kicker">'+esc(sector.tag.toUpperCase())+' / PERFIL SETORIAL</span><h3>'+esc(sector.name)+'</h3><p>'+esc(sector.summary)+'</p></div>'+
+ diagram((SECTOR_MAPS[sector.id]||[]).map(n=>[n,'']), 'Cadeia funcional exemplificativa para investigar este setor','RADAR SETORIAL')+
  '<div class="trade-radar-lenses"><span class="trade-kicker">CINCO LENTES DE ANÁLISE</span><div>'+sector.lenses.map((l,i)=>'<section><span>'+String(i+1).padStart(2,'0')+'</span><div><h4>'+esc(l[0])+'</h4><p>'+esc(l[1])+'</p></div></section>').join('')+'</div></div>'+
  '<div class="trade-radar-proof"><strong>Que tipo de evidência procurar?</strong><p>'+esc(sector.proof)+'</p></div>'+
  '<section class="trade-learning-language"><span class="trade-kicker">PERGUNTA DA INDÚSTRIA · PT / EN / 中文</span><p>'+esc(sector.question[0])+'</p><p lang="en">'+esc(sector.question[1])+'</p><p lang="zh-CN" class="trade-learning-chinese">'+esc(sector.question[2])+'<small>'+esc(sector.question[3])+'</small></p><div class="trade-learning-actions">'+button('speak-sector','▶ English',sector.id+':en')+button('speak-sector','▶ 中文',sector.id+':zh')+button('copy-sector','Copiar pergunta',sector.id)+'</div></section>'+
