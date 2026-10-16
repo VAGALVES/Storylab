@@ -52,12 +52,16 @@ jobs:
           node --check trade-academy.js
           node --check trade-language-data.js
           node --check trade-tools.js
+          node --check trade-object-data.js
+          node --check trade-object.js
       - name: Testar Atlas de Produtos, Fornecedores e Fraseoteca
         run: node test_trade.mjs
       - name: Testar dossiês locais e perguntas de campo
         run: node test_trade_field.mjs
       - name: Testar academia interindustrial e radar setorial
         run: node test_trade_academy.mjs
+      - name: Testar atlas descritivo universal e laboratorio narrativo
+        run: node test_trade_object.mjs
       - name: Testar linguagem técnica, comparação e visita guiada
         run: node test_trade_tools.mjs
       - name: Testar áudio transversal em três idiomas
@@ -105,7 +109,7 @@ jobs:
       - name: Montar versão offline
         run: |
           python build_standalone.py
-          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 30; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h; assert 'StoryLabLinguistics' in h; assert 'StoryLabEncaixes' in h; assert 'StoryLabAudio' in h; assert 'StoryLabTrade' in h"
+          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 32; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h; assert 'StoryLabLinguistics' in h; assert 'StoryLabEncaixes' in h; assert 'StoryLabAudio' in h; assert 'StoryLabTrade' in h"
           # O HTML único é reconstruído no deploy do Netlify. O arquivo do repositório
           # é uma cópia histórica; não exigimos igualdade de bytes até sincronizá-lo.
           python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert 'Encaixes' in h and 'STORYLAB_ENCAIXES' in h"

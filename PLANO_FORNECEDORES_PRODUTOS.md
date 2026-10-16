@@ -1,4 +1,33 @@
-# StoryLab — Repertório de Fornecedores e Produtos
+# StoryLab — Atlas Universal do Objeto, Fornecedores e Narrativa
+
+**Correção conceitual v2.19 (outubro/2026):** o objetivo do projeto não é acumular glossários industriais. É a **precisão da palavra na descrição do objeto e do seu produtor**, do mesmo modo que o Atlas urbano descreve fachadas, paisagens, materiais, movimentos e escala. Um smartphone, carro, cadeira, câmera ou jaqueta compartilham dimensões sensoriais e físicas; a indústria é uma lente complementar.
+
+**Princípio do desenho pedagógico:** **observar → distinguir → qualificar → contextualizar → narrar**. Características observadas e sensações não são equivalentes a propriedades medidas ou declaradas; nenhuma qualidade ou segurança é inferida só pela aparência.
+
+**Arquitetura prioritária:** Atlas Universal do Objeto → Estúdio de Descrição → Atlas Técnico do Produto / Atlas do Fornecedor → Academia Técnica e Radar Setorial. A linguagem original de fábrica permanece acessível, mas deixa de ser a porta de entrada.
+
+## Entrega v2.19 — precisão descritiva universal
+
+### Atlas da Coisa, sem privilegiar vestuário
+
+- **96 descritores editoriais** em **12 dimensões**: escala e medidas; massa e distribuição; geometria; materiais e constituição; superfície e textura; toque/rigidez/elasticidade; construção e acabamento; ergonomia; movimento e funcionamento; linguagem visual; utilidade e experiência; marca/empresa/fabricação.
+- Em cada cartão: definição específica; exemplo observacional aplicável a objetos distintos; **pergunta de precisão** que explicita medição, contexto ou evidência; PT, EN, mandarim e pinyin; cópia e TTS.
+- **14 contrastes semânticos**, entre eles macio × maciço, pesado × denso, rígido × duro, flexível × elástico, fosco × áspero, compacto × pequeno, portátil × leve e ergonômico × confortável. Algumas palavras dos contrastes são debatidas pela distinção, sem constituir verbete adicional no corpus.
+- Busca por vocabulário e significados, seleção por dimensão e adição de até oito descritores ao estúdio de apresentação.
+
+### Estúdio de Descrição, para vlog, produto e empresa
+
+- Um roteiro de **cinco planos audiovisuais**: contexto, forma/escala, matéria/acabamento, demonstração/uso, conclusão contextualizada.
+- Lentes de narração: vlog exploratório, review crítico, apresentação comercial, análise técnica e retrato de marca/fornecedor.
+- Campos para identificação, natureza do objeto, contexto, material aparente/declarado e observação autoral.
+- **Seis grandezas dimensionais** opcionais com unidade explícita: altura, largura, comprimento, profundidade, espessura e massa (mm/cm/m e g/kg conforme aplicável). O estúdio rejeita valores negativos, zero e formatação inválida; não os inventa nem os converte sem método.
+- Atribuição textual dos dados: impressão, observação/manuseio, declaração de terceiro ou medições registradas. Não cria métricas, classificações ou selos falsos.
+- Roteiro copiável com instruções de enquadramento e sugestões de fala; os equivalentes trilíngues permanecem acessíveis nos cartões do Atlas. O roteiro completo é redigido em português, e **não se afirma tradução automática integral** para inglês e mandarim.
+- Rascunho preservado localmente, inclusive nos backups importados; validação de atributos e campos ao carregar.
+
+**Fronteira da entrega:** esta é a camada central da linguagem descritiva, ainda não uma ontologia exaustiva de todo tipo de produto. Em ciclos futuros, aprofundar descritores relacionais (sobrepor, circundar, encostar), escala perceptiva, composição cromática, sons, cheiros, interação dinâmica, roteiros narrados trilíngues revisados e registros de áudio/imagem autorizados.
+
+
 
 **Origem:** conversa de concepção dentro do projeto StoryLab, outubro de 2026.  
 **Primeira entrega navegável:** v2.15, commit `6d08bec`, PR #18.
