@@ -68,9 +68,24 @@ Todas as entradas do Atlas apresentam **português, inglês, mandarim, pinyin e 
 5. Tratar o mandarim como comunicação em contexto profissional: pinyin é apoio, não substituto do caráter chinês.
 6. Não confundir o repertório didático com um sistema de cadastro de empresas, PLM ou certificação de fornecedores.
 
+## Evolução v2.16 — Dossiê de Campo
+
+Implementada uma quarta aba: **Dossiês de campo**, com até 20 registros pessoais no armazenamento local, vinculados a uma das duas taxonomias de oito dimensões já publicadas.
+
+- Registro de **produto** ou **fornecedor/visita**, com identificação opcional, data e próximos passos.
+- Oito dimensões navegáveis por dossiê; cada dimensão tem sua própria anotação, **origem da informação** e referência à evidência.
+- Origem classificada entre: *não apurado*, *observação direta*, *declaração do fornecedor*, *documento apresentado (não validado)* ou *medição registrada*. **Nenhuma dessas classificações equivale a certificação automática.**
+- 16 perguntas técnicas exemplares, uma por dimensão, em português, inglês, mandarim simplificado e pinyin, com reprodução por síntese de voz em inglês/mandarim.
+- Cópia de relatório integral em texto simples, sem fabricar métricas, conclusões ou avaliações; a versão local também participa da exportação/importação do backup de progresso do aplicativo.
+- Salvamento automático de edição textual sem desmontar o campo digitado; exclusão sujeita à confirmação.
+- Limites e validação no carregamento: no máximo 20 dossiês; textos e referências limitados; nenhum dado enviado a serviços externos.
+- Componentes testados por \`test_trade_field.mjs\`, integrados ao PWA e HTML offline.
+
+**Escopo editorial:** as 16 perguntas são modelos de linguagem de campo, não alegações sobre fábricas reais nem substitutas de investigação técnica. Revisão por tradutores especializados continua recomendável antes de uso contratual.
+
 ## Próximas rodadas — propostas, não entregas
 
-- **Dossiê de produto por dimensões:** texto autoral, dados observados, lacunas e evidências, com fotos quando autorizadas.
+- **Dossiê com anexos autorizados:** imagens/relatórios e seu vínculo verificável com a observação; a versão 2.16 registra textos e referências, mas não armazena fotografias.
 - **Roteiro de visita técnica:** perguntas sequenciadas por função e tipo de fornecedor, resumo pós-visita.
 - **Comparação orientada:** dois produtos e dois fornecedores sem fabricar métricas.
 - **Gramática e regência técnica:** perguntar sobre, depender de, adequar-se a, diferenciar-se de, comply with, specialize in, be made of/from etc., com negação e hipóteses.
