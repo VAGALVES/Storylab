@@ -41,7 +41,8 @@ for index, (field, known, record) in enumerate(zip(atlas, syllabus, audit["field
         assert isinstance(caution, str) and caution.strip() == caution, label
         assert 95 <= len(caution) <= 430, ("Alerta muito curto ou longo", label, len(caution))
         assert re.search(r"[.!?]$", caution), ("Alerta sem pontuação final", label)
-        assert not re.search(r"\b(TODO|FIXME|Lorem ipsum|preencher depois)\b", caution, re.I), label
+        assert not re.search(r"\b(TODO|FIXME)\b", caution), label
+        assert not re.search(r"\b(lorem ipsum|preencher depois)\b", caution, re.I), label
         assert len(definition) >= 25 and len(example) >= 25, label
         assert scene.count("_____") == 1, label
         assert 4 <= len(collocations) <= 6, label
