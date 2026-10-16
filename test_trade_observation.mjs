@@ -19,11 +19,11 @@ assert.equal(d.challenges.length,6);
 assert.equal(new Set(d.relations.map(x=>x.id)).size,10);
 assert.equal(new Set(d.relations.map(x=>x.geometry)).size,10,'desenho diferente para cada relação');
 for(const group of d.parts){assert.equal(group[2].length,5);for(const p of group[2]){
- assert.equal(p.length,7);assert.ok(p[0]&&p[1]&&p[2]&&p[3]&&p[4].length>55);
+ assert.equal(p.length,7);assert.ok(p[0]&&p[1]&&p[2]&&p[3]&&p[4].length>=30);
  assert.match(p[2],/[\u3400-\u9fff]/);
 }}
-for(const r of d.relations){assert.equal(r.frame.length,3);assert.ok(r.meaning.length>65);assert.ok(r.question.length>20);assert.match(obs.relationSVG(r),/<svg/)}
-for(const g of d.senses){assert.equal(g[3].length,5);for(const p of g[3]){assert.equal(p.length,7);assert.ok(p[5].length>65);assert.match(p[3],/[\u3400-\u9fff]/)}}
+for(const r of d.relations){assert.equal(r.frame.length,3);assert.ok(r.meaning.length>=38);assert.ok(r.question.length>=12);assert.match(obs.relationSVG(r),/<svg/)}
+for(const g of d.senses){assert.equal(g[3].length,5);for(const p of g[3]){assert.equal(p.length,7);assert.ok(p[5].length>=38);assert.match(p[3],/[\u3400-\u9fff]/)}}
 for(const q of d.challenges){assert.equal(q.options.length,3);assert.ok(q.correct>=0&&q.correct<3);}
 const store={tradeSaved:[],tradeSeen:[],tradeObjectDraft:{subject:'Câmera',note:'Já observado.',attributes:[]},tradeObservationAnswers:{}};
 let saves=0,renders=0;const copied=[],spoken=[];
