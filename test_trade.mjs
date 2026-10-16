@@ -48,7 +48,7 @@ assert.match(html,/O ATLAS DO OBJETO/);
 hub.openTab('produto');
 html=hub.render();
 assert.match(html,/categoria de produto/);
-assert.match(html,/role="group"/);
+assert.match(html,/trade-controls/);
 assert.equal(hub.filteredTerms().length,48);
 click('tab','','fornecedor');
 html=hub.render();
