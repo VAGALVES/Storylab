@@ -8,8 +8,8 @@ root = Path(__file__).resolve().parent
 index = (root / 'index.html').read_text(encoding='utf-8')
 assert 'atlas-recorder.js' in index and 'atlas-audio-ui.js' in index
 assert 'linguistics-data.js' in index and 'linguistics-lab.js' in index
-assert all(name in index for name in ('trade-data.js','trade-academy-data.js','trade-academy.js','trade-object-data.js','trade-object.js','trade-observation-data.js','trade-observation.js','trade-precision-data.js','trade-precision.js','trade-language-data.js','trade-tools.js','trade-field.js','trade-hub.js'))
-assert index.index('trade-data.js') < index.index('trade-academy-data.js') < index.index('trade-academy.js') < index.index('trade-object-data.js') < index.index('trade-object.js') < index.index('trade-observation-data.js') < index.index('trade-observation.js') < index.index('trade-precision-data.js') < index.index('trade-precision.js') < index.index('trade-language-data.js') < index.index('trade-tools.js') < index.index('trade-field.js') < index.index('trade-hub.js') < index.index('app.js')
+assert all(name in index for name in ('trade-data.js','trade-academy-data.js','trade-academy.js','trade-object-data.js','trade-object.js','trade-observation-data.js','trade-observation.js','trade-narrative-data.js','trade-narrative.js','trade-scale-diagrams.js','trade-precision-data.js','trade-precision.js','trade-language-data.js','trade-tools.js','trade-field.js','trade-hub.js'))
+assert index.index('trade-data.js') < index.index('trade-academy-data.js') < index.index('trade-academy.js') < index.index('trade-object-data.js') < index.index('trade-object.js') < index.index('trade-observation-data.js') < index.index('trade-observation.js') < index.index('trade-narrative-data.js') < index.index('trade-narrative.js') < index.index('trade-scale-diagrams.js') < index.index('trade-precision-data.js') < index.index('trade-precision.js') < index.index('trade-language-data.js') < index.index('trade-tools.js') < index.index('trade-field.js') < index.index('trade-hub.js') < index.index('app.js')
 assert 'audio-speech.js' in index and index.index('audio-speech.js') < index.index('app.js')
 assert 'encaixes-data.js' in index and 'encaixes-engine.js' in index
 assert index.index('encaixes-data.js') < index.index('encaixes-engine.js') < index.index('app.js')
@@ -43,7 +43,7 @@ worker = (root / 'service-worker.js').read_text(encoding='utf-8')
 assert 'storylab-static-' in worker and '__HASH__' not in worker
 assert "request.mode === 'navigate'" in worker
 assert "caches.match(OFFLINE_PAGE)" in worker
-for name in ('app.js','style.css','data.js','atlas-engine.js','atlas-recorder.js','atlas-audio-ui.js','interact.js','illustrations.js','linguistics-data.js','linguistics-lab.js','encaixes-data.js','encaixes-engine.js','trade-data.js','trade-academy-data.js','trade-academy.js','trade-object-data.js','trade-object.js','trade-observation-data.js','trade-observation.js','trade-precision-data.js','trade-precision.js','trade-language-data.js','trade-tools.js','trade-field.js','trade-hub.js','audio-speech.js'):
+for name in ('app.js','style.css','data.js','atlas-engine.js','atlas-recorder.js','atlas-audio-ui.js','interact.js','illustrations.js','linguistics-data.js','linguistics-lab.js','encaixes-data.js','encaixes-engine.js','trade-data.js','trade-academy-data.js','trade-academy.js','trade-object-data.js','trade-object.js','trade-observation-data.js','trade-observation.js','trade-narrative-data.js','trade-narrative.js','trade-scale-diagrams.js','trade-precision-data.js','trade-precision.js','trade-language-data.js','trade-tools.js','trade-field.js','trade-hub.js','audio-speech.js'):
     assert "'./" + name + "'" in worker
 
 readme = (root / 'README.md').read_text(encoding='utf-8')
