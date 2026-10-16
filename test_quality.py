@@ -8,8 +8,8 @@ root = Path(__file__).resolve().parent
 index = (root / 'index.html').read_text(encoding='utf-8')
 assert 'atlas-recorder.js' in index and 'atlas-audio-ui.js' in index
 assert 'linguistics-data.js' in index and 'linguistics-lab.js' in index
-assert 'trade-data.js' in index and 'trade-hub.js' in index
-assert index.index('trade-data.js') < index.index('trade-hub.js') < index.index('app.js')
+assert 'trade-data.js' in index and 'trade-field.js' in index and 'trade-hub.js' in index
+assert index.index('trade-data.js') < index.index('trade-field.js') < index.index('trade-hub.js') < index.index('app.js')
 assert 'audio-speech.js' in index and index.index('audio-speech.js') < index.index('app.js')
 assert 'encaixes-data.js' in index and 'encaixes-engine.js' in index
 assert index.index('encaixes-data.js') < index.index('encaixes-engine.js') < index.index('app.js')
@@ -43,7 +43,7 @@ worker = (root / 'service-worker.js').read_text(encoding='utf-8')
 assert 'storylab-static-' in worker and '__HASH__' not in worker
 assert "request.mode === 'navigate'" in worker
 assert "caches.match(OFFLINE_PAGE)" in worker
-for name in ('app.js','style.css','data.js','atlas-engine.js','atlas-recorder.js','atlas-audio-ui.js','interact.js','illustrations.js','linguistics-data.js','linguistics-lab.js','encaixes-data.js','encaixes-engine.js','trade-data.js','trade-hub.js','audio-speech.js'):
+for name in ('app.js','style.css','data.js','atlas-engine.js','atlas-recorder.js','atlas-audio-ui.js','interact.js','illustrations.js','linguistics-data.js','linguistics-lab.js','encaixes-data.js','encaixes-engine.js','trade-data.js','trade-field.js','trade-hub.js','audio-speech.js'):
     assert "'./" + name + "'" in worker
 
 readme = (root / 'README.md').read_text(encoding='utf-8')
