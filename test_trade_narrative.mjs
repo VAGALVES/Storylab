@@ -1,4 +1,4 @@
-/* StoryLab v2.23 · Ensaio da narração autoral e escalas visuais. */
+/* StoryLab v2.24 · Ensaio da narração autoral e escalas visuais. */
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {readFileSync} from 'node:fs';
@@ -21,6 +21,17 @@ for(const b of D.languageBridges){
  assert.match(b.zh,/[一-鿿]/u);
 }
 
+assert.equal(Object.keys(D.sceneDirections).length,8);
+assert.equal(D.transitions.length,5);
+for(const sc of D.scenes){
+ const directions=D.sceneDirections[sc.id];assert.ok(Array.isArray(directions)&&directions.length===5,sc.id);
+ for(const [i,guide] of directions.entries()){
+  assert.equal(guide.length,4,sc.id+':'+i);
+  assert.equal(guide[1].length,3,sc.id+': repertório');
+  for(const j of [0,2,3])assert.ok(typeof guide[j]==='string'&&guide[j].length>=30,sc.id+':'+i+':'+j);
+  assert.match(guide[2],/\[[^\]]+\]/,sc.id+': exige observação');
+ }
+}
 assert.equal(D.rubric.length,5);
 assert.equal(D.sources.length,4);
 assert.equal(new Set(D.scenes.map(s=>s.id)).size,8);
@@ -71,6 +82,12 @@ assert.equal(H.openTab('pratica'),true);
 let html=H.render();
 assert.match(html,/Uma coisa\. Cinco olhares/);
 assert.match(html,/Motocicleta/);
+assert.match(html,/DIREÇÃO CONTEXTUAL/);
+assert.match(html,/silhueta da carenagem/);
+assert.match(html,/não demonstra potência/);
+click('copy-direction');assert.match(copied.at(-1),/ESTRUTURA:/);
+click('scene','showroom');assert.match(H.render(),/Showroom|portfólio/i);
+click('scene','moto');
 click('lang');
 let bridgeHtml=H.render();
 assert.match(bridgeHtml,/PONTE DE EXPRESSÃO/);
@@ -138,4 +155,4 @@ assert.ok(idx.indexOf('trade-scale-diagrams.js')<idx.indexOf('trade-precision.js
 assert.match(standalone,/trade_narrative_data=/);
 assert.match(prec,/'trade-narrative-data.js', 'trade-narrative.js', 'trade-scale-diagrams.js'/);
 assert.match(ci,/node test_trade_narrative.mjs/);
-console.log('StoryLab v2.22: 8 cenas, 5 planos, rubrica, persistência, privacidade, teleprompter e 7 escalas ilustradas — OK');
+console.log('StoryLab v2.24: 8 cenas, 5 planos, rubrica, persistência, privacidade, teleprompter e 7 escalas ilustradas — OK');
