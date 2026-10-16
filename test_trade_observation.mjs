@@ -46,7 +46,7 @@ html=hub.render();
 assert.match(html,/dobradiça/);
 click('copy-part');assert.match(copied.at(-1),/hinge/);
 click('speak-part','zh');assert.equal(spoken.at(-1)[1],'zh-CN');
-click('relation','flank');
+click('relation','ladeia');
 html=hub.render();assert.match(html,/ladeiam/);
 assert.match(html,/Ladeia/i);
 assert.notEqual(obs.relationSVG(d.relations[0]),obs.relationSVG(d.relations[1]));
