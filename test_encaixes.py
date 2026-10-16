@@ -25,7 +25,8 @@ for phrase_id, options in pairs.items():
             return (' ' if prior.isalnum() and value[0].isalnum() else '')+value
         sample=re.sub(r'\.{3}|…',insert,base)
         assert '...' not in sample and '…' not in sample,phrase_id
-        assert not re.search(r'\b(a|de|com|por|sobre|que|entre)(um|uma|o|os|as|a|como)\b',sample,re.I),phrase_id
+        # Não confundir palavras legítimas como 'como' ou 'ao' com lacunas coladas.
+        assert not re.search(r'\.{3}|…|_____', sample), phrase_id
     assert options[0]['slots'] != options[1]['slots'],phrase_id
 assert sum(bool(re.search(r'\.{3}|…',p['pt'])) for p in phrases)==len(pairs)
 subprocess.run([sys.executable,str(root/'generate_encaixes.py'),'--check'],check=True)
