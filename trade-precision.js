@@ -14,7 +14,7 @@ function verbs(){
  return '<section class="precision-root">'+heading('VERBOS · AÇÃO E RELAÇÃO','O objeto ganha vida com os verbos.','Antes de traduzir, domine a ação, o referente, a preposição e o complemento em português. É isso que permite narrar composição, forma, movimento, funcionamento e avaliação.')+
  '<div class="precision-filters" role="group" aria-label="Famílias verbais">'+data().verbs.map(x=>button('family',esc(x[1]),x[0],x[0]===g[0]?'selected':'')).join('')+'</div>'+
  '<div class="precision-layout"><nav class="precision-wordlist" aria-label="Verbos desta família">'+g[2].map((x,i)=>button('verb','<small>VERBO '+(i+1)+'</small><strong>'+esc(x[0])+'</strong><span>'+esc(x[1])+'</span>',String(i),'precision-word'+(i===state.verb?' selected':''))).join('')+'</nav>'+
- '<article class="precision-detail"><span class="trade-kicker">PORTUGUÊS / '+esc(g[1])+'</span><h3>'+esc(v[0])+'</h3><p>'+esc(v[8])+'</p>'+
+ '<article class="precision-detail"><span class="trade-kicker">REGÊNCIA EM PORTUGUÊS / '+esc(g[1])+'</span><h3>'+esc(v[0])+'</h3><p>'+esc(v[8])+'</p>'+
  '<div class="precision-quote"><small>EM CONTEXTO</small><p>'+esc(v[4])+'</p></div>'+
  '<div class="precision-parts" role="group" aria-label="Sintaxe em português">'+[v[5],v[6],v[7]].map((x,i)=>'<div><small>'+['REFERENTE','VERBO E REGÊNCIA','COMPLEMENTO'][i]+'</small><strong>'+esc(x)+'</strong></div>').join('<span aria-hidden="true" class="precision-part-arrow">→</span>')+'</div>'+
  '<div class="precision-rule"><small>REGRA DE CONSTRUÇÃO</small><p>'+esc(v[9])+'</p></div>'+
