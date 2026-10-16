@@ -1,4 +1,4 @@
-/* StoryLab Shanghai · Dossiês de Campo v2.16
+/* StoryLab Shanghai · Dossiês de Campo v2.17
    Diário profissional local: fatos observados, alegações e evidências permanecem distintos.
    Nenhuma informação é enviada a servidores. */
 window.StoryLabTradeField=(()=>{
@@ -33,6 +33,8 @@ const PROMPTS={
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const groups=kind=>(window.STORYLAB_TRADE_DATA?.groups||[]).filter(g=>g[0]===kind);
 const notes=()=>Array.isArray(api?.getStore()?.tradeFieldNotes)?api.getStore().tradeFieldNotes:[];
+const sectors=()=>window.STORYLAB_TRADE_ACADEMY?.sectors||[];
+const sectorFor=n=>sectors().find(s=>s.id===n?.sector)||null;
 const current=()=>notes().find(n=>n.id===state.id)||notes()[0]||null;
 const groupText=(note,g)=>note.entries?.[g]?.text||'';
 function copyText(note){
@@ -41,6 +43,7 @@ function copyText(note){
   (note.kind==='produto'?'Produto':'Fornecedor')+': '+(note.title||'Sem título'),
   'Empresa / contato: '+(note.partner||'Não informado'),
   'Data: '+(note.date||'Não informada'),
+  'Setor: '+(sectorFor(note)?.name||'Geral / multissetorial'),
   'Estado das informações: registros pessoais, sem certificação de evidências',''
  ];
  for(const g of groups(note.kind)){
@@ -52,12 +55,13 @@ function copyText(note){
  lines.push('Próximos passos: '+(note.followUp||'Não definidos'));
  return lines.join('\n');
 }
-function create(kind){
- if(!['produto','fornecedor'].includes(kind)||notes().length>=20)return;
+function create(kind,sector='geral'){
+ if(!['produto','fornecedor'].includes(kind)||notes().length>=20)return false;
+ if(sector!=='geral'&&!sectors().some(s=>s.id===sector))return false;
  const now=new Date(),date=[now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0')].join('-');
- const entry={id:'f-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,7),kind,title:'',partner:'',date,entries:{},followUp:''};
+ const entry={id:'f-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,7),kind,sector,title:'',partner:'',date,entries:{},followUp:''};
  const s=api.getStore();s.tradeFieldNotes=Array.isArray(s.tradeFieldNotes)?s.tradeFieldNotes:[];
- s.tradeFieldNotes.unshift(entry);state.id=entry.id;state.group=groups(kind)[0][1];api.save();api.render();
+ s.tradeFieldNotes.unshift(entry);state.id=entry.id;state.group=groups(kind)[0][1];api.save();api.render();return true;
 }
 function button(a,label,id='',extra=''){
  return '<button type="button" class="trade-action '+extra+'" data-trade-field="'+a+'" data-id="'+esc(id)+'">'+label+'</button>';
@@ -79,14 +83,15 @@ function render(){
  const group=sections.find(g=>g[1]===state.group)||sections[0];
  const i=sections.findIndex(g=>g[1]===group[1]);
  const filled=sections.filter(g=>groupText(note,g[1]).trim()).length;
- const entry=note.entries?.[group[1]]||{},prompt=PROMPTS[group[1]];
+ const entry=note.entries?.[group[1]]||{},prompt=PROMPTS[group[1]],sector=sectorFor(note);
  html+='<article class="trade-field-editor"><div class="trade-field-editor-head"><div><span class="trade-kicker">'+(note.kind==='produto'?'DOSSIÊ DE PRODUTO':'DOSSIÊ DE FORNECEDOR')+'</span><h3>'+(note.title?esc(note.title):'Registro sem título')+'</h3><p>'+filled+' de '+sections.length+' dimensões com anotações · salvo automaticamente</p></div><div class="trade-field-actions">'+button('copy','Copiar relatório',note.id)+button('delete','Excluir dossiê',note.id,'trade-field-danger')+'</div></div>'+
  '<div class="trade-field-meta"><label>PRODUTO / FORNECEDOR / REFERÊNCIA<input data-field-input="title" maxlength="120" placeholder="Ex.: blazer com forro ou fábrica de malharia" value="'+esc(note.title)+'"></label>'+
  '<label>EMPRESA OU CONTATO (OPCIONAL)<input data-field-input="partner" maxlength="120" placeholder="Identificação, sem dados confidenciais" value="'+esc(note.partner)+'"></label>'+
- '<label>DATA DA VISITA<input type="date" data-field-input="date" value="'+esc(note.date)+'"></label></div>'+
+ '<label>DATA DA VISITA<input type="date" data-field-input="date" value="'+esc(note.date)+'"></label>'+'<label>ESPECIALIZAÇÃO INDUSTRIAL<select data-field-sector><option value="geral">Geral / multissetorial</option>'+sectors().map(s=>'<option value="'+esc(s.id)+'"'+(note.sector===s.id?' selected':'')+'>'+esc(s.name)+'</option>').join('')+'</select></label></div>'+
  '<div class="trade-field-dims" role="group" aria-label="Dimensões do dossiê">'+sections.map((g,k)=>button('group',String(k+1).padStart(2,'0')+' · '+esc(g[2])+(groupText(note,g[1]).trim()?' ✓':''),g[1],group[1]===g[1]?'is-active':'')).join('')+'</div>'+
  '<section class="trade-field-dimension" aria-label="Dimensão selecionada"><div class="trade-field-dimension-head"><span class="trade-kicker">DIMENSÃO '+(i+1)+' / '+sections.length+'</span><h4>'+esc(group[2])+'</h4><p>'+esc(group[3])+'</p></div>'+
  '<div class="trade-field-prompt"><span class="trade-kicker">PERGUNTA TÉCNICA PARA A VISITA</span><p>'+esc(prompt[0])+'</p><div lang="en"><strong>EN</strong> '+esc(prompt[1])+'</div><div lang="zh-CN"><strong>中文</strong> '+esc(prompt[2])+'<small>'+esc(prompt[3])+'</small></div><div class="trade-field-prompt-actions">'+button('speak','▶ English',group[1]+':en')+button('speak','▶ 中文',group[1]+':zh')+button('copy-question','Copiar pergunta em 3 idiomas',group[1])+'</div></div>'+
+ (sector?'<div class="trade-field-specialization"><span class="trade-kicker">CRITÉRIO ESPECÍFICO / '+esc(sector.name)+'</span><p>'+esc(sector.proof)+'</p><strong>Pergunta setorial:</strong><p>'+esc(sector.question[0])+'</p><div class="trade-field-prompt-actions">'+button('speak-sector','▶ English',sector.id+':en')+button('speak-sector','▶ 中文',sector.id+':zh')+button('copy-sector','Copiar pergunta setorial',sector.id)+'</div></div>':'')+
  '<div class="trade-field-entry"><label>O QUE FOI OBSERVADO, DITO OU APRESENTADO<textarea rows="6" maxlength="1600" data-field-input="text" placeholder="Descreva precisamente, registre números com unidade e não transforme declarações em fatos verificados.">'+esc(entry.text||'')+'</textarea></label>'+
  '<label>ORIGEM DESTA INFORMAÇÃO<select data-field-basis>'+STATUS.map(s=>'<option value="'+s[0]+'"'+((entry.basis||'pendente')===s[0]?' selected':'')+'>'+esc(s[1])+'</option>').join('')+'</select></label>'+
  '<label>FONTE, AMOSTRA, MEDIÇÃO OU DOCUMENTO ASSOCIADO<input maxlength="240" data-field-input="evidence" placeholder="Ex.: fala do gerente, ficha técnica nº…, relatório de teste…" value="'+esc(entry.evidence||'')+'"></label>'+
@@ -122,6 +127,13 @@ function init(context){
     if(typeof window.confirm==='function'&&!window.confirm('Excluir este dossiê local? A ação não pode ser desfeita sem um backup.'))return;
     s.tradeFieldNotes.splice(index,1);state.id=null;state.group=null;api.save();api.render();return;
   }
+  if(type==='speak-sector'||type==='copy-sector'){
+   const [sector,lang]=id.split(':'),prompt=sectors().find(s=>s.id===sector)?.question;if(!prompt)return;
+   if(type==='speak-sector'&&lang==='en')api.say(prompt[1],'en-US');
+   if(type==='speak-sector'&&lang==='zh')api.say(prompt[2],'zh-CN');
+   if(type==='copy-sector')api.copy(prompt.join('\n'));
+   return;
+  }
   if(type==='speak'||type==='copy-question'){
    const [group,lang]=id.split(':'),prompt=PROMPTS[group];if(!prompt)return;
    if(type==='speak'&&lang==='en')api.say(prompt[1],'en-US');
@@ -131,6 +143,10 @@ function init(context){
  });
  document.addEventListener('input',e=>{if(e.target.matches?.('[data-field-input]'))updateField(e.target)});
  document.addEventListener('change',e=>{
+  if(e.target.matches?.('[data-field-sector]')){
+   const note=current(),id=e.target.value;if(!note||id!=='geral'&&!sectors().some(s=>s.id===id))return;
+   note.sector=id;api.save();api.render();return;
+  }
   if(!e.target.matches?.('[data-field-basis]'))return;
   const note=current(),group=note&&groups(note.kind).find(g=>g[1]===(state.group||groups(note.kind)[0][1]))?.[1];
   if(!group||!STATUS.some(s=>s[0]===e.target.value))return;
@@ -138,5 +154,5 @@ function init(context){
   note.entries[group].basis=e.target.value;api.save();
  });
 }
-return {init,render,copyText,prompts:PROMPTS,status:STATUS};
+return {init,render,copyText,prompts:PROMPTS,status:STATUS,startSector:(kind,sector)=>create(kind,sector)};
 })();
