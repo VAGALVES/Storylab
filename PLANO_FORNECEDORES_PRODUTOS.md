@@ -124,6 +124,24 @@ Implementada uma quarta aba: **Dossiês de campo**, com até 20 registros pessoa
 
 **Limites do conteúdo:** modelos ilustrativos de formação profissional; não substituem normas setoriais, ensaios, due diligence ou tradução humana especializada em chinês de documentos contratuais. Expansão prevista para fontes bibliográficas, exercícios aplicados e trilhas setoriais profundas.
 
+## Refinamento editorial v2.20 — uma hierarquia única
+
+**Diagnóstico que motivou esta rodada:** a página havia acumulado atlas, fichas industriais, laboratórios de inglês e ferramentas operacionais, sem ordem pedagógica nítida. O título inglês *Consist of* contraria a escolha de português como língua-base. O formulário de medidas precisava de uma referência visual de altura, largura, comprimento, profundidade, espessura e massa.
+
+**Percurso principal:** **O objeto → Adjetivos & escalas → Verbos & regência → Medidas ilustradas → Estúdio de Descrição**. As seções antigas continuam disponíveis em um bloco secundário recolhível: academia, indústria, glossário de fábrica, fornecedor, traduções, visita, fichas e comparador. Não foram apagados conteúdos nem rascunhos dos usuários.
+
+**Verbos como protagonistas:** 20 construções em cinco famílias (composição; forma e relações espaciais; movimento; função; avaliação). Cada item traz título, exemplo, decomposição sintática e regência **em português primeiro**, nuance semântica e equivalentes EN/中文/pinyin com áudio. Exemplos de verbos espaciais: circundar, ladear, sobrepor-se a, afilar-se.
+
+**Adjetivos:** sete escalas com cinco graus cada, cada qual representando **uma mesma variável**: dimensão linear, massa, firmeza sob pressão localizada, flexibilidade à flexão, rugosidade, brilho especular e espessura. Pares de outra natureza permanecem contrastes, não degraus: macio ≠ maciço; duro ≠ rígido; fosco ≠ opaco; pesado ≠ denso; compacto ≠ pequeno. Inclui oito qualificadores de intensidade, fonte e condição.
+
+**Medidas visuais:** ilustrações vetoriais responsivas de quatro geometrias (caixa, peça plana, veículo em perfil, cilindro) com seleção interativa das seis grandezas. Ressalvas impedem generalizações erradas: comprimento/largura dependem da orientação; largura de veículo precisa da vista frontal; espessura é local; massa é medida em balança, não por seta dimensional. O mesmo recurso aparece na seção de medidas e dentro do Estúdio.
+
+**Idioma:** os 20 títulos legados do Laboratório Técnico passam a apresentar expressões em português, com diagrama também em português. Inglês e mandarim permanecem como blocos de apoio e prática, preservando o conteúdo de tradução previamente construído.
+
+**Validação:** novos testes automáticos de semântica, navegação, diagramas, estrutura PT e integração ao Estúdio; PWA e HTML offline ajustados. As ilustrações são esquemas conceituais de direção, não desenhos técnicos ou valores de fábrica.
+
+**Próximo salto proposto:** substantivos estruturais de partes e componentes, atlas cromático (matiz/saturação/luminosidade separados), intensidade sonora, sensação térmica, relações espaciais e exercícios de descrição oral aplicados a cenas reais. Curadoria especializada PT/EN/中文 e inspeção visual em navegador Android ainda recomendadas.
+
 ## Evolução v2.18 — linguagem, comparação, procedimento e inteligência visual
 
 ### Laboratório de Linguagem Técnica
