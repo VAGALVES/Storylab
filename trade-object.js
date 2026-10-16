@@ -46,6 +46,7 @@ window.StoryLabObject=(()=>{
    '<div class="to-detail-actions">'+btn('copy','Copiar termo e distinções',selected[0])+
    btn('add',draft().attributes.includes(selected[0])?'✓ No meu roteiro':'+ Levar ao roteiro',selected[0],'to-add'+(draft().attributes.includes(selected[0])?' is-active':''))+'</div></article>';
   result+='</div>'+
+   '<div class="to-between-actions">'+btn('studio','→ Abrir Estúdio de Descrição')+'<span>Monte uma apresentação com os atributos que você selecionou acima.</span></div>'+
    '<section class="to-contrast-section"><div class="to-contrast-head"><div><span class="trade-kicker">NÃO SÃO SINÔNIMOS</span><h3>O duelo das palavras</h3><p>Precisão também significa saber o que uma palavra <em>não</em> quer dizer.</p></div><span>'+String(state.contrast+1).padStart(2,'0')+' / '+DATA().contrasts.length+'</span></div>'+
    '<div class="to-contrast-display"><div>'+esc(contr[0])+'</div><span>≠</span><div>'+esc(contr[1])+'</div></div>'+
    '<div class="to-contrast-reading"><strong>'+esc(contr[2])+'</strong><p>'+esc(contr[3])+'</p></div>'+
@@ -103,6 +104,7 @@ window.StoryLabObject=(()=>{
  function studio(){
   const d=draft(),assets=activeAttributes(),script=buildScript(d);
   return '<section class="to-root"><header class="to-hero"><div><span class="trade-kicker">ESTÚDIO DE DESCRIÇÃO / STORYLAB SHANGHAI</span><h2>Da palavra exata à história bem contada.</h2><p>Construa uma apresentação autoral de produto, marca ou fornecedor. Selecione atributos reais, registre dimensões com unidades e obtenha um roteiro de cinco planos — sem números ou vantagens fabricados.</p></div><div class="to-hero-metrics"><strong>'+assets.length+' / 8</strong><span>atributos escolhidos</span></div></header>'+
+   '<div class="to-presets"><div><span class="trade-kicker">COMECE PELO TIPO DE OBJETO</span><p>Escolha um ponto de partida sem presumir atributos, especificações ou desempenho.</p></div><div>'+DATA().exemplars.map(e=>btn('example',esc(e[1]),e[0],'to-preset')).join('')+'</div></div>'+
    '<div class="to-studio-grid"><section class="to-studio-form"><div class="to-studio-form-head"><span class="trade-kicker">01 / OBJETO DO OLHAR</span><h3>O que vamos apresentar?</h3></div>'+
    '<label>PRODUTO, MARCA OU EMPRESA<input data-to-field="subject" data-model="objectSubject" maxlength="110" placeholder="Ex.: motocicleta elétrica, câmera de bolso, fábrica de motores…" value="'+esc(d.subject)+'"></label>'+
    '<div class="to-form-row"><label>TIPO<select data-to-field="kind">'+choices(kindNames,d.kind)+'</select></label><label>LENTE NARRATIVA<select data-to-field="lens">'+choices(lensNames,d.lens)+'</select></label></div>'+
@@ -148,6 +150,7 @@ window.StoryLabObject=(()=>{
     else if(!d.attributes.includes(id)&&d.attributes.length<8)d.attributes.push(id);
     saved().tradeObjectDraft=d;api.save();api.render();return;
    }
+   if(action==='example'){const ex=DATA().exemplars.find(e=>e[0]===id);if(!ex)return;const d=draft();d.subject=ex[1];d.kind=id==='empresa'?'empresa':'produto';d.note='';saved().tradeObjectDraft=d;api.save();api.render();return}
    if(action==='atlas'){window.StoryLabTrade?.openTab?.('objeto');return}
    if(action==='studio'){window.StoryLabTrade?.openTab?.('roteiro');return}
    if(action==='clear'){if(typeof window.confirm==='function'&&!window.confirm('Limpar o roteiro e as observações locais?'))return;
