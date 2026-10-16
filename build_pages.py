@@ -18,7 +18,7 @@ def main():
     OUTPUT.mkdir()
 
     # Os arquivos são sempre relativos à raiz e compartilhados com o PWA.
-    for filename in ["index.html", *FILES]:
+    for filename in ["index.html", "service-worker.js", *FILES]:
         src = ROOT / filename
         if not src.is_file():
             raise SystemExit(f"Arquivo necessário ausente: {filename}")
