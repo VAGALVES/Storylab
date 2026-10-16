@@ -45,11 +45,11 @@ function click(action,id=''){
 function change(selector,value,extra={}){
  fire('change',{value,checked:!!extra.checked,dataset:{ttCheck:extra.check||''},matches:s=>s===selector});
 }
-assert.match(hub.render(),/APRENDER/);
-assert.match(hub.render(),/COMUNICAR/);
-assert.match(hub.render(),/INVESTIGAR/);
+assert.match(hub.render(),/PERCURSO PRINCIPAL/);
+assert.match(hub.render(),/Aprofundar conhecimentos e ferramentas/);
+assert.match(hub.render(),/FORNECEDORES E CAMPO/);
 assert.equal(hub.openTab('linguagem'),true);
-assert.match(hub.render(),/Laboratório de Linguagem Técnica/);
+assert.match(hub.render(),/Construções descritivas em três idiomas/);
 assert.match(hub.render(),/Consist of/);
 assert.match(hub.render(),/REFERENTE/);
 click('training');

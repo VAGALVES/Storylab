@@ -42,13 +42,13 @@ const signal=(kind,el)=>sandbox.document.listeners.filter(x=>x.type===kind).forE
 const click=(action,id='',value='')=>signal('click',{closest(){return {dataset:{trade:action,id,value}}}});
 let html=hub.render();
 assert.match(html,/Fornecedores & Produtos/);
-assert.match(html,/Glossário técnico do produto/);
-assert.match(html,/Atlas Universal do Objeto/);
+assert.match(html,/Glossário técnico/);
+assert.match(html,/O objeto/);
 assert.match(html,/O ATLAS DO OBJETO/);
 hub.openTab('produto');
 html=hub.render();
 assert.match(html,/categoria de produto/);
-assert.match(html,/role="group"/);
+assert.match(html,/trade-controls/);
 assert.equal(hub.filteredTerms().length,48);
 click('tab','','fornecedor');
 html=hub.render();
@@ -66,7 +66,7 @@ assert.equal(focusPreserved,true,'a busca deve preservar o foco durante rerender
 assert.ok(hub.filteredTerms().length>=1);
 click('tab','','frases');
 html=hub.render();
-assert.match(html,/Fraseoteca de campo/);
+assert.match(html,/Fraseoteca profissional/);
 assert.match(html,/Qual é a especialidade da empresa/);
 assert.equal(hub.filteredPhrases().length,36);
 click('training');

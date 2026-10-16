@@ -31,3 +31,30 @@ window.STORYLAB_TRADE_LANGUAGE={
  {id:'l20',group:'analise',title:'Result in',pt:'A alteração do processo resultou em menos retrabalho neste lote.',en:'The process change resulted in less rework in this batch.',zh:'工艺调整使这一批次的返工减少了。',py:'Gōngyì tiáozhěng shǐ zhè yī pīcì de fǎngōng jiǎnshǎo le.',frame:['The process change','resulted in','less rework in this batch'],rule:'Result in + consequência; result from + origem. Para causalidade, avalie outros fatores e a evidência disponível.',trap:'Uma mudança simultânea não prova, por si só, que ela causou a melhora observada.',context:'Controle de processo, melhoria contínua'}
  ]
 };
+/* A referência conceitual é PT-BR; EN/中文 entram como tradução de apoio. */
+const __titlePT=[
+ ['Ser composto por',['O conjunto','é composto por','três módulos.']],
+ ['Ser feito de',['A carcaça','é feita de','alumínio.']],
+ ['Estar equipado com',['O veículo','está equipado com','sensores adicionais.']],
+ ['Estar integrado a',['O sensor','está integrado ao','módulo de controle.']],
+ ['Ser projetado para',['O equipamento','foi projetado para','uso externo.']],
+ ['Ser compatível com',['O módulo','é compatível com','o sistema existente.']],
+ ['Atender a',['A amostra','atende aos','requisitos dimensionais.']],
+ ['Operar sob',['O sistema','opera sob','estas condições.']],
+ ['Especializar-se em',['A empresa','é especializada na','produção de inversores.']],
+ ['Ser capaz de',['A linha','é capaz de','produzir componentes pequenos.']],
+ ['Depender de',['O prazo','depende da','disponibilidade dos componentes.']],
+ ['Ser proveniente de',['A matéria-prima','é obtida de','dois fornecedores.']],
+ ['Atribuir à fonte',['Segundo o fornecedor,','a capacidade é de','500 unidades por dia.']],
+ ['Basear-se em',['Com base nos testes,','a conclusão permanece','provisória.']],
+ ['Conferir com',['As medidas','foram conferidas com','a ficha técnica.']],
+ ['Estar condicionado a',['A entrega','está condicionada à','aprovação da amostra.']],
+ ['Diferir de',['Esta versão','difere da anterior','no acabamento.']],
+ ['Comparar com',['Comparado ao modelo anterior,','o consumo foi menor','nas condições testadas.']],
+ ['Representar parte de',['A inspeção','representa','20% do tempo registrado.']],
+ ['Resultar em',['A alteração do processo','resultou em','menos retrabalho.']]
+];
+window.STORYLAB_TRADE_LANGUAGE.patterns.forEach((p,i)=>{
+ p.titlePt=__titlePT[i][0];
+ p.framePt=__titlePT[i][1];
+});

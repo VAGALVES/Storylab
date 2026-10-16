@@ -1,0 +1,52 @@
+/* StoryLab 2.20 — taxonomia de precisão descritiva, em português.
+   Escalas representam uma grandeza por vez; termos de outros eixos não são degraus. */
+window.STORYLAB_PRECISION_DATA={
+ verbs:[
+ ['composicao','Composição e constituição',[
+ ['ser composto por','be composed of','由……组成','yóu… zǔchéng','O conjunto é composto por três módulos.','O conjunto','é composto por','três módulos.','Apresenta as partes constituintes; não indica, por si, o processo de fabricação.','Ser composto por + elementos. Na voz ativa: os módulos compõem o conjunto.'],
+ ['conter','contain','包含','bāohán','O reservatório contém um fluido refrigerante.','O reservatório','contém','um fluido refrigerante.','Conter é manter algo no interior; não equivale a ser feito de.','Conter + conteúdo, sem preposição.'],
+ ['revestir','coat / cover','覆盖','fùgài','Uma camada polimérica reveste a carcaça.','Uma camada polimérica','reveste','a carcaça.','Revestir modifica ou protege a superfície; não define o material do núcleo.','Revestir + superfície; estar revestido de/com + material.'],
+ ['integrar','integrate','集成','jíchéng','O sensor integra o sistema de controle.','O sensor','integra','o sistema de controle.','Uma peça pode integrar um conjunto sem controlar o funcionamento inteiro.','Integrar + conjunto; ser integrado a/em + sistema.']]],
+ ['geometria','Forma e relações espaciais',[
+ ['circundar','surround','环绕','huánrào','A moldura circunda a tela do equipamento.','A moldura','circunda','a tela.','Descreve uma disposição envolvente; não significa que as partes se toquem.','Circundar + objeto circundado.'],
+ ['ladear','flank','位于……两侧','wèiyú… liǎngcè','Dois botões ladeiam a tela central.','Dois botões','ladeiam','a tela central.','Ocupa posições laterais; ao dizer dois, sugere os dois lados da referência.','Ladear + objeto de referência.'],
+ ['sobrepor-se a','overlap','与……重叠','yǔ… chóngdié','O painel sobrepõe-se à estrutura interna.','O painel','sobrepõe-se a','estrutura interna.','A sobreposição exige região comum em uma projeção ou disposição; não implica união fixa.','Sobrepor-se a + referente (à antes de substantivo feminino com artigo).'],
+ ['afilar-se','taper','逐渐变细','zhújiàn biànxì','A haste afila-se em direção à extremidade.','A haste','afila-se','em direção à ponta.','Diminuição gradual de seção em um sentido definido.','Afilar-se em direção a + ponto ou extremidade.']]],
+ ['movimento','Movimento e articulação',[
+ ['girar','rotate','旋转','xuánzhuǎn','A base gira em torno de um eixo vertical.','A base','gira','em torno de um eixo vertical.','Movimento angular; informar eixo, ângulo e limites quando conhecidos.','Girar em torno de + eixo; girar a + ângulo.'],
+ ['deslizar','slide','滑动','huádòng','A tampa desliza sobre uma guia lateral.','A tampa','desliza','sobre uma guia lateral.','Translação apoiada ou guiada, sem pressupor movimento giratório.','Deslizar sobre/ao longo de + suporte ou trajetória.'],
+ ['retrair-se','retract','缩回','suōhuí','A lente retrai-se para dentro do corpo.','A lente','retrai-se','para dentro do corpo.','Recolhimento de uma parte; diferente de dobrar e comprimir.','Retrair-se para dentro de + alojamento.'],
+ ['articular-se','articulate / pivot','铰接','jiǎojiē','O braço articula-se na base do suporte.','O braço','articula-se','na base do suporte.','O movimento ocorre em uma junta ou articulação; informe seus graus de liberdade.','Articular-se em/com + ponto ou parte.']]],
+ ['funcao','Função, efeito e desempenho',[
+ ['amortecer','dampen / cushion','缓冲','huǎnchōng','O material amortece parte do impacto.','O material','amortece','parte do impacto.','Reduz transmissão ou pico de um esforço; requer teste para quantificar eficácia.','Amortecer + impacto, vibração ou oscilação.'],
+ ['dissipar','dissipate','散热','sànrè','As aletas dissipam calor durante a operação.','As aletas','dissipam','calor durante a operação.','Transferência ou dispersão de energia térmica; aparência não prova eficiência térmica.','Dissipar + calor/energia.'],
+ ['estabilizar','stabilize','稳定','wěndìng','O mecanismo estabiliza a imagem durante o movimento.','O mecanismo','estabiliza','a imagem.','Reduz variação ou oscilação de algo definido, sob condições de uso específicas.','Estabilizar + objeto estabilizado.'],
+ ['sustentar','support','支撑','zhīchēng','A coluna sustenta a carga da plataforma.','A coluna','sustenta','a carga da plataforma.','Transmissão e suporte de carga; não demonstra resistência máxima sem ensaio.','Sustentar + carga, peça ou estrutura.']]],
+ ['avaliacao','Observação, comparação e cautela',[
+ ['aparentar','appear to be','看起来','kàn qǐlái','A carcaça aparenta ser metálica.','A carcaça','aparenta ser','metálica.','Introduz uma impressão visual, não uma afirmação material comprovada.','Aparentar + infinitivo ou atributo.'],
+ ['apresentar','feature / exhibit','呈现','chéngxiàn','A superfície apresenta textura granulada.','A superfície','apresenta','textura granulada.','Relata uma característica observável, sem afirmar intenção ou qualidade técnica.','Apresentar + propriedade observável.'],
+ ['diferir de','differ from','不同于','bùtóng yú','Esta versão difere da anterior na empunhadura.','Esta versão','difere da anterior','na empunhadura.','Nomeia o eixo de contraste; diferenças devem ser atribuídas à característica examinada.','Diferir de + objeto comparado; diferir em + característica.'],
+ ['depender de','depend on','取决于','qǔjué yú','A autonomia depende da intensidade de uso.','A autonomia','depende da','intensidade de uso.','Explicita condição; impede apresentar resultados contextuais como garantias universais.','Depender de + condição ou variável.']]]
+ ],
+ scales:[
+ {id:'dimensao',title:'Dimensão linear percebida',axis:'Extensão em um eixo definido',context:'Compare o mesmo eixo (altura, largura, comprimento etc.) e informe o objeto de referência.',steps:[['minúsculo','tiny','极小'],['pequeno','small','小'],['intermediário','medium-sized','中等大小'],['grande','large','大'],['enorme','enormous','巨大']],caution:'Compacto não entra nesta régua: descreve aproveitamento de espaço para determinada função.'},
+ {id:'massa',title:'Massa percebida ou medida',axis:'Intensidade da massa na situação de uso',context:'Massa tem unidade (g, kg). Sensação de peso depende de postura, duração, apoio e distribuição.',steps:[['levíssimo','very light','极轻'],['leve','lightweight','轻'],['de massa intermediária','medium weight','中等重量'],['pesado','heavy','重'],['muito pesado','very heavy','非常重']],caution:'Equilibrado é outra propriedade: refere-se à distribuição de massa. Denso exige massa/volume.'},
+ {id:'firmeza',title:'Firmeza à pressão localizada',axis:'Resposta percebida à compressão em condições comparáveis',context:'Mesmo material, força aplicada, espessura e temperatura. Trata-se de sensação ou deformação observada, não de dureza certificada.',steps:[['muito macio','very soft','非常柔软'],['macio','soft','柔软'],['firme','firm','结实'],['duro','hard','硬'],['muito duro','very hard','非常硬']],caution:'Rígido descreve resistência à deformação estrutural e não deve ser misturado automaticamente à pressão localizada.'},
+ {id:'flexao',title:'Flexibilidade à flexão',axis:'Facilidade de curvar em uma mesma geometria e esforço',context:'Compare deslocamento, geometria e esforço; um material que curva pode ou não recuperar a forma.',steps:[['muito flexível','highly flexible','非常柔韧'],['flexível','flexible','柔韧'],['moderadamente flexível','moderately flexible','柔韧性适中'],['pouco flexível','slightly flexible','不太柔韧'],['rígido à flexão','bending-stiff','抗弯刚性强']],caution:'Elástico descreve recuperação da forma. Maleável pode dobrar e permanecer deformado.'},
+ {id:'rugosidade',title:'Rugosidade percebida',axis:'Intensidade da irregularidade superficial ao toque',context:'Mesma área e método de contato; superfície texturizada não é automaticamente defeituosa.',steps:[['muito liso','very smooth','非常光滑'],['liso','smooth','光滑'],['levemente texturizado','slightly textured','略有纹理'],['áspero','rough','粗糙'],['muito áspero','very rough','非常粗糙']],caution:'Fosco não mede rugosidade: descreve reflexão da luz. Pode ser simultaneamente liso e fosco.'},
+ {id:'brilho',title:'Brilho especular aparente',axis:'Intensidade de reflexo concentrado sob a mesma iluminação',context:'Compare iluminação, ângulo e acabamento; a aparência não identifica o material.',steps:[['muito fosco','very matte','非常哑光'],['fosco','matte','哑光'],['acetinado','satin-finish','缎面光泽'],['semibrilhante','semi-gloss','半光'],['muito brilhante','high-gloss','高光']],caution:'Opaco (não-transparente) é uma dimensão de transmissão luminosa, distinta do brilho superficial.'},
+ {id:'espessura',title:'Espessura relativa',axis:'Distância entre as faces de uma seção definida',context:'Só ordene espessuras da mesma classe de objeto e com referência dimensional adequada.',steps:[['muito fino','very thin','非常薄'],['fino','thin','薄'],['espessura intermediária','medium thickness','中等厚度'],['espesso','thick','厚'],['muito espesso','very thick','非常厚']],caution:'Espessura não substitui profundidade, volume ou resistência mecânica.'}
+ ],
+ independent:[
+ ['Compactação e escala','compacto ≠ pequeno','Compacto considera relação entre função e volume. Pequeno descreve dimensão absoluta ou relativa.'],
+ ['Constituição e sensação','maciço ≠ macio','Maciço descreve preenchimento interno; macio descreve resposta à pressão ou tato.'],
+ ['Massa e distribuição','pesado ≠ desbalanceado','Um produto pesado pode ter distribuição de massa adequada.'],
+ ['Resistência e superfície','rígido ≠ duro','Rigidez responde à deformação global; dureza à deformação localizada.'],
+ ['Transmissão e reflexão','opaco ≠ fosco','Opaco bloqueia visualização através do material; fosco tem reflexos difusos.'],
+ ['Conforto e ergonomia','confortável ≠ ergonômico','Conforto é experiência situada; ergonomia analisa pessoa, tarefa e ambiente.']
+ ],
+ qualifiers:[
+ ['leveza','ligeiramente','slightly','稍微'],['intensidade','relativamente','relatively','相对'],['intensidade','bastante','quite','相当'],['intensidade','extremamente','extremely','极其'],
+ ['fonte','visualmente','visually','从外观上看'],['fonte','aparentemente','apparently','看起来'],['fonte','segundo o fabricante','according to the manufacturer','根据制造商的说法'],['condicao','durante o manuseio','while handling','在拿取过程中']
+ ]
+};
