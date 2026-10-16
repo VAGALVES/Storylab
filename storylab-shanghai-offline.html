@@ -3607,8 +3607,10 @@ function getText(node){
 function addInline(node){
  if(node.dataset.slAudioAdded==='1'||node.closest('button,a,[contenteditable="true"],.sl-audio-dock'))return;
  const value=getText(node);
- if(value.length<20||value.length>4400)return;
  const lang=language(node);
+ // Caracteres chineses comunicam mais com menos espaços e unidades gráficas.
+ const minimum=lang==='zh-CN'?4:lang==='en-US'?10:20;
+ if(value.length<minimum||value.length>4400)return;
  node.dataset.slAudioAdded='1';
  node.classList.add('sl-audio-target');
  const button=document.createElement('button');
