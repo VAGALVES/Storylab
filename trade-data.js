@@ -1063,3 +1063,343 @@ window.STORYLAB_TRADE_DATA = {
   ],
   "version": "2.15"
 };
+
+window.STORYLAB_TRADE_PHRASES = {
+  "scenarios": [
+    [
+      "apresentacao",
+      "Visita & apresentação",
+      "Entrar em contato, contextualizar a visita e pedir demonstrações"
+    ],
+    [
+      "descricao",
+      "Descrição do produto",
+      "Categoria, público, valor percebido e diferenciais"
+    ],
+    [
+      "materiais",
+      "Materiais & fabricação",
+      "Composição, construção, acabamento e rastreio"
+    ],
+    [
+      "uso",
+      "Funcionalidade & desempenho",
+      "Benefício, limite de uso e evidências de desempenho"
+    ],
+    [
+      "capacidade",
+      "Perfil & capacidade da fábrica",
+      "Especialização, produção real e cadeia de subcontratação"
+    ],
+    [
+      "amostras",
+      "Amostras & desenvolvimento",
+      "Briefing, ajustes, aprovação e controle de revisões"
+    ],
+    [
+      "comercial",
+      "Cotação & negociação",
+      "MOQ, custos, prazos, pagamento e viabilidade"
+    ],
+    [
+      "controle",
+      "Inspeção & conformidade",
+      "Testes, critérios, certificações e ações corretivas"
+    ],
+    [
+      "encerramento",
+      "Comparação & próximos passos",
+      "Síntese da visita, documentação e compromissos"
+    ]
+  ],
+  "phrases": [
+    {
+      "id": "p001",
+      "scenario": "apresentacao",
+      "pt": "Gostaria de conhecer as principais linhas de produtos de vocês.",
+      "en": "I would like to learn about your main product lines.",
+      "zh": "我想了解一下你们的主要产品线。",
+      "py": "Wǒ xiǎng liǎojiě yíxià nǐmen de zhǔyào chǎnpǐn xiàn."
+    },
+    {
+      "id": "p002",
+      "scenario": "apresentacao",
+      "pt": "Podemos começar com uma visão geral da fábrica?",
+      "en": "Could we start with an overview of the factory?",
+      "zh": "我们可以先了解一下工厂的整体情况吗？",
+      "py": "Wǒmen kěyǐ xiān liǎojiě yíxià gōngchǎng de zhěngtǐ qíngkuàng ma?"
+    },
+    {
+      "id": "p003",
+      "scenario": "apresentacao",
+      "pt": "Qual é a especialidade da empresa?",
+      "en": "What is your company's main area of specialization?",
+      "zh": "你们公司的主要专长是什么？",
+      "py": "Nǐmen gōngsī de zhǔyào zhuāncháng shì shénme?"
+    },
+    {
+      "id": "p004",
+      "scenario": "apresentacao",
+      "pt": "Você poderia nos mostrar exemplos de produtos recentes?",
+      "en": "Could you show us examples of recently developed products?",
+      "zh": "可以给我们看看最近开发的产品吗？",
+      "py": "Kěyǐ gěi wǒmen kànkan zuìjìn kāifā de chǎnpǐn ma?"
+    },
+    {
+      "id": "p005",
+      "scenario": "descricao",
+      "pt": "Como vocês classificam este produto?",
+      "en": "How do you classify this product?",
+      "zh": "你们如何对这款产品进行分类？",
+      "py": "Nǐmen rúhé duì zhè kuǎn chǎnpǐn jìnxíng fēnlèi?"
+    },
+    {
+      "id": "p006",
+      "scenario": "descricao",
+      "pt": "Para qual público este produto foi desenvolvido?",
+      "en": "Who was this product developed for?",
+      "zh": "这款产品是为哪类客户开发的？",
+      "py": "Zhè kuǎn chǎnpǐn shì wèi nǎ lèi kèhù kāifā de?"
+    },
+    {
+      "id": "p007",
+      "scenario": "descricao",
+      "pt": "Qual é o principal diferencial desta versão?",
+      "en": "What is the main difference in this version?",
+      "zh": "这个版本最主要的区别是什么？",
+      "py": "Zhège bǎnběn zuì zhǔyào de qūbié shì shénme?"
+    },
+    {
+      "id": "p008",
+      "scenario": "descricao",
+      "pt": "Gostaria de comparar as duas versões lado a lado.",
+      "en": "I would like to compare the two versions side by side.",
+      "zh": "我想把这两个版本放在一起比较。",
+      "py": "Wǒ xiǎng bǎ zhè liǎng ge bǎnběn fàng zài yìqǐ bǐjiào."
+    },
+    {
+      "id": "p009",
+      "scenario": "materiais",
+      "pt": "Qual é a composição exata do material?",
+      "en": "What is the exact material composition?",
+      "zh": "这种材料的具体成分是什么？",
+      "py": "Zhè zhǒng cáiliào de jùtǐ chéngfèn shì shénme?"
+    },
+    {
+      "id": "p010",
+      "scenario": "materiais",
+      "pt": "Onde este material é adquirido?",
+      "en": "Where do you source this material?",
+      "zh": "这种材料是从哪里采购的？",
+      "py": "Zhè zhǒng cáiliào shì cóng nǎlǐ cǎigòu de?"
+    },
+    {
+      "id": "p011",
+      "scenario": "materiais",
+      "pt": "Gostaria de examinar o acabamento e as costuras.",
+      "en": "I would like to examine the finishing and the seams.",
+      "zh": "我想检查一下后整理和接缝。",
+      "py": "Wǒ xiǎng jiǎnchá yíxià hòu zhěnglǐ hé jiēfèng."
+    },
+    {
+      "id": "p012",
+      "scenario": "materiais",
+      "pt": "Existe um relatório de testes para essa composição?",
+      "en": "Is there a test report for this material composition?",
+      "zh": "这种材料成分有检测报告吗？",
+      "py": "Zhè zhǒng cáiliào chéngfèn yǒu jiǎncè bàogào ma?"
+    },
+    {
+      "id": "p013",
+      "scenario": "uso",
+      "pt": "Como este produto funciona na prática?",
+      "en": "How does this product work in practice?",
+      "zh": "这款产品在实际使用中是怎么工作的？",
+      "py": "Zhè kuǎn chǎnpǐn zài shíjì shǐyòng zhōng shì zěnme gōngzuò de?"
+    },
+    {
+      "id": "p014",
+      "scenario": "uso",
+      "pt": "Poderia demonstrar as principais funções?",
+      "en": "Could you demonstrate the main functions?",
+      "zh": "可以演示一下主要功能吗？",
+      "py": "Kěyǐ yǎnshì yíxià zhǔyào gōngnéng ma?"
+    },
+    {
+      "id": "p015",
+      "scenario": "uso",
+      "pt": "Em quais condições o desempenho foi testado?",
+      "en": "Under what conditions was its performance tested?",
+      "zh": "产品性能是在什么条件下测试的？",
+      "py": "Chǎnpǐn xìngnéng shì zài shénme tiáojiàn xià cèshì de?"
+    },
+    {
+      "id": "p016",
+      "scenario": "uso",
+      "pt": "Existe alguma limitação de uso que devemos considerar?",
+      "en": "Are there any usage limitations we should consider?",
+      "zh": "有没有我们需要注意的使用限制？",
+      "py": "Yǒu méiyǒu wǒmen xūyào zhùyì de shǐyòng xiànzhì?"
+    },
+    {
+      "id": "p017",
+      "scenario": "capacidade",
+      "pt": "Quantas unidades vocês produzem por mês atualmente?",
+      "en": "How many units do you currently produce per month?",
+      "zh": "你们目前每个月实际生产多少件？",
+      "py": "Nǐmen mùqián měi ge yuè shíjì shēngchǎn duōshǎo jiàn?"
+    },
+    {
+      "id": "p018",
+      "scenario": "capacidade",
+      "pt": "Qual é a capacidade disponível para novos pedidos?",
+      "en": "How much capacity is available for new orders?",
+      "zh": "你们目前有多少产能可以承接新订单？",
+      "py": "Nǐmen mùqián yǒu duōshǎo chǎnnéng kěyǐ chéngjiē xīn dìngdān?"
+    },
+    {
+      "id": "p019",
+      "scenario": "capacidade",
+      "pt": "Quais etapas são realizadas nesta fábrica?",
+      "en": "Which production steps are carried out at this factory?",
+      "zh": "哪些生产工序是在这家工厂完成的？",
+      "py": "Nǎxiē shēngchǎn gōngxù shì zài zhè jiā gōngchǎng wánchéng de?"
+    },
+    {
+      "id": "p020",
+      "scenario": "capacidade",
+      "pt": "Alguma etapa é terceirizada para outras empresas?",
+      "en": "Are any production steps subcontracted to other companies?",
+      "zh": "有没有生产工序外包给其他公司？",
+      "py": "Yǒu méiyǒu shēngchǎn gōngxù wàibāo gěi qítā gōngsī?"
+    },
+    {
+      "id": "p021",
+      "scenario": "amostras",
+      "pt": "Quando podemos receber a primeira amostra?",
+      "en": "When can we receive the first sample?",
+      "zh": "我们什么时候可以收到首版样品？",
+      "py": "Wǒmen shénme shíhou kěyǐ shōudào shǒubǎn yàngpǐn?"
+    },
+    {
+      "id": "p022",
+      "scenario": "amostras",
+      "pt": "Precisamos ajustar a modelagem antes da aprovação.",
+      "en": "We need to adjust the pattern before approval.",
+      "zh": "批准之前我们需要调整版型。",
+      "py": "Pīzhǔn zhīqián wǒmen xūyào tiáozhěng bǎnxíng."
+    },
+    {
+      "id": "p023",
+      "scenario": "amostras",
+      "pt": "Poderia registrar as alterações feitas nesta rodada?",
+      "en": "Could you document the changes made in this revision round?",
+      "zh": "可以记录一下这一轮做了哪些修改吗？",
+      "py": "Kěyǐ jìlù yíxià zhè yì lún zuò le nǎxiē xiūgǎi ma?"
+    },
+    {
+      "id": "p024",
+      "scenario": "amostras",
+      "pt": "A amostra de pré-produção deve corresponder à especificação aprovada.",
+      "en": "The pre-production sample must match the approved specification.",
+      "zh": "产前样必须符合已经批准的技术规格。",
+      "py": "Chǎnqián yàng bìxū fúhé yǐjīng pīzhǔn de jìshù guīgé."
+    },
+    {
+      "id": "p025",
+      "scenario": "comercial",
+      "pt": "Qual é a quantidade mínima de pedido por cor?",
+      "en": "What is the minimum order quantity per color?",
+      "zh": "每个颜色的最小起订量是多少？",
+      "py": "Měi ge yánsè de zuìxiǎo qǐdìngliàng shì duōshǎo?"
+    },
+    {
+      "id": "p026",
+      "scenario": "comercial",
+      "pt": "Essa cotação inclui embalagem e transporte?",
+      "en": "Does this quotation include packaging and shipping?",
+      "zh": "这份报价包含包装和运输费用吗？",
+      "py": "Zhè fèn bàojià bāohán bāozhuāng hé yùnshū fèiyòng ma?"
+    },
+    {
+      "id": "p027",
+      "scenario": "comercial",
+      "pt": "Qual é o prazo de produção após aprovarmos a amostra?",
+      "en": "What is the production lead time after sample approval?",
+      "zh": "样品批准后，生产周期是多久？",
+      "py": "Yàngpǐn pīzhǔn hòu, shēngchǎn zhōuqī shì duōjiǔ?"
+    },
+    {
+      "id": "p028",
+      "scenario": "comercial",
+      "pt": "O preço muda conforme a quantidade do pedido?",
+      "en": "Does the unit price change with the order quantity?",
+      "zh": "单价会随着订单数量变化吗？",
+      "py": "Dānjià huì suízhe dìngdān shùliàng biànhuà ma?"
+    },
+    {
+      "id": "p029",
+      "scenario": "controle",
+      "pt": "Quais critérios vocês usam na inspeção final?",
+      "en": "What acceptance criteria do you use for final inspection?",
+      "zh": "最终检验使用哪些验收标准？",
+      "py": "Zuìzhōng jiǎnyàn shǐyòng nǎxiē yànshōu biāozhǔn?"
+    },
+    {
+      "id": "p030",
+      "scenario": "controle",
+      "pt": "Como vocês registram e corrigem não conformidades?",
+      "en": "How do you record and correct nonconformities?",
+      "zh": "你们如何记录并纠正不符合项？",
+      "py": "Nǐmen rúhé jìlù bìng jiūzhèng bù fúhé xiàng?"
+    },
+    {
+      "id": "p031",
+      "scenario": "controle",
+      "pt": "Podemos verificar o escopo e a validade desta certificação?",
+      "en": "May we verify the scope and validity of this certification?",
+      "zh": "我们可以核实这项认证的范围和有效期吗？",
+      "py": "Wǒmen kěyǐ héshí zhè xiàng rènzhèng de fànwéi hé yǒuxiàoqī ma?"
+    },
+    {
+      "id": "p032",
+      "scenario": "controle",
+      "pt": "Precisamos de evidências para confirmar esse resultado.",
+      "en": "We need supporting evidence to verify this result.",
+      "zh": "我们需要相关证据来核实这个结果。",
+      "py": "Wǒmen xūyào xiāngguān zhèngjù lái héshí zhège jiéguǒ."
+    },
+    {
+      "id": "p033",
+      "scenario": "encerramento",
+      "pt": "Este produto tem melhor acabamento, mas precisamos validar o desempenho.",
+      "en": "This product has better finishing, but we still need to validate its performance.",
+      "zh": "这款产品的做工更好，但我们还需要验证它的性能。",
+      "py": "Zhè kuǎn chǎnpǐn de zuògōng gèng hǎo, dàn wǒmen hái xūyào yànzhèng tā de xìngnéng."
+    },
+    {
+      "id": "p034",
+      "scenario": "encerramento",
+      "pt": "Vou resumir os pontos fortes e as dúvidas pendentes.",
+      "en": "I will summarize the strengths and the open questions.",
+      "zh": "我来总结一下优点和待确认的问题。",
+      "py": "Wǒ lái zǒngjié yíxià yōudiǎn hé dài quèrèn de wèntí."
+    },
+    {
+      "id": "p035",
+      "scenario": "encerramento",
+      "pt": "Poderia nos enviar a ficha técnica e os relatórios de teste?",
+      "en": "Could you send us the technical specification sheet and test reports?",
+      "zh": "可以把技术规格表和检测报告发给我们吗？",
+      "py": "Kěyǐ bǎ jìshù guīgé biǎo hé jiǎncè bàogào fā gěi wǒmen ma?"
+    },
+    {
+      "id": "p036",
+      "scenario": "encerramento",
+      "pt": "Vamos registrar os próximos passos e os responsáveis.",
+      "en": "Let's document the next steps and the people responsible.",
+      "zh": "我们把下一步行动和负责人记录下来吧。",
+      "py": "Wǒmen bǎ xià yí bù xíngdòng hé fùzérén jìlù xiàlái ba."
+    }
+  ]
+};
