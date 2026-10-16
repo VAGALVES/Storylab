@@ -1,4 +1,6 @@
-# StoryLab — publicação gratuita sem Netlify
+# StoryLab — alternativa histórica de publicação (não ativa)
+
+**STATUS 2026-10-16:** o usuário escolheu expressamente **manter o Netlify como hospedagem principal**. A automação do GitHub Pages foi desativada e não faz parte do fluxo de publicação. As instruções abaixo são apenas documentação de uma alternativa não habilitada; não representam publicação atual nem migração planejada.
 
 ## Por que existe esta alternativa
 
@@ -16,7 +18,7 @@ O GitHub permanece como fonte única das alterações. Não é necessário apaga
 ## O que será automatizado
 
 - A workflow `Verificar StoryLab` testa cada integração na `main`.
-- Após uma execução aprovada, a workflow `Publicar StoryLab (GitHub Pages gratuito)` usa **o mesmo commit aprovado**, confere o service worker, recria o HTML único e publica somente os arquivos necessários.
+- **Não há publicação automática no GitHub Pages.** Uma eventual opção futura precisaria de nova aprovação e configuração explícita. O Netlify continua sendo o destino da aplicação.
 - A página mantém links relativos e escopo relativo do PWA; por isso pode funcionar no subcaminho `/Storylab/`.
 - Nenhuma build do GitHub Pages consome créditos do Netlify.
 
