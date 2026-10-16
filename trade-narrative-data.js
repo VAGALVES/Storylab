@@ -1,4 +1,4 @@
-/* StoryLab v2.23 · Cenas de estudo e roteiro oral. São situações hipotéticas,
+/* StoryLab v2.24 · Cenas de estudo e roteiro oral. São situações hipotéticas,
    nunca fichas de produtos reais nem alegações de fabricantes. */
 window.STORYLAB_NARRATIVE_DATA={
  phases:[
@@ -98,6 +98,425 @@ window.STORYLAB_NARRATIVE_DATA={
  'Como descrever a proposta de valor sem confundir catálogo, capacidade fabril e certificações?'],
  pitfalls:['Tomar showroom como evidência de fábrica própria.','Confundir portfólio amplo com capacidade produtiva integrada.']}
  ],
+ sceneDirections:{
+ "moto": [
+  [
+   "Plano geral a três quartos com referência ambiental de escala.",
+   [
+    "silhueta da carenagem",
+    "porte aparente",
+    "cenário de exposição"
+   ],
+   "Nesta vista, [elemento visível] se destaca em [contexto]; ainda não verifiquei [dado].",
+   "O aspecto esportivo não demonstra potência nem cilindrada."
+  ],
+  [
+   "Passagem lateral lenta com altura constante, revelando banco e guidão.",
+   [
+    "banco alinhado a",
+    "guidão ladeia",
+    "carenagem contorna"
+   ],
+   "De perfil, [parte] se alinha a [referência], ao passo que [outra] [relação visível].",
+   "Alinhamento visual não comprova equilíbrio dinâmico."
+  ],
+  [
+   "Close estável na junção de painéis com luz lateral.",
+   [
+    "junção dos painéis",
+    "reflexo da superfície",
+    "borda aparente"
+   ],
+   "Sob esta luz, a [parte] apresenta [textura/reflexo] junto a [junção].",
+   "Brilho não confirma composição nem resistência."
+  ],
+  [
+   "Com autorização, grave apenas o alcance dos comandos em manobra estática.",
+   [
+    "alcance do guidão",
+    "posição do comando",
+    "resposta observada"
+   ],
+   "Na ação [tarefa testada], percebi [resultado] sob [condição específica].",
+   "Manobra parada não comprova segurança na condução."
+  ],
+  [
+   "Retome o plano geral e destaque o detalhe efetivamente registrado.",
+   [
+    "impressão de conjunto",
+    "característica observada",
+    "ensaio pendente"
+   ],
+   "Observei [característica]; ainda preciso de [evidência] para avaliar [atributo].",
+   "Não emitir veredicto de segurança sem ensaio."
+  ]
+ ],
+ "carro": [
+  [
+   "Mostre o veículo inteiro e uma referência física de escala.",
+   [
+    "silhueta da carroceria",
+    "ambiente estacionado",
+    "porte visual"
+   ],
+   "No cenário [local], vejo [forma] em relação a [referência].",
+   "Silhueta baixa não informa centro de gravidade."
+  ],
+  [
+   "Desloque a câmera lateralmente, evitando deformação da grande-angular.",
+   [
+    "linha do teto",
+    "perfil dos vidros",
+    "relação entre rodas"
+   ],
+   "A [parte] se prolonga até [outra], enquanto [elemento] ocupa [posição].",
+   "Perspectiva altera a percepção de proporções."
+  ],
+  [
+   "Faça close nas junções e superfícies com iluminação comparável.",
+   [
+    "folga entre painéis",
+    "reflexo da pintura",
+    "acabamento das bordas"
+   ],
+   "Na união [entre partes], observo [aspecto] sob [condição de luz].",
+   "Aparência uniforme não prova tolerância dimensional."
+  ],
+  [
+   "Com permissão, registre entrada, postura e alcance, sem dirigir.",
+   [
+    "abertura da porta",
+    "alcance do console",
+    "posição do assento"
+   ],
+   "Na posição [descrição], consegui [ação] durante [tempo observado].",
+   "Poucos segundos sentado não confirmam ergonomia."
+  ],
+  [
+   "Combine vista externa e um detalhe realmente demonstrado.",
+   [
+    "coerência visual",
+    "experiência localizada",
+    "teste não realizado"
+   ],
+   "Posso afirmar [observação]; [segurança/consumo] exige [método].",
+   "Evite converter impressão estética em classificação técnica."
+  ]
+ ],
+ "telefone": [
+  [
+   "Mostre o telefone inteiro na mão, com distância e escala reconhecíveis.",
+   [
+    "dimensão aparente",
+    "apoio na palma",
+    "posição do corpo"
+   ],
+   "Na minha mão, o aparelho ocupa [posição] em relação a [referência].",
+   "Escala fotográfica varia conforme perspectiva."
+  ],
+  [
+   "Gire o aparelho em três quartos para revelar bordas e câmera.",
+   [
+    "moldura circunda",
+    "módulo sobressai",
+    "botão ladeia"
+   ],
+   "Deste ângulo, o [módulo] sobressai da [parte], e [elemento] ladeia [referência].",
+   "Saliência não mede desempenho óptico."
+  ],
+  [
+   "Aplique luz oblíqua para revelar texturas sem exagerar reflexos.",
+   [
+    "borda polida",
+    "superfície fosca",
+    "textura perceptível"
+   ],
+   "Com luz lateral, [parte] parece [qualidade] sem comprovar [material].",
+   "Brilho não prova vidro ou alumínio."
+  ],
+  [
+   "Registre toque, resposta da tela e reposicionamento da mão.",
+   [
+    "alcance do polegar",
+    "resposta ao toque",
+    "aderência percebida"
+   ],
+   "Ao executar [tarefa], observei [resposta] nesta tentativa.",
+   "Um uso breve não mede autonomia nem fluidez média."
+  ],
+  [
+   "Retorne ao enquadramento geral distinguindo experiência e hipótese.",
+   [
+    "conforto nesta sessão",
+    "disposição dos comandos",
+    "comparação pendente"
+   ],
+   "Minha observação mais consistente é [atributo], mas falta testar [questão].",
+   "Não estabelecer superioridade a partir de um exemplar."
+  ]
+ ],
+ "camera": [
+  [
+   "Enquadre câmera e ambiente real de gravação antes dos detalhes.",
+   [
+    "corpo do equipamento",
+    "cenário de filmagem",
+    "proporção aparente"
+   ],
+   "Neste contexto, a câmera está [posição] para [uso observado/declarado].",
+   "A forma não permite inferir resolução ou estabilização."
+  ],
+  [
+   "Contorne lentamente para mostrar lente, tela e suporte.",
+   [
+    "tela articula-se em",
+    "lente projeta-se de",
+    "suporte encaixa-se em"
+   ],
+   "A [tela] articula-se em [ponto], enquanto [outra parte] ocupa [posição].",
+   "Articulação visível não define sua amplitude funcional."
+  ],
+  [
+   "Registre em close a empunhadura e a transição entre peças.",
+   [
+    "textura da pega",
+    "junção dos componentes",
+    "acabamento da borda"
+   ],
+   "Na [parte], percebo [textura] sob [iluminação], sem atestar [material].",
+   "Aspecto visual não confirma composição."
+  ],
+  [
+   "Filme um movimento de teste e identifique as condições de captura.",
+   [
+    "aproximação controlada",
+    "resposta do foco",
+    "equilíbrio da pega"
+   ],
+   "Durante [movimento], no contexto [condição], observei [resultado no vídeo].",
+   "Não prometer estabilização perfeita sem verificar o take."
+  ],
+  [
+   "Mostre um trecho capturado e diga qual ensaio ainda falta.",
+   [
+    "registro efetivamente visto",
+    "limitação do teste",
+    "ensaio comparável"
+   ],
+   "O trecho evidencia [detalhe observável]; [comparação] requer [protocolo].",
+   "Qualidade profissional depende de critério explícito."
+  ]
+ ],
+ "cadeira": [
+  [
+   "Mostre a cadeira em relação à mesa e à postura de uso.",
+   [
+    "altura aparente",
+    "área de apoio",
+    "contexto de trabalho"
+   ],
+   "Neste ambiente, a cadeira ocupa [posição] e apresenta [elementos].",
+   "Ambiente de escritório não prova ergonomia."
+  ],
+  [
+   "Desloque ao perfil para distinguir encosto, base e apoios.",
+   [
+    "encosto une-se a",
+    "apoio ladeia",
+    "base sustenta"
+   ],
+   "O [encosto] se conecta a [parte], enquanto [apoio] ocupa [posição].",
+   "Alavanca visível não confirma faixa de regulagem."
+  ],
+  [
+   "Aproxime costura, canto e junção com luz uniforme.",
+   [
+    "costura do revestimento",
+    "borda do assento",
+    "junção da base"
+   ],
+   "Na [parte], o acabamento apresenta [detalhe visível] sob [luz].",
+   "Textura não prova resistência à abrasão."
+  ],
+  [
+   "Registre somente ajustes realmente testados e sua duração.",
+   [
+    "regulagem acionada",
+    "apoio percebido",
+    "postura observada"
+   ],
+   "Após [ajuste], durante [tempo], percebi [efeito situado].",
+   "Conforto subjetivo não é certificação ergonômica."
+  ],
+  [
+   "Retorne ao conjunto incluindo um ajuste efetivamente demonstrado.",
+   [
+    "suporte percebido",
+    "acesso aos ajustes",
+    "uso prolongado pendente"
+   ],
+   "Consegui [ação] nesta sessão; falta avaliar [condição prolongada].",
+   "Não generalizar para todos os corpos e usuários."
+  ]
+ ],
+ "bateria": [
+  [
+   "Mostre produto e conectores sem abrir carcaça ou energizar cabos.",
+   [
+    "carcaça externa",
+    "portas visíveis",
+    "uso anunciado"
+   ],
+   "A unidade observada possui [partes externas]; ainda não medi [grandeza].",
+   "Tamanho aparente não revela capacidade em Wh."
+  ],
+  [
+   "Passe da frente à lateral mostrando posição das portas.",
+   [
+    "indicador ladeia",
+    "conector situa-se em",
+    "carcaça envolve"
+   ],
+   "A [porta] fica [posição] em relação a [indicador].",
+   "Distribuição exterior não comprova circuitos de proteção."
+  ],
+  [
+   "Aproxime inscrições legíveis e textura superficial.",
+   [
+    "inscrição da etiqueta",
+    "superfície do invólucro",
+    "linha de união"
+   ],
+   "A etiqueta declara [valor], e a carcaça parece [característica].",
+   "Valor impresso é declaração, não medição."
+  ],
+  [
+   "Em uso autorizado, registre conexão compatível e resposta visível.",
+   [
+    "sinal do indicador",
+    "cabo conectado",
+    "resultado observado"
+   ],
+   "Ao conectar [dispositivo], observei [resposta], sob [condição].",
+   "LED aceso não mede potência entregue nem segurança."
+  ],
+  [
+   "Feche separando dados de etiqueta de medições não feitas.",
+   [
+    "energia em Wh",
+    "potência em W",
+    "ensaio pendente"
+   ],
+   "Posso citar [dado declarado], mas [grandeza] ainda exige [teste].",
+   "Wh, W e A não são intercambiáveis."
+  ]
+ ],
+ "ferramenta": [
+  [
+   "Mostre ferramenta desligada e contexto de uso informado.",
+   [
+    "carcaça externa",
+    "empunhadura",
+    "tarefa declarada"
+   ],
+   "Neste cenário, observo [peça] e [partes externas identificáveis].",
+   "O aspecto não informa torque ou aplicação segura."
+  ],
+  [
+   "Faça contorno visual mantendo mãos longe de partes móveis.",
+   [
+    "gatilho situa-se em",
+    "mandril prolonga",
+    "empunhadura sustenta"
+   ],
+   "A [parte] se prolonga a partir de [referência]; o [comando] está em [posição].",
+   "Geometria não comprova resistência mecânica."
+  ],
+  [
+   "Mostre em close as juntas e a pega, com equipamento parado.",
+   [
+    "junção da carcaça",
+    "textura da pega",
+    "posição do gatilho"
+   ],
+   "A [área] parece [textura]; ainda não verifiquei [desempenho].",
+   "Aspecto rugoso não mede aderência."
+  ],
+  [
+   "Registre somente demonstração segura e autorizada por responsável.",
+   [
+    "resposta do comando",
+    "ruído percebido",
+    "vibração localizada"
+   ],
+   "Durante [ação permitida], percebi [resposta] em [condição].",
+   "Não criar teste inseguro para produzir uma cena."
+  ],
+  [
+   "Conclua com equipamento desligado e identifique ensaio pendente.",
+   [
+    "pontos de apoio",
+    "uso demonstrado",
+    "ensaio de torque"
+   ],
+   "Nesta visita, observei [fato]; [desempenho] demanda [teste].",
+   "Carcaça espessa não comprova segurança."
+  ]
+ ],
+ "showroom": [
+  [
+   "Mostre o espaço sem pressupor que ele pertence a uma fábrica.",
+   [
+    "ambiente de exposição",
+    "identidade apresentada",
+    "escopo da visita"
+   ],
+   "Neste espaço, estão expostos [itens] segundo [fonte identificada].",
+   "Showroom não é sinônimo de fábrica."
+  ],
+  [
+   "Faça panorâmica lenta de setores, mantendo legendas legíveis.",
+   [
+    "famílias de produtos",
+    "disposição por categoria",
+    "área expositiva"
+   ],
+   "Os exemplares se agrupam por [critério aparente/declarado], com [linha] em [setor].",
+   "Portfólio amplo não prova produção integrada."
+  ],
+  [
+   "Aproxime exemplar específico e registre etiqueta e acabamento.",
+   [
+    "acabamento da amostra",
+    "material declarado",
+    "procedência documentada"
+   ],
+   "Nesta amostra, observo [detalhe], mas a procedência está [estado da verificação].",
+   "Amostra de exposição não prova escala produtiva."
+  ],
+  [
+   "Na entrevista, inclua pergunta, identidade da fonte e resposta.",
+   [
+    "demonstração realizada",
+    "fala do representante",
+    "documento apresentado"
+   ],
+   "Segundo [fonte identificada], [declaração]; eu pude observar [fato].",
+   "Discurso de vendas não equivale a prova independente."
+  ],
+  [
+   "Feche no plano amplo distinguindo oferta, capacidade e certificação.",
+   [
+    "proposta da marca",
+    "portfólio visto",
+    "verificação de origem"
+   ],
+   "A visita permitiu ver [portfólio]; ainda falta confirmar [dado].",
+   "Não afirmar fábrica própria ou certificações sem documentação."
+  ]
+ ]
+},
+ transitions:['Da visão geral, seguimos para a relação entre as partes.','Depois da forma, investigamos as superfícies.','Da aparência, passamos à experiência observada.','Com o teste delimitado, é hora de sintetizar.','Encerramos com o que sabemos e o que ainda precisamos verificar.'],
  rubric:[
  ['referencia','Contextualizei o objeto e a situação de uso.'],
  ['semantica','Usei substantivos, verbos e adjetivos sem misturar conceitos.'],

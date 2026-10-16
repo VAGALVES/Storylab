@@ -1701,3 +1701,23 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 .nar-language-footer{display:flex;gap:8px;flex-wrap:wrap}
 .nar-language-footer .nar-btn{font-size:11px}
 @media(max-width:580px){.nar-language-grid{grid-template-columns:1fr}.nar-language-footer .nar-btn{width:100%}}
+
+/* v2.24 — direção de cena contextual, acessível e distinta da autoria */
+.nar-coach{min-width:0;border:1px solid var(--study-border);border-radius:12px;background:var(--paper);overflow:hidden}
+.nar-coach summary{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;list-style:none;background:var(--study-soft);color:var(--ink)}
+.nar-coach summary::-webkit-details-marker{display:none}
+.nar-coach summary:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
+.nar-coach-marker{display:grid;place-items:center;flex:none;width:35px;height:35px;border:1px solid var(--study-border);border-radius:10px;font:700 20px Georgia,serif;color:var(--study-active)}
+.nar-coach summary>span:last-child{display:grid;gap:5px;min-width:0}
+.nar-coach summary small,.nar-coach-block small{font:800 10px/1.4 system-ui,sans-serif;letter-spacing:.055em;color:var(--muted)}
+.nar-coach summary strong{font:650 12px/1.65 system-ui,sans-serif;color:var(--ink)}
+.nar-coach-body{padding:15px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.nar-coach-block{min-width:0;background:var(--wash);border:1px solid var(--line);border-radius:9px;padding:13px}
+.nar-coach-block p{font-size:12px;line-height:1.75;color:var(--ink2);margin:7px 0 0;overflow-wrap:anywhere}
+.nar-coach-highlight{background:var(--study-soft);border-color:var(--study-border)}
+.nar-coach-highlight p{font:normal 16px/1.65 Georgia,serif;color:var(--ink)}
+.nar-coach-limit{grid-column:1/-1;border-left:3px solid #b98e4c;padding:10px 13px;background:var(--wash);border-radius:0 9px 9px 0}
+.nar-coach-limit strong{font-size:11px;color:var(--ink)}
+.nar-coach-limit p{font-size:11px;line-height:1.75;color:var(--ink2);margin:5px 0 0}
+.nar-coach-body>.nar-btn{justify-self:start;font-size:11px}
+@media(max-width:580px){.nar-coach-body{grid-template-columns:1fr}.nar-coach-limit{grid-column:auto}.nar-coach summary{padding:12px}.nar-coach-body>.nar-btn{width:100%}}
