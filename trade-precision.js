@@ -28,6 +28,7 @@ function scales(){
  return '<section class="precision-root">'+heading('ADJETIVOS · UM EIXO DE CADA VEZ','Escalas que não confundem conceitos.','A gradação só é válida quando os graus descrevem a mesma propriedade, em condições comparáveis. Compacto não é o meio do caminho entre pequeno e grande; maciço não é sinônimo de duro.')+
  '<div class="precision-filters" role="group" aria-label="Propriedades para graduar">'+data().scales.map(x=>button('scale',esc(x.title),x.id,x.id===s.id?'selected':'')).join('')+'</div>'+
  '<article class="precision-detail"><span class="trade-kicker">PROPRIEDADE / '+esc(s.axis)+'</span><h3>'+esc(s.title)+'</h3><p>'+esc(s.context)+'</p>'+
+ (window.StoryLabScaleDiagrams?.render(s,index)||'')+
  '<div class="precision-spectrum" role="group" aria-label="Graus da escala">'+s.steps.map((x,i)=>button('step','<small>GRAU '+(i+1)+'</small><strong>'+esc(x[0])+'</strong>',String(i),'precision-degree'+(index===i?' selected':''))).join('')+'</div>'+
  '<div class="precision-scale-focus"><span class="trade-kicker">GRAU '+(index+1)+' / 5</span><strong>'+esc(word[0])+'</strong><span lang="en">EN · '+esc(word[1])+'</span><span lang="zh-CN">中文 · '+esc(word[2])+'</span></div>'+
  '<div class="precision-rule"><small>ATENÇÃO À DISTINÇÃO</small><p>'+esc(s.caution)+'</p></div></article>'+
