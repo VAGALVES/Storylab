@@ -45,6 +45,10 @@ jobs:
           node --check encaixes-data.js
           node --check encaixes-engine.js
           node --check audio-speech.js
+          node --check trade-data.js
+          node --check trade-hub.js
+      - name: Testar Atlas de Produtos, Fornecedores e Fraseoteca
+        run: node test_trade.mjs
       - name: Testar áudio transversal em três idiomas
         run: node test_audio.mjs
       - name: Testar Encaixes da Fraseoteca
@@ -90,7 +94,7 @@ jobs:
       - name: Montar versão offline
         run: |
           python build_standalone.py
-          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 23; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h; assert 'StoryLabLinguistics' in h; assert 'StoryLabEncaixes' in h; assert 'StoryLabAudio' in h"
+          python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert h.count('<script>') == 25; assert 'StoryLabInteract' in h; assert 'STORYLAB_ATLAS_GUIDES' in h; assert 'atlas12-toolbar' in h; assert 'StoryLabRecorder' in h; assert 'StoryLabLinguistics' in h; assert 'StoryLabEncaixes' in h; assert 'StoryLabAudio' in h; assert 'StoryLabTrade' in h"
           # O HTML único é reconstruído no deploy do Netlify. O arquivo do repositório
           # é uma cópia histórica; não exigimos igualdade de bytes até sincronizá-lo.
           python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert 'Encaixes' in h and 'STORYLAB_ENCAIXES' in h"

@@ -14,7 +14,7 @@ FILES = [
     'urbanism-atlas.js', 'spatial-verbs-data.js', 'spatial-regency-data.js', 'spatial-verb-icons.js', 'spatial-verb-icons-extra.js', 'spatial-contrast-data.js',
     'spatial-contrast.js', 'spatial-verbs.js',
     'atlas-engine.js', 'atlas-recorder.js',
-    'atlas-audio-ui.js', 'interact.js', 'illustrations.js', 'linguistics-data.js', 'linguistics-lab.js', 'encaixes-data.js', 'encaixes-engine.js', 'audio-speech.js', 'manifest.webmanifest',
+    'atlas-audio-ui.js', 'interact.js', 'illustrations.js', 'linguistics-data.js', 'linguistics-lab.js', 'encaixes-data.js', 'encaixes-engine.js', 'trade-data.js', 'trade-hub.js', 'audio-speech.js', 'manifest.webmanifest',
     'assets/icon.svg', 'assets/skyline.svg'
 ]
 TARGET = ROOT / 'service-worker.js'
