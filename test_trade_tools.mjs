@@ -69,7 +69,7 @@ click('reveal');
 click('grade','l01:again');
 assert.equal(store.tradeLanguageReview.l01.level,0);
 click('due');
-assert.match(hub.render(),/Revisões pendentes/);
+assert.match(hub.render(),/Apenas revisões/);
 click('training');
 click('pattern','l20');
 assert.match(hub.render(),/Result in/);
