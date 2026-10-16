@@ -627,3 +627,8 @@ A seção `Precisão e cuidado` deve ensinar distinções semânticas, contextos
 - Leitura e documentação dos exemplos em `CURADORIA_ATLAS.md`; registro dos verbetes alterados em `content/atlas_curation_manifest.json`.
 
 **Lacuna residual:** a atualização automática detecta repetições e regressões estruturais, mas revisão factual fina e validação especialista continuam exigindo estudo e inspeção humana.
+
+
+## Atualização — Laboratório de Encaixes da Fraseoteca
+
+208 estruturas abertas passam a ter 416 complementos contextualizados e preenchimento autoral dos espaços de reticências. Conteúdo independente do catálogo principal, preservando 657 estruturas originais e respectivas traduções já existentes. Treino com 1 ou 2 lacunas, comparação de sentidos, leitura, cópia e teleprompter. Persistência local no backup com saneamento de dados. O próximo ciclo poderá adicionar explicações específicas sobre regência, concordância, relação semântica e marcadores discursivos para cada encaixe, sem transformar quantidade em substituto de curadoria.

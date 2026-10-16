@@ -16,6 +16,24 @@ Exemplos: *pesponto* diferencia reforço, fixação e ornamento; *espaço residu
 
 
 
+
+## Encaixes editoriais da Fraseoteca
+
+As 208 estruturas da Fraseoteca que incluem reticências agora têm **duas sugestões editoriais contextualizadas cada**, totalizando **416 encaixes originais**, com tópicos de urbanismo, moda, comunicação, gastronomia, ciência e audiovisual. Os complementos respeitam a regência e as posições das lacunas, inclusive estruturas com duas partes, como `mais... do que...` e `enquanto... `.
+
+Abra uma frase em português e escolha **Explorar encaixes** para comparar dois contextos ou escrever seus próprios complementos. A prévia produz uma frase completa; é possível copiar, ouvir em português e enviá-la ao teleprompter. As escolhas autorais ficam salvas no mesmo progresso local e entram no backup JSON existente. O filtro **Com encaixes** exibe apenas estruturas trabalháveis. Em inglês e mandarim, permanecem apenas as traduções originais disponíveis; o app **não inventa traduções dos novos exemplos**.
+
+\n**Nota de publicação:** o Netlify executa `python build_standalone.py` durante o deploy e entrega o HTML único sempre reconstruído. O arquivo offline versionado pode permanecer na revisão anterior até receber uma sincronização própria; para obter o HTML independente atualizado, utilize a versão publicada no Netlify ou execute o gerador localmente.\n
+### Fonte e qualidade editorial
+
+- `content/phrase_encaixes.json`: 208 estruturas mapeadas, opções e segmentos a inserir.
+- `generate_encaixes.py` gera `encaixes-data.js` sem dependências.
+- `encaixes-engine.js` contém a prática e o cartão dinâmico.
+- `test_encaixes.py` e `test_encaixes.mjs` verificam cobertura integral, número de lacunas, renderização, acessibilidade dos controles e integração com a voz e o teleprompter.
+- Os exemplos são **situações hipotéticas de estudo**, não afirmações verificadas sobre locais, empresas ou acontecimentos reais.
+
+Para atualizar o catálogo, edite o JSON e rode `python generate_encaixes.py`, `python generate_service_worker.py`, `python build_standalone.py` e `python test_encaixes.py`, nessa ordem.
+
 ## NOVO · Academia da Linguagem Ilustrada (v2.7)
 
 Aulas curriculares resumidas e fundamentação linguística aprofundada têm papéis diferentes. Agora há uma biblioteca acadêmica própria, ligada às disciplinas correspondentes e aberta pelo menu **Linguística Aplicada**, sem confundir os dossiês com novas unidades curriculares.

@@ -614,3 +614,38 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 .ling-figure figcaption strong{display:block;margin-top:9px;line-height:1.65;color:var(--ink)}
 .ling-figure-controls{gap:10px}
 @media(prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+
+/* v2.13 · Laboratório de Encaixes: sintaxe aplicada, hipóteses e texto autoral */
+.encaixe-teaser{margin:1px 0 0}
+.encaixe-trigger{display:inline-flex;align-items:center;justify-content:space-between;gap:12px;max-width:100%;border:1px solid var(--study-border);background:var(--study-soft);color:var(--study-ink);padding:9px 12px;border-radius:11px;font-size:12px;font-weight:760;text-align:left;line-height:1.4}
+.encaixe-trigger:hover{border-color:var(--study-active);filter:brightness(.96)}
+.encaixe-num{padding:3px 7px;border-radius:99px;background:var(--paper);border:1px solid var(--line);color:var(--muted);font-size:10px;white-space:nowrap}
+.encaixe-lab{background:var(--wash);border:1px solid var(--study-border);border-radius:15px;padding:17px;display:grid;gap:13px;min-width:0}
+.encaixe-header{display:flex;justify-content:space-between;align-items:start;gap:12px;min-width:0}
+.encaixe-header h4{font-family:Georgia,serif;font-weight:normal;font-size:21px;line-height:1.24;margin:5px 0 0;color:var(--ink)}
+.encaixe-close{background:transparent;border:1px solid var(--line);padding:7px 11px;color:var(--ink2);border-radius:8px;font-size:11px;flex:none}
+.encaixe-intro,.encaixe-disclaimer{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.encaixe-options{display:grid;gap:8px}
+.encaixe-option{display:flex;text-align:left;gap:11px;align-items:start;border:1px solid var(--line);border-radius:11px;background:var(--paper);color:var(--ink);padding:12px;width:100%;min-width:0}
+.encaixe-option.active{border-color:var(--study-active);background:var(--study-soft)}
+.encaixe-option:hover{border-color:var(--study-border)}
+.encaixe-option span:last-child{display:grid;gap:4px;min-width:0;flex:1}
+.encaixe-option strong{font-size:12px;line-height:1.4}
+.encaixe-option small{font-size:11px;line-height:1.55;color:var(--ink2);white-space:normal;overflow-wrap:anywhere}
+.encaixe-select-dot{display:block;width:17px;height:17px;flex:none;border-radius:50%;border:2px solid var(--study-border);margin-top:1px;background:var(--paper)}
+.encaixe-option.active .encaixe-select-dot{border:5px solid var(--study-active)}
+.encaixe-result{background:var(--paper);border-left:4px solid var(--study-active);border-radius:0 10px 10px 0;padding:15px 16px;min-width:0}
+.encaixe-result p{font-family:Georgia,serif;font-size:18px;line-height:1.58;margin:7px 0 0;overflow-wrap:anywhere;color:var(--ink)}
+.encaixe-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.encaixe-actions .btn{white-space:normal;font-size:11px;min-height:39px;line-height:1.4}
+.encaixe-custom{display:grid;gap:9px}
+.encaixe-custom label{display:block;font-size:11px;font-weight:700;margin-bottom:5px;color:var(--ink2)}
+.encaixe-custom input{display:block;width:100%;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:12px;color:var(--ink);font-size:13px;line-height:1.5}
+.encaixe-custom input:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.encaixe-trigger:focus-visible,.encaixe-option:focus-visible,.encaixe-close:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+[data-theme="dark"] .encaixe-lab{background:rgba(255,255,255,.035)}
+[data-theme="dark"] .encaixe-option.active{background:var(--study-soft)}
+[data-theme="dark"] .encaixe-trigger{background:var(--study-soft)}
+@media(max-width:580px){.encaixe-lab{padding:14px}.encaixe-header h4{font-size:19px}.encaixe-result p{font-size:17px}.encaixe-actions .btn{flex:1 1 auto}}
+@media(prefers-reduced-motion:reduce){.encaixe-trigger:hover{filter:none}}
+

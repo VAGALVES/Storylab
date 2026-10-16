@@ -1,5 +1,6 @@
 # Arquivos estáticos diretamente na raiz do repositório.
 [build]
+  command = "python generate_encaixes.py --check && python build_standalone.py"
   publish = "."
 
 [[headers]]
