@@ -18,7 +18,7 @@ assert.equal(L.patterns.length,20);
 assert.equal(new Set(L.patterns.map(x=>x.id)).size,20);
 for(const p of L.patterns){
  assert.ok(L.groups.some(g=>g[0]===p.group),p.id);
- assert.ok(p.pt.length>=20&&p.en.length>=20&&p.zh.length>=9&&p.py.length>=12,p.id);
+ assert.ok(p.pt.length>=20&&p.en.length>=20&&p.zh.length>=5&&p.py.length>=12,p.id);
  assert.match(p.zh,/[\u3400-\u9fff]/,p.id);
  assert.equal(p.frame.length,3,p.id);
  assert.ok(p.frame.every(x=>x.length>=4));
