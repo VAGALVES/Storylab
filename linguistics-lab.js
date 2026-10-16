@@ -146,13 +146,13 @@ window.StoryLabLinguistics = (() => {
       art+='<rect x="542" y="133" width="134" height="69" rx="12" fill="#f1e3d6" stroke="#c3a98f"/>';
       art+=svgText(609,174,'PRAÇA','font-size="17" text-anchor="middle" fill="#20302d"');
       art+=svgText(711,53,'N ↑','font-size="15" font-weight="700" text-anchor="middle" fill="#a45c42"');
-      const positions=[[380,259,380,220],[380,68,380,110],[51,239,281,206]];
+      const positions=[[380,259,380,220],[380,68,380,110],[51,185,281,185]];
       const p=positions[active];
       art+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="22" fill="#214b42" stroke="#f1e3d6" stroke-width="3"/>';
       art+=svgText(p[0],p[1]+4,'CAM','font-size="11" text-anchor="middle" fill="#ffffff" font-weight="700"');
       art+=line(
         active===2?p[0]+24:p[0],
-        active===0?p[1]-24:active===1?p[1]+24:p[1]-3,
+        active===0?p[1]-24:active===1?p[1]+24:p[1],
         p[2],p[3],
         'stroke-dasharray="6 5" stroke-width="3" marker-end="url(#lingArrow)"'
       );
@@ -216,7 +216,9 @@ window.StoryLabLinguistics = (() => {
         art+=svgText(380,252,'03 · O número corrigido é 22; não preserve 20 como resposta final.','font-size="14" font-weight="600" text-anchor="middle" fill="#214b42"');
       }
     }
-    return '<svg class="ling-diagram" viewBox="0 0 760 300" role="img" aria-label="'+escape(item.visual.title+': '+item.visual.caption+' '+diagramNote(item,active))+'" xmlns="http://www.w3.org/2000/svg">'+base+
+    return '<svg class="ling-diagram" viewBox="0 0 760 300" role="img" aria-labelledby="ling-diagram-title ling-diagram-desc" xmlns="http://www.w3.org/2000/svg">'+
+    '<title id="ling-diagram-title">'+escape(item.visual.title)+'</title>'+
+    '<desc id="ling-diagram-desc">'+escape(item.visual.caption+' '+diagramNote(item,active))+'</desc>'+base+
     '<rect x="1" y="1" width="758" height="298" rx="21" fill="#fffefa" stroke="#e0d6cb" stroke-width="2"/>'+
     svgText(30,32,'STORYLAB  /  MECANISMO LINGUÍSTICO','font-size="11" font-weight="700" letter-spacing="2" fill="#a45c42"')+art+'</svg>';
   }
@@ -257,7 +259,7 @@ window.StoryLabLinguistics = (() => {
     '<div class="ling-shell"><aside class="ling-syllabus"><div class="eyebrow">ÍNDICE ACADÊMICO</div><p>Escolha um conceito para abrir o dossiê ilustrado.</p><div class="ling-chapter-list">'+chapters.map((ch,i)=>btn('chapter','<span class="ling-chapter-num">'+String(i+1).padStart(2,'0')+'</span><span class="ling-chapter-label"><strong>'+escape(ch.title)+'</strong><small>'+escape(ch.area)+' · '+ch.minutes+' min</small></span><span class="ling-chapter-status" aria-label="'+(checked(ch)?'Concluído':'Não concluído')+'">'+(checked(ch)?'✓':'→')+'</span>','data-index="'+i+'" aria-current="'+(state.active===i?'true':'false')+'"','ling-chapter '+(state.active===i?'active':'')+(checked(ch)?' is-done':''))).join('')+'</div></aside>'+
     '<article class="ling-article"><div class="ling-hero"><div><span class="eyebrow">'+escape(chapter.area.toUpperCase())+' / DOSSIÊ '+String(state.active+1).padStart(2,'0')+'</span><h2>'+escape(chapter.title)+'</h2><p>'+escape(chapter.subtitle)+'</p></div><div class="ling-duration">'+chapter.minutes+'<span>min de estudo</span></div></div>'+
     '<figure class="ling-figure"><div class="ling-figure-heading"><span class="eyebrow">ESQUEMA VISUAL EXPLICADO</span><strong>'+escape(chapter.visual.title)+'</strong></div>'+diagramSvg(chapter,selected)+
-    '<figcaption>'+escape(chapter.visual.caption)+' <strong>'+escape(diagramNote(chapter,selected))+'</strong></figcaption><div class="ling-figure-controls"><span class="small muted">Explore as perspectivas:</span>'+[0,1,2].map(i=>btn('diagram','0'+(i+1),'data-index="'+i+'" aria-label="Etapa '+(i+1)+' de 3: '+escape(diagramNote(chapter,i))+'" aria-pressed="'+(selected===i?'true':'false')+'"','ling-diagram-button '+(selected===i?'active':''))).join('')+'</div></figure>'+
+    '<figcaption>'+escape(chapter.visual.caption)+' <strong aria-live="polite" aria-atomic="true">'+escape(diagramNote(chapter,selected))+'</strong></figcaption><div class="ling-figure-controls"><span class="small muted">Explore as perspectivas:</span>'+[0,1,2].map(i=>btn('diagram','0'+(i+1),'data-index="'+i+'" aria-label="Etapa '+(i+1)+' de 3: '+escape(diagramNote(chapter,i))+'" aria-pressed="'+(selected===i?'true':'false')+'"','ling-diagram-button '+(selected===i?'active':''))).join('')+'</div></figure>'+
     caseStudy(chapter)+
     '<div class="ling-tabs" role="tablist" aria-label="Conteúdo acadêmico">'+[['theory','Fundamentação'],['practice','Exercício e revisão'],['references','Referências']].map(([id,label])=>btn('tab',label,'data-tab="'+id+'" role="tab" aria-selected="'+(state.tab===id?'true':'false')+'"','ling-tab '+(state.tab===id?'active':''))).join('')+'</div>'+
     (state.tab==='theory'?theory(chapter):state.tab==='practice'?practice(chapter):references(chapter))+
@@ -271,7 +273,25 @@ window.StoryLabLinguistics = (() => {
       event.preventDefault();
       const action=target.dataset.lingAction;
       if(action==='chapter'){const i=Number(target.dataset.index);if(!Number.isInteger(i)||i<0||i>=DATA().length)return;state.active=i;state.diagramStep=0;state.tab='theory';api.render();return}
-      if(action==='diagram'){const i=Number(target.dataset.index);if(i<0||i>2||!Number.isInteger(i))return;state.diagramStep=i;api.render();return}
+      if(action==='diagram'){
+        const i=Number(target.dataset.index);
+        if(i<0||i>2||!Number.isInteger(i))return;
+        state.diagramStep=i;
+        // Atualize somente o desenho e sua legenda: o foco permanece no botão 01/02/03.
+        // O controle de escuta anexado ao figcaption não é destruído.
+        const figure=target.closest('.ling-figure');
+        const drawing=figure?.querySelector('.ling-diagram');
+        const note=figure?.querySelector('figcaption strong');
+        const controls=figure?.querySelectorAll('.ling-diagram-button');
+        if(!drawing||!note||!controls||controls.length!==3){api.render();return}
+        drawing.outerHTML=diagramSvg(c(),i);
+        note.textContent=diagramNote(c(),i);
+        controls.forEach((button,j)=>{
+          button.classList.toggle('active',j===i);
+          button.setAttribute('aria-pressed',String(j===i));
+        });
+        return;
+      }
       if(action==='tab'){if(!['theory','practice','references'].includes(target.dataset.tab))return;state.tab=target.dataset.tab;api.render();return}
       if(action==='answer'){const i=Number(target.dataset.index);if(i<0||i>=c().quiz.options.length)return;const store=st();store.linguisticsAnswers=store.linguisticsAnswers||{};store.linguisticsAnswers[c().id]={selected:i,at:new Date().toISOString()};api.save();api.render();return}
       if(action==='complete'){const store=st();store.linguisticsDone=Array.isArray(store.linguisticsDone)?store.linguisticsDone:[];if(checked(c()))store.linguisticsDone=store.linguisticsDone.filter(x=>x!==c().id);else store.linguisticsDone.push(c().id);api.save();api.render();return}
