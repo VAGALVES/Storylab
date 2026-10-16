@@ -626,6 +626,114 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
 .ling-figure-controls{gap:10px}
 @media(prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
 
+/* v2.13 · Laboratório de Encaixes: sintaxe aplicada, hipóteses e texto autoral */
+.encaixe-teaser{margin:1px 0 0}
+.encaixe-trigger{display:inline-flex;align-items:center;justify-content:space-between;gap:12px;max-width:100%;border:1px solid var(--study-border);background:var(--study-soft);color:var(--study-ink);padding:9px 12px;border-radius:11px;font-size:12px;font-weight:760;text-align:left;line-height:1.4}
+.encaixe-trigger:hover{border-color:var(--study-active);filter:brightness(.96)}
+.encaixe-num{padding:3px 7px;border-radius:99px;background:var(--paper);border:1px solid var(--line);color:var(--muted);font-size:10px;white-space:nowrap}
+.encaixe-lab{background:var(--wash);border:1px solid var(--study-border);border-radius:15px;padding:17px;display:grid;gap:13px;min-width:0}
+.encaixe-header{display:flex;justify-content:space-between;align-items:start;gap:12px;min-width:0}
+.encaixe-header h4{font-family:Georgia,serif;font-weight:normal;font-size:21px;line-height:1.24;margin:5px 0 0;color:var(--ink)}
+.encaixe-close{background:transparent;border:1px solid var(--line);padding:7px 11px;color:var(--ink2);border-radius:8px;font-size:11px;flex:none}
+.encaixe-intro,.encaixe-disclaimer{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.encaixe-options{display:grid;gap:8px}
+.encaixe-option{display:flex;text-align:left;gap:11px;align-items:start;border:1px solid var(--line);border-radius:11px;background:var(--paper);color:var(--ink);padding:12px;width:100%;min-width:0}
+.encaixe-option.active{border-color:var(--study-active);background:var(--study-soft)}
+.encaixe-option:hover{border-color:var(--study-border)}
+.encaixe-option span:last-child{display:grid;gap:4px;min-width:0;flex:1}
+.encaixe-option strong{font-size:12px;line-height:1.4}
+.encaixe-option small{font-size:11px;line-height:1.55;color:var(--ink2);white-space:normal;overflow-wrap:anywhere}
+.encaixe-select-dot{display:block;width:17px;height:17px;flex:none;border-radius:50%;border:2px solid var(--study-border);margin-top:1px;background:var(--paper)}
+.encaixe-option.active .encaixe-select-dot{border:5px solid var(--study-active)}
+.encaixe-result{background:var(--paper);border-left:4px solid var(--study-active);border-radius:0 10px 10px 0;padding:15px 16px;min-width:0}
+.encaixe-result p{font-family:Georgia,serif;font-size:18px;line-height:1.58;margin:7px 0 0;overflow-wrap:anywhere;color:var(--ink)}
+.encaixe-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.encaixe-actions .btn{white-space:normal;font-size:11px;min-height:39px;line-height:1.4}
+.encaixe-custom{display:grid;gap:9px}
+.encaixe-custom label{display:block;font-size:11px;font-weight:700;margin-bottom:5px;color:var(--ink2)}
+.encaixe-custom input{display:block;width:100%;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:12px;color:var(--ink);font-size:13px;line-height:1.5}
+.encaixe-custom input:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.encaixe-trigger:focus-visible,.encaixe-option:focus-visible,.encaixe-close:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+[data-theme="dark"] .encaixe-lab{background:rgba(255,255,255,.035)}
+[data-theme="dark"] .encaixe-option.active{background:var(--study-soft)}
+[data-theme="dark"] .encaixe-trigger{background:var(--study-soft)}
+@media(max-width:580px){.encaixe-lab{padding:14px}.encaixe-header h4{font-size:19px}.encaixe-result p{font-size:17px}.encaixe-actions .btn{flex:1 1 auto}}
+@media(prefers-reduced-motion:reduce){.encaixe-trigger:hover{filter:none}}
+
+/* v2.14 · Escuta transversal — botões junto ao conteúdo, sem alterar os diagramas. */
+.sl-audio-target{overflow-wrap:anywhere}
+.sl-audio-trigger{
+ display:inline-flex;align-items:center;gap:5px;vertical-align:baseline;
+ border:1px solid color-mix(in srgb,var(--accent) 32%,var(--line));
+ background:transparent;color:var(--ink2);border-radius:100px;
+ margin:0 1px 0 10px;padding:4px 9px;line-height:1.35;
+ font-family:inherit;font-size:10.5px;font-weight:730;cursor:pointer;
+ white-space:nowrap;user-select:none;transition:background .17s,border-color .17s,color .17s;
+}
+.sl-audio-trigger svg,.sl-audio-page svg{width:15px;height:15px;flex:none}
+.sl-audio-trigger:hover{background:var(--accentsoft);border-color:var(--accent);color:var(--ink)}
+.sl-audio-trigger.is-reading{background:var(--accentsoft);border-color:var(--accent);color:var(--accent)}
+.sl-audio-page{
+ display:inline-flex;align-items:center;justify-content:center;gap:9px;
+ min-height:39px;padding:9px 14px;border-radius:10px;
+ background:var(--paper);color:var(--ink);border:1px solid var(--line);
+ font-size:12px;font-weight:720;line-height:1.4;white-space:normal;text-align:center;
+ cursor:pointer;flex:none;
+}
+.sl-audio-page:hover{background:var(--accentsoft);border-color:var(--accent)}
+.page-head .sl-audio-page{align-self:start;margin:0 0 0 auto}
+.sl-audio-dock{
+ position:fixed;bottom:calc(15px + env(safe-area-inset-bottom,0px));right:18px;
+ z-index:1200;display:grid;gap:11px;width:min(590px,calc(100vw - 36px));
+ padding:16px 18px;border:1px solid var(--line);border-radius:17px;
+ background:var(--paper);color:var(--ink);
+ box-shadow:0 16px 50px rgba(8,22,24,.28);
+}
+.sl-audio-dock[hidden]{display:none!important}
+.sl-audio-dock-heading{display:grid;gap:3px;min-width:0}
+.sl-audio-dock-heading strong{font-family:Georgia,serif;font-size:19px;line-height:1.3}
+.sl-audio-dock-heading [data-sl-audio-status]{font-size:11px;line-height:1.6;color:var(--muted)}
+.sl-audio-dock-heading [data-state="error"]{color:#b24735;font-weight:750}
+.sl-audio-dock-controls{display:flex;align-items:end;gap:8px;flex-wrap:wrap}
+.sl-audio-control{
+ min-height:38px;border:1px solid var(--line);border-radius:9px;
+ background:var(--wash);color:var(--ink);padding:9px 12px;
+ font-size:12px;font-weight:730;cursor:pointer;
+}
+.sl-audio-control:hover{border-color:var(--accent);background:var(--accentsoft)}
+.sl-audio-select-label{display:grid;gap:4px;color:var(--muted);font-size:10px;font-weight:650;flex:1 1 100px;min-width:95px}
+.sl-audio-select-label select{
+ min-height:38px;max-width:100%;min-width:0;padding:7px 9px;
+ background:var(--wash);color:var(--ink);border:1px solid var(--line);border-radius:9px;
+ font-size:12px;cursor:pointer;
+}
+.sl-audio-select-label select[hidden]{display:none}
+.sl-audio-voice-hint{margin:0;font-size:11px;line-height:1.6;color:var(--muted)}
+.sl-audio-voice-hint:empty{display:none}
+.sl-audio-trigger:focus-visible,.sl-audio-page:focus-visible,.sl-audio-control:focus-visible,
+.sl-audio-select-label select:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+[data-theme="dark"] .sl-audio-trigger{color:#e8dccc;border-color:#65797b}
+[data-theme="dark"] .sl-audio-trigger:hover,[data-theme="dark"] .sl-audio-trigger.is-reading{color:#fff2df}
+[data-theme="dark"] .sl-audio-page{border-color:#64777b;color:#f3efe6;background:#293d40}
+[data-theme="dark"] .sl-audio-page:hover{background:#344e50}
+[data-theme="dark"] .sl-audio-dock-heading [data-state="error"]{color:#ffb5a5}
+@media(max-width:650px){
+ .sl-audio-page{font-size:11px;min-height:38px}
+ .sl-audio-trigger{margin-left:6px;padding:4px 8px;font-size:10px}
+ .sl-audio-dock{padding:12px 13px;bottom:calc(9px + env(safe-area-inset-bottom,0px));right:9px;width:calc(100vw - 18px)}
+ .sl-audio-dock-heading strong{font-size:17px}
+ .sl-audio-control{flex:1 1 65px}
+ .sl-audio-select-label{flex:1 1 105px}
+}
+@media(prefers-reduced-motion:reduce){
+ .sl-audio-trigger{transition:none}
+}
+
+.record-stage .sl-audio-trigger{
+  color:#f6eee6;border-color:#698080;background:rgba(255,255,255,.05);
+}
+.record-stage .sl-audio-trigger:hover{background:rgba(255,255,255,.16);border-color:#d7c8b5}
+
 </style>
   <title>StoryLab Shanghai — Journalism Academy</title>
 </head>
@@ -3171,12 +3279,396 @@ window.StoryLabLinguistics = (() => {
 })();
 </script>
   <script>
+window.STORYLAB_ENCAIXES = {"schema":1,"description":"Encaixes editoriais hipotéticos para treinar regência, sintaxe e precisão; confirme acontecimentos e dados antes de publicar.","optionsByPhrase":{"abertura-05":[{"label":"Urbanismo","slots":["como os edifícios de épocas diferentes dividem a mesma rua"]},{"label":"Comércio","slots":["por que a feira fica mais movimentada perto da estação"]}],"abertura-08":[{"label":"Gastronomia","slots":["o sabor do prato, mas também a maneira como ele é servido"]},{"label":"Moda","slots":["o desenho da peça, mas também o modo como o tecido se movimenta"]}],"localizacao-01":[{"label":"Geografia","slots":["Gubei, no distrito de Changning"]},{"label":"Topônimo","slots":["Hongqiao, na referência geográfica utilizada neste exemplo"]}],"localizacao-02":[{"label":"Paisagem","slots":["árvores altas e fachadas comerciais no térreo"]},{"label":"Arquitetura","slots":["edifícios altos e pequenas construções preservadas"]}],"localizacao-03":[{"label":"Orientação","slots":["uma entrada de metrô junto à esquina"]},{"label":"Detalhe","slots":["um pórtico entre dois conjuntos de lojas"]}],"localizacao-04":[{"label":"Rua","slots":["uma fileira de árvores diante das vitrines"]},{"label":"Mobilidade","slots":["um acesso coberto para pedestres"]}],"localizacao-05":[{"label":"Referência","slots":["a cobertura curva da estação"]},{"label":"Arquitetura","slots":["o prédio com a fachada revestida de tijolos"]}],"localizacao-06":[{"label":"Caminhada","slots":["um pequeno jardim entre os edifícios"]},{"label":"Comércio","slots":["uma passagem com lojas voltadas para o pátio"]}],"localizacao-07":[{"label":"Organização","slots":["um pátio central com bancos"]},{"label":"Circulação","slots":["um corredor que conecta as duas entradas"]}],"localizacao-08":[{"label":"Cidade","slots":["uma praça arborizada"]},{"label":"Transporte","slots":["uma estação da Linha 10"]}],"localizacao-09":[{"label":"Paisagem","slots":["as duas fachadas que formam o cruzamento"]},{"label":"Trânsito","slots":["a diferença de largura entre as calçadas"]}],"localizacao-11":[{"label":"Roteiro","slots":["uma pequena praça depois da próxima curva"]},{"label":"Caminhada","slots":["um corredor de lojas no fim da quadra"]}],"localizacao-13":[{"label":"Acesso","slots":["na lateral voltada para a avenida"]},{"label":"Cautela","slots":["ao lado da escadaria, mas precisamos confirmar"]}],"localizacao-14":[{"label":"Arquitetura","slots":["uma sequência de arcos que marca a entrada"]},{"label":"Transporte","slots":["uma saída de metrô junto às bicicletas estacionadas"]}],"localizacao-16":[{"label":"Orientação","slots":["a ponte visível no fim do trecho"]},{"label":"Trajeto","slots":["o encontro com uma avenida mais larga"]}],"localizacao-17":[{"label":"Escala","slots":["ruas estreitas e pequenos largos arborizados"]},{"label":"Uso do solo","slots":["lojas no térreo e moradias nos pavimentos superiores"]}],"localizacao-18":[{"label":"Transição","slots":["um pátio aberto depois do corredor"]},{"label":"Espaço","slots":["uma praça entre as construções"]}],"descricao-01":[{"label":"Forma","slots":["a sequência de arcos na entrada"]},{"label":"Material","slots":["o contraste entre a pedra clara e o metal escuro"]}],"descricao-02":[{"label":"Arquitetura","slots":["curvas que acompanham o contorno da cobertura"]},{"label":"Geometria","slots":["verticais repetidas entre as janelas"]}],"descricao-03":[{"label":"Composição","slots":["janelas estreitas e painéis de vidro"]},{"label":"Materialidade","slots":["tijolos aparentes e esquadrias metálicas"]}],"descricao-04":[{"label":"Superfície","slots":["irregular, com relevos de tamanhos diferentes"]},{"label":"Contraste","slots":["áspera ao lado do revestimento liso"]}],"descricao-05":[{"label":"Luz","slots":["irregular, formando pequenas manchas claras"]},{"label":"Reflexo","slots":["especular, como um espelho em determinados ângulos"]}],"descricao-06":[{"label":"Geometria","slots":["arredondadas nas bordas e retas no centro"]},{"label":"Composição","slots":["geométricas, com alternância de quadrados e retângulos"]}],"descricao-08":[{"label":"Proporção","slots":["verticalidade, por causa dos vãos estreitos"]},{"label":"Espaço","slots":["amplitude, reforçada pelo teto elevado"]}],"descricao-10":[{"label":"Costura","slots":["regularidade das junções próximas à gola"]},{"label":"Arquitetura","slots":["precisão aparente das juntas de revestimento"]}],"descricao-11":[{"label":"Fachada","slots":["toda a fachada principal"]},{"label":"Rua","slots":["uma fileira de postes até a próxima esquina"]}],"descricao-12":[{"label":"Fachada","slots":["um pórtico revestido de pedra"]},{"label":"Detalhe","slots":["cada janela do pavimento superior"]}],"descricao-13":[{"label":"Observação","slots":["uma circulação concentrada no corredor central"]},{"label":"Interpretação","slots":["um uso coletivo do pátio, hipótese que exige mais contexto"]}],"descricao-14":[{"label":"Forma","slots":["arcos repetidos na galeria"]},{"label":"Paisagem","slots":["árvores que projetam sombra sobre os bancos"]}],"descricao-15":[{"label":"Escala","slots":["uma pessoa atravessa o vão de entrada"]},{"label":"Câmera","slots":["nos afastamos e incluímos a calçada inteira no enquadramento"]}],"descricao-16":[{"label":"Detalhe","slots":["puxadores e dobradiças das portas"]},{"label":"Acabamento","slots":["bordas do revestimento junto ao rodapé"]}],"descricao-18":[{"label":"Espaço","slots":["a escadaria acompanha a curvatura do terreno"]},{"label":"Forma","slots":["o telhado se projeta sobre a entrada"]}],"perspectiva-01":[{"label":"Composição","slots":["as mesas mais próximas da câmera"]},{"label":"Rua","slots":["a bicicleta encostada no canto esquerdo da calçada"]}],"perspectiva-02":[{"label":"Horizonte","slots":["torres atrás das copas das árvores"]},{"label":"Paisagem","slots":["uma ponte parcialmente encoberta pela neblina"]}],"perspectiva-03":[{"label":"Cidade","slots":["duas torres que se elevam sobre os telhados"]},{"label":"Construção","slots":["guindastes ao lado dos edifícios"]}],"perspectiva-04":[{"label":"Arquitetura","slots":["a altura aparente dos pilares da entrada"]},{"label":"Composição","slots":["o encontro entre a escadaria e o teto elevado"]}],"perspectiva-05":[{"label":"Cidade","slots":["um conjunto de prédios distribuídos pela quadra"]},{"label":"Paisagem","slots":["uma praça que antes parecia apenas uma passagem"]}],"perspectiva-07":[{"label":"Distância","slots":["tamanho dos prédios ao fundo"]},{"label":"Escala","slots":["profundidade do corredor entre as lojas"]}],"perspectiva-08":[{"label":"Foco","slots":["a porta iluminada no fim do corredor"]},{"label":"Rua","slots":["o cruzamento marcado pelas faixas de pedestres"]}],"perspectiva-09":[{"label":"Contexto","slots":["árvores e pequenas construções"]},{"label":"Arquitetura","slots":["prédios de alturas diferentes"]}],"perspectiva-10":[{"label":"Cidade","slots":["postes ao longo da avenida"]},{"label":"Forma","slots":["arcos sucessivos em direção ao pátio"]}],"perspectiva-11":[{"label":"Arquitetura","slots":["a torre ao fundo e o edifício baixo à frente"]},{"label":"Paisagem","slots":["a calçada e as copas que a cobrem"]}],"perspectiva-12":[{"label":"Movimento","slots":["uma fila de bancas junto ao canal"]},{"label":"Paisagem","slots":["uma cobertura que acompanha o passeio"]}],"perspectiva-13":[{"label":"Verticalidade","slots":["uma passarela entre os edifícios"]},{"label":"Detalhe","slots":["as vigas que sustentam a cobertura"]}],"perspectiva-14":[{"label":"Entorno","slots":["árvores e muros baixos"]},{"label":"Rua","slots":["fachadas comerciais de cada lado do passeio"]}],"perspectiva-16":[{"label":"Contraste","slots":["as fachadas distantes e menos iluminadas"]},{"label":"Profundidade","slots":["um fundo desfocado de edifícios"]}],"perspectiva-17":[{"label":"Visão","slots":["uma sensação de profundidade entre as árvores"]},{"label":"Câmera","slots":["uma moldura formada por portas e janelas"]}],"luz-02":[{"label":"Arquitetura","slots":["os relevos da moldura da porta"]},{"label":"Tecido","slots":["as pregas que se formam no tecido"]}],"luz-03":[{"label":"Paleta","slots":["tons de bege e verde acinzentado"]},{"label":"Cidade","slots":["ocres e cinzas contrastados com pequenos letreiros vermelhos"]}],"luz-05":[{"label":"Fachada","slots":["uma torre ao fundo"]},{"label":"Vitrine","slots":["um painel de vidro junto ao teto"]}],"luz-06":[{"label":"Ambiente","slots":["janelas voltadas para o pátio"]},{"label":"Interior","slots":["uma parede clara que reflete a iluminação"]}],"luz-08":[{"label":"Emoção","slots":["calma, pelo predomínio de tons pouco saturados"]},{"label":"Composição","slots":["contraste, pela proximidade entre azul e laranja"]}],"luz-09":[{"label":"Chuva","slots":["poças entre as faixas do piso"]},{"label":"Vitrine","slots":["vidros que espelham a rua"]}],"luz-11":[{"label":"Profundidade","slots":["os elementos amarelos do primeiro plano"]},{"label":"Vitrine","slots":["as peças vermelhas diante do painel verde"]}],"luz-12":[{"label":"Horário","slots":["uma fachada depois do anoitecer"]},{"label":"Objeto","slots":["o tecido sob uma luminária quente"]}],"luz-14":[{"label":"Textura","slots":["a parede revestida de tijolos"]},{"label":"Espaço","slots":["o piso do corredor entre as árvores"]}],"luz-16":[{"label":"Marca","slots":["uma vitrine de tons neutros"]},{"label":"Editorial","slots":["uma coleção que combina preto, bege e terracota"]}],"sons-01":[{"label":"Ambiente","slots":["um equipamento de ventilação próximo à porta"]},{"label":"Cidade","slots":["veículos passando na avenida"]}],"sons-02":[{"label":"Mobilidade","slots":["ônibus que passam na rua próxima"]},{"label":"Pedestres","slots":["rodas de malas atravessando o corredor"]}],"sons-03":[{"label":"Mercado","slots":["conversas vindas das bancas"]},{"label":"Rua","slots":["ruídos de bicicletas passando sobre as juntas do piso"]}],"sons-04":[{"label":"Silêncio","slots":["o portão se fecha depois da passagem"]},{"label":"Edição","slots":["a música cessa e ouvimos o ambiente"]}],"sons-06":[{"label":"Entrevista","slots":["conversas ao redor do mercado"]},{"label":"Ambiente","slots":["o ruído constante da ventilação"]}],"sons-12":[{"label":"Cidade","slots":["um ônibus pelo som do motor e dos freios"]},{"label":"Caminhada","slots":["uma bicicleta pelo toque breve da campainha"]}],"sons-15":[{"label":"Fora de quadro","slots":["uma conversa atrás da parede"]},{"label":"Ambiente","slots":["o som da água vindo do outro lado do pátio"]}],"sons-17":[{"label":"Paisagem sonora","slots":["o movimento dos passos sobre o piso de pedra"]},{"label":"Bairro","slots":["o som dos vendedores chamando clientes"]}],"sons-18":[{"label":"Caminhada","slots":["nos aproximamos de uma rua com mais tráfego"]},{"label":"Mercado","slots":["várias bancas abrem ao mesmo tempo"]}],"movimento-01":[{"label":"Paisagem","slots":["a intensidade da luz sobre a calçada"]},{"label":"Comércio","slots":["a quantidade de pessoas próximas às entradas"]}],"movimento-02":[{"label":"Cena","slots":["um plano aberto da praça antes do movimento da câmera"]},{"label":"Detalhe","slots":["a mão que abre a porta da pequena loja"]}],"movimento-03":[{"label":"Câmera","slots":["um plano fechado das texturas da fachada"]},{"label":"Narrativa","slots":["a entrevista feita no interior da loja"]}],"movimento-04":[{"label":"Rua","slots":["uma passagem estreita junto às bancas"]},{"label":"Estação","slots":["o acesso principal da estação"]}],"movimento-06":[{"label":"Câmera","slots":["uma banca ainda fechada"]},{"label":"Caminhada","slots":["a entrada do edifício"]}],"movimento-07":[{"label":"Trajeto","slots":["corredores estreitos e pátios abertos"]},{"label":"Rua","slots":["faixas de pedestres e pequenas esquinas"]}],"movimento-08":[{"label":"Ritmo","slots":["as bancas abrem e os vendedores ocupam a passagem"]},{"label":"Câmera","slots":["a rua recebe mais ciclistas no fim do trecho"]}],"movimento-09":[{"label":"Personagem","slots":["uma pessoa que atravessa a praça"]},{"label":"Detalhe","slots":["um carrinho de entregas até a porta lateral"]}],"movimento-10":[{"label":"Ambiente","slots":["um pátio afastado do trânsito"]},{"label":"Caminhada","slots":["a rua residencial atrás do mercado"]}],"movimento-13":[{"label":"Ritmo","slots":["a abertura das portas da estação"]},{"label":"Trânsito","slots":["uma curva que afasta a câmera da avenida"]}],"movimento-14":[{"label":"Ação","slots":["o último pedestre deixa o corredor"]},{"label":"Imagem","slots":["a porta se fecha e a câmera permanece no detalhe"]}],"movimento-18":[{"label":"Objeto","slots":["a entrada iluminada ao fundo"]},{"label":"Personagem","slots":["a pessoa que espera perto da esquina"]}],"comparacao-01":[{"label":"Escala","slots":[", aqui os edifícios são mais baixos e mais próximos entre si"]},{"label":"Som","slots":[", neste trecho o ruído do tráfego fica menos presente"]}],"comparacao-02":[{"label":"Arquitetura","slots":["na repetição das janelas em ambos os edifícios"]},{"label":"Moda","slots":["nas mangas amplas das duas peças"]}],"comparacao-03":[{"label":"Contraste","slots":["as entradas são organizadas em cada fachada"]},{"label":"Cidade","slots":["os pedestres ocupam as duas calçadas"]}],"comparacao-04":[{"label":"Paisagem","slots":[", este trecho tem mais árvores e menos comércio no térreo"]},{"label":"Mobilidade","slots":[", aqui há mais espaço para bicicletas junto às entradas"]}],"comparacao-05":[{"label":"Forma","slots":["apresentar linhas predominantemente verticais"]},{"label":"Ambiente","slots":["organizar a circulação em torno de um pátio"]}],"comparacao-07":[{"label":"Arquitetura","slots":["a superfície clara reflete mais luz na primeira fachada"]},{"label":"Moda","slots":["o tecido da segunda peça apresenta um brilho mais difuso"]}],"comparacao-09":[{"label":"Método","slots":["a diferença de horários em que as imagens foram gravadas"]},{"label":"Comparação","slots":["a escala das construções observadas"]}],"comparacao-10":[{"label":"Vitrine","slots":["cores fortes no primeiro plano","aposta em tons neutros"]},{"label":"Arquitetura","slots":["uma entrada monumental","organiza o acesso por um corredor lateral"]}],"comparacao-11":[{"label":"Paisagem","slots":["a sensação de altura das torres"]},{"label":"Composição","slots":["a relação entre as pessoas e a fachada"]}],"comparacao-12":[{"label":"Materialidade","slots":["textura e acabamento"]},{"label":"Circulação","slots":["largura das passagens e posição dos acessos"]}],"comparacao-15":[{"label":"Arquitetura","slots":["a imagem geral e os detalhes da entrada"]},{"label":"Moda","slots":["duas peças sob a mesma iluminação"]}],"comparacao-16":[{"label":"Critério","slots":["como cada projeto resolve o acesso de pedestres"]},{"label":"Moda","slots":["a diferença de proporções entre as peças"]}],"comparacao-17":[{"label":"Construção","slots":["a presença de arcos nas duas fachadas"]},{"label":"Câmera","slots":["a distância focal adotada nas duas tomadas"]}],"comparacao-18":[{"label":"Composição","slots":["a escala do elemento colocado no primeiro plano"]},{"label":"Moda","slots":["o modo como o tecido se acomoda sobre o corpo"]}],"contexto-02":[{"label":"Circulação","slots":["o fluxo se concentra no corredor central"]},{"label":"Paisagem","slots":["os bancos permanecem sombreados durante parte do dia"]}],"contexto-04":[{"label":"História","slots":["mudanças no uso comercial da rua, registradas em documentos"]},{"label":"Urbanismo","slots":["transformações da circulação que ainda precisamos pesquisar"]}],"contexto-05":[{"label":"Interpretação","slots":["como o objeto é utilizado naquele contexto"]},{"label":"Pesquisa","slots":["quem o produziu e a que finalidade se destinava"]}],"contexto-08":[{"label":"Moda","slots":["a referência cultural declarada pela marca"]},{"label":"Arquitetura","slots":["a função original do edifício, se houver registro confiável"]}],"contexto-09":[{"label":"Cidade","slots":["a disposição dos acessos para pedestres"]},{"label":"Mobilidade","slots":["a relação entre o transporte público e o comércio ao redor"]}],"contexto-12":[{"label":"Fonte","slots":["2024 por uma instituição identificada, o relatório descreve o período pesquisado"]},{"label":"Método","slots":["um ano que devemos confirmar, o documento precisa ser consultado na íntegra"]}],"contexto-15":[{"label":"Urbanismo","slots":["o desenho do passeio","a localização das entradas"]},{"label":"Moda","slots":["a modelagem da peça","o comportamento do tecido no movimento"]}],"contexto-16":[{"label":"Apuração","slots":["quem autorizou a reforma e quando ocorreu"]},{"label":"Pesquisa","slots":["se a abertura de uma estação alterou o movimento local"]}],"observacao-01":[{"label":"Descrição","slots":["a existência de três entradas voltadas para a rua"]},{"label":"Cena","slots":["o modo como a sombra cobre parte do corredor"]}],"observacao-02":[{"label":"Percepção","slots":["de tranquilidade diante do pouco movimento"]},{"label":"Moda","slots":["que a peça é confeccionada em linho"]}],"observacao-05":[{"label":"Espaço","slots":["que os bancos foram posicionados para favorecer a permanência"]},{"label":"Moda","slots":["que a vitrine busca destacar o contraste entre estrutura e fluidez"]}],"observacao-06":[{"label":"Detalhes","slots":["a repetição das portas, a posição dos bancos e o trajeto dos pedestres"]},{"label":"Moda","slots":["as pregas da saia, o caimento das mangas e o acabamento da gola"]}],"observacao-10":[{"label":"Cautela","slots":["a calçada parece mais larga neste trecho"]},{"label":"Imagens","slots":["a gravação mostra o acesso aberto naquele momento"]}],"observacao-12":[{"label":"Entrevistas","slots":["pessoas que utilizam a praça em horários diferentes"]},{"label":"Comércio","slots":["comerciantes e frequentadores do mercado"]}],"observacao-13":[{"label":"Rigor","slots":["a rua é sempre movimentada"]},{"label":"Causa","slots":["a reforma foi a única responsável pela mudança"]}],"observacao-15":[{"label":"Observação","slots":["uma passagem lateral que não aparecia no primeiro plano"]},{"label":"Detalhe","slots":["a diferença entre a textura vista de longe e de perto"]}],"observacao-16":[{"label":"Fontes","slots":["dados sobre o fluxo de pedestres em outros horários"]},{"label":"Método","slots":["imagens feitas no mesmo ponto, em dias distintos"]}],"observacao-17":[{"label":"Apuração","slots":["que todas as lojas adotaram o mesmo horário"]},{"label":"Comparação","slots":["que a peça é mais confortável sem uma prova de uso"]}],"evidencia-01":[{"label":"Fonte","slots":["um órgão público identificado, há registros para o período analisado"]},{"label":"Pesquisa","slots":["um levantamento com metodologia publicada, precisamos informar o intervalo"]}],"evidencia-02":[{"label":"Documentação","slots":["um comunicado oficial datado e identificável"]},{"label":"Apuração","slots":["duas fontes independentes cujos registros podem ser consultados"]}],"evidencia-03":[{"label":"Limite","slots":["a data exata da construção"]},{"label":"História","slots":["a origem do apelido atribuído à rua"]}],"evidencia-06":[{"label":"Crédito","slots":["outubro de 2026","a equipe responsável pela gravação"]},{"label":"Acervo","slots":["uma data informada no arquivo","a ficha de catalogação consultada"]}],"evidencia-11":[{"label":"Documento","slots":["o endereço listado na ficha corresponde ao imóvel observado"]},{"label":"Pesquisa","slots":["a alteração aparece no texto publicado, mas precisamos conferir a data"]}],"evidencia-12":[{"label":"Limite","slots":["a entrada estava aberta durante a visita registrada"]},{"label":"Atribuição","slots":["o comunicado apresenta uma previsão, não uma confirmação de entrega"]}],"evidencia-13":[{"label":"Citação","slots":["uma pessoa entrevistada, não um dado representativo de toda a comunidade"]},{"label":"Análise","slots":["uma fonte identificada, cuja interpretação deve ser distinguida do documento"]}],"evidencia-15":[{"label":"Fotografia","slots":["uma calçada vazia naquele instante","que ela permaneça vazia durante o dia"]},{"label":"Arquitetura","slots":["a presença de andaimes","a razão ou a data de início da obra"]}],"transicao-04":[{"label":"Composição","slots":["como a entrada muda quando vista do pátio"]},{"label":"Câmera","slots":["a relação entre a fachada e o espaço ao redor"]}],"transicao-05":[{"label":"Caminhada","slots":["uma passagem com uma iluminação diferente"]},{"label":"Roteiro","slots":["uma área de circulação que conecta os blocos"]}],"transicao-09":[{"label":"Narrativa","slots":["a forma como a rua é utilizada à noite"]},{"label":"Materialidade","slots":["o mesmo padrão de acabamento visto em outro prédio"]}],"transicao-10":[{"label":"Entrevista","slots":["ouvir quem trabalha na rua diariamente"]},{"label":"Pesquisa","slots":["examinar o documento mencionado na entrevista"]}],"transicao-12":[{"label":"Forma","slots":["as duas entradas a partir de um mesmo ângulo"]},{"label":"Experiência","slots":["o movimento observado antes e depois da visita"]}],"transicao-16":[{"label":"Roteiro","slots":["a pergunta que nos levou ao mercado"]},{"label":"Comparação","slots":["a diferença entre a expectativa inicial e a observação final"]}],"transicao-17":[{"label":"Câmera","slots":["as texturas do revestimento em plano próximo"]},{"label":"História","slots":["a resposta dada pela pessoa entrevistada"]}],"curiosidade-07":[{"label":"Objeto","slots":["o vendedor dobra o papel em várias camadas"]},{"label":"Arquitetura","slots":["mudamos o ângulo e enxergamos o recuo da fachada"]}],"curiosidade-10":[{"label":"Circulação","slots":["como os pedestres dividem uma passagem estreita"]},{"label":"Moda","slots":["por que a peça ganha volume apenas durante o movimento"]}],"curiosidade-14":[{"label":"Descoberta","slots":["o objeto tinha uma função diferente da que imaginei"]},{"label":"Entrevista","slots":["a moradora relatou uma mudança que ainda precisamos documentar"]}],"escuta-08":[{"label":"Paráfrase","slots":["o horário de funcionamento"]},{"label":"Esclarecimento","slots":["a localização da entrada principal"]}],"escuta-09":[{"label":"Entrevista","slots":["o acesso antigo; você pode explicar como era usado?"]},{"label":"Apuração","slots":["a mudança de horário; quando ela ocorreu?"]}],"moda-01":[{"label":"Silhueta","slots":["uma silhueta alongada pelas linhas verticais"]},{"label":"Estilo","slots":["o contraste entre alfaiataria e referências esportivas"]}],"moda-02":[{"label":"Modelagem","slots":["maneira como o tecido acompanha o contorno do corpo"]},{"label":"Movimento","slots":["forma como a barra se movimenta durante a caminhada"]}],"moda-03":[{"label":"Forma","slots":["reta que parte dos ombros até a barra"]},{"label":"Modelagem","slots":["curva que acompanha a cintura"]}],"moda-04":[{"label":"Textura","slots":["acetinado sob a iluminação da vitrine"]},{"label":"Superfície","slots":["granulado, perceptível no plano fechado"]}],"moda-05":[{"label":"Costura","slots":["o alinhamento das costuras próximas ao decote"]},{"label":"Detalhe","slots":["a regularidade aparente do arremate junto à barra"]}],"moda-06":[{"label":"Paleta","slots":["contrastante, com preto e amarelo em áreas definidas"]},{"label":"Composição","slots":["sóbria, sustentada por tons pouco saturados"]}],"moda-07":[{"label":"Silhueta","slots":["alongada pelo deslocamento visual das linhas"]},{"label":"Proporção","slots":["mais ampla nos ombros do que na cintura"]}],"moda-08":[{"label":"Styling","slots":["viagem, com mapas e malas como elementos cênicos"]},{"label":"Editorial","slots":["inverno urbano, com peças sobrepostas e tons escuros"]}],"moda-09":[{"label":"Referências","slots":["alfaiataria e vestuário esportivo"]},{"label":"Texturas","slots":["couro aparente e superfícies de aspecto acetinado"]}],"moda-11":[{"label":"Material","slots":["linho"]},{"label":"Tecido","slots":["algodão com textura irregular"]}],"moda-14":[{"label":"Silhueta","slots":["nas mangas, acima da linha da cintura"]},{"label":"Saia","slots":["na parte inferior da saia"]}],"moda-15":[{"label":"Modelagem","slots":["um blazer estruturado sobre uma saia de tecido leve"]},{"label":"Peça","slots":["as mangas armadas e o corpo de caimento fluido"]}],"moda-16":[{"label":"Referência","slots":["uniformes de trabalho, pela forma dos bolsos"]},{"label":"Estilo","slots":["alfaiataria clássica, segundo a leitura que fazemos das lapelas"]}],"gastronomia-01":[{"label":"Cheiro","slots":["gengibre e cebolinha, que percebo no vapor"]},{"label":"Aroma","slots":["cítricos, embora os ingredientes ainda precisem ser confirmados"]}],"gastronomia-02":[{"label":"Mordida","slots":["firme","a massa que provei antes"]},{"label":"Comparação","slots":["elástica","quebradiça"]}],"gastronomia-03":[{"label":"Textura","slots":["uma casca fina que estala antes de chegar ao recheio"]},{"label":"Sabor","slots":["a acidez do molho, seguida de uma sensação adocicada"]}],"gastronomia-04":[{"label":"Paladar","slots":["picância enquanto a sopa esfria"]},{"label":"Contraste","slots":["doçura percebida quando o alimento é servido frio"]}],"gastronomia-05":[{"label":"Cor","slots":["o caldo escuro e as folhas verdes"]},{"label":"Textura","slots":["a superfície brilhante do molho e os ingredientes crocantes"]}],"gastronomia-07":[{"label":"Processo","slots":["fritura rápida seguida de um período de descanso"]},{"label":"Cozinha","slots":["etapas de corte, preparo do molho e montagem"]}],"gastronomia-09":[{"label":"Sabor","slots":["um toque cítrico depois da mordida"]},{"label":"Paladar","slots":["a sensação de pimenta que permanece por alguns segundos"]}],"gastronomia-10":[{"label":"Equilíbrio","slots":["gordura presente na carne"]},{"label":"Sabor","slots":["doçura do molho, na minha percepção"]}],"gastronomia-11":[{"label":"Degustação","slots":["agridoce, com acidez no final"]},{"label":"Textura","slots":["crocante por fora e macio por dentro"]}],"gastronomia-14":[{"label":"Bordas","slots":["crocante e levemente irregular"]},{"label":"Massa","slots":["lisa, com pequenas bolhas na superfície"]}],"gastronomia-15":[{"label":"Degustação","slots":["o bolinho e o molho ácido no mesmo garfo"]},{"label":"Temperos","slots":["as folhas aromáticas e o caldo"]}],"gastronomia-16":[{"label":"Escolha","slots":["a versão de massa mais fina, porque ouvi melhor a crocância"]},{"label":"Paladar","slots":["o prato menos picante, por permitir perceber outros sabores"]}],"gastronomia-18":[{"label":"Cautela","slots":["que o caldo contém ingredientes de origem animal"]},{"label":"Fonte","slots":["que o aroma vem de uma especiaria específica"]}],"tecnologia-01":[{"label":"Câmera","slots":["estabilizar a imagem durante a caminhada"]},{"label":"Som","slots":["reduzir o ruído de fundo captado pelo microfone"]}],"tecnologia-02":[{"label":"Gravação","slots":["verificar o enquadramento antes de iniciar a captura"]},{"label":"Configuração","slots":["abrir as opções de resolução disponíveis"]}],"tecnologia-07":[{"label":"Bateria","slots":["a autonomia no modo de gravação mais exigente"]},{"label":"Conectividade","slots":["a dependência de uma rede para sincronizar arquivos"]}],"tecnologia-09":[{"label":"Fabricante","slots":["até dez horas de bateria em condições declaradas"]},{"label":"Precisão","slots":["compatibilidade com determinado acessório"]}],"tecnologia-10":[{"label":"Uso real","slots":["a estabilidade da imagem durante o movimento"]},{"label":"Gravação","slots":["o tempo necessário para abrir a câmera e começar a filmar"]}],"tecnologia-11":[{"label":"Autonomia","slots":["a pessoa grava sozinha e não dispõe de tripé"]},{"label":"Viagem","slots":["há necessidade de montar e guardar o equipamento rapidamente"]}],"tecnologia-13":[{"label":"Finalidade","slots":["gravações em movimento, conforme a descrição comercial"]},{"label":"Imagem","slots":["captura de cenas em ambientes pouco iluminados, segundo o anúncio"]}],"tecnologia-14":[{"label":"Interface","slots":["abas de captura, ajustes e arquivos"]},{"label":"Controle","slots":["menus de gravação e consulta de vídeos"]}],"mobilidade-01":[{"label":"Estação","slots":["da Linha 10, identificada pela placa no acesso"]},{"label":"Metrô","slots":["que aparece no painel de orientação"]}],"mobilidade-02":[{"label":"Saída","slots":["localizar a saída indicada para o nosso destino"]},{"label":"Orientação","slots":["seguir as placas até o corredor de transferência"]}],"mobilidade-03":[{"label":"Bairro","slots":["pequenas lojas e dois cruzamentos"]},{"label":"Caminhada","slots":["um canal e uma área de descanso"]}],"mobilidade-04":[{"label":"Sinalização","slots":["uma praça indicada pelo símbolo no painel"]},{"label":"Orientação","slots":["uma das saídas numeradas da estação"]}],"mobilidade-05":[{"label":"Conexão","slots":["uma estação sinalizada como ponto de transferência"]},{"label":"Rota","slots":["um corredor indicado pelo mapa oficial"]}],"mobilidade-06":[{"label":"Acesso","slots":["na esquina oposta ao ponto de ônibus"]},{"label":"Rota","slots":["ao lado do corredor coberto, mas precisamos confirmar"]}],"mobilidade-09":[{"label":"Sombra","slots":["uma sequência de árvores que cobre parte do passeio"]},{"label":"Acessibilidade","slots":["uma calçada contínua, sem degraus no trecho filmado"]}],"mobilidade-13":[{"label":"Caminhada","slots":["uma passagem coberta entre os edifícios"]},{"label":"Praça","slots":["a entrada de um jardim junto à esquina"]}],"mobilidade-16":[{"label":"Travessia","slots":["quem atravessa a pé durante o sinal verde"]},{"label":"Bicicletas","slots":["ciclistas que passam pelo canteiro central"]}],"mobilidade-18":[{"label":"Experiência","slots":["mais demorada do que eu esperava, porque errei a saída"]},{"label":"Caminhada","slots":["mais confortável na parte arborizada do trajeto"]}],"pessoal-01":[{"label":"Percepção","slots":["de silêncio em comparação à avenida de onde vim"]},{"label":"Contraste","slots":["que a praça era menor do que parecia nas fotografias"]}],"pessoal-02":[{"label":"Expectativa","slots":["eu só conhecia a área por imagens feitas de longe"]},{"label":"Cultura","slots":["confundi uma referência local com algo da minha cidade"]}],"pessoal-03":[{"label":"Encontro","slots":["a conversa com a pessoa que prepara o chá"]},{"label":"Passeio","slots":["a possibilidade de observar a rua sem pressa"]}],"pessoal-05":[{"label":"Aprendizado","slots":["os sinais utilizados no mercado durante a negociação"]},{"label":"Cuidado","slots":["como os moradores nomeiam certos espaços"]}],"pessoal-06":[{"label":"Reflexão","slots":["o tempo que gastamos no deslocamento diário"]},{"label":"Experiência","slots":["como muda nossa percepção de escala ao caminhar"]}],"pessoal-07":[{"label":"Cidade","slots":["prédios espelhados e roupas estendidas nas janelas"]},{"label":"Rua","slots":["lojas modernas e fachadas antigas lado a lado"]}],"pessoal-08":[{"label":"Observação","slots":["o ritmo diferente entre as duas calçadas"]},{"label":"Detalhe","slots":["que a entrada principal quase não aparece de longe"]}],"pessoal-09":[{"label":"Descoberta","slots":["o motivo pelo qual a pessoa entrevistada escolheu aquela rua"]},{"label":"Aprendizado","slots":["como o mesmo espaço funciona de maneiras diferentes"]}],"pessoal-11":[{"label":"Memória","slots":["a frase que ouvi ao final da entrevista"]},{"label":"Imagem","slots":["a luz da tarde sobre a fachada que observamos"]}],"pessoal-14":[{"label":"Cena","slots":["a chuva parou e as pessoas voltaram a caminhar"]},{"label":"Encontro","slots":["um vendedor explicou como prepara o produto"]}],"pessoal-15":[{"label":"Aprendizado","slots":["uma boa descrição depende de detalhes observáveis"]},{"label":"Pesquisa","slots":["a aparência do material não basta para identificar sua composição"]}],"pessoal-17":[{"label":"Comparação","slots":["a feira que conheço no meu bairro"]},{"label":"Mobilidade","slots":["um trajeto semelhante que já fiz em outra cidade"]}],"argumentacao-01":[{"label":"Tese","slots":["que a qualidade do passeio depende de continuidade e acesso"]},{"label":"Audiovisual","slots":["que descrever um detalhe exige mais que chamá-lo de bonito"]}],"argumentacao-03":[{"label":"Documentação","slots":["registros publicados e datados"]},{"label":"Observação","slots":["uma comparação feita sob condições equivalentes"]}],"argumentacao-05":[{"label":"Contraponto","slots":["que a mudança de fluxo observada é apenas sazonal"]},{"label":"Debate","slots":["que o mesmo tipo de solução tem resultados diferentes em outros locais"]}],"argumentacao-06":[{"label":"Limite","slots":["termos registrado imagens em apenas um horário"]},{"label":"Pesquisa","slots":["termos entrevistado apenas uma pessoa sobre o tema"]}],"argumentacao-07":[{"label":"Comprovação","slots":["medições realizadas em dias comparáveis"]},{"label":"Investigação","slots":["um documento que identifique o responsável pela obra"]}],"argumentacao-08":[{"label":"Cautela","slots":["uma mudança aparente no movimento da rua","que ela tenha sido causada pela reforma"]},{"label":"Causa","slots":["uma associação entre horário e ruído","que um provoque o outro"]}],"argumentacao-13":[{"label":"Outra hipótese","slots":["que a diferença observada resulte do horário das gravações"]},{"label":"Contexto","slots":["que uma nova rota tenha redirecionado parte da circulação"]}],"argumentacao-16":[{"label":"Conclusão","slots":["que a diferença visual existe, mas sua origem ainda precisa ser apurada"]},{"label":"Apuração","slots":["que os relatos apontam uma mudança, sem permitir medir sua extensão"]}],"argumentacao-17":[{"label":"Pesquisa","slots":["se o movimento observado se repete em outros dias"]},{"label":"Comprovação","slots":["qual era a finalidade declarada da intervenção"]}],"direcao-06":[{"label":"Foco","slots":["a entrada iluminada no fim da galeria"]},{"label":"Enquadramento","slots":["o produto colocado junto à vitrine"]}],"direcao-07":[{"label":"Travelling","slots":["um pedestre ao longo da calçada"]},{"label":"Cena","slots":["um entregador até o acesso lateral"]}],"direcao-16":[{"label":"Arquitetura","slots":["uma fachada que acompanha toda a quadra"]},{"label":"Paisagem","slots":["uma sequência de árvores junto ao passeio"]}],"direcao-18":[{"label":"Geografia","slots":["a distância aparente entre a estação e as lojas"]},{"label":"Composição","slots":["a relação entre o detalhe em primeiro plano e o entorno"]}],"encerramento-01":[{"label":"Aprendizado","slots":["como uma boa pergunta mudou nossa forma de observar o lugar"]},{"label":"Campo","slots":["que um detalhe pequeno pode organizar uma narrativa inteira"]}],"encerramento-02":[{"label":"Mudança","slots":["o tamanho real das distâncias percorridas a pé"]},{"label":"Cidade","slots":["a importância de olhar para além da primeira fachada"]}],"encerramento-03":[{"label":"Comércio","slots":["as transformações do comércio de bairro"]},{"label":"Pessoas","slots":["as diferentes rotinas de quem atravessa a rua"]}],"encerramento-04":[{"label":"Passeio","slots":["caminhar sem tentar conhecer tudo de uma só vez"]},{"label":"Observação","slots":["voltar ao mesmo local em horários diferentes"]}],"encerramento-05":[{"label":"Síntese","slots":["uma resposta parcial, com outras perguntas pela frente"]},{"label":"Pesquisa","slots":["uma distinção mais clara entre impressão e evidência"]}],"encerramento-11":[{"label":"Descoberta","slots":["entender como a circulação muda ao longo do percurso"]},{"label":"Entrevista","slots":["perceber que a fonte descrevia algo diferente do que havíamos imaginado"]}],"encerramento-15":[{"label":"Síntese","slots":[", eu diria que observar de perto mudou a história que contamos"]},{"label":"Narrativa","slots":[", seria esta: uma rua revela mais quando fazemos perguntas melhores"]}],"encerramento-18":[{"label":"Imagem","slots":["o movimento da rua ao fim da tarde"]},{"label":"Composição","slots":["a relação entre as árvores e a arquitetura"]}],"telejornalismo-13":[{"label":"Assinatura","slots":["o repórter responsável por esta edição"]},{"label":"Apresentação","slots":["quem acompanhou esta história de perto"]}]}};
+
+</script>
+  <script>
+/* StoryLab · Fraseoteca / Encaixes — prática editorial de construções abertas.
+   Cenários são exemplos hipotéticos; nenhuma informação factual é verificada. */
+window.StoryLabEncaixes=(()=>{
+  'use strict';
+  const corpus=()=>window.STORYLAB_ENCAIXES?.optionsByPhrase||{};
+  let api=null;
+  const state={openId:null};
+  const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const ellipsis=/\.{3}|…/g;
+  const countSlots=phrase=>(String(phrase||'').match(/\.{3}|…/g)||[]).length;
+  const eligible=p=>!!(p&&countSlots(p.pt)&&corpus()[p.id]);
+  function normalizeSlots(slots,count){return Array.from({length:count},(_,i)=>typeof slots?.[i]==='string'?slots[i].slice(0,240):'')}
+  function compose(phrase,slots){
+    const parts=normalizeSlots(slots,countSlots(phrase));
+    let i=0;
+    let completed=String(phrase).replace(ellipsis,(token,offset)=>{
+      const value=parts[i++].trim()||'_____';
+      const before=String(phrase)[offset-1]||'';
+      const join=/[\p{L}\p{N}]/u.test(before)&&/^[\p{L}\p{N}]/u.test(value)?' ':'';
+      return join+value;
+    });
+    completed=completed.replace(/ +([,.;!?])/g,'$1').trim();
+    if(!/[.!?]$/.test(completed))completed+='.';
+    return completed;
+  }
+  function current(p){
+    const choices=corpus()[p.id]||[];
+    const record=api?.getStore().phraseEncaixes?.[p.id];
+    const selected=record?.selected==='custom'?'custom':Number.isInteger(record?.selected)&&record.selected>=0&&record.selected<choices.length?record.selected:0;
+    const slots=selected==='custom'?normalizeSlots(record?.slots,countSlots(p.pt)):choices[selected]?.slots||[];
+    return {selected,slots,preview:compose(p.pt,slots),ready:slots.length===countSlots(p.pt)&&slots.every(x=>typeof x==='string'&&x.trim().length>=2)};
+  }
+  function button(action,label,id,cls='btn secondary sm',attributes=''){
+    return '<button type="button" class="'+cls+'" data-encaixe-action="'+action+'" data-phrase-id="'+escape(id)+'" '+attributes+'>'+label+'</button>';
+  }
+  function card(p,lang='pt'){
+    if(lang!=='pt'||!eligible(p))return '';
+    const open=state.openId===p.id;
+    const opts=corpus()[p.id],saved=current(p),slots=countSlots(p.pt);
+    if(!open)return '<div class="encaixe-teaser">'+button('toggle','✳ Explorar encaixes <span class="encaixe-num">'+opts.length+' contextos</span>',p.id,'encaixe-trigger','aria-expanded="false"')+'</div>';
+    const selector='<div class="encaixe-options" role="group" aria-label="Sugestões de encaixe para esta frase">'+
+      opts.map((o,i)=>button('select','<span class="encaixe-select-dot" aria-hidden="true"></span><span><strong>'+escape(o.label)+'</strong><small>'+escape(o.slots.join(' / '))+'</small></span>',p.id,'encaixe-option '+(saved.selected===i?'active':''),'data-option="'+i+'" aria-pressed="'+(saved.selected===i)+'"')).join('')+
+      button('select','<span class="encaixe-select-dot" aria-hidden="true"></span><span><strong>Meu encaixe</strong><small>Escrever a minha própria versão</small></span>',p.id,'encaixe-option '+(saved.selected==='custom'?'active':''),'data-option="custom" aria-pressed="'+(saved.selected==='custom')+'"')+
+      '</div>';
+    const fields=saved.selected==='custom'?'<div class="encaixe-custom">'+saved.slots.map((value,i)=>'<div><label for="encaixe-slot-'+p.id+'-'+i+'">Complemento '+(i+1)+' de '+slots+'</label><input id="encaixe-slot-'+p.id+'-'+i+'" type="text" maxlength="240" autocomplete="off" data-encaixe-slot="'+i+'" data-phrase-id="'+escape(p.id)+'" placeholder="Descreva algo que você observou ou investigou" value="'+escape(value)+'"></div>').join('')+'</div>':'';
+    const html='<div class="encaixe-lab" data-encaixe-panel="'+escape(p.id)+'">'+
+      '<div class="encaixe-header"><div><span class="eyebrow">LABORATÓRIO SINTÁTICO · ENCAIXES</span><h4>Uma estrutura, diferentes sentidos</h4></div>'+button('toggle','Fechar',p.id,'encaixe-close','aria-expanded="true"')+'</div>'+
+      '<p class="encaixe-intro">Escolha uma situação ou preencha as '+(slots===1?'lacuna':'lacunas')+'. Cada opção respeita a estrutura original. Os cenários são hipotéticos.</p>'+
+      selector+fields+
+      '<div class="encaixe-result"><span class="eyebrow">SUA FRASE COMPLETA</span><p data-encaixe-preview="'+escape(p.id)+'" aria-live="polite">'+escape(saved.preview)+'</p></div>'+
+      '<div class="encaixe-actions">'+
+       button('copy','Copiar frase',p.id,'btn accent sm')+
+       button('listen','Ouvir',p.id,'btn secondary sm')+
+       button('tele','Levar ao teleprompter',p.id,'btn secondary sm')+
+      '</div><p class="encaixe-disclaimer">Compare as escolhas de complemento, regência e precisão. Antes de usar em reportagem, confira fatos, datas, nomes e fontes.</p>'+
+      '</div>';
+    return html;
+  }
+  function getPhrase(id){return api?.D.phrases.find(p=>p.id===id)}
+  function setSelected(id,selected){
+    const p=getPhrase(id),opts=corpus()[id];if(!p||!opts)return;
+    const stored=api.getStore();stored.phraseEncaixes=stored.phraseEncaixes||{};
+    const previous=stored.phraseEncaixes[id]||{};
+    const record=selected==='custom'?
+      {selected:'custom',slots:normalizeSlots(previous.slots,countSlots(p.pt))}:
+      {selected:Number(selected),slots:normalizeSlots(previous.slots,countSlots(p.pt))};
+    stored.phraseEncaixes[id]=record;api.save();
+    api.render();
+  }
+  function usable(id){const p=getPhrase(id);if(!eligible(p))return null;const x=current(p);if(!x.ready){api.toast('Complete todas as lacunas antes de usar a frase.');return null}return x.preview}
+  function init(context){
+    api=context;
+    document.addEventListener('click',event=>{
+      const btn=event.target.closest('[data-encaixe-action]');
+      if(!btn)return;
+      event.preventDefault();
+      const id=btn.dataset.phraseId,action=btn.dataset.encaixeAction;
+      if(!eligible(getPhrase(id)))return;
+      if(action==='toggle'){state.openId=state.openId===id?null:id;api.render();return}
+      if(action==='select'){const val=btn.dataset.option;const opts=corpus()[id];if(val!=='custom'&&(!/^\d+$/.test(val)||Number(val)>=opts.length))return;state.openId=id;setSelected(id,val==='custom'?'custom':Number(val));return}
+      const text=usable(id);if(!text)return;
+      if(action==='copy'){api.copy(text);return}
+      if(action==='listen'){api.say(text,'pt-BR');return}
+      if(action==='tele'){api.toTele(text);return}
+    });
+    document.addEventListener('input',event=>{
+      const t=event.target;
+      if(!t.matches('[data-encaixe-slot]'))return;
+      const id=t.dataset.phraseId,index=Number(t.dataset.encaixeSlot),p=getPhrase(id);
+      if(!eligible(p)||!Number.isInteger(index)||index<0||index>=countSlots(p.pt))return;
+      const stored=api.getStore();stored.phraseEncaixes=stored.phraseEncaixes||{};
+      const existing=stored.phraseEncaixes[id]||{selected:'custom',slots:[]};
+      const slots=normalizeSlots(existing.slots,countSlots(p.pt));slots[index]=t.value.slice(0,240);
+      stored.phraseEncaixes[id]={selected:'custom',slots};api.save();
+      const preview=document.querySelector('[data-encaixe-preview="'+id+'"]');if(preview)preview.textContent=compose(p.pt,slots);
+    });
+  }
+  return {init,card,compose,eligible,current,countSlots};
+})();
+</script>
+  <script>
+/* StoryLab Shanghai · Laboratório de Escuta v2.14
+   Síntese de voz nativa, sem servidor. Compatibilidade depende das vozes instaladas.
+   O som gerado pelo navegador NÃO é um arquivo e não entra no backup. */
+window.StoryLabAudio=(()=>{
+'use strict';
+const KEY='storylab-voice-preferences-v1';
+const MAX_CHUNK=175,MAX_PAGE=16000;
+const LANGS={'pt-BR':'Português','en-US':'English','zh-CN':'中文'};
+const SELECTORS=[
+ '.page-head .subtitle',
+ '.lesson-body .step > p','.lesson-body .step .example > div',
+ '.lesson-body .panel-pad > p',
+ '.ling-section > p','.ling-example p','.ling-curiosity p',
+ '.ling-terms-grid p','.ling-comparison p','.ling-reason',
+ '.ling-figure figcaption','.ling-practice li','.ling-quiz h3',
+ '.ling-explanation p','.ling-references > p',
+ '.atlas12-definition','.atlas12-example > p','.atlas12-warning > p',
+ '.atlas12-work > p','.atlas12-feedback > p',
+ '.vl-root .vl-intro > p','.vl-root .vl-detail p',
+ '.vl-root .vl-examples p','.vl-root .vl-example p',
+ '.vr-regency p','.vl-root .vl-warning',
+ '.vc-entry p','.vl-root .vl-description',
+ '.panel.panel-pad > p:not(.small):not(.muted)',
+ '.mission-detail p','.lesson-body .notice.info',
+ '.two-col .panel.panel-pad > .example',
+ '.hero-copy > p',
+ '.layer-card > p','.layer-card .example',
+ '.record-stage > p','.record-stage > h2',
+ '.journey-view .panel p','.panel.panel-pad > .example',
+ '.clinic-card > p','.clinic-card .example',
+ // A Fraseoteca já oferece seu próprio botão Ouvir para pt/en/zh.
+].join(',');
+let config={speed:0.9,voices:{}};
+try{
+ const value=JSON.parse(localStorage.getItem(KEY)||'{}');
+ if([0.75,0.9,1,1.15].includes(Number(value.speed)))config.speed=Number(value.speed);
+ if(value.voices && typeof value.voices==='object'&&!Array.isArray(value.voices))
+  for(const lang of Object.keys(LANGS))if(typeof value.voices[lang]==='string')config.voices[lang]=value.voices[lang].slice(0,150);
+}catch{}
+let root=null,dock=null,reading=null,token=0,queue=[],offset=0,utterance=null;
+const supported=()=>typeof window!=='undefined'&&!!window.speechSynthesis&&typeof window.SpeechSynthesisUtterance==='function';
+function save(){
+ try{localStorage.setItem(KEY,JSON.stringify(config))}catch{}
+}
+function language(node){
+ if(!node)return 'pt-BR';
+ let tag=node.getAttribute?.('lang');
+ if(!tag&&node.querySelector)tag=node.querySelector('[lang]')?.getAttribute('lang');
+ if(!tag)tag=node.closest?.('[lang]')?.getAttribute('lang');
+ tag=String(tag||'pt').toLowerCase();
+ return tag.startsWith('zh')?'zh-CN':tag.startsWith('en')?'en-US':'pt-BR';
+}
+function chunks(input,limit=MAX_CHUNK){
+ const text=String(input||'').replace(/\s+/g,' ').trim();
+ if(!text)return [];
+ const sentences=text.match(/[^.!?。！？;；]+[.!?。！？;；]*(?:\s+|$)/g)||[text];
+ const parts=[],push=s=>{s=s.trim();if(s)parts.push(s)};
+ for(const sent of sentences){
+  let rest=sent.trim();
+  while(rest.length>limit){
+   let pos=rest.lastIndexOf(' ',limit);
+   if(pos<Math.round(limit*0.45))pos=limit;
+   push(rest.slice(0,pos));
+   rest=rest.slice(pos).trim();
+  }
+  push(rest);
+ }
+ return parts;
+}
+const icon='<svg aria-hidden="true" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 5a10 10 0 0 1 0 14"/></svg>';
+function control(label,action,cls){
+ const b=document.createElement('button');
+ b.type='button';b.className=cls||'sl-audio-control';b.dataset.slAudioAction=action;b.textContent=label;
+ return b;
+}
+function labelCurrent(){return reading?.label||'Escuta em andamento'}
+function status(msg,kind='info'){
+ if(!dock)return;
+ const state=dock.querySelector('[data-sl-audio-status]');
+ if(state){state.textContent=msg;state.dataset.state=kind}
+}
+function refreshVoices(){
+ if(!dock)return;
+ const sel=dock.querySelector('[data-sl-audio-voice]');
+ if(!sel)return;
+ const all=typeof window.speechSynthesis?.getVoices==='function'?window.speechSynthesis.getVoices():[];
+ const voices=all.filter(v=>String(v.lang||'').toLowerCase().startsWith((reading?.lang||'pt-BR').slice(0,2).toLowerCase()));
+ sel.replaceChildren();
+ const auto=document.createElement('option');auto.value='';auto.textContent='Voz automática';sel.append(auto);
+ for(const v of voices){
+  const opt=document.createElement('option');opt.value=v.voiceURI;opt.textContent=v.name+' · '+v.lang;sel.append(opt);
+ }
+ sel.value=voices.some(v=>v.voiceURI===config.voices[reading?.lang])?config.voices[reading.lang]:'';
+ sel.hidden=voices.length<1;sel.disabled=voices.length<1;
+ const hint=dock.querySelector('[data-sl-audio-voice-hint]');
+ if(hint)hint.textContent=all.length&&!voices.length?'Voz '+(reading?.lang||'')+' não instalada; o sistema pode usar outra pronúncia.':'';
+}
+function ensureDock(){
+ if(dock||typeof document==='undefined')return;
+ dock=document.createElement('section');dock.id='sl-audio-dock';dock.className='sl-audio-dock';dock.hidden=true;
+ dock.setAttribute('aria-label','Controles de leitura em voz alta');
+ const details=document.createElement('div');details.className='sl-audio-dock-heading';
+ const title=document.createElement('strong');title.dataset.slAudioTitle='';title.textContent='Leitura em voz alta';
+ const statusText=document.createElement('span');statusText.dataset.slAudioStatus='';statusText.setAttribute('role','status');
+ details.append(title,statusText);
+ const controls=document.createElement('div');controls.className='sl-audio-dock-controls';
+ controls.append(control('Pausar','pause'),control('Parar','stop'));
+ const speed=document.createElement('label');speed.className='sl-audio-select-label';speed.textContent='Ritmo';
+ const speeds=document.createElement('select');speeds.dataset.slAudioSpeed='';speeds.setAttribute('aria-label','Velocidade da narração');
+ for(const v of [0.75,0.9,1,1.15]){
+  const op=document.createElement('option');op.value=String(v);op.textContent=String(v).replace('.',',')+'×';speeds.append(op);
+ }
+ speeds.value=String(config.speed);speed.append(speeds);
+ const voiceLabel=document.createElement('label');voiceLabel.className='sl-audio-select-label';voiceLabel.textContent='Voz';
+ const voiceSelect=document.createElement('select');voiceSelect.dataset.slAudioVoice='';voiceSelect.setAttribute('aria-label','Voz do idioma selecionado');
+ voiceLabel.append(voiceSelect);
+ controls.append(speed,voiceLabel);
+ const hint=document.createElement('p');hint.className='sl-audio-voice-hint';hint.dataset.slAudioVoiceHint='';
+ dock.append(details,controls,hint);
+ document.body.append(dock);
+ dock.addEventListener('click',event=>{
+  const b=event.target.closest?.('[data-sl-audio-action]');if(!b)return;
+  if(b.dataset.slAudioAction==='pause')togglePause();
+  if(b.dataset.slAudioAction==='stop')stop();
+ });
+ dock.addEventListener('change',event=>{
+  const field=event.target;
+  if(field.matches('[data-sl-audio-speed]')){
+   config.speed=Number(field.value);save();
+   if(reading)restart();
+  }
+  if(field.matches('[data-sl-audio-voice]')){
+   config.voices[reading?.lang||'pt-BR']=field.value;save();
+   if(reading)restart();
+  }
+ });
+ if(window.speechSynthesis?.addEventListener)window.speechSynthesis.addEventListener('voiceschanged',refreshVoices);
+}
+function markButton(pressed){
+ if(!root)return;
+ root.querySelectorAll('[data-sl-audio-action="read"]').forEach(b=>{
+  const active=pressed&&reading?.trigger===b;
+  b.classList.toggle('is-reading',!!active);
+  b.setAttribute('aria-pressed',active?'true':'false');
+  b.title=active?'Pausar ou retomar a leitura':'Ouvir este trecho';
+ });
+}
+function update(){
+ ensureDock();
+ if(!dock)return;
+ dock.hidden=!reading;
+ markButton(!!reading);
+ if(!reading)return;
+ const label=dock.querySelector('[data-sl-audio-title]');if(label)label.textContent=labelCurrent();
+ const pause=dock.querySelector('[data-sl-audio-action="pause"]');
+ if(pause)pause.textContent=window.speechSynthesis?.paused?'Retomar':'Pausar';
+ status(LANGS[reading.lang]+' · '+(offset+1)+' de '+queue.length+' trechos');
+ refreshVoices();
+}
+function stop(){
+ token++;queue=[];offset=0;utterance=null;
+ try{window.speechSynthesis?.cancel()}catch{}
+ reading=null;update();
+}
+function chooseVoice(lang){
+ const vs=window.speechSynthesis?.getVoices?.()||[];
+ const fits=vs.filter(v=>String(v.lang).toLowerCase().startsWith(lang.slice(0,2).toLowerCase()));
+ const selected=fits.find(v=>v.voiceURI===config.voices[lang]);
+ return selected||fits.find(v=>String(v.lang).toLowerCase()===lang.toLowerCase())||fits[0]||null;
+}
+function next(id){
+ if(id!==token||!reading)return;
+ if(offset>=queue.length){reading=null;queue=[];utterance=null;update();return}
+ const Utter=window.SpeechSynthesisUtterance;
+ const u=new Utter(queue[offset]);
+ utterance=u;u.lang=reading.lang;u.rate=config.speed;u.pitch=1;
+ const voice=chooseVoice(reading.lang);if(voice)u.voice=voice;
+ u.onend=()=>{
+  if(id!==token)return;
+  offset++;if(offset<queue.length){next(id)}else{reading=null;utterance=null;queue=[];update()}
+ };
+ u.onerror=e=>{
+  if(id!==token)return;
+  if(e?.error==='interrupted'||e?.error==='canceled')return;
+  const problem=e?.error||'desconhecido';stop();ensureDock();dock.hidden=false;
+  status('A leitura foi interrompida pelo navegador ('+problem+'). Confira as vozes do aparelho.','error');
+ };
+ try{window.speechSynthesis.speak(u);update()}catch{
+  stop();ensureDock();dock.hidden=false;status('Não foi possível reproduzir este trecho neste dispositivo.','error');
+ }
+}
+function speak(text,lang='pt-BR',label='Trecho para estudo',trigger=null){
+ if(!supported()){ensureDock();dock.hidden=false;status('O navegador não oferece síntese de voz neste dispositivo.','error');return false}
+ const clean=String(text||'').replace(/\s+/g,' ').trim();
+ if(!clean)return false;
+ const normalized=LANGS[lang]?lang:lang?.startsWith('en')?'en-US':lang?.startsWith('zh')?'zh-CN':'pt-BR';
+ if(reading && clean===reading.text && normalized===reading.lang){togglePause();return true}
+ stop();reading={text:clean,lang:normalized,label:String(label||'Trecho para estudo').slice(0,130),trigger};
+ queue=chunks(clean);offset=0;const id=++token;next(id);
+ return true;
+}
+function restart(){
+ if(!reading)return;
+ const {text,lang,label,trigger}=reading;
+ stop();speak(text,lang,label,trigger);
+}
+function togglePause(){
+ if(!reading)return;
+ try{
+  if(window.speechSynthesis.paused)window.speechSynthesis.resume();
+  else window.speechSynthesis.pause();
+  update();
+ }catch{}
+}
+function getText(node){
+ if(!node)return '';
+ const clone=node.cloneNode(true);
+ clone.querySelectorAll?.('button,audio,video,script,style,.sl-audio-trigger,.sl-audio-controls,[aria-hidden="true"]').forEach(el=>el.remove());
+ return String(clone.textContent||'').replace(/\s+/g,' ').trim();
+}
+function addInline(node){
+ if(node.dataset.slAudioAdded==='1'||node.closest('button,a,[contenteditable="true"],.sl-audio-dock'))return;
+ const value=getText(node);
+ if(value.length<20||value.length>4400)return;
+ const lang=language(node);
+ node.dataset.slAudioAdded='1';
+ node.classList.add('sl-audio-target');
+ const button=document.createElement('button');
+ button.type='button';button.className='sl-audio-trigger';
+ button.dataset.slAudioAction='read';button.title='Ouvir este trecho';
+ button.setAttribute('aria-label','Ouvir trecho em '+LANGS[lang]+': '+value.slice(0,78));
+ button.setAttribute('aria-pressed','false');
+ button.innerHTML=icon+'<span>Ouvir</span>';
+ node.append(button);
+}
+function enhance(container){
+ if(!container||!container.querySelectorAll)return;
+ root=container;
+ const page=container.querySelector('.page-head');
+ if(page&&!page.querySelector('[data-sl-audio-action="page"]')){
+  const b=document.createElement('button');
+  b.type='button';b.className='sl-audio-page';
+  b.dataset.slAudioAction='page';b.innerHTML=icon+'<span>Ouvir esta página</span>';
+  b.title='Ouvir os conteúdos textuais desta página';
+  page.append(b);
+ }
+ const nodes=container.querySelectorAll(SELECTORS);
+ for(const n of nodes)addInline(n);
+ markButton(!!reading);
+}
+function click(event){
+ const button=event.target.closest?.('[data-sl-audio-action]');
+ if(!button||button.closest?.('#sl-audio-dock'))return;
+ const action=button.dataset.slAudioAction;
+ if(action==='read'){
+  const node=button.parentElement;
+  if(!node)return;
+  event.preventDefault();event.stopPropagation();
+  const text=getText(node),title=node.closest('.panel,.ling-article,.atlas12-detail')?.querySelector('h2,h3')?.textContent?.trim()||'Trecho para estudo';
+  speak(text,language(node),title,button);
+ }
+ if(action==='page'){
+  event.preventDefault();event.stopPropagation();
+  const nodes=Array.from(root?.querySelectorAll('.sl-audio-target')||[]);
+  const selected=nodes.map(n=>getText(n)).filter(Boolean);
+  const text=selected.join('. ').slice(0,MAX_PAGE);
+  if(!text){ensureDock();dock.hidden=false;status('Esta seção não possui um texto de leitura contínua. Use os botões Ouvir junto ao conteúdo.');return}
+  // Não concatene conteúdo em outros idiomas: uma página pode conter cartões trilingues.
+  const rootLang=nodes[0]?language(nodes[0]):'pt-BR';
+  const same=nodes.filter(n=>language(n)===rootLang).map(n=>getText(n)).join('. ').slice(0,MAX_PAGE);
+  speak(same,rootLang,'Leitura da página',button);
+ }
+}
+if(typeof document!=='undefined')document.addEventListener('click',click,true);
+if(typeof window!=='undefined')window.addEventListener?.('pagehide',stop);
+return {enhance,speak,stop,togglePause,language,chunks,supported,selectable:SELECTORS,version:'2.14'};
+})();
+</script>
+  <script>
 (()=>{
 'use strict';
 const D=window.STORYLAB_DATA;
 if(!D){document.getElementById('app').textContent='Não foi possível carregar o conteúdo do aplicativo.';return;}
 const KEY='storylab-shanghai-v1';
-const baseState=()=>({completed:[],favorites:[],reviews:{},practice:[],missions:[],notes:{},clinicDrafts:[],clinicDone:[],atlasDrafts:{},atlasHistory:[],atlasMastery:{},activity:{},dailyGoal:10,badges:{},linguisticsDone:[],linguisticsAnswers:{},linguisticsNotes:{},theme:'light',lastLesson:null});
+const baseState=()=>({completed:[],favorites:[],reviews:{},practice:[],missions:[],notes:{},clinicDrafts:[],clinicDone:[],atlasDrafts:{},atlasHistory:[],atlasMastery:{},activity:{},dailyGoal:10,badges:{},linguisticsDone:[],linguisticsAnswers:{},linguisticsNotes:{},phraseEncaixes:{},theme:'light',lastLesson:null});
 // Atividade diária (sequência de estudo): só datas válidas e contagens inteiras
 function cleanBadges(b){if(!b||typeof b!=='object'||Array.isArray(b))return {};return Object.fromEntries(Object.entries(b).filter(([k,v])=>/^[a-z0-9-]{2,40}$/.test(k)&&/^\d{4}-\d{2}-\d{2}$/.test(String(v))).slice(0,100))}
 function cleanActivity(a){if(!a||typeof a!=='object'||Array.isArray(a))return {};return Object.fromEntries(Object.entries(a).filter(([k,v])=>/^\d{4}-\d{2}-\d{2}$/.test(k)&&Number.isFinite(Number(v))).slice(-400).map(([k,v])=>[k,Math.max(0,Math.min(9999,Number(v)|0))]))}
@@ -3186,7 +3678,19 @@ function cleanMastery(m){if(!m||typeof m!=='object'||Array.isArray(m))return {};
 function cleanLinguisticsDone(x){return Array.isArray(x)?[...new Set(x.filter(v=>typeof v==='string'&&/^[a-z-]{3,50}$/.test(v)))].slice(0,100):[]}
 function cleanLinguisticsAnswers(x){if(!x||typeof x!=='object'||Array.isArray(x))return {};return Object.fromEntries(Object.entries(x).filter(([k,v])=>/^[a-z-]{3,50}$/.test(k)&&v&&Number.isInteger(v.selected)&&v.selected>=0&&v.selected<3).slice(0,50).map(([k,v])=>[k,{selected:v.selected,at:typeof v.at==='string'?v.at.slice(0,40):''}]))}
 function cleanLinguisticsNotes(x){if(!x||typeof x!=='object'||Array.isArray(x))return {};return Object.fromEntries(Object.entries(x).filter(([k,v])=>/^[a-z-]{3,50}$/.test(k)&&typeof v==='string').slice(0,50).map(([k,v])=>[k,v.slice(0,3500)]))}
-function load(){try{const x=JSON.parse(localStorage.getItem(KEY)||'{}');return {...baseState(),...x,completed:Array.isArray(x.completed)?x.completed:[],favorites:Array.isArray(x.favorites)?x.favorites:[],missions:Array.isArray(x.missions)?x.missions:[],practice:Array.isArray(x.practice)?x.practice:[],clinicDrafts:Array.isArray(x.clinicDrafts)?x.clinicDrafts:[],clinicDone:Array.isArray(x.clinicDone)?x.clinicDone:[],atlasDrafts:x.atlasDrafts&&typeof x.atlasDrafts==='object'&&!Array.isArray(x.atlasDrafts)?x.atlasDrafts:{},atlasHistory:Array.isArray(x.atlasHistory)?x.atlasHistory.slice(-200):[],atlasMastery:cleanMastery(x.atlasMastery),activity:cleanActivity(x.activity),badges:cleanBadges(x.badges),linguisticsDone:cleanLinguisticsDone(x.linguisticsDone),linguisticsAnswers:cleanLinguisticsAnswers(x.linguisticsAnswers),linguisticsNotes:cleanLinguisticsNotes(x.linguisticsNotes),dailyGoal:[5,10,20].includes(x.dailyGoal)?x.dailyGoal:10,reviews:x.reviews&&typeof x.reviews==='object'?x.reviews:{},notes:x.notes&&typeof x.notes==='object'?x.notes:{}}}catch{return baseState()}}
+// Encaixes: escolhas e complementos autorais são dados pequenos incluídos no backup JSON.
+// Importações inesperadas não podem inserir objetos arbitrários nem textos ilimitados.
+function cleanPhraseEncaixes(value){
+ if(!value||typeof value!=='object'||Array.isArray(value))return {};
+ return Object.fromEntries(Object.entries(value).filter(([id,record])=>
+   /^[a-z][a-z0-9-]{2,50}$/.test(id)&&record&&typeof record==='object'&&!Array.isArray(record)&&
+   (record.selected==='custom'||record.selected===0||record.selected===1)
+ ).slice(0,250).map(([id,record])=>[id,{
+   selected:record.selected,
+   slots:Array.isArray(record.slots)?record.slots.slice(0,3).map(s=>typeof s==='string'?s.slice(0,240):''):[]
+ }]));
+}
+function load(){try{const x=JSON.parse(localStorage.getItem(KEY)||'{}');return {...baseState(),...x,completed:Array.isArray(x.completed)?x.completed:[],favorites:Array.isArray(x.favorites)?x.favorites:[],missions:Array.isArray(x.missions)?x.missions:[],practice:Array.isArray(x.practice)?x.practice:[],clinicDrafts:Array.isArray(x.clinicDrafts)?x.clinicDrafts:[],clinicDone:Array.isArray(x.clinicDone)?x.clinicDone:[],atlasDrafts:x.atlasDrafts&&typeof x.atlasDrafts==='object'&&!Array.isArray(x.atlasDrafts)?x.atlasDrafts:{},atlasHistory:Array.isArray(x.atlasHistory)?x.atlasHistory.slice(-200):[],atlasMastery:cleanMastery(x.atlasMastery),activity:cleanActivity(x.activity),badges:cleanBadges(x.badges),linguisticsDone:cleanLinguisticsDone(x.linguisticsDone),linguisticsAnswers:cleanLinguisticsAnswers(x.linguisticsAnswers),linguisticsNotes:cleanLinguisticsNotes(x.linguisticsNotes),phraseEncaixes:cleanPhraseEncaixes(x.phraseEncaixes),dailyGoal:[5,10,20].includes(x.dailyGoal)?x.dailyGoal:10,reviews:x.reviews&&typeof x.reviews==='object'?x.reviews:{},notes:x.notes&&typeof x.notes==='object'?x.notes:{}}}catch{return baseState()}}
 let store=load();const ui={page:'home',menu:false,school:'all',courseQuery:'',courseId:null,module:0,phraseFamily:'all',phraseQuery:'',phraseLang:'pt',phraseView:'all',phraseLimit:30,expandedPhrase:null,atlasIndex:0,missionArea:'all',missionQuery:'',missionId:null,missionChecks:{},challenge:0,voiceMode:'all',recordUrl:null,recording:false,recordElapsed:0,voiceError:'',voiceRubric:[3,3,3,3],studioTab:'builder',builder:{place:'',observation:'',detail:'',context:'',contrast:'',reflection:'',style:'documental'},script:'',teleText:'',teleSpeed:2,teleMode:'full',telePlaying:false,toast:'',showImport:false,clinicTab:'compose',clinicScene:0,clinicDrill:0,clinicReveal:false,clinicInputs:{observation:'',detail:'',context:'',source:'',reflection:'',style:'documental',status:'pendente'},clinicGenerated:''};
 const icons={home:'<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>',book:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',mic:'<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5m-4 0h8"/>',quote:'<path d="M3 21c3-4 5-7 5-12V4H2v7h4M15 21c3-4 5-7 5-12V4h-6v7h4"/>',camera:'<path d="M14 4h-4l-2 3H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-4z"/><circle cx="12" cy="14" r="3"/>',map:'<path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15"/>',layers:'<path d="m12 3-9 5 9 5 9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/>',chart:'<path d="M3 3v18h18M7 15l4-5 4 3 5-7"/>',arrow:'<path d="M5 12h14m-6-6 6 6-6 6"/>',chevron:'<path d="m9 18 6-6-6-6"/>',check:'<path d="m4 12 5 5L20 6"/>',star:'<path d="m12 2 3.1 6.3L22 9.3l-5 4.9 1.2 6.9L12 17.9l-6.2 3.2L7 14.2 2 9.3l6.9-1z"/>',search:'<circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',moon:'<path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/>',menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',close:'<path d="M5 5l14 14M19 5 5 19"/>',volume:'<path d="M11 5 6 9H2v6h4l5 4zM15 9a5 5 0 0 1 0 6m3-9a9 9 0 0 1 0 12"/>',copy:'<rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v1"/>',play:'<path d="m8 5 12 7-12 7z"/>',pause:'<path d="M7 4h3v16H7zM14 4h3v16h-3z"/>',shuffle:'<path d="m18 14 4 4-4 4M2 18h4c5 0 7-12 12-12h4m-4-4 4 4-4 4M2 6h4c2 0 3 2 4 4"/>',download:'<path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/>',upload:'<path d="M12 21V9m-5 5 5-5 5 5M4 7V3h16v4"/>',timer:'<circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/>',spark:'<path d="m12 2 2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/>',file:'<path d="M6 2h8l5 5v15H6zM14 2v5h5M9 12h6m-6 4h6"/>',film:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 4v16M17 4v16M2 9h5m10 0h5M2 15h5m10 0h5"/>',globe:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a16 16 0 0 1 0 20M12 2a16 16 0 0 0 0 20"/>',target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',edit:'<path d="M12 20h9M4 16l-1 5 5-1L20 8l-4-4z"/>',refresh:'<path d="M3 12a9 9 0 0 1 15-6l3 3m0-6v6h-6M21 12a9 9 0 0 1-15 6l-3-3m0 6v-6h6"/>',bell:'<path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/>',settings:'<circle cx="12" cy="12" r="3"/><path d="m19 12 2-2-2-3-3 1-1-3h-4l-1 3-3-1-2 3 2 2-2 2 2 3 3-1 1 3h4l1-3 3 1 2-3z"/>'};
 function ico(n,size=18){return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[n]||icons.book}</svg>`}
@@ -3199,7 +3703,7 @@ const deepKeys=Object.keys(D.deepLessons);const deepCount=deepKeys.length;
 function countDone(){return deepKeys.filter(k=>store.completed.includes(k)).length}
 function studied(){return Object.keys(store.reviews).filter(k=>D.phrases.some(p=>p.id===k)).length}
 function due(p){let r=store.reviews[p.id];return r&&r.next<=Date.now()}
-function navigate(page,opts={},fromHistory=false){if(page!=='atlas'&&window.StoryLabRecorder)window.StoryLabRecorder.close(true);ui.page=page;ui.menu=false;Object.assign(ui,opts);if(page!=='studio'){stopTele()}render();window.scrollTo({top:0,behavior:'instant'});if(!fromHistory)pushNav()}
+function navigate(page,opts={},fromHistory=false){window.StoryLabAudio?.stop();if(page!=='atlas'&&window.StoryLabRecorder)window.StoryLabRecorder.close(true);ui.page=page;ui.menu=false;Object.assign(ui,opts);if(page!=='studio'){stopTele()}render();window.scrollTo({top:0,behavior:'instant'});if(!fromHistory)pushNav()}
 // ── Botão voltar do celular ──
 // Cada navegação vira uma entrada no histórico: voltar retorna à tela anterior do app.
 // Na base do histórico, o primeiro toque só avisa; o app fecha apenas com um segundo toque em até 2 s.
@@ -3222,7 +3726,7 @@ function initBackButton(){try{history.replaceState({storylab:0},'');window.addEv
 const NAV=[['home','home','Painel principal'],['academy','book','Academia'],['linguistics','spark','Linguística Aplicada'],['journey','target','Trilha de 12 semanas'],['phrases','quote','Fraseoteca'],['voice','mic','Estúdio da Voz'],['clinic','spark','Oficina da Fala'],['studio','film','Estúdio Narrativo'],['atlas','layers','Atlas Descritivo'],['field','map','Campo Shanghai'],['progress','chart','Minha Evolução']];
 const PAGE_LABEL={home:'Visão geral',academy:'Currículo acadêmico',linguistics:'Academia da Linguagem',journey:'Trilha orientada',course:'Disciplina',lesson:'Sala de aula',phrases:'Biblioteca de linguagem',voice:'Prática de expressão',clinic:'Oficina de linguagem',studio:'Criação audiovisual',atlas:'Precisão lexical',field:'Aprendizagem em campo',mission:'Missão em andamento',progress:'Acompanhamento'};
 function sidebar(){return `<aside class="sidebar" aria-label="Navegação principal"><button type="button" class="brand" data-action="navigate" data-page="home"><span class="brand-mark">S</span><span><strong>STORYLAB</strong><small>SHANGHAI ACADEMY</small></span></button><div class="nav-caption">EXPLORAR</div><nav>${NAV.map(([id,ic,label])=>`<button class="nav-item ${ui.page===id||((ui.page==='course'||ui.page==='lesson')&&id==='academy')||(ui.page==='mission'&&id==='field')?'active':''}" data-action="navigate" data-page="${id}" aria-current="${ui.page===id?'page':'false'}">${ico(ic)}<span>${label}</span>${id==='phrases'?`<span class="tiny-count">${D.phrases.length}</span>`:''}</button>`).join('')}</nav><div class="sidebar-footer"><div class="eyebrow" style="color:#dea083">LEARN · OBSERVE · TELL</div><div class="note">Uma escola autodidata em construção, com aulas práticas, roteiros e repertório vivo. Sem diploma ou credenciamento profissional.</div><button data-action="theme">${ico(store.theme==='dark'?'sun':'moon',15)} ${store.theme==='dark'?'Tema claro':'Tema escuro'}</button></div></aside>`}
-function shell(content){return `<div class="layout ${ui.menu?'menu-open':''}"><button class="menu-scrim" data-action="menu" aria-label="Fechar menu"></button>${sidebar()}<div class="workspace"><header class="topbar"><div class="topbar-left"><button class="icon-btn mobile-menu" data-action="menu" aria-label="Abrir menu">${ico('menu')}</button><span class="topbar-label">THE STORYLAB JOURNAL / ${esc(PAGE_LABEL[ui.page]||'STORYLAB')}</span></div><div class="top-actions"><span class="chip" style="display:none" id="offline-state">Offline</span>${window.StoryLabInteract?window.StoryLabInteract.topbar():''}<button class="icon-btn" title="Buscar em tudo (Ctrl K)" aria-label="Buscar em todo o StoryLab" data-ix="search">${ico('search')}</button><button class="icon-btn" title="Alternar tema" aria-label="Alternar tema" data-action="theme">${ico(store.theme==='dark'?'sun':'moon')}</button></div></header><main class="page" id="main-content">${content}<footer class="footer-note"><span>© StoryLab Shanghai · Formação autodidata independente · Versão 2.12</span><span>Salvamento local neste navegador · Exporte seu progresso regularmente</span></footer></main></div></div>`}
+function shell(content){return `<div class="layout ${ui.menu?'menu-open':''}"><button class="menu-scrim" data-action="menu" aria-label="Fechar menu"></button>${sidebar()}<div class="workspace"><header class="topbar"><div class="topbar-left"><button class="icon-btn mobile-menu" data-action="menu" aria-label="Abrir menu">${ico('menu')}</button><span class="topbar-label">THE STORYLAB JOURNAL / ${esc(PAGE_LABEL[ui.page]||'STORYLAB')}</span></div><div class="top-actions"><span class="chip" style="display:none" id="offline-state">Offline</span>${window.StoryLabInteract?window.StoryLabInteract.topbar():''}<button class="icon-btn" title="Buscar em tudo (Ctrl K)" aria-label="Buscar em todo o StoryLab" data-ix="search">${ico('search')}</button><button class="icon-btn" title="Alternar tema" aria-label="Alternar tema" data-action="theme">${ico(store.theme==='dark'?'sun':'moon')}</button></div></header><main class="page" id="main-content">${content}<footer class="footer-note"><span>© StoryLab Shanghai · Formação autodidata independente · Versão 2.14</span><span>Salvamento local neste navegador · Exporte seu progresso regularmente</span></footer></main></div></div>`}
 function header(kicker,title,desc,extra=''){return `<div class="page-head"><div><div class="eyebrow" style="margin-bottom:10px">${esc(kicker)}</div><h1>${esc(title)}</h1><p class="subtitle">${esc(desc)}</p></div>${extra}</div>`}
 function panel(inner,cls=''){return `<div class="panel ${cls}">${inner}</div>`}
 function actionCard(ic,title,desc,page){return `<button type="button" class="panel action-card" data-action="navigate" data-page="${page}" style="text-align:left;cursor:pointer"><span class="card-icon">${ico(ic)}</span><h3>${esc(title)}</h3><p>${esc(desc)}</p></button>`}
@@ -3292,11 +3796,11 @@ function clinicView(){
 
 // Escala das famílias (D.phrasesFigures): do que se mostra ao que se defende
 function phrasesScale(){const f=(D.phrasesFigures||[])[0];return f&&window.StoryLabFigures?`<details class="atlas20-more" style="margin:0 0 22px"><summary>Escala das famílias de frases</summary>${window.StoryLabFigures.render(f)}</details>`:''}
-function phrasesView(){const langs=[['pt','Português'],['en','English'],['zh','中文']];let filtered=D.phrases.filter(p=>{let content=[p.pt,p.en||'',p.zh||'',p.use,p.note||'',D.families.find(f=>f.id===p.family)?.title].join(' ');return (ui.phraseFamily==='all'||p.family===ui.phraseFamily)&&(ui.phraseLang==='pt'||!!p[ui.phraseLang])&&(ui.phraseView==='all'||(ui.phraseView==='favorites'&&store.favorites.includes(p.id))||(ui.phraseView==='review'&&due(p)))&&norm(content).includes(norm(ui.phraseQuery))});let display=filtered.slice(0,ui.phraseLimit);return `${header('BIBLIOTECA DE REPERTÓRIO','Fraseoteca Monumental','Não é um dicionário de palavras isoladas: são estruturas de pensamento, transições, aberturas e modelos de narração que podem ser adaptados a cenas reais.',window.StoryLabInteract?window.StoryLabInteract.phraseActions():'')}
-<div class="grid grid-4" style="margin-bottom:23px">${stat('Estruturas em português',D.phrases.length)}${stat('Famílias de intenção',D.families.length)}${stat('Favoritas',store.favorites.length)}${stat('Revisões para hoje',D.phrases.filter(due).length)}</div>
+function phrasesView(){const langs=[['pt','Português'],['en','English'],['zh','中文']];let filtered=D.phrases.filter(p=>{let content=[p.pt,p.en||'',p.zh||'',p.use,p.note||'',D.families.find(f=>f.id===p.family)?.title].join(' ');return (ui.phraseFamily==='all'||p.family===ui.phraseFamily)&&(ui.phraseLang==='pt'||!!p[ui.phraseLang])&&(ui.phraseView==='all'||(ui.phraseView==='favorites'&&store.favorites.includes(p.id))||(ui.phraseView==='review'&&due(p))||(ui.phraseView==='encaixes'&&ui.phraseLang==='pt'&&window.StoryLabEncaixes?.eligible(p)))&&norm(content).includes(norm(ui.phraseQuery))});let display=filtered.slice(0,ui.phraseLimit);return `${header('BIBLIOTECA DE REPERTÓRIO','Fraseoteca Monumental','Não é um dicionário de palavras isoladas: são estruturas de pensamento, transições, aberturas e modelos de narração que podem ser adaptados a cenas reais.',window.StoryLabInteract?window.StoryLabInteract.phraseActions():'')}
+<div class="grid grid-4" style="margin-bottom:23px">${stat('Estruturas em português',D.phrases.length)}${stat('Famílias de intenção',D.families.length)}${stat('Encaixes disponíveis',window.STORYLAB_ENCAIXES?Object.keys(window.STORYLAB_ENCAIXES.optionsByPhrase).length:0)}${stat('Revisões para hoje',D.phrases.filter(due).length)}</div>
 ${phrasesScale()}
-<div class="panel panel-pad" style="margin-bottom:22px"><div class="grid grid-3"><div style="grid-column:span 2"><label class="field-label">Pesquisar termos, intenções ou frases</label><input class="search" type="search" value="${esc(ui.phraseQuery)}" data-model="phraseQuery" placeholder="Ex.: contraste, arquitetura, entrevista, fonte..."></div><div><label class="field-label">Família comunicativa</label><select data-model="phraseFamily"><option value="all">Todas as ${D.families.length} famílias</option>${D.families.map(f=>`<option value="${f.id}" ${ui.phraseFamily===f.id?'selected':''}>${esc(f.title)}</option>`).join('')}</select></div></div><div class="filters" style="margin-top:17px;margin-bottom:0">${langs.map(([l,n])=>`<button class="chip-button ${ui.phraseLang===l?'active':''}" data-action="phrase-lang" data-id="${l}">${n}</button>`).join('')}<span style="flex:1"></span>${[['all','Todas'],['favorites','Favoritas'],['review','Para revisar']].map(([v,n])=>`<button class="chip-button ${ui.phraseView===v?'active':''}" data-action="phrase-view" data-id="${v}">${n}</button>`).join('')}</div></div>
-${ui.phraseLang!=='pt'?`<div class="notice info" style="margin-bottom:18px">O acervo principal possui ${D.phrases.length} estruturas em português. Neste idioma, mostramos apenas traduções já preparadas: ${D.phrases.filter(p=>p[ui.phraseLang]).length} disponíveis nesta edição. Nenhuma tradução automática ou não revisada é inventada.</div>`:''}<div class="phrases-count">${filtered.length} resultados · ${studied()} cartões estudados no total · clique em “Contexto” para comparar formulações</div><div class="grid grid-2">${display.map(p=>{const f=D.families.find(f=>f.id===p.family),fav=store.favorites.includes(p.id),r=store.reviews[p.id],txt=p[ui.phraseLang]||p.pt,expanded=ui.expandedPhrase===p.id;return `<article class="panel phrase-card"><div class="row"><span class="chip">${esc(f.title)}</span>${r?`<span class="review-dot">${due(p)?'Revisão pendente':'Em estudo'}</span>`:''}</div><div class="phrase-text" lang="${ui.phraseLang==='zh'?'zh-CN':ui.phraseLang==='en'?'en':'pt-BR'}">${esc(txt)}</div>${ui.phraseLang==='zh'&&p.pinyin?`<div class="foreign">${esc(p.pinyin)}</div>`:''}${ui.phraseLang!=='pt'?`<div class="foreign">PT · ${esc(p.pt)}</div>`:''}${expanded?`<div class="notice info"><strong>Intenção:</strong> ${esc(p.use)}<div style="margin-top:7px">${p.note?`<strong>Nota de uso:</strong> ${esc(p.note)}`:'<strong>Aplicação:</strong> Substitua os trechos abertos por observações específicas. Identifique o que é fato e o que é interpretação.'}</div>${p.en&&ui.phraseLang==='pt'?`<div style="margin-top:7px">EN · ${esc(p.en)}</div>`:''}${p.zh&&ui.phraseLang==='pt'?`<div style="margin-top:5px">中文 · ${esc(p.zh)} ${p.pinyin?`(${esc(p.pinyin)})`:''}</div>`:''}</div>`:''}<div class="actions"><button class="btn secondary sm" data-action="speak-phrase" data-id="${p.id}" title="Ouvir, se houver voz disponível">${ico('volume',13)} Ouvir</button><button class="btn secondary sm" data-action="copy-phrase" data-id="${p.id}">${ico('copy',13)} Copiar</button><button class="btn secondary sm" data-action="toggle-fav" data-id="${p.id}">${ico('star',13)} ${fav?'Salvo':'Salvar'}</button><button class="btn secondary sm" data-action="expand-phrase" data-id="${p.id}">${p.note?'Nota de uso':'Contexto'}</button><button class="btn ${r?'secondary':'accent'} sm" data-action="study-phrase" data-id="${p.id}">${r?'Revisar +':'Estudar +'} ${ico('check',13)}</button></div></article>`}).join('')}</div>${!filtered.length?`<div class="empty"><h3>Nenhuma frase neste filtro</h3><p>Troque de idioma, família ou busca.</p></div>`:''}${filtered.length>ui.phraseLimit?`<div style="text-align:center;margin-top:25px"><button class="btn secondary" data-action="more-phrases">Carregar mais (${filtered.length-ui.phraseLimit} restantes) ${ico('arrow')}</button></div>`:''}
+<div class="panel panel-pad" style="margin-bottom:22px"><div class="grid grid-3"><div style="grid-column:span 2"><label class="field-label">Pesquisar termos, intenções ou frases</label><input class="search" type="search" value="${esc(ui.phraseQuery)}" data-model="phraseQuery" placeholder="Ex.: contraste, arquitetura, entrevista, fonte..."></div><div><label class="field-label">Família comunicativa</label><select data-model="phraseFamily"><option value="all">Todas as ${D.families.length} famílias</option>${D.families.map(f=>`<option value="${f.id}" ${ui.phraseFamily===f.id?'selected':''}>${esc(f.title)}</option>`).join('')}</select></div></div><div class="filters" style="margin-top:17px;margin-bottom:0">${langs.map(([l,n])=>`<button class="chip-button ${ui.phraseLang===l?'active':''}" data-action="phrase-lang" data-id="${l}">${n}</button>`).join('')}<span style="flex:1"></span>${[['all','Todas'],['encaixes','Com encaixes'],['favorites','Favoritas'],['review','Para revisar']].map(([v,n])=>`<button class="chip-button ${ui.phraseView===v?'active':''}" data-action="phrase-view" data-id="${v}">${n}</button>`).join('')}</div></div>
+${ui.phraseLang!=='pt'?`<div class="notice info" style="margin-bottom:18px">O acervo principal possui ${D.phrases.length} estruturas em português. Neste idioma, mostramos apenas traduções já preparadas: ${D.phrases.filter(p=>p[ui.phraseLang]).length} disponíveis nesta edição. Nenhuma tradução automática ou não revisada é inventada.</div>`:''}<div class="phrases-count">${filtered.length} resultados · ${studied()} cartões estudados · abra “Explorar encaixes” nas frases com reticências</div><div class="grid grid-2">${display.map(p=>{const f=D.families.find(f=>f.id===p.family),fav=store.favorites.includes(p.id),r=store.reviews[p.id],txt=p[ui.phraseLang]||p.pt,expanded=ui.expandedPhrase===p.id;return `<article class="panel phrase-card"><div class="row"><span class="chip">${esc(f.title)}</span>${r?`<span class="review-dot">${due(p)?'Revisão pendente':'Em estudo'}</span>`:''}</div><div class="phrase-text" lang="${ui.phraseLang==='zh'?'zh-CN':ui.phraseLang==='en'?'en':'pt-BR'}">${esc(txt)}</div>${ui.phraseLang==='zh'&&p.pinyin?`<div class="foreign">${esc(p.pinyin)}</div>`:''}${ui.phraseLang!=='pt'?`<div class="foreign">PT · ${esc(p.pt)}</div>`:''}${expanded?`<div class="notice info"><strong>Intenção:</strong> ${esc(p.use)}<div style="margin-top:7px">${p.note?`<strong>Nota de uso:</strong> ${esc(p.note)}`:'<strong>Aplicação:</strong> Substitua os trechos abertos por observações específicas. Identifique o que é fato e o que é interpretação.'}</div>${p.en&&ui.phraseLang==='pt'?`<div style="margin-top:7px">EN · ${esc(p.en)}</div>`:''}${p.zh&&ui.phraseLang==='pt'?`<div style="margin-top:5px">中文 · ${esc(p.zh)} ${p.pinyin?`(${esc(p.pinyin)})`:''}</div>`:''}</div>`:''}${window.StoryLabEncaixes?window.StoryLabEncaixes.card(p,ui.phraseLang):''}<div class="actions"><button class="btn secondary sm" data-action="speak-phrase" data-id="${p.id}" title="Ouvir, se houver voz disponível">${ico('volume',13)} Ouvir</button><button class="btn secondary sm" data-action="copy-phrase" data-id="${p.id}">${ico('copy',13)} Copiar</button><button class="btn secondary sm" data-action="toggle-fav" data-id="${p.id}">${ico('star',13)} ${fav?'Salvo':'Salvar'}</button><button class="btn secondary sm" data-action="expand-phrase" data-id="${p.id}">${p.note?'Nota de uso':'Contexto'}</button><button class="btn ${r?'secondary':'accent'} sm" data-action="study-phrase" data-id="${p.id}">${r?'Revisar +':'Estudar +'} ${ico('check',13)}</button></div></article>`}).join('')}</div>${!filtered.length?`<div class="empty"><h3>Nenhuma frase neste filtro</h3><p>Troque de idioma, família ou busca.</p></div>`:''}${filtered.length>ui.phraseLimit?`<div style="text-align:center;margin-top:25px"><button class="btn secondary" data-action="more-phrases">Carregar mais (${filtered.length-ui.phraseLimit} restantes) ${ico('arrow')}</button></div>`:''}
 <div class="notice info" style="margin-top:27px">Método de revisão: quando você marca um cartão como estudado, ele recebe uma nova data de revisão (primeiro após 1 dia, depois 3, 7, 14 e 30 dias). É uma agenda simples inspirada em revisão espaçada; não substitui o uso real da linguagem.</div>`}
 function voiceView(){let ch=D.challenges[ui.challenge]||D.challenges[0];let tally=store.practice.length;let rec=!!ui.recordUrl;return `${header('LABORATÓRIO DE IMPROVISAÇÃO','Estúdio da Voz','Aprenda a organizar pensamentos e falar espontaneamente: descreva, compare, explique e conclua. A gravação permanece apenas nesta sessão, a menos que você a salve por conta própria.')}
 <div class="two-col"><div class="stack"><div class="record-stage"><div class="eyebrow" style="color:#e6a782">DESAFIO ${String(ui.challenge+1).padStart(2,'0')} / ${D.challenges.length}</div><h2 style="margin:11px 0">${esc(ch.scene)}</h2><p>${esc(ch.brief)}</p><div class="timer" id="record-timer">${ui.recording?formatSecs(ui.recordElapsed):formatSecs(ch.seconds)}</div><div class="small" style="color:#9bb0af">${ui.recording?'Tempo decorrido':'Duração sugerida'} · modo ${esc(ch.mode)}</div><button class="record ${ui.recording?'active':''}" aria-label="${ui.recording?'Parar gravação':'Iniciar gravação'}" data-action="record">${ico(ui.recording?'pause':'mic',28)}</button><div class="form-row" style="justify-content:center"><button class="btn secondary sm" data-action="new-challenge">${ico('shuffle',14)} Novo desafio</button><button class="btn secondary sm" data-action="navigate" data-page="studio">${ico('layers',14)} Construir roteiro</button></div>${ui.voiceError?`<p style="margin-top:15px;color:#ffc1b8">${esc(ui.voiceError)}</p>`:''}</div>
@@ -3353,9 +3857,9 @@ const JOURNEY=[
 ];
 function journeyView(){let completeWeeks=JOURNEY.filter(w=>w.lessons.every(id=>store.completed.includes(id+':0'))&&store.missions.includes(w.mission)).length;return `${header('PLANO DE ESTUDOS ORIENTADO','Sua trilha de 12 semanas','Uma proposta de formação intensiva e adaptável: teoria, prática oral e missão de campo. O ritmo sugerido é de 4 sessões semanais; nenhuma semana expira.',`<span class="chip accent">${completeWeeks}/12 marcos atingidos</span>`)}<div class="notice info" style="margin-bottom:24px"><strong>Como funciona:</strong> em cada semana, estude a aula ou as aulas indicadas, pratique a família de frases, grave um desafio de voz e realize uma missão. O marco aparece como atingido quando as aulas indicadas e a missão estão marcadas como concluídas. O exercício de fala é recomendado, não aferido automaticamente.</div><div class="grid grid-2">${JOURNEY.map((w,i)=>{let ls=w.lessons.map(id=>D.courses.find(c=>c.id===id)).filter(Boolean),m=D.missions.find(m=>m.id===w.mission),complete=w.lessons.every(id=>store.completed.includes(id+':0'))&&store.missions.includes(w.mission);return `<div class="panel panel-pad" style="border-top:3px solid ${complete?'#638a78':'#c78969'}"><div class="row"><span class="eyebrow">SEMANA ${String(i+1).padStart(2,'0')}</span><span class="chip ${complete?'accent':''}">${complete?'Marco atingido':'Em desenvolvimento'}</span></div><h3 style="font-family:Georgia,serif;font-size:26px;margin:15px 0 8px">${esc(w.name)}</h3><p class="muted" style="min-height:58px">${esc(w.goal)}</p><div class="divider"></div><div class="small muted" style="font-weight:750;margin-bottom:9px">AULAS INTEGRAIS</div><div class="stack" style="gap:7px">${ls.map(c=>`<button class="btn secondary sm" style="justify-content:flex-start;text-align:left" data-action="open-lesson" data-id="${c.id}" data-index="0">${store.completed.includes(c.id+':0')?ico('check',14):ico('book',14)} ${esc(c.title)}</button>`).join('')}</div><div class="small muted" style="font-weight:750;margin:15px 0 8px">APLICAÇÃO</div><p class="small" style="margin-bottom:12px">${esc(w.drill)}</p><div class="form-row"><button class="btn secondary sm" data-action="journey-phrase" data-id="${w.family}">${ico('quote',13)} Frases</button><button class="btn secondary sm" data-action="open-mission" data-id="${m.id}">${store.missions.includes(m.id)?ico('check',13):ico('map',13)} Missão</button><button class="btn secondary sm" data-action="navigate" data-page="voice">${ico('mic',13)} Falar</button></div></div>`}).join('')}</div><div class="notice info" style="margin-top:24px">Este é um percurso inicial de competências, não equivalente à carga horária de uma graduação. As 43 disciplinas continuam disponíveis na academia para estudo paralelo e aprofundamento.</div>`}
 function renderPage(){switch(ui.page){case 'academy':return academy();case 'linguistics':return window.StoryLabLinguistics?window.StoryLabLinguistics.render():'<div class="notice">Biblioteca linguística em inicialização.</div>';case 'journey':return journeyView();case 'course':return courseView();case 'lesson':return lessonView();case 'phrases':return phrasesView();case 'clinic':return clinicView();case 'voice':return voiceView();case 'studio':return studioView();case 'atlas':return atlasView();case 'field':return fieldView();case 'mission':return missionView();case 'progress':return progressView();default:return home()}}
-function render(preserveFocus=false){let focus=null,sel=null;const e=document.activeElement;if(preserveFocus&&e&&e.dataset.model){focus=e.dataset.model;if(typeof e.selectionStart==='number')sel=[e.selectionStart,e.selectionEnd]}document.documentElement.dataset.theme=store.theme;document.getElementById('app').innerHTML=shell(renderPage());if(focus){const node=document.querySelector(`[data-model="${focus}"]`);if(node){node.focus();if(sel&&node.setSelectionRange)try{node.setSelectionRange(...sel)}catch{}}}const off=document.getElementById('offline-state');if(off)off.style.display=navigator.onLine?'none':'inline-flex'}
+function render(preserveFocus=false){let focus=null,sel=null;const e=document.activeElement;if(preserveFocus&&e&&e.dataset.model){focus=e.dataset.model;if(typeof e.selectionStart==='number')sel=[e.selectionStart,e.selectionEnd]}document.documentElement.dataset.theme=store.theme;document.getElementById('app').innerHTML=shell(renderPage());window.StoryLabAudio?.enhance(document.getElementById('app'));if(focus){const node=document.querySelector(`[data-model="${focus}"]`);if(node){node.focus();if(sel&&node.setSelectionRange)try{node.setSelectionRange(...sel)}catch{}}}const off=document.getElementById('offline-state');if(off)off.style.display=navigator.onLine?'none':'inline-flex'}
 async function copy(text){try{await navigator.clipboard.writeText(text);toast('Copiado para a área de transferência.')}catch{const t=document.createElement('textarea');t.value=text;document.body.append(t);t.select();try{document.execCommand('copy');toast('Texto copiado.')}catch{toast('Não foi possível copiar neste navegador.')}t.remove()}}
-function say(text,lang='pt-BR'){if(!('speechSynthesis'in window)){toast('Este navegador não oferece síntese de voz.');return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang=lang;u.rate=.92;u.pitch=1;speechSynthesis.speak(u)}
+function say(text,lang='pt-BR'){if(window.StoryLabAudio)return window.StoryLabAudio.speak(text,lang,'Repertório de narração');if(!('speechSynthesis'in window)){toast('Este navegador não oferece síntese de voz.');return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang=lang;u.rate=.92;u.pitch=1;speechSynthesis.speak(u)}
 function reviewPhrase(id){const before=store.reviews[id]||{level:0,count:0};const level=Math.min(5,before.level+1);const intervals=[0,1,3,7,14,30];store.reviews[id]={level,count:before.count+1,last:Date.now(),next:Date.now()+intervals[level]*86400000};save();toast(`Frase estudada · próxima revisão em ${intervals[level]} dia(s).`);render()}
 let recorder=null,stream=null,recChunks=[],recTick=null,recStart=0,recType='audio/webm';
 async function startRecording(){ui.voiceError='';if(!navigator.mediaDevices?.getUserMedia||typeof MediaRecorder==='undefined'){ui.voiceError='Gravação indisponível neste navegador. Use HTTPS ou localhost e confira a permissão do microfone.';render();return}try{stream=await navigator.mediaDevices.getUserMedia({audio:true});recChunks=[];recType=MediaRecorder.isTypeSupported('audio/webm;codecs=opus')?'audio/webm;codecs=opus':MediaRecorder.isTypeSupported('audio/mp4')?'audio/mp4':'';recorder=new MediaRecorder(stream,recType?{mimeType:recType}:undefined);recorder.ondataavailable=e=>{if(e.data.size>0)recChunks.push(e.data)};recorder.onstop=()=>{const blob=new Blob(recChunks,{type:recorder?.mimeType||'audio/webm'});if(ui.recordUrl)URL.revokeObjectURL(ui.recordUrl);ui.recordUrl=URL.createObjectURL(blob);stream?.getTracks().forEach(t=>t.stop());stream=null;recorder=null;ui.recording=false;clearInterval(recTick);render();toast('Gravação pronta para ouvir ou salvar.')};recorder.start();ui.recording=true;ui.recordElapsed=0;recStart=Date.now();render();recTick=setInterval(()=>{ui.recordElapsed=Math.floor((Date.now()-recStart)/1000);let t=document.getElementById('record-timer');if(t)t.textContent=formatSecs(ui.recordElapsed);if(ui.recordElapsed>=600)stopRecording()},260)}catch(e){stream?.getTracks().forEach(t=>t.stop());stream=null;ui.voiceError='Não foi possível usar o microfone. Verifique permissão e disponibilidade do dispositivo.';render()}}
@@ -3363,7 +3867,7 @@ function stopRecording(){if(recorder&&recorder.state!=='inactive')recorder.stop(
 function downloadBlob(content,filename,mime){const blob=content instanceof Blob?content:new Blob([content],{type:mime});let a=document.createElement('a'),url=URL.createObjectURL(blob);a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500)}
 function updateMissionCheck(id,index,value){if(!ui.missionChecks[id])ui.missionChecks[id]={};ui.missionChecks[id][index]=value;const mission=D.missions.find(m=>m.id===id);const row=document.querySelector('.checklist')?.parentElement?.querySelector('.row .small');if(row&&mission)row.textContent=`${Object.values(ui.missionChecks[id]).filter(Boolean).length} / ${mission.shots.length} itens preparados`}
 function exportData(){downloadBlob(JSON.stringify({app:'StoryLab Shanghai',version:1,exportedAt:new Date().toISOString(),data:store},null,2),'storylab-backup-'+new Date().toISOString().slice(0,10)+'.json','application/json;charset=utf-8');toast('Backup exportado. Guarde-o em local seguro.')}
-async function importData(file){if(!file)return;try{if(file.size>8*1024*1024)throw Error('Arquivo grande demais.');const obj=JSON.parse(await file.text());if(obj.app!=='StoryLab Shanghai'||obj.version!==1||!obj.data||typeof obj.data!=='object')throw Error('Formato desconhecido.');if(!confirm('Isso substituirá seu progresso atual. Deseja continuar?'))return;const incoming=obj.data;store={...baseState(),...incoming,completed:Array.isArray(incoming.completed)?incoming.completed.filter(v=>typeof v==='string'):[],favorites:Array.isArray(incoming.favorites)?incoming.favorites.filter(v=>typeof v==='string'):[],missions:Array.isArray(incoming.missions)?incoming.missions.filter(v=>typeof v==='string'):[],practice:Array.isArray(incoming.practice)?incoming.practice.filter(v=>v&&Array.isArray(v.scores)).slice(-500):[],clinicDrafts:Array.isArray(incoming.clinicDrafts)?incoming.clinicDrafts.filter(v=>v&&typeof v.text==='string').slice(-60):[],clinicDone:Array.isArray(incoming.clinicDone)?incoming.clinicDone.filter(v=>typeof v==='string'):[],atlasDrafts:incoming.atlasDrafts&&typeof incoming.atlasDrafts==='object'&&!Array.isArray(incoming.atlasDrafts)?Object.fromEntries(Object.entries(incoming.atlasDrafts).filter(([k,v])=>/^\d+:\d+$/.test(k)&&typeof v==='string').slice(0,D.atlas.length*4).map(([k,v])=>[k,v.slice(0,3000)])):{},atlasHistory:Array.isArray(incoming.atlasHistory)?incoming.atlasHistory.filter(v=>v&&typeof v.text==='string'&&Number.isInteger(v.topic)&&Number.isInteger(v.level)).slice(-200).map(v=>({...v,text:v.text.slice(0,3000)})):[],reviews:incoming.reviews&&typeof incoming.reviews==='object'?incoming.reviews:{},atlasMastery:cleanMastery(incoming.atlasMastery),activity:cleanActivity(incoming.activity),badges:cleanBadges(incoming.badges),linguisticsDone:cleanLinguisticsDone(incoming.linguisticsDone),linguisticsAnswers:cleanLinguisticsAnswers(incoming.linguisticsAnswers),linguisticsNotes:cleanLinguisticsNotes(incoming.linguisticsNotes),dailyGoal:[5,10,20].includes(incoming.dailyGoal)?incoming.dailyGoal:10,notes:incoming.notes&&typeof incoming.notes==='object'?incoming.notes:{},theme:incoming.theme==='dark'?'dark':'light'};save();ui.showImport=false;render();toast('Backup importado com sucesso.')}catch{toast('Backup inválido ou ilegível. O progresso não foi alterado.')}}
+async function importData(file){if(!file)return;try{if(file.size>8*1024*1024)throw Error('Arquivo grande demais.');const obj=JSON.parse(await file.text());if(obj.app!=='StoryLab Shanghai'||obj.version!==1||!obj.data||typeof obj.data!=='object')throw Error('Formato desconhecido.');if(!confirm('Isso substituirá seu progresso atual. Deseja continuar?'))return;const incoming=obj.data;store={...baseState(),...incoming,completed:Array.isArray(incoming.completed)?incoming.completed.filter(v=>typeof v==='string'):[],favorites:Array.isArray(incoming.favorites)?incoming.favorites.filter(v=>typeof v==='string'):[],missions:Array.isArray(incoming.missions)?incoming.missions.filter(v=>typeof v==='string'):[],practice:Array.isArray(incoming.practice)?incoming.practice.filter(v=>v&&Array.isArray(v.scores)).slice(-500):[],clinicDrafts:Array.isArray(incoming.clinicDrafts)?incoming.clinicDrafts.filter(v=>v&&typeof v.text==='string').slice(-60):[],clinicDone:Array.isArray(incoming.clinicDone)?incoming.clinicDone.filter(v=>typeof v==='string'):[],atlasDrafts:incoming.atlasDrafts&&typeof incoming.atlasDrafts==='object'&&!Array.isArray(incoming.atlasDrafts)?Object.fromEntries(Object.entries(incoming.atlasDrafts).filter(([k,v])=>/^\d+:\d+$/.test(k)&&typeof v==='string').slice(0,D.atlas.length*4).map(([k,v])=>[k,v.slice(0,3000)])):{},atlasHistory:Array.isArray(incoming.atlasHistory)?incoming.atlasHistory.filter(v=>v&&typeof v.text==='string'&&Number.isInteger(v.topic)&&Number.isInteger(v.level)).slice(-200).map(v=>({...v,text:v.text.slice(0,3000)})):[],reviews:incoming.reviews&&typeof incoming.reviews==='object'?incoming.reviews:{},atlasMastery:cleanMastery(incoming.atlasMastery),activity:cleanActivity(incoming.activity),badges:cleanBadges(incoming.badges),linguisticsDone:cleanLinguisticsDone(incoming.linguisticsDone),linguisticsAnswers:cleanLinguisticsAnswers(incoming.linguisticsAnswers),linguisticsNotes:cleanLinguisticsNotes(incoming.linguisticsNotes),phraseEncaixes:cleanPhraseEncaixes(incoming.phraseEncaixes),dailyGoal:[5,10,20].includes(incoming.dailyGoal)?incoming.dailyGoal:10,notes:incoming.notes&&typeof incoming.notes==='object'?incoming.notes:{},theme:incoming.theme==='dark'?'dark':'light'};save();ui.showImport=false;render();toast('Backup importado com sucesso.')}catch{toast('Backup inválido ou ilegível. O progresso não foi alterado.')}}
 // Event delegation: keeps controls functional even when the page is re-rendered.
 document.addEventListener('click',async e=>{const b=e.target.closest('[data-action]');if(!b)return;const action=b.dataset.action,id=b.dataset.id;switch(action){
  case 'navigate':navigate(b.dataset.page);break;
@@ -3387,7 +3891,7 @@ document.addEventListener('click',async e=>{const b=e.target.closest('[data-acti
  case 'open-course':navigate('course',{courseId:id});break;
  case 'open-lesson':store.lastLesson=id+':'+b.dataset.index;save();navigate('lesson',{courseId:id,module:Number(b.dataset.index)});break;
  case 'complete-lesson':if(!D.deepLessons[id])break;if(store.completed.includes(id))store.completed=store.completed.filter(x=>x!==id);else store.completed.push(id);save();render();toast(store.completed.includes(id)?'Aula concluída.':'Aula reaberta.');break;
- case 'phrase-lang':ui.phraseLang=id;ui.phraseLimit=30;render();break;
+ case 'phrase-lang':ui.phraseLang=id;ui.phraseLimit=30;if(id!=='pt'&&ui.phraseView==='encaixes')ui.phraseView='all';render();break;
  case 'phrase-view':ui.phraseView=id;ui.phraseLimit=30;render();break;
  case 'more-phrases':ui.phraseLimit+=30;render();break;
  case 'expand-phrase':ui.expandedPhrase=ui.expandedPhrase===id?null:id;render();break;
@@ -3444,6 +3948,7 @@ if('serviceWorker'in navigator&&location.protocol==='https:'||('serviceWorker'in
 if(window.StoryLabAtlas)window.StoryLabAtlas.init({D,getStore:()=>store,save,render,navigate,header,stat,esc,norm,ico,say,copy,toast,toTele:(text)=>{ui.teleText=text;ui.studioTab='tele';navigate('studio')}});
 if(window.StoryLabInteract)window.StoryLabInteract.init({D,getStore:()=>store,ui,save,render,navigate,esc,norm,ico,toast,say});
 if(window.StoryLabLinguistics)window.StoryLabLinguistics.init({D,getStore:()=>store,save,render,navigate,header,stat,esc,ico,say,copy});
+if(window.StoryLabEncaixes)window.StoryLabEncaixes.init({D,getStore:()=>store,save,render,copy,say,toast,toTele:(text)=>{ui.teleText=text;ui.studioTab='tele';navigate('studio')}});
 render();
 initBackButton();
 })();

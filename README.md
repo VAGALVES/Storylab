@@ -1,9 +1,20 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.12 — Curadoria dos diagramas e hierarquia de ações
+## Journalism Academy · Versão 2.14 — Laboratório de Escuta transversal
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
 **Status:** aplicação funcional de fundação acadêmica, não currículo universitário completo nem serviço de ensino credenciado. Todas as 172 unidades curriculares têm aula integral redigida; o conteúdo é autoral e ainda não passou por revisão de especialistas externos.
+## v2.14 — Laboratório de Escuta: aprendizagem com áudio
+
+O StoryLab agora possui leitura **transversal** por síntese de voz do navegador em textos adequados ao estudo. Nos blocos pedagógicos há um botão compacto **Ouvir** e nas páginas com cabeçalho existe **Ouvir esta página**. A leitura não substitui os microfones e os exercícios de gravação.
+
+**Cobertura:** aulas, conceitos, exemplos, explicações de Linguística Aplicada, legendas didáticas, verbetes e alertas do Atlas, instruções de exercícios, introduções de verbos espaciais, textos de prática e blocos editoriais. Fraseoteca e Encaixes preservam seus controles próprios, ligados agora ao motor central. Um cartão bilíngue usa a marcação de idioma correspondente; nenhuma tradução é inventada.
+
+**Controles:** parar, pausar/retomar, ritmo 0,75×–1,15× e seleção das vozes instaladas, quando disponibilizadas pelo navegador. Textos extensos são repartidos em segmentos menores para reduzir falhas de leitura longa em aparelhos móveis. As preferências de ritmo e voz são armazenadas localmente.
+
+**Compatibilidade e privacidade:** utiliza apenas as APIs speechSynthesis e SpeechSynthesisUtterance do navegador; não chama serviços externos nem envia áudio. **Não há garantia de voz offline**: disponibilidade, pronúncia e funcionamento em português, inglês e mandarim dependem do navegador, das vozes instaladas e dos recursos do sistema operacional. O módulo não promete sotaque nativo nem produz arquivos para download.
+
+**Arquivos:** audio-speech.js (leitor reutilizável), test_audio.mjs (testes de idiomas, segmentação, controles e fallback), style.css (componentes e estados). Execute node test_audio.mjs, python generate_service_worker.py e python build_standalone.py após alterações. O leitor preserva os controles existentes de gravação.
 
 ## Curadoria de precisão lexical — 16/10/2026
 
