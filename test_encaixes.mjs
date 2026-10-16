@@ -70,7 +70,7 @@ for(const [i,value] of ['um corredor longo','uma galeria curta'].entries()){
 }
 assert.match(previewNode.textContent,/um corredor longo, enquanto o segundo uma galeria curta/);
 click('copy');assert.match(calls.copy.at(-1),/um corredor longo/);
-assert.deepEqual(store.phraseEncaixes[phrase.id].slots,['um corredor longo','uma galeria curta']);
+assert.deepEqual(Array.from(store.phraseEncaixes[phrase.id].slots),['um corredor longo','uma galeria curta']);
 assert.ok(calls.save>=4&&calls.render>=3);
 assert.equal(calls.toast.length,0);
 console.log('Encaixes: 208 estruturas, 416 opções, múltiplas lacunas, cópia, voz, teleprompter e personalização — OK');
