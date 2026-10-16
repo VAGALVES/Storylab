@@ -83,13 +83,25 @@ Implementada uma quarta aba: **Dossiês de campo**, com até 20 registros pessoa
 
 **Escopo editorial:** as 16 perguntas são modelos de linguagem de campo, não alegações sobre fábricas reais nem substitutas de investigação técnica. Revisão por tradutores especializados continua recomendável antes de uso contratual.
 
+## Academia Interindustrial e Radar Setorial — v2.17
+
+**Nova abordagem:** a disciplina acadêmica sustenta observação, linguagem de campo e análise verificável em diferentes indústrias. Vestuário é uma especialização entre outras.
+
+- **Academia Técnica:** nove capítulos autorais (produto e valor; sistemas; materiais; operações; metrologia; inovação; suprimentos; energia/ciclo de vida; conformidade), cada um com três seções teóricas e exemplos, vocabulário técnico, estudo de caso em quatro etapas, pergunta de compreensão e construção trilíngue PT/EN/ZH com pinyin e áudio.
+- **Radar Setorial:** nove áreas (automotiva, renováveis, baterias, eletrônicos, portáteis/wearables, automação/robótica, vestuário, materiais avançados, IoT). Cada área tem cinco lentes de análise, evidência recomendada, pergunta técnica trilíngue e referência a um capítulo.
+- **Dossiês vinculados ao setor:** escolha e troca de especialização industrial no registro de produto ou fornecedor. Critério e pergunta setorial aparecem no registro e a indústria consta no relatório copiado.
+- **Progressão local:** marcar capítulo estudado e responder questão salva em backup do aplicativo. Nenhum certificado de proficiência ou conformidade é emitido.
+- **Integração:** abas próprias dentro de Fornecedores & Produtos, CSS responsivo, PWA offline, build HTML único e testes dedicados.
+
+**Limites do conteúdo:** modelos ilustrativos de formação profissional; não substituem normas setoriais, ensaios, due diligence ou tradução humana especializada em chinês de documentos contratuais. Expansão prevista para fontes bibliográficas, exercícios aplicados e trilhas setoriais profundas.
+
 ## Próximas rodadas — propostas, não entregas
 
 - **Dossiê com anexos autorizados:** imagens/relatórios e seu vínculo verificável com a observação; a versão 2.16 registra textos e referências, mas não armazena fotografias.
 - **Roteiro de visita técnica:** perguntas sequenciadas por função e tipo de fornecedor, resumo pós-visita.
 - **Comparação orientada:** dois produtos e dois fornecedores sem fabricar métricas.
 - **Gramática e regência técnica:** perguntar sobre, depender de, adequar-se a, diferenciar-se de, comply with, specialize in, be made of/from etc., com negação e hipóteses.
-- **Especialização em vestuário e modelagem:** caimento, gancho, cava, cabeça de manga, acabamento, PIP/PP samples, tolerâncias e revisões.
+- **Aprofundamento das nove especializações:** diagramas por tipo de componente, métricas por contexto, glossários amplos e casos técnicos resolvidos. O Radar v2.17 inaugura, mas não encerra, os setores.
 - **Expansão da fraseoteca:** respostas, objeções, negociação, follow-up e comunicação intercultural.
 - **Curadoria nativa de mandarim**, testes visuais no Android e verificação humana do conteúdo técnico.
 
