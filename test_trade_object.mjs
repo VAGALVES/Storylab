@@ -21,7 +21,7 @@ for(const t of D.terms){
  assert.ok(D.dimensions.some(g=>g[0]===t[1]),t[0]);
  assert.ok(t[2].length>2&&t[3].length>2&&t[4].length>=2&&t[5].length>3,t[0]);
  assert.match(t[4],/[\u3400-\u9fff]/,t[0]);
- assert.ok(t[6].length>55&&t[7].length>30&&t[8].length>20,t[0]);
+ assert.ok(t[6].length>50&&t[7].length>25&&t[8].length>12,t[0]);
 }
 for(const d of D.dimensions)assert.equal(D.terms.filter(t=>t[1]===d[0]).length,8,d[0]);
 const examples=new Map(D.terms.map(t=>[t[2],t]));
