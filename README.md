@@ -1,9 +1,17 @@
 # STORYLAB SHANGHAI
-## Journalism Academy · Versão 2.14 — Laboratório de Escuta transversal
+## Journalism Academy · Versão 2.15 — Fornecedores, Produtos e Fraseoteca de Campo
 
 Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. A proposta é estudar jornalismo com rigor, transformar a cidade de Xangai em laboratório de campo e adquirir um repertório verbal cada vez mais sofisticado para vlogs, crônicas, entrevistas e reportagens.
 
 **Status:** aplicação funcional de fundação acadêmica, não currículo universitário completo nem serviço de ensino credenciado. Todas as 172 unidades curriculares têm aula integral redigida; o conteúdo é autoral e ainda não passou por revisão de especialistas externos.
+## v2.15 — Fornecedores & Produtos: linguagem de campo em Xangai
+
+A nova entrada **Fornecedores & Produtos** no menu reúne três áreas independentes do Atlas geral: **Atlas de Produtos** (48 verbetes em 8 dimensões), **Atlas de Fornecedores** (48 verbetes em 8 dimensões) e **Fraseoteca de Campo** (36 construções distribuídas em 9 situações). O material é trilíngue: português, inglês e mandarim com pinyin e leitura por síntese de voz. Inclui busca, filtros, favoritos, cópia, prática por revelação e marcação de frases estudadas.
+
+A proposta é **aprender a observar, descrever, comparar e questionar**, não manter um cadastro comercial nem declarar como verificados os dados de uma fábrica. O acervo é uma primeira biblioteca editorial, ainda aberta a revisão técnica e linguística.
+
+**Fonte de requisitos, arquitetura e etapas seguintes:** [PLANO_FORNECEDORES_PRODUTOS.md](PLANO_FORNECEDORES_PRODUTOS.md). **Implementação:** `trade-data.js`, `trade-hub.js`, `test_trade.mjs`. **Verificação:** `node test_trade.mjs`.
+
 ## v2.14 — Laboratório de Escuta: aprendizagem com áudio
 
 O StoryLab agora possui leitura **transversal** por síntese de voz do navegador em textos adequados ao estudo. Nos blocos pedagógicos há um botão compacto **Ouvir** e nas páginas com cabeçalho existe **Ouvir esta página**. A leitura não substitui os microfones e os exercícios de gravação.
