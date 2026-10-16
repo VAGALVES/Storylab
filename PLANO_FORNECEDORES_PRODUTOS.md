@@ -95,6 +95,39 @@ Implementada uma quarta aba: **Dossiês de campo**, com até 20 registros pessoa
 
 **Limites do conteúdo:** modelos ilustrativos de formação profissional; não substituem normas setoriais, ensaios, due diligence ou tradução humana especializada em chinês de documentos contratuais. Expansão prevista para fontes bibliográficas, exercícios aplicados e trilhas setoriais profundas.
 
+## Evolução v2.18 — linguagem, comparação, procedimento e inteligência visual
+
+### Laboratório de Linguagem Técnica
+
+- **20 construções trilíngues PT/EN/ZH/pinyin** distribuídas por estrutura, função, fabricação, evidência e comparação.
+- Regências explícitas, alertas para falsos equivalentes, frases contextualizadas e esquema em três posições **referente → relação/regência → complemento/condição**.
+- Escuta EN/ZH por TTS local, cópia de construções, busca e filtros; **modo treino** esconde inglês/mandarim até revelação.
+- Revisão espaçada por **autoavaliação**, agendada em intervalos de 1, 3, 7, 14 e 30 dias; não há avaliação automática real da pronúncia ou semântica. Salva registros e horários no backup.
+
+### Comparador Técnico por Evidências
+
+- Confronta **dois dossiês reais registrados pelo usuário** do mesmo tipo, com oito dimensões alinhadas, origem, relato e fonte por coluna.
+- Exibe dados faltantes e avisa quando setores diferentes podem invalidar a comparação direta.
+- Fornece relatório copiável; não calcula pontuações, vencedores, capacidade nem conformidade sem critérios e evidências.
+
+### Modo Visita Profissional
+
+- Protocolo com **4 etapas e 16 verificações**, incluindo objetivos, documentos, capacidade efetiva, condições de ensaio, evidências e síntese.
+- Vinculado a dossiês já registrados, assinalações persistentes no dispositivo, indicação de progresso e abertura da ficha correspondente.
+- Checklist confirma somente que a ação foi realizada ou solicitada, **não** certifica fornecedor ou produto.
+
+### Mapas Conceituais
+
+- **9 esquemas teóricos distintos** e **9 diagramas de fluxos setoriais exemplificativos**, com navegação responsiva, texto alternativo e ressalvas pedagógicas.
+- Não usam figuras genéricas repetidas para representar aparelhos incompatíveis; cada esquema corresponde ao domínio.
+- Imagens físicas de equipamentos, instalações e processos ainda dependem de autorização, fontes e curadoria editorial dedicada.
+
+### Dados, integridade e limites
+
+- Sanitização no carregamento e também na **importação de backup** — corrigido o caminho de importação de dados trade pré-existentes.
+- PWA, HTML offline, automação de testes e Netlify continuam no mesmo projeto. Nenhuma nova API paga ou envio de informações industriais a terceiros.
+- Revisão por técnico especialista e falantes nativos de mandarim continua necessária para aplicações críticas, regulatórias ou contratuais.
+
 ## Próximas rodadas — propostas, não entregas
 
 - **Dossiê com anexos autorizados:** imagens/relatórios e seu vínculo verificável com a observação; a versão 2.16 registra textos e referências, mas não armazena fotografias.

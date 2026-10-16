@@ -1,4 +1,4 @@
-/* StoryLab Shanghai · Dossiê de fornecedores e produtos · v2.17
+/* StoryLab Shanghai · Dossiê de fornecedores e produtos · v2.18
    Atlas e fraseoteca profissional para visitas de campo.
    Sem chamadas externas, sem cadastro de empresas reais, sem métricas inferidas. */
 window.StoryLabTrade = (() => {
@@ -17,9 +17,15 @@ window.StoryLabTrade = (() => {
     return data().groups.find(g=>g[0]===domain&&g[1]===id)?.[2]||id;
   }
   function toolbar(){
-    const tabs=[['produto','Atlas de produtos'],['fornecedor','Atlas de fornecedores'],['frases','Fraseoteca de campo'],['dossies','Dossiês de campo'],['academia','Academia técnica'],['setores','Radar setorial']];
-    return '<div class="trade-tabs" role="group" aria-label="Escolher repertório">'+tabs.map(t=>
-      '<button type="button" data-trade="tab" data-value="'+t[0]+'" class="trade-tab'+(state.tab===t[0]?' active':'')+'" aria-pressed="'+(state.tab===t[0])+'">'+t[1]+'</button>').join('')+'</div>';
+    const groups=[
+      ['APRENDER',[['produto','Atlas de produtos'],['fornecedor','Atlas de fornecedores'],['academia','Academia técnica'],['setores','Radar setorial']]],
+      ['COMUNICAR',[['frases','Fraseoteca de campo'],['linguagem','Linguagem técnica']]],
+      ['INVESTIGAR',[['dossies','Dossiês de campo'],['comparar','Comparar registros'],['visita','Modo visita']]]
+    ];
+    return '<nav class="trade-tab-groups" aria-label="Áreas de Fornecedores e Produtos">'+groups.map(g=>
+      '<div class="trade-tab-group"><span class="trade-tab-group-name">'+g[0]+'</span>'+
+      '<div class="trade-tabs" role="group" aria-label="'+g[0]+'">'+g[1].map(t=>
+      '<button type="button" data-trade="tab" data-value="'+t[0]+'" class="trade-tab'+(state.tab===t[0]?' active':'')+'" aria-pressed="'+(state.tab===t[0])+'">'+t[1]+'</button>').join('')+'</div></div>').join('')+'</nav>';
   }
   function controls(){
     const isPhrase=state.tab==='frases';
@@ -100,7 +106,7 @@ window.StoryLabTrade = (() => {
     const totals=data().terms.length,number=library().phrases.length;
     return '<div class="trade-root">'+api.header('STORYLAB / CAMPO SHANGHAI / REPERTÓRIO PROFISSIONAL','Fornecedores & Produtos','Um laboratório de linguagem para visitar empresas, examinar mercadorias, fazer perguntas técnicas e apresentar conclusões verificáveis.')+
        '<div class="trade-hero"><div><span>O UNIVERSO DO PRODUTO E DE QUEM O PRODUZ</span><strong>Observar. Descrever. Questionar. Comprovar.</strong><p>Do detalhe físico ao negócio e à cadeia produtiva: um repertório técnico, linguístico e profissional para a experiência em Xangai.</p></div><div class="trade-hero-metrics"><div><strong>'+totals+'</strong><small>verbetes PT/EN/中文</small></div><div><strong>'+number+'</strong><small>frases em 3 idiomas</small></div><div><strong>'+saved().length+'</strong><small>itens salvos</small></div></div></div>'+
-      toolbar()+(state.tab==='frases'?phrasebook():state.tab==='dossies'?(window.StoryLabTradeField?.render()||'<div class="trade-empty">Caderno de campo indisponível.</div>'):state.tab==='academia'?(window.StoryLabTradeAcademy?.academy()||'<div class="trade-empty">Academia técnica indisponível.</div>'):state.tab==='setores'?(window.StoryLabTradeAcademy?.sectors()||'<div class="trade-empty">Radar setorial indisponível.</div>'):atlas())+
+      toolbar()+(state.tab==='frases'?phrasebook():state.tab==='dossies'?(window.StoryLabTradeField?.render()||'<div class="trade-empty">Caderno de campo indisponível.</div>'):state.tab==='academia'?(window.StoryLabTradeAcademy?.academy()||'<div class="trade-empty">Academia técnica indisponível.</div>'):state.tab==='setores'?(window.StoryLabTradeAcademy?.sectors()||'<div class="trade-empty">Radar setorial indisponível.</div>'):state.tab==='linguagem'?(window.StoryLabTradeTools?.language()||'<div class="trade-empty">Laboratório técnico indisponível.</div>'):state.tab==='comparar'?(window.StoryLabTradeTools?.comparison()||'<div class="trade-empty">Comparador indisponível.</div>'):state.tab==='visita'?(window.StoryLabTradeTools?.visit()||'<div class="trade-empty">Modo visita indisponível.</div>'):atlas())+
       '<footer class="trade-disclaimer">Glossário e traduções para estudo e conversação. Terminologia técnica e chinês de uso profissional devem ser confirmados quando aplicáveis ao setor, ao contrato e à fábrica. Nenhum dado de desempenho ou fornecedor é presumido.</footer></div>';
   }
   function record(id,add){
@@ -115,13 +121,14 @@ window.StoryLabTrade = (() => {
     return id.startsWith('t')?data().terms.find(x=>x.id===id):library().phrases.find(x=>x.id===id);
   }
   function openTab(tab){
-    if(!['produto','fornecedor','frases','dossies','academia','setores'].includes(tab))return false;
+    if(!['produto','fornecedor','frases','dossies','academia','setores','linguagem','comparar','visita'].includes(tab))return false;
     state.tab=tab;state.group='all';state.scenario='all';state.query='';state.selected=null;state.reveal=[];api?.render();return true;
   }
   function init(ctx){
     api=ctx;
     window.StoryLabTradeField?.init(ctx);
     window.StoryLabTradeAcademy?.init(ctx);
+    window.StoryLabTradeTools?.init(ctx);
     document.addEventListener('click',e=>{
       const b=e.target.closest?.('[data-trade]');
       if(!b)return;
