@@ -43,6 +43,9 @@ const click=(action,id='',value='')=>signal('click',{closest(){return {dataset:{
 let html=hub.render();
 assert.match(html,/Fornecedores & Produtos/);
 assert.match(html,/Atlas de produtos/);
+assert.match(html,/Atlas Universal do Objeto/);
+hub.openTab('produto');
+html=hub.render();
 assert.match(html,/categoria de produto/);
 assert.match(html,/role="group"/);
 assert.equal(hub.filteredTerms().length,48);
