@@ -66,7 +66,7 @@ assert.equal(focusPreserved,true,'a busca deve preservar o foco durante rerender
 assert.ok(hub.filteredTerms().length>=1);
 click('tab','','frases');
 html=hub.render();
-assert.match(html,/Fraseoteca de campo/);
+assert.match(html,/Fraseoteca profissional/);
 assert.match(html,/Qual é a especialidade da empresa/);
 assert.equal(hub.filteredPhrases().length,36);
 click('training');
