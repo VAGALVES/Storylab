@@ -1,4 +1,4 @@
-/* StoryLab Shanghai · Dossiê de fornecedores e produtos · v2.19
+/* StoryLab Shanghai · Dossiê de fornecedores e produtos · v2.20
    Atlas e fraseoteca profissional para visitas de campo.
    Sem chamadas externas, sem cadastro de empresas reais, sem métricas inferidas. */
 window.StoryLabTrade = (() => {
@@ -17,15 +17,17 @@ window.StoryLabTrade = (() => {
     return data().groups.find(g=>g[0]===domain&&g[1]===id)?.[2]||id;
   }
   function toolbar(){
-    const groups=[
-      ['APRENDER',[['objeto','Atlas Universal do Objeto'],['produto','Glossário técnico do produto'],['fornecedor','Atlas dos fornecedores'],['academia','Academia técnica'],['setores','Radar setorial']]],
-      ['COMUNICAR',[['roteiro','Estúdio de Descrição'],['frases','Fraseoteca de campo'],['linguagem','Linguagem técnica']]],
-      ['INVESTIGAR',[['dossies','Dossiês de campo'],['comparar','Comparar registros'],['visita','Modo visita']]]
+    const core=[['objeto','O objeto'],['escalas','Adjetivos & escalas'],['verbos','Verbos & regência'],['medidas','Medidas ilustradas'],['roteiro','Estúdio de Descrição']];
+    const extras=[
+      ['APRENDER MAIS',[['academia','Academia técnica'],['setores','Setores industriais'],['produto','Glossário técnico']]],
+      ['TRADUZIR E CONVERSAR',[['frases','Fraseoteca profissional'],['linguagem','Construções em três idiomas']]],
+      ['FORNECEDORES E CAMPO',[['fornecedor','Descrever empresas'],['dossies','Dossiês de campo'],['comparar','Comparar'],['visita','Modo visita']]]
     ];
-    return '<nav class="trade-tab-groups" aria-label="Áreas de Fornecedores e Produtos">'+groups.map(g=>
-      '<div class="trade-tab-group"><span class="trade-tab-group-name">'+g[0]+'</span>'+
-      '<div class="trade-tabs" role="group" aria-label="'+g[0]+'">'+g[1].map(t=>
-      '<button type="button" data-trade="tab" data-value="'+t[0]+'" class="trade-tab'+(state.tab===t[0]?' active':'')+'" aria-pressed="'+(state.tab===t[0])+'">'+t[1]+'</button>').join('')+'</div></div>').join('')+'</nav>';
+    const open=!core.some(t=>t[0]===state.tab);
+    const tab=t=>'<button type="button" class="trade-tab'+(state.tab===t[0]?' active':'')+'" data-trade="tab" data-value="'+t[0]+'" aria-pressed="'+(state.tab===t[0])+'">'+t[1]+'</button>';
+    return '<nav class="trade-refined-navigation" aria-label="Percurso descritivo"><div class="trade-primary"><span class="trade-kicker">PERCURSO PRINCIPAL / DO OLHAR À NARRATIVA</span><div class="trade-primary-tabs">'+core.map(tab).join('')+'</div></div>'+
+    '<details class="trade-extras"'+(open?' open':'')+'><summary>Aprofundar conhecimentos e ferramentas <span>Indústrias, idiomas, fornecedores e visitas</span></summary>'+
+    '<div class="trade-secondary-groups">'+extras.map(g=>'<div class="trade-secondary-group"><span class="trade-kicker">'+g[0]+'</span><div>'+g[1].map(tab).join('')+'</div></div>').join('')+'</div></details></nav>';
   }
   function controls(){
     const isPhrase=state.tab==='frases';
@@ -103,10 +105,10 @@ window.StoryLabTrade = (() => {
   }
   function render(){
     if(!api)return '<div class="notice">Repertório profissional em inicialização.</div>';
-    const totals=data().terms.length,number=library().phrases.length;
-    return '<div class="trade-root">'+api.header('STORYLAB / CAMPO SHANGHAI / REPERTÓRIO PROFISSIONAL','Fornecedores & Produtos','Uma escola da descrição precisa: compreender o objeto, escolher a palavra certa, analisar empresas e construir narrativas profissionais.')+
-       '<div class="trade-hero"><div><span>O UNIVERSO DO PRODUTO E DE QUEM O PRODUZ</span><strong>Observar. Distinguir. Nomear. Narrar.</strong><p>Do macio ao maciço, da massa à ergonomia, do acabamento à função: primeiro a precisão da palavra, depois as lentes da indústria e da narrativa.</p></div><div class="trade-hero-metrics"><div><strong>'+totals+'</strong><small>verbetes PT/EN/中文</small></div><div><strong>'+number+'</strong><small>frases em 3 idiomas</small></div><div><strong>'+saved().length+'</strong><small>itens salvos</small></div></div></div>'+
-      toolbar()+(state.tab==='objeto'?(window.StoryLabObject?.atlas()||'<div class="trade-empty">Atlas universal indisponível.</div>'):state.tab==='roteiro'?(window.StoryLabObject?.studio()||'<div class="trade-empty">Estúdio de descrição indisponível.</div>'):state.tab==='frases'?phrasebook():state.tab==='dossies'?(window.StoryLabTradeField?.render()||'<div class="trade-empty">Caderno de campo indisponível.</div>'):state.tab==='academia'?(window.StoryLabTradeAcademy?.academy()||'<div class="trade-empty">Academia técnica indisponível.</div>'):state.tab==='setores'?(window.StoryLabTradeAcademy?.sectors()||'<div class="trade-empty">Radar setorial indisponível.</div>'):state.tab==='linguagem'?(window.StoryLabTradeTools?.language()||'<div class="trade-empty">Laboratório técnico indisponível.</div>'):state.tab==='comparar'?(window.StoryLabTradeTools?.comparison()||'<div class="trade-empty">Comparador indisponível.</div>'):state.tab==='visita'?(window.StoryLabTradeTools?.visit()||'<div class="trade-empty">Modo visita indisponível.</div>'):atlas())+
+    const totals=window.STORYLAB_OBJECT_DATA?.terms?.length||0,verbCount=(window.STORYLAB_PRECISION_DATA?.verbs||[]).reduce((n,g)=>n+g[2].length,0),scaleCount=window.STORYLAB_PRECISION_DATA?.scales?.length||0;
+    return '<div class="trade-root">'+api.header('STORYLAB / CAMPO SHANGHAI / REPERTÓRIO PROFISSIONAL','Fornecedores & Produtos','Aprenda a descrever qualquer objeto: substantivos, adjetivos, verbos, medidas e narrativa, com o português como referência.')+
+       '<div class="trade-hero"><div><span>O UNIVERSO DO PRODUTO E DE QUEM O PRODUZ</span><strong>Observar. Distinguir. Nomear. Narrar.</strong><p>Do macio ao maciço, da massa à ergonomia, do acabamento à função: primeiro a precisão da palavra, depois as lentes da indústria e da narrativa.</p></div><div class="trade-hero-metrics"><div><strong>'+totals+'</strong><small>descritores universais</small></div><div><strong>'+verbCount+'</strong><small>verbos descritivos</small></div><div><strong>'+scaleCount+'</strong><small>escalas coerentes</small></div></div></div>'+
+      toolbar()+(state.tab==='objeto'?(window.StoryLabObject?.atlas()||'<div class="trade-empty">Atlas universal indisponível.</div>'):state.tab==='roteiro'?(window.StoryLabObject?.studio()||'<div class="trade-empty">Estúdio de descrição indisponível.</div>'):state.tab==='escalas'?(window.StoryLabPrecision?.scales()||'<div class="trade-empty">Escalas indisponíveis.</div>'):state.tab==='verbos'?(window.StoryLabPrecision?.verbs()||'<div class="trade-empty">Verbos indisponíveis.</div>'):state.tab==='medidas'?(window.StoryLabPrecision?.measurements()||'<div class="trade-empty">Medidas indisponíveis.</div>'):state.tab==='frases'?phrasebook():state.tab==='dossies'?(window.StoryLabTradeField?.render()||'<div class="trade-empty">Caderno de campo indisponível.</div>'):state.tab==='academia'?(window.StoryLabTradeAcademy?.academy()||'<div class="trade-empty">Academia técnica indisponível.</div>'):state.tab==='setores'?(window.StoryLabTradeAcademy?.sectors()||'<div class="trade-empty">Radar setorial indisponível.</div>'):state.tab==='linguagem'?(window.StoryLabTradeTools?.language()||'<div class="trade-empty">Laboratório técnico indisponível.</div>'):state.tab==='comparar'?(window.StoryLabTradeTools?.comparison()||'<div class="trade-empty">Comparador indisponível.</div>'):state.tab==='visita'?(window.StoryLabTradeTools?.visit()||'<div class="trade-empty">Modo visita indisponível.</div>'):atlas())+
       '<footer class="trade-disclaimer">Glossário e traduções para estudo e conversação. Terminologia técnica e chinês de uso profissional devem ser confirmados quando aplicáveis ao setor, ao contrato e à fábrica. Nenhum dado de desempenho ou fornecedor é presumido.</footer></div>';
   }
   function record(id,add){
@@ -121,7 +123,7 @@ window.StoryLabTrade = (() => {
     return id.startsWith('t')?data().terms.find(x=>x.id===id):library().phrases.find(x=>x.id===id);
   }
   function openTab(tab){
-    if(!['objeto','roteiro','produto','fornecedor','frases','dossies','academia','setores','linguagem','comparar','visita'].includes(tab))return false;
+    if(!['objeto','escalas','verbos','medidas','roteiro','produto','fornecedor','frases','dossies','academia','setores','linguagem','comparar','visita'].includes(tab))return false;
     state.tab=tab;state.group='all';state.scenario='all';state.query='';state.selected=null;state.reveal=[];api?.render();return true;
   }
   function init(ctx){
@@ -130,6 +132,7 @@ window.StoryLabTrade = (() => {
     window.StoryLabTradeAcademy?.init(ctx);
     window.StoryLabTradeTools?.init(ctx);
     window.StoryLabObject?.init(ctx);
+    window.StoryLabPrecision?.init(ctx);
     document.addEventListener('click',e=>{
       const b=e.target.closest?.('[data-trade]');
       if(!b)return;
