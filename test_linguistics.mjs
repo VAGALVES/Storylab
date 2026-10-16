@@ -43,7 +43,7 @@ app.init({D:main,getStore:()=>store,save(){},render(){renderCount++},
   header:(_a,t)=>'<h1>'+t+'</h1>',
   stat:(label,n)=>'<p>'+label+':'+n+'</p>'});
 function event(action,attrs={}){
-  const button={dataset:{lingAction:action,...attrs}};
+  const button={dataset:{lingAction:action,...attrs},closest(){return null}};
   const evt={preventDefault(){},stopPropagation(){},
     target:{closest(selector){return selector==='[data-ling-action]'||selector==='[data-ling-action="jump"]'&&action==='jump'?button:null}}};
   for(const cb of (callbacks.click||[]).filter(x=>x.capture))cb.fn(evt);
