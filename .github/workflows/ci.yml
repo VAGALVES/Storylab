@@ -101,3 +101,7 @@ jobs:
           # O HTML único é reconstruído no deploy do Netlify. O arquivo do repositório
           # é uma cópia histórica; não exigimos igualdade de bytes até sincronizá-lo.
           python -c "from pathlib import Path; h=Path('storylab-shanghai-offline.html').read_text(encoding='utf8'); assert 'Encaixes' in h and 'STORYLAB_ENCAIXES' in h"
+      - name: Verificar pacote da hospedagem gratuita
+        run: |
+          python build_pages.py
+          python -c "from pathlib import Path; d=Path('_site'); assert all((d / f).exists() for f in ('index.html','service-worker.js','manifest.webmanifest','app.js','trade-hub.js','trade-field.js','storylab-shanghai-offline.html','.nojekyll')); assert len(list(d.rglob('*'))) >= 30"
