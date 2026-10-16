@@ -124,6 +124,19 @@ Implementada uma quarta aba: **Dossiês de campo**, com até 20 registros pessoa
 
 **Limites do conteúdo:** modelos ilustrativos de formação profissional; não substituem normas setoriais, ensaios, due diligence ou tradução humana especializada em chinês de documentos contratuais. Expansão prevista para fontes bibliográficas, exercícios aplicados e trilhas setoriais profundas.
 
+## StoryLab v2.21 — Anatomia, relações e percepção
+
+Esta rodada aprofunda a pergunta central **"como descrever precisamente qualquer objeto?"** sem devolver a navegação ao recorte industrial.
+
+- **20 substantivos universais** em quatro famílias: estrutura/sustentação, envoltórios/revestimentos, junções/interfaces e interação/comandos. Cada verbete inclui definição, frase observacional, pergunta de verificação e traduções EN/中文 com pinyin.
+- **10 relações entre partes** (circundar, ladear, sobrepor-se a, encaixar-se em, apoiar-se sobre, atravessar, articular-se com, recuar, sobressair de, alinhar-se com). Cada relação recebe **um desenho SVG próprio**, sem reutilizar ícones genéricos ou sugerir valores medidos.
+- **15 conceitos sensoriais** em três famílias com cinco descritores cada: cor (matiz, saturação, luminosidade percebida, contraste e temperatura cromática como impressão), luz (fosco, acetinado, brilhante, translúcido, opaco), som (intensidade percebida, altura tonal, timbre, ritmo, vibração). Esses atributos **não são degraus da mesma escala**.
+- **6 microdesafios** contextualizados e explicados, com respostas locais persistentes e incluídas em backup/importação após sanitização. Os exercícios desenvolvem discriminação de conceitos; não medem habilidade oral.
+- **Conexão com o Estúdio**: perguntas de observação podem ser encaminhadas, mediante clique explícito, ao campo de notas do roteiro. Elas são registradas como **perguntas a verificar**, não como características provadas.
+- **Jornada editorial**: O objeto → Partes & relações → Cor, luz & som → Adjetivos & escalas → Verbos & regência → Medidas ilustradas → Estúdio. Ferramentas industriais e de fornecedores continuam como especializações complementares.
+
+**Limites:** definições, ilustrações e traduções são material pedagógico autoral que requer revisão especializada para documentação crítica; o aplicativo não testa materiais, corimetria nem acústica por sensores ou instrumentos. A experiência visual em Android real deve ser inspecionada além dos testes automatizados.
+
 ## Refinamento editorial v2.20 — uma hierarquia única
 
 **Diagnóstico que motivou esta rodada:** a página havia acumulado atlas, fichas industriais, laboratórios de inglês e ferramentas operacionais, sem ordem pedagógica nítida. O título inglês *Consist of* contraria a escolha de português como língua-base. O formulário de medidas precisava de uma referência visual de altura, largura, comprimento, profundidade, espessura e massa.
