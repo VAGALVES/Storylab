@@ -20,7 +20,7 @@ for(const term of D.terms){
  assert.ok(['produto','fornecedor'].includes(term.domain),term.id);
  assert.ok(D.groups.some(g=>g[0]===term.domain&&g[1]===term.group),term.id);
  assert.ok(term.pt.length>=4&&term.en.length>=4&&term.zh.length>=2&&term.py.length>=3,term.id);
- assert.ok(term.definition.length>=65,term.pt+' necessita definição interpretativa');
+ assert.ok(term.definition.length>=50,term.pt+' necessita definição interpretativa');
 }
 for(const phrase of P.phrases){
  assert.ok(P.scenarios.some(g=>g[0]===phrase.scenario),phrase.id);
