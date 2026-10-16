@@ -67,7 +67,7 @@ function overview(){
  return '<div class="trade-field-top"><div><span class="trade-kicker">CADERNO DE CAMPO / PRÁTICA PROFISSIONAL</span><h2>Dossiês de visitas e produtos</h2><p>Registre características, respostas e evidências por dimensão, sem confundir observação e confirmação técnica. Os registros ficam apenas neste navegador e entram no backup do StoryLab.</p></div>'+
  '<div class="trade-field-create">'+button('new','+ Novo produto','produto')+button('new','+ Nova visita a fornecedor','fornecedor')+'</div></div>'+
  '<div class="trade-field-list" aria-label="Dossiês salvos">'+(all.length?all.map(n=>button('open',
- esc(n.title||n.kind==='produto'?'Produto sem título':'Fornecedor sem título')+' <small>'+esc(n.date)+'</small>',n.id,
+ esc(n.title||(n.kind==='produto'?'Produto sem título':'Fornecedor sem título'))+' <small>'+esc(n.date)+'</small>',n.id,
  n.id===current()?.id?'is-active':'')).join(''):'<div class="trade-empty">Nenhum dossiê ainda. Crie o primeiro para transformar o Atlas em instrumento de visita.</div>')+'</div>'+
  (all.length>=20?'<p class="trade-field-limit">Limite de 20 dossiês locais; copie e guarde os registros antes de excluir os antigos.</p>':'');
 }
