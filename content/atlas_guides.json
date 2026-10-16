@@ -63,7 +63,7 @@
         "simétrico",
         "Cujas partes se correspondem em forma, tamanho e posição dos dois lados de um eixo ou em torno de um centro.",
         "Duas janelas idênticas ladeiam a porta do sobrado shikumen, numa fachada quase simétrica.",
-        "Confira os detalhes antes de afirmar simetria perfeita; na maioria das fachadas, “quase simétrico” é a formulação honesta.",
+        "A simetria exige correspondência em torno de um eixo: portas equivalentes não bastam se janelas, ornamentos ou alturas diferirem. Diga qual eixo está comparando e use “aproximadamente simétrico” quando houver exceções visíveis.",
         "Dobrada ao meio pelo eixo da porta, a fachada coincidiria ponto por ponto: o desenho _____ repete à esquerda exatamente o que há à direita.",
         [
           "fachada simétrica",
@@ -105,7 +105,7 @@
         "em balanço",
         "Diz-se da parte de uma construção que avança no vazio presa apenas por uma das pontas, sem apoio na outra.",
         "A varanda em balanço avança três metros sobre a calçada do bairro, sem nenhum pilar por baixo.",
-        "Termo de engenharia: só use se não houver apoio visível na ponta livre. Não confunda com suspenso, que pende de cabos ou tirantes.",
+        "Um volume aparentemente sem apoio frontal pode ter pilares fora do enquadramento ou apoio oculto. Para afirmar balanço estrutural, observe o conjunto ou consulte o projeto; não confunda com peça suspensa por tirantes.",
         "Sem nenhuma coluna embaixo, o mirante de vidro se projeta _____ sobre o rio, preso apenas à parede do edifício.",
         [
           "laje em balanço",
@@ -119,7 +119,7 @@
         "modular",
         "Composto de unidades padronizadas que se repetem e podem ser combinadas, acrescentadas ou retiradas.",
         "Contêineres empilhados formam o mercado modular, que ganha ou perde lojas conforme a temporada.",
-        "Repetição visual não prova que as peças sejam intercambiáveis ou pré-fabricadas; confirme com quem projetou ou montou.",
+        "Painéis repetidos sugerem modulação, mas não demonstram que sejam peças padronizadas ou substituíveis. Diferencie ritmo de fachada (padrão visual) de sistema modular de construção, que requer informação técnica.",
         "Feito de caixas idênticas que podem ser encaixadas, retiradas e trocadas de lugar, o quiosque _____ foi montado em uma tarde.",
         [
           "estrutura modular",
@@ -133,7 +133,7 @@
         "orgânico",
         "De contornos irregulares e fluidos, que lembram formas da natureza, como folhas, raízes ou seixos rolados.",
         "Os canteiros de desenho orgânico do parque à beira do rio quebram a rigidez das calçadas retas.",
-        "Orgânico descreve a forma, não o material; e em outros contextos significa “sem agrotóxico”. Deixe o sentido claro pelo contexto.",
+        "Em arquitetura, “orgânico” costuma indicar linhas que evocam formas naturais; não atesta material biológico nem construção sustentável. Descreva a curva ou ramificação observada, evitando tratá-la como estilo oficialmente declarado.",
         "Inspirado no desenho irregular de folhas e raízes, o canteiro _____ foge de qualquer linha reta ou figura geométrica regular.",
         [
           "forma orgânica",
@@ -270,7 +270,7 @@
         "monumental",
         "De dimensões muito grandes em relação ao entorno e ao corpo humano, a ponto de dominar a paisagem.",
         "Vista da calçada, a torre de escala monumental ocupa todo o campo de visão de quem sai do metrô.",
-        "Sem medição, não converta a impressão em metragem. “Monumental” também é hipérbole elogiosa; evite esse uso no texto informativo.",
+        "Monumental é avaliação de escala relativa e impacto, não uma classe de altura. Compare a estrutura a pedestres, portas e vizinhos; informe metros somente com fonte. Também não atribua caráter de monumento histórico apenas pelo porte.",
         "Erguida em escala _____, a estátua de quarenta metros reduz os sobrados ao redor a miniaturas de brinquedo.",
         [
           "escala monumental",
@@ -312,7 +312,7 @@
         "estreito",
         "De pouca largura em relação ao comprimento ou à altura, a ponto de limitar a passagem ou a vista.",
         "Entre dois arranha-céus, a faixa estreita de céu parece uma fresta de luz sobre a rua.",
-        "Estreito diz respeito à largura; para espaço reduzido em todas as direções, use compacto ou exíguo. Dê uma referência, como “um metro”.",
+        "“Estreito” descreve largura em relação ao uso ou ao entorno: um corredor de 1,2 m pode ser suficiente para uma função e insuficiente para outra. Distingua a largura observável de um juízo sobre acessibilidade, que exige critério técnico.",
         "Com pouco mais de um metro de largura, o beco _____ obriga quem vem em sentido contrário a andar de lado.",
         [
           "rua estreita",
@@ -368,7 +368,7 @@
         "imponente",
         "Que se impõe à vista e causa forte impressão pela escala, pela solidez ou pela composição.",
         "A escadaria e as colunas tornam imponente a entrada de um antigo banco à beira do rio.",
-        "É impressão, não medida: mostre quais elementos produzem o efeito. Um prédio pode ser imponente pelas colunas, não pela altura.",
+        "A impressão de imponência pode vir de altura, simetria, massa ou enquadramento em contra-plongée. Indique o fator visível e marque o caráter subjetivo; não use o adjetivo para afirmar importância histórica ou institucional.",
         "Sem ser gigantesco, o tribunal causa forte impressão pela escadaria e pelas colunas: o acesso é _____ para quem chega pela praça.",
         [
           "edifício imponente",
@@ -410,7 +410,7 @@
         "escala humana",
         "Dimensão de edifícios e espaços compatível com o corpo e o ritmo de quem caminha, sem esmagar o pedestre.",
         "As lojas térreas e os toldos baixos mantêm em escala humana a rua de sobrados shikumen.",
-        "Conceito do urbanismo; explique em que a escala favorece o pedestre, em vez de usar a expressão como elogio genérico.",
+        "Não basta haver pessoas na fotografia para existir “escala humana”. Observe relação entre alturas, distâncias, acesso e percepção no nível do pedestre; conforto, acessibilidade e segurança exigem indicadores adicionais.",
         "Com sobrados de dois andares e portas ao alcance de quem caminha, a vila preserva a _____, na contramão das torres do entorno.",
         [
           "em escala humana",
@@ -424,7 +424,7 @@
         "desproporcional",
         "Sem relação equilibrada de medida entre as partes ou com outra coisa; grande ou pequeno demais em comparação.",
         "O letreiro de neon parece desproporcional à fachada estreita da loja e cobre até as janelas do andar de cima.",
-        "Diga em relação a quê; desproporção é sempre comparativa. Em sentido figurado, “reação desproporcional” é juízo de valor: atribua a fonte.",
+        "Identifique a relação comparada: porta versus fachada, largura versus altura, ou obra versus entorno. Sem referência, “desproporcional” é apenas reprovação estética; em decisões públicas, o adjetivo requer critérios explicitados.",
         "A cabeça da estátua é grande demais para o corpo, e o conjunto _____ virou motivo de piada entre os moradores.",
         [
           "desproporcional ao tamanho",
@@ -551,7 +551,7 @@
         "direcional",
         "Luz que chega de uma direção predominante e identificável, e por isso projeta sombras orientadas para um mesmo lado.",
         "A iluminação direcional dos refletores projeta as sombras dos dançarinos para o mesmo lado da praça.",
-        "Sombras orientadas indicam de onde vem a luz, mas não identificam, por si, a fonte: pode ser sol, poste ou reflexo.",
+        "Uma borda de sombra aponta uma direção de incidência, mas reflexos e múltiplas fontes podem criar sombras cruzadas. Diga de onde a luz parece vir; não identifique sol, flash ou luminária sem vê-los ou ter dados.",
         "Vinda de um holofote posicionado à esquerda, a meia altura, a luz _____ projeta todas as sombras para a direita, sem exceção.",
         [
           "luz direcional",
@@ -578,7 +578,7 @@
         "contrastada",
         "Iluminação com grande diferença entre zonas claras e escuras e pouca gradação intermediária.",
         "A iluminação contrastada deixa a bancada do barista clara e o fundo do salão mergulhado em sombra.",
-        "Não confunda contraste de luz com contraste de cores: uma cena em preto e branco pode ser muito contrastada.",
+        "Contraste luminoso é diferença entre regiões claras e escuras, não simples presença de cores opostas. Uma parede azul e outra vermelha podem ter brilho parecido; explique se o contraste é de luminância, matiz ou ambos.",
         "Metade do balcão brilha sob o sol e a outra metade some no escuro: a iluminação _____ divide a cena entre claro e breu.",
         [
           "luz contrastada",
@@ -620,7 +620,7 @@
         "indireta",
         "Luz que chega à cena depois de bater em teto, parede ou outra superfície, sem que a fonte fique visível.",
         "A luz indireta das sancas ilumina o restaurante sem ofuscar os clientes.",
-        "Uma fonte fora do quadro não comprova luz indireta. Diferencie de rebatida, que é a luz devolvida de propósito por um rebatedor.",
+        "Luz fora do quadro não é necessariamente indireta: pode atingir o objeto diretamente de uma janela lateral. Para “indireta”, identifique reflexão ou dispersão por outra superfície; “rebatida” nomeia a reflexão usada na técnica fotográfica.",
         "Instalada em sancas que apontam para o teto, a iluminação _____ não deixa nenhuma lâmpada à vista de quem está nas mesas.",
         [
           "luz indireta",
@@ -687,7 +687,7 @@
         "zenital",
         "Luz que vem de cima, do alto do céu ou de uma abertura no teto, e cai quase na vertical.",
         "Uma claraboia deixa entrar luz zenital sobre o pátio interno do antigo casarão.",
-        "Zenital indica direção, de cima para baixo. Ao meio-dia, a luz do sol é quase zenital e produz sombras curtas, logo abaixo dos objetos.",
+        "“Zenital” refere-se à direção aproximadamente vertical, vinda de cima; não basta a tomada ter sido feita ao meio-dia. A posição solar varia com latitude e estação, e iluminação artificial também pode produzir incidência zenital.",
         "Por um rasgo de vidro no telhado, a luz _____ cai a pino sobre o balcão central, como se viesse direto do céu.",
         [
           "luz zenital",
@@ -728,7 +728,7 @@
         "estourada",
         "Área tão clara na imagem que perde todos os detalhes e vira branco puro.",
         "Gravada contra a janela, a imagem tem uma área estourada onde deveria aparecer o rio.",
-        "Jargão de fotografia e vídeo; explique o termo se o público for leigo. Diz respeito à imagem registrada, não à cena real.",
+        "“Estourada” é área sem detalhe recuperável nos tons mais claros da imagem exibida, não sinônimo de dia ensolarado. Verifique a foto ou o vídeo, não o brilho real da cena; reflexos especulares podem ser intencionalmente brancos.",
         "Na foto feita contra a janela, a área _____ virou um retângulo branco, sem nenhum detalhe da rua lá fora.",
         [
           "imagem estourada",
@@ -826,7 +826,7 @@
         "neutro",
         "Tom de baixa carga cromática, como branco, cinza, bege ou preto, que combina com quase tudo e não disputa atenção.",
         "As paredes em tom neutro da galeria deixam todo o protagonismo para os quadros.",
-        "Neutro não é ausência de efeito: cinzas e beges também comunicam. Evite usá-lo como sinônimo de sem graça.",
+        "Cinza, branco e bege podem funcionar como cores neutras numa composição, mas não são visualmente “inexistentes”. Nomeie o fundo específico e o contraste que cria; chamar uma paleta de neutra não descreve sua saturação ou temperatura com precisão.",
         "Para não competir com as roupas, as paredes da loja foram pintadas de cinza-claro, um tom _____, quase sem cor.",
         [
           "tom neutro",
@@ -867,7 +867,7 @@
         "quente",
         "Tonalidade percebida como próxima do vermelho, do laranja ou do amarelo, associada ao fogo e ao sol.",
         "Os tons quentes das lanternas e da madeira dão ao salão do restaurante uma atmosfera de fim de tarde.",
-        "Temperatura de cor é convenção visual, não temperatura física; na fotografia, a luz mais quente é a de menos kelvins.",
+        "Amarelos e laranjas tendem a ser percebidos como quentes, mas a luz pode alterar a cor aparente dos objetos. Não infira material, temperatura física ou intenção da marca; indique se o tom está no objeto ou na iluminação.",
         "Na escala de temperatura de cor, o laranja do toldo fica do lado _____, oposto ao dos azuis e verdes.",
         [
           "tons quentes",
@@ -881,7 +881,7 @@
         "frio",
         "Tonalidade percebida como próxima do azul, do verde-água ou do violeta, associada à água e à sombra.",
         "O azul frio do letreiro de neon contrasta com a parede cor de areia.",
-        "Não atribua a todos a mesma sensação; e cuidado com a ambiguidade: “tom frio” pode soar como juízo sobre o clima emocional da cena.",
+        "“Frio” é uma convenção de percepção cromática, não medida de temperatura da parede nem prova de tristeza no público. Prefira “azul acinzentado” quando só a cor importa; se descrever atmosfera emocional, explicite que é sua impressão.",
         "Nos azuis e verdes-água da coleção de verão predomina um tom _____, oposto aos laranjas e vermelhos da temporada anterior.",
         [
           "tons frios",
@@ -895,7 +895,7 @@
         "paleta restrita",
         "Conjunto reduzido de cores, em geral duas ou três, escolhido para dar unidade a uma cena, a uma vitrine ou a um figurino.",
         "A casa de chá trabalha com uma paleta restrita: madeira escura, papel de arroz e o verde do chá nas xícaras.",
-        "Diga quais são as cores da paleta; “paleta restrita” sozinha é vaga. Não atribua intenção de projeto sem ouvir quem decorou.",
+        "“Restrita” descreve número reduzido de famílias cromáticas, não falta de criatividade. Enumere quais tons predominam e onde entram exceções; não anuncie uma decisão deliberada de projeto sem informação da equipe de criação.",
         "Na vitrine, o estilista usou só três cores — preto, cru e cinza-chumbo — repetidas em todas as peças: uma _____ que dá unidade ao conjunto.",
         [
           "paleta restrita a dois tons",
@@ -908,7 +908,7 @@
         "berrante",
         "De cor tão intensa e chamativa que salta aos olhos, às vezes a ponto de parecer excessiva.",
         "O verde-limão berrante do letreiro da loja de celulares disputa atenção com os anúncios de neon vizinhos.",
-        "Berrante carrega juízo, por vezes depreciativo; no texto informativo, atribua a impressão ou descreva saturação e área ocupada.",
+        "“Berrante” contém avaliação, muitas vezes desfavorável. Para texto informativo, especificar matiz, saturação e proporção de área (“laranja saturado ocupa quase toda a vitrine”) é mais verificável que atribuir incômodo ao público.",
         "Ninguém passa sem notar o macacão rosa-choque do manequim: a cor _____ grita no meio da vitrine de cinzas e beges.",
         [
           "cor berrante",
@@ -1074,7 +1074,7 @@
         "polido",
         "Com superfície alisada por atrito até perder as irregularidades e refletir a luz com nitidez.",
         "O corrimão de latão polido reflete os lampiões do saguão do hotel.",
-        "Polido indica superfície alisada até refletir; não comprova o processo. Diferencie de envernizado, que recebe uma camada por cima.",
+        "Uma superfície que reflete como espelho pode ser metal polido, vidro ou material com verniz; o brilho não prova o procedimento. Use “aparência polida” quando o acabamento não foi confirmado e diferencie de “escovado”, que exibe marcas lineares.",
         "Lixado até perder qualquer risco, o tampo de granito _____ devolve a imagem das luminárias como um espelho.",
         [
           "aço polido",
@@ -1088,7 +1088,7 @@
         "áspero",
         "Que tem irregularidades miúdas que produzem atrito ao toque, como lixa, pedra bruta ou reboco.",
         "As paredes de reboco áspero da viela guardam a poeira das obras vizinhas.",
-        "Sem tocar, apresente aspereza como impressão visual. Áspero tem relevo miúdo; para saliências maiores e irregulares, use rugoso.",
+        "A rugosidade aparente numa macrofotografia não garante aspereza ao toque. Se você não tocou a peça, diga “superfície de aspecto áspero”; diferencie de “rugoso”, mais adequado para saliências e sulcos maiores.",
         "Visualmente regular, sem saliências aparentes, o papel do embrulho é _____ ao toque, como uma lixa fina.",
         [
           "superfície áspera",
@@ -1102,7 +1102,7 @@
         "vitrificado",
         "Recoberto por uma camada vítrea fundida no forno, que deixa a cerâmica lisa, impermeável e geralmente brilhante.",
         "Na loja de porcelanas, as tigelas vitrificadas em verde-celadon refletem as lâmpadas da prateleira.",
-        "Vitrificado é camada fundida, típica da cerâmica e do porcelanato; não chame assim um verniz ou uma resina aplicados a frio.",
+        "“Vitrificado” descreve tratamento que produz camada vítrea, não qualquer superfície muito brilhante. Porcelanatos, películas e vernizes podem apresentar reflexos semelhantes; confirme o acabamento antes de atribuir o processo.",
         "Depois de queimada a mais de mil graus, a camada de esmalte se fundiu sobre o barro, e o jarro _____ ficou liso e impermeável.",
         [
           "cerâmica vitrificada",
@@ -1158,7 +1158,7 @@
         "translúcido",
         "Que deixa passar a luz, mas não permite ver com nitidez o que está do outro lado.",
         "O painel translúcido de papel de arroz suaviza a visão do salão interno.",
-        "Translúcido é diferente de transparente, que deixa ver com nitidez, e de opaco, que barra a luz.",
+        "Material translúcido deixa passar luz, mas não preserva nitidez da imagem por trás; vidro transparente e painel perfurado operam de outras maneiras. Demonstre o efeito com um objeto iluminado, sem atribuir composição do material.",
         "O biombo deixa passar a claridade, mas não a imagem: atrás do painel _____, os clientes viram apenas sombras borradas.",
         [
           "vidro translúcido",
@@ -1327,7 +1327,7 @@
         "acolhedor",
         "Que transmite sensação de recepção e conforto a quem chega; impressão construída por luz, temperatura, objetos e trato.",
         "Com luz amarelada e mantas nas cadeiras, o pequeno salão de chá em Xangai pareceu acolhedor à equipe numa tarde de chuva.",
-        "É percepção, não atributo do lugar: diga a quem o espaço pareceu acolhedor e cite os elementos que motivam a impressão.",
+        "“Acolhedor” relata uma resposta pessoal à escala, luz, materiais e organização. Especifique ao menos duas pistas — por exemplo, assentos próximos e luz baixa — sem concluir que o ambiente acolhe igualmente visitantes com necessidades diferentes.",
         "Com mantas nas cadeiras e o dono chamando cada cliente pelo nome, o salão de chá parece _____ a quem chega da chuva.",
         [
           "ambiente acolhedor",
@@ -1411,7 +1411,7 @@
         "sereno",
         "Calmo e sem agitação perceptível, com sons e movimentos brandos que não chegam a perturbar quem está no lugar.",
         "Às seis da manhã, o parque à beira do rio está sereno; ouvem-se só os passos de quem corre e o canto de alguns pássaros.",
-        "Descreva o que torna o lugar sereno; não confunda com contemplativo, que fala do convite à reflexão, não da calma em si.",
+        "Serenidade exige ancoragem sensorial: poucos movimentos, som discreto ou ritmo regular. Uma imagem vazia não revela ruído fora do enquadramento; “contemplativo” descreve a disposição para observar, não necessariamente a tranquilidade.",
         "Sem nenhuma ondulação nem sinal de agitação, o lago amanhece _____, com a superfície parada como um espelho.",
         [
           "céu sereno",
@@ -1425,7 +1425,7 @@
         "impessoal",
         "Sem marcas de identidade, de história local ou de quem usa o espaço; padronizado a ponto de parecer intercambiável.",
         "O saguão do hotel em Pudong é impessoal: mármore, sofás cinza e arranjos idênticos que poderiam estar em qualquer cidade.",
-        "É uma avaliação; sustente-a com o que falta no espaço e não a confunda com asséptico, que fala de limpeza e frieza clínica.",
+        "Um espaço sem objetos pessoais pode ter linguagem minimalista sem ser “impessoal” para seus usuários. Explique o que provoca a impressão — repetição, sinalização uniforme, ausência de marcas de uso — e evite inferir relações humanas no local.",
         "Sem nenhuma foto, objeto pessoal ou marca de quem trabalha ali, o escritório alugado tem um ar _____, de lugar de passagem.",
         [
           "ambiente impessoal",
@@ -1439,7 +1439,7 @@
         "arejado",
         "Que deixa o ar circular e transmite sensação de espaço aberto, por janelas, vãos amplos ou poucos obstáculos.",
         "Com janelas abertas para o pátio e mesas espaçadas, o salão parece arejado mesmo no auge do verão de Xangai.",
-        "Aparência não equivale a medição de ventilação ou de qualidade do ar; no sentido figurado, arejado também significa mente aberta.",
+        "Janelas abertas e pé-direito alto podem sugerir amplitude, mas não medem renovação de ar. Ao narrar, distinga “parece arejado” de “tem boa ventilação”; esta segunda afirmação pede informação sobre circulação e condições de uso.",
         "Com janelas abertas dos dois lados, o vento cruza o salão _____, que nunca guarda cheiro de fritura.",
         [
           "ambiente arejado",
@@ -1453,7 +1453,7 @@
         "descontraído",
         "De clima informal e pouco rígido, em que as regras de conduta, de roupa e de conversa parecem relaxadas.",
         "No bar de discos de vinil, conversas em voz alta e gente de chinelo compõem um ambiente descontraído numa sexta à noite.",
-        "Fala do clima do lugar, não do humor de cada pessoa; evite atribuir estados emocionais a desconhecidos pela aparência.",
+        "Música alta, mesas informais ou pessoas conversando podem compor ambiente descontraído, mas não demonstram intimidade nem estado emocional de todos. Em entrevista, não use a atmosfera percebida para presumir consentimento ou abertura pessoal.",
         "O convite pedia traje _____: nada de terno ou gravata, bermuda e chinelo liberados na festa.",
         [
           "clima descontraído",
@@ -1625,7 +1625,7 @@
         "contínuo",
         "Que se mantém sem interrupção visível durante todo o intervalo observado, sem pausas nem lacunas.",
         "O movimento contínuo da escada rolante da estação domina a tomada, com passageiros subindo sem pausa por três minutos.",
-        "Delimite o período observado: contínuo durante a gravação não significa ininterrupto ao longo do dia inteiro.",
+        "“Contínuo” significa sem interrupção no intervalo observado, não necessariamente rápido nem permanente. Se o vídeo tem cortes, não afirme continuidade temporal com base na montagem; indique o período real acompanhado.",
         "Das seis da manhã à meia-noite, sem uma única pausa, a escada rolante da estação mantém um movimento _____.",
         [
           "fluxo contínuo",
@@ -1694,7 +1694,7 @@
         "acelerado",
         "Que se faz em ritmo rápido ou que ganha velocidade ao longo do intervalo observado.",
         "Quando o semáforo abre, os ciclistas saem em ritmo acelerado e cruzam a praça em menos de dez segundos.",
-        "Distinga velocidade alta de aceleração: um movimento rápido e constante não está, a rigor, acelerando.",
+        "“Acelerado” é mudança de velocidade, não velocidade alta constante. Em vídeo com câmera móvel ou cortes, a sensação de aceleração pode ser efeito do enquadramento; compare deslocamentos em intervalos equivalentes antes de afirmar.",
         "Depois da curva, o ciclista ganha velocidade a cada pedalada, num ritmo cada vez mais _____.",
         [
           "ritmo acelerado",
@@ -1708,7 +1708,7 @@
         "sincronizado",
         "Que ocorre ao mesmo tempo e no mesmo compasso que outro movimento, como se seguisse um único comando.",
         "Cedo pela manhã, um grupo de idosos pratica tai chi de forma sincronizada à beira do rio Huangpu.",
-        "Sincronia exata é rara; “quase sincronizado” ou “em uníssono aparente” costumam ser mais honestos diante da câmera.",
+        "Movimentos coincidentes por alguns segundos não garantem sincronização exata. Compare início, duração e repetição dos ciclos; se houver diferenças visíveis, “aproximadamente em sincronia” evita uma precisão que a gravação não sustenta.",
         "Ao mesmo tempo e no mesmo compasso, os doze nadadores executam um mergulho _____ na piscina.",
         [
           "nado sincronizado",
@@ -1749,7 +1749,7 @@
         "disperso",
         "Espalhado por uma área ampla, sem concentração num ponto nem direção comum entre os elementos.",
         "Depois do show, o público sai disperso pelas ruas vizinhas, em pequenos grupos que tomam rumos diferentes.",
-        "Disperso fala de distribuição no espaço, não de desorganização; aplicado a uma pessoa, também pode significar desatento.",
+        "“Disperso” descreve distribuição espacial sem centro dominante, não desordem ou distração. Indique o que se espalhou — pessoas, veículos, luzes — e diferencie de “em debandada”, que envolve saída coletiva repentina.",
         "Quando a chuva aperta, o público, antes reunido diante do palco, sai _____ em todas as direções.",
         [
           "público disperso",
@@ -1790,7 +1790,7 @@
         "afunilar",
         "Estreitar-se progressivamente, como um funil, obrigando um fluxo de pessoas ou veículos a passar por um espaço menor.",
         "Na entrada da passarela, a calçada afunila e os pedestres passam um de cada vez, enquanto as bicicletas esperam a vez.",
-        "Diga onde e por que o espaço afunila; não confunda com “convergir”, quando fluxos se encontram sem que a passagem se estreite.",
+        "Afunilar exige diminuição progressiva da largura de passagem ou concentração gradual do fluxo. Duas vias que se encontram sem estreitamento apenas convergem; na narração, mostre a seção larga e o ponto em que ela diminui.",
         "Depois do pedágio, as oito cabines dão lugar a duas faixas, e a pista passa a _____ até a entrada estreita do túnel.",
         [
           "o trânsito afunila",
@@ -1860,7 +1860,7 @@
         "fachada",
         "Cada uma das faces externas de um edifício, em especial a principal, voltada para a rua, onde ficam a entrada e as aberturas.",
         "A fachada de pedra de um edifício do Bund exibe janelas em fileiras regulares e uma entrada central.",
-        "O aspecto externo não comprova a idade do prédio: fachadas são restauradas, imitadas ou trocadas; confirme a data com fonte.",
+        "“Fachada histórica” é atribuição de época, não descrição do que parece antigo. Revestimentos e ornamentos podem ser réplicas; se a idade não foi checada, nomeie os traços visíveis e deixe a data em aberto.",
         "Voltada para a avenida, a _____ principal do museu, com a porta e as doze janelas, foi coberta de azulejos.",
         [
           "fachada principal",
@@ -1982,7 +1982,7 @@
         "volumetria",
         "Organização dos volumes e massas construídas de um edifício: proporções, alturas, encaixes e saliências vistos em conjunto.",
         "A volumetria do conjunto alterna um bloco alto com um corpo lateral mais baixo, visível do outro lado do rio.",
-        "Não substitua a descrição de volumes por rótulos de estilo; volumetria é forma, não material nem acabamento.",
+        "Volumetria diz respeito à composição dos volumes construídos e seus recuos ou saliências, não ao estilo da decoração. Mostre quantos corpos se articulam e onde; “volumetria moderna” é pouco informativo sem análise formal.",
         "Vista de longe, a _____ do conjunto se resume a um cubo alto encaixado sobre uma lâmina comprida e baixa.",
         [
           "volumetria do edifício",
@@ -2034,7 +2034,7 @@
         "átrio",
         "Espaço interno amplo de recepção e circulação, em geral com vários andares de altura e luz natural vinda da cobertura.",
         "O átrio do shopping sobe seis andares até a cobertura de vidro, e a luz do dia chega ao térreo.",
-        "Use para espaços internos de circulação e recepção; o pátio é descoberto, aberto ao céu, e não deve ser chamado de átrio.",
+        "Um grande salão central pode ser hall sem ser átrio. Observe a organização em torno do espaço e sua relação com acessos e pavimentos; o fato de ter cobertura não o desqualifica automaticamente, ao contrário de um pátio aberto.",
         "Logo depois da entrada, o _____ envidraçado onde fica a recepção sobe oito andares e recebe luz natural pela cobertura.",
         [
           "átrio central",
@@ -2047,7 +2047,7 @@
         "brise",
         "Elemento de fachada, como lâminas ou aletas fixas ou móveis, que filtra a entrada de sol sem fechar a vista nem a ventilação.",
         "Brises verticais de alumínio sombreiam as janelas voltadas para oeste num prédio de escritórios de Xangai.",
-        "Vem do francês “brise-soleil”; diga se as lâminas são fixas ou móveis e não confunda brise com persiana, que é interna.",
+        "Brise-soleil é elemento de controle solar externo ou integrado à fachada, não qualquer conjunto de barras decorativas. Identifique lâminas, orientação e sombreamento observável; confirme mobilidade antes de chamá-lo de regulável.",
         "Lâminas de alumínio inclinadas na fachada oeste formam um _____ que barra o sol da tarde sem bloquear a vista.",
         [
           "brise vertical",
@@ -2171,7 +2171,7 @@
         "fluxo",
         "Movimento contínuo de pessoas ou veículos ao longo de um percurso, considerado em volume e direção.",
         "O fluxo de pedestres aumenta junto à saída 3 da estação no fim da tarde, quando terminam os turnos nos escritórios.",
-        "Sem contagem, descreva qualitativamente e delimite o período; “fluxo intenso” num vídeo de um minuto não é um dado.",
+        "A filmagem de um cruzamento durante 40 segundos mostra movimentos, não o fluxo médio da rua. Para usar “fluxo intenso”, apresente o recorte temporal, direção e modo de deslocamento; valores de pessoas por hora requerem contagem.",
         "Na hora do rush, o _____ de pedestres na saída da estação chega a três mil pessoas por minuto.",
         [
           "fluxo de pedestres",
@@ -2197,7 +2197,7 @@
         "fachada ativa",
         "Térreo de edifício com lojas, portas e vitrines voltadas para a calçada, que criam relação direta e constante com a rua.",
         "Numa rua comercial de Xangai, vitrines e portas abertas formam uma fachada ativa ao longo de todo o quarteirão.",
-        "Termo técnico de planos diretores; um estabelecimento aberto no instante da gravação não prova vitalidade permanente da rua.",
+        "Comércio no térreo não basta para caracterizar fachada ativa: observe abertura, transparência, acessos, continuidade de usos e relação com pedestres. Uma vitrine fechada à noite não comprova ausência de atividade ao longo do dia.",
         "Com vitrines e portas abertas para a calçada em vez de muros cegos, o térreo do prédio forma uma _____.",
         [
           "térreo com fachada ativa",
@@ -2236,7 +2236,7 @@
         "caminhabilidade",
         "Qualidade de um lugar para ser percorrido a pé com conforto, segurança e acesso a destinos cotidianos próximos.",
         "Calçadas largas, sombra e travessias curtas aumentam a caminhabilidade da rua, segundo os urbanistas ouvidos.",
-        "Termo técnico, tradução de “walkability”; explique os critérios observados em vez de usá-lo como elogio vago à rua.",
+        "“Caminhável” não é sinônimo de bonito: analise continuidade de calçadas, obstáculos, travessias, conforto e segurança de percurso. Para comparar bairros ou divulgar índice, declare os indicadores usados e suas limitações.",
         "Um índice de _____ avalia se dá para ir a pé à padaria, à escola e ao posto de saúde com conforto e segurança.",
         [
           "índice de caminhabilidade",
@@ -2249,7 +2249,7 @@
         "gentrificação",
         "Transformação de um bairro com valorização imobiliária e substituição de moradores por grupos de maior renda.",
         "Moradores antigos ouvidos pela reportagem associam a gentrificação do bairro à alta dos aluguéis e às lojas para turistas.",
-        "Termo carregado e debatido; sustente com dados de renda e moradia, não só com cafés novos.",
+        "Cafés novos e fachadas restauradas não bastam para provar gentrificação. Atribua dados de aumento de preços, mudança de perfil socioeconômico e possível deslocamento; diferencie transformação comercial de expulsão de moradores.",
         "Com a chegada de cafés caros e a alta dos aluguéis, os moradores antigos deram lugar a famílias de renda maior: é a _____ do bairro.",
         [
           "processo de gentrificação",
@@ -2262,7 +2262,7 @@
         "espaço residual",
         "Área urbana que sobra entre construções ou vias, sem função definida.",
         "Sob o viaduto, um espaço residual virou estacionamento improvisado de bicicletas e motos de entrega.",
-        "Residual não significa inútil; observe como as pessoas o ocupam.",
+        "“Residual” descreve um espaço remanescente de implantação ou infraestrutura, não inutilidade. Um canteiro entre viadutos pode ganhar uso comunitário; diferencie a origem urbanística do espaço de seu uso atual.",
         "Entre a alça do viaduto e o muro da linha férrea sobrou um _____, sem função definida, que virou depósito de entulho.",
         [
           "espaço residual urbano",
@@ -2396,7 +2396,7 @@
         "pesponto",
         "Costura visível realizada próxima a uma borda, emenda ou detalhe.",
         "O pesponto aparente em linha caramelo acompanha o contorno do bolso da jaqueta de couro na vitrine.",
-        "Não atribua função estrutural sem conhecer a construção.",
+        "Um pesponto visível pode reforçar a costura, prender margens internas ou apenas ornamentar. Sem observar o avesso e a construção, não conclua que seja estrutural; identifique sua posição e se acompanha uma união de partes.",
         "Feita com linha amarela a poucos milímetros da borda, a costura aparente do jeans é um _____ que todo mundo reconhece.",
         [
           "pesponto aparente",
@@ -2476,7 +2476,7 @@
         "acabamento",
         "Tratamento final dado a superfícies, bordas e costuras.",
         "O acabamento da gola parece regular no close-up, com costuras embutidas e bordas sem fios soltos.",
-        "A avaliação completa requer inspeção de avesso e construção; “acabamento impecável” visto pela vitrine é impressão, não laudo.",
+        "A vitrine mostra apenas parte do acabamento: barra externa regular não comprova limpeza interna, tensão da costura nem resistência. Descreva o detalhe observado e reserve avaliação técnica para inspeção do avesso e do método construtivo.",
         "Costuras embutidas, bordas debruadas e forro de seda mostram o cuidado com o _____ de um casaco que custa oito mil reais.",
         [
           "acabamento impecável",
@@ -2490,7 +2490,7 @@
         "alfaiataria",
         "Técnica de confecção sob medida, com cortes estruturados e acabamento preciso.",
         "A loja expõe peças de alfaiataria com lapelas marcadas e ombros estruturados.",
-        "Alfaiataria é técnica; peças industriais de estilo alfaiataria não são feitas sob medida.",
+        "Alfaiataria pode nomear técnica de construção, tradição de corte e acabamento ou estilo visual inspirado nessa tradição. Um blazer produzido em série pode ter aparência de alfaiataria sem ter sido feito sob medida; identifique qual sentido está usando.",
         "Feitos sob medida, com ombros estruturados e golas costuradas à mão, os ternos da loja seguem a tradição da _____ italiana.",
         [
           "alfaiataria sob medida",
@@ -2517,7 +2517,7 @@
         "drapeado",
         "Tecido disposto em dobras soltas e fluidas, presas em poucos pontos, que caem livremente sobre o corpo.",
         "Um vestido de seda drapeado na lateral ocupa o centro da vitrine.",
-        "Drapeado é dobra fluida; pregas são dobras marcadas e regulares.",
+        "Drapeado forma dobras acomodadas ou modeladas para criar caimento e volume; prega tem dobra construída e normalmente fixada. Não chame de drapeado todo tecido enrugado por manuseio ou por caimento inadequado.",
         "Preso no ombro e solto em dobras fluidas até o quadril, o _____ do vestido de seda lembra as túnicas gregas.",
         [
           "drapeado lateral",
@@ -2530,7 +2530,7 @@
         "oversized",
         "Peça cortada de propósito em tamanho maior que o do corpo, com ombros caídos e volume folgado como efeito de estilo.",
         "O casaco oversized cai abaixo dos ombros do manequim e cobre metade das mãos na vitrine da loja.",
-        "Anglicismo consolidado na moda; em português, “amplo” ou “folgado” também servem.",
+        "Oversized é proposta de silhueta deliberadamente ampliada em relação à modelagem convencional, não simplesmente comprar um tamanho maior. Observe proporções de ombro, cava e comprimento; “folgado” sozinho não explica a construção.",
         "Dois números acima do tamanho de quem o veste, o moletom _____ cobre as mãos e chega ao meio da coxa.",
         [
           "casaco oversized",
@@ -2544,7 +2544,7 @@
         "atemporal",
         "Que não segue tendências de uma época e tende a não sair de moda.",
         "A marca aposta em peças atemporais, de cores neutras.",
-        "É um argumento de marketing; atribua-o à marca se a ideia for dela.",
+        "“Atemporal” é promessa interpretativa de permanência estética, não propriedade que possa ser verificada numa vitrine. Cite quem a declara e apresente traços concretos (corte, cores, acabamento) em vez de assegurar que jamais sairá de moda.",
         "Uma camisa branca bem cortada é peça _____: funciona hoje como funcionava nos anos 1950 e não deve sair de moda.",
         [
           "peça atemporal",
@@ -2667,7 +2667,7 @@
         "suculento",
         "Que retém líquido próprio e o libera ao ser cortado ou mordido, como carne bem cozida ou fruta madura.",
         "Mordido com cuidado, o xiaolongbao suculento libera um caldo quente que enche a colher de porcelana.",
-        "Suculento refere-se ao líquido do próprio alimento; molho despejado por cima não torna a carne suculenta. Evite o uso publicitário vago.",
+        "Molho sobre a superfície não comprova suculência do interior. Use o termo após cortar ou provar e perceber liberação de líquido pela própria estrutura; um prato brilhante na fotografia pode estar apenas untado.",
         "Ao primeiro corte, o peito de pato deixa escorrer o próprio líquido sobre a tábua, sem molho algum por cima: está _____.",
         [
           "carne suculenta",
@@ -2709,7 +2709,7 @@
         "umami",
         "Quinto gosto básico, associado ao glutamato de caldos, carnes, cogumelos, algas e molhos fermentados; dá sensação de profundidade.",
         "O caldo de ossos com cogumelos secos tem umami intenso, que se espalha pela boca e pede mais um gole.",
-        "Umami é gosto, não tempero nem sinônimo de saboroso. Diga de onde ele vem no prato e não atribua glutamato adicionado sem confirmar.",
+        "Umami é gosto associado a compostos como glutamato e certos nucleotídeos, não sinônimo de “delicioso”. Identifique a sensação na degustação; não declare presença de aditivo ou ingrediente específico sem receita, rótulo ou confirmação.",
         "Cogumelos secos, molho de soja e caldo de ossos dão à sopa uma profundidade de _____, o gosto que não é doce, salgado, azedo nem amargo.",
         [
           "sabor umami",
@@ -2751,7 +2751,7 @@
         "defumado",
         "Exposto à fumaça de lenha, chá ou serragem para ganhar aroma e sabor característicos, além de conservar o alimento.",
         "No mercado, o pato defumado em folhas de chá pende do gancho com a pele cor de mogno.",
-        "Notas defumadas podem vir de fumaça líquida ou de molhos, sem defumação real. Afirme a técnica só depois de confirmá-la com a cozinha.",
+        "Aroma defumado não prova exposição direta à fumaça: molhos, temperos e aromatizantes podem reproduzir notas semelhantes. Diga “sabor defumado” ao relatar a percepção e reserve “foi defumado” para técnica confirmada.",
         "Pendurado sobre brasas cobertas de folhas de chá e serragem, o pato passa horas envolto em nuvem cinzenta até chegar à mesa _____.",
         [
           "peixe defumado",
@@ -2779,7 +2779,7 @@
         "caramelizado",
         "Que teve os açúcares dourados pelo calor até ganhar cor âmbar, brilho e sabor tostado, levemente amargo.",
         "Na panela de barro, a barriga de porco caramelizada ganha uma crosta escura que gruda no fundo.",
-        "Caramelização envolve açúcar; o dourado da carne é, em geral, reação de Maillard. Não diga que há açúcar adicionado sem confirmar.",
+        "Caramelização envolve transformações térmicas de açúcares; dourar carne também pode resultar da reação de Maillard. A cor castanha, isoladamente, não comprova qual processo ocorreu — nem adição de açúcar ao preparo.",
         "Sob o maçarico, o açúcar polvilhado sobre o creme derrete e escurece até virar uma crosta âmbar que se quebra com a colher: o topo fica _____.",
         [
           "cebola caramelizada",
@@ -2821,7 +2821,7 @@
         "persistente",
         "Diz-se do sabor ou do aroma que permanece na boca por muito tempo depois de engolido; o chamado final longo.",
         "O vinho amarelo servido morno deixa um retrogosto persistente de caramelo e nozes depois de cada gole.",
-        "Persistência é percepção individual, sem medida universal. Não confunda com intensidade: um sabor suave pode ser persistente.",
+        "“Persistente” descreve tempo de permanência da sensação após provar, não força do sabor. Uma nota cítrica discreta pode durar mais que um picante intenso; diga o que persistiu e por quanto tempo aproximado, sem universalizar seu paladar.",
         "Dez minutos após o último gole de vinho amarelo, o gosto de nozes ainda não deixou a boca: o final é longo, _____, recusa-se a sumir.",
         [
           "final persistente",
@@ -2902,7 +2902,7 @@
         "acústica",
         "Conjunto das características de um espaço que determinam como o som se propaga, se reflete e se prolonga nele.",
         "A acústica do saguão, de piso de pedra e teto em abóbada, faz cada anúncio se arrastar por segundos.",
-        "Acústica é propriedade do espaço, não do som. Evite “acústica ruim” sem dizer o efeito: eco, reverberação longa, som abafado.",
+        "Acústica caracteriza como o ambiente afeta propagação, reflexão e absorção do som; não é qualidade genérica da voz. Em vez de “acústica ruim”, descreva se há reverberação longa, ecos identificáveis ou perda de compreensão das falas.",
         "Piso de granito, paredes de vidro e nenhum tecido para absorver nada: a _____ do saguão, mais que os alto-falantes, faz cada aviso durar demais.",
         [
           "boa acústica",
@@ -2930,7 +2930,7 @@
         "timbre",
         "Qualidade que distingue dois sons de mesma altura e intensidade e permite reconhecer a fonte: voz, instrumento ou máquina.",
         "Mesmo na multidão, o timbre seco do alto-falante se destaca das vozes dos passageiros.",
-        "Timbre não é altura nem volume. Evite adjetivos impressionistas sem apoio; compare a fonte a algo que o público reconheça.",
+        "Timbre diferencia fontes com altura e intensidade semelhantes, graças à composição espectral e ao comportamento temporal do som. “Metálico” ou “aveludado” são analogias perceptivas, não identificação da fonte nem prova do material de que ela é feita.",
         "As duas vozes cantam a mesma nota, com a mesma força, e ainda assim se distinguem de olhos fechados: o que muda é o _____.",
         [
           "timbre de voz",
@@ -2944,7 +2944,7 @@
         "grave",
         "Diz-se do som de frequência baixa, percebido como profundo e encorpado, em oposição ao agudo.",
         "O ronco grave das escadas rolantes atravessa toda a estação, por baixo das vozes dos passageiros.",
-        "Grave refere-se à altura (frequência), não ao volume: um som grave pode ser fraco. Na fala, evite confusão com o sentido de sério.",
+        "Grave diz respeito à frequência percebida, não à potência nem à gravidade de um acontecimento. Uma vibração grave pode ser pouco audível, e um alarme agudo pode ser muito alto; especifique a qualidade sonora, não apenas “som forte”.",
         "Mais sentido no peito do que nos ouvidos, o ronco das escadas rolantes ocupa as frequências baixas do saguão: é um som _____ e constante.",
         [
           "voz grave",
@@ -3000,7 +3000,7 @@
         "zumbido",
         "Som contínuo, monótono e de baixa intensidade, como o de insetos, transformadores ou sistemas de ventilação.",
         "Entre um trem e outro, só se ouve o zumbido da ventilação que percorre o túnel.",
-        "Zumbido também nomeia um sintoma auditivo (tinido). Ao descrever o ambiente, indique a provável fonte apenas se puder identificá-la.",
+        "Zumbido de motor, transformador ou inseto deve ser atribuído somente após identificar a fonte. “Zumbido no ouvido” designa outra experiência, interna ao ouvinte; uma gravação ambiental não confirma diagnóstico de tinido.",
         "Entre um trem e outro, sobra apenas o som monótono e contínuo da ventilação, parecido com o de um inseto preso no vidro: um _____.",
         [
           "zumbido constante",
@@ -3056,7 +3056,7 @@
         "ruído de fundo",
         "Conjunto de sons contínuos e difusos de um ambiente, que permanecem por trás dos sons principais e podem mascará-los.",
         "O ruído de fundo da estação, feito de passos, ventilação e conversas, não impediu a gravação da entrevista.",
-        "Ruído de fundo é camada sonora técnica, não juízo de incômodo. Em reportagem, diga se ele atrapalhou a captação ou ajudou a situar o local.",
+        "Ruído de fundo é o som secundário em relação ao sinal principal, não necessariamente erro. O tráfego pode contextualizar a reportagem e ao mesmo tempo mascarar palavras; diga se o problema é inteligibilidade, volume ou escolha de edição.",
         "Microfone ligado, o técnico de áudio pede um minuto de silêncio só para registrar a camada difusa de passos e ventilação da estação: o _____.",
         [
           "ruído de fundo constante",
@@ -3070,7 +3070,7 @@
         "paisagem sonora",
         "Conjunto dos sons que caracterizam um lugar, tomados como ambiente a ser escutado, descrito e interpretado.",
         "A paisagem sonora da estação muda ao longo da manhã: primeiro passos apressados, depois vendedores e música.",
-        "Termo de Murray Schafer; não se limita a ruído, inclui sons naturais e humanos. Evite generalizar a partir de um único momento de escuta.",
+        "Uma paisagem sonora inclui fontes simultâneas e sua relação com o lugar, não apenas uma lista de barulhos. Um take de dez segundos não representa o bairro inteiro; identifique horário, posição do microfone e sons efetivamente captados.",
         "Passos, campainhas de bicicleta, pregões de vendedores e o canto de um pássaro na gaiola compõem, juntos, a _____ daquela viela pela manhã.",
         [
           "paisagem sonora urbana",
@@ -3083,7 +3083,7 @@
         "vinheta",
         "Breve trecho musical ou sinal sonoro padronizado que identifica um serviço e anuncia uma mensagem, como nos avisos de estação.",
         "Antes de cada aviso, uma vinheta de três notas faz os passageiros erguerem a cabeça do celular.",
-        "Vinheta é sinal padronizado e repetido; não confunda com jingle publicitário. Descreva as notas sem afirmar quem as compôs.",
+        "Vinheta é marca sonora curta de identificação ou transição, não qualquer música breve da edição. Um tema cantado para publicidade pode ser jingle; para afirmar autoria, licença ou origem da vinheta, consulte os créditos da produção.",
         "Três notas curtas e sempre iguais soam antes de cada aviso, e os passageiros já erguem a cabeça do celular: é a _____ da estação.",
         [
           "vinheta sonora",
@@ -3176,7 +3176,7 @@
         "enquadramento",
         "Delimitação do que entra e do que fica fora da imagem, definida pela posição da câmera, pela lente e pelas bordas do quadro.",
         "O enquadramento fechado deixa de fora as torres e mostra apenas as mãos do vendedor sobre a chapa.",
-        "Enquadramento é decisão sobre os limites da imagem; não o use como sinônimo vago de foto. Lembre que todo corte exclui contexto.",
+        "Enquadramento define o que aparece e o que fica fora da imagem. Um detalhe isolado pode parecer avaria, conflito ou concentração de público sem mostrar o contexto; informe quando um corte exclui elementos relevantes à interpretação.",
         "Ao dar dois passos à frente, a fotógrafa tira da imagem as torres e deixa só as mãos do vendedor sobre a chapa: muda o _____.",
         [
           "enquadramento fechado",
@@ -3204,7 +3204,7 @@
         "regra dos terços",
         "Convenção de composição que divide o quadro em três faixas horizontais e três verticais e põe o assunto nas linhas ou nos cruzamentos.",
         "Seguindo a regra dos terços, o fotógrafo deixa a linha do rio no terço de baixo, e o céu ocupa o resto da imagem.",
-        "É convenção, não lei: muitas boas fotos a ignoram. Não atribua a escolha a ela só porque o assunto está fora do centro.",
+        "A regra dos terços é grade de referência para posicionar elementos, não norma para definir qualidade artística. Estar fora do centro não prova que o fotógrafo tenha seguido essa regra; observe equilíbrio, hierarquia e direção do olhar.",
         "A fotógrafa imagina duas linhas horizontais e duas verticais sobre o visor e põe o rosto do idoso num dos cruzamentos: aplica a _____.",
         [
           "aplicar a regra dos terços",
@@ -3230,7 +3230,7 @@
         "plano detalhe",
         "Plano muito fechado que isola uma pequena parte do assunto, como mãos, um objeto ou uma textura, ocupando quase todo o quadro.",
         "Um plano detalhe das mãos enfarinhadas dobrando a massa abre a sequência sobre a casa de bolinhos.",
-        "Não confunda com o close, que enquadra o rosto inteiro. Na edição, o plano detalhe pede um plano mais aberto que situe o espectador.",
+        "Plano detalhe isola parte muito pequena de objeto, ação ou corpo e pode retirar a escala do contexto. Em sequência narrativa, indique o que o detalhe pertence antes ou depois; não classifique todo close de rosto como plano detalhe.",
         "A câmera chega tão perto que só se veem os dedos enfarinhados fechando as dobras do bolinho, sem rosto nem balcão: é um _____.",
         [
           "plano detalhe das mãos",
@@ -3243,7 +3243,7 @@
         "exposição",
         "Quantidade de luz que chega ao sensor ou ao filme, definida pela abertura, pelo tempo do obturador e pela sensibilidade (ISO).",
         "A exposição foi calculada para o céu, e o vendedor sob o toldo ficou quase sem detalhe nas sombras.",
-        "Diga para qual área a exposição foi feita. Sem os metadados, não informe tempo, abertura ou ISO, apenas o efeito visível na imagem.",
+        "A exposição registrada resulta da combinação de abertura, tempo e sensibilidade, mas uma imagem clara não revela esses valores isoladamente. Diferencie altas-luzes preservadas de áreas sem detalhe e informe parâmetros apenas se houver metadados.",
         "Abertura, obturador e ISO foram ajustados para o céu claro, e o vendedor sob o toldo ficou sem detalhe nas sombras: a _____ privilegiou as altas luzes.",
         [
           "tempo de exposição",
@@ -3270,7 +3270,7 @@
         "arrasto",
         "Técnica de acompanhar com a câmera um assunto em movimento, com obturador lento, que deixa o assunto nítido e o fundo em riscos.",
         "Em arrasto, o entregador de scooter aparece nítido, e as fachadas atrás dele viram riscos horizontais de cor.",
-        "Também chamado panning. Não confunda com borrão acidental: no arrasto, o assunto em movimento fica nítido. Sem dados, não cite o tempo usado.",
+        "No arrasto, a câmera acompanha o assunto e pode deixá-lo relativamente nítido enquanto o fundo apresenta rastros; no borrão acidental, a referência costuma se perder. Não determine velocidade de obturador apenas pelo aspecto do fundo.",
         "Girando a câmera junto com o entregador de scooter, com o obturador aberto por mais tempo, o fotógrafo o mantém nítido e risca o fundo: faz um _____.",
         [
           "foto em arrasto",
@@ -3402,7 +3402,7 @@
         "estranhamento",
         "Sensação de que algo se apresenta de modo inesperado, fora do lugar ou difícil de compreender, o que cria distância crítica no observador.",
         "O estranhamento veio ao ver pijamas estendidos em varais sobre a viela, a poucos metros de vitrines de grife.",
-        "Estranhamento é do observador, não defeito do lugar: evite transformá-lo em exotismo. Não confunda com deslocamento, que é sentir-se fora de lugar.",
+        "Estranhamento é reação do observador diante do não familiar, não propriedade defeituosa de uma cultura. Diga qual costume, objeto ou padrão quebrou sua expectativa, evitando transformar a diferença em exotismo ou julgamento sobre moradores.",
         "Os varais de pijamas sobre a viela, ao lado de vitrines de grife, não combinam com nada do que eu esperava: o que sinto é _____, não rejeição.",
         [
           "causar estranhamento",
@@ -3442,7 +3442,7 @@
         "vertigem",
         "Sensação de tontura ou desequilíbrio diante da altura, da escala ou da velocidade; por extensão, impressão de ser engolido pelo excesso.",
         "Do alto da torre, a vertigem veio menos da altura do que da cidade se estendendo sem fim aparente.",
-        "Em sentido médico, vertigem é sintoma específico. No figurado, diga o que a provoca, para não soar como exagero retórico.",
+        "No uso figurado, “vertigem” pode descrever impacto de altura ou movimento visual, mas não equivale a uma crise vestibular. Se foi apenas impressão diante do mirante, sinalize a metáfora; não atribua sintomas médicos a outras pessoas.",
         "Olhando do pé das torres para cima, com os topos sumindo nas nuvens, perdi por um instante o equilíbrio e precisei segurar o corrimão: senti _____.",
         [
           "sentir vertigem",
@@ -3540,7 +3540,7 @@
         "ternura",
         "Afeto brando e delicado diante de algo frágil, pequeno ou afetuoso, como uma criança, um idoso ou um gesto de cuidado.",
         "A cena do avô ajeitando o gorro do neto na garupa da bicicleta me provocou uma ternura inesperada.",
-        "Ternura pode resvalar no sentimentalismo e na condescendência com idosos ou pobres. Descreva o gesto que a causou, não só o sentimento.",
+        "Ternura descreve sua resposta emocional a um gesto concreto, não a condição moral ou social de quem aparece no vídeo. Evite enquadrar idosos, crianças ou pessoas vulneráveis como objetos de piedade; narre a ação que despertou a impressão.",
         "O avô ajeita o gorro do neto na garupa da bicicleta, confere a fivela duas vezes e só então pedala devagar; aquele cuidado me enche de _____.",
         [
           "com ternura",
@@ -3554,7 +3554,7 @@
         "familiaridade",
         "Sensação de reconhecimento diante de algo nunca visto que lembra o já conhecido e torna o lugar menos alheio.",
         "Uma familiaridade inesperada surgiu com o cheiro de pão saindo da padaria, igual ao da rua onde cresci.",
-        "Familiaridade é reconhecimento, não intimidade com as pessoas do lugar. Diga o que evocou a semelhança, para não parecer apropriação.",
+        "Familiaridade é reconhecimento de traços conhecidos, como fachadas, cheiros ou uma melodia, não prova de intimidade com a comunidade. Diga o que lembrou e por quê, sem apropriar-se da história de pessoas que não conhece.",
         "Nunca tinha posto os pés naquela rua, mas o cheiro de pão quente e o rádio ligado no balcão me pareceram conhecidos de longa data: senti _____.",
         [
           "sensação de familiaridade",
@@ -3582,7 +3582,7 @@
         "melancolia",
         "Tristeza branda e duradoura, sem causa precisa, que tinge a percepção do ambiente e convida ao recolhimento.",
         "A chuva fina sobre as casas fechadas deu à tarde uma melancolia que a equipe custou a desfazer.",
-        "Melancolia é tristeza sem objeto; se há saudade de um passado definido, nostalgia é mais exata. Evite atribuí-la ao lugar como fato.",
+        "Melancolia descreve uma tonalidade afetiva percebida por você; ruas vazias ou céu cinza não comprovam tristeza dos moradores. Se a lembrança específica de um lugar perdido motiva a emoção, “nostalgia” pode comunicar melhor o sentido.",
         "Sem motivo preciso, a tarde cinzenta sobre as janelas fechadas me deixou uma tristeza mansa, que não passava nem com o café quente: era _____.",
         [
           "tom de melancolia",
@@ -3710,7 +3710,7 @@
         "ao fundo",
         "Na faixa mais distante da câmera, atrás de todos os outros planos da imagem.",
         "Ao fundo, as torres de vidro fecham a vista e espelham o céu cinzento da manhã.",
-        "Ao fundo descreve profundidade na imagem; não o confunda com no fundo, que significa no íntimo ou em essência.",
+        "“Ao fundo” posiciona algo num plano distante dentro do enquadramento; não significa simplesmente o lado de trás do objeto. Diga “atrás do prédio” para relação física e “ao fundo da imagem” para profundidade de composição.",
         "Depois do senhor do tai chi e da fonte, já na camada mais distante da lente, as torres de vidro fecham a vista: estão _____.",
         [
           "lá ao fundo",
@@ -3765,7 +3765,7 @@
         "alinhado",
         "Disposto em linha reta com outros elementos, segundo uma mesma direção ou um mesmo eixo de referência.",
         "Os postes estão alinhados com o eixo da fonte e conduzem o olhar até a entrada do parque.",
-        "Diga com o que está alinhado e em que direção. No sentido figurado, alinhado sugere concordância política: evite a ambiguidade.",
+        "Duas luminárias alinhadas na fotografia podem estar em profundidades diferentes no espaço real por efeito de perspectiva. Identifique o eixo — borda da calçada, parede ou composição — antes de dizer que há alinhamento físico.",
         "Visto da entrada, cada poste encobre o seguinte, numa única reta que passa pelo centro da fonte: o conjunto está _____ com ela.",
         [
           "alinhado com",
@@ -3793,7 +3793,7 @@
         "centralizado",
         "Posicionado no centro de um espaço, de uma superfície ou do quadro, à mesma distância das extremidades.",
         "Com a fonte centralizada no quadro, os bancos dos dois lados ganham simetria na imagem.",
-        "Na praça, centralizado se refere ao espaço físico; no vídeo, ao quadro. Diga qual dos dois, pois a câmera pode descentrar o que é central.",
+        "Um monumento pode estar no centro da praça e aparecer fora do centro da imagem depois de um movimento de câmera. Identifique se seu referencial é o espaço real ou o quadro; não use “centralizado” como sinônimo de importante.",
         "Da câmera, o chafariz fica exatamente no meio do quadro, com a mesma faixa de céu e de chão de cada lado: está _____.",
         [
           "centralizado no quadro",
@@ -3820,7 +3820,7 @@
         "defronte",
         "Em frente, na posição oposta e voltada para outro elemento; usado com de ou a, como em defronte da fonte.",
         "Defronte do portão principal, um vendedor monta a banca de pipas logo cedo.",
-        "Rege de ou a (defronte do portão, defronte ao portão). Indica frente a frente, não apenas proximidade; diga de que ponto de vista.",
+        "“Defronte” expressa posição frente a frente, não simples proximidade lateral. Diga qual fachada ou entrada serve de referência e confirme o eixo de visão; uma loja do outro lado da esquina pode ser próxima sem estar defronte.",
         "Do outro lado da alameda, olhando diretamente para o portão principal, a banca de pipas fica _____ dele, frente a frente.",
         [
           "defronte de",
@@ -3847,7 +3847,7 @@
         "encravado",
         "Inserido e preso entre elementos maiores ou mais densos, com pouco espaço ao redor, como se fincado neles.",
         "Encravado entre duas torres de escritórios, o templo de madeira mantém o telhado curvo e o pátio de pedra.",
-        "Encravado sugere aperto e contraste de escala; não o use para algo apenas vizinho. Não confunda com o sentido de unha encravada.",
+        "“Encravado” sugere inserção cercada ou comprimida em outro conjunto, como uma casa entre torres. Não o aplique só porque o imóvel é vizinho; mostre quais limites físicos provocam a impressão de estar encaixado.",
         "Espremido entre duas torres de escritórios, sem folga alguma de cada lado, o templo de madeira parece preso entre paredes de vidro: está _____.",
         [
           "encravado entre",
@@ -3956,7 +3956,7 @@
         "ao amanhecer",
         "No momento em que o dia começa a clarear, entre o fim da noite e o nascer do sol.",
         "Ao amanhecer, os primeiros caminhões descarregam caixas de peixe na entrada lateral do mercado.",
-        "Indica a luz natural, não um horário fixo, que varia com a estação. Se a gravação tem horário, informe-o em vez de presumir.",
+        "Amanhecer é período de transição da claridade e varia segundo estação e latitude. Luz amarelada numa foto não prova horário matinal; se houver dados de gravação, apresente a hora e evite confundir amanhecer com nascer do sol.",
         "O céu ainda está cinza-claro e os postes acabaram de apagar quando chegam os primeiros caminhões de peixe: é _____.",
         [
           "logo ao amanhecer",
@@ -3982,7 +3982,7 @@
         "no intervalo",
         "No espaço de tempo entre dois acontecimentos, duas ações ou duas etapas de um processo.",
         "No intervalo entre a descarga do gelo e a chegada dos clientes, os feirantes tomam chá sentados nas caixas.",
-        "Diga entre quais marcos se dá o intervalo. Para fatos exatamente ao mesmo tempo, prefira simultaneamente.",
+        "Um intervalo é delimitado por dois eventos ou marcos: “entre o anúncio e a abertura das portas”. Sem ambos, a locução fica imprecisa; se os fatos ocorreram juntos, “simultaneamente” não deve ser substituído por “no intervalo”.",
         "O gelo chegou às seis e os primeiros clientes só às sete; _____ entre uma coisa e outra, os feirantes tomaram chá sentados nas caixas.",
         [
           "no intervalo entre",
@@ -4022,7 +4022,7 @@
         "a certa altura",
         "Num momento não especificado de um processo ou de uma narrativa, em geral aquele em que algo muda de rumo.",
         "A certa altura da manhã, as conversas cedem lugar aos pregões, e o ritmo do mercado muda.",
-        "Útil quando não se sabe o horário exato; não a use para esconder uma informação que poderia ser checada na gravação ou com fontes.",
+        "“A certa altura” localiza vagamente um momento na sequência; não serve para ocultar data ou etapa conhecida. Se o vídeo tem marcador de tempo ou ordem documentada, prefira “após a curva”, “cinco minutos depois” ou o horário confirmado.",
         "Ninguém soube dizer a hora exata, mas, _____ da manhã, as conversas calmas deram lugar aos pregões e o mercado mudou de ritmo.",
         [
           "a certa altura da manhã",
@@ -4062,7 +4062,7 @@
         "por horas a fio",
         "Durante muitas horas seguidas, sem interrupção, com ênfase na duração prolongada.",
         "Por horas a fio, a vendedora descasca castanhas sem levantar os olhos do balde.",
-        "Indica continuidade longa; não use se a câmera só registrou alguns minutos. Diga como soube da duração: observação ou relato.",
+        "A locução implica duração longa sem interrupções relevantes. Uma montagem em time-lapse ou vários cortes de alguns minutos não comprova horas contínuas; declare se acompanhou o período ou se a duração veio de uma fonte.",
         "A vendedora chegou antes das seis e, sem parar nem levantar os olhos do balde, ainda descascava castanhas ao meio-dia: trabalhou assim _____.",
         [
           "trabalhar por horas a fio",
@@ -4115,7 +4115,7 @@
         "de última hora",
         "Decidido, feito ou ocorrido no último momento, perto do prazo ou do desfecho, sem planejamento prévio.",
         "Uma entrega de última hora obriga o peixeiro a reorganizar a banca quando os clientes já estão na fila.",
-        "Indica proximidade do prazo, não necessariamente pressa ou desorganização. Não presuma improviso sem saber do planejamento.",
+        "“De última hora” informa proximidade em relação ao prazo, não improviso, negligência ou emergência. Ao dizer que a mudança ocorreu na última hora, informe qual era o prazo e quando a decisão foi comunicada.",
         "Com a fila já formada, chega um caminhão que ninguém esperava, e o peixeiro refaz a banca às pressas: foi uma entrega _____.",
         [
           "mudança de última hora",
@@ -4186,7 +4186,7 @@
         "fisionomia",
         "Conjunto dos traços do rosto — olhos, nariz, boca, queixo — e do desenho que eles compõem, tal como se apresenta ao observador.",
         "Mesmo sob a máscara cirúrgica, a fisionomia da cozinheira é reconhecível pelos olhos alongados e pela testa larga.",
-        "Não tire da fisionomia conclusões sobre caráter, origem ou humor; “fisionomia oriental” e afins são rótulos, não descrição.",
+        "Fisionomia reúne traços relativamente estáveis do rosto, diferentemente de semblante, que pode mudar num instante. Não deduza caráter, nacionalidade ou profissão por formato de olhos, nariz ou mandíbula; destaque apenas características relevantes à cena.",
         "Mesmo de máscara e boné, a _____ dela era inconfundível: o desenho dos olhos, o nariz curto e o queixo pequeno formavam um conjunto único.",
         [
           "fisionomia marcante",
@@ -4200,7 +4200,7 @@
         "tez",
         "Pele do rosto considerada na cor, no viço e na textura; termo culto para o que a fala comum chama apenas de “pele”.",
         "A tez avermelhada nas maçãs do rosto da ambulante contrasta com a testa clara, protegida o dia todo pela aba do chapéu.",
-        "Tom de pele não é dado racial: não deduza origem nem use “tez morena” como eufemismo. Só descreva a cor quando for relevante para a cena.",
+        "“Tez” trata da aparência da pele, não classifica raça ou origem. Fotografia com balanço de branco alterado pode modificar muito o tom registrado; se a cor for relevante à descrição, use linguagem objetiva sem rótulos identitários presumidos.",
         "Protegida o dia inteiro pela aba larga do chapéu, a _____ do rosto da florista segue clara e uniforme, sem manchas de sol.",
         [
           "tez clara",
@@ -4213,7 +4213,7 @@
         "compleição",
         "Constituição física do corpo: estrutura óssea, largura dos ombros e proporções entre tronco e membros, sem referência a peso ou saúde.",
         "De compleição franzina, o carregador equilibra dois fardos de papelão numa vara de bambu apoiada sobre o ombro.",
-        "Descreva estrutura, não julgue o corpo: evite “gordo”, “acima do peso” e qualquer associação entre compleição, força, saúde ou caráter.",
+        "Compleição descreve constituição corporal observável, não peso calculado, saúde ou força. Uma roupa volumosa pode ampliar a silhueta; evite transformá-la em diagnóstico ou julgamento estético, sobretudo em retratos sem consentimento.",
         "Não é a altura que chama atenção no feirante, e sim a _____: ombros largos, tronco espesso e braços de quem carrega caixas o dia todo.",
         [
           "compleição franzina",
@@ -4320,7 +4320,7 @@
         "cicatriz",
         "Marca permanente deixada na pele pela cura de um ferimento, corte, queimadura ou cirurgia.",
         "Uma cicatriz fina atravessa a sobrancelha esquerda do mecânico, visível quando ele ergue os óculos de proteção.",
-        "Não invente a história da marca (briga, acidente, violência); diga que há uma cicatriz e onde. Pergunte antes de expor detalhe íntimo.",
+        "Uma cicatriz visível não informa se veio de cirurgia, acidente, violência ou doença. Não dramatize com uma origem inventada; em retratos, confirme também se a pessoa concorda com o destaque de uma marca corporal potencialmente íntima.",
         "No antebraço do soldador, uma _____ clara e brilhante, em forma de meia-lua, destoa da pele ao redor, sem pelos e um pouco repuxada.",
         [
           "cicatriz fina",
@@ -4334,7 +4334,7 @@
         "adereço",
         "Peça usada para enfeitar o corpo ou a roupa, como brinco, pulseira, colar ou presilha, sem função principal de proteção.",
         "O único adereço da caixa do mercado é uma pulseira de contas vermelhas, que estala no balcão a cada troco.",
-        "Não atribua religião, classe ou gosto ao adereço; uma pulseira de jade pode ser presente, amuleto ou moda. Descreva material e forma.",
+        "Um adereço visível pode ser moda, presente, lembrança familiar ou símbolo cultural; não deduza religião nem identidade de quem o usa. Se o significado do objeto for central à reportagem, pergunte à pessoa e atribua a explicação.",
         "Ela não usa joias no pescoço nem nas orelhas; o único _____ é uma presilha de laca vermelha que prende o cabelo na nuca.",
         [
           "adereço de cabeça",
@@ -4436,7 +4436,7 @@
         "semblante",
         "Aspecto do rosto num dado momento, resultado da combinação passageira de olhar, boca e testa.",
         "Ao ouvir a pergunta sobre o aluguel, o semblante do lojista se fecha, e ele demora alguns segundos para responder.",
-        "Semblante é estado momentâneo; não o confunda com fisionomia (traços permanentes). Prefira “semblante fechado” a “irritado”.",
+        "Semblante descreve aspecto expressivo momentâneo; fisionomia nomeia traços mais estáveis. Um semblante fechado num único quadro não comprova hostilidade, tristeza ou reprovação; relacione-o à expressão visível, sem ler sentimentos.",
         "Os traços do rosto continuam os mesmos, mas o _____ do jogador de xadrez muda quando o adversário move a torre: a boca se aperta e a testa se contrai.",
         [
           "semblante fechado",
@@ -4462,7 +4462,7 @@
         "sorriso contido",
         "Sorriso discreto, de lábios pouco abertos, que se detém antes de virar riso.",
         "Diante do elogio do cliente, o artesão responde com um sorriso contido e volta a lixar a peça de bambu.",
-        "Não o traduza como timidez, ironia ou tristeza; diga o que a boca faz. “Contido” difere de “forçado”, que já é julgamento.",
+        "Um sorriso discreto ou breve não prova timidez, falsidade, constrangimento ou ironia. Descreva o movimento dos lábios e a duração; “sorriso forçado” já interpreta autenticidade, algo que o vídeo isolado não demonstra.",
         "Quando a plateia aplaude, a violinista não mostra os dentes: os cantos da boca sobem só um pouco, num _____ que dura um segundo.",
         [
           "sorriso contido",
@@ -4540,7 +4540,7 @@
         "impassível",
         "Que não deixa transparecer reação no rosto nem no corpo diante do que acontece ao redor.",
         "Impassível, o segurança da galeria observa a fila crescer na calçada sem mudar de posição.",
-        "Descreve ausência de reação visível, não frieza ou indiferença interior. Não o confunda com “imóvel”, que se refere ao corpo parado.",
+        "Impassível significa ausência aparente de reação expressiva, não falta de emoção interna. Rosto imóvel durante uma resposta não autoriza qualificações como “frio” ou “insensível”; diga o que mudou, ou não mudou, no semblante.",
         "Os torcedores gritam a centímetros dele, mas o policial continua _____: nenhum músculo do rosto se altera, e a boca segue fechada.",
         [
           "permanecer impassível",
@@ -4592,7 +4592,7 @@
         "assentir",
         "Concordar ou consentir, em geral com um aceno breve de cabeça para cima e para baixo.",
         "A moradora assente com a cabeça quando o repórter pergunta se o mercado abre também aos domingos.",
-        "Assentir com a cabeça pode ser só sinal de escuta, não de concordância, e o aceno varia entre culturas. Regência: assentir a algo, com a cabeça.",
+        "Um aceno de cabeça pode sinalizar acompanhamento da conversa sem concordância com a proposição. Se o texto afirmar que a pessoa assentiu a uma decisão, confirme sua resposta verbal; não use o movimento isolado como autorização.",
         "Sem tirar os olhos do celular, a passageira ouve a pergunta, baixa e ergue o queixo duas vezes, num gesto curto de quem quer _____.",
         [
           "assentir com a cabeça",
@@ -4605,7 +4605,7 @@
         "meneio",
         "Movimento oscilante e breve, sobretudo da cabeça ou do corpo, de um lado para outro ou para cima e para baixo.",
         "Um meneio lento de cabeça é a única resposta do alfaiate quando o cliente pede o terno para o dia seguinte.",
-        "Meneio é o movimento, não o sentido: pode negar, duvidar ou cumprimentar. Indique a direção (lateral, vertical) para não ser ambíguo.",
+        "“Meneio” precisa da parte do corpo e do eixo do gesto: meneio lateral de cabeça não equivale a aceno vertical. Sem contexto cultural e verbal, não transforme o movimento em concordância, recusa ou desaprovação.",
         "Em vez de responder, a avó balança a cabeça de um lado para o outro, num lento _____ que pode ser recusa ou só incredulidade.",
         [
           "meneio de cabeça",
@@ -4697,7 +4697,7 @@
         "curvado",
         "Com o tronco inclinado para a frente e as costas arqueadas, de modo duradouro ou durante uma tarefa.",
         "Curvado sobre a máquina de costura, o alfaiate da viela trabalha sob uma lâmpada pendurada pelo fio.",
-        "Não conclua idade, doença ou abatimento: a postura pode ser da tarefa. Diferencie de “debruçado”, que exige apoio sobre algo.",
+        "“Curvado” descreve posição do tronco em relação ao eixo vertical; se há apoio dos braços sobre balcão ou mesa, “debruçado” pode ser mais exato. Não atribua a postura à idade, à dor ou à exaustão sem relato.",
         "Sem se apoiar em nada, o catador de papelão anda com as costas arqueadas e a cabeça adiante do peito: segue _____ empurrando o carrinho.",
         [
           "curvado sobre",
@@ -4788,7 +4788,7 @@
         "passo arrastado",
         "Caminhada em que os pés mal se levantam e deslizam ou raspam no chão.",
         "De passo arrastado, o homem de chinelos percorre o corredor molhado do mercado sem levantar os pés das poças.",
-        "Não conclua cansaço, doença ou desânimo; chinelos, piso ou carga explicam muito. Diferencie de “claudicar”, que é assimetria entre as pernas.",
+        "Passo arrastado descreve o pé que desliza ou mal se eleva do solo, não uma razão clínica ou emocional. Diferencie da passada curta e da marcha claudicante; declare a causa somente se for visível ou informada.",
         "Os chinelos do vigia raspam no cimento a cada movimento, sem que os pés saiam do chão: ele faz a ronda em _____, de ponta a ponta do pátio.",
         [
           "passo arrastado",
@@ -4814,7 +4814,7 @@
         "claudicar",
         "Andar mancando, com apoio desigual entre as pernas; por extensão, vacilar ou funcionar mal.",
         "O carteiro claudica ao descer a escada estreita do lilong, apoiando o peso na perna esquerda.",
-        "Descreva o movimento sem diagnosticar lesão ou deficiência e sem usar a palavra como estigma. O sentido figurado (“o plano claudica”) é corrente.",
+        "Claudicar descreve marcha assimétrica, com apoio ou avanço desigual, mas não diagnostica sua causa. Piso irregular, calçado, lesão ou condição preexistente produzem efeitos distintos; registre o movimento sem rotular a pessoa.",
         "Ao descer do ônibus, o rapaz apoia todo o peso na perna esquerda e poupa a direita a cada pisada; continua a _____ até o banco do ponto.",
         [
           "claudicar levemente",
@@ -4840,7 +4840,7 @@
         "hesitante",
         "Que alterna avanço e pausa, ou começa um gesto e o interrompe, como quem ainda decide.",
         "Hesitante, o casal para diante das duas saídas da estação e recua alguns metros antes de escolher a escada.",
-        "Descreva as pausas e recuos; não conclua medo, timidez ou desorientação. Hesitante é estado observável, não traço de personalidade.",
+        "Uma marcha hesitante pode ter pausas e mudanças de direção, mas não revela insegurança pessoal ou medo. Em local desconhecido, observar placas e procurar uma saída também provoca interrupções; narre o padrão, não a intenção.",
         "Diante das catracas, o menino dá um passo, recua, olha para a mãe e avança de novo, ainda _____ sobre qual cartão usar.",
         [
           "passo hesitante",
@@ -4853,7 +4853,7 @@
         "desenvolto",
         "Que se move com naturalidade, segurança e economia de gestos, sem esforço aparente.",
         "Desenvolto, o garçom equilibra quatro cestos de bambu fumegantes e passa entre as mesas sem esbarrar em ninguém.",
-        "Desenvoltura é aparência de facilidade, não prova de experiência ou de tempo no ofício. Evite usar o termo como elogio à pessoa.",
+        "Desenvoltura comunica impressão de facilidade na ação, não prova experiência ou competência. Compare movimentos observáveis, como caminhar sem pausas ou apresentar um objeto com gestos contínuos, sem transformar a avaliação em elogio absoluto.",
         "Com quatro pratos no braço, o garçom passa entre as mesas apertadas sem esbarrar em ninguém e sem esforço aparente; é um movimento _____.",
         [
           "andar desenvolto",
@@ -4960,7 +4960,7 @@
         "pátina",
         "Película que se forma com o tempo na superfície de metais, pedra ou madeira, alterando cor e brilho; no bronze, costuma ser esverdeada.",
         "A pátina esverdeada de um leão de bronze contrasta com o nariz lustroso, gasto pelo toque dos passantes.",
-        "Pátina não é ferrugem nem sujeira: é camada estável, muitas vezes valorizada. Não use “pátina do tempo” para atestar idade sem verificar.",
+        "Pátina é alteração superficial desenvolvida ou aplicada para dar aparência envelhecida; não prova antiguidade nem abandono. No metal, diferencie essa camada da ferrugem do ferro; no móvel, indique se o efeito é natural ou apenas aparente.",
         "O corrimão de cobre não está sujo nem corroído: ganhou uma _____ esverdeada e opaca que o antiquário jura nunca remover.",
         [
           "pátina esverdeada",
@@ -5041,7 +5041,7 @@
         "avariado",
         "Que sofreu dano e deixou de funcionar como deveria; diz-se de máquinas, veículos, aparelhos e cargas.",
         "Um ventilador avariado, sem uma das pás, repousa sobre a pilha de rádios à venda na calçada.",
-        "Indica defeito ou dano funcional, não aparência. Só o use se houver indício ou informação de que não funciona; “parado” não é sinônimo.",
+        "“Avariado” pressupõe dano que afete o objeto, frequentemente seu funcionamento; um aparelho desligado ou sem uso não está necessariamente defeituoso. Aponte a peça quebrada ou atribua a informação a quem testou o equipamento.",
         "O rádio parece em bom estado por fora, mas o vendedor avisa que o botão não liga nada e o alto-falante só chia: o aparelho está _____.",
         [
           "motor avariado",
@@ -5067,7 +5067,7 @@
         "gambiarra",
         "Solução improvisada, feita com o material à mão, para consertar ou adaptar algo fora do uso previsto.",
         "Uma gambiarra de arame e fita isolante mantém o farol preso ao guidão da bicicleta do amolador de facas.",
-        "Termo coloquial e brasileiro, aceito em reportagem; evite tom de deboche ou de “jeitinho” como traço nacional. Não afirme risco sem verificar.",
+        "“Gambiarra” pode nomear adaptação improvisada, mas carrega juízo cultural e não comprova insegurança elétrica ou estrutural. Descreva a conexão, o material ou o remendo; trate risco técnico como hipótese até existir inspeção.",
         "Sem a peça original, o vendedor prendeu a antena do rádio com um clipe dobrado e um pedaço de fita isolante: uma _____ que funciona.",
         [
           "fazer uma gambiarra",
@@ -5093,7 +5093,7 @@
         "obsoleto",
         "Superado por tecnologia ou padrão mais novo, ainda que funcione; caído em desuso.",
         "Fitas cassete e carregadores de celulares obsoletos dividem a mesma caixa de papelão na banca.",
-        "Obsoleto é função superada, não estado físico: um aparelho novo pode ser obsoleto. Não o confunda com “antigo” nem com avariado.",
+        "Obsolescência significa perda de adequação a uma necessidade ou sistema técnico, não defeito físico. Um aparelho antigo pode continuar útil, enquanto um recente pode perder suporte; indique qual função deixou de ser atendida.",
         "O aparelho de fax funciona perfeitamente, mas quase ninguém tem mais linha para recebê-lo: tornou-se _____.",
         [
           "tecnologia obsoleta",
@@ -5106,7 +5106,7 @@
         "artesanal",
         "Feito à mão ou com ferramentas simples, em pequena escala, com variações perceptíveis entre uma peça e outra.",
         "As tigelas artesanais da banca variam de tamanho e trazem marcas de dedos no esmalte.",
-        "Não conclua que é artesanal só pela aparência rústica; peças industriais imitam o feitio manual. Atribua a informação a quem vende ou fez.",
+        "Marcas irregulares e aparência rústica não comprovam trabalho manual: processos industriais também simulam esses efeitos. Se o método importar, identifique oficina, técnica e autoria com fonte, em vez de assumir origem pela textura.",
         "Nenhuma xícara é igual à outra: a espessura varia, o esmalte escorre de modos diferentes e há marcas de dedos no barro. A produção é _____.",
         [
           "produção artesanal",
@@ -5231,7 +5231,7 @@
         "asa",
         "Peça curva, em forma de argola ou arco, presa ao corpo de xícaras, bules, jarras e cestos para segurá-los.",
         "A asa da caneca de esmalte foi colada com resina transparente, e a emenda ainda aparece contra a luz.",
-        "Na louça, prefira “asa” a “alça” ou “cabo”: alça é de bolsa e sacola; cabo é alongado e reto. O contexto deve afastar a asa de ave.",
+        "Em louças, “asa” designa a peça lateral destinada à pega, especialmente em xícaras e jarras; “cabo” é alongado e “alça” aparece em vários outros objetos. Se a peça não permite segurar, pode ser uma saliência decorativa.",
         "A xícara de porcelana não tem pires e perdeu a pequena argola lateral onde se enfiam os dedos: sem a _____, o cliente a segura pela borda.",
         [
           "asa da xícara",
@@ -5244,7 +5244,7 @@
         "empunhadura",
         "Parte de um objeto feita para ser agarrada com a mão fechada, como em facas, ferramentas, guarda-chuvas e raquetes.",
         "A empunhadura da faca de cozinha, enrolada em fita de pano, está escurecida pelo uso diário.",
-        "Também nomeia o modo de segurar (“empunhadura firme”). Para utensílios simples, “cabo” pode bastar; use o termo quando o encaixe da mão importa.",
+        "Empunhadura pode nomear tanto a parte conformada à mão quanto a maneira de segurá-la. Em utensílio com cabo comum, “cabo” pode ser mais direto; reserve o termo técnico para formato de pega ou ergonomia observável.",
         "O guarda-chuva de bambu tem, na ponta da vara, um trecho revestido de couro trançado onde a mão se fecha com firmeza: é a _____.",
         [
           "empunhadura firme",
@@ -5270,7 +5270,7 @@
         "nervura",
         "Saliência ou vareta alongada que reforça e dá forma a uma superfície fina, como em lanternas de papel, leques e guarda-chuvas.",
         "As nervuras de bambu da lanterna de papel aparecem como linhas escuras quando a lâmpada acende por dentro.",
-        "É estrutura de reforço; não a confunda com dobra ou vinco decorativo. Em botânica designa as veias da folha, sentido que o contexto deve afastar.",
+        "Nervura é saliência ou faixa que reforça ou articula uma superfície; uma linha pintada pode apenas imitá-la. Em folhas, nomeia veios; em arquitetura, pode designar elemento estrutural. Indique o objeto antes de escolher o sentido.",
         "Quando o vento vira o guarda-chuva do avesso, cada uma das varetas finas que esticam o tecido entorta, e uma _____ chega a se partir.",
         [
           "nervuras de bambu",
@@ -5283,7 +5283,7 @@
         "pedestal",
         "Suporte elevado sobre o qual se apoia um objeto, como vaso, estátua ou luminária, destacando-o do chão ou da mesa.",
         "O vaso de porcelana branca e azul repousa num pedestal de madeira escura, no centro da vitrine.",
-        "É suporte destacado; para a simples parte inferior do objeto, diga “pé” ou “base”. Evite o sentido figurado (“pôr num pedestal”) na descrição.",
+        "Pedestal é suporte destacado que eleva ou apresenta algo, e não qualquer base plana. Uma escultura pode apoiar-se diretamente no piso; chamar o apoio de pedestal exige que ele se distinga visualmente do objeto principal.",
         "A estatueta de jade não fica direto na vitrine: está erguida sobre um pequeno suporte de madeira entalhada, um _____ de quatro pés.",
         [
           "pedestal de mármore",
@@ -5296,7 +5296,7 @@
         "encaixe",
         "Ponto em que duas peças se unem por ajuste de formas, sem cola nem prego; também a cavidade que recebe a outra peça.",
         "O banquinho de feira não tem um prego sequer: cada perna entra no assento por um encaixe justo de madeira.",
-        "Encaixe é união por forma; se houver parafuso, rebite ou cola, nomeie o elemento. Não suponha técnica tradicional sem confirmar.",
+        "“Encaixe” descreve união por geometria ou ajuste, não identifica sozinho a fixação definitiva. Um componente pode encaixar e ser parafusado ou colado; diga o que está visível antes de atribuir técnica artesanal ou mecanismo oculto.",
         "A tampa da caixa de laca não tem fecho nem dobradiça: desliza por um sulco e se prende só pelo ajuste exato das formas, num _____ perfeito.",
         [
           "encaixe perfeito",
@@ -5428,7 +5428,7 @@
         "pelagem",
         "Conjunto dos pelos que cobrem o corpo de um mamífero, considerado em cor, comprimento e densidade.",
         "Na janela de uma casa antiga da Concessão Francesa, a pelagem cinzenta do gato quase se confunde com a madeira do parapeito.",
-        "Não deduza raça pela pelagem: cores e comprimentos semelhantes aparecem em animais sem raça definida.",
+        "Pelagem descreve cobertura pilosa — comprimento, densidade, cor e padrão —, não raça nem diagnóstico de saúde. Um cão de pelo curto e malhado pode ter várias origens; evite identificar linhagem apenas pela aparência da fotografia.",
         "A _____ do vira-lata, densa e cor de caramelo, cobre o corpo inteiro e solta fios por todo o tapete da sala.",
         [
           "pelagem densa",
@@ -5442,7 +5442,7 @@
         "plumagem",
         "Conjunto das penas de uma ave, com suas cores, desenhos e estado de conservação.",
         "Num beco perto do Bund, a plumagem acinzentada dos pombos ganha reflexos esverdeados no pescoço quando o sol aparece.",
-        "A cor da plumagem varia com a luz, a idade e a muda; descreva o que viu naquele momento, sem identificar a espécie por palpite.",
+        "Uma ave pode mudar a cor aparente das penas conforme luz, muda, idade ou estação reprodutiva. Descreva o padrão visto — faixas, manchas, brilho — antes de sugerir espécie ou sexo, que exigem mais características diagnósticas.",
         "A _____ da arara, com penas vermelhas, azuis e amarelas, chama a atenção dos visitantes no viveiro do zoológico.",
         [
           "plumagem colorida",
@@ -5494,7 +5494,7 @@
         "lustroso",
         "Que tem brilho natural e uniforme, refletindo a luz como se tivesse sido polido.",
         "Sob o sol da manhã, o pelo lustroso do cão de guarda reflete a luz como couro engraxado.",
-        "Brilho no pelo sugere boa condição, mas não prova saúde nem cuidado do dono; descreva o reflexo, não o diagnóstico.",
+        "Lustroso refere-se ao reflexo produzido pela superfície da pelagem, não à saúde comprovada do animal. Flash e pós-processamento podem intensificar esse brilho; se a qualidade física não foi observada, diga “aparência lustrosa na imagem”.",
         "Recém-escovado, o cavalo exibe um pelo negro e _____, de brilho uniforme como couro engraxado sob a luz do picadeiro.",
         [
           "pelo lustroso",
@@ -5507,7 +5507,7 @@
         "iridescente",
         "Que exibe cores cambiantes, como as do arco-íris, conforme o ângulo da luz e do olhar.",
         "Na praça do Povo, o pescoço iridescente dos pombos passa do verde ao roxo a cada passo que eles dão.",
-        "O efeito vem da estrutura das penas ou escamas, não de pigmento; não diga que a ave “é roxa” só porque o brilho pareceu roxo.",
+        "Iridescência envolve mudança de tonalidade conforme o ângulo de observação ou iluminação, não uma cor fixa. Um único fotograma pode registrar verde ou violeta sem mostrar a alternância; prefira “reflexos iridescentes” quando o efeito for perceptível.",
         "O pescoço do pombo é _____: muda do verde ao violeta conforme ele vira a cabeça contra o sol.",
         [
           "brilho iridescente",
@@ -5533,7 +5533,7 @@
         "ventre",
         "Parte inferior do tronco de um animal, voltada para o chão; a barriga.",
         "Na calçada, o cão vira-se de costas e mostra o ventre rosado, de pelo ralo, a quem passa.",
-        "Exibir o ventre pode indicar relaxamento ou submissão; não afirme qual sem observar o contexto.",
+        "Ventre é a região inferior do tronco de muitos animais, não sinônimo de abdômen exposto em qualquer postura. Mostrar o ventre pode ocorrer durante descanso, defesa ou movimento; não traduza a posição isolada como submissão ou confiança.",
         "Visto de baixo, através do vidro do aquário, o peixe mostra o _____ prateado, bem mais claro que as costas escuras.",
         [
           "ventre claro",
@@ -5546,7 +5546,7 @@
         "focinho",
         "Parte anterior da cabeça de muitos mamíferos, que reúne o nariz e a boca.",
         "O focinho do cachorro encosta na grade do portão a cada vez que um entregador passa de moto.",
-        "Focinho úmido ou seco não serve de diagnóstico; e não use o termo para aves, que têm bico.",
+        "“Focinho” refere-se à região anterior do rosto de muitos mamíferos, não a bicos de aves. A aparência úmida ou seca do nariz, isoladamente, não diagnostica saúde; descreva forma, cor ou movimento observável.",
         "O cão enfia o _____ na sacola de compras, com o nariz úmido farejando o pão recém-saído do forno.",
         [
           "focinho úmido",
@@ -5716,7 +5716,7 @@
         "arisco",
         "Que evita a aproximação de pessoas ou de outros animais e foge ao menor movimento.",
         "Arisco, o gato de rua some sob um carro estacionado quando uma criança chega perto.",
-        "Não atribua o comportamento a maus-tratos sem evidência; arisco descreve a reação, não a história do animal.",
+        "Arisco qualifica comportamento de evitação, sobressalto ou fuga diante de aproximação, não prova maus-tratos ou trauma. Especifique o estímulo e a resposta observada; um animal recuar uma vez não define sua disposição habitual.",
         "O gato de rua é tão _____ que dispara para baixo do carro sempre que alguém dá um passo em sua direção.",
         [
           "gato arisco",
@@ -5729,7 +5729,7 @@
         "dócil",
         "Que aceita a aproximação, o toque ou a condução sem resistência nem fuga.",
         "Dócil, o cachorro deixa a criança acariciar sua cabeça na fila da padaria.",
-        "Docilidade num momento não garante segurança; não incentive o público a se aproximar de animais desconhecidos.",
+        "Docilidade observada numa interação não garante ausência de reação defensiva em outra. Registre a aproximação e a resposta concretas; não incentive toque ou contato com animal desconhecido apenas porque pareceu calmo na gravação.",
         "Ao contrário do vizinho bravo, esse cão é _____: deixa qualquer criança fazer carinho sem se afastar.",
         [
           "animal dócil",
@@ -5781,7 +5781,7 @@
         "farejar",
         "Cheirar repetidamente e com atenção, aspirando o ar ou uma superfície para examiná-la.",
         "Na coleira, o cachorro fareja cada poste da calçada antes de deixar a dona seguir o passeio.",
-        "Farejar é ação observável; o que o animal identificou é suposição. Em sentido figurado, significa pressentir.",
+        "Farejar é explorar odores com o focinho e movimentos respiratórios observáveis, não descobrir necessariamente comida ou ameaça. Diga o que o animal cheirou, se visível; identificar o odor ou a intenção exige evidência adicional.",
         "Antes de aceitar o petisco, o cão costuma _____ a mão do visitante, aproximando o nariz várias vezes.",
         [
           "farejar o chão",
@@ -5794,7 +5794,7 @@
         "acuado",
         "Encurralado, sem rota de fuga, encostado a um canto diante de uma ameaça.",
         "Acuado entre a parede e uma caçamba, o gato sopra e arqueia o dorso diante de dois cães.",
-        "Descreva o cerco e a postura que viu; acuado implica ameaça concreta, então não use para um animal apenas parado.",
+        "“Acuado” implica restrição de saída ou pressão percebida: animal junto a muro, corpo recuado e aproximação de outro podem fornecer contexto. Um gato parado sob uma cadeira não está necessariamente acuado; identifique o cerco antes do termo.",
         "Encurralado no canto do muro pelos dois cães, sem saída possível, o gato fica _____ e sopra com o dorso arqueado.",
         [
           "animal acuado",
@@ -5833,7 +5833,7 @@
         "ronronar",
         "Emitir som contínuo e vibrante, produzido na garganta, típico dos gatos.",
         "Enrodilhado no colo da dona, num banco da praça, o gato ronrona de olhos semicerrados.",
-        "Ronronar costuma indicar conforto, mas gatos também o fazem com dor ou estresse; trate como hipótese.",
+        "O ronronar é vocalização ou vibração observável, mas pode surgir em contextos de conforto, solicitação ou estresse. Em vez de concluir “o gato está feliz”, relacione a emissão às ações simultâneas sem diagnosticar estado interno.",
         "Deitado no colo da dona, o gato começa a _____, e dá para sentir a vibração contínua do som na barriga dele.",
         [
           "o gato ronrona",
@@ -5846,7 +5846,7 @@
         "espreguiçar-se",
         "Esticar o corpo e os membros, em geral ao acordar ou depois de um longo repouso.",
         "O gato se espreguiça no parapeito antes de saltar para a calçada molhada.",
-        "Use a forma pronominal: “o gato se espreguiça”, nunca “o gato espreguiça”.",
+        "O verbo é pronominal no uso comum: “o gato se espreguiça”, não “o gato espreguiça”. O estiramento corporal pode ocorrer depois do sono ou durante atividade; não trate o gesto, sozinho, como prova de conforto.",
         "Ao acordar no sofá, o cachorro costuma _____, esticando as patas da frente e arqueando as costas.",
         [
           "o gato se espreguiça",
@@ -5919,7 +5919,7 @@
         "horizonte",
         "Linha aparente em que o céu parece encontrar a terra ou o mar, limite do campo visual do observador.",
         "No horizonte, as torres de Pudong se dissolvem na bruma do fim da tarde.",
-        "A nitidez do horizonte depende do tempo e da poluição; sem medição, registre só o que se via e a que horas.",
+        "Horizonte é limite aparente do campo visual, não a linha de propriedade ou um marco fixo da cidade. Poluição, névoa e enquadramento alteram sua nitidez; descreva qual perfil se distingue, sem converter visibilidade em quilômetros estimados.",
         "O sol desce devagar até tocar o _____, ponto extremo do olhar onde o mar parece encontrar o céu.",
         [
           "no horizonte",
@@ -5932,7 +5932,7 @@
         "skyline",
         "Perfil dos edifícios de uma cidade desenhado contra o céu, visto à distância.",
         "Do calçadão do Bund, o skyline de Lujiazui forma uma serra irregular de torres do outro lado do rio.",
-        "Anglicismo consagrado no jornalismo; na fala, “perfil urbano” ou “silhueta da cidade” são alternativas em português.",
+        "Skyline refere-se ao perfil visual conjunto de edifícios contra o céu, não apenas à torre mais alta. Compare a silhueta inteira e indique o ponto de vista; “skyline da cidade” de um único bairro pode ocultar o restante do tecido urbano.",
         "Da balsa, os passageiros fotografam o _____ da cidade: o perfil dos arranha-céus desenhado contra o céu.",
         [
           "skyline da cidade",
@@ -5997,7 +5997,7 @@
         "a perder de vista",
         "Até onde o olhar alcança; tão extenso que não se consegue ver onde termina.",
         "Os conjuntos habitacionais se estendem a perder de vista ao longo da via expressa.",
-        "Locução enfática; use só quando de fato não se vê o fim, e não como sinônimo genérico de “grande”.",
+        "A expressão intensifica a ideia de extensão sem fim visível, não é medida de comprimento. Se o fim da avenida apenas ficou fora do quadro por escolha de lente, explique o enquadramento e evite sugerir que ninguém poderia enxergá-lo.",
         "Na planície do Centro-Oeste, as plantações de soja se estendem _____, sem que o olho alcance onde terminam.",
         [
           "estender-se a perder de vista",
@@ -6010,7 +6010,7 @@
         "vista em mergulho",
         "Vista de cima para baixo, quase vertical, tomada de um ponto elevado sobre o que está logo abaixo.",
         "Do 40º andar, a vista em mergulho mostra os pátios dos lilongs como pequenos retângulos.",
-        "Diga de onde a vista foi feita e se o acesso é público; em cinema, corresponde ao plongée.",
+        "Vista em mergulho apresenta o espaço observado de cima para baixo, aproximando-se do plano em plongée no audiovisual. Não a confunda com fotografia aérea: uma câmera num terraço também oferece esse ângulo, sem estar voando.",
         "Debruçado no parapeito do 30º andar, o repórter olha direto para baixo: a _____ mostra os carros como brinquedos.",
         [
           "vista em mergulho",
@@ -6036,7 +6036,7 @@
         "emoldurado",
         "Visto através de algo que o envolve como moldura, como uma janela, um arco ou uma abertura entre galhos.",
         "Do jardim, o pagode aparece emoldurado pelos galhos dos salgueiros.",
-        "A moldura é escolha de enquadramento; informe quando foi você quem escolheu o ângulo para obter o efeito.",
+        "Uma copa de árvore pode emoldurar uma torre no enquadramento escolhido sem circundá-la fisicamente. Diferencie moldura visual de estrutura arquitetônica; não atribua a composição à intenção do paisagista quando foi a câmera que a criou.",
         "Visto pela janela em arco do mosteiro, o vale aparece _____ pela pedra, como um quadro pendurado na parede.",
         [
           "emoldurado por",
@@ -6062,7 +6062,7 @@
         "linha de cumeada",
         "Linha que une os pontos mais altos de uma serra ou cadeia de morros e separa as suas vertentes.",
         "Depois da chuva, a linha de cumeada da serra se desenha nítida atrás das plantações de chá.",
-        "Termo da geografia, próximo de divisor de águas; não confunda com o contorno de um único pico.",
+        "A linha de cumeada acompanha pontos altos de uma sequência de relevos e pode coincidir aproximadamente com um divisor de águas, mas não é o contorno de um pico isolado. Confirme a forma do terreno antes de desenhar o percurso no mapa.",
         "Os trilheiros andam pelo alto da serra, de pico em pico, sem descer às vertentes: seguem pela _____ do maciço.",
         [
           "linha de cumeada",
@@ -6075,7 +6075,7 @@
         "bruma",
         "Névoa leve e esbranquiçada que vela os planos distantes e atenua contornos e cores.",
         "No fim da tarde, uma bruma leve apaga o topo das torres do outro lado do Huangpu.",
-        "Bruma é mais tênue que neblina e não se confunde com poluição; sem medição, descreva só o efeito sobre a visibilidade.",
+        "Bruma descreve véu atmosférico tênue que reduz contraste e nitidez à distância, mas a imagem isolada não demonstra se a causa é umidade, aerossóis ou poluição. Registre o efeito visível e evite anunciar índice de qualidade do ar sem dados.",
         "Ao longe, uma _____ leve e esbranquiçada vela as montanhas, que vão perdendo o relevo e a cor a cada plano.",
         [
           "bruma leve",
@@ -6168,7 +6168,7 @@
         "colina",
         "Elevação de terreno de pouca altura, com topo arredondado e encostas suaves.",
         "Uma colina coberta de bambus fecha a vista ao norte do lago, atrás da ponte de pedra.",
-        "Colina é menor e mais suave que morro ou serra; em parques urbanos, pode ser aterro paisagístico, então verifique.",
+        "Colina sugere elevação de relevo relativamente suave, mas não possui limite universal de altura que se possa deduzir pela foto. Em parque urbano, montes podem ser modelados por aterros; evite chamá-los de formações naturais sem verificar.",
         "A capela fica no topo de uma _____ arredondada e baixa, que se sobe a pé em dez minutos sem esforço.",
         [
           "colina suave",
@@ -6194,7 +6194,7 @@
         "encosta",
         "Terreno inclinado na lateral de um morro, colina ou serra, entre o topo e a base.",
         "Plantações de chá cobrem a encosta em terraços, nos arredores da cidade.",
-        "Encosta é a vertente em geral; se a inclinação for abrupta, quase vertical, prefira escarpa.",
+        "Encosta é a superfície inclinada de uma elevação, sem exigir declive extremo. Para parede rochosa muito íngreme, “escarpa” pode ser mais preciso; não conclua instabilidade, erosão ou risco de deslizamento apenas pela inclinação.",
         "As casas se equilibram na _____ do morro, a meia altura entre o topo e a base, ligadas por escadarias estreitas.",
         [
           "encosta íngreme",
@@ -6207,7 +6207,7 @@
         "vale",
         "Depressão alongada entre elevações, em geral percorrida por um rio que a escavou.",
         "O vilarejo ocupa o fundo do vale, junto ao rio, cercado de encostas plantadas.",
-        "Vale pressupõe elevações dos dois lados; uma simples baixada não é vale.",
+        "Um vale corresponde a área rebaixada entre vertentes, muitas vezes associada a drenagem. Um terreno plano isolado ou depressão entre edifícios não o caracteriza; mostre as encostas e, quando relevante, a continuidade topográfica.",
         "Entre as duas serras, o rio corre no fundo do _____, onde a cidade se espalhou ao longo das margens.",
         [
           "fundo do vale",
@@ -6233,7 +6233,7 @@
         "sopé",
         "Parte mais baixa de um morro, serra ou montanha, onde a encosta encontra o terreno plano.",
         "No sopé da colina, um caminho de lajes contorna o lago até o pavilhão de chá.",
-        "Sopé é a base da elevação, não o vale nem a planície; rege “de”: no sopé da serra.",
+        "Sopé é a faixa inferior junto à base de um morro, serra ou montanha; não equivale ao vale inteiro. Na narração, diga “ao sopé da serra”, deixando claro de qual elevação trata; altura e distância exigem referência.",
         "A vila se espalha no _____ da montanha, exatamente onde a subida começa e o terreno deixa de ser plano.",
         [
           "no sopé",
@@ -6246,7 +6246,7 @@
         "várzea",
         "Terreno baixo e plano à beira de um rio, sujeito a inundações periódicas e de solo fértil.",
         "Na várzea junto ao canal, os juncos passam metade do ano com os pés na água.",
-        "Várzea implica cheias periódicas; não use para qualquer terreno plano. Em São Paulo, a palavra também remete ao futebol amador.",
+        "Várzea está ligada à planície sujeita a inundações fluviais, não a qualquer gramado baixo. A aparência seca no dia da visita não exclui cheias sazonais; caracterizá-la exige topografia, histórico de inundação ou fonte geográfica.",
         "Na _____ do rio, que alaga todo verão e deixa o solo fértil, os ribeirinhos plantam arroz quando as águas baixam.",
         [
           "várzea do rio",
@@ -6272,7 +6272,7 @@
         "ribanceira",
         "Margem alta e íngreme de um rio, formada por um barranco que cai sobre a água.",
         "Crianças descem a ribanceira de terra para molhar os pés no canal.",
-        "Ribanceira é a margem alta e escarpada; se a margem for baixa e plana, diga beira ou várzea.",
+        "Ribanceira sugere margem elevada ou barranco acentuado, não toda borda de rio. Se o terreno junto à água é plano, “margem” descreve melhor; fotografia distante não permite avaliar estabilidade ou risco de erosão.",
         "O carro derrapou na estrada de terra e caiu pela _____, o barranco alto que despenca sobre o rio.",
         [
           "descer a ribanceira",
@@ -6311,7 +6311,7 @@
         "estuário",
         "Trecho final de um rio que se alarga ao encontrar o mar, onde água doce e salgada se misturam com as marés.",
         "Xangai cresceu junto ao estuário do Yangtzé, onde a água barrenta do rio encontra o mar.",
-        "Não confunda com delta, em que o rio se divide em vários braços; confirme em fonte antes de usar o termo.",
+        "Estuário é região de transição entre rio e mar, sujeita a mistura de águas e processos de maré; uma desembocadura observada de longe não prova essa dinâmica. Para distingui-lo de delta, consulte mapa e informação hidrográfica.",
         "No _____, onde o rio se alarga ao encontrar o mar, a água doce se mistura com a salgada a cada maré.",
         [
           "estuário do rio",
@@ -6324,7 +6324,7 @@
         "bosque",
         "Pequena área de árvores próximas umas das outras, menor e menos densa que uma mata ou floresta.",
         "Um pequeno bosque de pinheiros abafa o barulho da avenida que margeia o parque.",
-        "Em parques urbanos, o bosque costuma ser plantado; não o chame de mata nativa sem confirmação.",
+        "Bosque é conjunto relativamente delimitado de árvores, sem determinar se é nativo, plantado ou ornamental. Num parque urbano, “bosque” não equivale automaticamente a “mata preservada”; confira origem e manejo antes de atribuir naturalidade.",
         "Um pequeno _____ de eucaliptos, menor que uma mata, separa o lago do estacionamento do parque.",
         [
           "bosque de pinheiros",
@@ -6337,7 +6337,7 @@
         "dossel",
         "Camada superior contínua formada pelas copas entrelaçadas das árvores de uma mata ou alameda.",
         "O dossel dos plátanos se fecha sobre a rua e coa a luz do meio-dia.",
-        "Dossel é o conjunto das copas, não a copa de uma única árvore; em ecologia, é o estrato onde vive boa parte da fauna.",
+        "Dossel designa camada formada pelo conjunto das copas, não uma árvore isolada. Num parque plantado, pode existir continuidade visual sem ecossistema florestal nativo; diferencie estrutura da vegetação e sua origem.",
         "Os macacos vivem no _____ da floresta, a vinte metros do chão, onde as copas das árvores se tocam e formam um teto verde.",
         [
           "dossel da floresta",
@@ -6350,7 +6350,7 @@
         "vegetação rasteira",
         "Plantas baixas que cobrem o solo, como gramíneas, ervas e pequenos arbustos.",
         "Vegetação rasteira cobre as encostas entre as pedras, sem passar da altura do tornozelo.",
-        "Diferencie vegetação rasteira espontânea de canteiros plantados com espécies ornamentais.",
+        "Vegetação rasteira descreve estrato de plantas de baixo porte, não necessariamente grama ou vegetação espontânea. Uma área com flores baixas pode ser canteiro ornamental planejado; indique altura e cobertura observáveis.",
         "Entre as árvores altas, o chão é coberto por _____: capim, samambaias baixas e pequenas ervas.",
         [
           "vegetação rasteira",
@@ -6429,7 +6429,7 @@
         "límpido",
         "Claro e transparente, sem nuvens, névoa ou bruma que turvem a visão.",
         "Depois da frente fria, o céu límpido deixa ver com nitidez as torres do outro lado do rio.",
-        "Céu límpido não significa ar limpo; a qualidade do ar exige índice oficial, não impressão visual.",
+        "Céu límpido descreve pouca interferência visual na abóbada observada; não mede material particulado nem exposição à radiação. Um dia visualmente claro pode ter poluentes invisíveis, portanto “ar puro” exige dados de qualidade do ar.",
         "Depois da frente fria, o céu amanheceu _____, sem uma nuvem nem um fiapo de névoa sequer.",
         [
           "céu límpido",
@@ -6494,7 +6494,7 @@
         "garoa",
         "Chuva muito fina, de gotas miúdas e contínua, que molha devagar.",
         "Uma garoa fina deixa brilhante a calçada da Nanjing Road sem formar poças.",
-        "Garoa é contínua e miúda; se a chuva vai e volta, diga chuvisco ou chuva intermitente.",
+        "Garoa é precipitação de gotículas muito finas, geralmente de baixa intensidade; não exige continuidade absoluta sem interrupção. Uma chuva fraca com gotas maiores pode não ser garoa; se a câmera não permite distinguir, prefira “chuva fina”.",
         "Uma _____ fina cai sem pausa a manhã inteira, em gotinhas que mal se veem, e encharca devagar os casacos.",
         [
           "garoa fina",
@@ -6507,7 +6507,7 @@
         "aguaceiro",
         "Chuva forte, repentina e de curta duração.",
         "Um aguaceiro de dez minutos alaga a faixa de pedestres e esvazia a calçada.",
-        "Informe a duração observada; “tempestade” supõe vento e raios, não só chuva forte.",
+        "Aguaceiro designa chuva intensa, frequentemente concentrada num intervalo, mas não prova raios, vento severo nem tempestade elétrica. Indique duração e intensidade observadas; para totais em milímetros, consulte medição meteorológica.",
         "Um _____ violento despenca de repente e, quinze minutos depois, o sol volta sobre as ruas alagadas.",
         [
           "aguaceiro forte",
@@ -6520,7 +6520,7 @@
         "trovoada",
         "Tempestade com trovões e relâmpagos, em geral acompanhada de chuva forte.",
         "A trovoada da tarde esvazia a praça em minutos e faz os vendedores recolherem as barracas.",
-        "Ouvir trovões não basta para medir a intensidade; registre o que viu: raios, chuva, vento.",
+        "Trovoada envolve ocorrência de trovões, podendo ou não haver chuva no ponto de observação. Um ruído distante pode ter outras fontes; evite inferir quantidade de raios, risco local ou intensidade da célula sem dados.",
         "A _____ chega com relâmpagos riscando o céu e estrondos que fazem os cães se esconderem embaixo da cama.",
         [
           "trovoada forte",
@@ -6585,7 +6585,7 @@
         "orvalho",
         "Gotículas de água que se condensam, durante a noite, sobre superfícies frias.",
         "Às seis da manhã, o orvalho ainda cobre os bancos do parque e o capô dos carros.",
-        "Orvalho não é sinal de chuva noturna; observe se o chão está seco ao redor.",
+        "Orvalho se forma por condensação de vapor de água sobre superfícies resfriadas, e não equivale a chuva noturna. Gotas em folhas também podem vir de irrigação; sem observar as condições, descreva “gotículas sobre a vegetação”.",
         "De madrugada, sem que tenha chovido, gotículas se condensam sobre a grama e os carros: é o _____.",
         [
           "orvalho da manhã",
@@ -6664,7 +6664,7 @@
         "contudo",
         "Conector adversativo: introduz uma oposição ao que foi dito, com registro mais formal que “mas”.",
         "A rua ficou mais bonita; contudo, os moradores antigos dizem que perderam os vizinhos.",
-        "Pode abrir a frase ou vir entre vírgulas. Na fala, “mas” costuma soar mais natural.",
+        "“Contudo” introduz contraste com uma expectativa ou afirmação anterior: “o mercado lotou; contudo, as vendas caíram”. Não o use para simplesmente adicionar informação; na fala espontânea, “mas” pode ser menos solene.",
         "Na nota oficial, a prefeitura troca o “mas” por um equivalente mais formal: as obras terminaram; _____, a rua segue fechada.",
         [
           "sem, contudo, explicar",
@@ -6677,7 +6677,7 @@
         "portanto",
         "Conector conclusivo: apresenta a consequência lógica do que foi dito antes.",
         "O aluguel dobrou e as vendas caíram; portanto, três lojas fecharam.",
-        "Só use depois de apresentar as premissas. Não confunda com “porém”, que é adversativo.",
+        "“Portanto” anuncia uma conclusão apoiada no que veio antes, não simples sequência temporal. “Há lojas abertas; portanto o bairro prospera” extrapola os dados. Explicite as premissas e sua suficiência antes da conclusão.",
         "Todas as lojas do quarteirão fecharam durante a obra, e a farmácia fica nesse quarteirão; _____, ela também passou meses fechada.",
         [
           "é, portanto,",
@@ -6690,7 +6690,7 @@
         "embora",
         "Conector concessivo: admite um fato que não impede o outro; pede subjuntivo.",
         "Embora a obra tenha terminado, a calçada continua interditada.",
-        "Exige subjuntivo (“tenha terminado”). Não use “embora” com indicativo.",
+        "“Embora” introduz concessão e costuma exigir subjuntivo em construções como “embora a chuva tenha parado”. Não equivale a “porque”: a oração reconhece uma circunstância contrária à expectativa, sem apresentá-la como causa.",
         "Os feirantes ainda reclamam da goteira, _____ o mercado tenha ganhado uma cobertura nova em março.",
         [
           "embora tenha sido",
@@ -6703,7 +6703,7 @@
         "ainda assim",
         "Locução concessiva: reconhece o que foi dito e afirma o contrário com ênfase.",
         "O preço subiu; ainda assim, a fila continua dobrando a esquina.",
-        "Mais enfático que “mas”; funciona bem depois de pausa na fala.",
+        "“Ainda assim” comunica concessão: algo ocorre apesar de um fator contrário. Não equivale a “além disso” nem prova superação de obstáculo; a frase anterior deve fornecer uma expectativa que a seguinte contraria.",
         "O preço do café dobrou depois da reforma, mas, _____, a fila continua dobrando a esquina toda manhã.",
         [
           "mas, ainda assim,",
@@ -6716,7 +6716,7 @@
         "além disso",
         "Conector aditivo: acrescenta um argumento ou informação de mesmo peso.",
         "A calçada foi alargada; além disso, a rua ganhou árvores.",
-        "Para acréscimos simples, “também” basta. “Ademais” é formal demais para a fala.",
+        "“Além disso” acrescenta argumento ou informação ao mesmo eixo, não estabelece automaticamente causa ou comprovação. Quando introduz um novo assunto sem conexão, o termo mascara salto temático; indique a ligação real entre as ideias.",
         "A feira passou a abrir aos domingos; _____, ganhou banheiros públicos e um estacionamento para bicicletas.",
         [
           "além disso, há",
@@ -6729,7 +6729,7 @@
         "por sua vez",
         "Locução que introduz o segundo elemento de uma comparação ou sequência, com seu papel próprio.",
         "Os comerciantes aprovaram a reforma; os moradores, por sua vez, criticam o barulho.",
-        "Exige que o primeiro elemento tenha sido apresentado antes.",
+        "“Por sua vez” alterna o foco entre participantes ou etapas correspondentes: “o museu abre cedo; a galeria, por sua vez, fecha tarde”. Sem um primeiro referente claro, soa como costura artificial e pode falsear uma oposição inexistente.",
         "Na reforma, cada órgão cuidou de uma parte: a prefeitura refez o asfalto; a companhia de água, _____, trocou os canos sob a calçada.",
         [
           "os moradores, por sua vez,",
@@ -6742,7 +6742,7 @@
         "em contrapartida",
         "Locução que apresenta uma compensação ou um contraponto ao que foi dito.",
         "A rua perdeu vagas de estacionamento; em contrapartida, ganhou uma ciclovia.",
-        "Contrapartida é compensação; para simples oposição, prefira “por outro lado”.",
+        "“Em contrapartida” indica compensação ou contraposição relevante: mais custo em troca de mais conforto. Não serve para conectar quaisquer dois fatos diferentes; se houver apenas contraste de pontos de vista, “por outro lado” costuma ser mais claro.",
         "Para obter licença de erguer mais dois andares, a construtora ofereceu, _____, a reforma completa da praça em frente.",
         [
           "em contrapartida, ganhou",
@@ -6755,7 +6755,7 @@
         "ou seja",
         "Conector explicativo: reformula ou esclarece o que acabou de ser dito.",
         "A reforma durou dois anos, ou seja, mais que o dobro do previsto.",
-        "O que vem depois deve esclarecer; se apenas repete, corte.",
+        "“Ou seja” introduz explicação equivalente ou reformulação, não consequência nova: “abre somente aos sábados, ou seja, um dia por semana”. Se a segunda oração acrescenta fato independente, substitua o conector ou separe as frases.",
         "Os comerciantes falam em gentrificação, _____, a troca dos moradores antigos por gente de renda mais alta.",
         [
           "ou seja, o dobro",
@@ -6768,7 +6768,7 @@
         "à medida que",
         "Locução proporcional: indica progressão simultânea entre dois fatos.",
         "À medida que as lojas novas abriam, as bancas antigas desapareciam.",
-        "Não confunda com “na medida em que” (causa). “À medida em que” é forma não padrão.",
+        "“À medida que” expressa evolução proporcional ou concomitante: “à medida que a rua escurece, as vitrines acendem”. Não acrescente “em” (“à medida em que”); para indicar causa, escolha um conector que explicite a relação real.",
         "O barulho na rua aumentava _____ os prédios novos subiam, andar por andar, ao longo do ano.",
         [
           "à medida que avança",
@@ -6781,7 +6781,7 @@
         "na medida em que",
         "Locução causal: equivale a “porque”, “visto que” ou “no grau em que”.",
         "A reforma importa na medida em que muda a rotina de quem mora ali.",
-        "Trocá-la por “à medida que” muda o raciocínio de causa para proporção.",
+        "“Na medida em que” admite leitura causal ou de proporcionalidade conforme o contexto; não imponha oposição absoluta com “à medida que”. Quando a relação pretendida for proporção temporal, “à medida que” costuma torná-la mais clara.",
         "A reforma é polêmica _____ obriga os feirantes mais antigos a deixar a calçada onde trabalham há décadas.",
         [
           "na medida em que permite",
@@ -6926,7 +6926,7 @@
         "repercutir",
         "Literalmente, fazer o som bater e voltar. Por extensão, produzir efeitos que se espalham além do ponto de origem; no jargão de redação, colher reações a um fato.",
         "A mudança de horário do metrô repercutiu no movimento de todo o quarteirão.",
-        "Mostre como a repercussão chega: por que caminho, até onde, com que evidência.",
+        "Repercutir pede efeito ou reação observável em outro público, espaço ou debate. Uma notícia publicada uma vez não prova grande repercussão; indique onde surgiram respostas, quem reagiu e que alcance está efetivamente documentado.",
         "A pauta do dia é _____ a decisão do tribunal: ouvir advogados, comerciantes e entidades sobre o que muda na rua.",
         [
           "repercutir no comércio",
@@ -6940,7 +6940,7 @@
         "reverberar",
         "Literalmente, o som ou a luz que se refletem repetidas vezes num espaço. Por extensão, um efeito que persiste e continua ecoando depois do fato.",
         "A demolição das casas antigas ainda reverbera nas conversas da feira.",
-        "Mais intenso e duradouro que “repercutir”. Evite em fatos pequenos: o verbo amplifica.",
+        "“Reverberar” é prolongar-se por reflexões sonoras e, figuradamente, continuar produzindo efeitos. Não afirma necessariamente intensidade maior que “repercutir”; em matéria factual, mostre onde e por quanto tempo a consequência persistiu.",
         "Na catedral vazia, cada acorde do órgão fica a _____ por longos segundos, sem eco distinto, até se dissolver no ar.",
         [
           "o som reverbera",
@@ -6953,7 +6953,7 @@
         "irradiar",
         "Literalmente, emitir raios a partir de um centro. Por extensão, espalhar-se a partir de um ponto de origem.",
         "A valorização irradia da nova estação para as ruas vizinhas.",
-        "Use quando há um centro identificável; diga qual é.",
+        "Irradiar pressupõe propagação a partir de uma origem, como luz de um letreiro ou influência de um polo urbano. Nomeie origem, direção e área alcançada; não use o verbo para descrever apenas dois pontos próximos sem ligação constatada.",
         "Instalada no centro do salão, a estufa a lenha consegue _____ calor para todos os cantos, como raios saindo de um núcleo.",
         [
           "irradiar calor",
@@ -6979,7 +6979,7 @@
         "desdobrar-se",
         "Literalmente, abrir o que estava dobrado. Por extensão, desenvolver-se em consequências ou etapas sucessivas.",
         "A decisão da prefeitura se desdobrou em três frentes: obras, aluguéis e trânsito.",
-        "Em reportagem, “desdobramento” é a continuação de uma história; enumere os desdobramentos.",
+        "Um fato pode desdobrar-se em consequências, etapas ou novas investigações, não apenas “continuar”. Nomeie cada etapa e sua ligação com o acontecimento inicial; uma notícia sem conexão causal ou temática não é desdobramento dela.",
         "A investigação deve _____ em novas fases, cada uma abrindo uma linha de apuração diferente.",
         [
           "desdobrar-se em",
@@ -6992,7 +6992,7 @@
         "permear",
         "Atravessar, penetrar por todos os lados, como a água em um tecido. Por extensão, estar presente em todas as partes de algo.",
         "A preocupação com o aluguel permeia todas as entrevistas feitas na rua.",
-        "Forte: afirma presença generalizada. Use só se apareceu de fato em quase todas as fontes.",
+        "Permear sugere presença distribuída no interior de um conjunto: uma pauta recorrente em diversos depoimentos, não uma menção isolada. Declare o universo observado e o que apareceu nele antes de dizer que o tema permeia a discussão.",
         "O cheiro de café torrado parece _____ cada canto do mercado, impregnando até os tecidos das bancas vizinhas.",
         [
           "permeia o debate",
@@ -7005,7 +7005,7 @@
         "convergir",
         "Literalmente, dirigir-se para um mesmo ponto. Por extensão, chegar a uma mesma conclusão ou resultado.",
         "Os relatos dos comerciantes convergem: o movimento caiu depois das obras.",
-        "Rege “para” ou “em”. Afirma concordância entre fontes; mostre quantas e quais.",
+        "Convergir pode indicar trajetórias que se aproximam ou argumentos que apontam para resultado semelhante; isso não exige concordância integral entre fontes. Diga qual ponto coincide e preserve divergências, sem fabricar consenso.",
         "Vindas de bairros diferentes, as três passeatas devem _____ para a praça central por volta das 18h.",
         [
           "convergir para",
@@ -7097,7 +7097,7 @@
         "ecoar",
         "Literalmente, repetir um som que bate numa superfície e volta. Por extensão, retomar ou reproduzir uma ideia, uma fala ou um sentimento.",
         "A queixa dos moradores ecoa a de outros bairros reformados nos últimos anos, como mostram as atas das audiências.",
-        "Bom para mostrar que uma ideia retorna em outro lugar; diga onde ela já tinha aparecido. Não use para simples concordância.",
+        "Ecoar, literalmente, envolve repetição ou reflexão sonora; no figurado, uma fala ou reivindicação reaparece em outro lugar. Para demonstrar eco público, mostre a manifestação anterior e onde ela foi retomada; não presuma cópia ou adesão.",
         "Como a voz que volta do fundo do túnel, o discurso do novo prefeito parece _____ as promessas do antecessor, repetidas quase palavra por palavra.",
         [
           "ecoar pelo corredor",
@@ -7178,7 +7178,7 @@
         "mezanino",
         "Piso intermediário, aberto para o pavimento de baixo, que aproveita parte da altura do ambiente.",
         "Do mezanino da livraria, os leitores observam o salão de leitura no térreo.",
-        "Não chame qualquer segundo andar de mezanino: ele precisa ser aberto para o nível inferior.",
+        "Mezanino é piso intermediário parcial integrado ao volume de um ambiente, geralmente com relação visual ao nível inferior. Não chame de mezanino um pavimento integral independente ou simples palco elevado; mostre o espaço inferior para situá-lo.",
         "Instalado a meia altura e aberto para o salão do térreo, o _____ abriga as poltronas de leitura da livraria.",
         [
           "mezanino de madeira",
@@ -7231,7 +7231,7 @@
         "piso de taco",
         "Revestimento de pequenas peças de madeira encaixadas, muitas vezes em espinha de peixe.",
         "O piso de taco gasto range sob os passos no apartamento da década de 1930.",
-        "Desgaste não é sinônimo de abandono; evite julgar os moradores pelo estado do piso.",
+        "Tacos são pequenas peças de madeira assentadas em padrão no piso; laminado impresso ou porcelanato podem imitá-los. Desgaste localizado não prova abandono do imóvel, e o tipo de madeira requer inspeção ou informação de origem.",
         "As pequenas peças de madeira do _____, montadas em espinha de peixe, rangem sob os passos no apartamento de 1930.",
         [
           "piso de taco gasto",
@@ -7270,7 +7270,7 @@
         "claraboia",
         "Abertura envidraçada no teto ou no telhado que deixa entrar luz natural de cima.",
         "A claraboia do mercado coberto ilumina as bancas centrais no meio da tarde.",
-        "Indique o horário da gravação: a luz que entra pela claraboia muda muito ao longo do dia.",
+        "Claraboia é abertura envidraçada ou translúcida na cobertura que admite iluminação superior; luminária de teto não é claraboia. A luz muda conforme sol e nuvens, por isso evite atribuir iluminação constante a uma única gravação.",
         "Aberta no telhado do mercado coberto, a _____ de vidro deixa a luz do sol cair direto sobre as bancas centrais.",
         [
           "claraboia de vidro",
@@ -7296,7 +7296,7 @@
         "nicho",
         "Reentrância na parede usada para expor ou guardar objetos.",
         "Num nicho iluminado ao lado da porta, a família mantém um pequeno altar com incenso.",
-        "Ao filmar nichos com objetos religiosos ou pessoais, peça autorização e descreva sem ironia.",
+        "Nicho é reentrância ou compartimento delimitado integrado ao conjunto, não qualquer prateleira solta. Se abriga objetos familiares, religiosos ou pessoais, descreva com consentimento e evite atribuir uso ritual apenas pela decoração.",
         "Escavado na parede ao lado da porta, um pequeno _____ abriga a estatueta e o incensário da família.",
         [
           "nicho na parede",
@@ -7309,7 +7309,7 @@
         "marcenaria",
         "Conjunto de móveis e peças de madeira feitos sob medida para um ambiente.",
         "A marcenaria escura das estantes ocupa toda a parede da antiga biblioteca.",
-        "Não afirme que é madeira maciça ou feita à mão sem confirmar; muitos painéis são laminados.",
+        "Marcenaria pode designar o ofício, a oficina ou elementos sob medida de madeira e painéis derivados. Uma parede com revestimento amadeirado não prova madeira maciça ou fabricação manual; indique o móvel específico e confirme a técnica.",
         "Feita sob medida por um artesão, a _____ escura das estantes e dos armários ocupa toda a parede da biblioteca.",
         [
           "marcenaria sob medida",
@@ -7322,7 +7322,7 @@
         "planta livre",
         "Organização de um pavimento sem paredes internas fixas, com espaço contínuo.",
         "O escritório de planta livre em Lujiazui reúne duzentas mesas sem nenhuma parede entre elas.",
-        "Planta livre não é espaço vazio; descreva também como o mobiliário organiza a circulação.",
+        "Planta livre descreve organização com menos compartimentações fixas, não ausência de função ou de barreiras. Estantes e mobiliário podem criar limites claros; o fato de o salão estar vazio no dia não demonstra concepção de planta livre.",
         "Sem nenhuma parede interna, o andar em _____ reúne duzentas mesas de trabalho num único salão em Lujiazui.",
         [
           "escritório de planta livre",
@@ -7335,7 +7335,7 @@
         "luminária pendente",
         "Peça de iluminação suspensa do teto por fio, cabo ou haste.",
         "Uma luminária pendente de papel concentra a luz amarelada sobre o balcão do café.",
-        "Descreva o efeito da luz no ambiente, não só o objeto: a luminária importa pelo que ilumina.",
+        "Luminária pendente é peça suspensa do teto; um abajur sobre mesa ou arandela lateral não se enquadra no termo. Descreva altura em relação às superfícies e efeito de iluminação, sem deduzir potência elétrica ou material.",
         "Presa ao teto por um fio longo, a _____ de papel concentra uma luz amarelada sobre o balcão do café.",
         [
           "luminária pendente de papel",
@@ -7415,7 +7415,7 @@
         "aglomeração",
         "Reunião densa de pessoas num mesmo espaço, sem que isso implique organização prévia.",
         "Uma aglomeração se forma diante da vitrine da loja na Nanjing Road minutos antes da abertura.",
-        "Descreva a densidade observada; aglomeração não indica, por si só, risco nem desordem.",
+        "Aglomeração indica concentração de pessoas num espaço, mas não pressupõe perigo, conflito ou infração. Mostre área ocupada e distância aproximada entre grupos; capacidade excedida ou risco de esmagamento exige informação técnica.",
         "Minutos antes da abertura da loja, uma _____ de clientes parados se forma diante da vitrine, sem fila definida.",
         [
           "aglomeração de pessoas",
@@ -7441,7 +7441,7 @@
         "burburinho",
         "Ruído confuso de muitas vozes simultâneas, sem fala distinguível.",
         "O burburinho da fila só diminui quando o segurança abre o portão do estádio.",
-        "Não atribua conteúdo ao burburinho: se não deu para entender as falas, não as reconstrua.",
+        "Burburinho é conjunto de conversas e vozes indistintas, não uma palavra de ordem nem sinal de tumulto. Se a gravação só capta murmuração, não reconstrua frases nem atribua opiniões específicas ao grupo.",
         "Antes de o portão abrir, o _____ de centenas de vozes misturadas impede entender qualquer frase isolada.",
         [
           "burburinho de vozes",
@@ -7467,7 +7467,7 @@
         "debandada",
         "Fuga súbita e desordenada de muitas pessoas na mesma direção.",
         "A chuva forte provocou uma debandada dos turistas para baixo das marquises do calçadão.",
-        "Não use debandada para uma saída gradual; o termo implica pressa e algum grau de pânico.",
+        "Debandada envolve dispersão rápida e coletiva; não é sinônimo de saída ordenada ao fim de um evento. Mesmo diante de corrida, a causa pode ser desconhecida: não anuncie pânico, ataque ou fuga de perigo sem confirmação.",
         "Com a chegada repentina da chuva, os turistas saíram correndo todos juntos para as marquises, numa _____ que esvaziou o calçadão.",
         [
           "debandada geral",
@@ -7480,7 +7480,7 @@
         "vaivém",
         "Movimento contínuo de pessoas que chegam e partem, em sentidos opostos.",
         "O vaivém de entregadores marca a hora do almoço na portaria do edifício comercial.",
-        "Vaivém não é sinônimo de lotação: um espaço pode ter vaivém intenso com pouca gente parada.",
+        "Vaivém é deslocamento repetido em sentidos opostos ou fluxo de idas e vindas, não quantidade de pessoas. Uma plataforma pode ter intenso vaivém e poucos usuários parados; diferencie circulação, lotação e permanência.",
         "Na portaria do edifício comercial, o _____ de entregadores que entram e saem não para durante o almoço.",
         [
           "vaivém de pessoas",
@@ -7493,7 +7493,7 @@
         "contingente",
         "Número de pessoas de um grupo específico, como agentes ou voluntários, mobilizadas para uma ação.",
         "Um contingente de cerca de 200 policiais, segundo a prefeitura, acompanha o festival de lanternas.",
-        "Atribua o número do contingente à fonte oficial e diga se ele foi estimado ou contado.",
+        "Contingente nomeia grupo numericamente considerado, como equipe destacada ou público organizado, não quantifica sozinho quem está presente. Se citar “contingente de 500”, atribua fonte e diferencie número planejado do efetivamente visto.",
         "Segundo a prefeitura, um _____ de 200 policiais foi destacado para acompanhar o festival de lanternas.",
         [
           "contingente policial",
@@ -7532,7 +7532,7 @@
         "rarefeito",
         "Diz-se de público ou grupo escasso, com pessoas bem espaçadas entre si.",
         "O público rarefeito da manhã contrasta com a fila que tomaria a calçada à tarde.",
-        "Indique o horário: um público rarefeito num momento não descreve o evento inteiro.",
+        "Público rarefeito significa baixa concentração no local e momento registrados, não fracasso de um evento inteiro. Informe onde e quando filmou; grandes áreas vazias podem coexistir com aglomerações em outros pontos.",
         "Às 9h, o público ainda é _____: poucas pessoas espalhadas pelo gramado, com muitos metros livres entre elas.",
         [
           "público rarefeito",
@@ -7571,7 +7571,7 @@
         "estimativa de público",
         "Número aproximado de presentes, calculado por organizadores, polícia ou método independente.",
         "A estimativa de público dos organizadores, 50 mil pessoas, é o dobro da divulgada pela polícia.",
-        "Sempre atribua a estimativa à fonte e, se houver divergência, publique os dois números.",
+        "Estimativa de público depende de método e momento: contagem de acessos, densidade por área ou declaração de organizadores não são equivalentes. Atribua a fonte e, quando houver divergência, explique que métodos ou horários foram comparados.",
         "Os organizadores falam em 50 mil pessoas, mas a _____ divulgada pela polícia é de 25 mil presentes.",
         [
           "estimativa de público oficial",
@@ -7664,7 +7664,7 @@
         "farfalhar",
         "Produzir ruído leve e áspero, como o de folhas ou tecidos que se roçam com o vento.",
         "As folhas dos plátanos começam a farfalhar quando a brisa sobe do rio Huangpu.",
-        "Só descreva o farfalhar se ele estiver audível na gravação; o vento no microfone pode encobri-lo.",
+        "Farfalhar descreve fricção delicada de folhas, papel ou tecido em movimento, diferente do assobio do vento. O microfone pode captar rajada grave em vez desse atrito; ouça a gravação antes de escrever que as folhas farfalham.",
         "Quando a brisa sobe do rio, as folhas largas dos plátanos começam a _____ sobre a calçada.",
         [
           "farfalhar das folhas",
@@ -7677,7 +7677,7 @@
         "marulho",
         "Som contínuo e ritmado de ondas pequenas batendo contra uma margem ou um casco.",
         "O marulho contra o cais acompanha a entrevista com o barqueiro de Zhujiajiao.",
-        "Se o marulho veio de um banco de sons na edição, não o apresente como captação feita no local.",
+        "Marulho é ruído suave e contínuo de ondas ou água em movimento, não qualquer estrondo do mar. Se usar áudio de arquivo, não faça parecer captação local; diferencie som ambiente gravado, narração e efeito acrescentado.",
         "Na beira do canal, o _____ ritmado das ondas que a lancha deixou para trás bate contra o casco do barco.",
         [
           "marulho das ondas",
@@ -7703,7 +7703,7 @@
         "gotejar",
         "Cair em gotas, de forma lenta e intermitente, produzindo um som regular.",
         "A água continua a gotejar das telhas do templo muito depois do fim da chuva.",
-        "O gotejar costuma exigir microfone próximo; não sugira que ele era audível a distância.",
+        "Gotejar descreve quedas de gotas separadas, frequentemente ritmadas, e não o correr contínuo de água. Diga a superfície de impacto se visível; microfone próximo pode ampliar um som quase inaudível no ambiente.",
         "Muito depois do fim da chuva, a água ainda continua a _____ das telhas do templo, num ritmo lento e regular.",
         [
           "gotejar das telhas",
@@ -7729,7 +7729,7 @@
         "crepitar",
         "Estalar repetidamente, como a lenha no fogo ou as folhas secas pisadas.",
         "A lenha do fogareiro começa a crepitar enquanto o vendedor aquece as castanhas.",
-        "Crepitar sugere fogo; não use o termo se a fonte do som não aparece nem foi confirmada.",
+        "Crepitar reúne estalos curtos e repetidos, como os de fogo, madeira ou certos materiais; o som sozinho não comprova combustão. Se o foco da cena não mostra a fonte, evite anunciar incêndio ou chamas apenas pelo áudio.",
         "A lenha seca do fogareiro começa a _____ enquanto o vendedor mexe as castanhas na areia quente.",
         [
           "crepitar da lenha",
@@ -7755,7 +7755,7 @@
         "uivo",
         "Som prolongado e lamentoso, como o de lobos e cães ou o do vento forte.",
         "O uivo do vento entre as torres de Lujiazui domina o áudio durante a passagem do tufão.",
-        "Se o uivo não está na gravação, não o use no texto para dramatizar a cena.",
+        "Uivo é vocalização prolongada associada a certos animais e pode designar vento em uso figurado. Não atribua o som a um lobo ou cão se só a trilha é audível; descreva “som semelhante a uivo” quando a fonte não estiver identificada.",
         "Prolongado e lamentoso, o _____ do vento entre as torres de Lujiazui domina o áudio na passagem do tufão.",
         [
           "uivo do vento",
@@ -7794,7 +7794,7 @@
         "trinado",
         "Canto de pássaro com notas rápidas e alternadas, de efeito melodioso.",
         "O trinado de um pássaro na gaiola acompanha os idosos que praticam tai chi no parque.",
-        "Trinado é canto melódico; não use o termo para pios isolados nem invente a espécie.",
+        "Trinado designa sucessão rápida de notas ou sons em canto e pode ocorrer em aves diferentes; pio isolado não é trinado. Uma gravação curta não permite identificar a espécie sem outros sinais, então descreva o padrão sonoro.",
         "Melodioso e cheio de notas rápidas, o _____ do pássaro na gaiola acompanha os idosos no parque.",
         [
           "trinado do sabiá",
@@ -7833,7 +7833,7 @@
         "coaxar",
         "Produzir o som característico de sapos e rãs.",
         "À noite, os sapos dos canais de Zhujiajiao começam a coaxar perto das casas.",
-        "Diferencie o que o microfone captou do que você ouviu no local, mas não está na gravação.",
+        "Coaxar identifica vocalização típica de rãs e sapos, mas um som semelhante na trilha não comprova espécie nem quantidade de animais. Confirme a origem quando possível e distinga som captado no local de efeito inserido na edição.",
         "Ao escurecer, os sapos e as rãs dos canais de Zhujiajiao começam a _____ perto das casas.",
         [
           "coaxar dos sapos",
@@ -7846,7 +7846,7 @@
         "ruflar",
         "Bater as asas rapidamente, produzindo um som seco e vibrante.",
         "Os pombos começam a ruflar as asas quando o vendedor espalha milho na praça.",
-        "O ruflar é breve e se perde no ruído urbano; confirme na gravação antes de descrevê-lo.",
+        "Ruflar refere-se ao som produzido pelo bater ou movimento rápido de asas e, por extensão, tecidos; não equivale a canto de pássaro. Diferencie o som da ave do vento captado no microfone e confirme a fonte quando estiver fora de quadro.",
         "Quando o vendedor espalha milho na praça, os pombos começam a _____ as asas e levantam voo.",
         [
           "ruflar de asas",

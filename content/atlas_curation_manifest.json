@@ -1,0 +1,379 @@
+{
+  "edition": "curadoria-precisao-cuidado-2026-10-16",
+  "scope": "Atlas Descritivo: 31 campos-base, 465 termos e alertas de Precisão e cuidado",
+  "reviewed": 465,
+  "changed": 178,
+  "principles": [
+    "Alerta ligado ao significado ou à regência do termo, não conselho genérico.",
+    "Distinguir conceitos vizinhos, inferências indevidas e condições para afirmar o fato.",
+    "Conservar observação, hipótese, interpretação e informação verificada em planos distintos.",
+    "Respeitar variação linguística, contexto intercultural e representação ética de pessoas.",
+    "Evitar regras categóricas quando a evidência admite ressalvas ou usos alternativos."
+  ],
+  "fields": [
+    {
+      "index": 0,
+      "title": "Formas e geometria",
+      "edited": [
+        "simétrico",
+        "em balanço",
+        "modular",
+        "orgânico"
+      ]
+    },
+    {
+      "index": 1,
+      "title": "Escala e proporção",
+      "edited": [
+        "monumental",
+        "estreito",
+        "imponente",
+        "escala humana",
+        "desproporcional"
+      ]
+    },
+    {
+      "index": 2,
+      "title": "Luz e sombra",
+      "edited": [
+        "direcional",
+        "contrastada",
+        "indireta",
+        "zenital",
+        "estourada"
+      ]
+    },
+    {
+      "index": 3,
+      "title": "Cores e contraste",
+      "edited": [
+        "neutro",
+        "quente",
+        "frio",
+        "paleta restrita",
+        "berrante"
+      ]
+    },
+    {
+      "index": 4,
+      "title": "Textura e acabamento",
+      "edited": [
+        "polido",
+        "áspero",
+        "vitrificado",
+        "translúcido"
+      ]
+    },
+    {
+      "index": 5,
+      "title": "Ambiente e atmosfera",
+      "edited": [
+        "acolhedor",
+        "sereno",
+        "impessoal",
+        "arejado",
+        "descontraído"
+      ]
+    },
+    {
+      "index": 6,
+      "title": "Movimentos",
+      "edited": [
+        "contínuo",
+        "acelerado",
+        "sincronizado",
+        "disperso",
+        "afunilar"
+      ]
+    },
+    {
+      "index": 7,
+      "title": "Arquitetura",
+      "edited": [
+        "fachada",
+        "volumetria",
+        "átrio",
+        "brise"
+      ]
+    },
+    {
+      "index": 8,
+      "title": "Cidade",
+      "edited": [
+        "fluxo",
+        "fachada ativa",
+        "caminhabilidade",
+        "gentrificação",
+        "espaço residual"
+      ]
+    },
+    {
+      "index": 9,
+      "title": "Moda",
+      "edited": [
+        "pesponto",
+        "acabamento",
+        "alfaiataria",
+        "drapeado",
+        "oversized",
+        "atemporal"
+      ]
+    },
+    {
+      "index": 10,
+      "title": "Gastronomia",
+      "edited": [
+        "suculento",
+        "umami",
+        "defumado",
+        "caramelizado",
+        "persistente"
+      ]
+    },
+    {
+      "index": 11,
+      "title": "Som",
+      "edited": [
+        "acústica",
+        "timbre",
+        "grave",
+        "zumbido",
+        "ruído de fundo",
+        "paisagem sonora",
+        "vinheta"
+      ]
+    },
+    {
+      "index": 12,
+      "title": "Fotografia",
+      "edited": [
+        "enquadramento",
+        "regra dos terços",
+        "plano detalhe",
+        "exposição",
+        "arrasto"
+      ]
+    },
+    {
+      "index": 13,
+      "title": "Emoções e impressões",
+      "edited": [
+        "estranhamento",
+        "vertigem",
+        "ternura",
+        "familiaridade",
+        "melancolia"
+      ]
+    },
+    {
+      "index": 14,
+      "title": "Relações espaciais",
+      "edited": [
+        "ao fundo",
+        "alinhado",
+        "centralizado",
+        "defronte",
+        "encravado"
+      ]
+    },
+    {
+      "index": 15,
+      "title": "Mudança temporal",
+      "edited": [
+        "ao amanhecer",
+        "no intervalo",
+        "a certa altura",
+        "por horas a fio",
+        "de última hora"
+      ]
+    },
+    {
+      "index": 16,
+      "title": "Pessoas: aparência",
+      "edited": [
+        "fisionomia",
+        "tez",
+        "compleição",
+        "cicatriz",
+        "adereço"
+      ]
+    },
+    {
+      "index": 17,
+      "title": "Pessoas: expressão e gestos",
+      "edited": [
+        "semblante",
+        "sorriso contido",
+        "impassível",
+        "assentir",
+        "meneio"
+      ]
+    },
+    {
+      "index": 18,
+      "title": "Pessoas: postura e movimento",
+      "edited": [
+        "curvado",
+        "passo arrastado",
+        "claudicar",
+        "hesitante",
+        "desenvolto"
+      ]
+    },
+    {
+      "index": 19,
+      "title": "Objetos: estado e uso",
+      "edited": [
+        "pátina",
+        "avariado",
+        "gambiarra",
+        "obsoleto",
+        "artesanal"
+      ]
+    },
+    {
+      "index": 20,
+      "title": "Objetos: forma e partes",
+      "edited": [
+        "asa",
+        "empunhadura",
+        "nervura",
+        "pedestal",
+        "encaixe"
+      ]
+    },
+    {
+      "index": 21,
+      "title": "Animais: aparência",
+      "edited": [
+        "pelagem",
+        "plumagem",
+        "lustroso",
+        "iridescente",
+        "ventre",
+        "focinho"
+      ]
+    },
+    {
+      "index": 22,
+      "title": "Animais: comportamento",
+      "edited": [
+        "arisco",
+        "dócil",
+        "farejar",
+        "acuado",
+        "ronronar",
+        "espreguiçar-se"
+      ]
+    },
+    {
+      "index": 23,
+      "title": "Vista e panorama",
+      "edited": [
+        "horizonte",
+        "skyline",
+        "a perder de vista",
+        "vista em mergulho",
+        "emoldurado",
+        "linha de cumeada",
+        "bruma"
+      ]
+    },
+    {
+      "index": 24,
+      "title": "Paisagem natural",
+      "edited": [
+        "colina",
+        "encosta",
+        "vale",
+        "sopé",
+        "várzea",
+        "ribanceira",
+        "estuário",
+        "bosque",
+        "dossel",
+        "vegetação rasteira"
+      ]
+    },
+    {
+      "index": 25,
+      "title": "Céu e clima",
+      "edited": [
+        "límpido",
+        "garoa",
+        "aguaceiro",
+        "trovoada",
+        "orvalho"
+      ]
+    },
+    {
+      "index": 26,
+      "title": "Conectores e encadeamento",
+      "edited": [
+        "contudo",
+        "portanto",
+        "embora",
+        "ainda assim",
+        "além disso",
+        "por sua vez",
+        "em contrapartida",
+        "ou seja",
+        "à medida que",
+        "na medida em que"
+      ]
+    },
+    {
+      "index": 27,
+      "title": "Verbos de incidência e repercussão",
+      "edited": [
+        "repercutir",
+        "reverberar",
+        "irradiar",
+        "desdobrar-se",
+        "permear",
+        "convergir",
+        "ecoar"
+      ]
+    },
+    {
+      "index": 28,
+      "title": "Interiores",
+      "edited": [
+        "mezanino",
+        "piso de taco",
+        "claraboia",
+        "nicho",
+        "marcenaria",
+        "planta livre",
+        "luminária pendente"
+      ]
+    },
+    {
+      "index": 29,
+      "title": "Multidões e público",
+      "edited": [
+        "aglomeração",
+        "burburinho",
+        "debandada",
+        "vaivém",
+        "contingente",
+        "rarefeito",
+        "estimativa de público"
+      ]
+    },
+    {
+      "index": 30,
+      "title": "Sons da natureza",
+      "edited": [
+        "farfalhar",
+        "marulho",
+        "gotejar",
+        "crepitar",
+        "uivo",
+        "trinado",
+        "coaxar",
+        "ruflar"
+      ]
+    }
+  ]
+}

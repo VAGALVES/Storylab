@@ -5,6 +5,17 @@ Uma escola pessoal de Jornalismo, Comunicação Oral e Narrativas Audiovisuais. 
 
 **Status:** aplicação funcional de fundação acadêmica, não currículo universitário completo nem serviço de ensino credenciado. Todas as 172 unidades curriculares têm aula integral redigida; o conteúdo é autoral e ainda não passou por revisão de especialistas externos.
 
+## Curadoria de precisão lexical — 16/10/2026
+
+Revisamos editorialmente a seção **Precisão e cuidado** dos **465 verbetes-base**, distribuídos em **31 campos do Atlas Descritivo**. Foram **reescritos 178 alertas**, substituindo avisos superficiais por distinções de significado, limites de inferência, regências, contrastes com palavras próximas e condições concretas de uso na narração.
+
+Exemplos: *pesponto* diferencia reforço, fixação e ornamento; *espaço residual* distingue origem do espaço e uso efetivo; *reverberar* não exige repercussão maior; *debandada* não comprova pânico. Os 287 alertas restantes foram lidos e preservados nesta rodada; os exemplos, exercícios, figuras e dados de progresso não foram alterados.
+
+**Guia de revisão e exemplos:** [CURADORIA_ATLAS.md](CURADORIA_ATLAS.md).  
+**Rastreabilidade:** `content/atlas_curation_manifest.json` · `python test_atlas_editorial.py`.
+
+
+
 ## NOVO · Academia da Linguagem Ilustrada (v2.7)
 
 Aulas curriculares resumidas e fundamentação linguística aprofundada têm papéis diferentes. Agora há uma biblioteca acadêmica própria, ligada às disciplinas correspondentes e aberta pelo menu **Linguística Aplicada**, sem confundir os dossiês com novas unidades curriculares.

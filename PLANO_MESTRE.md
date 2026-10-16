@@ -614,3 +614,16 @@ Cada novo capítulo deve ser escrito e revisado individualmente. Não elevar con
 ## Ciclo v2.12 — Direção de arte e curadoria da Academia da Linguagem
 
 Os oito diagramas da trilha de linguística possuem 24 perspectivas visuais (3 por conceito), revistas para mostrar relações efetivas e evitar causalidade fictícia. A prova de qualidade usa testes de mudança **geométrica**, não apenas mudança de legenda. Ações primárias recebem cor cobre com contraste WCAG AA; secundárias usam superfícies discretas e alto contraste no modo noturno. Largura e ampliação dos esquemas não foram modificadas. Ver `CURADORIA_VISUAL.md` para o quadro de decisões por tema.
+
+
+## Curadoria editorial do Atlas — 16/10/2026
+
+A seção `Precisão e cuidado` deve ensinar distinções semânticas, contextos de aplicação e limites da evidência; textos como “use com cuidado” ou “confirme antes de falar” são insuficientes sem explicar qual fato, contraste ou regência exige atenção.
+
+- Escopo conferido: 31 campos-base, 465 alertas, 178 reescritas com foco em especificidade.
+- Preservados: definição, frase de uso, prática contextual, colocações, demais relações e IDs.
+- Verificações automáticas: unicidade de alertas, tamanho mínimo, correspondência com cada campo, amostragem de conteúdo especializado e sincronização de conteúdo distribuído.
+- Critérios por domínio: linguagem jornalística (fonte e causalidade), linguística (regência e distinção), fotografia (observável versus equipamento inferido), moda (aparência versus construção), cidade (percepção versus dados), pessoas e animais (descrição sem diagnóstico).
+- Leitura e documentação dos exemplos em `CURADORIA_ATLAS.md`; registro dos verbetes alterados em `content/atlas_curation_manifest.json`.
+
+**Lacuna residual:** a atualização automática detecta repetições e regressões estruturais, mas revisão factual fina e validação especialista continuam exigindo estudo e inspeção humana.

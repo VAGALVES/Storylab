@@ -17,6 +17,8 @@ jobs:
           python test_quality.py
           python generate_linguistics.py --check
           python generate_service_worker.py --check
+      - name: Validar curadoria dos 465 alertas do Atlas
+        run: python test_atlas_editorial.py
       - name: Checar sintaxe de JavaScript
         run: |
           node --check app.js
