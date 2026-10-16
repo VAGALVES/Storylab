@@ -1366,3 +1366,14 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
  .to-script-head .to-btn{justify-self:start}
 }
 @media(max-width:370px){.to-guideline{grid-template-columns:1fr}.to-measure-grid{grid-template-columns:1fr}}
+
+/* Seleção direta do universo de objetos e conexão com o Estúdio */
+.to-between-actions{display:flex;gap:13px;align-items:center;flex-wrap:wrap;
+ background:var(--study-soft);border:1px solid var(--study-border);border-radius:12px;padding:13px 17px}
+.to-between-actions>.to-btn{background:var(--study-active);color:var(--study-on);border-color:var(--study-active)}
+.to-between-actions>span{font-size:11px;color:var(--ink2);line-height:1.6}
+.to-presets{display:grid;gap:12px;border:1px solid var(--line);border-radius:14px;
+ padding:16px;background:var(--paper)}
+.to-presets p{font-size:12px;color:var(--muted);line-height:1.6;margin:6px 0 0}
+.to-presets>div:last-child{display:flex;gap:7px;flex-wrap:wrap}
+.to-preset{font-size:11px;min-height:36px}
