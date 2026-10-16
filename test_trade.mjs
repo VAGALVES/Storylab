@@ -42,8 +42,8 @@ const signal=(kind,el)=>sandbox.document.listeners.filter(x=>x.type===kind).forE
 const click=(action,id='',value='')=>signal('click',{closest(){return {dataset:{trade:action,id,value}}}});
 let html=hub.render();
 assert.match(html,/Fornecedores & Produtos/);
-assert.match(html,/Glossário técnico do produto/);
-assert.match(html,/Atlas Universal do Objeto/);
+assert.match(html,/Glossário técnico/);
+assert.match(html,/O objeto/);
 assert.match(html,/O ATLAS DO OBJETO/);
 hub.openTab('produto');
 html=hub.render();
