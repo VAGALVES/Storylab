@@ -14,7 +14,16 @@ window.StoryLabObject=(()=>{
   ['profundidade','Profundidade','cm'],['espessura','Espessura','mm'],['massa','Massa','kg']
  ];
  const defaults=()=>({subject:'',kind:'produto',lens:'vlog',basis:'impressao',material:'',context:'',note:'',metrics:{},units:{},attributes:[]});
- const draft=()=>saved().tradeObjectDraft||defaults();
+ const draft=()=>{
+  const s=saved();
+  if(!s.tradeObjectDraft||typeof s.tradeObjectDraft!=='object'||Array.isArray(s.tradeObjectDraft))
+   s.tradeObjectDraft=defaults();
+  const d=s.tradeObjectDraft;
+  if(!Array.isArray(d.attributes))d.attributes=[];
+  if(!d.metrics||typeof d.metrics!=='object'||Array.isArray(d.metrics))d.metrics={};
+  if(!d.units||typeof d.units!=='object'||Array.isArray(d.units))d.units={};
+  return d;
+ };
  const lensNames={vlog:'Vlog exploratório',review:'Review crítico',venda:'Apresentação comercial',tecnico:'Análise técnica',marca:'Retrato de marca / fornecedor'};
  const basisNames={impressao:'Impressão inicial, sem verificação',observado:'Observação direta / manuseio',declarado:'Informação declarada por terceiros',medido:'Dimensões informadas a partir de medições'};
  const kindNames={produto:'Produto ou objeto',empresa:'Empresa, marca ou showroom'};
