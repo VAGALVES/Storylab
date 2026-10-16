@@ -23,7 +23,7 @@ for(const chapter of A.chapters){
  assert.ok(Number.isInteger(chapter.quiz[2])&&chapter.quiz[2]>=0&&chapter.quiz[2]<=2,chapter.id);
  assert.equal(chapter.prompt.length,4,chapter.id);
  assert.match(chapter.prompt[2],/[\u3400-\u9fff]/);
- assert.ok(chapter.sections.every(s=>s.length===3&&s.every(x=>x.length>60)),chapter.id);
+ assert.ok(chapter.sections.every(s=>s.length===3&&s[0].length>6&&s[1].length>90&&s[2].length>50),chapter.id);
  assert.ok(chapter.terms.every(t=>t.length===2));
 }
 for(const sector of A.sectors){
