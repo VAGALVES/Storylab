@@ -63,7 +63,7 @@ function language(){
  '<section class="tt-rule"><small>REGRA DE CONSTRUÇÃO</small><p>'+esc(selected.rule)+'</p></section>'+
  '<section class="tt-trap"><small>ERRO A EVITAR / PRECISÃO</small><p>'+esc(selected.trap)+'</p></section>'+
  '<div class="tt-detail-actions">'+button('copy','Copiar construção PT / EN / 中文',selected.id)+'</div>')+
- (state.training?'<div class="tt-review"><strong>Como foi sua produção?</strong><p>Avaliação pessoal. Não é correção automática de pronúncia.</p><div>'+button('grade','Ainda preciso estudar',selected.id+':again')+button('grade','Consegui reproduzir',selected.id+':good','is-primary')+'</div></div>':'<p class="tt-review-hint">Ative “Praticar sem resposta” para usar a revisão espaçada e registrar sua evolução.</p>')+
+ (state.training&&!hidden?'<div class="tt-review"><strong>Como foi sua produção?</strong><p>Avaliação pessoal. Não é correção automática de pronúncia.</p><div>'+button('grade','Ainda preciso estudar',selected.id+':again')+button('grade','Consegui reproduzir',selected.id+':good','is-primary')+'</div></div>':'<p class="tt-review-hint">Ative “Praticar sem resposta” para usar a revisão espaçada e registrar sua evolução.</p>')+
  (r?.next?'<div class="tt-next">Revisão '+(due(selected)?'disponível agora':('agendada para '+new Date(r.next).toLocaleDateString('pt-BR')))+'. Acertos declarados: '+(r.level||0)+'.</div>':'')+
  '</article></div>')+'</section>';
 }
@@ -148,7 +148,7 @@ function init(context){
   if(a==='training'){state.training=!state.training;state.reveal=false;api.render();return}
   if(a==='due'){state.dueOnly=!state.dueOnly;state.reveal=false;api.render();return}
   if(a==='reveal'){state.reveal=true;api.render();return}
-  if(a==='grade'){const [key,result]=id.split(':');grade(key,result==='good');return}
+  if(a==='grade'){if(!state.training||!state.reveal)return;const [key,result]=id.split(':');grade(key,result==='good');return}
   if(a==='phase'){if(phases.some(p=>p.id===id)){state.phase=id;api.render()}return}
   if(a==='open-dossiers'){window.StoryLabTrade?.openTab?.('dossies');return}
   if(a==='copy-compare'){
