@@ -43,7 +43,7 @@ app.init({D:main,getStore:()=>store,save(){},render(){renderCount++},
   header:(_a,t)=>'<h1>'+t+'</h1>',
   stat:(label,n)=>'<p>'+label+':'+n+'</p>'});
 function event(action,attrs={}){
-  const button={dataset:{lingAction:action,...attrs}};
+  const button={dataset:{lingAction:action,...attrs},closest(){return null}};
   const evt={preventDefault(){},stopPropagation(){},
     target:{closest(selector){return selector==='[data-ling-action]'||selector==='[data-ling-action="jump"]'&&action==='jump'?button:null}}};
   for(const cb of (callbacks.click||[]).filter(x=>x.capture))cb.fn(evt);
@@ -56,6 +56,8 @@ assert.match(html,/CAMADA TEÓRICA/);
 assert.match(html,/Fonética e fonologia/);
 for(const c of chapters){
   assert.match(app.diagramSvg(c,0),/<svg[^>]+role="img"/);
+  assert.match(app.diagramSvg(c,0),/<title id="ling-diagram-title">/,'Título SVG acessível');
+  assert.match(app.diagramSvg(c,0),/<desc id="ling-diagram-desc">/,'Descrição SVG acessível');
   assert.match(app.diagramSvg(c,1),/STORYLAB/);
   assert.match(app.diagramSvg(c,2),/<\/svg>/);
 }
@@ -95,7 +97,9 @@ assert.match(deixisStages[1],/Olhando para o sul/);
 assert.match(deixisStages[2],/Olhando para leste/);
 assert.match(deixisStages[0],/cx="380" cy="259"/);
 assert.match(deixisStages[1],/cx="380" cy="68"/);
-assert.match(deixisStages[2],/cx="51" cy="239"/);
+assert.match(deixisStages[2],/cx="51" cy="185"/);
+assert.match(deixisStages[2],/<line x1="75" y1="185" x2="281" y2="185"/,
+ 'Dêixis 03: eixo leste deve atravessar a loja antes do edifício');
 
 // A seleção muda também a descrição pedagógica e a acessibilidade.
 event('chapter',{index:'2'});
@@ -108,6 +112,30 @@ event('chapter',{index:'4'});
 assert.match(app.render(),/01 · Câmera ao sul/);
 event('diagram',{index:'1'});
 assert.match(app.render(),/02 · Câmera ao norte/);
+// Simulação de DOM real: a troca mantém o mesmo controle, o foco e a escuta.
+const svgNode={outerHTML:''};
+const noteNode={textContent:''};
+const buttons=[0,1,2].map(()=>({
+  pressed:null,active:false,
+  classList:{toggle(name,enabled){assert.equal(name,'active');this.owner.active=enabled}},
+  setAttribute(name,value){assert.equal(name,'aria-pressed');this.pressed=value}
+}));
+buttons.forEach(b=>b.classList.owner=b);
+const figure={
+  querySelector(selector){return selector==='.ling-diagram'?svgNode:selector==='figcaption strong'?noteNode:null},
+  querySelectorAll(selector){return selector==='.ling-diagram-button'?buttons:[]}
+};
+const beforeLocalSwitch=renderCount;
+const diagramButton={
+  dataset:{lingAction:'diagram',index:'2'},
+  closest(selector){return selector==='[data-ling-action]'?this:selector==='.ling-figure'?figure:null}
+};
+callbacks.click.find(h=>!h.capture).fn({target:diagramButton,preventDefault(){}});
+assert.equal(renderCount,beforeLocalSwitch,'Troca local não redesenha toda a página');
+assert.match(svgNode.outerHTML,/Olhando para leste/,'A geometria muda no DOM');
+assert.match(noteNode.textContent,/Câmera a oeste/,'A descrição acompanha a geometria');
+assert.deepEqual(buttons.map(b=>b.pressed),['false','false','true']);
+assert.deepEqual(buttons.map(b=>b.active),[false,false,true]);
 event('diagram',{index:'2'});
 assert.match(app.render(),/03 · Câmera a oeste/);
 event('chapter',{index:'3'});
