@@ -10,7 +10,7 @@ window.StoryLabNarrative=(()=>{
  const defaultRecord=()=>({responses:['','','','',''],sources:['impressao','impressao','impressao','impressao','impressao'],checks:[]});
  const registry=()=>{const s=api.getStore();if(!s.tradeNarrativeWork||typeof s.tradeNarrativeWork!=='object'||Array.isArray(s.tradeNarrativeWork))s.tradeNarrativeWork={};return s.tradeNarrativeWork};
  const record=()=>{const r=registry(),id=scene()?.id;if(!id)return defaultRecord();if(!r[id]||!Array.isArray(r[id].responses))r[id]=defaultRecord();return r[id]};
- const button=(act,label,id='',extra='')=>'<button type="button" class="nar-btn '+extra+'" data-nar="'+act+'" data-id="'+esc(id)+'">'+label+'</button>';
+ const button=(act,label,id='',extra='')=>'<button type="button" class="nar-btn '+extra+'" data-nar="'+act+'" data-id="'+esc(id)+'"'+(extra.includes('disabled')?' disabled':'')+'>'+label+'</button>';
  const wordCount=s=>String(s||'').trim()?String(s).trim().split(/\s+/u).length:0;
  const sourceLabel=id=>data().sources.find(s=>s[0]===id)?.[1]||'Impressão / aparência';
  function vignette(type){
