@@ -124,6 +124,19 @@ Implementada uma quarta aba: **Dossiês de campo**, com até 20 registros pessoa
 
 **Limites do conteúdo:** modelos ilustrativos de formação profissional; não substituem normas setoriais, ensaios, due diligence ou tradução humana especializada em chinês de documentos contratuais. Expansão prevista para fontes bibliográficas, exercícios aplicados e trilhas setoriais profundas.
 
+## v2.22 — Laboratório de Observação & Narração
+
+**Princípio:** não basta nomear propriedades; o usuário precisa convertê-las em fala contextualizada, fluida, filmável e intelectualmente honesta. Nesta rodada o app não escreve uma falsa análise automática: **a narração é do estudante**, orientada por estruturas, perguntas e critérios de autoverificação.
+
+- **8 situações transversais**: motocicleta, carro, smartphone, câmera portátil, cadeira de trabalho, bateria portátil, ferramenta elétrica e showroom/marca. Cada situação oferece uma ilustração vetorial conceitual distinta, cinco focos de observação, cinco famílias de palavras contextualizadas e armadilhas de imprecisão.
+- **5 planos narrativos**: contextualização → forma e relações → matéria e acabamentos → funcionamento e ergonomia → síntese com limites. Em cada plano: pergunta específica, orientação de câmera, estrutura de frase opcional (com lacunas visíveis), campo de texto livre e atribuição da fonte (impressão, observado, declarado, medido).
+- **Revisão editorial com cinco critérios declarativos**: contextualização, rigor semântico, atribuição, correspondência entre imagem/fala e limites. Marcar não equivale a validação automática.
+- **Resultado que não inventa dados**: reúne somente os trechos redigidos, com a origem que o usuário escolheu; fornece opção de cópia com atribuições ou envio da fala ao teleprompter **já existente no StoryLab**. O teleprompter recebe apenas o texto autoral, sem os rótulos de origem.
+- **Persistência isolada por situação:** notas (cinco textos de até 600 caracteres), origem por etapa e critérios marcados. Importações são validadas contra os IDs dos oito cenários e os valores permitidos. Trocar de situação preserva as outras.
+- **Sete diagramas de escala distintos:** extensão, massa, firmeza à pressão, flexão, rugosidade, brilho e espessura. Ilustrações qualitativas ajudam a perceber **somente o eixo semântico adequado**. A massa usa silhuetas iguais e símbolo de carga porque aparência não comprova peso. As escalas não possuem valores inferidos, intervalos quantitativos ou medições inventadas.
+
+**Fronteira desta versão:** não capta ou pontua áudio dentro do novo módulo; aproveita o estúdio/teleprompter já existente. Não compara textos com IA, nem certifica atributos técnicos ou traduções. Inspeção visual manual em dispositivos reais e revisão humana da terminologia continuam recomendadas.
+
 ## StoryLab v2.21 — Anatomia, relações e percepção
 
 Esta rodada aprofunda a pergunta central **"como descrever precisamente qualquer objeto?"** sem devolver a navegação ao recorte industrial.
