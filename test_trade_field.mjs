@@ -20,7 +20,7 @@ let saves=0,renders=0;
 const api={
  getStore:()=>store,save(){saves++},render(){renders++},
  copy:t=>copied.push(t),say:(t,lang)=>spoken.push([t,lang]),
- header(_k,title)=>'<h1>'+title+'</h1>'
+ header:(_k,title)=>'<h1>'+title+'</h1>'
 };
 hub.init(api);
 function emit(kind,target){
