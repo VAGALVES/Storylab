@@ -1498,3 +1498,70 @@ kbd{display:inline-block;min-width:20px;padding:1px 6px;border:1px solid var(--l
  .precision-diagram-columns{grid-template-columns:1fr}
  .precision-diagram-head h3{font-size:21px}
 }
+
+
+/* StoryLab v2.21 — anatomia, relações visuais e percepção */
+.trade-primary-tabs{grid-template-columns:repeat(4,minmax(0,1fr))}
+.obs-root{display:grid;gap:16px;min-width:0}
+.obs-hero,.obs-section-head{display:grid;gap:9px;background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:clamp(18px,2.5vw,27px)}
+.obs-hero h2,.obs-section-head h3{font:normal clamp(25px,3vw,37px)/1.22 Georgia,serif;letter-spacing:-.025em;margin:0;color:var(--ink)}
+.obs-hero p,.obs-section-head p{color:var(--muted);font-size:13px;line-height:1.8;margin:0;max-width:860px}
+.obs-nav,.obs-rel-nav{display:flex;flex-wrap:wrap;gap:8px}
+.obs-btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;border:1px solid var(--study-border);border-radius:9px;
+ background:var(--paper);color:var(--study-ink);min-height:39px;padding:9px 13px;font-size:12px;font-weight:740;
+ line-height:1.4;text-align:center;cursor:pointer}
+.obs-btn:hover{background:var(--study-soft);border-color:var(--study-active)}
+.obs-btn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.obs-btn.active,.obs-option.selected{background:var(--study-active);color:var(--study-on);border-color:var(--study-active)}
+.obs-grid{display:grid;grid-template-columns:minmax(200px,275px) minmax(0,1fr);gap:13px;align-items:start}
+.obs-list{display:grid;gap:7px;padding:11px;border:1px solid var(--line);border-radius:13px;background:var(--paper);min-width:0}
+.obs-list-item{display:grid;justify-items:start;gap:5px;border-color:transparent;color:var(--ink);text-align:left;min-width:0}
+.obs-list-item strong{font-size:14px}.obs-list-item small{font-size:11px;font-weight:450;color:var(--muted)}
+.obs-list-item.active{background:var(--study-soft);border-color:var(--study-border);color:var(--ink)}
+.obs-detail{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:clamp(17px,2.4vw,26px);display:grid;gap:16px;min-width:0}
+.obs-detail h3{font:normal clamp(30px,3.4vw,44px)/1.2 Georgia,serif;margin:0;letter-spacing:-.022em}
+.obs-subtitle{font-size:14px;color:var(--muted);margin:0}
+.obs-detail>section,.obs-question{padding:16px;background:var(--wash);border:1px solid var(--line);border-radius:10px}
+.obs-detail>section small,.obs-question small,.obs-translation small{font-size:9px;letter-spacing:.09em;font-weight:820;color:var(--muted)}
+.obs-detail>section p,.obs-question p{font-size:13px;line-height:1.85;color:var(--ink2);margin:9px 0 0}
+.obs-detail>.obs-question,.obs-question{background:var(--study-soft);border-color:var(--study-border)}
+.obs-translation{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.obs-translation>div{display:grid;align-content:start;justify-items:start;gap:9px;background:var(--wash);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:0}
+.obs-translation strong{font:normal 18px/1.4 Georgia,serif;overflow-wrap:anywhere}
+.obs-translation em{font:normal 12px/1.6 system-ui,sans-serif;color:var(--muted)}
+.obs-actions{display:flex;flex-wrap:wrap;gap:8px}
+.obs-relations,.obs-perception-chart,.obs-practice{display:grid;gap:15px;border:1px solid var(--line);border-radius:14px;background:var(--paper);padding:clamp(15px,2.3vw,23px)}
+.obs-relations>.obs-section-head{padding:0;border:0}
+.obs-relation-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:17px;align-items:start}
+.obs-relation-card svg{width:100%;height:auto;border-radius:12px;display:block}
+.obs-relation-explain{display:grid;gap:13px;min-width:0}
+.obs-relation-explain h4{font:normal clamp(20px,2.4vw,29px)/1.3 Georgia,serif;margin:0}
+.obs-relation-explain>p{font-size:13px;color:var(--ink2);line-height:1.8;margin:0}
+.obs-rel-syntax{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.obs-rel-syntax>div{display:grid;align-content:center;gap:7px;min-height:76px;padding:10px;background:var(--study-soft);border:1px solid var(--study-border);border-radius:8px;min-width:0}
+.obs-rel-syntax small{font-size:9px;font-weight:750;color:var(--muted)}
+.obs-rel-syntax strong{font:normal 14px/1.5 Georgia,serif;overflow-wrap:anywhere}
+.obs-rel-lang{display:grid;gap:6px;color:var(--muted);font-size:12px;line-height:1.65}
+.obs-perception-chart>div:first-child{display:grid;gap:8px}
+.obs-perception-chart h3,.obs-practice h3{font:normal 25px/1.3 Georgia,serif;margin:0}
+.obs-perception-axes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.obs-perception-axes>div{background:var(--study-soft);border:1px solid var(--study-border);border-radius:10px;padding:15px;display:grid;gap:9px}
+.obs-perception-axes strong{font-size:12px}
+.obs-perception-axes span{font-size:11px;color:var(--ink2);line-height:1.7}
+.obs-practice>header{display:flex;justify-content:space-between;align-items:start;gap:15px}
+.obs-practice>header>div{display:grid;gap:8px}
+.obs-practice>header p{font-size:12px;color:var(--muted);margin:0;line-height:1.7}
+.obs-practice>header>span{font-size:11px;font-weight:800;color:var(--study-ink);white-space:nowrap}
+.obs-challenge{display:grid;gap:14px;border:1px solid var(--study-border);background:var(--study-soft);border-radius:12px;padding:18px}
+.obs-situation{font:normal 20px/1.5 Georgia,serif;margin:0}
+.obs-challenge h4{font-size:13px;font-weight:750;margin:0}
+.obs-options{display:grid;gap:8px}
+.obs-option{justify-content:flex-start;white-space:normal;text-align:left}
+.obs-option.correct{border-color:var(--study-active);box-shadow:inset 0 0 0 1px var(--study-active)}
+.obs-explanation{border-left:3px solid var(--study-active);padding:10px 13px;background:var(--paper);border-radius:0 8px 8px 0}
+.obs-explanation strong{font-size:12px}.obs-explanation p{font-size:12px;line-height:1.7;margin:7px 0 0}
+.obs-hint{color:var(--muted);font-size:11px;line-height:1.6;margin:0}
+.obs-practice-nav{display:flex;justify-content:space-between;gap:9px}
+@media(max-width:1040px){.obs-grid{grid-template-columns:210px minmax(0,1fr)}.obs-relation-card{grid-template-columns:1fr}}
+@media(max-width:760px){.trade-primary-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.obs-grid{display:flex;flex-direction:column-reverse}.obs-list{display:flex;overflow-x:auto;max-width:100%;width:100%}.obs-list-item{flex:0 0 180px}.obs-detail{width:100%}.obs-relation-card{grid-template-columns:1fr}}
+@media(max-width:560px){.trade-primary-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.obs-translation,.obs-perception-axes{grid-template-columns:1fr}.obs-rel-syntax{grid-template-columns:1fr}.obs-practice>header{display:grid}}
