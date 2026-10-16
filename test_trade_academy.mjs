@@ -73,7 +73,7 @@ assert.equal(heard.at(-1)[1],'zh-CN');
 clickAcademy('copy','qualidade-metrologia');
 assert.match(copied.at(-1),/采用了什么测试方法/);
 clickAcademy('sector','automotivo');
-assert.match(academy.sectors(),/Automotiva & mobilidade elétrica/);
+assert.match(academy.sectors(),/Automotiva &amp; mobilidade elétrica/);
 clickAcademy('sector','eletronicos');
 assert.match(academy.sectors(),/firmware/i);
 clickAcademy('speak-sector','eletronicos:zh');
